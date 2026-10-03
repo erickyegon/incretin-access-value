@@ -1,0 +1,10 @@
+# data acquisition and loading (pinned to the versions used to build the warehouse)
+requests
+pandas==2.2.2
+pyarrow==21.0.0
+duckdb==1.5.6
+pypdf
+psycopg2-binary==2.9.9
+# warehouse (dbt)
+dbt-core==1.12.5
+dbt-postgres==1.11.0

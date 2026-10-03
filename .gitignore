@@ -4,3 +4,11 @@ logs/
 __pycache__/
 *.pyc
 .venv/
+.env
+profiles.yml
+target/
+logs/
+dbt_packages/
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
