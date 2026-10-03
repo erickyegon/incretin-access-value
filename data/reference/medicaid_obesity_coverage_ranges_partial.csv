@@ -1,0 +1,18 @@
+state,product,start_exact,start_earliest,start_earliest_source,start_latest,start_latest_source,range_wider_than_1q,notes
+California,Saxenda,2023-01-01,,Medi-Cal Rx CDL snapshot 2022-11-07 (Wayback) lists no obesity drugs,2023-01-01,Medi-Cal Rx CDL change log: "Liraglutide (Saxenda) Added to CDL with restriction. January 1, 2023" (Wayback snapshot 2023-01-29),N,exact
+California,Wegovy,2023-01-01,,same as above,2023-01-01,CDL change log: "Semaglutide (Wegovy) Added to CDL with restriction. January 1, 2023",N,exact
+California,Zepbound,2024-10-01,,CDL snapshot 2024-09-10 has no Zepbound,2024-10-01,Medi-Cal Rx Monthly Bulletin 2024-10-01: "Tirzepatide (Zepbound) Added to CDL ... October 1, 2024",N,exact
+New Hampshire,Wegovy,,2021-06-04,FDA approval of Wegovy (product did not exist earlier); no earlier NH document found,2023-07-01,NH FFS Medicaid PDL effective 2023-07-01 lists Wegovy and Saxenda (Weight Management class; notification 2022-08-01 says class added to PDL but names no drugs),Y,range ~25 months; older PDLs not archived
+New Hampshire,Zepbound,,2024-03-02,NH PDL effective 2024-03-01 has no Zepbound,2024-08-01,NH notification 2024-08-01 lists Weight Management - Zepbound as PDL addition (PDL 2024-09-01 lists it),Y,range ~5 months
+New Hampshire,Saxenda,,,none found (NH 'Anti-Obesity' clinical PA criteria revised 2015-09 onward; drug names not in notices),2023-07-01,NH PDL effective 2023-07-01,Y,lower bound not found
+Minnesota,Wegovy,,2021-06-04,FDA approval of Wegovy,2021-12-31,MN DHS Anti-Obesity Medications PA criteria page dated December 2021 (Wayback snapshot 2022-01-27) lists Saxenda and Wegovy as covered with PA,Y,range ~7 months
+Minnesota,Zepbound,,2024-03-16,MN Uniform PDL effective 2024-03-15 (section updated 1-1-2024) has no Zepbound,2024-12-01,MN Uniform PDL (eff. 2026-01-01) Weight Management section updated 12-1-2024 lists Zepbound,Y,range ~8.5 months; PDL absence may reflect default non-preferred coverage
+Minnesota,Saxenda,,,none found,2021-12-31,MN criteria page dated December 2021,Y,lower bound not found
+Wisconsin,Wegovy,,2021-09-18,ForwardHealth topic #7837 as archived 2021-09-17 lists Saxenda but not Wegovy,2023-03-31,ForwardHealth Update 2023-09 (March 2023) lists Saxenda; Wegovy; Xenical criteria,Y,range ~18 months
+Wisconsin,Zepbound,,2023-11-08,FDA approval of Zepbound,2024-06-30,ForwardHealth Update 2024-16 (June 2024) treats Zepbound as a covered anti-obesity drug,Y,range ~7.7 months
+Wisconsin,Saxenda,,2014-12-23,FDA approval of Saxenda,2016-01-31,Wisconsin Medicaid Pharmacy handbook (published policy through 2016-01-31) lists Saxenda as covered anti-obesity drug,Y,range ~13 months
+Virginia,Wegovy,,2021-06-04,FDA approval of Wegovy,2023-06-23,DMAS service authorization form for weight-loss management dated 2023-06-23 (Wegovy and Saxenda); Pharmacy manual App D PDL (2022-10) lists Wegovy as new drug,Y,IN PROGRESS: not narrowed
+Kansas,all,,,not started,,,,
+Delaware,all,,,not started,,,,
+Missouri,all,,,not started,,,,
+Tennessee,all,,,not started,,,,
