@@ -128,3 +128,25 @@ def medicaid_catalog(log=None):
                     timeout=180, params={"show-reference-ids": "false"}).json()
     f.write_text(json.dumps(items), encoding="utf-8")
     return items
+
+
+def cms_catalog(log=None):
+    """data.cms.gov DCAT catalog (cached for the day)."""
+    import json
+    f = RAW / "cms_catalog.json"
+    if not (f.exists() and dt.date.fromtimestamp(f.stat().st_mtime) == dt.date.today()):
+        f.write_text(request("GET", "https://data.cms.gov/data.json", log=log, timeout=300).text, encoding="utf-8")
+    return json.loads(f.read_text(encoding="utf-8"))["dataset"]
+
+
+def cms_query(api_url, path, value, log=None, op="CONTAINS", size=5000):
+    """All rows of a data.cms.gov data-api dataset where `path` <op> `value` (server-side filter, paginated)."""
+    out, off = [], 0
+    while True:
+        p = {"filter[g][condition][path]": path, "filter[g][condition][operator]": op,
+             "filter[g][condition][value]": value, "size": size, "offset": off}
+        page = request("GET", api_url, log=log, params=p, timeout=300).json()
+        out += page
+        if len(page) < size:
+            return out
+        off += size

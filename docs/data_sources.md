@@ -84,29 +84,60 @@ Limits: no managed-care split is available for 2025-2026, so FFS vs managed-care
 quarters need an assumption (to be decided, not made here). Footnote digits are stripped from state names in the
 summary table (`state_clean`).
 
-## State Medicaid obesity-drug coverage (`data/reference/medicaid_obesity_coverage.csv`) - phase 1, step 5.3
+## State Medicaid obesity-drug coverage (`data/reference/medicaid_obesity_coverage.csv`) - step 5.3, second pass
 
-First pass built only from KFF, "Medicaid Coverage of and Spending on GLP-1s" (published 2026-01-16,
-https://www.kff.org/medicaid/medicaid-coverage-of-and-spending-on-glp-1s/). The state list is read from the data
-embedded in KFF's map. Delivery system is FFS (KFF covers FFS only).
-- 13 states covering GLP-1s for obesity as of Jan 2026: DE, KS, MA, MI, MN, MS, MO, NC, RI, TN, UT, VA, WI. Utah's
-  funding was limited to FY 2026 (KFF footnote).
-- Withdrawals after Oct 2025: CA, NH, PA, SC. KFF gives no dates, so `coverage_end` is blank.
-- North Carolina: dropped beginning Oct 2025, reinstated Dec 2025 (two rows, month precision).
-- Prior authorization, BMI threshold, comorbidity, step therapy and all start dates are blank and marked
-  "to verify" - KFF does not provide them and nothing was filled from memory. Confidence is `low` throughout.
+Built by `scripts/build/build_coverage_table.py` from documents saved under `data/raw/coverage_sources/<STATE>/`
+(gitignored; `_sources_log.csv` lists URL, snapshot and access date; `scripts/fetch/covtool.py` fetched them, including
+Wayback copies where a state site returns 403). Source order followed: state PDL / bulletins / criteria, Wayback
+snapshots, KFF surveys. KFF's January 2026 brief (data embedded in its map) supplies the list of 13 covering states and the
+4 withdrawals; the KFF FY2025-26 survey gives product coverage and "added in the last year" statements.
 
-## SDUD results (as run 2026-10-03)
+Exposure = coverage of any GLP-1 for obesity (Saxenda, Wegovy, Zepbound, Foundayo); `first_product_covered` is separate.
+A date is filled only when a document states it; otherwise it is blank and confidence is `low`. `coverage_end` is the
+last covered day (the day before a stated effective-end date). Web-search summaries and aggregator sites were used only as
+leads, never as sources.
 
-Years 2018-2025 are complete (Q1-Q4). **The 2026 file (modified 2026-07-10) contains only Q1 2026.**
-Kept rows (product-map NDCs): 2018 2,992; 2019 3,120; 2020 3,799; 2021 5,430; 2022 7,402; 2023 9,290; 2024 10,522;
-2025 12,832; 2026 3,466 (including `XX` national rows, stored separately). Suppressed share of kept rows is 29-35% per
-year (about 50% of all raw rows). No suppressed row has a non-null prescription count.
+SDUD columns (`sdud_first_obesity_quarter_*`, `sdud_discrepancy_flag`) are **flags only** and never set or adjust a date.
+They use all obesity-labelled product-map NDCs (including generic liraglutide of the Saxenda type). Nearly every state
+shows obesity-labelled volume from 2018 (mostly Saxenda, via exceptions, off-label or other pathways), so
+`SDUD_EARLIER` is common and says nothing about which date is right.
 
-**Unmatched in-scope NDCs (held back, not added to the product map):** these appear in SDUD under in-scope-looking
-names but are in neither the FDA directory nor RxNorm for the map:
-- Ozempic: 00169413212, 00169413211, 00169413602, 00169413611 (older Ozempic pens)
-- Bydureon: 00310653004, 00310652004, 00310653001, 66780021904 (the map's 3 Bydureon NDCs are different)
-- Adlyxin (lixisenatide, in scope): 00024574702, 00024574502
-- Tanzeum (albiglutide, candidate only): 00173086735, 00173086635, 00173086601, 00173086701, 00173086602
-Full rows are in `data/interim/sdud/sdud_YYYY_unmatched_name_candidates.parquet`, so adding them needs no re-download.
+Results: see the checkpoint report. States with a sourced start: MS, NC, PA, MI, RI, MA, SC, UT (UT low). With a sourced
+end: NC, PA, RI, MA, SC, CA, NH, UT (UT low). Unresolved start: CA, NH, MN, WI, VA, KS, DE, MO, TN.
+
+## Medicare Part D Prescribers by Provider and Drug - phase 2, step 5.4
+
+**Script:** `07_partd_prescribers.py`. Yearly datasets found in the data.cms.gov catalog by title; each year queried
+through the data API with a server-side `Gnrc_Name CONTAINS` filter for semaglutide, tirzepatide, liraglutide,
+dulaglutide, exenatide, lixisenatide, orforglipron and albiglutide (combination generics match more than once and are
+de-duplicated). Years 2013 to 2024 are queried; the 2024 dataset (release modified 2026-05-21) has two API distributions
+with identical schema and row counts, the first is used. **2025 is not released.** Fields: the Prscrbr_* identity fields,
+Brnd_Name, Gnrc_Name, Tot_Clms, Tot_30day_Fills, Tot_Day_Suply, Tot_Drug_Cst, Tot_Benes, and the GE65 fields with CMS
+suppression flags (`GE65_Sprsn_Flag`, `GE65_Bene_Sprsn_Flag`). Blank (suppressed) values are NULL, never 0.
+Data dictionary: https://data.cms.gov/resources/medicare-part-d-prescribers-by-provider-and-drug-data-dictionary (listed
+in the catalog; flag meanings per CMS: counts under 11 are suppressed).
+
+## Spending by drug - phase 2, step 5.5
+
+**Script:** `08_spending_by_drug.py`. "Medicare Part D Spending by Drug" and "Medicaid Spending by Drug" are single wide
+tables per release (2026 release, data years 2020-2024, year-suffixed columns). The full CSV is downloaded, filtered to
+in-scope generic/brand names, saved wide and long (one row per drug-manufacturer-year) with total spending, dosage units,
+claims, beneficiaries (Part D only), average spending per dosage unit (weighted), per claim and per beneficiary, the
+outlier flags and the 2023-24 change and 2020-24 CAGR fields. Medicaid spending is before rebates. A separate "Medicare
+Quarterly Part D Spending by Drug" dataset (2026 Q1) exists in the catalog and was not downloaded (outside the brief).
+
+## NADAC - phase 2, step 5.6
+
+**Script:** `09_nadac.py`. Yearly NADAC datasets 2018-2026 found in the data.medicaid.gov metastore; each CSV is streamed,
+checked against its line count, filtered to product-map NDCs and then deleted (sha256 in the manifest). Fields: ndc,
+ndc_description, nadac_per_unit, pricing_unit, effective_date, classification_for_rate_setting, explanation_code,
+pharmacy_type_indicator, as_of_date. **NADAC is a pharmacy acquisition-cost survey, not a net price and not a list
+price.** NDCs absent from NADAC (not surveyed) simply have no rows.
+
+## SDUD suppression diagnostics (`11_sdud_suppression_diagnostics.py`)
+
+Output `data/interim/sdud_suppression_diagnostics.parquet` (stacked, `diagnostic` column): (a) unsuppressed rows with 0
+prescriptions; (b) suppression among national `XX` rows; (c) state x quarter x label_group observed prescriptions,
+suppressed-row count and maximum hidden share = 10S / (observed + 10S) (FFSU + MCOU combined; includes combination-product
+NDCs); (d) per NDC x quarter x utilization type, XX total minus observed state rows compared with 1x-10x the number of
+suppressed state rows. Diagnostics only; no modelling. Results are in the checkpoint report.

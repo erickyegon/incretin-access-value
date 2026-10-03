@@ -54,6 +54,12 @@ def main():
     for c in p.columns:
         if c.startswith("total_") and not c.endswith("footnotes") or c == "medicaid_and_chip_child_enrollment":
             p[c] = num(p[c])
+    # CMS reports 0 (with a footnote such as "Unable to Provide Data due to System Limitations") when a state could not
+    # report; a Medicaid program does not have 0 enrollees, so a 0 total is missing data -> NULL, flagged.
+    tot = ["total_medicaid_and_chip_enrollment", "total_medicaid_enrollment", "total_chip_enrollment"]
+    p["enrollment_zero_set_null"] = (p[tot] == 0).any(axis=1)
+    for c in tot:
+        p.loc[p[c] == 0, c] = float("nan")
     p["month"] = pd.to_datetime(p.reporting_period, format="%Y%m")
     p.to_parquet(OUT / "medicaid_chip_enrollment_monthly.parquet", index=False)
 
