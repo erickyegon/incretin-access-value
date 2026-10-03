@@ -199,3 +199,22 @@ inapplicable/missing code). The prescribed-medicines files name drugs (e.g. Ozem
 `data/reference/icd10_value_sets.csv` built from the CMS FY2027 code-descriptions tabular-order file (98,403 codes; `icd10cm_order_2027.txt`): type 2 diabetes E11 (117 codes, 87 billable),
 obesity E66 (14, 10 billable), BMI Z68 (39, 33 billable) and a comorbidity placeholder row. Codes and descriptions are copied from the CMS file; `code` is dotted, `code_nodot` as in CMS,
 `billable` = CMS valid-for-submission flag. Selection is by explicit fiscal year (an earlier run picked the FY2026 April update by mistake and was redone).
+
+## Trials, approvals, labels and policy documents - phase 5, step 5.12
+- **ClinicalTrials.gov API v2** (`20_clinicaltrials.py`): one query per ingredient (semaglutide, tirzepatide, orforglipron, liraglutide, dulaglutide, exenatide, lixisenatide, albiglutide)
+  with a condition filter (obesity, overweight, type 2 diabetes, weight management); 1,569 distinct studies (430 with results posted; 431 phase 3, 326 phase 4). Fields: NCT ID, titles, phase, status,
+  start / primary completion / completion dates, sponsor and class, enrollment, results posted, conditions, interventions, `matched_ingredients`. Raw pages saved.
+- **Drugs@FDA data files** (`21_drugsatfda.py`; FDA page dated 2026-10-02): 32 in-scope applications. Original approval dates come from the data (e.g. Wegovy NDA 215256 2021-06-04, Zepbound NDA 217806 2023-11-08,
+  Foundayo NDA 220934 2026-04-01, Wegovy tablets NDA 218316 2025-12-22). 265 approved supplements, 64 of them class "Efficacy"; `inscope_efficacy_supplements.csv` lists their dates for the key brands as
+  CANDIDATE indication supplements (the data do not say which indication each added; read the label history before using one).
+- **Labels** (`22_fda_labels.py`): the latest label PDF per in-scope NDA/BLA from Drugs@FDA is in `data/raw/fda_labels` (this fills the gap left by openFDA, which has no innovator label for Wegovy, Ozempic injection
+  or Bydureon); openFDA label JSON per brand from Phase 1 stays in `data/raw/openfda_label`. Indications text confirms: Foundayo, Saxenda, Wegovy (injection and tablets) and Zepbound = weight reduction;
+  every other in-scope brand = glycemic control in type 2 diabetes. **Bydureon and Bydureon BCise (2025-06-02 labels) are verified as diabetes-only.**
+- **Product map updates** (`23_update_map_after_drugsatfda.py`, run after 02 and 06): Bydureon `label_verified = Y_drugsatfda_label`; SDUD-only brands `Y_brand_label_drugsatfda`; labeler codes of the 15 SDUD-only NDCs
+  checked against Drugs@FDA sponsors: 14 confirmed (Novo 00169, AstraZeneca 00310, Sanofi 00024, GlaxoSmithKline 00173), 1 not confirmable (labeler 66780: Drugs@FDA lists sponsors, not NDC labeler codes).
+- **Policy documents** (`24_policy_docs.py`, saved in `data/raw/policy_documents` with access date in the manifest): the CMS Medicare GLP-1 Bridge page and prescriber PDF (July 1, 2026 to
+  December 31, 2027; $50 copay; Foundayo, Wegovy, Zepbound KwikPen; BMI-tiered criteria), the CMS launch press release, and the KFF Medicaid Coverage of and Spending on GLP-1s page (2026-01-16).
+- **Trial efficacy inputs**: `data/reference/trial_inputs.csv` is an empty template (columns trial, drug, dose, population, duration_weeks, outcome, value, uncertainty, source_citation, doi, page_or_table);
+  SURMOUNT-1, SURMOUNT-5, STEP-1 and others are to be extracted by hand from the published papers.
+
+Run order for the product map: 00, 01, 02, then 06 (SDUD-only NDCs), then 23 (Drugs@FDA evidence); re-running 02 alone drops the 06 and 23 updates.
