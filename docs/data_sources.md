@@ -141,3 +141,33 @@ prescriptions; (b) suppression among national `XX` rows; (c) state x quarter x l
 suppressed-row count and maximum hidden share = 10S / (observed + 10S) (FFSU + MCOU combined; includes combination-product
 NDCs); (d) per NDC x quarter x utilization type, XX total minus observed state rows compared with 1x-10x the number of
 suppressed state rows. Diagnostics only; no modelling. Results are in the checkpoint report.
+
+## Candidate source for the sensitivity-group states (recorded 2026-10-03, not yet used)
+The CMS State Plan Amendment (SPA) database on Medicaid.gov may give systematic, CMS-approved effective dates for when each
+state added weight-loss drugs as a covered category. Candidate for every state still in the sensitivity group
+(NH, MN, WI, VA, DE, MO, TN, UT). Caveat: a SPA effective date marks coverage of the *category* (it can reflect Saxenda-era or
+older-drug coverage) and does not by itself show Wegovy or Zepbound coverage; read the SPA text for product scope before using
+it for the primary exposure. Already seen: MS SPA 23-0013 (eff. 2023-07-01), MI SPA 21-0018 (eff. 2022-02-01), DE SPA 19-0009
+(eff. 2019-10-01, approved 2022-09-14, "clarifies" obesity drug coverage).
+
+## CMS Open Payments General Payment Data - phase 3, step 5.7
+
+**Script:** `13_open_payments.py`. Program years found in the openpaymentsdata.cms.gov catalog: **2019-2025** (2018 is not in the
+current catalog). Deviation from the brief (logged): the datastore API needs 27-65 s per 500 rows (Ozempic alone has ~200k rows in 2024),
+so each yearly CSV (3-6 GB) was downloaded, sha256-recorded, filtered with DuckDB and deleted. Rows are kept where **any** of
+`Name_of_Drug_or_Biological_or_Device_or_Medical_Supply_1..5` contains an in-scope brand or generic (case-insensitive substring);
+`matched_product_name` is the first matching field and the exact strings are in `data/interim/open_payments/_matched_strings_YYYY.csv`
+(16 distinct strings). Fields kept: Record_ID, program year, change type, dispute status, recipient type, NPI, primary type and specialty,
+state and ZIP, manufacturer, payment amount, date, nature and form of payment, the five product names with their drug/device indicator and
+therapeutic-area fields. Limits: non-physician practitioners (NPs, PAs etc.) are covered recipients only from program year 2021
+(2019-2020 are 100% physicians); food-and-beverage payments dominate row counts; payments name the product discussed, not the indication.
+
+## NPPES and NUCC - phase 3, step 5.8
+
+**Script:** `14_nppes_nucc.py`. NPPES full monthly file `NPPES_Data_Dissemination_September_2026_V2.zip` (1.16 GB; link found by rendering
+the CMS NPI Files page because it is built by JavaScript). **Stream-filtered from the zip without unzipping** (9,798,758 rows read) to the
+394,687 NPIs that appear in Part D prescribers (267,678) or Open Payments (266,495); 394,686 found. Kept: NPI, entity type, credential,
+enumeration, last-update and deactivation dates, practice state and ZIP, all 15 taxonomy codes with switches, and `primary_taxonomy_code`
+(the code whose primary switch is Y, else code 1). 5,996 kept NPIs are deactivated; 4,745 rows have a blank entity type (deactivated
+records with blank fields). NUCC taxonomy version 26.1 (883 codes) from nucc.org; 98.8% of primary taxonomy codes are in it. The NPPES zip
+is kept in `data/raw/nppes` so the filter can be re-run (sha256 in the manifest).
