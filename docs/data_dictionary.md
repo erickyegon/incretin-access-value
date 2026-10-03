@@ -84,3 +84,16 @@ discrepancy flags computed from SDUD volume; they never set or adjust a date.
   2019-2025 headline: 4,311,738 records, $238.9M; overlapping product sums total $267.7M.
 - **NPs and PAs enter as covered recipients in program year 2021** (2019-2020 hold physicians and a few teaching hospitals only), so
   **cross-2021 trends must use physicians only** (`is_physician`: Covered_Recipient_Type starts with "Covered Recipient Physician").
+
+## Coverage analysis-group rules (decided 2026-10-03; `scripts/build/merge_coverage_ranges.py`)
+- **(a) Primary** requires the Wegovy/Zepbound start (exact date, or the whole [`start_earliest`, `start_latest`] range) to fall
+  **inside one calendar quarter**. Everything else is the sensitivity group. `range_wider_than_1q` (>92 days) is a separate flag.
+- **(b) Kansas** is primary with a start quarter of **2021Q3** (the 2021-07-21 DUR Board decision), although its bounds
+  (2021-06-04..2021-07-21) straddle Q2/Q3; it is also flagged `drop_one_sensitivity = without-Kansas` for a without-Kansas run.
+- **(c)** `first_treated_quarter` = the quarter containing the start; `first_full_quarter` = the first quarter fully covered
+  (the same quarter when the start is the first day of a quarter). Ranges give "first..last" quarters. The full-quarter version is for sensitivity analyses.
+- **(d)** Rhode Island, Massachusetts and South Carolina stay primary. South Carolina's start (2024-11-01) is stated in the
+  SCDHHS-commissioned Milliman SFY 2026 capitation report (names Wegovy and Saxenda); the SCDHHS bulletin itself was not found.
+- **(e)** Mississippi: CMS-approved SPA 23-0013 (effective 2023-07-01) covers the weight-loss **category** only ("select obesity
+  drugs ... as listed on the state's website"). Wegovy is named by the state's criteria (v1.3, dated 7/1/2023) and the 2023-05-09
+  P&T minutes, but no document confirms a Wegovy go-live, so the date is kept and confidence is **medium**.

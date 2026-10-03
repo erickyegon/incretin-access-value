@@ -46,7 +46,7 @@ both_exact("Michigan", "2022-02-01", "MDHHS bulletin MSA 21-49 (attachment lists
 both_exact("Rhode Island", "2023-10-03", "RI EOHHS PDL 2024-01-17: Weight Management Agents (Saxenda, Wegovy) status implementation 10/03/2023", note="PDL 2022-07-18 has no such class")
 for p in ("Saxenda", "Wegovy"):
     put("Massachusetts", p, earliest="2024-01-01", e_src="MassHealth Pharmacy Facts #235 (2024-11-19): 'began covering anti-obesity medications in January 2024' (month only)", latest="2024-01-31", l_src="same document; month precision", note="Pharmacy Facts read via Wayback copy (mass.gov 403)")
-both_exact("South Carolina", "2024-11-01", "SC Daily Gazette 2025-11-17 quoting SCDHHS: coverage began 2024-11-01 (SCDHHS bulletin not retrieved)", note="medium: news report of agency")
+both_exact("South Carolina", "2024-11-01", "Milliman SFY 2026 Capitation Rate Methodology and Data Book for SCDHHS (2025-03-17): 'Effective November 1, 2024, SCDHHS implemented a policy to permit the use of GLP-1 pharmaceutical products Wegovy and Saxenda as weight management agents'; corroborated by SC Daily Gazette 2025-11-17", note="SCDHHS bulletin itself not found (one attempt); end 2025-12-31 from SCDHHS spokesperson via SC Daily Gazette")
 put("California", "Saxenda", exact="2023-01-01", l_src="Medi-Cal Rx Contract Drugs List change log: 'Saxenda Added to CDL with restriction. January 1, 2023' (Wayback snapshot 2023-01-29)")
 put("California", "Wegovy", exact="2023-01-01", l_src="Medi-Cal Rx CDL change log: 'Semaglutide (Wegovy) Added to CDL with restriction. January 1, 2023'")
 put("California", "Zepbound", exact="2024-10-01", l_src="Medi-Cal Rx Monthly Bulletin 2024-10-01: 'Tirzepatide (Zepbound) Added to CDL ... October 1, 2024'")
@@ -102,8 +102,8 @@ R.to_csv(ROOT / "data" / "reference" / "medicaid_obesity_coverage_by_product.csv
 # ---- exposure per state = min over Wegovy/Zepbound -------------------------------------------------------------
 main = pd.read_csv(ROOT / "data" / "reference" / "medicaid_obesity_coverage.csv", dtype=str).fillna("")
 for c in ["start_wegovy_zepbound", "start_saxenda", "start_earliest", "start_latest", "range_wider_than_1q", "start_earliest_source",
-          "start_earliest_accessed", "start_latest_source", "start_latest_accessed", "exposure_driving_product", "first_covered_quarter_partial",
-          "first_covered_quarter_full", "analysis_group", "analysis_group_reason"]:
+          "start_earliest_accessed", "start_latest_source", "start_latest_accessed", "exposure_driving_product", "first_treated_quarter",
+          "first_full_quarter", "drop_one_sensitivity", "analysis_group", "analysis_group_reason"]:
     main[c] = ""
 
 
@@ -149,27 +149,32 @@ for st, i in first_rows.items():
     main.at[i, "start_latest_source"] = ex.start_latest_source
     main.at[i, "start_latest_accessed"] = ACC
     main.at[i, "exposure_driving_product"] = drive
-    main.at[i, "first_covered_quarter_partial"] = qlabel(l) if exact else f"{qlabel(e)}..{qlabel(l)}"
-    main.at[i, "first_covered_quarter_full"] = next_full_q(l) if exact else f"{next_full_q(e)}..{next_full_q(l)}"
+    main.at[i, "first_treated_quarter"] = qlabel(l) if exact else f"{qlabel(e)}..{qlabel(l)}"
+    main.at[i, "first_full_quarter"] = next_full_q(l) if exact else f"{next_full_q(e)}..{next_full_q(l)}"
     conf = main.at[i, "confidence"]
-    if st == "Utah":
-        grp, why = "sensitivity", "range ~12 months from KFF bounds only; low confidence (Utah documents unreadable)"
-    elif exact or not wide:
-        grp, why = "primary", ("exact date" if exact else f"range {e}..{l} within one quarter")
+    same_q = qlabel(e) == qlabel(l)
+    if st == "Kansas":   # decision 2026-10-03: primary with start quarter 2021Q3 (2021-07-21 DUR Board decision)
+        grp, why = "primary", "decision: start quarter 2021Q3 from the 2021-07-21 DUR Board decision (range 2021-06-04..2021-07-21 straddles Q2/Q3); also flagged for a without-Kansas sensitivity analysis"
+        main.at[i, "first_treated_quarter"], main.at[i, "first_full_quarter"] = "2021Q3", "2021Q4"
+    elif exact:
+        grp, why = "primary", "exact date"
+    elif same_q:
+        grp, why = "primary", f"range {e}..{l} inside one calendar quarter ({qlabel(e)})"
     else:
-        grp, why = "sensitivity", f"range {e}..{l} wider than one quarter ({(d(l) - d(e)).days} days)"
+        grp, why = "sensitivity", f"range {e}..{l} not inside one calendar quarter ({(d(l) - d(e)).days} days)"
+    main.at[i, "drop_one_sensitivity"] = "without-Kansas" if st == "Kansas" else ""
     main.at[i, "analysis_group"], main.at[i, "analysis_group_reason"] = grp, why
 
 # reinstatement row of NC and confidence updates from the new documents
 # start-date confidence: exact date from an official document = high; bounded range from dated official documents = medium;
 # KFF-only bounds or unreadable documents = low
 for s_, c_ in {"California": "high", "Kansas": "medium", "New Hampshire": "medium", "Minnesota": "medium", "Wisconsin": "medium",
-               "Virginia": "medium", "Delaware": "medium", "Missouri": "medium", "Tennessee": "low", "Utah": "low"}.items():
+               "Virginia": "medium", "Delaware": "medium", "Missouri": "medium", "Tennessee": "low", "Utah": "low", "South Carolina": "high"}.items():
     main.loc[main.state == s_, "confidence"] = c_
 main.loc[(main.state == "Michigan"), "confidence"] = "high"
 main.loc[(main.state == "Michigan"), "first_product_covered"] = "Saxenda; Wegovy (NDCs in MSA 21-49 attachment)"
-main.loc[(main.state == "Mississippi"), "confidence"] = "high"
-main.loc[(main.state == "Mississippi"), "notes"] = main.loc[(main.state == "Mississippi"), "notes"] + " | SPA 23-0013 approved by CMS with effective date 2023-07-01 (medicaid.gov MS-23-0013.pdf)."
+main.loc[(main.state == "Mississippi"), "confidence"] = "medium"
+main.loc[(main.state == "Mississippi"), "notes"] = main.loc[(main.state == "Mississippi"), "notes"] + " | SPA 23-0013 approved by CMS with effective date 2023-07-01 (medicaid.gov MS-23-0013.pdf) covers the CATEGORY only ('select obesity drugs ... as listed on the state's website'; no drug named). Wegovy is named by the state criteria v1.3 (dated 7/1/2023) and the 2023-05-09 P&T minutes, but no document confirms a Wegovy claims go-live; confidence medium."
 main.loc[(main.state == "Michigan"), "notes"] = main.loc[(main.state == "Michigan"), "notes"] + " | CMS approved SPA 21-0018 with effective date 2022-02-01; MSA 21-49 attachment lists Saxenda and Wegovy."
 main.to_csv(ROOT / "data" / "reference" / "medicaid_obesity_coverage.csv", index=False, encoding="utf-8", quoting=csv.QUOTE_MINIMAL)
 for f in ("medicaid_obesity_coverage.csv", "medicaid_obesity_coverage_by_product.csv"):
