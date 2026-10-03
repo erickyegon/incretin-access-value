@@ -171,3 +171,31 @@ enumeration, last-update and deactivation dates, practice state and ZIP, all 15 
 (the code whose primary switch is Y, else code 1). 5,996 kept NPIs are deactivated; 4,745 rows have a blank entity type (deactivated
 records with blank fields). NUCC taxonomy version 26.1 (883 codes) from nucc.org; 98.8% of primary taxonomy codes are in it. The NPPES zip
 is kept in `data/raw/nppes` so the filter can be re-run (sha256 in the manifest).
+
+## NHANES - phase 4, step 5.9 (`17_nhanes.py`)
+Official XPT files from the NCHS data pages (links read from the pages, URL of every file in the manifest). **August 2021-August 2023 (suffix _L):**
+DEMO_L (11,933), BMX_L, BPXO_L (oscillometric blood pressure), BPQ_L, GHB_L, DIQ_L, MCQ_L, RXQ_RX_L. **2017-March 2020 pre-pandemic (prefix P_):**
+P_DEMO (15,560), P_BMX, P_BPXO, P_BPQ, P_GHB, P_DIQ, P_MCQ, P_RXQ_RX, and the RXQ_DRUG lookup (1988-2020). Documentation pages are saved in `data/raw/nhanes/*_doc.htm`.
+
+**Prescription medicines check (the question asked):** `RXQ_RX_L` (2021-2023) **exists but has only 3 columns (SEQN, RXQ033, RXQ050)**: whether any prescription
+medicine was taken in the past 30 days and how many. It has **no drug names**, so it cannot identify semaglutide or tirzepatide use, and the RXQ_DRUG
+lookup stops at 2020. The 2017-2020 `P_RXQ_RX` does name drugs: 7 semaglutide, 27 dulaglutide, 22 liraglutide and 7 exenatide records, **no tirzepatide**.
+Direct GLP-1 use in 2021-2023 therefore cannot be measured in NHANES; use DIQ_L (diabetes medication questions) and BMX_L/GHB_L instead.
+
+**Weights (from NCHS documentation text; analytic-guidelines details to be confirmed at analysis time):** survey design variables SDMVSTRA and SDMVPSU come from DEMO.
+2021-2023: `WTINT2YR` (interview) for questionnaire-only analyses (DIQ_L, MCQ_L, BPQ_L, RXQ_RX_L: "interview weights should only be used if questionnaire data are
+analyzed by themselves"); `WTMEC2YR` (exam) for BMX_L, BPXO_L ("exam sample weights should be used") and for questionnaire data merged with exam data (MCQ doc);
+GHB_L ships its own `WTPH2YR` (phlebotomy weight); DIQ merged with fasting glucose uses the fasting-subsample weight (WTSAF2YR, in the fasting lab file, not downloaded).
+2017-March 2020: use the special pre-pandemic weights in P_DEMO: `WTINTPRP` (interview) and `WTMECPRP` (exam); the older 2017-2018 and 2019-2020 cycles are not
+separately representative (weights apply to the combined file only). Do not combine the two periods' weights without the NCHS combining guidance.
+
+## MEPS Household Component - phase 4, step 5.10 (`18_meps.py`)
+File numbers from AHRQ's PUFID.csv, links from each file's detail page. Latest two years (2024 is the latest released): Full-Year Consolidated HC-256 (2024, 19,140 persons)
+and HC-251 (2023, 18,919); Prescribed Medicines event files HC-254A (2024, 204,550) and HC-248A (2023, 192,275); Medical Conditions HC-255 (2024, 67,705) and HC-249 (2023, 63,656).
+Full files kept as Parquet; documentation and codebook PDFs saved. **MEPS conditions use 3-character ICD-10-CM codes** (`ICD10CDX`; all 67,705 codes have length 3; `-15` is the
+inapplicable/missing code). The prescribed-medicines files name drugs (e.g. Ozempic 1,995 rows and Mounjaro 965 in 2024).
+
+## ICD-10-CM value sets - phase 4, step 5.11 (`19_icd10.py`)
+`data/reference/icd10_value_sets.csv` built from the CMS FY2027 code-descriptions tabular-order file (98,403 codes; `icd10cm_order_2027.txt`): type 2 diabetes E11 (117 codes, 87 billable),
+obesity E66 (14, 10 billable), BMI Z68 (39, 33 billable) and a comorbidity placeholder row. Codes and descriptions are copied from the CMS file; `code` is dotted, `code_nodot` as in CMS,
+`billable` = CMS valid-for-submission flag. Selection is by explicit fiscal year (an earlier run picked the FY2026 April update by mistake and was redone).
