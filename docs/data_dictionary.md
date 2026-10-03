@@ -72,3 +72,15 @@ discrepancy flags computed from SDUD volume; they never set or adjust a date.
 - **`Tot_Benes` is mostly suppressed** (blank in 72-91% of rows depending on year; `GE65_Bene_Sprsn_Flag` marks it), so
   analyses of prescribers use **claims** (`Tot_Clms`, `Tot_30day_Fills`, `Tot_Drug_Cst`), not beneficiaries.
 - Blank values are NULL, never 0. The latest released year is 2024 (2025 not released).
+
+## Open Payments attribution and recipient types (decided 2026-10-03; `16_open_payments_attribution.py`)
+- **Headline totals count each payment record once** (`op_record_products.parquet`: one row per Record_ID, `n_inscope_products`,
+  `products`, `is_physician`).
+- **Product-level figures (`op_product_attribution_long.parquet`, one row per record x in-scope product) come in two versions:**
+  `amount_equal_split` = record amount / `n_inscope_products` (sums to the headline total) and `amount_overlapping` = the full
+  amount counted for every in-scope product named ("payments mentioning the product"; **sums exceed the headline total, always label
+  as overlapping**). A product is the brand (or ingredient, for generic-only strings) found in one of the five name fields.
+- Share of records naming more than one in-scope product: 43.5% overall (6.4% in 2019; 45-53% 2020-2025; max 3 products).
+  2019-2025 headline: 4,311,738 records, $238.9M; overlapping product sums total $267.7M.
+- **NPs and PAs enter as covered recipients in program year 2021** (2019-2020 hold physicians and a few teaching hospitals only), so
+  **cross-2021 trends must use physicians only** (`is_physician`: Covered_Recipient_Type starts with "Covered Recipient Physician").
