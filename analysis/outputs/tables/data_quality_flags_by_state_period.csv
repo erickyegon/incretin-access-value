@@ -1,0 +1,29 @@
+state_code,analysis_group,flag,first_quarter,last_quarter,n_quarters
+AK,never_treated,Enrollment definition caveat (any month in quarter),2023Q3,2024Q1,3
+CA,primary,Enrollment definition caveat (any month in quarter),2018Q1,2025Q4,32
+CO,never_treated,Enrollment definition caveat (any month in quarter),2025Q3,2025Q3,1
+CT,never_treated,Enrollment definition caveat (any month in quarter),2018Q1,2018Q2,2
+HI,never_treated,Enrollment definition caveat (any month in quarter),2025Q1,2026Q1,5
+MI,primary,Enrollment definition caveat (any month in quarter),2021Q2,2021Q2,1
+MT,never_treated,Enrollment definition caveat (any month in quarter),2025Q1,2026Q1,5
+NH,sensitivity,Enrollment definition caveat (any month in quarter),2024Q4,2026Q1,6
+OH,never_treated,Enrollment definition caveat (any month in quarter),2021Q3,2026Q1,19
+SC,primary,Enrollment definition caveat (any month in quarter),2021Q2,2024Q1,12
+SC,primary,Enrollment definition caveat (any month in quarter),2024Q3,2026Q1,7
+UT,sensitivity,Enrollment definition caveat (any month in quarter),2018Q1,2023Q2,22
+WA,never_treated,Enrollment definition caveat (any month in quarter),2018Q1,2021Q2,14
+WV,never_treated,Enrollment definition caveat (any month in quarter),2018Q1,2026Q1,33
+RI,primary,Enrollment: state unable to provide data (month NULL),2024Q4,2024Q4,1
+AK,never_treated,SDUD not reported: MCOU,2026Q1,2026Q1,1
+AL,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+AR,never_treated,SDUD not reported: MCOU,2018Q1,2018Q4,4
+CT,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+ID,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+ME,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+MO,sensitivity,SDUD not reported: MCOU,2018Q1,2026Q1,33
+MT,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+OK,never_treated,SDUD not reported: MCOU,2018Q1,2024Q1,25
+SD,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33
+VT,never_treated,SDUD not reported: MCOU,2026Q1,2026Q1,1
+WI,sensitivity,SDUD not reported: MCOU,2020Q1,2026Q1,25
+WY,never_treated,SDUD not reported: MCOU,2018Q1,2026Q1,33

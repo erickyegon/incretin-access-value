@@ -1,0 +1,14 @@
+state_code,flag,first_quarter,last_quarter,n_quarters,whole_window
+AK,not_reported_mcou,2026Q1,2026Q1,1,FALSE
+AL,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+AR,not_reported_mcou,2018Q1,2018Q4,4,FALSE
+CT,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+ID,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+ME,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+MO,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+MT,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+OK,not_reported_mcou,2018Q1,2024Q1,25,FALSE
+SD,not_reported_mcou,2018Q1,2026Q1,33,TRUE
+VT,not_reported_mcou,2026Q1,2026Q1,1,FALSE
+WI,not_reported_mcou,2020Q1,2026Q1,25,FALSE
+WY,not_reported_mcou,2018Q1,2026Q1,33,TRUE
