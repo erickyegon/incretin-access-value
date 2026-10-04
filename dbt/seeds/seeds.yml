@@ -111,3 +111,16 @@ seeds:
     data_tests:
       - dbt_utils.unique_combination_of_columns:
           arguments: {combination_of_columns: [state, year, quarter, utilization_type]}
+
+  - name: prescriber_specialty_map
+    description: "Grouping of the CMS Part D prescriber type (Prscrbr_Type) into the specialty groups used in Module D: primary care physicians, nurse practitioners and physician assistants, endocrinology, cardiology. Any prescriber type not listed is 'Other' (rule applied in mart_prescriber_year). Decided 2026-10 for Module D."
+    config:
+      column_types: {prescriber_type: text, specialty_group: text}
+    columns:
+      - name: prescriber_type
+        tests: [unique, not_null]
+  - name: nppes_specialty_map
+    description: "Grouping of NUCC taxonomy classification and specialization (from the NPPES primary taxonomy code) into the same specialty groups, to cross-check the CMS prescriber type. A specialization of '*' matches any specialization of the classification; an empty specialization matches only codes with none; anything unmatched is 'Other'."
+    config:
+      column_types: {taxonomy_classification: text, taxonomy_specialization: text, specialty_group: text}
+

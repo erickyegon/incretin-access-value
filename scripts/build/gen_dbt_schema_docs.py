@@ -207,9 +207,16 @@ MODELS = {
             "entity_type_code": "NPPES entity type: 1 individual, 2 organisation.", "practice_state": "NPPES practice state.", "primary_taxonomy_code": "NPPES primary taxonomy code.",
             "taxonomy_classification": "NUCC classification of the primary taxonomy.", "taxonomy_specialization": "NUCC specialization of the primary taxonomy.",
             "in_nppes": "True when the NPI is in the NPPES extract.", "prescriber_state": "Prescriber state in the Part D file.",
+            "specialty_group": "Specialty group of the CMS prescriber type (primary care physicians, nurse practitioners and physician assistants, endocrinology, cardiology, other).",
+            "specialty_group_nppes": "Specialty group from the NPPES taxonomy classification and specialization (cross-check of the CMS type); NULL without a taxonomy.",
+            "ge65_total_claims": "Claims for beneficiaries aged 65 and over (NULL when CMS suppresses it, under 11 claims).",
             "total_claims": "Part D claims (at least 11).", "total_30day_fills": "30-day standardized fills.", "total_day_supply": "Total days supply.",
             "total_drug_cost": "Total drug cost, USD.", "total_beneficiaries": "Beneficiaries with a claim."},
          {"unique_combo": ["prescriber_npi", "data_year", "brand_name", "generic_name"]}),
+        "mart_open_payments_npi_year": ("In-scope Open Payments by recipient NPI and program year, for linking to prescribers; aggregate use only.", COMMON | {
+            "covered_recipient_npi": "Recipient NPI.", "is_physician": "True when the recipient is a physician (NPs and PAs enter in 2021).", "n_records": "Distinct payment records.",
+            "amount_equal_split": "Dollars with each record divided over its in-scope products (sums to the headline).", "amount_overlapping": "Dollars counting the full record for every product named (overlapping)."},
+         {"unique_combo": ["covered_recipient_npi", "program_year"]}),
         "mart_open_payments_year_product": ("Open Payments by program year, product and physician flag: equal-split and overlapping dollars.", COMMON | {
             "n_records": "Records naming the product.", "n_distinct_recipients_npi": "Distinct recipient NPIs.",
             "amount_equal_split": "Dollars with each record divided over its in-scope products (sums to the headline total).",

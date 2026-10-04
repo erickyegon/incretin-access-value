@@ -1,0 +1,12 @@
+taxonomy_classification,taxonomy_specialization,specialty_group
+Family Medicine,*,Primary care physicians
+General Practice,*,Primary care physicians
+Internal Medicine,,Primary care physicians
+Internal Medicine,Geriatric Medicine,Primary care physicians
+Internal Medicine,"Endocrinology, Diabetes & Metabolism",Endocrinology
+Internal Medicine,Cardiovascular Disease,Cardiology
+Internal Medicine,Interventional Cardiology,Cardiology
+Internal Medicine,Advanced Heart Failure and Transplant Cardiology,Cardiology
+Internal Medicine,Clinical Cardiac Electrophysiology,Cardiology
+Nurse Practitioner,*,Nurse practitioners and physician assistants
+Physician Assistant,*,Nurse practitioners and physician assistants

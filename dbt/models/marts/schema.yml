@@ -299,7 +299,41 @@ models:
         - utilization_type
 - name: mart_sdud_state_quarter_brand
   description: SDUD obesity-labelled products by state, quarter, brand and dosage form for the panel states (FFSU + MCOU), for the payer-specific brand split.
-  columns: []
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  - name: brand_label
+    description: Brand name, or 'GENERIC <ingredient>' for brand-less generics.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: dosage_form
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: coverage_active
+    description: True when covered_days_share > 0 (any covered day in the quarter).
+  - name: analysis_group
+    description: primary, sensitivity or never_treated, from the coverage table (primary requires a documented start inside one calendar quarter).
+  - name: n_rows
+    description: Number of SDUD state-NDC rows behind the cell (suppressed rows included).
+  - name: n_suppressed_rows
+    description: Number of those rows that CMS suppressed (1 to 10 prescriptions each).
+  - name: rx_observed
+    description: Prescriptions in the unsuppressed rows only (suppressed rows contribute nothing).
+  - name: rx_upper_bound
+    description: 'rx_observed + 10 x n_suppressed_rows: the most the cell could hold.'
+  - name: amount_total_observed
+    description: Total amount reimbursed in unsuppressed rows (USD, gross of rebates).
+  - name: amount_medicaid_observed
+    description: Medicaid amount reimbursed in unsuppressed rows (USD, gross of rebates).
   data_tests:
   - dbt_utils.unique_combination_of_columns:
       arguments:
@@ -358,6 +392,15 @@ models:
         - data_year
         - brand_name
         - generic_name
+- name: mart_open_payments_npi_year
+  description: In-scope Open Payments by recipient NPI and program year, for linking to prescribers; aggregate use only.
+  columns: []
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - covered_recipient_npi
+        - program_year
 - name: mart_open_payments_year_product
   description: 'Open Payments by program year, product and physician flag: equal-split and overlapping dollars.'
   columns:
@@ -550,14 +593,28 @@ models:
     description: Taking prescription for hypertension.
   - name: bpq050a
     description: Now taking prescribed medicine for hypertension.
+  - name: bpq080
+    description: Doctor told you high cholesterol level.
+  - name: bpq090d
+    description: Told to take prescription for cholesterol (2017-2020 only).
+  - name: bpq100d
+    description: Now taking prescribed medicine for cholesterol (2017-2020 only).
+  - name: bpq101d
+    description: Taking medication to lower blood cholesterol (2021-2023 only).
+  - name: bpq150
+    description: Now taking prescribed medication for high blood pressure (2021-2023 only).
   - name: diq010
     description: Doctor told you have diabetes.
   - name: diq050
     description: Taking insulin now.
   - name: diq070
     description: Taking diabetic pills to lower blood sugar.
+  - name: diq160
+    description: Ever told you had prediabetes.
   - name: mcq010
     description: Ever been told you have asthma.
+  - name: mcq080
+    description: Doctor ever said you were overweight (2017-2020 only; not asked in 2021-2023).
   - name: mcq160a
     description: Ever told you had arthritis.
   - name: mcq160b
@@ -572,6 +629,22 @@ models:
     description: Ever told you had a stroke.
   - name: mcq220
     description: Ever told you had cancer or malignancy.
+  - name: hiq011
+    description: Covered by health insurance.
+  - name: hiq032a
+    description: Covered by private insurance.
+  - name: hiq032b
+    description: Covered by Medicare.
+  - name: hiq032c
+    description: Covered by Medi-Gap.
+  - name: hiq032d
+    description: Covered by Medicaid.
+  - name: hiq032e
+    description: Covered by CHIP.
+  - name: hiq032h
+    description: Covered by state-sponsored health plan.
+  - name: hiq032i
+    description: Covered by other government insurance.
   data_tests:
   - dbt_utils.unique_combination_of_columns:
       arguments:
