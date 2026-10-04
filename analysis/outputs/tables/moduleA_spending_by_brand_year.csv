@@ -1,0 +1,71 @@
+program,brand,year,obesity_label_brand,spend_millions
+Medicaid,Mounjaro,2022,FALSE,34
+Medicaid,Mounjaro,2023,FALSE,451.7
+Medicaid,Mounjaro,2024,FALSE,993
+Medicaid,Other diabetes GLP-1,2020,FALSE,64.7
+Medicaid,Other diabetes GLP-1,2021,FALSE,95.1
+Medicaid,Other diabetes GLP-1,2022,FALSE,97.6
+Medicaid,Other diabetes GLP-1,2023,FALSE,77.7
+Medicaid,Other diabetes GLP-1,2024,FALSE,95.6
+Medicaid,Ozempic,2020,FALSE,274.5
+Medicaid,Ozempic,2021,FALSE,492.9
+Medicaid,Ozempic,2022,FALSE,976.3
+Medicaid,Ozempic,2023,FALSE,2146
+Medicaid,Ozempic,2024,FALSE,3412.2
+Medicaid,Rybelsus,2020,FALSE,9.4
+Medicaid,Rybelsus,2021,FALSE,59.5
+Medicaid,Rybelsus,2022,FALSE,161.8
+Medicaid,Rybelsus,2023,FALSE,279.2
+Medicaid,Rybelsus,2024,FALSE,311.4
+Medicaid,Saxenda,2020,TRUE,13.7
+Medicaid,Saxenda,2021,TRUE,22.3
+Medicaid,Saxenda,2022,TRUE,83.5
+Medicaid,Saxenda,2023,TRUE,129.5
+Medicaid,Saxenda,2024,TRUE,38.4
+Medicaid,Trulicity,2020,FALSE,594.5
+Medicaid,Trulicity,2021,FALSE,1183.3
+Medicaid,Trulicity,2022,FALSE,2149.2
+Medicaid,Trulicity,2023,FALSE,2870.8
+Medicaid,Trulicity,2024,FALSE,2169.3
+Medicaid,Victoza,2020,FALSE,555.1
+Medicaid,Victoza,2021,FALSE,661.6
+Medicaid,Victoza,2022,FALSE,631.6
+Medicaid,Victoza,2023,FALSE,585
+Medicaid,Victoza,2024,FALSE,225.6
+Medicaid,Wegovy,2021,TRUE,3.1
+Medicaid,Wegovy,2022,TRUE,41.1
+Medicaid,Wegovy,2023,TRUE,534.9
+Medicaid,Wegovy,2024,TRUE,1243.3
+Medicaid,Zepbound,2023,TRUE,0.5
+Medicaid,Zepbound,2024,TRUE,277.4
+Medicare Part D,Mounjaro,2022,FALSE,144
+Medicare Part D,Mounjaro,2023,FALSE,2361.4
+Medicare Part D,Mounjaro,2024,FALSE,6336.9
+Medicare Part D,Other diabetes GLP-1,2020,FALSE,313.8
+Medicare Part D,Other diabetes GLP-1,2021,FALSE,417.2
+Medicare Part D,Other diabetes GLP-1,2022,FALSE,382.6
+Medicare Part D,Other diabetes GLP-1,2023,FALSE,304.7
+Medicare Part D,Other diabetes GLP-1,2024,FALSE,279.3
+Medicare Part D,Ozempic,2020,FALSE,1455.8
+Medicare Part D,Ozempic,2021,FALSE,2621.7
+Medicare Part D,Ozempic,2022,FALSE,4628.2
+Medicare Part D,Ozempic,2023,FALSE,9194
+Medicare Part D,Ozempic,2024,FALSE,12970.3
+Medicare Part D,Rybelsus,2020,FALSE,73.4
+Medicare Part D,Rybelsus,2021,FALSE,454.6
+Medicare Part D,Rybelsus,2022,FALSE,974.9
+Medicare Part D,Rybelsus,2023,FALSE,1665.9
+Medicare Part D,Rybelsus,2024,FALSE,1890.1
+Medicare Part D,Trulicity,2020,FALSE,3284.9
+Medicare Part D,Trulicity,2021,FALSE,4702.2
+Medicare Part D,Trulicity,2022,FALSE,6225.3
+Medicare Part D,Trulicity,2023,FALSE,7363.9
+Medicare Part D,Trulicity,2024,FALSE,5454.1
+Medicare Part D,Victoza,2020,FALSE,1895.3
+Medicare Part D,Victoza,2021,FALSE,1757.2
+Medicare Part D,Victoza,2022,FALSE,1557.8
+Medicare Part D,Victoza,2023,FALSE,1321.8
+Medicare Part D,Victoza,2024,FALSE,280.9
+Medicare Part D,Wegovy,2023,TRUE,0.2
+Medicare Part D,Wegovy,2024,TRUE,301.3
+Medicare Part D,Zepbound,2024,TRUE,0.4
