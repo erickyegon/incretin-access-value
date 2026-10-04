@@ -9,6 +9,20 @@
     ]
   },
   "Packages": {
+    "AlgDesign": {
+      "Package": "AlgDesign",
+      "Version": "1.2.1.2",
+      "Source": "Repository",
+      "Title": "Algorithmic Experimental Design",
+      "Maintainer": "Jerome Braun <jvbraun.statistics@gmail.com>",
+      "Description": "Algorithmic experimental designs. Calculates exact and approximate theory experimental designs for D,A, and I criteria. Very large designs may be created. Experimental designs may be blocked or blocked designs created from a candidate list, using several criteria.  The blocking can be done when whole and within plot factors interact.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/jvbraun/AlgDesign",
+      "Repository": "CRAN",
+      "NeedsCompilation": "yes",
+      "Authors@R": "c(person(given = \"Bob\", family = \"Wheeler\", role = \"aut\", email = \"bwheelerg@gmail.com\"), person(given = \"Jerome\", family = \"Braun\", role = \"cre\", email = \"jvbraun.statistics@gmail.com\"))",
+      "Author": "Bob Wheeler [aut], Jerome Braun [cre]"
+    },
     "AsioHeaders": {
       "Package": "AsioHeaders",
       "Version": "1.30.2-1",
@@ -143,6 +157,21 @@
       "NeedsCompilation": "yes",
       "Author": "Anqi Fu [aut, cre], Balasubramanian Narasimhan [aut], Steven Diamond [aut], John Miller [aut], Stephen Boyd [ctb]",
       "Maintainer": "Anqi Fu <anqif@alumni.stanford.edu>",
+      "Repository": "CRAN"
+    },
+    "CompQuadForm": {
+      "Package": "CompQuadForm",
+      "Version": "1.4.4",
+      "Source": "Repository",
+      "Date": "2025-07-13",
+      "Title": "Distribution Function of Quadratic Forms in Normal Variables",
+      "Authors@R": "c(person(\"Pierre\", \"Lafaye De Micheaux\", role = c(\"aut\", \"cre\"), email = \"lafaye@unsw.edu.au\"), person(\"Pierre\", \"Duchesne\", role = c(\"aut\"), email = \"duchesne@dms.umontreal.ca\"), person(c(\"Robert\", \"B.\"), \"Davies\", role = c(\"aut\")), person(c(\"R.\", \"W.\"), \"Farebrother\", role = c(\"aut\")), person(\"J.\", \"Sheil\", role = c(\"aut\")), person(\"I.\", \"O Muircheartaigh\", role = c(\"aut\")))",
+      "Author": "Pierre Lafaye De Micheaux [aut, cre], Pierre Duchesne [aut], Robert B. Davies [aut], R. W. Farebrother [aut], J. Sheil [aut], I. O Muircheartaigh [aut]",
+      "Maintainer": "Pierre Lafaye De Micheaux <lafaye@unsw.edu.au>",
+      "Description": "Computes the distribution function of quadratic forms in normal variables using Imhof's method, Davies's algorithm, Farebrother's algorithm or Liu et al.'s algorithm.",
+      "License": "GPL (>= 2)",
+      "LazyLoad": "yes",
+      "NeedsCompilation": "yes",
       "Repository": "CRAN"
     },
     "DBI": {
@@ -711,6 +740,41 @@
       "NeedsCompilation": "yes",
       "Author": "Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>), Yixuan Qiu [aut] (<https://orcid.org/0000-0003-0109-6692>), Authors of Eigen [cph] (Authorship and copyright in included Eigen library as detailed in inst/COPYRIGHTS)",
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+      "Repository": "CRAN"
+    },
+    "Rdpack": {
+      "Package": "Rdpack",
+      "Version": "2.6.6",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Update and Manipulate Rd Documentation Objects",
+      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"),  email = \"georgi.boshnakov@manchester.ac.uk\", comment = c(ORCID = \"0000-0003-2839-346X\")), person(given = \"Duncan\",  family = \"Murdoch\",  role = \"ctb\", email = \"murdoch.duncan@gmail.com\") )",
+      "Description": "Functions for manipulation of R documentation objects, including functions reprompt() and ereprompt() for updating 'Rd' documentation for functions, methods and classes; 'Rd' macros for citations and import of references from 'bibtex' files for use in 'Rd' files and 'roxygen2' comments; 'Rd' macros for evaluating and inserting snippets of 'R' code and the results of its evaluation or creating graphics on the fly; and many functions for manipulation of references and Rd files.",
+      "URL": "https://geobosh.github.io/Rdpack/ (doc), https://CRAN.R-project.org/package=Rdpack",
+      "BugReports": "https://github.com/GeoBosh/Rdpack/issues",
+      "Depends": [
+        "R (>= 2.15.0)",
+        "methods"
+      ],
+      "Imports": [
+        "tools",
+        "utils",
+        "rbibutils (> 2.4)"
+      ],
+      "Suggests": [
+        "grDevices",
+        "testthat",
+        "rstudioapi",
+        "rprojroot",
+        "gbRd"
+      ],
+      "License": "GPL (>= 2)",
+      "LazyLoad": "yes",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.1.1",
+      "NeedsCompilation": "no",
+      "Author": "Georgi N. Boshnakov [aut, cre] (ORCID: <https://orcid.org/0000-0003-2839-346X>), Duncan Murdoch [ctb]",
+      "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
       "Repository": "CRAN"
     },
     "Rglpk": {
@@ -1934,6 +1998,38 @@
       "Maintainer": "Tyson Barrett <t.barrett88@gmail.com>",
       "Repository": "CRAN"
     },
+    "dfidx": {
+      "Package": "dfidx",
+      "Version": "0.2-0",
+      "Source": "Repository",
+      "Date": "2025-06-29",
+      "Title": "Indexed Data Frames",
+      "Authors@R": "person(\"Yves\", \"Croissant\", role = c(\"aut\", \"cre\"), email = \"yves.croissant@univ-reunion.fr\")",
+      "Depends": [
+        "R (>= 4.1.0)"
+      ],
+      "Imports": [
+        "Formula",
+        "Rdpack"
+      ],
+      "Suggests": [
+        "knitr",
+        "quarto",
+        "tinytest"
+      ],
+      "Description": "Provides extended data frames, with a special data frame column which contains two indexes, with potentially a nesting structure.",
+      "License": "GPL (>= 2)",
+      "URL": "https://cran.r-project.org/package=dfidx",
+      "VignetteBuilder": "quarto",
+      "RoxygenNote": "7.3.1",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RdMacros": "Rdpack",
+      "NeedsCompilation": "no",
+      "Author": "Yves Croissant [aut, cre]",
+      "Maintainer": "Yves Croissant <yves.croissant@univ-reunion.fr>",
+      "Repository": "CRAN"
+    },
     "did": {
       "Package": "did",
       "Version": "2.5.1",
@@ -2360,6 +2456,46 @@
       "Maintainer": "Laurent Berge <laurent.berge@u-bordeaux.fr>",
       "Repository": "CRAN"
     },
+    "fontBitstreamVera": {
+      "Package": "fontBitstreamVera",
+      "Version": "0.1.1",
+      "Source": "Repository",
+      "Title": "Fonts with 'Bitstream Vera Fonts' License",
+      "Authors@R": "c( person(\"Lionel\", \"Henry\", , \"lionel.hry@gmail.com\", c(\"cre\", \"aut\")), person(\"Bitstream\", role = \"cph\"))",
+      "Description": "Provides fonts licensed under the 'Bitstream Vera Fonts' license for the 'fontquiver' package.",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "License": "file LICENCE",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "5.0.1",
+      "NeedsCompilation": "no",
+      "Author": "Lionel Henry [cre, aut], Bitstream [cph]",
+      "Maintainer": "Lionel Henry <lionel.hry@gmail.com>",
+      "License_is_FOSS": "yes",
+      "Repository": "CRAN"
+    },
+    "fontLiberation": {
+      "Package": "fontLiberation",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Title": "Liberation Fonts",
+      "Authors@R": "c( person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", \"cre\"), person(\"Pravin Satpute\", role = \"aut\"), person(\"Steve Matteson\", role = \"aut\"), person(\"Red Hat, Inc\", role = \"cph\"), person(\"Google Corporation\", role = \"cph\"))",
+      "Description": "A placeholder for the Liberation fontset intended for the `fontquiver` package. This fontset covers the 12 combinations of families (sans, serif, mono) and faces (plain, bold, italic, bold italic) supported in R graphics devices.",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "License": "file LICENSE",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "5.0.1",
+      "NeedsCompilation": "no",
+      "Author": "Lionel Henry [cre], Pravin Satpute [aut], Steve Matteson [aut], Red Hat, Inc [cph], Google Corporation [cph]",
+      "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+      "Repository": "CRAN",
+      "License_is_FOSS": "yes"
+    },
     "fontawesome": {
       "Package": "fontawesome",
       "Version": "0.5.3",
@@ -2394,6 +2530,34 @@
       "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>), Christophe Dervieux [ctb] (<https://orcid.org/0000-0003-4474-2498>), Winston Chang [ctb], Dave Gandy [ctb, cph] (Font-Awesome font), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Richard Iannone <rich@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "fontquiver": {
+      "Package": "fontquiver",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Title": "Set of Installed Fonts",
+      "Authors@R": "c( person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", c(\"cre\", \"aut\")), person(\"RStudio\", role = \"cph\"), person(\"George Douros\", role = \"cph\", comment = \"Symbola font\"))",
+      "Description": "Provides a set of fonts with permissive licences. This is useful when you want to avoid system fonts to make sure your outputs are reproducible.",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Imports": [
+        "fontBitstreamVera (>= 0.1.0)",
+        "fontLiberation (>= 0.1.0)"
+      ],
+      "Suggests": [
+        "testthat",
+        "htmltools"
+      ],
+      "License": "GPL-3 | file LICENSE",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "5.0.1",
+      "Collate": "'font-getters.R' 'fontset.R' 'fontset-bitstream-vera.R' 'fontset-dejavu.R' 'fontset-liberation.R' 'fontset-symbola.R' 'html-dependency.R' 'utils.R'",
+      "NeedsCompilation": "no",
+      "Author": "Lionel Henry [cre, aut], RStudio [cph], George Douros [cph] (Symbola font)",
+      "Maintainer": "Lionel Henry <lionel@rstudio.com>",
+      "Repository": "CRAN"
     },
     "foreach": {
       "Package": "foreach",
@@ -2567,6 +2731,43 @@
       "RemoteRef": "HEAD",
       "RemoteSha": "336bb574eba169ac0183317f01d0564791d8122f"
     },
+    "gdtools": {
+      "Package": "gdtools",
+      "Version": "0.5.1",
+      "Source": "Repository",
+      "Title": "Font Metrics and Font Management Utilities for R Graphics",
+      "Authors@R": "c( person(\"David\", \"Gohel\", , \"david.gohel@ardata.fr\", role = c(\"aut\", \"cre\")), person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\"), person(\"Lionel\", \"Henry\", , \"lionel@rstudio.com\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", , \"jeroen@berkeley.edu\", role = \"aut\", comment = c(ORCID = \"0000-0002-4035-0289\")), person(\"Yixuan\", \"Qiu\", role = \"ctb\"), person(\"R Core Team\", role = \"cph\", comment = \"Cairo code from X11 device\"), person(\"ArData\", role = \"cph\"), person(\"RStudio\", role = \"cph\") )",
+      "Description": "Compute text metrics (width, ascent, descent) using 'Cairo' and 'FreeType', independently of the active graphic device. Font lookup is delegated to 'systemfonts'. Additional utilities let users register 'Google Fonts' or bundled 'Liberation' fonts, check font availability, and assemble 'htmlDependency' objects so that fonts are correctly embedded in 'Shiny' applications, 'R Markdown' documents, and 'htmlwidgets' outputs such as 'ggiraph'.",
+      "License": "GPL-3 | file LICENSE",
+      "URL": "https://davidgohel.github.io/gdtools/",
+      "BugReports": "https://github.com/davidgohel/gdtools/issues",
+      "Depends": [
+        "R (>= 4.0.0)"
+      ],
+      "Imports": [
+        "fontquiver (>= 0.2.0)",
+        "htmltools",
+        "Rcpp (>= 0.12.12)",
+        "systemfonts (>= 1.3.1)",
+        "tools"
+      ],
+      "Suggests": [
+        "curl",
+        "gfonts",
+        "methods",
+        "testthat"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Encoding": "UTF-8",
+      "SystemRequirements": "cairo, freetype2, fontconfig",
+      "Config/roxygen2/version": "8.0.0",
+      "NeedsCompilation": "yes",
+      "Author": "David Gohel [aut, cre], Hadley Wickham [aut], Lionel Henry [aut], Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Yixuan Qiu [ctb], R Core Team [cph] (Cairo code from X11 device), ArData [cph], RStudio [cph]",
+      "Maintainer": "David Gohel <david.gohel@ardata.fr>",
+      "Repository": "CRAN"
+    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.4",
@@ -2707,6 +2908,62 @@
       "Author": "Erik Clarke [aut, cre], Scott Sherrill-Mix [aut], Charlotte Dawson [aut]",
       "Maintainer": "Erik Clarke <erikclarke@gmail.com>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "ggiraph": {
+      "Package": "ggiraph",
+      "Version": "0.9.6",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Make 'ggplot2' Graphics Interactive",
+      "Authors@R": "c( person(\"David\", \"Gohel\", , \"david.gohel@ardata.fr\", role = c(\"aut\", \"cre\")), person(\"Panagiotis\", \"Skintzos\", , \"sigmapi@posteo.net\", role = \"aut\"), person(\"Mike\", \"Bostock\", role = \"cph\", comment = \"d3.js\"), person(\"Speros\", \"Kokenes\", role = \"cph\", comment = \"d3-lasso\"), person(\"Eric\", \"Shull\", role = \"cph\", comment = \"saveSvgAsPng js library\"), person(\"Lee\", \"Thomason\", role = \"cph\", comment = \"TinyXML2\"), person(\"Vladimir\", \"Agafonkin\", role = \"cph\", comment = \"Flatbush\"), person(\"Eric\", \"Book\", role = \"ctb\", comment = \"hline and vline geoms\") )",
+      "Description": "Create interactive 'ggplot2' graphics using 'htmlwidgets'.",
+      "License": "GPL-3",
+      "URL": "https://davidgohel.github.io/ggiraph/",
+      "BugReports": "https://github.com/davidgohel/ggiraph/issues",
+      "Imports": [
+        "cli",
+        "dplyr",
+        "gdtools (>= 0.5.0)",
+        "ggplot2 (>= 4.0.0)",
+        "grid",
+        "htmltools",
+        "htmlwidgets (>= 1.5)",
+        "MASS",
+        "purrr",
+        "Rcpp (>= 1.1.0)",
+        "rlang",
+        "S7 (>= 0.2.0)",
+        "stats",
+        "systemfonts (>= 1.3.1)",
+        "vctrs"
+      ],
+      "Suggests": [
+        "ggbeeswarm",
+        "ggrepel (>= 0.9.1)",
+        "hexbin",
+        "knitr",
+        "maps",
+        "quantreg",
+        "rmarkdown",
+        "sf (>= 1.0)",
+        "shiny",
+        "tinytest",
+        "xml2 (>= 1.0)"
+      ],
+      "LinkingTo": [
+        "Rcpp",
+        "systemfonts"
+      ],
+      "VignetteBuilder": "knitr",
+      "Copyright": "See file COPYRIGHTS.",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "SystemRequirements": "libpng",
+      "Collate": "'RcppExports.R' 'ipar.R' 'utils_ggplot2_performance.R' 'utils_ggplot2.R' 'utils.R' 'annotate_interactive.R' 'annotation_raster_interactive.R' 'utils_css.R' 'fonts.R' 'girafe_options.R' 'default.R' 'dsvg.R' 'dsvg_view.R' 'element_interactive.R' 'facet_interactive.R' 'geom_abline_interactive.R' 'geom_path_interactive.R' 'geom_polygon_interactive.R' 'geom_rect_interactive.R' 'geom_bar_interactive.R' 'geom_bin_2d_interactive.R' 'geom_boxplot_interactive.R' 'geom_col_interactive.R' 'geom_contour_interactive.R' 'geom_count_interactive.R' 'geom_crossbar_interactive.R' 'geom_curve_interactive.R' 'geom_density_2d_interactive.R' 'geom_density_interactive.R' 'geom_dotplot_interactive.R' 'geom_errorbar_interactive.R' 'geom_errorbarh_interactive.R' 'geom_freqpoly_interactive.R' 'geom_hex_interactive.R' 'geom_histogram_interactive.R' 'geom_hline_interactive.R' 'geom_jitter_interactive.R' 'geom_label_interactive.R' 'geom_linerange_interactive.R' 'geom_map_interactive.R' 'geom_point_interactive.R' 'geom_pointrange_interactive.R' 'geom_quantile_interactive.R' 'geom_quasirandom_interactive.R' 'geom_raster_interactive.R' 'geom_ribbon_interactive.R' 'geom_segment_interactive.R' 'geom_sf_interactive.R' 'geom_smooth_interactive.R' 'geom_spoke_interactive.R' 'geom_text_interactive.R' 'geom_text_repel_interactive.R' 'geom_tile_interactive.R' 'geom_violin_interactive.R' 'geom_vline_interactive.R' 'ggiraph.R' 'girafe.R' 'girafe_class.R' 'grob_interactive.R' 'guide_bins_interactive.R' 'guide_colourbar_interactive.R' 'guide_coloursteps_interactive.R' 'guide_interactive.R' 'guide_legend_interactive.R' 'interactive_circle_grob.R' 'interactive_curve_grob.R' 'interactive_path_grob.R' 'interactive_points_grob.R' 'interactive_polygon_grob.R' 'interactive_polyline_grob.R' 'interactive_raster_grob.R' 'interactive_rect_grob.R' 'interactive_roundrect_grob.R' 'interactive_segments_grob.R' 'interactive_text_grob.R' 'labeller_interactive.R' 'layer_interactive.R' 'scale_alpha_interactive.R' 'scale_brewer_interactive.R' 'scale_colour_interactive.R' 'scale_gradient_interactive.R' 'scale_interactive.R' 'scale_linetype_interactive.R' 'scale_manual_interactive.R' 'scale_shape_interactive.R' 'scale_size_interactive.R' 'scale_steps_interactive.R' 'scale_viridis_interactive.R' 'tracers.R' 'utils_data.r'",
+      "NeedsCompilation": "yes",
+      "Author": "David Gohel [aut, cre], Panagiotis Skintzos [aut], Mike Bostock [cph] (d3.js), Speros Kokenes [cph] (d3-lasso), Eric Shull [cph] (saveSvgAsPng js library), Lee Thomason [cph] (TinyXML2), Vladimir Agafonkin [cph] (Flatbush), Eric Book [ctb] (hline and vline geoms)",
+      "Maintainer": "David Gohel <david.gohel@ardata.fr>",
+      "Repository": "CRAN"
     },
     "ggpattern": {
       "Package": "ggpattern",
@@ -2925,6 +3182,40 @@
       "Author": "Jim Hester [aut] (ORCID: <https://orcid.org/0000-0002-2739-7082>), Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "gmm": {
+      "Package": "gmm",
+      "Version": "1.9-1",
+      "Source": "Repository",
+      "Date": "2025-08-4",
+      "Title": "Generalized Method of Moments and Generalized Empirical Likelihood",
+      "Authors@R": "person(given=\"Pierre\", family=\"Chausse\", role=c(\"aut\",\"cre\"), email=\"pchausse@uwaterloo.ca\")",
+      "Author": "Pierre Chausse [aut, cre]",
+      "Maintainer": "Pierre Chausse <pchausse@uwaterloo.ca>",
+      "Description": "It is a complete suite to estimate models based on moment conditions. It includes the two step Generalized method of moments (Hansen 1982; <doi:10.2307/1912775>), the iterated GMM and continuous updated estimator (Hansen, Eaton and Yaron 1996; <doi:10.2307/1392442>) and several methods that belong to the Generalized Empirical Likelihood family of estimators (Smith 1997; <doi:10.1111/j.0013-0133.1997.174.x>, Kitamura 1997; <doi:10.1214/aos/1069362388>, Newey and Smith 2004; <doi:10.1111/j.1468-0262.2004.00482.x>, and Anatolyev 2005 <doi:10.1111/j.1468-0262.2005.00601.x>).",
+      "Depends": [
+        "R (>= 2.10.0)",
+        "sandwich"
+      ],
+      "NeedsCompilation": "yes",
+      "Suggests": [
+        "knitr",
+        "mvtnorm",
+        "car",
+        "stabledist",
+        "MASS",
+        "timeDate",
+        "timeSeries"
+      ],
+      "Imports": [
+        "stats",
+        "methods",
+        "grDevices",
+        "graphics"
+      ],
+      "License": "GPL (>= 2)",
+      "VignetteBuilder": "knitr",
+      "Repository": "CRAN"
     },
     "gmp": {
       "Package": "gmp",
@@ -3535,6 +3826,55 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
+    "idefix": {
+      "Package": "idefix",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Efficient Designs for Discrete Choice Experiments",
+      "Authors@R": "c( person(\"Frits\", \"Traets\", email = \"frits.traets@gmail.com\", role =\"aut\"), person(\"Daniel\", \"Gil\", email = \"danielgils@gmail.com\", role = \"ctb\"), person(\"Qusai\", \"Iwidat\", email = \"qusaiu@gmail.com\", role = \"ctb\"), person(\"Mouhannad\", \"Arabi\", email = \"Mouhannadarabi@hotmail.com\", role = \"ctb\"), person(\"Martina\", \"Vandebroek\", email = \"martina.vandebroek@kuleuven.be\", role = \"ctb\"), person(\"Michel\", \"Meulders\", email = \"michel.meulders@kuleuven.be\", role = \"cre\"))",
+      "Maintainer": "Michel Meulders <michel.meulders@kuleuven.be>",
+      "Description": "Generates efficient designs for discrete choice experiments based on the multinomial logit model, and individually adapted designs for the mixed  multinomial logit model. The generated designs can be presented on screen and choice data can be gathered using a shiny application. Traets F, Sanchez G,  and Vandebroek M (2020) <doi:10.18637/jss.v096.i03>.",
+      "License": "GPL-3",
+      "Depends": [
+        "R (>= 3.1.1)",
+        "shiny"
+      ],
+      "LazyData": "TRUE",
+      "ByteCompile": "TRUE",
+      "Imports": [
+        "dplyr",
+        "MASS",
+        "parallel",
+        "Rcpp (>= 0.12.18)",
+        "Rdpack",
+        "stats",
+        "scales",
+        "tmvtnorm",
+        "utils",
+        "dfidx",
+        "shinyjs",
+        "tableHTML"
+      ],
+      "RoxygenNote": "7.3.1",
+      "Encoding": "UTF-8",
+      "LinkingTo": [
+        "Rcpp",
+        "RcppArmadillo"
+      ],
+      "RdMacros": "Rdpack",
+      "URL": "https://github.com/traets/idefix",
+      "Suggests": [
+        "RSGHB",
+        "bayesm",
+        "testthat",
+        "Rchoice",
+        "ChoiceModelR"
+      ],
+      "NeedsCompilation": "yes",
+      "Author": "Frits Traets [aut], Daniel Gil [ctb], Qusai Iwidat [ctb], Mouhannad Arabi [ctb], Martina Vandebroek [ctb], Michel Meulders [cre]",
+      "Repository": "CRAN"
+    },
     "ineq": {
       "Package": "ineq",
       "Version": "0.2-13",
@@ -3620,6 +3960,25 @@
       "NeedsCompilation": "no",
       "Author": "Folashade Daniel [cre], Revolution Analytics [aut, cph], Steve Weston [aut]",
       "Maintainer": "Folashade Daniel <fdaniel@microsoft.com>",
+      "Repository": "CRAN"
+    },
+    "jpeg": {
+      "Package": "jpeg",
+      "Version": "0.1-11",
+      "Source": "Repository",
+      "Title": "Read and write JPEG images",
+      "Author": "Simon Urbanek [aut, cre, cph] (https://urbanek.org, <https://orcid.org/0000-0003-2297-1732>)",
+      "Authors@R": "person(\"Simon\", \"Urbanek\", role=c(\"aut\",\"cre\",\"cph\"), email=\"Simon.Urbanek@r-project.org\", comment=c(\"https://urbanek.org\", ORCID=\"0000-0003-2297-1732\"))",
+      "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+      "Depends": [
+        "R (>= 2.9.0)"
+      ],
+      "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the JPEG format. It can read and write both files and in-memory raw vectors.",
+      "License": "GPL-2 | GPL-3",
+      "SystemRequirements": "libjpeg",
+      "URL": "https://www.rforge.net/jpeg/",
+      "BugReports": "https://github.com/s-u/jpeg/issues",
+      "NeedsCompilation": "yes",
       "Repository": "CRAN"
     },
     "jquerylib": {
@@ -4287,6 +4646,55 @@
       "Maintainer": "Simon Wood <simon.wood@r-project.org>",
       "Repository": "CRAN"
     },
+    "micsr": {
+      "Package": "micsr",
+      "Version": "0.1-5",
+      "Source": "Repository",
+      "Date": "2026-06-01",
+      "Title": "Microeconometrics with R",
+      "Authors@R": "person(\"Yves\", \"Croissant\", role = c(\"aut\", \"cre\"), email = \"yves.croissant@univ-reunion.fr\", comment = c(ORCID = \"0000-0002-4857-7736\"))",
+      "Depends": [
+        "R (>= 4.1.0)"
+      ],
+      "Imports": [
+        "Formula",
+        "Rdpack",
+        "sandwich",
+        "generics",
+        "numDeriv",
+        "survival",
+        "Rcpp",
+        "CompQuadForm",
+        "dfidx"
+      ],
+      "Suggests": [
+        "quarto",
+        "AER",
+        "censReg",
+        "sampleSelection",
+        "mlogit",
+        "MASS",
+        "lmtest",
+        "tinytest",
+        "ggplot2",
+        "modelsummary"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "Description": "Functions, data sets and examples for the book: Yves Croissant (2025) \"Microeconometrics with R\", Chapman and Hall/CRC The R Series <doi:10.1201/9781003100263>. The package includes a set of estimators for models used in microeconometrics, especially for count data and limited dependent variables. Test functions include score test, Hausman test, Vuong test, Sargan test and conditional moment test. A small subset of the data set used in the book is also included.",
+      "Encoding": "UTF-8",
+      "License": "GPL (>= 2)",
+      "URL": "https://www.r-project.org",
+      "VignetteBuilder": "quarto",
+      "NeedsCompilation": "yes",
+      "RoxygenNote": "7.3.3",
+      "LazyData": "true",
+      "RdMacros": "Rdpack",
+      "Author": "Yves Croissant [aut, cre] (ORCID: <https://orcid.org/0000-0002-4857-7736>)",
+      "Maintainer": "Yves Croissant <yves.croissant@univ-reunion.fr>",
+      "Repository": "CRAN"
+    },
     "mime": {
       "Package": "mime",
       "Version": "0.13",
@@ -4350,6 +4758,47 @@
       "License": "GPL-2",
       "NeedsCompilation": "no",
       "Author": "Thomas Lumley [aut, cre]",
+      "Repository": "CRAN"
+    },
+    "mlogit": {
+      "Package": "mlogit",
+      "Version": "2.0-0",
+      "Source": "Repository",
+      "Date": "2026-05-27",
+      "Title": "Multinomial Logit Models",
+      "Authors@R": "person(\"Yves\", \"Croissant\", role = c(\"aut\", \"cre\"), email = \"yves.croissant@univ-reunion.fr\")",
+      "Depends": [
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "Formula",
+        "lmtest",
+        "Rdpack",
+        "dfidx",
+        "micsr",
+        "numDeriv"
+      ],
+      "Suggests": [
+        "knitr",
+        "car",
+        "nnet",
+        "lattice",
+        "AER",
+        "ggplot2",
+        "quarto",
+        "dplyr"
+      ],
+      "Description": "Maximum likelihood estimation of random utility discrete choice models. The software is described in Croissant (2020) <doi:10.18637/jss.v095.i11> and the underlying methods in Train (2009) <doi:10.1017/CBO9780511805271>.",
+      "VignetteBuilder": "quarto",
+      "Encoding": "UTF-8",
+      "License": "GPL (>= 2)",
+      "URL": "https://cran.r-project.org/package=mlogit",
+      "RoxygenNote": "7.3.3",
+      "LazyData": "true",
+      "RdMacros": "Rdpack",
+      "NeedsCompilation": "no",
+      "Author": "Yves Croissant [aut, cre]",
+      "Maintainer": "Yves Croissant <yves.croissant@univ-reunion.fr>",
       "Repository": "CRAN"
     },
     "mvtnorm": {
@@ -5219,6 +5668,34 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
+    "rbibutils": {
+      "Package": "rbibutils",
+      "Version": "2.4.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Read 'Bibtex' Files and Convert Between Bibliography Formats",
+      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"), \t email = \"georgi.boshnakov@manchester.ac.uk\", comment = c(ORCID = \"0000-0003-2839-346X\", \"R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code)\") ), person(given = \"Chris\", family = \"Putman\", role = \"aut\", comment = \"src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/\"), person(given = \"Richard\", family = \"Mathar\", role = \"ctb\", comment = \"src/addsout.c\"), person(given = \"Johannes\", family = \"Wilm\", role = \"ctb\", comment = \"src/biblatexin.c, src/bltypes.c\"), person(\"R Core Team\", role = \"ctb\", comment = \"base R's bibentry and bibstyle implementation\") )",
+      "Description": "Read and write 'Bibtex' files. Convert between bibliography formats, including 'Bibtex', 'Biblatex', 'PubMed', 'Endnote', and 'Bibentry'.  Includes a port of the 'bibutils' utilities by Chris Putnam <https://sourceforge.net/projects/bibutils/>. Supports all bibliography formats and character encodings implemented in 'bibutils'.",
+      "License": "GPL-2",
+      "URL": "https://geobosh.github.io/rbibutils/ (doc), https://CRAN.R-project.org/package=rbibutils",
+      "BugReports": "https://github.com/GeoBosh/rbibutils/issues",
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Imports": [
+        "utils",
+        "tools"
+      ],
+      "Suggests": [
+        "testthat"
+      ],
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Config/Needs/memcheck": "devtools, rcmdcheck",
+      "Author": "Georgi N. Boshnakov [aut, cre] (ORCID: <https://orcid.org/0000-0003-2839-346X>, R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code)), Chris Putman [aut] (src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/), Richard Mathar [ctb] (src/addsout.c), Johannes Wilm [ctb] (src/biblatexin.c, src/bltypes.c), R Core Team [ctb] (base R's bibentry and bibstyle implementation)",
+      "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
+      "Repository": "CRAN"
+    },
     "reactR": {
       "Package": "reactR",
       "Version": "0.6.1",
@@ -5962,6 +6439,40 @@
       "Maintainer": "Carson Sievert <carson@posit.co>",
       "Repository": "CRAN"
     },
+    "shinyjs": {
+      "Package": "shinyjs",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Title": "Easily Improve the User Experience of Your Shiny Apps in Seconds",
+      "Authors@R": "person(\"Dean\", \"Attali\",  email = \"daattali@gmail.com\", role = c(\"aut\", \"cre\"), comment= c(ORCID=\"0000-0002-5645-3493\"))",
+      "Description": "Perform common useful JavaScript operations in Shiny apps that will greatly improve your apps without having to know any JavaScript. Examples include: hiding an element, disabling an input, resetting an input back to its original value, delaying code execution by a few seconds, and many more useful functions for both the end user and the developer. 'shinyjs' can also be used to easily call your own custom JavaScript functions from R.",
+      "URL": "https://deanattali.com/shinyjs/",
+      "BugReports": "https://github.com/daattali/shinyjs/issues",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "digest (>= 0.6.8)",
+        "jsonlite",
+        "shiny (>= 1.0.0)"
+      ],
+      "Suggests": [
+        "htmltools (>= 0.2.9)",
+        "knitr (>= 1.7)",
+        "rmarkdown",
+        "shinyAce",
+        "shinydisconnect",
+        "testthat (>= 0.9.1)"
+      ],
+      "License": "MIT + file LICENSE",
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.3.3",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>)",
+      "Maintainer": "Dean Attali <daattali@gmail.com>",
+      "Repository": "CRAN"
+    },
     "sitmo": {
       "Package": "sitmo",
       "Version": "2.0.2",
@@ -6525,6 +7036,43 @@
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
+    "tableHTML": {
+      "Package": "tableHTML",
+      "Version": "2.1.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Tool to Create HTML Tables",
+      "Authors@R": "c( person(\"Theo\", \"Boutaris\", email = \"teoboot2007@hotmail.com\", role = c(\"aut\", \"cre\", \"cph\")), person(\"Clemens\", \"Zauchner\", email = \"cst.zauchner@gmail.com\", role = \"aut\"), person(\"Dana\", \"Jomar\", email = \"dana.jomar@outlook.com\", role = \"aut\"))",
+      "URL": "https://github.com/LyzandeR/tableHTML",
+      "BugReports": "https://github.com/LyzandeR/tableHTML/issues",
+      "Depends": [
+        "R (>= 3.2.0)"
+      ],
+      "Imports": [
+        "htmltools",
+        "magrittr",
+        "shiny",
+        "jpeg",
+        "methods",
+        "png",
+        "webshot"
+      ],
+      "Description": "A tool to create and style HTML tables with CSS. These can be exported and used in any application that accepts HTML (e.g. 'shiny', 'rmarkdown', 'PowerPoint'). It also provides functions to create CSS files (which also work with shiny).",
+      "License": "MIT + file LICENSE",
+      "RoxygenNote": "7.2.2",
+      "Encoding": "UTF-8",
+      "Suggests": [
+        "testthat",
+        "knitr",
+        "rmarkdown",
+        "RColorBrewer"
+      ],
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "no",
+      "Author": "Theo Boutaris [aut, cre, cph], Clemens Zauchner [aut], Dana Jomar [aut]",
+      "Maintainer": "Theo Boutaris <teoboot2007@hotmail.com>",
+      "Repository": "CRAN"
+    },
     "terra": {
       "Package": "terra",
       "Version": "1.9-50",
@@ -6824,6 +7372,38 @@
       "NeedsCompilation": "no",
       "Author": "Yihui Xie [aut, cre, cph] (ORCID: <https://orcid.org/0000-0003-0645-5666>), Posit Software, PBC [cph, fnd], Christophe Dervieux [ctb] (ORCID: <https://orcid.org/0000-0003-4474-2498>), Devon Ryan [ctb] (ORCID: <https://orcid.org/0000-0002-8549-0971>), Ethan Heinzen [ctb], Fernando Cagua [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
+    },
+    "tmvtnorm": {
+      "Package": "tmvtnorm",
+      "Version": "1.7",
+      "Source": "Repository",
+      "Date": "2025-09-01",
+      "Title": "Truncated Multivariate Normal and Student t Distribution",
+      "Authors@R": "c( person(\"Stefan\", \"Wilhelm\", email = \"wilhelm@financial.com\", role = c(\"aut\", \"cre\")), person(\"Manjunath\", \"B G\", email = \"bgmanjunath@gmail.com\", role = \"aut\") )",
+      "Imports": [
+        "stats",
+        "methods"
+      ],
+      "Depends": [
+        "R (>= 1.9.0)",
+        "mvtnorm",
+        "utils",
+        "Matrix",
+        "stats4",
+        "gmm"
+      ],
+      "Encoding": "UTF-8",
+      "Suggests": [
+        "lattice",
+        "rgl"
+      ],
+      "Description": "Random number generation for the truncated multivariate normal and Student t distribution.  Computes probabilities, quantiles and densities,  including one-dimensional and bivariate marginal densities. Computes first and second moments (i.e. mean and covariance matrix) for the double-truncated multinormal case.",
+      "License": "GPL (>= 2)",
+      "URL": "https://www.r-project.org",
+      "NeedsCompilation": "yes",
+      "Author": "Stefan Wilhelm [aut, cre], Manjunath B G [aut]",
+      "Maintainer": "Stefan Wilhelm <wilhelm@financial.com>",
       "Repository": "CRAN"
     },
     "trust": {
@@ -7154,6 +7734,40 @@
       "Author": "Jim Hester [aut] (ORCID: <https://orcid.org/0000-0002-2739-7082>), Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Shelby Bearrows [ctb], https://github.com/mandreyel/ [cph] (mio library), Jukka Jylänki [cph] (grisu3 implementation), Mikkel Jørgensen [cph] (grisu3 implementation), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "webshot": {
+      "Package": "webshot",
+      "Version": "0.5.5",
+      "Source": "Repository",
+      "Title": "Take Screenshots of Web Pages",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", email = \"winston@rstudio.com\", role = c(\"aut\", \"cre\")), person(\"Yihui\", \"Xie\", role = \"ctb\"), person(\"Francois\", \"Guillem\", role = \"ctb\"), person(\"Barret\", \"Schloerke\", role = \"ctb\"), person(\"Nicolas\", \"Perriault\", role = \"ctb\", comment = \"The CasperJS library\") )",
+      "Description": "Takes screenshots of web pages, including Shiny applications and R Markdown documents.",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "Imports": [
+        "magrittr",
+        "jsonlite",
+        "callr"
+      ],
+      "Suggests": [
+        "httpuv",
+        "knitr",
+        "rmarkdown",
+        "shiny",
+        "testthat (>= 3.0.0)"
+      ],
+      "License": "GPL-2",
+      "SystemRequirements": "PhantomJS for taking screenshots, ImageMagick or GraphicsMagick and OptiPNG for manipulating images.",
+      "RoxygenNote": "7.2.3",
+      "Encoding": "UTF-8",
+      "URL": "https://wch.github.io/webshot/, https://github.com/wch/webshot/",
+      "BugReports": "https://github.com/wch/webshot/issues",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Winston Chang [aut, cre], Yihui Xie [ctb], Francois Guillem [ctb], Barret Schloerke [ctb], Nicolas Perriault [ctb] (The CasperJS library)",
+      "Maintainer": "Winston Chang <winston@rstudio.com>",
+      "Repository": "CRAN"
     },
     "webshot2": {
       "Package": "webshot2",

@@ -1,0 +1,10 @@
+label,pattern
+"old central PMPM 2.02 (PA multiplier 0.75)","(?<![\w.])2\.02(?![\w])"
+"old gross five-year cost 248.0","(?<![\w.])248\.0(?![\w])"
+"old gross PMPM 4.13","(?<![\w.])4\.13(?![\w])"
+"old PSA median 118.3","(?<![\w.])118\.3(?![\w])"
+"old PSA upper 265.2","(?<![\w.])265\.2(?![\w])"
+"old common-draw upper 286.7","(?<![\w.])286\.7(?![\w])"
+"old scenario minimum 41.7","(?<![\w.])41\.7(?![\w])"
+"old scenario maximum 277.1","(?<![\w.])277\.1(?![\w])"
+"old announced-price cost 51.2 million","\$51\.2 million"

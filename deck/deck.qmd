@@ -1,0 +1,168 @@
+---
+title: "Coverage of obesity drugs in Medicaid: what it did, who it reaches, what it could cost"
+subtitle: "Insight deck · public aggregate data, 2018 to early 2026"
+author: "Erick Kiprotich Yegon · Epidemiologist and data scientist"
+format:
+  revealjs:
+    theme: [simple, deck.scss]
+    width: 1280
+    height: 720
+    margin: 0.04
+    slide-number: true
+    embed-resources: true
+    transition: none
+    controls: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, h = 540) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" height=%d}\n\n", name, gsub("\"", "'", a), h)) }
+src <- function(x) cat(sprintf("\n::: {.src}\n%s\n:::\n\n", x))
+```
+
+## The answer: coverage lifts prescriptions steadily, and a 1,000,000-enrollee programme would net about $`r kn("e_net5")` million over five years
+
+::::: {.columns}
+::: {.column width="25%"}
+::: {.stat}
+**`r kn("c_att_overall")`**\
+extra prescriptions per 1,000 enrollees per quarter\
+`r kn_ci("c_att_overall")`
+:::
+:::
+::: {.column width="25%"}
+::: {.stat}
+**`r kn("c_es_e0")` to `r kn("c_es_e8")`**\
+per 1,000 enrollees per quarter, first quarter to eighth (market growth included)
+:::
+:::
+::: {.column width="25%"}
+::: {.stat}
+**$`r kn("e_scen_min")` to `r kn("e_scen_max")` million**\
+five-year net cost across scenarios, 1,000,000 enrollees
+:::
+:::
+::: {.column width="25%"}
+::: {.stat}
+**$`r kn("e_pmpm")`**\
+net per enrollee per month, central case (rebate `r kn("e_rebate_central")`% is assumed)
+:::
+:::
+:::::
+
+```{r a1, results='asis'}
+src("Sources: CMS State Drug Utilization Data and Medicaid enrollment (Module C); Module E budget model. Net of an assumed rebate; SDUD amounts are gross. Scenarios, not forecasts.")
+```
+
+## Market today: about half of U.S. adults meet the label criteria, and about `r kn("b_glp1_all")` million already use a GLP-1 drug
+
+```{r a2, results='asis'}
+fig("20_funnel", 520)
+src(paste0("Source: NHANES 2021-2023 (measured) and KFF poll, February 24 to March 2, 2026 (modelled). Eligible is a lower bound: ", kn("b_eligible"), " million adults (", kn_ci("b_eligible"), " million)."))
+```
+
+## Market today: Part D incretin claims grew from `r kn("d_claims_2018")` million to `r kn("d_claims_2024")` million in six years, mostly for diabetes and other covered uses
+
+```{r a3, results='asis'}
+fig("30_partd_claims_prescribers", 520)
+src("Source: CMS Medicare Part D Prescribers by Provider and Drug (rows with at least 11 claims). Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+```
+
+## Landscape: injectables, new oral options, a Medicare Bridge and a $`r kn("x_price_245")` price are arriving while some states end coverage
+
+- **Products.** Wegovy (injection and tablets), Zepbound (KwikPen) and Foundayo (tablets) are covered under the Medicare GLP-1 Bridge (CMS prescriber page, June 2026).
+- **Medicare GLP-1 Bridge.** A short-term demonstration, `r kn("x_bridge_window")`, with a $`r kn("x_bridge_copay")` copay (CMS).
+- **Price.** The White House (November 2025) announced a Medicare price of $`r kn("x_price_245")` a month for these drugs and said state Medicaid programmes will have access at those prices.
+- **State coverage is changing** (timeline below): several states ended or paused coverage in late 2025 and early 2026.
+
+```{r a4, results='asis'}
+fig("02_adoption_timeline", 330)
+src("Sources: CMS Medicare GLP-1 Bridge pages (saved under docs/sources); White House fact sheet, November 2025; state Medicaid documents (data/reference/medicaid_obesity_coverage.csv).")
+```
+
+## Access: coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter, rising from `r kn("c_es_e0")` to `r kn("c_es_e8")` over eight quarters
+
+```{r a5, results='asis'}
+fig("10_event_study_primary", 540)
+src(paste0("Source: CMS SDUD and Medicaid enrollment; ", kn("c_states_primary"), " covering and ", kn("c_states_never"), " never-covering jurisdictions. Placebo ", kn("c_placebo"), " (", kn_ci("c_placebo"), "); other estimators and sensitivity analyses range ", kn("c_spec_range"), ". Part of the growth is national market growth."))
+```
+
+## Access: ten states drive the estimate, and coverage dates differ by state
+
+```{r a6, results='asis'}
+fig("01_coverage_timing_map", 540)
+src(paste0("Source: state Medicaid documents and CMS approvals (docs/sources). ", kn("c_pa_states"), " covering states recorded prior authorization. Seven states with uncertain start quarters are used only in a sensitivity analysis."))
+```
+
+## Access, detail: coverage operates through managed care (South Carolina, Rhode Island), and the first withdrawals show how fast it can reverse
+
+```{r a7, results='asis'}
+fig("05_withdrawal_descriptive", 500)
+src(paste0("Source: SDUD 2025 Q4 to 2026 Q1 (2026 Q1 is preliminary; descriptive only). Prescriptions per enrollee fell ", kn("c_withdraw_ca"), "% in California and ", kn("c_withdraw_pa"), "% in Pennsylvania. Managed-care delivery makes fee-for-service-only estimates unreliable."))
+```
+
+## Prescribers: primary care and nurse practitioners and physician assistants wrote `r kn("d_share_pcp")`% and `r kn("d_share_nppa")`% of Part D incretin claims in 2024
+
+```{r a8, results='asis'}
+fig("31_partd_specialty_mix", 520)
+src("Source: CMS Medicare Part D Prescribers. Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+```
+
+## Prescribers: tirzepatide reached `r kn("d_tirz_2024")`% of Part D incretin prescribers by 2024, from `r kn("d_tirz_2022")`% in 2022
+
+```{r a9, results='asis'}
+fig("33_partd_tirzepatide_adoption", 520)
+src("Source: CMS Medicare Part D Prescribers. Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+```
+
+## Prescribers: cardiology wrote `r kn("d_wegovy_cardio")`% of Wegovy's Part D claims against `r kn("d_ozempic_cardio")`% of Ozempic's, after the cardiovascular indication
+
+```{r a10, results='asis'}
+fig("34_partd_wegovy_vs_ozempic_specialty", 500)
+src(paste0("Source: CMS Medicare Part D Prescribers, 2024 (", kn("d_wegovy_claims"), " Wegovy claims from ", kn("d_wegovy_prescribers"), " prescribers). Part D reflects diabetes and other covered uses, not obesity-brand adoption."))
+```
+
+## Value: five-year net cost ranges from $`r kn("e_scen_min")` million to $`r kn("e_scen_max")` million for 1,000,000 enrollees; the central case is $`r kn("e_net5")` million
+
+```{r a11, results='asis'}
+fig("42_cost_by_scenario", 520)
+src("Source: Module C effects, SDUD gross reimbursement, statutory rebate floor (42 U.S.C. 1396r-8), White House fact sheet. Rebates, prior authorization and years 3-5 are assumptions; no medical cost offsets.")
+```
+
+## Value: the rebate and the uncertainty in the coverage effect move the answer most
+
+```{r a12, results='asis'}
+fig("40_tornado", 520)
+src(paste0("Source: Module E one-way sensitivity. Central rebate ", kn("e_rebate_central"), "% is the midpoint of ", kn("e_rebate_low"), "% (statutory minimum) and ", kn("e_rebate_high"), "% (implied by the $", kn("x_price_245"), " price); actual net prices are confidential."))
+```
+
+## Value: per enrollee per month, a gross $`r kn("e_gross_pmpm")` becomes $`r kn("e_pmpm")` net at the central rebate and $`r kn("e_announced_pmpm")` at the announced price
+
+```{r a13, results='asis'}
+fig("41_waterfall_pmpm", 520)
+src("Source: Module E. The rebate step is an assumption; the announced price is a programme price, not a confirmed Medicaid net price.")
+```
+
+## Recommendations: considerations for a brand or access lead, from the evidence above
+
+| Finding | So what | What a brand or access lead might consider |
+|---|---|---|
+| Coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter and grew over eight quarters | Uptake builds over about two years rather than at launch | Planning access support over a multi-year ramp instead of a launch spike |
+| Coverage runs through managed care in South Carolina and Rhode Island | Decisions sit with managed-care organisations as well as state programmes | Evidence and criteria materials aimed at managed-care medical and pharmacy directors (to be tested in the research pack) |
+| Coverage ended in California and Pennsylvania (`r kn("c_withdraw_ca")`% and `r kn("c_withdraw_pa")`%, preliminary) | Budget predictability decides whether coverage lasts | Showing a clear range of cost scenarios: $`r kn("e_pmpm")` per enrollee per month at the central rebate, $`r kn("e_announced_pmpm")` at the announced price |
+| Primary care and nurse practitioners and physician assistants wrote `r kn("d_share_pcp")`% and `r kn("d_share_nppa")`% of Part D incretin claims | The prescriber base is broad, not specialist | Weighing primary-care reach (Part D shows diabetes and other covered uses; confirm for obesity with other data) |
+| The rebate is unknown and drives the range ($`r kn("e_scen_min")` to $`r kn("e_scen_max")` million) | Public data cannot settle net cost | Treating the budget range as a conversation starter and checking it against a payer's own net price |
+
+## Appendix: data, methods and limits
+
+- **Data.** CMS Medicaid State Drug Utilization Data and enrollment, Medicare Part D Prescribers, NADAC, NHANES, MEPS, KFF polls, FDA labels and state Medicaid documents; all public aggregate data. `r kn("build_models")` dbt models, `r kn("build_tests")` tests.
+- **Methods.** Callaway and Sant'Anna difference-in-differences (staggered adoption) with imputation of suppressed cells; survey-weighted NHANES estimates; ISPOR-style budget impact model with a probabilistic sensitivity analysis.
+- **Limits.** Gross, not net, of rebates; ten covering states; eligibility is a lower bound; Part D is not obesity use; scenarios, not forecasts.
+- **Links.** Report (`report/report.html`), plans and deviations (`analysis/outputs/deviations.md`), key numbers (`analysis/outputs/key_numbers.csv`), repository `erickyegon/incretin-access-value` (to be published).
+- No company affiliation or endorsement. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.

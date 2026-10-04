@@ -1,0 +1,4 @@
+.small { font-size: 0.85em; color: #555; }
+body { max-width: 1100px; }
+figure img { max-width: 100%; height: auto; }
+.quarto-title-block .quarto-title-meta { margin-top: 0.5rem; }

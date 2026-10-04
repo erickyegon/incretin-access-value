@@ -19,3 +19,4 @@ analysis/outputs/cache/
 *.typ
 *.knit.md
 *.rmarkdown
+deck/deck.html

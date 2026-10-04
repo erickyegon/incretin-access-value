@@ -72,6 +72,15 @@ add("d_pay_irr_any", f2(pa$incidence_rate_ratio), "incidence rate ratio", paste0
 pd <- pm[grepl("doubling", pm$contrast), ]; add("d_pay_irr_doubling", f2(pd$incidence_rate_ratio), "incidence rate ratio", paste0("95% CI ", rng(pd$ci_low, pd$ci_high, f2)), "Association per doubling of the payment amount among payees", "tables/moduleD_payments_contrasts.csv", "contrast 'Each doubling...'", "report_only")
 pdsc <- tb("moduleD_payments_descriptives.csv") |> filter(claims_year == 2024, by == "all"); add("d_pay_share", f1(pdsc$share_with_payment_pct), "percent of prescribers", "", "Share of 2024 prescribers with in-scope payments in 2023", "tables/moduleD_payments_descriptives.csv", "by all, claims_year 2024", "report_only")
 
+for (i in seq_len(nrow(fn))) { r <- fn[i, ]; pw <- gsub("[^a-z0-9]+", "_", tolower(r$pathway))
+  add(sprintf("b_funnel_%s_%d", pw, r$step), f1(r$est), r$unit, paste0("95% CI ", rng(r$lo, r$hi), " (", r$status, ")"), sprintf("Funnel step: %s (%s pathway)", r$label, r$pathway), "tables/moduleB_funnel.csv", sprintf("pathway %s, step %d, columns est, lo, hi", r$pathway, r$step)) }
+k5 <- tb("moduleD_segment_profiles_k5.csv")
+for (i in seq_len(nrow(k5))) { r <- k5[i, ]
+  add(sprintf("d_seg_%s_claims_share", r$segment_id), f1(r$share_of_claims_pct), "percent of 2024 claims", "exploratory segment", sprintf("Exploratory segment %s share of 2024 Part D claims", r$segment_id), "tables/moduleD_segment_profiles_k5.csv", sprintf("segment_id %s, share_of_claims_pct", r$segment_id))
+  add(sprintf("d_seg_%s_prescribers", r$segment_id), f0(r$prescribers), "prescribers", "exploratory segment", sprintf("Exploratory segment %s prescribers", r$segment_id), "tables/moduleD_segment_profiles_k5.csv", sprintf("segment_id %s, prescribers", r$segment_id))
+  add(sprintf("d_seg_%s_stability", r$segment_id), f2(r$mean_jaccard), "mean bootstrap Jaccard", "exploratory segment", sprintf("Exploratory segment %s stability", r$segment_id), "tables/moduleD_segment_profiles_k5.csv", sprintf("segment_id %s, mean_jaccard", r$segment_id)) }
+add("b_forecast_start", f1(fs$no_diabetes[fs$scenario == "Base"][1]), "million adults", "scenario start (October 2026 quarter in the table; shown as early 2026 in the figure text)", "Starting level of the forecast of GLP-1 users without diagnosed diabetes", "tables/moduleB_forecast_scenarios.csv", "scenario Base, first row, no_diabetes")
+
 # ---- Module E -------------------------------------------------------------------------------------------------------------------------------------------------
 res <- tb("moduleE_scenario_results.csv"); psa <- tb("moduleE_psa_summary.csv"); ann <- tb("moduleE_central_annual.csv"); tor <- tb("moduleE_tornado.csv"); pas <- tb("moduleE_pa_scenarios.csv"); asm <- tb("moduleE_assumptions.csv")
 c1 <- res |> filter(y35 == "plateau", price == "rebate central"); an <- res |> filter(y35 == "plateau", price == "announced $245"); pn <- psa |> filter(grepl("independent", correlation)); pc <- psa |> filter(grepl("common", correlation))
