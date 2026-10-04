@@ -96,3 +96,18 @@ seeds:
         tests: [not_null]
       - name: event_date
         tests: [not_null]
+
+  - name: sdud_reporting
+    description: "SDUD reporting completeness across ALL drugs from the full yearly files (2018 Q1 to 2026 Q1): rows, suppressed rows, distinct NDCs and unsuppressed prescriptions per state x quarter x utilization type. Aggregates only; built by scripts/fetch/27_sdud_reporting.py. A state-quarter-type absent here has no row in SDUD."
+    config:
+      column_types: {state: text, year: integer, quarter: integer, utilization_type: text, n_rows: integer, n_suppressed_rows: integer, n_ndcs: integer, rx_observed: numeric}
+    columns:
+      - name: state
+        description: "State or territory code as published (XX = national)."
+      - name: utilization_type
+        description: "FFSU or MCOU."
+      - name: rx_observed
+        description: "Sum of unsuppressed prescription counts over all drugs (suppressed rows add nothing)."
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments: {combination_of_columns: [state, year, quarter, utilization_type]}

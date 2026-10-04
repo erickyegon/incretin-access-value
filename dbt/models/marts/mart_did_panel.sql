@@ -8,7 +8,8 @@
 --                            2024 share carried forward (an assumption: mc_share_carried_forward)
 -- Prescriptions are all utilization types (FFSU + MCOU) unless _ffs_. rx_*_observed excludes suppressed rows (CMS suppresses 1 to 10
 -- prescriptions) and rx_*_upper_bound adds 10 per suppressed row; a state-quarter with no SDUD row has 0 observed and n_rows = 0.
--- Combination products are excluded. Territories are not in the panel.
+-- sdud_reported_ffsu / sdud_reported_mcou are false when the state has no SDUD row for any drug that quarter and type (then a zero is not a real zero);
+-- sdud_anomalous is true when the all-drug count is under 50% of the state's neighbouring-quarter median. Combination products are excluded. Territories are not in the panel.
 {% set groups = ['obesity_wz', 'obesity_saxenda', 'obesity_other', 'diabetes_glp1'] %}
 with grid as (
     select s.state_code, s.state_name, s.census_region, s.census_division, q.year, q.quarter, q.quarter_label, q.quarter_start, q.is_preliminary
@@ -47,6 +48,8 @@ select
     e.data_unavailable_note, e.enrollment_zero_set_null,
     mc.share_comprehensive_managed_care as mc_share, coalesce(mc.is_carried_forward, false) as mc_share_carried_forward,
     e.enrollment_medicaid_avg * (1 - mc.share_comprehensive_managed_care) as enrollment_ffs_medicaid_assumed,
+    -- SDUD reporting completeness (all drugs; see int_sdud__reporting): a flagged state-quarter is not dropped or changed
+    rp.sdud_reported_ffsu, rp.sdud_reported_mcou, rp.sdud_anomalous,
     -- prescriptions and rates
     coalesce(s.rx_obesity_wz_tablet_observed, 0) as rx_obesity_wz_tablet_observed,
 {% for gp in groups %}
@@ -65,4 +68,11 @@ from grid g
 left join {{ ref('int_coverage__state_quarter') }} c on c.state_code = g.state_code and c.year = g.year and c.quarter = g.quarter
 left join {{ ref('int_enrollment__state_quarter') }} e on e.state_code = g.state_code and e.year = g.year and e.quarter = g.quarter
 left join {{ ref('int_enrollment__managed_care_share') }} mc on mc.state_code = g.state_code and mc.year = g.year
+left join (
+    select state_code, year, quarter,
+        bool_or(not not_reported) filter (where utilization_type = 'FFSU') as sdud_reported_ffsu,
+        bool_or(not not_reported) filter (where utilization_type = 'MCOU') as sdud_reported_mcou,
+        bool_or(anomalous) as sdud_anomalous
+    from {{ ref('int_sdud__reporting') }} group by 1, 2, 3
+) rp on rp.state_code = g.state_code and rp.year = g.year and rp.quarter = g.quarter
 left join sdud s on s.state_code = g.state_code and s.year = g.year and s.quarter = g.quarter

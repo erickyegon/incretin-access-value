@@ -308,6 +308,17 @@ models:
         - year
         - quarter
         - utilization_type
+- name: int_sdud__reporting
+  description: SDUD reporting completeness over all drugs by panel state, quarter and utilization type (FFSU, MCOU), with not_reported and anomalous flags.
+  columns: []
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+        - utilization_type
 - name: int_drug_name__product_group
   description: Product group for each brand/generic name pair in Part D and Medicaid spending and Part D prescriber files.
   columns:

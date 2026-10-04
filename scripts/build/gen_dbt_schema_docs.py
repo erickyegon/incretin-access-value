@@ -95,6 +95,9 @@ COMMON = {
 }
 
 PANEL_EXTRA = {
+    "sdud_reported_ffsu": "False when the state has no SDUD row for any drug in the quarter for fee-for-service utilization (a zero would be false).",
+    "sdud_reported_mcou": "False when the state has no SDUD row for any drug in the quarter for managed-care utilization.",
+    "sdud_anomalous": "True when the state-quarter all-drug prescription count is below 50% of the median of the four nearest other quarters, for FFSU or MCOU.",
     "enrollment_ffs_medicaid_assumed": "Medicaid enrollment x (1 - mc_share): the fee-for-service enrollment used by the FFS-only rates (assumption for 2025-2026, see mc_share_carried_forward).",
     "mc_share": "Share of Medicaid enrollees in comprehensive managed care (CMS Managed Care Enrollment Report).",
     "mc_share_carried_forward": "True when mc_share is the 2024 share carried forward to 2025 and 2026 (an assumption).",
@@ -171,6 +174,13 @@ MODELS = {
             "residual_usable": "True when the national row is unsuppressed and residual_rx is positive.",
             "residual_within_bounds": "True when residual_rx lies between 0 and 10 x n_state_suppressed."},
          {"unique_combo": ["ndc11", "year", "quarter", "utilization_type"]}),
+        "int_sdud__reporting": ("SDUD reporting completeness over all drugs by panel state, quarter and utilization type (FFSU, MCOU), with not_reported and anomalous flags.", COMMON | {
+            "n_rows": "SDUD rows (all drugs) for the state, quarter and utilization type.", "n_suppressed_rows": "Suppressed rows among them.",
+            "n_ndcs": "Distinct NDCs (all drugs).", "rx_observed_all_drugs": "Unsuppressed prescriptions summed over all drugs.",
+            "neighbour_median_rx": "Median all-drug prescriptions of the four nearest other quarters of the same state and type.",
+            "n_neighbours": "Neighbouring quarters used (4 when available).", "not_reported": "True when there are zero rows across all drugs.",
+            "anomalous": "True when reported but below 50% of neighbour_median_rx."},
+         {"unique_combo": ["state_code", "year", "quarter", "utilization_type"]}),
         "int_drug_name__product_group": ("Product group for each brand/generic name pair in Part D and Medicaid spending and Part D prescriber files.", COMMON, {"unique_combo": ["brand_name", "generic_name"]}),
     },
     "marts": {
