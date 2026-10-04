@@ -123,3 +123,36 @@ source and "Gross of rebates; counts under 11 suppressed by CMS" where relevant;
 (treated = accent, comparison = grey); Okabe-Ito colours when more than two groups are needed; uncertainty always shown; key dates annotated
 (Wegovy approval 2021-06-04, Zepbound approval 2023-11-08). Outputs are aggregated to state-quarter rates: no suppressed cell value and no
 cell-level count under 11 is written to any committed file. Every number is reproducible by `Rscript analysis/run_all.R` from the warehouse.
+
+---
+
+## Amendment 2 (before any model run), 2026-10-04
+
+No model had been run when this amendment was written; only descriptive steps 01-07 exist. Plan commit `a8b37a3` is unchanged above this line.
+
+**1. Sensitivity 7 redefined.** A state-quarter is a *reporting gap* when (a) MCOU or FFSU is not reported but the same state reported that
+utilization type in the previous quarter, or (b) it is flagged `anomalous`. Runs that are not reported from the start of the window, or for
+the whole window, are *structural* (no managed-care pharmacy data in SDUD; FFSU alone is complete there). Structural runs: AL, CT, ID, ME, MO, MT,
+SD, WY, WI (from 2020 Q1 to the end), OK through 2024 Q1, AR in 2018. Sensitivity 7 sets only gap quarters to missing (unbalanced panel allowed for
+this run only). Under this rule only AK and VT in 2026 Q1 qualify, both outside the primary window (2018 Q1 to 2025 Q3), so sensitivity 7
+equals the primary estimate within the window; the report says so and says why.
+
+**2. Estimand.** From March 2024 Medicaid programs that exclude weight-loss drugs may still pay for Wegovy for its cardiovascular indication
+(label event 2024-03-08), and for Zepbound for obstructive sleep apnea from December 2024 (2024-12-20), which may explain part of the rising
+never-treated mean. The estimand is therefore the effect of coverage *for weight management* over and above access through other indications.
+
+**Rhode Island.** obesity_wz use is about 2 per 1,000 through 2023, before its 2023 Q4 coverage date. The report gives Rhode Island's
+FFSU/MCOU split for 2022 Q4 to 2024 Q1. **Sensitivity 13 (new): the primary run without Rhode Island.**
+
+**South Carolina.** Uptake stays low after coverage. The report gives its FFSU/MCOU split after 2024 Q4 and what the coverage table says about
+its delivery system (fee-for-service only, or managed care organisations too).
+
+**3. Withdrawal figure.** Adds a reference group: states continuously covered through 2026 Q1 (KS, MI, MS, RI, MA, TN). For each of CA, PA, SC, NC
+(and NH), the 2025 Q4 to 2026 Q1 change in obesity_wz is shown beside that state's all-drug SDUD change for the same quarters
+(`int_sdud__reporting`), so incomplete preliminary data is visible. The title states the comparison, not only the drop. Still descriptive: no
+model, no p-values.
+
+**4. Figure changes (descriptive figures, before models).** Sensitivity states on the map: white fill with a dashed orange outline. Adoption
+timeline: the start range (earliest to latest possible quarter) as a hatched or lighter segment, then solid coverage. Raw trends: dashed line at
+each coverage end (CA, PA, SC), NC's gap shaded, label-event dates 2024-03-08 and 2024-12-20 as dotted lines, and one rounding rule (one decimal)
+in titles and text. Suppression figure: y-axis capped at 10%, clipped 2021 points labelled.
