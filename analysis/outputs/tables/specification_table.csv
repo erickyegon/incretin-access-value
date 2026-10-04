@@ -1,0 +1,17 @@
+spec,specification,att_simple,se_simple,ci_low,ci_high,fmi,att_group,se_group,group_ci_low,group_ci_high,states,treated_states,never_treated_states,state_quarters,imputations,note
+0,Primary,12.189,1.947,8.374,16.004,0,11.376,2.366,6.738,16.013,44,10,34,1364,20,NA
+1,Without Kansas,13.267,2.041,9.267,17.268,0,11.786,2.622,6.647,16.924,43,9,34,1333,20,NA
+2,Without Mississippi and Tennessee,12.87,2.096,8.762,16.979,0,12.907,2.667,7.679,18.135,42,8,34,1302,20,NA
+3,Never-treated controls only,12.219,1.913,8.47,15.967,0,11.401,2.337,6.821,15.981,44,10,34,1364,20,NA
+4,Enrollment-weighted,14.738,0.906,12.962,16.514,0,14.117,1.302,11.564,16.67,44,10,34,1364,20,NA
+5a,Suppressed cells = 0 (lower bound),12.203,1.988,8.306,16.1,0,11.39,2.295,6.892,15.888,44,10,34,1364,1,NA
+5b,Suppressed cells = 10 (upper bound),12.168,1.945,8.355,15.981,0,11.353,2.25,6.943,15.764,44,10,34,1364,1,NA
+6,Denominator: Medicaid + CHIP,10.883,1.807,7.341,14.425,0,10.129,2.088,6.037,14.221,44,10,34,1364,20,NA
+7,Reporting-gap state-quarters set to missing,12.189,1.94,8.387,15.991,0,11.376,2.341,6.787,15.964,44,10,34,1364,20,NA
+8,Definition-caveat state-quarters set to missing,12.461,2.246,8.059,16.863,0,12.235,2.579,7.181,17.29,44,10,34,1241,20,NA
+9a,"Add sensitivity states, start = earliest quarter",10.075,1.279,7.567,12.582,0,9.949,1.617,6.781,13.118,51,17,34,1581,20,NA
+9b,"Add sensitivity states, start = latest quarter",11.67,1.441,8.846,14.494,0,11.727,1.665,8.464,14.991,51,17,34,1581,20,NA
+10,First-full-quarter timing,12.576,1.883,8.885,16.267,0,12.752,2.537,7.779,17.725,44,10,34,1364,20,NA
+11,"Window to 2025 Q4, without North Carolina",13.335,2.259,8.907,17.763,0,12.562,2.54,7.584,17.539,43,9,34,1376,20,NA
+12,Fee-for-service only (FFSU per FFS enrollee),55.691,67.076,-75.775,187.156,0,47.699,52.662,-55.518,150.915,35,9,26,1085,20,"dropped (no managed-care share or no FFS enrollees): AK, CT, HI, ME, MI, MT, SD, VT, WY"
+13,Without Rhode Island,12.988,2.004,9.061,16.915,0,12.169,2.435,7.397,16.942,43,9,34,1333,20,NA

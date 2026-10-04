@@ -12,3 +12,4 @@ dbt_packages/
 dbt/target/
 dbt/logs/
 dbt/dbt_packages/
+analysis/outputs/cache/
