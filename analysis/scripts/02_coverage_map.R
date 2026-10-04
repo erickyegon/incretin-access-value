@@ -1,6 +1,7 @@
 # Descriptive figure 1: coverage timing as a tile-grid map. Primary states are coloured by adoption cohort year (first_treated_quarter);
-# sensitivity states (start quarter unknown, treated) are a pale tint with a dashed border; never-treated states are grey.
-# A down-arrow marks states whose coverage later ended or lapsed (any quarter with a lower covered share than the quarter before).
+# sensitivity states (start quarter unknown, treated) have a white fill and a dashed orange outline so they read as a different category, not as a
+# cohort; never-treated states are grey. A down-arrow marks states whose coverage later ended or lapsed (any quarter with a lower covered share
+# than the quarter before).
 source(here::here("R", "db.R"))
 source(here::here("R", "theme.R"))
 library(geofacet)
@@ -15,7 +16,7 @@ st <- panel |>
             start_quarter_earliest = first(start_quarter_earliest), start_quarter_latest = first(start_quarter_latest),
             withdrew = any(covered_days_share < lag(covered_days_share, default = 0)), .groups = "drop") |>
   mutate(cohort_year = ifelse(analysis_group == "primary", substr(first_treated_quarter, 1, 4), NA_character_),
-         fill_key = case_when(analysis_group == "primary" ~ cohort_year, analysis_group == "sensitivity" ~ "Sensitivity (start range)",
+         fill_key = case_when(analysis_group == "primary" ~ cohort_year, analysis_group == "sensitivity" ~ "Sensitivity (start range, dashed outline)",
                               TRUE ~ "Never treated"),
          label = case_when(analysis_group == "primary" ~ paste0(state_code, "\n", first_treated_quarter),
                            analysis_group == "sensitivity" ~ paste0(state_code, "\n", start_quarter_earliest, "-", substr(start_quarter_latest, 3, 6)),
@@ -26,20 +27,24 @@ grid <- tibble::as_tibble(as.data.frame(geofacet::us_state_grid2)) |> filter(cod
 
 years <- sort(unique(na.omit(st$cohort_year)))
 ramp <- scales::seq_gradient_pal("#FBD9BF", "#8E3A00")(seq(0, 1, length.out = length(years)))
-fills <- c(setNames(ramp, years), "Sensitivity (start range)" = col_sensitivity, "Never treated" = "#E4E4E4")
+sens_key <- "Sensitivity (start range, dashed outline)"
+fills <- c(setNames(ramp, years), setNames("#FFFFFF", sens_key), "Never treated" = "#E4E4E4")
 grid$fill_key <- factor(grid$fill_key, levels = names(fills))
+grid$is_sens <- grid$analysis_group == "sensitivity"
 
 n_prim <- sum(st$analysis_group == "primary"); n_sens <- sum(st$analysis_group == "sensitivity"); n_never <- sum(st$analysis_group == "never_treated")
 rng <- range(st$first_treated_quarter[st$analysis_group == "primary"])
 
-p <- ggplot(grid, aes(col, -row, fill = fill_key)) +
-  geom_tile(aes(linetype = analysis_group == "sensitivity"), colour = "white", linewidth = 0.9, width = 0.96, height = 0.96, show.legend = TRUE) +
+p <- ggplot(grid, aes(col, -row)) +
+  geom_tile(data = filter(grid, !is_sens), aes(fill = fill_key), colour = "white", linewidth = 0.9, width = 0.96, height = 0.96) +
+  geom_tile(data = filter(grid, is_sens), aes(fill = fill_key), colour = col_treated, linetype = "dashed", linewidth = 0.9, width = 0.92, height = 0.92) +
   geom_text(aes(label = label), size = 2.3, lineheight = 0.85, colour = "#1A1A1A") +
   scale_fill_manual(values = fills, name = "Primary cohort (year coverage began)", drop = FALSE) +
-  scale_linetype_manual(values = c("solid", "dashed"), guide = "none") +
+  guides(fill = guide_legend(override.aes = list(colour = c(rep("white", length(years)), col_treated, "white"),
+                                                 linetype = c(rep("solid", length(years)), "dashed", "solid"), linewidth = 0.9))) +
   coord_equal() +
   labs(title = stringr::str_wrap(sprintf("%d states began Medicaid coverage of Wegovy/Zepbound between %s and %s; %d more are treated with an uncertain start", n_prim, rng[1], rng[2], n_sens), 85),
-       subtitle = stringr::str_wrap(sprintf("50 states and DC: %d primary (cohort = first quarter with coverage), %d sensitivity (start range shown), %d never treated. ↓ = coverage later ended or lapsed.", n_prim, n_sens, n_never), 120),
+       subtitle = stringr::str_wrap(sprintf("50 states and DC: %d primary (cohort = first quarter with coverage), %d sensitivity (earliest-latest possible start quarter shown), %d never treated. ↓ = coverage later ended or lapsed.", n_prim, n_sens, n_never), 120),
        caption = "Source: state Medicaid documents compiled in the warehouse coverage table (medicaid_obesity_coverage). Data through SDUD 2026 Q1 (preliminary).") +
   theme_incretin() + theme(axis.text = element_blank(), axis.title = element_blank(), panel.grid = element_blank(), legend.position = "bottom")
 

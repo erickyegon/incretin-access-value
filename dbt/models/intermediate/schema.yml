@@ -310,7 +310,35 @@ models:
         - utilization_type
 - name: int_sdud__reporting
   description: SDUD reporting completeness over all drugs by panel state, quarter and utilization type (FFSU, MCOU), with not_reported and anomalous flags.
-  columns: []
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: utilization_type
+    description: 'SDUD utilization type: FFSU (fee-for-service), MCOU (managed care) or ALL (FFSU + MCOU; never add ALL to the other two).'
+  - name: n_rows
+    description: SDUD rows (all drugs) for the state, quarter and utilization type.
+  - name: n_suppressed_rows
+    description: Suppressed rows among them.
+  - name: n_ndcs
+    description: Distinct NDCs (all drugs).
+  - name: rx_observed_all_drugs
+    description: Unsuppressed prescriptions summed over all drugs.
+  - name: neighbour_median_rx
+    description: Median all-drug prescriptions of the four nearest other quarters of the same state and type.
+  - name: n_neighbours
+    description: Neighbouring quarters used (4 when available).
+  - name: not_reported
+    description: True when there are zero rows across all drugs.
+  - name: anomalous
+    description: True when reported but below 50% of neighbour_median_rx.
   data_tests:
   - dbt_utils.unique_combination_of_columns:
       arguments:

@@ -85,6 +85,14 @@ models:
     description: True when mc_share is the 2024 share carried forward to 2025 and 2026 (an assumption).
   - name: enrollment_ffs_medicaid_assumed
     description: 'Medicaid enrollment x (1 - mc_share): the fee-for-service enrollment used by the FFS-only rates (assumption for 2025-2026, see mc_share_carried_forward).'
+  - name: sdud_reported_ffsu
+    description: False when the state has no SDUD row for any drug in the quarter for fee-for-service utilization (a zero would be false).
+  - name: sdud_reported_mcou
+    description: False when the state has no SDUD row for any drug in the quarter for managed-care utilization.
+  - name: sdud_anomalous
+    description: True when the state-quarter all-drug prescription count is below 50% of the median of the four nearest other quarters, for FFSU or MCOU.
+  - name: rx_all_drugs_observed
+    description: 'All-drug unsuppressed SDUD prescriptions (FFSU + MCOU, every drug) for the state-quarter: context for judging incomplete preliminary data.'
   - name: rx_obesity_wz_tablet_observed
     description: Observed prescriptions (all utilization types) for Wegovy tablets within obesity_wz.
   - name: rx_obesity_wz_observed

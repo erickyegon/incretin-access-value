@@ -63,3 +63,11 @@ save_table <- function(df, name, gt_table = NULL) {
   if (!is.null(gt_table)) gt::gtsave(gt_table, file.path(d, paste0(name, ".html")))
   invisible(file.path(d, name))
 }
+
+# Label-event dates annotated on figures (Drugs@FDA, label_events seed): cardiovascular indication for Wegovy, sleep apnea for Zepbound
+label_wegovy_cv <- as.Date("2024-03-08")
+label_zepbound_osa <- as.Date("2024-12-20")
+
+#' One rounding rule for every number quoted in titles and text: one decimal, halves rounded up.
+fmt1 <- function(x) sprintf("%.1f", floor(abs(x) * 10 + 0.5 + 1e-9) / 10 * sign(x))
+fmt_pct1 <- function(x) paste0(fmt1(100 * x), "%")

@@ -1,0 +1,13 @@
+unit,group,obesity_wz,all_drugs
+CA,Withdrawing / lapsed,-0.7573,-0.2604
+PA,Withdrawing / lapsed,-0.9551,-0.51
+SC,Withdrawing / lapsed,-0.6173,0.0118
+NC,Withdrawing / lapsed,3.8707,-0.0016
+NH,Withdrawing / lapsed,-0.8822,-0.1915
+KS,Continuously covered,-0.3775,-0.5257
+MI,Continuously covered,-0.2674,-0.0273
+MS,Continuously covered,0.0572,-0.2798
+RI,Continuously covered,0.0468,-0.2097
+MA,Continuously covered,-0.0781,-0.0364
+TN,Continuously covered,0.5025,-0.1488
+Never-treated (pooled),Never treated,0.2873,-0.2498

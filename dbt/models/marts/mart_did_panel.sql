@@ -49,7 +49,7 @@ select
     mc.share_comprehensive_managed_care as mc_share, coalesce(mc.is_carried_forward, false) as mc_share_carried_forward,
     e.enrollment_medicaid_avg * (1 - mc.share_comprehensive_managed_care) as enrollment_ffs_medicaid_assumed,
     -- SDUD reporting completeness (all drugs; see int_sdud__reporting): a flagged state-quarter is not dropped or changed
-    rp.sdud_reported_ffsu, rp.sdud_reported_mcou, rp.sdud_anomalous,
+    rp.sdud_reported_ffsu, rp.sdud_reported_mcou, rp.sdud_anomalous, rp.rx_all_drugs_observed,
     -- prescriptions and rates
     coalesce(s.rx_obesity_wz_tablet_observed, 0) as rx_obesity_wz_tablet_observed,
 {% for gp in groups %}
@@ -72,7 +72,8 @@ left join (
     select state_code, year, quarter,
         bool_or(not not_reported) filter (where utilization_type = 'FFSU') as sdud_reported_ffsu,
         bool_or(not not_reported) filter (where utilization_type = 'MCOU') as sdud_reported_mcou,
-        bool_or(anomalous) as sdud_anomalous
+        bool_or(anomalous) as sdud_anomalous,
+        sum(rx_observed_all_drugs) as rx_all_drugs_observed
     from {{ ref('int_sdud__reporting') }} group by 1, 2, 3
 ) rp on rp.state_code = g.state_code and rp.year = g.year and rp.quarter = g.quarter
 left join sdud s on s.state_code = g.state_code and s.year = g.year and s.quarter = g.quarter

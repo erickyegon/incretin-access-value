@@ -95,6 +95,7 @@ COMMON = {
 }
 
 PANEL_EXTRA = {
+    "rx_all_drugs_observed": "All-drug unsuppressed SDUD prescriptions (FFSU + MCOU, every drug) for the state-quarter: context for judging incomplete preliminary data.",
     "sdud_reported_ffsu": "False when the state has no SDUD row for any drug in the quarter for fee-for-service utilization (a zero would be false).",
     "sdud_reported_mcou": "False when the state has no SDUD row for any drug in the quarter for managed-care utilization.",
     "sdud_anomalous": "True when the state-quarter all-drug prescription count is below 50% of the median of the four nearest other quarters, for FFSU or MCOU.",
