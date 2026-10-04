@@ -22,8 +22,9 @@ html_text <- function(f) { h <- paste(readLines(f, warn = FALSE, encoding = "UTF
   h <- gsub("(?s)<script.*?</script>|(?s)<style.*?</style>", " ", h, perl = TRUE); h <- gsub("<[^>]+>", " ", h, perl = TRUE); h <- gsub("&[a-z#0-9]+;", " ", h)
   paste(h, paste(at, collapse = " ")) }
 pdf_text <- function(f) paste(suppressWarnings(system2("pdftotext", c("-layout", "-enc", "UTF-8", shQuote(f), "-"), stdout = TRUE, stderr = FALSE)), collapse = "\n")
+# AUDIT_ONE_PAGER lets the audit be pointed at a test copy of the one-pager
 docs <- list(report = file.path(root, "report", "report.html"), deck_pdf = file.path(root, "deck", "deck.pdf"), website = file.path(root, "site", "index.html"),
-             one_pager = file.path(root, "deck", "one_page_summary.pdf"), research_pack = file.path(root, "research_pack", "research_pack.pdf"), readme = file.path(root, "README.md"))
+             one_pager = Sys.getenv("AUDIT_ONE_PAGER", file.path(root, "deck", "one_page_summary.pdf")), research_pack = file.path(root, "research_pack", "research_pack.pdf"), readme = file.path(root, "README.md"))
 texts <- lapply(docs, function(f) { if (!file.exists(f)) return(NA_character_); if (grepl("\\.pdf$", f)) pdf_text(f) else if (grepl("\\.html$", f)) html_text(f) else paste(readLines(f, warn = FALSE, encoding = "UTF-8"), collapse = "\n") })
 strip_urls <- function(s) gsub("https?://\\S+|[A-Za-z0-9_./-]+\\.(csv|html|pdf|png|R|qmd|md)\\b", " ", s)
 res <- do.call(rbind, lapply(names(texts), function(n) { s <- texts[[n]]; if (is.na(s)) return(data.frame(doc = n, token = "FILE MISSING", class = "UNMATCHED")); t <- toks(strip_urls(s)); if (!length(t)) return(NULL)

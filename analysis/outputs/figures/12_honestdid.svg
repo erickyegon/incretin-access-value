@@ -29,43 +29,44 @@
 <rect x='0.00' y='0.000000000000057' width='648.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMzkuNTN8NjQyLjUyfDY3LjYwfDM4Ni4wNQ=='>
-    <rect x='39.53' y='67.60' width='602.99' height='318.45' />
+  <clipPath id='cpMzkuNTN8NjQyLjUyfDY3LjYwfDM3Ny40MQ=='>
+    <rect x='39.53' y='67.60' width='602.99' height='309.81' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzkuNTN8NjQyLjUyfDY3LjYwfDM4Ni4wNQ==)'>
-<polyline points='39.53,347.45 642.52,347.45 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='39.53,279.34 642.52,279.34 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='39.53,211.24 642.52,211.24 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='39.53,143.13 642.52,143.13 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='39.53,75.03 642.52,75.03 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<line x1='39.53' y1='347.45' x2='642.52' y2='347.45' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
-<polygon points='66.94,120.67 135.46,116.81 203.98,112.95 272.50,109.09 341.02,105.23 409.55,99.44 478.07,93.65 546.59,87.86 615.11,82.07 615.11,371.57 546.59,361.92 478.07,352.27 409.55,342.62 341.02,334.90 272.50,327.18 203.98,319.46 135.46,311.74 66.94,305.95 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.25;' />
-<polyline points='66.94,120.67 135.46,116.81 203.98,112.95 272.50,109.09 341.02,105.23 409.55,99.44 478.07,93.65 546.59,87.86 615.11,82.07 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
-<polyline points='615.11,371.57 546.59,361.92 478.07,352.27 409.55,342.62 341.02,334.90 272.50,327.18 203.98,319.46 135.46,311.74 66.94,305.95 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
-<polyline points='66.94,305.95 135.46,311.74 203.98,319.46 272.50,327.18 341.02,334.90 409.55,342.62 478.07,352.27 546.59,361.92 615.11,371.57 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='66.94,120.67 135.46,116.81 203.98,112.95 272.50,109.09 341.02,105.23 409.55,99.44 478.07,93.65 546.59,87.86 615.11,82.07 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
-<line x1='39.53' y1='307.54' x2='642.52' y2='307.54' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
-<line x1='39.53' y1='118.59' x2='642.52' y2='118.59' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<g clip-path='url(#cpMzkuNTN8NjQyLjUyfDY3LjYwfDM3Ny40MQ==)'>
+<polyline points='39.53,339.85 642.52,339.85 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='39.53,273.60 642.52,273.60 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='39.53,207.34 642.52,207.34 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='39.53,141.08 642.52,141.08 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='39.53,74.82 642.52,74.82 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<line x1='39.53' y1='339.85' x2='642.52' y2='339.85' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
+<polygon points='66.94,119.23 135.46,115.48 203.98,111.72 272.50,107.97 341.02,104.21 409.55,98.58 478.07,92.95 546.59,87.31 615.11,81.68 615.11,363.32 546.59,353.94 478.07,344.55 409.55,335.16 341.02,327.65 272.50,320.14 203.98,312.63 135.46,305.12 66.94,299.48 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.25;' />
+<polyline points='66.94,119.23 135.46,115.48 203.98,111.72 272.50,107.97 341.02,104.21 409.55,98.58 478.07,92.95 546.59,87.31 615.11,81.68 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='615.11,363.32 546.59,353.94 478.07,344.55 409.55,335.16 341.02,327.65 272.50,320.14 203.98,312.63 135.46,305.12 66.94,299.48 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='66.94,299.48 135.46,305.12 203.98,312.63 272.50,320.14 341.02,327.65 409.55,335.16 478.07,344.55 546.59,353.94 615.11,363.32 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='66.94,119.23 135.46,115.48 203.98,111.72 272.50,107.97 341.02,104.21 409.55,98.58 478.07,92.95 546.59,87.31 615.11,81.68 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<line x1='39.53' y1='301.03' x2='642.52' y2='301.03' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<line x1='39.53' y1='117.21' x2='642.52' y2='117.21' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MzIuMDA=)'>
-<text x='34.59' y='350.60' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='34.59' y='282.49' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>2.5</text>
-<text x='34.59' y='214.39' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>5.0</text>
-<text x='34.59' y='146.28' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>7.5</text>
-<text x='34.59' y='78.18' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>10.0</text>
-<text x='66.94' y='397.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='203.98' y='397.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.5</text>
-<text x='341.02' y='397.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>1.0</text>
-<text x='478.07' y='397.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>1.5</text>
-<text x='615.11' y='397.28' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>2.0</text>
-<text x='341.02' y='409.03' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='434.72px' lengthAdjust='spacingAndGlyphs'>Mbar: largest post-period violation of parallel trends as a multiple of the largest pre-period violation</text>
-<text transform='translate(12.64,226.82) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='195.83px' lengthAdjust='spacingAndGlyphs'>Robust 95% CI for the average ATT, e = 0..3</text>
+<text x='34.59' y='343.00' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='34.59' y='276.75' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<text x='34.59' y='210.49' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>5.0</text>
+<text x='34.59' y='144.23' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>7.5</text>
+<text x='34.59' y='77.97' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='17.11px' lengthAdjust='spacingAndGlyphs'>10.0</text>
+<text x='66.94' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='203.98' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='341.02' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='478.07' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>1.5</text>
+<text x='615.11' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='12.22px' lengthAdjust='spacingAndGlyphs'>2.0</text>
+<text x='341.02' y='400.39' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='434.72px' lengthAdjust='spacingAndGlyphs'>Mbar: largest post-period violation of parallel trends as a multiple of the largest pre-period violation</text>
+<text transform='translate(12.64,222.50) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='195.83px' lengthAdjust='spacingAndGlyphs'>Robust 95% CI for the average ATT, e = 0..3</text>
 <text x='5.48' y='46.59' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='581.58px' lengthAdjust='spacingAndGlyphs'>HonestDiD relative-magnitudes bounds on the mean of event times 0 to +3; pre-period event times -8 to -2 (post-launch</text>
 <text x='5.48' y='58.47' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='196.41px' lengthAdjust='spacingAndGlyphs'>quarters only). Dashed: conventional CI.</text>
 <text x='5.48' y='16.97' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='614.77px' lengthAdjust='spacingAndGlyphs'>The 95% robust CI for the average of the first 4 post-coverage quarters is 1.5 to 8.3 at Mbar =</text>
 <text x='5.48' y='32.09' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='327.81px' lengthAdjust='spacingAndGlyphs'>0 and -0.9 to 9.7 at Mbar = 2; breakdown value 1.4</text>
-<text x='5.48' y='425.68' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='503.92px' lengthAdjust='spacingAndGlyphs'>Source: CMS State Drug Utilization Data and Medicaid enrollment (warehouse marts). Gross of rebates; counts under 11 suppressed by CMS.</text>
+<text x='5.48' y='417.04' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='416.88px' lengthAdjust='spacingAndGlyphs'>Source: CMS State Drug Utilization Data and Medicaid enrollment (warehouse marts). Gross of rebates; counts under</text>
+<text x='5.48' y='425.68' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='84.83px' lengthAdjust='spacingAndGlyphs'>11 suppressed by CMS.</text>
 </g>
 </g>
 </svg>

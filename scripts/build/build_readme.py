@@ -22,6 +22,10 @@ All numbers come from [`analysis/outputs/key_numbers.csv`](analysis/outputs/key_
 - **Prescribers.** Primary care physicians wrote {d("d_share_pcp")}% and nurse practitioners and physician assistants {d("d_share_nppa")}% of Part D incretin claims in 2024; Part D reflects diabetes and other covered uses, not obesity-brand adoption.
 - **Budget impact** for a programme of 1,000,000 enrollees: ${d("e_net5")} million net over five years in the central case (${d("e_pmpm")} per enrollee per month), with a scenario range of ${d("e_scen_min")} to ${d("e_scen_max")} million. The rebate is assumed ({d("e_rebate_central")}% is the midpoint of {d("e_rebate_low")}% and {d("e_rebate_high")}%); at the announced ${d("x_price_245")} price the central case is ${d("e_announced5")} million.
 
+## Related project
+
+This is the second of two portfolio projects. The first, **Evidence**, is a real-world oncology study (NSCLC): <https://erickyegon.github.io/oncology-rwe-nsclc/>. This one is **Access & Value** (incretin drugs in Medicaid).
+
 ## Deliverables
 
 | What | Where |

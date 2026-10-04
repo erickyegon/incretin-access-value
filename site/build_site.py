@@ -30,7 +30,7 @@ page = f"""<!doctype html>
     <a class="btn primary" href="report.html">Read the report</a>
     <a class="btn" href="deck.pdf">Insight deck (PDF)</a>
     <a class="btn" href="one_page_summary.pdf">One-page summary</a>
-    <a class="btn" href="#budget-model">Budget model app</a>
+    <a class="btn" href="budget_impact_scenarios.pdf">Budget model (PDF)</a>
     <a class="btn" href="https://github.com/erickyegon/incretin-access-value">Code</a>
   </nav>
 </header>
@@ -60,11 +60,11 @@ page = f"""<!doctype html>
     </ul>
   </section>
   <section id="budget-model"><h2>Budget model</h2>
-    <p>The interactive budget impact model is a Shiny app in the repository (run it locally with <code>shiny::runApp("app")</code>); a hosted link will be added here when it is deployed. A static PDF of the scenarios is <a href="budget_impact_scenarios.pdf">here</a>, and the design pack for primary research is <a href="research_pack.pdf">here</a>.</p></section>
+    <p>The budget impact scenarios are in <a href="budget_impact_scenarios.pdf">a PDF</a>. The interactive model is a Shiny app in the repository (run it locally with <code>shiny::runApp("app")</code>); it is not hosted yet. The design pack for primary research is <a href="research_pack.pdf">here</a>.</p></section>
   <section class="strip" aria-label="Portfolio"><h2>Two projects, one portfolio</h2>
-    <div class="two"><a class="proj" href="#oncology-site"><strong>Evidence</strong><span>Real-world oncology data (NSCLC): survival and outcomes</span></a>
+    <div class="two"><a class="proj" href="https://erickyegon.github.io/oncology-rwe-nsclc/"><strong>Evidence</strong><span>Real-world oncology data (NSCLC): survival and outcomes</span></a>
     <a class="proj current" href="#top" aria-current="page"><strong>Access &amp; Value</strong><span>Incretin drugs in Medicaid: coverage, prescribers, budget impact</span></a></div>
-    <p class="small">The oncology site link will be added when that site is published.</p></section>
+</section>
 </main>
 <footer class="wrap small">
   <p><strong>Disclaimer.</strong> Public aggregate data; no company affiliation or endorsement; not patient-level claims; gross of rebates unless stated; associations and scenarios, not effects of any company's promotion.</p>

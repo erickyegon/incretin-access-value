@@ -27,6 +27,6 @@ source("../analysis/R/kn.R")
 
 **Skills.** Real-world evidence · HEOR · market access · claims data · NDC coding · causal inference · budget impact · SQL · dbt · R · Quarto · Shiny.
 
-**Links.** Code: github.com/erickyegon/incretin-access-value (to be published) · Report: `report/report.html` · Deck: `deck/deck.pdf`.
+**Links.** Code: github.com/erickyegon/incretin-access-value · Report: `report/report.html` · Deck: `deck/deck.pdf`.
 
 *Public aggregate data; no company affiliation or endorsement; not patient-level claims; gross of rebates unless stated; scenarios, not forecasts. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.*

@@ -123,6 +123,9 @@ save_fig <- function(p, name, width = 9, height = 6, alt = NA_character_) {
     if (!is.null(p$labels$caption)) p$labels$caption <- wrap1(p$labels$caption, round(w * 1.2)) }
   ggplot2::ggsave(file.path(d, paste0(name, ".png")), p, width = width, height = height, dpi = 300, bg = "white")
   ggplot2::ggsave(file.path(d, paste0(name, ".svg")), p, width = width, height = height, bg = "white")
+  # deck variant without the baked-in title (the slide headline carries the finding); subtitle, caption and notes are kept
+  pd <- p; if (inherits(pd, "patchwork")) { if (!is.null(pd$patches$annotation$title)) pd$patches$annotation$title <- NULL } else pd$labels$title <- NULL
+  ggplot2::ggsave(file.path(d, paste0(name, "_deck.png")), pd, width = width, height = height, dpi = 200, bg = "white")
   # alt text for every figure is kept in outputs/figures/alt_text.csv
   if (!is.na(alt)) {
     f <- file.path(d, "alt_text.csv")

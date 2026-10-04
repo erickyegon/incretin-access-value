@@ -44,12 +44,13 @@ rsconnect::setAccountInfo(name = "<account>", token = "<token>", secret = "<secr
 rsconnect::deployApp("app", appName = "incretin-budget-impact")
 ```
 
-The app needs only `app/` (it includes `bia.R` and `data/*.rds`; no database). Then put the app URL on the website: edit the "Budget model app" button in `site/build_site.py` (currently `#budget-model`), run `python site/build_site.py`, commit, push.
+The app needs only `app/` (it includes `bia.R` and `data/*.rds`; no database). Then put the app URL on the website: change the "Budget model (PDF)" button in `site/build_site.py` to the app URL (keep the PDF link in the Budget model section), run `python site/build_site.py`, commit, push.
 
-## 4. Links still to fill
+## 4. Links
 
-- **Oncology site link** in the "Two projects, one portfolio" strip (`site/build_site.py`, currently `#oncology-site`): not set because that site has no published address yet.
-- **GitHub links** inside the report, deck and one-pager already name `erickyegon/incretin-access-value`; they work once the repository is public.
+- The oncology site link (`https://erickyegon.github.io/oncology-rwe-nsclc/`) is set in the website strip and the README.
+- The website "Budget model (PDF)" button points to `budget_impact_scenarios.pdf` until the Shiny app is deployed.
+- GitHub links inside the report, deck and one-pager name `erickyegon/incretin-access-value`; they work once the repository is public.
 
 ## 5. After publishing
 
