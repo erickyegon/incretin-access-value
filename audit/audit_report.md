@@ -28,7 +28,7 @@ Run: 2026-10-04. Key numbers: 177 rows.
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M audit/check_numbers.R |
+| git status is clean | PASS |  |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 
