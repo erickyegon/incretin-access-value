@@ -35,6 +35,10 @@ This is the second of two portfolio projects. The first, **Evidence**, is a real
 | One-page summary (PDF) | `deck/one_page_summary.pdf` |
 | Project website (built, not published) | `site/` |
 | Research design pack (Module F, PDF) | `research_pack/research_pack.pdf` |
+| Exploration notebooks, one per module A to E (HTML) | `notebooks/` |
+| Coverage criteria table for the 17 covering states (prior authorization, BMI, comorbidity, step therapy) | `analysis/outputs/tables/coverage_um_criteria.csv` |
+| Trial efficacy inputs (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1) and value-context table | `data/reference/trial_inputs.csv`, `analysis/outputs/tables/moduleE_value_context.csv` |
+| Data dictionary (NDC not HCPCS, units, suppression) and generated mart dictionary | `docs/data_dictionary.md`, `docs/data_dictionary_marts.md` |
 | Budget model (Shiny, runs locally) and static PDF | `app/`, `analysis/outputs/budget_impact_scenarios.pdf` |
 | Pre-specified plans, deviations, summaries | `analysis/plan_module*.md`, `analysis/analysis_plan_moduleC.md`, `analysis/outputs/deviations.md`, `analysis/outputs/module*_summary.md` |
 

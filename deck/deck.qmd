@@ -67,11 +67,11 @@ fig("20_funnel", 520)
 src(paste0("Source: NHANES 2021-2023 (measured) and KFF poll, February 24 to March 2, 2026 (modelled). Eligible is a lower bound: ", kn("b_eligible"), " million adults (", kn_ci("b_eligible"), " million)."))
 ```
 
-## Market today: Part D incretin claims grew from `r kn("d_claims_2018")` million to `r kn("d_claims_2024")` million in six years, mostly for diabetes and other covered uses
+## Market today: gross spending on GLP-1 and GIP products reached $`r kn("m_spend_partd_2024")` billion in Part D and $`r kn("m_spend_medicaid_2024")` billion in Medicaid in 2024, before rebates
 
 ```{r a3, results='asis'}
-fig("30_partd_claims_prescribers", 520)
-src("Source: CMS Medicare Part D Prescribers by Provider and Drug (rows with at least 11 claims). Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+fig("50_spending_trend", 520)
+src("Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug (gross of rebates). Part D spending includes diabetes and other covered uses, not only obesity.")
 ```
 
 ## Landscape: injectables, new oral options, a Medicare Bridge and a $`r kn("x_price_245")` price are arriving while some states end coverage
@@ -79,11 +79,18 @@ src("Source: CMS Medicare Part D Prescribers by Provider and Drug (rows with at 
 - **Products.** Wegovy (injection and tablets), Zepbound (KwikPen) and Foundayo (tablets) are covered under the Medicare GLP-1 Bridge (CMS prescriber page, June 2026).
 - **Medicare GLP-1 Bridge.** A short-term demonstration, `r kn("x_bridge_window")`, with a $`r kn("x_bridge_copay")` copay (CMS).
 - **Price.** The White House (November 2025) announced a Medicare price of $`r kn("x_price_245")` a month for these drugs and said state Medicaid programmes will have access at those prices.
-- **State coverage is changing** (timeline below): several states ended or paused coverage in late 2025 and early 2026.
+- **State coverage is changing:** several states ended or paused coverage in late 2025 and early 2026 (timeline on the next slide).
+- **Pipeline.** `r kn("p_obesity_studies")` registered studies of the in-scope ingredients list obesity; `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3, and oral orforglipron has `r kn("p_orforglipron_phase3_obesity_studies")` Phase 3 studies (ClinicalTrials.gov; other ingredients not counted).
 
 ```{r a4, results='asis'}
-fig("02_adoption_timeline", 330)
-src("Sources: CMS Medicare GLP-1 Bridge pages (saved under docs/sources); White House fact sheet, November 2025; state Medicaid documents (data/reference/medicaid_obesity_coverage.csv).")
+src("Sources: CMS Medicare GLP-1 Bridge pages (saved under docs/sources); White House fact sheet, November 2025; state Medicaid documents; ClinicalTrials.gov (registry last updated 2026-10-02).")
+```
+
+## Timeline: label expansions, state coverage starts and ends, the $`r kn("x_price_245")` announcement and the Medicare Bridge cluster in 2024 to 2026
+
+```{r a4b, results='asis'}
+fig("51_timeline", 560)
+src("Sources: FDA Drugs@FDA labels; state Medicaid documents (primary-analysis states); White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.")
 ```
 
 ## Access: coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter, rising from `r kn("c_es_e0")` to `r kn("c_es_e8")` over eight quarters
@@ -147,6 +154,15 @@ src(paste0("Source: Module E one-way sensitivity. Central rebate ", kn("e_rebate
 ```{r a13, results='asis'}
 fig("41_waterfall_pmpm", 520)
 src("Source: Module E. The rebate step is an assumption; the announced price is a programme price, not a confirmed Medicaid net price.")
+```
+
+## Value context: trial weight loss of `r kn("t_attain_1_orforglipron_6_mg")`% to `r kn("t_surmount_1_tirzepatide_15_mg")`% sits beside a Medicaid net cost of $`r kn("e_per_user_year")` per user per year (context only)
+
+```{r a14, results='asis'}
+vc <- read.csv("../analysis/outputs/tables/moduleE_value_context.csv", check.names = FALSE, stringsAsFactors = FALSE)
+cat(knitr::kable(data.frame(Trial = vc$Trial, Arm = vc$Arm, Weeks = vc$Weeks, `Weight change, % (95% CI)` = vc[["Weight change, % (95% CI)"]], `Gross per Rx, USD` = vc[[6]], check.names = FALSE), format = "pipe"), sep = "
+")
+src(paste0("Trials: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1). Net cost per user per year $", kn("e_per_user_year"), " (4.3 fills, MEPS; midpoint rebate, blended Wegovy and Zepbound) and $", kn("e_per_member_year_cont"), " per member-year of continuous treatment (12 fills, assumption). Different populations, durations and fills: no cost-effectiveness claim."))
 ```
 
 ## Recommendations: considerations for a brand or access lead, from the evidence above

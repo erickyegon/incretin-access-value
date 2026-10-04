@@ -20,3 +20,6 @@ value,reason
 0.35,"illustrative true preference weight for step therapy (research_pack/dce_design.R)"
 "3,3,3,3,3","levels per attribute in the DCE design summary table"
 0400,"time-zone offset in commit timestamps (UTC-04:00)"
+00163,"form number F-00163 (Wisconsin PA drug attachment) in the criteria table"
+0009,"State Plan Amendment number DE 19-0009 in the criteria table"
+1.7,"semaglutide dose (1.7 mg) in the SURMOUNT-5 arm label (trial_inputs.csv)"

@@ -42,8 +42,10 @@ all_text <- paste(unlist(texts[!is.na(texts)]), collapse = "\n")
 chk("no 'PhD' or 'Ph.D' in titles, bylines or any deliverable text", !grepl("\\bPh\\.?D\\b", all_text), "")
 rep_only <- kn[kn$audience == "report_only", ]
 pub_docs <- c("deck_pdf", "website", "one_pager")
+nb_files <- list.files(file.path(root, "notebooks"), pattern = "[.]html$", full.names = TRUE)   # notebooks are copied to the website: no payment content there either
+for (f in nb_files) { texts[[basename(f)]] <- html_text(f); pub_docs <- c(pub_docs, basename(f)) }
 leak <- unlist(lapply(pub_docs, function(n) { s <- texts[[n]]; if (is.na(s)) return(NULL); s <- gsub("Open Payments", "", s); if (grepl("payment", s, ignore.case = TRUE)) paste(n, "mentions payments") else NULL }))
-chk("no Open Payments results in the deck, one-pager or website (report-only numbers)", length(leak) == 0, paste(leak, collapse = "; "))
+chk("no Open Payments results in the deck, one-pager, website or notebooks (report-only numbers)", length(leak) == 0, paste(leak, collapse = "; "))
 tabs <- list.files(file.path(root, "analysis", "outputs", "tables"), pattern = "\\.csv$", full.names = TRUE)
 npi <- unlist(lapply(tabs, function(f) { h <- strsplit(readLines(f, n = 1, warn = FALSE), ",")[[1]]; if (any(grepl("npi|covered_recipient|provider_name|first_name|last_name", tolower(h)))) basename(f) else NULL }))
 chk("no NPI-level or named-clinician columns in any output table", length(npi) == 0, paste(npi, collapse = ", "))

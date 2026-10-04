@@ -11,9 +11,16 @@ alt = {r["figure"]: r["alt_text"] for r in csv.DictReader(open(root / "analysis"
 copies = {root / "report" / "report.html": site / "report.html", root / "deck" / "deck.pdf": site / "deck.pdf", root / "deck" / "one_page_summary.pdf": site / "one_page_summary.pdf",
           root / "research_pack" / "research_pack.pdf": site / "research_pack.pdf", root / "analysis" / "outputs" / "budget_impact_scenarios.pdf": site / "budget_impact_scenarios.pdf",
           root / "analysis" / "outputs" / "figures" / "10_event_study_primary.png": site / "assets" / "event_study.png"}
+(site / "data").mkdir(exist_ok=True); (site / "notebooks").mkdir(exist_ok=True)
+copies[root / "analysis" / "outputs" / "tables" / "coverage_um_criteria.csv"] = site / "data" / "coverage_um_criteria.csv"
+copies[root / "analysis" / "outputs" / "key_numbers.csv"] = site / "data" / "key_numbers.csv"
+for nbf in sorted((root / "notebooks").glob("*.html")): copies[nbf] = site / "notebooks" / nbf.name
 for s, t in copies.items():
     if s.exists(): shutil.copyfile(s, t)
     else: print("MISSING", s)
+rep = site / "report.html"
+if rep.exists():   # the report links to ../notebooks/ in the repository; on the site the notebooks sit beside it
+    rep.write_text(rep.read_text(encoding="utf-8").replace("../notebooks/", "notebooks/"), encoding="utf-8")
 page = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Access and Value: obesity drugs in Medicaid</title>
@@ -59,6 +66,12 @@ page = f"""<!doctype html>
       <li>The biggest unknown in the budget is the rebate: the central case uses {d("e_rebate_central")}%, the midpoint of {d("e_rebate_low")}% (statutory minimum) and {d("e_rebate_high")}% (implied by the announced ${d("x_price_245")} price).</li>
     </ul>
   </section>
+  <section id="data"><h2>Data and notebooks</h2>
+    <ul>
+      <li><a href="data/coverage_um_criteria.csv">Coverage criteria table (CSV)</a>: prior authorization, BMI threshold, comorbidity requirement and step therapy for the 17 covering states, with sources.</li>
+      <li><a href="data/key_numbers.csv">Key numbers (CSV)</a>: every number in the report, deck and this page, with its source file and row.</li>
+      <li>Exploration notebooks: <a href="notebooks/A_data_layer.html">A data layer</a> · <a href="notebooks/B_eligible_population.html">B eligible population</a> · <a href="notebooks/C_coverage_study.html">C coverage study</a> · <a href="notebooks/D_prescribers.html">D prescribers</a> · <a href="notebooks/E_budget_impact.html">E budget impact</a>.</li>
+    </ul></section>
   <section id="budget-model"><h2>Budget model</h2>
     <p>The budget impact scenarios are in <a href="budget_impact_scenarios.pdf">a PDF</a>. The interactive model is a Shiny app in the repository (run it locally with <code>shiny::runApp("app")</code>); it is not hosted yet. The design pack for primary research is <a href="research_pack.pdf">here</a>.</p></section>
   <section class="strip" aria-label="Portfolio"><h2>Two projects, one portfolio</h2>
