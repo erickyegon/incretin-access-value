@@ -58,7 +58,8 @@ bc <- read.csv(file.path(root, "analysis", "outputs", "build_counts.csv"), strin
 mf <- jsonlite::fromJSON(file.path(root, "dbt", "target", "manifest.json")); rt <- table(vapply(mf$nodes, function(x) x$resource_type, ""))
 chk("build counts match the dbt manifest (models, seeds, tests)", bc$count[bc$item == "models"] == rt[["model"]] && bc$count[bc$item == "seeds"] == rt[["seed"]] && bc$count[bc$item == "tests"] == rt[["test"]], sprintf("manifest: %d models, %d seeds, %d tests", rt[["model"]], rt[["seed"]], rt[["test"]]))
 g <- function(...) suppressWarnings(system2("git", c("-C", shQuote(root), ...), stdout = TRUE, stderr = FALSE))
-st_out <- g("status", "--porcelain"); chk("git status is clean", length(st_out) == 0, paste(head(st_out, 5), collapse = "; "))
+st_out <- g("status", "--porcelain"); st_out <- st_out[!grepl("audit/audit_report.md", st_out)];  # the audit report itself is rewritten by this script
+ chk("git status is clean", length(st_out) == 0, paste(head(st_out, 5), collapse = "; "))
 tracked <- g("ls-files"); bad <- tracked[grepl("^data/(raw|interim)/|outputs/cache/|(^|/)target/|profiles\\.yml$|(^|/)\\.env$|\\.parquet$|\\.duckdb$", tracked)]
 chk("git ls-files shows no raw/interim data, credentials or caches", length(bad) == 0, paste(head(bad, 5), collapse = "; "))
 big <- tracked[file.exists(file.path(root, tracked)) & file.size(file.path(root, tracked)) > 50e6]; chk("no tracked file over 50 MB", length(big) == 0, paste(big, collapse = ", "))

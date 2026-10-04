@@ -25,7 +25,7 @@ Run: 2026-10-04. Key numbers: 117 rows.
 | every row of docs/sources/sources_log.csv points to a saved file | PASS |  |
 | external-fact key numbers (x_*) point to saved source files | PASS | whitehouse_fact_sheet_mfn_2025-11.txt, cms_medicare_glp1_bridge_page.txt, cms_medicare_glp1_bridge_page.txt, uscode_42_1396r8_medicaid_drug_rebate.txt |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M audit/check_numbers.R; ?? PUBLISH.md |
+| git status is clean | FAIL |  M audit/check_numbers.R |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 
