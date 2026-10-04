@@ -52,7 +52,7 @@ yr_end <- fans |> filter(format(quarter_start, "%m") == "10") |> mutate(year = a
 sc_year <- sc_run |> filter(format(quarter_start, "%m") == "10") |> mutate(year = as.integer(format(quarter_start, "%Y")))
 save_table(yr_end |> mutate(across(where(is.numeric), ~ round(.x, 2))), "moduleB_forecast_year_end", gt(yr_end |> mutate(across(where(is.numeric), ~ round(.x, 1)))) |>
   tab_header(title = "Forecast: current GLP-1 users, millions of U.S. adults (year-end, 10,000-draw scenario simulation)", subtitle = "Scenarios, not a prediction; 5th-95th and 25th-75th percentiles") |> tab_source_note("Assumptions: outputs/tables/moduleB_assumptions.csv."))
-save_table(sc_year |> mutate(across(where(is.numeric), ~ round(.x, 2))), "moduleB_forecast_scenarios")
+save_table(sc_year |> mutate(across(where(is.numeric), ~ round(.x, 3))), "moduleB_forecast_scenarios")
 
 assump <- tibble::tribble(
   ~parameter, ~role, ~low, ~central, ~high, ~distribution, ~basis, ~source_file,

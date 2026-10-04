@@ -1,0 +1,8 @@
+item,count,unit,statement
+models,54,dbt models,"dbt models in the warehouse (staging, intermediate and marts)"
+seeds,10,dbt seeds,Reference tables committed as dbt seeds
+tests,126,dbt tests,dbt tests (generic and singular)
+sources,90,dbt source tables,Raw source tables declared in dbt
+models_intermediate,10,dbt models,dbt models in the intermediate layer
+models_marts,12,dbt models,dbt models in the marts layer
+models_staging,32,dbt models,dbt models in the staging layer

@@ -1,0 +1,87 @@
+id,display,unit,ci_or_range,statement,source_file,source_locator,audience
+c_att_overall,12.2,"prescriptions per 1,000 enrollees per quarter",95% CI 8.4 to 16.0,"Average extra Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter after coverage began (Callaway-Sant'Anna, 10 covering and 34 never-covering jurisdictions)",tables/overall_att.csv,"row 1 (simple aggregation); columns att, ci_low, ci_high",public
+c_es_e0,1.3,"prescriptions per 1,000 enrollees per quarter",95% CI 0.5 to 2.1,Effect of coverage in the first quarter,tables/event_study_primary.csv,"row event_time = 0; columns att, ci_low, ci_high",public
+c_es_e4,11.7,"prescriptions per 1,000 enrollees per quarter",95% CI 2.8 to 20.7,Effect of coverage after 4 quarters,tables/event_study_primary.csv,"row event_time = 4; columns att, ci_low, ci_high",public
+c_es_e8,17.2,"prescriptions per 1,000 enrollees per quarter",95% CI 7.4 to 27.0,Effect of coverage after 8 quarters,tables/event_study_primary.csv,"row event_time = 8; columns att, ci_low, ci_high",public
+c_sa,9.3,"prescriptions per 1,000 enrollees per quarter",95% CI 8.2 to 10.4,Sun-Abraham post-period average (a different estimator),tables/overall_att.csv,row 3,public
+c_wild,9.3,"prescriptions per 1,000 enrollees per quarter",wild bootstrap 95% interval 4.5 to 14.2,Same estimate with a wild cluster bootstrap by state,tables/overall_att.csv,row 4,public
+c_placebo,0.4,"prescriptions per 1,000 enrollees per quarter",95% CI -0.1 to 0.8,Placebo: coverage moved four quarters earlier gives no effect,tables/overall_att.csv,row 5,public
+c_saxenda,0.2,"prescriptions per 1,000 enrollees per quarter",95% CI -0.3 to 0.7,Secondary outcome: Saxenda shows no effect,tables/overall_att.csv,row 6,public
+c_diab_glp1,-0.8,"prescriptions per 1,000 enrollees per quarter",95% CI -4.2 to 2.7,Secondary outcome: diabetes GLP-1 products show no displacement or spillover,tables/overall_att.csv,row 7,public
+c_spec_range,10.1 to 14.7,"prescriptions per 1,000 enrollees per quarter",range over 14 sensitivity analyses,Range of the overall effect across the sensitivity analyses (fee-for-service-only is not estimable),tables/specification_table_raw.csv,"column att_simple, rows other than spec 0 and 12",public
+c_honest_mbar,1.4,ratio of post- to pre-period violation,breakdown value,The effect stays above zero until the violation of parallel trends is 1.4 times the largest pre-period violation,tables/honestdid_bounds.csv,"Mbar at which the lower bound (relative magnitudes) crosses zero, linearly interpolated between the grid points 1.25 and 1.5",public
+c_states_primary,10,states,,States with Medicaid coverage of Wegovy or Zepbound in the primary analysis,../data/reference/medicaid_obesity_coverage.csv,rows with analysis_group = primary,public
+c_states_sens,7,states,,"States with an uncertain start quarter, used only in a sensitivity analysis",../data/reference/medicaid_obesity_coverage.csv,rows with analysis_group = sensitivity,public
+c_states_never,34,jurisdictions,,Never-covering comparison jurisdictions in the primary analysis (44 jurisdictions in all),tables/moduleC_for_budget_model.csv,note column of the never_treated_baseline and overall_att rows ('34 never-treated states'),public
+c_pa_states,9 of 10,covering states,,Covering states recorded as requiring prior authorization (Tennessee not recorded),../data/reference/medicaid_obesity_coverage.csv,"column prior_authorization, primary rows",public
+b_adults,253.8,million adults,95% CI 227.1 to 280.5,U.S. adults 18 and over (NHANES 2021-2023),tables/moduleB_funnel.csv,"step 1, pathway Obesity",public
+b_eligible,128.8,million adults,95% CI 117.2 to 140.3,Adults eligible by the FDA label criteria (lower bound),tables/moduleB_funnel.csv,"step 2, pathway Obesity",public
+b_elig_pct,55.0,percent of adults,95% CI 50.9 to 59.2,Share of adults who are label-eligible (lower bound),tables/moduleB_survey_estimates.csv,"measure 'Label-eligible (lower bound), without HbA1c: prevalence', stratum All",public
+b_medicaid_adults,34.3,million adults,95% CI 29.3 to 39.3,Adults with Medicaid coverage,tables/moduleB_survey_estimates.csv,"stratum Medicaid, measure 'Adults 18+: count'",public
+b_medicaid_elig,17.8,million adults,95% CI 14.7 to 20.9,Label-eligible adults with Medicaid coverage (lower bound),tables/moduleB_survey_estimates.csv,"stratum Medicaid, measure 'Label-eligible (lower bound), without HbA1c: count'",public
+b_medicaid_elig_share,52.0,percent of Medicaid adults,,Eligible share of Medicaid adults,tables/moduleB_survey_estimates.csv,ratio of the two Medicaid rows above,public
+b_bridge,10.8,million adults aged 65+,95% CI 8.6 to 13.0,Adults 65 and over meeting the measurable part of the Medicare GLP-1 Bridge criteria,tables/moduleB_survey_estimates.csv,"measure 'Medicare GLP-1 Bridge criteria met (measurable part, 65+): count', stratum All",public
+b_glp1_all,30.4,million adults,95% CI 23.5 to 37.5,"Adults currently using any GLP-1 drug (KFF poll, modelled)",tables/moduleB_funnel.csv,label 'Currently using any GLP-1 drug',public
+b_glp1_nodiab,17.4,million adults,95% CI 9.9 to 25.2,"Adults using a GLP-1 drug without diagnosed diabetes (weight-management proxy, modelled)",tables/moduleB_funnel.csv,"label 'Currently using a GLP-1 drug, no diagnosed diabetes'",public
+b_fc_2030,33.8,million adults,90% interval 17.4 to 51.7,Median forecast of GLP-1 users without diagnosed diabetes in 2030,tables/moduleB_forecast_year_end.csv,"target 'GLP-1 users without diagnosed diabetes', year 2030; p50, p05, p95",public
+b_fc_2026,20.6,million adults,90% interval 12.4 to 29.0,Median forecast of GLP-1 users without diagnosed diabetes in 2026,tables/moduleB_forecast_year_end.csv,year 2026; p50,public
+b_scen_downside,16.5,million adults,scenario,"Downside scenario, GLP-1 users without diagnosed diabetes, 2030",tables/moduleB_forecast_scenarios.csv,"scenario Downside, year 2030, last row, column no_diabetes",public
+b_scen_base,35.1,million adults,scenario,"Base scenario, GLP-1 users without diagnosed diabetes, 2030",tables/moduleB_forecast_scenarios.csv,"scenario Base, year 2030, last row, column no_diabetes",public
+b_scen_upside,65.6,million adults,scenario,"Upside scenario, GLP-1 users without diagnosed diabetes, 2030",tables/moduleB_forecast_scenarios.csv,"scenario Upside, year 2030, last row, column no_diabetes",public
+d_claims_2018,2.6,million claims,,Part D incretin claims in 2018 (rows of 11 or more claims; diabetes and other covered uses),tables/moduleD_claims_prescribers_by_ingredient_year.csv,"sum of claims, data_year 2018",public
+d_claims_2024,19.6,million claims,,Part D incretin claims in 2024 (diabetes and other covered uses),tables/moduleD_claims_prescribers_by_ingredient_year.csv,"sum of claims, data_year 2024",public
+d_prescribers_2018,"56,306",prescribers,,"Prescribers with Part D incretin claims, 2018",tables/moduleD_concentration_by_year.csv,"data_year 2018, column prescribers",public
+d_prescribers_2024,"199,822",prescribers,,"Prescribers with Part D incretin claims, 2024",tables/moduleD_concentration_by_year.csv,"data_year 2024, column prescribers",public
+d_share_pcp,55.8,percent of 2024 claims,,Share of 2024 Part D incretin claims written by primary care physicians,tables/moduleD_specialty_mix_by_year.csv,"data_year 2024, specialty_group Primary care physicians, column claims_share_pct",public
+d_share_nppa,27.7,percent of 2024 claims,,Share of 2024 Part D incretin claims written by nurse practitioners and physician assistants,tables/moduleD_specialty_mix_by_year.csv,"data_year 2024, specialty_group Nurse practitioners and physician assistants, column claims_share_pct",public
+d_share_endo,12.7,percent of 2024 claims,,Share of 2024 Part D incretin claims written by endocrinology,tables/moduleD_specialty_mix_by_year.csv,"data_year 2024, specialty_group Endocrinology, column claims_share_pct",public
+d_share_cardio,1.0,percent of 2024 claims,,Share of 2024 Part D incretin claims written by cardiology,tables/moduleD_specialty_mix_by_year.csv,"data_year 2024, specialty_group Cardiology, column claims_share_pct",public
+d_top10_2018,43.2,percent of claims,,"Share of claims written by the top 10% of prescribers, 2018",tables/moduleD_concentration_by_year.csv,"data_year 2018, top10_share_pct",public
+d_top10_2024,41.4,percent of claims,,"Share of claims written by the top 10% of prescribers, 2024",tables/moduleD_concentration_by_year.csv,"data_year 2024, top10_share_pct",public
+d_gini_2024,0.551,Gini coefficient,,"Gini coefficient of claims across prescribers, 2024",tables/moduleD_concentration_by_year.csv,"data_year 2024, gini",public
+d_tirz_2022,1.6,percent of prescribers,,"Share of Part D incretin prescribers with tirzepatide claims, 2022",tables/moduleD_claims_prescribers_by_ingredient_year.csv; tables/moduleD_concentration_by_year.csv,"tirzepatide prescribers / all prescribers, data_year 2022",public
+d_tirz_2023,25.8,percent of prescribers,,"Share of Part D incretin prescribers with tirzepatide claims, 2023",tables/moduleD_claims_prescribers_by_ingredient_year.csv; tables/moduleD_concentration_by_year.csv,"tirzepatide prescribers / all prescribers, data_year 2023",public
+d_tirz_2024,48.6,percent of prescribers,,"Share of Part D incretin prescribers with tirzepatide claims, 2024",tables/moduleD_claims_prescribers_by_ingredient_year.csv; tables/moduleD_concentration_by_year.csv,"tirzepatide prescribers / all prescribers, data_year 2024",public
+d_wegovy_claims,"76,176",claims,,"Wegovy claims in Part D, 2024",tables/moduleD_claims_prescribers_by_brand_year.csv,"brand Wegovy, data_year 2024",public
+d_wegovy_prescribers,"3,956",prescribers,,"Prescribers of Wegovy in Part D, 2024",tables/moduleD_claims_prescribers_by_brand_year.csv,"brand Wegovy, data_year 2024",public
+d_wegovy_cardio,14.5,percent of Wegovy claims,,"Cardiology share of Wegovy claims, 2024",tables/moduleD_wegovy_vs_ozempic_specialty_2024.csv,"brand Wegovy, specialty Cardiology",public
+d_ozempic_cardio,1.2,percent of Ozempic claims,,"Cardiology share of Ozempic claims, 2024",tables/moduleD_wegovy_vs_ozempic_specialty_2024.csv,"brand Ozempic, specialty Cardiology",public
+d_nppes_agree,95.4,percent of prescribers,,Agreement of CMS prescriber-type specialty group with the NPPES taxonomy,tables/moduleD_specialty_crosscheck_agreement.csv,agreement_pct,public
+d_pay_irr_any,1.30,incidence rate ratio,95% CI 1.29 to 1.31,"Association: claims in 2024 for prescribers with any 2023 payment versus none, at the median payee amount (adjusted; not an effect of payments)",tables/moduleD_payments_contrasts.csv,"claims_year 2024, contrast 'Any payment versus none...'",report_only
+d_pay_irr_doubling,1.05,incidence rate ratio,95% CI 1.04 to 1.05,Association per doubling of the payment amount among payees,tables/moduleD_payments_contrasts.csv,contrast 'Each doubling...',report_only
+d_pay_share,36.6,percent of prescribers,,Share of 2024 prescribers with in-scope payments in 2023,tables/moduleD_payments_descriptives.csv,"by all, claims_year 2024",report_only
+e_net5,161.3,"USD million, five years, 1,000,000 enrollees",central case,"Five-year net budget impact, central case (plateau, prior authorization as observed, rebate 51.2% = midpoint of 23.1% and 79.3%)",tables/moduleE_scenario_results.csv,"y35 plateau, price 'rebate central', five_year_net",public
+e_pmpm,2.69,USD per enrollee per month,central case,"Net cost per enrollee per month, central case",tables/moduleE_scenario_results.csv,"same row, pmpm_net",public
+e_gross5,330.7,"USD million, five years, 1,000,000 enrollees",central case,"Five-year gross cost before rebates, central case",tables/moduleE_scenario_results.csv,"same row, five_year_gross",public
+e_gross_pmpm,5.51,USD per enrollee per month,central case,"Gross cost per enrollee per month, central case",tables/moduleE_scenario_results.csv,"same row, pmpm_gross",public
+e_psa_median,145.4,"USD million, five years",90% interval 58.1 to 319.9,"Probabilistic sensitivity analysis: median five-year net cost (10,000 draws)",tables/moduleE_psa_summary.csv,"correlation 'independent event times'; net_median, net_p05, net_p95",public
+e_psa_common,50.3 to 347.3,"USD million, five years","90% interval, event-time effects perfectly correlated",Wider interval if the effects at different event times move together,tables/moduleE_psa_summary.csv,"correlation 'common draw'; net_p05, net_p95",public
+e_announced5,68.3,"USD million, five years",scenario,Five-year net cost at the announced $245 per monthly prescription (plateau),tables/moduleE_scenario_results.csv,"y35 plateau, price 'announced $245', five_year_net",public
+e_announced_pmpm,1.14,USD per enrollee per month,scenario,Net cost per enrollee per month at the announced $245 price,tables/moduleE_scenario_results.csv,"same row, pmpm_net",public
+e_scen_min,55.6,"USD million, five years",lowest scenario,"Lowest five-year net cost across the scenarios (decline in years 3-5, rebate implied by $245)",tables/moduleE_scenario_results.csv,min of five_year_net,public
+e_scen_max,369.4,"USD million, five years",highest scenario,"Highest five-year net cost across the scenarios (continued growth, 23.1% statutory-minimum rebate)",tables/moduleE_scenario_results.csv,max of five_year_net,public
+e_per_user_year,"2,511",USD per user per year,"4.3 fills per year (MEPS, sourced)","Net cost per user per year, central case",tables/moduleE_scenario_results.csv,"same row, net_cost_per_user_year",public
+e_per_member_year_cont,"6,943",USD per member-year of continuous treatment,12 fills per year (assumption),"Net cost per member-year of continuous treatment, central case",tables/moduleE_scenario_results.csv,"same row, net_cost_per_member_year_continuous",public
+e_users,"15,873",users per year at the plateau,,Users per year at the plateau (prescriptions divided by 4.3 purchases per user-year),tables/moduleE_central_annual.csv,"year 5, column treated_members",public
+e_pool,"300,948",eligible Medicaid adults,,"Eligible Medicaid adults in a 1,000,000-enrollee plan (lower bound)",tables/moduleE_central_annual.csv,"year 5, column eligible_pool",public
+e_year1_net,11.4,"USD million, in year",,Central net cost in year 1,tables/moduleE_central_annual.csv,"year 1, column net",public
+e_year2_net,30.3,"USD million, in year",,Central net cost in year 2,tables/moduleE_central_annual.csv,"year 2, column net",public
+e_year3_net,39.9,"USD million, in year",,Central net cost in year 3,tables/moduleE_central_annual.csv,"year 3, column net",public
+e_gross_rx,"1,186",USD per prescription,"range 1,164 to 1,252",Gross Medicaid reimbursement per Wegovy or Zepbound prescription in covering states (gross of rebates),tables/moduleE_assumptions.csv,row 'Gross reimbursement per Wegovy/Zepbound prescription',public
+e_rebate_central,51.2,percent of gross cost,assumption; midpoint of 23.1% and 79.3%,Central rebate assumption,tables/moduleE_assumptions.csv,"row 'Rebate share of gross cost', column central",public
+e_rebate_low,23.1,percent of gross cost,statutory minimum (42 U.S.C. 1396r-8),Statutory minimum Medicaid rebate,tables/moduleE_assumptions.csv,"row 'Rebate share of gross cost', column low",public
+e_rebate_high,79.3,percent of gross cost,implied by the $245 price,Rebate implied by the announced $245 price at the 2025 gross cost,tables/moduleE_assumptions.csv,"row 'Rebate share of gross cost', column high",public
+e_pa_05,80.7,"USD million, five years",PA multiplier 0.5 (assumption),Five-year net cost with the prior authorization multiplier at 0.5,tables/moduleE_pa_scenarios.csv,"pa_multiplier 0.5, five_year_net",public
+e_pa_075,121.0,"USD million, five years",PA multiplier 0.75 (assumption),Five-year net cost with the prior authorization multiplier at 0.75,tables/moduleE_pa_scenarios.csv,"pa_multiplier 0.75, five_year_net",public
+e_pa_125,201.6,"USD million, five years",PA multiplier 1.25 (assumption),Five-year net cost with the prior authorization multiplier at 1.25,tables/moduleE_pa_scenarios.csv,"pa_multiplier 1.25, five_year_net",public
+e_tornado1_low,63.7,"USD million, five years",Module C effect (95% CI of every event time),Lower end of the tornado bar for Module C effect (95% CI of every event time),tables/moduleE_tornado.csv,row 1,public
+e_tornado1_high,258.9,"USD million, five years",Module C effect (95% CI of every event time),Upper end of the tornado bar for Module C effect (95% CI of every event time),tables/moduleE_tornado.csv,row 1,public
+e_tornado2_low,68.3,"USD million, five years",Rebate share,Lower end of the tornado bar for Rebate share,tables/moduleE_tornado.csv,row 2,public
+e_tornado2_high,254.3,"USD million, five years",Rebate share,Upper end of the tornado bar for Rebate share,tables/moduleE_tornado.csv,row 2,public
+build_models,54,dbt models,,"dbt models in the warehouse (staging, intermediate and marts)",build_counts.csv,row models,public
+build_seeds,10,dbt seeds,,Reference tables committed as dbt seeds,build_counts.csv,row seeds,public
+build_tests,126,dbt tests,,dbt tests (generic and singular),build_counts.csv,row tests,public
+build_sources,90,dbt source tables,,Raw source tables declared in dbt,build_counts.csv,row sources,public
+build_models_intermediate,10,dbt models,,dbt models in the intermediate layer,build_counts.csv,row models_intermediate,public
+build_models_marts,12,dbt models,,dbt models in the marts layer,build_counts.csv,row models_marts,public
+build_models_staging,32,dbt models,,dbt models in the staging layer,build_counts.csv,row models_staging,public
