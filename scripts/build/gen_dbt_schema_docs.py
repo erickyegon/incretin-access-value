@@ -199,6 +199,9 @@ MODELS = {
             "enrollment_medicaid_avg": "Quarter average Medicaid enrollment of the state.", "n_months_present_medicaid": "Months behind that average.",
             "coverage_active": "True when the state covered the obesity drugs on any day of the quarter.", "covered_days_share": "Covered share of the quarter (conservative)."},
          {"unique_combo": ["state_code", "ndc11", "year", "quarter", "utilization_type"]}),
+        "mart_sdud_state_quarter_brand": ("SDUD obesity-labelled products by state, quarter, brand and dosage form for the panel states (FFSU + MCOU), for the payer-specific brand split.", COMMON | {
+            "amount_total_observed": "Total amount reimbursed in unsuppressed rows (USD, gross of rebates).", "amount_medicaid_observed": "Medicaid amount reimbursed in unsuppressed rows (USD, gross of rebates)."},
+         {"unique_combo": ["state_code", "year", "quarter", "brand_label", "dosage_form"]}),
         "mart_prescriber_year": ("Medicare Part D prescriber-drug rows (at least 11 claims) with product group, Medicare specialty and NPPES/NUCC taxonomy.", COMMON | {
             "prescriber_npi": "Prescriber NPI.", "data_year": "Part D data year.", "prescriber_type": "CMS Medicare specialty of the prescriber.",
             "entity_type_code": "NPPES entity type: 1 individual, 2 organisation.", "practice_state": "NPPES practice state.", "primary_taxonomy_code": "NPPES primary taxonomy code.",
@@ -222,7 +225,7 @@ MODELS = {
             "pricing_unit": "Pricing unit (EA, ML, GM).", "n_weekly_ndc_rows": "Weekly NDC rows in the quarter.", "n_ndcs": "Distinct NDCs.", "n_weeks": "Distinct survey weeks.",
             "nadac_per_unit_mean": "Mean NADAC per unit over the rows.", "nadac_per_unit_min": "Minimum NADAC per unit.", "nadac_per_unit_max": "Maximum NADAC per unit."},
          {"unique_combo": ["brand_label", "product_group", "pricing_unit", "year", "quarter"]}),
-        "mart_nhanes_adults": ("NHANES adults aged 20 and over, two cycles stacked, all kept including missing BMI, with design variables and cycle-specific weights.", {
+        "mart_nhanes_adults": ("NHANES adults aged 18 and over (the adult label population), two cycles stacked, all kept including missing BMI, with design variables, cycle-specific weights, insurance and the condition variables used for eligibility.", {
             "cycle": COMMON["cycle"], "seqn": "NHANES respondent sequence number.", "ridstatr": "Interview/examination status.", "riagendr": "Sex.", "ridageyr": "Age in years at screening.",
             "ridreth1": "Race/Hispanic origin (older coding).", "ridreth3": "Race/Hispanic origin with Non-Hispanic Asian.", "dmdborn4": "Country of birth.", "dmdeduc2": "Education, adults 20+.",
             "dmdmartz": "Marital status.", "ridexprg": "Pregnancy status at exam.", "indfmpir": "Ratio of family income to poverty.", "sdmvstra": "Masked variance pseudo-stratum.",
@@ -235,7 +238,12 @@ MODELS = {
             "lbxgh": "Glycohemoglobin, %.", "bpq020": "Ever told high blood pressure.", "bpq040a": "Taking prescription for hypertension.", "bpq050a": "Now taking prescribed medicine for hypertension.",
             "diq010": "Doctor told you have diabetes.", "diq050": "Taking insulin now.", "diq070": "Taking diabetic pills to lower blood sugar.",
             "mcq010": "Ever been told you have asthma.", "mcq160a": "Ever told you had arthritis.", "mcq160b": "Ever told you had congestive heart failure.", "mcq160c": "Ever told you had coronary heart disease.",
-            "mcq160d": "Ever told you had angina.", "mcq160e": "Ever told you had heart attack.", "mcq160f": "Ever told you had a stroke.", "mcq220": "Ever told you had cancer or malignancy."},
+            "mcq160d": "Ever told you had angina.", "mcq160e": "Ever told you had heart attack.", "mcq160f": "Ever told you had a stroke.", "mcq220": "Ever told you had cancer or malignancy.",
+            "bpq080": "Doctor told you high cholesterol level.", "bpq090d": "Told to take prescription for cholesterol (2017-2020 only).", "bpq100d": "Now taking prescribed medicine for cholesterol (2017-2020 only).",
+            "bpq101d": "Taking medication to lower blood cholesterol (2021-2023 only).", "bpq150": "Now taking prescribed medication for high blood pressure (2021-2023 only).",
+            "diq160": "Ever told you had prediabetes.", "mcq080": "Doctor ever said you were overweight (2017-2020 only; not asked in 2021-2023).",
+            "hiq011": "Covered by health insurance.", "hiq032a": "Covered by private insurance.", "hiq032b": "Covered by Medicare.", "hiq032c": "Covered by Medi-Gap.",
+            "hiq032d": "Covered by Medicaid.", "hiq032e": "Covered by CHIP.", "hiq032h": "Covered by state-sponsored health plan.", "hiq032i": "Covered by other government insurance."},
          {"unique_combo": ["cycle", "seqn"]}),
         "mart_meps_persons": ("MEPS persons for 2023 and 2024 with survey design, expenditures, T2D/obesity condition flags and incretin prescription counts by product group.", {
             "data_year": "MEPS data year.", "dupersid": "MEPS person identifier.", "panel": "MEPS panel number.", "age_last": "Age at last interview.", "sex": "Sex.", "racethx": "Race/ethnicity.",

@@ -1,9 +1,9 @@
--- NHANES adults keep every participant aged 20+ (missing BMI kept); MEPS persons equal the full-year file rows; trials equal the registry rows
+-- NHANES adults keep every participant aged 18+ (missing BMI kept); MEPS persons equal the full-year file rows; trials equal the registry rows
 select 'nhanes adults' as problem, ((select count(*) from {{ ref('mart_nhanes_adults') }}) || ' vs ' || count(*)) as detail
-from {{ ref('stg_nhanes__demo') }} where ridageyr >= 20
+from {{ ref('stg_nhanes__demo') }} where ridageyr >= 18
 having count(*) <> (select count(*) from {{ ref('mart_nhanes_adults') }})
 union all
-select 'nhanes under 20 present', count(*)::text from {{ ref('mart_nhanes_adults') }} where ridageyr < 20 having count(*) > 0
+select 'nhanes under 18 present', count(*)::text from {{ ref('mart_nhanes_adults') }} where ridageyr < 18 having count(*) > 0
 union all
 select 'nhanes bmi flag', count(*)::text from {{ ref('mart_nhanes_adults') }} where bmi_missing <> (bmxbmi is null) having count(*) > 0
 union all

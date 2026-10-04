@@ -1,0 +1,114 @@
+Medicare GLP-1 Bridge
+INFORMATION FOR PRESCRIBERS
+What is the Medicare GLP-1 Bridge program?
+The Centers for Medicare & Medicaid Services (CMS) is expanding access to certain GLP-1 medications for people 
+with Medicare Part D through the Medicare GLP-1 Bridge short-term demonstration starting July 1,  2026. Medicare 
+GLP-1 Bridge will operate outside of Medicare Part D plan coverage and use a central processor to manage prior 
+authorization, claims processing, and pharmacy payment. The Medicare GLP-1 Bridge is for patients who are not 
+eligible to receive a GLP-1 drug through their Part D plan and do not have type 2 diabetes, moderate-to-severe sleep 
+apnea, or fatty liver disease.  
+How can I get coverage for my patients through Medicare GLP-1 Bridge starting July 1?
+1. While CMS
+will confirm
+whether a
+patient is
+eligible
+for Bridge,
+providers can
+help expedite
+the process by
+asking these
+questions.
+l Does my patient have eligible Medicare Part D plan coverage?
+If yes, then the patient might qualify for Bridge.  Most people with Medicare Part D coverage
+are eligible. People enrolled in private fee-for-service plans, section 1876 cost contract plans,
+section 1833 health care prepayment plans, PACE organizations, fallback plans, and religious
+fraternal benefit plans aren’t eligible, unless they’re also enrolled in a standalone prescription
+drug plan (PDP).
+l Has my patient received a GLP-1 through their Part D plan?
+If yes, your patient isn’t eligible for coverage under Medicare GLP-1 Bridge and you must
+submit any request for GLP-1 coverage to the patient’s Part D plan.
+l Does my patient have type 2 diabetes, moderate-to-severe sleep apnea, or metabolic
+dysfunction-associated steatohepatitis (MASH)?
+If yes, your patient isn’t eligible for coverage under Medicare GLP-1 Bridge and you must
+submit any request for GLP-1 coverage to the patient’s Part D plan.
+l Does my patient meet the Medicare GLP-1 Bridge clinical criteria?
+l My patient is at least 18 years of age
+l I’m prescribing the GLP-1 to reduce excess body weight and maintain weight reduction and
+not for any other approved indication
+l At the time my patient starts GLP-1 therapy, at least one of these is true:
+n My patient has a body mass index (BMI) of at least 35
+n My patient has a BMI of at least 30 AND a diagnosis of one or more of the following: (A) 
+heart failure with preserved ejection fraction, (B) uncontrolled hypertension (defined as 
+systolic blood pressure above 140 mm Hg or diastolic blood pressure above 90 mm Hg, 
+despite concurrent treatment with two antihypertensive medications), or (C) chronic 
+kidney disease stage 3a or above;
+n My patient has a BMI of at least 27 AND a diagnosis of one or more of the following: (A) 
+pre-diabetes  (B) previous myocardial infarction, (C) previous stroke, or (D) symptomatic 
+peripheral artery disease
+2. Prescribe
+a covered
+GLP-1 drug
+Medicare GLP-1 Bridge covers these drugs when used to reduce excess body weight and 
+maintain weight reduction:
+l Foundayo® (tablets)
+l Wegovy® (injection and tablets)
+l Zepbound® (KwikPen®)
+l Note: The single-dose Zepbound® pen and Zepbound® vials are NOT covered.
+[[p1]]
+CMS Product No. 12235 • June 2026
+3. Transmit the 
+prescription 
+to the 
+pharmacy
+l If y ou have determined that your patient might be eligible for coverage under Medicare GLP-1 
+Bridge, transmit the prescription to the pharmacy using your standard process, and direct 
+the pharmacist to send the claim directly to Medicare GLP-1 Bridge by including an obesity 
+diagnosis code (the E66 family) and indicating “SEND TO BRIDGE FOR WEIGHT MANAGEMENT” 
+on the prescription in the Note field if electronic, or as an annotation if non-electronic. 
+l If the pharmacis t doesn’t get that direction, they might send the claim to your patient’s Part D 
+plan. Your patient’s Part D plan may initiate a prior authorization request or reject the claim.
+4. Wait for 
+a prior 
+authorization 
+request from 
+the pharmacy
+l Onc e the pharmacy transmits a claim to Medicare GLP-1 Bridge, Medicare will confirm the 
+patient’s eligibility. If the claim is denied at this step, the pharmacy will get instructions on 
+how to resubmit the claim. 
+l If the p atient is eligible and the prescription is for a covered GLP-1 drug, Medicare GLP-1 Bridge 
+will still deny the claim but will instruct the pharmacy that a prior authorization is necessary, 
+and the pharmacy will send the prior authorization request form to you, typically within 24-72 
+hours.
+l Y ou must wait to get the request from the pharmacy electronically or by fax for your patients to 
+be covered under Medicare GLP-1 Bridge. If within 72 hours you haven’t received a request for 
+authorization via electronic prior authorization (ePA) request or fax form from the pharmacy, 
+visit https://www.cms.gov/glp-1-bridge.pdf to download and submit the fax form. 
+5. Complete 
+the prior 
+authorization 
+request
+l By completing the form, you attest that the information you’re providing is true and 
+correct, under penalty of perjury.  Failure to complete the form truthfully may subject you 
+to prosecution under federal law. The Medicare GLP-1 Bridge Program may independently 
+verify the information in your prior authorization form, such as whether a patient has type 
+2 diabetes, by checking Medicare data for the patient.
+l The prior authoriz ation approval or denial will be mailed to your patient and communicated to 
+you via the ePA portal or fax within 72 hours of submission. If you believe a denial was made in 
+error, you may resubmit the prior authorization for re-review.
+6. Update 
+prescriptions 
+as appropriate
+l A fter the first fill is approved, subsequent fills don’t require a new prior authorization, unless a 
+patient switches from one covered GLP-1 drug to a different one. If you switch a patient from 
+one GLP-1 drug to another, you’ll have to complete a new prior authorization. 
+l Only 28-day or 30-day fills ar e covered under Medicare GLP-1 Bridge.
+Prescriber Eligibility 
+For Medicare GLP-1 Bridge, as in the Part D program, you don’t need to be enrolled in Medicare to write a 
+prescription or submit a prior authorization request for products provided to an eligible patient. However, you must 
+not be on the Preclusion List for the drug to be covered under Medicare GLP-1 Bridge for an eligible beneficiary.
+Questions?
+For more information visit: https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-
+bridge/information-providers This page will be updated regularly with additional resources ahead of the Medicare 
+GLP-1 Bridge launch on July 1, 2026. Technical questions? Email glp1demo@cms.hhs.gov  
+[[p2]]

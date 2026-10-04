@@ -38,7 +38,7 @@ def rename(c):
 # ---- NHANES: one model per component, two cycles stacked (columns outer-joined; absent in a cycle = NULL) ---------------------------
 NH = {"demo": ("nhanes_demo_l", "nhanes_p_demo"), "bmx": ("nhanes_bmx_l", "nhanes_p_bmx"), "bpxo": ("nhanes_bpxo_l", "nhanes_p_bpxo"),
       "bpq": ("nhanes_bpq_l", "nhanes_p_bpq"), "ghb": ("nhanes_ghb_l", "nhanes_p_ghb"), "diq": ("nhanes_diq_l", "nhanes_p_diq"),
-      "mcq": ("nhanes_mcq_l", "nhanes_p_mcq"), "rxq_rx": ("nhanes_rxq_rx_l", "nhanes_p_rxq_rx")}
+      "mcq": ("nhanes_mcq_l", "nhanes_p_mcq"), "hiq": ("nhanes_hiq_l", "nhanes_p_hiq"), "rxq_rx": ("nhanes_rxq_rx_l", "nhanes_p_rxq_rx")}
 CYC = ("2021_2023", "2017_2020")
 for comp, (a, b) in NH.items():
     allcols = []

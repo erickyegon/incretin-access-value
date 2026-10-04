@@ -237,6 +237,44 @@
       "Maintainer": "Pedro H. C. Sant'Anna <pedrohcgs@gmail.com>",
       "Repository": "CRAN"
     },
+    "DT": {
+      "Package": "DT",
+      "Version": "0.34.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Wrapper of the JavaScript Library 'DataTables'",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = \"aut\"), person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"Xianying\", \"Tan\", role = \"aut\"), person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-7111-0077\")), person(\"JJ\", \"Allaire\", role = \"ctb\"), person(\"Maximilian\", \"Girlich\", role = \"ctb\"), person(\"Greg\", \"Freedman Ellis\", role = \"ctb\"), person(\"Johannes\", \"Rauh\", role = \"ctb\"), person(\"SpryMedia Limited\", role = c(\"ctb\", \"cph\"), comment = \"DataTables in htmlwidgets/lib\"), person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"), comment = \"selectize.js in htmlwidgets/lib\"), person(\"Leon\", \"Gersen\", role = c(\"ctb\", \"cph\"), comment = \"noUiSlider in htmlwidgets/lib\"), person(\"Bartek\", \"Szopka\", role = c(\"ctb\", \"cph\"), comment = \"jquery.highlight.js in htmlwidgets/lib\"), person(\"Alex\", \"Pickering\", role = \"ctb\"), person(\"William\", \"Holmes\", role = \"ctb\"), person(\"Mikko\", \"Marttila\", role = \"ctb\"), person(\"Andres\", \"Quintero\", role = \"ctb\"), person(\"Stéphane\", \"Laurent\", role = \"ctb\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Data objects in R can be rendered as HTML tables using the JavaScript library 'DataTables' (typically via R Markdown or Shiny). The 'DataTables' library has been included in this R package. The package name 'DT' is an abbreviation of 'DataTables'.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/rstudio/DT",
+      "BugReports": "https://github.com/rstudio/DT/issues",
+      "Imports": [
+        "crosstalk",
+        "htmltools (>= 0.3.6)",
+        "htmlwidgets (>= 1.3)",
+        "jquerylib",
+        "jsonlite (>= 0.9.16)",
+        "magrittr",
+        "promises"
+      ],
+      "Suggests": [
+        "bslib",
+        "future",
+        "httpuv",
+        "knitr (>= 1.8)",
+        "rmarkdown",
+        "shiny (>= 1.6)",
+        "testit",
+        "tibble"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut], Joe Cheng [aut], Xianying Tan [aut], Garrick Aden-Buie [aut, cre] (ORCID: <https://orcid.org/0000-0002-7111-0077>), JJ Allaire [ctb], Maximilian Girlich [ctb], Greg Freedman Ellis [ctb], Johannes Rauh [ctb], SpryMedia Limited [ctb, cph] (DataTables in htmlwidgets/lib), Brian Reavis [ctb, cph] (selectize.js in htmlwidgets/lib), Leon Gersen [ctb, cph] (noUiSlider in htmlwidgets/lib), Bartek Szopka [ctb, cph] (jquery.highlight.js in htmlwidgets/lib), Alex Pickering [ctb], William Holmes [ctb], Mikko Marttila [ctb], Andres Quintero [ctb], Stéphane Laurent [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+      "Repository": "CRAN"
+    },
     "ECOSolveR": {
       "Package": "ECOSolveR",
       "Version": "0.6.1",
@@ -392,11 +430,11 @@
     },
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-65",
+      "Version": "7.3-66",
       "Source": "Repository",
       "Priority": "recommended",
-      "Date": "2025-02-19",
-      "Revision": "$Rev: 3681 $",
+      "Date": "2026-07-15",
+      "Revision": "$Rev: 3693 $",
       "Depends": [
         "R (>= 4.4.0)",
         "grDevices",
@@ -893,6 +931,29 @@
       "URL": "https://www.rforge.net/base64enc",
       "BugReports": "https://github.com/s-u/base64enc/issues",
       "NeedsCompilation": "yes",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
+    },
+    "beeswarm": {
+      "Package": "beeswarm",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Title": "The Bee Swarm Plot, an Alternative to Stripchart",
+      "Description": "The bee swarm plot is a one-dimensional scatter plot like \"stripchart\", but with closely-packed, non-overlapping points.",
+      "Date": "2021-05-07",
+      "Authors@R": "c( person(\"Aron\", \"Eklund\", , \"aroneklund@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-0861-1001\")), person(\"James\", \"Trimble\", role = \"aut\", comment = c(ORCID = \"0000-0001-7282-8745\")) )",
+      "Imports": [
+        "stats",
+        "graphics",
+        "grDevices",
+        "utils"
+      ],
+      "NeedsCompilation": "yes",
+      "License": "Artistic-2.0",
+      "URL": "https://github.com/aroneklund/beeswarm",
+      "BugReports": "https://github.com/aroneklund/beeswarm/issues",
+      "Author": "Aron Eklund [aut, cre] (<https://orcid.org/0000-0003-0861-1001>), James Trimble [aut] (<https://orcid.org/0000-0001-7282-8745>)",
+      "Maintainer": "Aron Eklund <aroneklund@gmail.com>",
       "Repository": "https://packagemanager.posit.co/cran/latest",
       "Encoding": "UTF-8"
     },
@@ -1522,10 +1583,10 @@
     },
     "cluster": {
       "Package": "cluster",
-      "Version": "2.1.8.2",
+      "Version": "2.1.8.3",
       "Source": "Repository",
-      "VersionNote": "Last CRAN: 2.1.8.1 on 2025-03-11; 2.1.8 on 2024-12-10; 2.1.7 on 2024-12-06; 2.1.6 on 2023-11-30;",
-      "Date": "2026-02-03",
+      "VersionNote": "Last CRAN: 2.1.8.2 on 2026-02-03; 2.1.8.1 on 2025-03-11; 2.1.8 on 2024-12-10; 2.1.7 on 2024-12-06;",
+      "Date": "2026-07-28",
       "Priority": "recommended",
       "Title": "\"Finding Groups in Data\": Cluster Analysis Extended Rousseeuw et al.",
       "Description": "Methods for Cluster analysis.  Much extended the original from Peter Rousseeuw, Anja Struyf and Mia Hubert, based on Kaufman and Rousseeuw (1990) \"Finding Groups in Data\".",
@@ -1730,6 +1791,38 @@
       "NeedsCompilation": "no",
       "Author": "Gábor Csárdi [aut, cre], Brodie Gaslam [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "crosstalk": {
+      "Package": "crosstalk",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Inter-Widget Interactivity for HTML Widgets",
+      "Authors@R": "c( person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-4958-2844\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(, \"jQuery Foundation\", role = \"cph\", comment = \"jQuery library and jQuery UI library\"), person(, \"jQuery contributors\", role = c(\"ctb\", \"cph\"), comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"), person(\"Mark\", \"Otto\", role = \"ctb\", comment = \"Bootstrap library\"), person(\"Jacob\", \"Thornton\", role = \"ctb\", comment = \"Bootstrap library\"), person(, \"Bootstrap contributors\", role = \"ctb\", comment = \"Bootstrap library\"), person(, \"Twitter, Inc\", role = \"cph\", comment = \"Bootstrap library\"), person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"), comment = \"selectize.js library\"), person(\"Kristopher Michael\", \"Kowal\", role = c(\"ctb\", \"cph\"), comment = \"es5-shim library\"), person(, \"es5-shim contributors\", role = c(\"ctb\", \"cph\"), comment = \"es5-shim library\"), person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"), comment = \"ion.rangeSlider library\"), person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"), comment = \"Javascript strftime library\") )",
+      "Description": "Provides building blocks for allowing HTML widgets to communicate with each other, with Shiny or without (i.e. static .html files). Currently supports linked brushing and filtering.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rstudio.github.io/crosstalk/, https://github.com/rstudio/crosstalk",
+      "BugReports": "https://github.com/rstudio/crosstalk/issues",
+      "Imports": [
+        "htmltools (>= 0.3.6)",
+        "jsonlite",
+        "lazyeval",
+        "R6"
+      ],
+      "Suggests": [
+        "bslib",
+        "ggplot2",
+        "sass",
+        "shiny",
+        "testthat (>= 2.1.0)"
+      ],
+      "Config/Needs/website": "jcheng5/d3scatter, DT, leaflet, rmarkdown",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Joe Cheng [aut], Carson Sievert [aut, cre] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Posit Software, PBC [cph, fnd], jQuery Foundation [cph] (jQuery library and jQuery UI library), jQuery contributors [ctb, cph] (jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt), Mark Otto [ctb] (Bootstrap library), Jacob Thornton [ctb] (Bootstrap library), Bootstrap contributors [ctb] (Bootstrap library), Twitter, Inc [cph] (Bootstrap library), Brian Reavis [ctb, cph] (selectize.js library), Kristopher Michael Kowal [ctb, cph] (es5-shim library), es5-shim contributors [ctb, cph] (es5-shim library), Denis Ineshin [ctb, cph] (ion.rangeSlider library), Sami Samhuri [ctb, cph] (Javascript strftime library)",
+      "Maintainer": "Carson Sievert <carson@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "curl": {
@@ -2542,6 +2635,89 @@
       "Maintainer": "Ryan Hafen <rhafen@gmail.com>",
       "Repository": "CRAN"
     },
+    "ggbeeswarm": {
+      "Package": "ggbeeswarm",
+      "Version": "0.7.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Categorical Scatter (Violin Point) Plots",
+      "Date": "2025-11-28",
+      "Authors@R": "c( person(given=\"Erik\", family=\"Clarke\", role=c(\"aut\", \"cre\"), email=\"erikclarke@gmail.com\"), person(given=\"Scott\", family=\"Sherrill-Mix\", role=c(\"aut\"), email=\"sherrillmix@gmail.com\"), person(given=\"Charlotte\", family=\"Dawson\", role=c(\"aut\"), email=\"csdaw@outlook.com\"))",
+      "Description": "Provides two methods of plotting categorical scatter plots such that the arrangement of points within a category reflects the density of data at that region, and avoids over-plotting.",
+      "URL": "https://github.com/eclarke/ggbeeswarm",
+      "BugReports": "https://github.com/eclarke/ggbeeswarm/issues",
+      "Encoding": "UTF-8",
+      "License": "GPL (>= 3)",
+      "Depends": [
+        "R (>= 3.5.0)",
+        "ggplot2 (>= 3.3.0)"
+      ],
+      "Imports": [
+        "beeswarm",
+        "lifecycle",
+        "vipor",
+        "cli"
+      ],
+      "Suggests": [
+        "gridExtra"
+      ],
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Erik Clarke [aut, cre], Scott Sherrill-Mix [aut], Charlotte Dawson [aut]",
+      "Maintainer": "Erik Clarke <erikclarke@gmail.com>",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "ggpattern": {
+      "Package": "ggpattern",
+      "Version": "1.3.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'ggplot2' Pattern Geoms",
+      "Authors@R": "c(person(\"Mike\", \"FC\", role = \"aut\"), person(\"Trevor L.\", \"Davis\", role = c(\"aut\", \"cre\"), email = \"trevor.l.davis@gmail.com\", comment = c(ORCID = \"0000-0001-6341-4639\")), person(\"ggplot2 authors\", role = \"aut\"))",
+      "Description": "Provides 'ggplot2' geoms filled with various patterns.  Includes a patterned version of every 'ggplot2' geom that has a region that can be filled with a pattern.  Provides a suite of 'ggplot2' aesthetics and scales for controlling pattern appearances.  Supports over a dozen builtin patterns (every pattern implemented by 'gridpattern') as well as allowing custom user-defined patterns.",
+      "URL": "https://github.com/trevorld/ggpattern, https://trevorldavis.com/R/ggpattern/",
+      "BugReports": "https://github.com/trevorld/ggpattern/issues",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "cli",
+        "ggplot2 (>= 4.0.2)",
+        "glue",
+        "grid",
+        "gridpattern (>= 1.2.2)",
+        "lifecycle",
+        "rlang (>= 1.1.3)",
+        "scales",
+        "vctrs"
+      ],
+      "Suggests": [
+        "ambient",
+        "dplyr",
+        "gganimate",
+        "knitr (>= 1.47)",
+        "magick",
+        "mapproj",
+        "maps",
+        "png",
+        "ragg (>= 1.2.0)",
+        "readr",
+        "rmarkdown (>= 2.27)",
+        "sf (>= 0.7-3)",
+        "svglite (>= 2.1.3)",
+        "testthat (>= 2.1.0)",
+        "vdiffr (>= 1.0.6)"
+      ],
+      "VignetteBuilder": "knitr, ragg, rmarkdown",
+      "Collate": "'a-geom-docs.R' 'aaa-ggplot2-compat-plyr.R' 'aaa-ggplot2-ggplot-global.R' 'aaa-ggplot2-performance.R' 'aaa-ggplot2-scale-manual.R' 'aaa-ggplot2-utilities-grid.R' 'aaa-ggplot2-utilities.R' 'geom-.R' 'geom-rect.R' 'geom-bar.R' 'geom-tile.R' 'geom-bin2d.R' 'geom-boxplot.R' 'geom-col.R' 'geom-crossbar.R' 'geom-ribbon.R' 'geom-density.R' 'geom-histogram.R' 'geom-polygon.R' 'geom-map.R' 'geom-sf.R' 'geom-violin.R' 'ggpattern-defunct.R' 'ggpattern-deprecated.R' 'ggpattern-package.R' 'pattern.R' 'polygon_df.R' 'scale-pattern-alpha.R' 'scale-pattern-auto.R' 'scale-pattern-brewer.R' 'scale-pattern-colour.R' 'scale-pattern-gradient.R' 'scale-pattern-grey.R' 'scale-pattern-hue.R' 'scale-pattern-linetype.R' 'scale-pattern-shape.R' 'scale-pattern-size.R' 'scale-pattern-viridis.R' 'scale-pattern.R' 'zxx.R' 'zzz.R'",
+      "NeedsCompilation": "no",
+      "Author": "Mike FC [aut], Trevor L. Davis [aut, cre] (ORCID: <https://orcid.org/0000-0001-6341-4639>), ggplot2 authors [aut]",
+      "Maintainer": "Trevor L. Davis <trevor.l.davis@gmail.com>",
+      "Repository": "CRAN"
+    },
     "ggplot2": {
       "Package": "ggplot2",
       "Version": "4.0.3",
@@ -2766,6 +2942,54 @@
       "NeedsCompilation": "no",
       "Author": "Baptiste Auguie [aut, cre], Anton Antonov [ctb]",
       "Maintainer": "Baptiste Auguie <baptiste.auguie@vuw.ac.nz>",
+      "Repository": "CRAN"
+    },
+    "gridpattern": {
+      "Package": "gridpattern",
+      "Version": "1.4.2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "'grid' Pattern Grobs",
+      "Authors@R": "c( person(\"Trevor L.\", \"Davis\", role=c(\"aut\", \"cre\"), email=\"trevor.l.davis@gmail.com\", comment = c(ORCID = \"0000-0001-6341-4639\")), person(\"Mike\", \"FC\", role = \"aut\", comment = \"Code/docs adapted from ggpattern\"), person(\"ggplot2 authors\", role = \"ctb\", comment = \"some utility functions copied from ggplot2\"))",
+      "Description": "Provides 'grid' grobs that fill in a user-defined area with various patterns.  Includes enhanced versions of the geometric and image-based patterns originally contained in the 'ggpattern' package as well as original 'pch', 'polygon_tiling', 'regular_polygon', 'rose', 'text', 'wave', and 'weave' patterns plus support for custom user-defined patterns.",
+      "URL": "https://trevorldavis.com/R/gridpattern/, https://github.com/trevorld/gridpattern",
+      "BugReports": "https://github.com/trevorld/gridpattern/issues",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "Depends": [
+        "R (>= 3.4.0)"
+      ],
+      "Imports": [
+        "glue",
+        "grDevices",
+        "grid",
+        "memoise",
+        "png",
+        "rlang",
+        "sf",
+        "utils"
+      ],
+      "Suggests": [
+        "ambient",
+        "aqp",
+        "aRtsy",
+        "ggplot2 (>= 3.5.0)",
+        "gtable",
+        "knitr",
+        "magick (>= 2.7.4)",
+        "ragg (>= 1.2.0)",
+        "rmarkdown",
+        "scales",
+        "svglite (>= 2.1.0)",
+        "testthat",
+        "Unicode",
+        "vdiffr (>= 1.0.6)"
+      ],
+      "VignetteBuilder": "knitr, rmarkdown",
+      "Config/roxygen2/version": "8.0.0",
+      "NeedsCompilation": "no",
+      "Author": "Trevor L. Davis [aut, cre] (ORCID: <https://orcid.org/0000-0001-6341-4639>), Mike FC [aut] (Code/docs adapted from ggpattern), ggplot2 authors [ctb] (some utility functions copied from ggplot2)",
+      "Maintainer": "Trevor L. Davis <trevor.l.davis@gmail.com>",
       "Repository": "CRAN"
     },
     "gt": {
@@ -3123,6 +3347,50 @@
       "NeedsCompilation": "no",
       "Author": "Ramnath Vaidyanathan [aut, cph], Yihui Xie [aut], JJ Allaire [aut], Joe Cheng [aut], Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>), Kenton Russell [aut, cph], Ellis Hughes [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Carson Sievert <carson@posit.co>",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "httpuv": {
+      "Package": "httpuv",
+      "Version": "1.6.17",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "HTTP and WebSocket Server Library",
+      "Authors@R": "c( person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = c(\"aut\", \"cre\")), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")), person(\"Hector\", \"Corrada Bravo\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\"), person(\"Andrzej\", \"Krzemienski\", role = \"cph\", comment = \"optional.hpp\"), person(\"libuv project contributors\", role = \"cph\", comment = \"libuv library, see src/libuv/AUTHORS file\"), person(\"Joyent, Inc. and other Node contributors\", role = \"cph\", comment = \"libuv library, see src/libuv/AUTHORS file; and http-parser library, see src/http-parser/AUTHORS file\"), person(\"Niels\", \"Provos\", role = \"cph\", comment = \"libuv subcomponent: tree.h\"), person(\"Internet Systems Consortium, Inc.\", role = \"cph\", comment = \"libuv subcomponent: inet_pton and inet_ntop, contained in src/libuv/src/inet.c\"), person(\"Alexander\", \"Chemeris\", role = \"cph\", comment = \"libuv subcomponent: stdint-msvc2008.h (from msinttypes)\"), person(\"Google, Inc.\", role = \"cph\", comment = \"libuv subcomponent: pthread-fixes.c\"), person(\"Sony Mobile Communcations AB\", role = \"cph\", comment = \"libuv subcomponent: pthread-fixes.c\"), person(\"Berkeley Software Design Inc.\", role = \"cph\", comment = \"libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c\"), person(\"Kenneth\", \"MacKay\", role = \"cph\", comment = \"libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c\"), person(\"Emergya (Cloud4all, FP7/2007-2013, grant agreement no 289016)\", role = \"cph\", comment = \"libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c\"), person(\"Steve\", \"Reid\", role = \"aut\", comment = \"SHA-1 implementation\"), person(\"James\", \"Brown\", role = \"aut\", comment = \"SHA-1 implementation\"), person(\"Bob\", \"Trower\", role = \"aut\", comment = \"base64 implementation\"), person(\"Alexander\", \"Peslyak\", role = \"aut\", comment = \"MD5 implementation\"), person(\"Trantor Standard Systems\", role = \"cph\", comment = \"base64 implementation\"), person(\"Igor\", \"Sysoev\", role = \"cph\", comment = \"http-parser\") )",
+      "Description": "Provides low-level socket and protocol support for handling HTTP and WebSocket requests directly from within R. It is primarily intended as a building block for other packages, rather than making it particularly easy to create complete web applications using httpuv alone.  httpuv is built on top of the libuv and http-parser C libraries, both of which were developed by Joyent, Inc. (See LICENSE file for libuv and http-parser license information.)",
+      "License": "GPL (>= 2) | file LICENSE",
+      "URL": "https://rstudio.github.io/httpuv/, https://github.com/rstudio/httpuv",
+      "BugReports": "https://github.com/rstudio/httpuv/issues",
+      "Depends": [
+        "R (>= 2.15.1)"
+      ],
+      "Imports": [
+        "later (>= 0.8.0)",
+        "promises",
+        "R6",
+        "Rcpp (>= 1.0.7)",
+        "utils"
+      ],
+      "Suggests": [
+        "callr",
+        "curl",
+        "jsonlite",
+        "testthat (>= 3.0.0)",
+        "websocket"
+      ],
+      "LinkingTo": [
+        "later",
+        "Rcpp"
+      ],
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/usethis/last-upkeep": "2025-07-01",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "SystemRequirements": "GNU make, zlib",
+      "Collate": "'RcppExports.R' 'httpuv-package.R' 'httpuv.R' 'random_port.R' 'server.R' 'staticServer.R' 'static_paths.R' 'utils.R'",
+      "NeedsCompilation": "yes",
+      "Author": "Joe Cheng [aut], Winston Chang [aut, cre], Posit, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>), Hector Corrada Bravo [ctb], Jeroen Ooms [ctb], Andrzej Krzemienski [cph] (optional.hpp), libuv project contributors [cph] (libuv library, see src/libuv/AUTHORS file), Joyent, Inc. and other Node contributors [cph] (libuv library, see src/libuv/AUTHORS file; and http-parser library, see src/http-parser/AUTHORS file), Niels Provos [cph] (libuv subcomponent: tree.h), Internet Systems Consortium, Inc. [cph] (libuv subcomponent: inet_pton and inet_ntop, contained in src/libuv/src/inet.c), Alexander Chemeris [cph] (libuv subcomponent: stdint-msvc2008.h (from msinttypes)), Google, Inc. [cph] (libuv subcomponent: pthread-fixes.c), Sony Mobile Communcations AB [cph] (libuv subcomponent: pthread-fixes.c), Berkeley Software Design Inc. [cph] (libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c), Kenneth MacKay [cph] (libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c), Emergya (Cloud4all, FP7/2007-2013, grant agreement no 289016) [cph] (libuv subcomponent: android-ifaddrs.h, android-ifaddrs.c), Steve Reid [aut] (SHA-1 implementation), James Brown [aut] (SHA-1 implementation), Bob Trower [aut] (base64 implementation), Alexander Peslyak [aut] (MD5 implementation), Trantor Standard Systems [cph] (base64 implementation), Igor Sysoev [cph] (http-parser)",
+      "Maintainer": "Winston Chang <winston@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "httr": {
@@ -3566,6 +3834,35 @@
       "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
       "Repository": "CRAN"
     },
+    "lazyeval": {
+      "Package": "lazyeval",
+      "Version": "0.2.3",
+      "Source": "Repository",
+      "Title": "Lazy (Non-Standard) Evaluation",
+      "Description": "An alternative approach to non-standard evaluation using formulas. Provides a full implementation of LISP style 'quasiquotation', making it easier to generate code with other code.",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", c(\"aut\", \"cre\")), person(\"RStudio\", role = \"cph\") )",
+      "License": "GPL-3",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "rlang"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown (>= 0.2.65)",
+        "testthat",
+        "covr"
+      ],
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.3.3",
+      "Config/build/compilation-database": "true",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre], RStudio [cph]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.5",
@@ -3797,6 +4094,41 @@
       "RoxygenNote": "7.3.2",
       "Repository": "CRAN"
     },
+    "mclust": {
+      "Package": "mclust",
+      "Version": "6.1.3",
+      "Source": "Repository",
+      "Date": "2026-07-03",
+      "Title": "Gaussian Mixture Modelling for Model-Based Clustering, Classification, and Density Estimation",
+      "Description": "Gaussian finite mixture models fitted via EM algorithm for model-based clustering, classification, and density estimation,  including Bayesian regularization, dimension reduction for  visualisation, and resampling-based inference.",
+      "Authors@R": "c(person(\"Chris\", \"Fraley\", role = \"aut\"), person(\"Adrian E.\", \"Raftery\", role = \"aut\", comment = c(ORCID = \"0000-0002-6589-301X\")), person(\"Luca\", \"Scrucca\", role = c(\"aut\", \"cre\"), email = \"luca.scrucca@unibo.it\", comment = c(ORCID = \"0000-0003-3826-0484\")), person(\"Thomas Brendan\", \"Murphy\", role = \"ctb\", comment = c(ORCID = \"0000-0002-5668-7046\")), person(\"Michael\", \"Fop\", role = \"ctb\", comment = c(ORCID = \"0000-0003-3936-2757\")))",
+      "Depends": [
+        "R (>= 3.0)"
+      ],
+      "Imports": [
+        "stats",
+        "utils",
+        "graphics",
+        "grDevices"
+      ],
+      "Suggests": [
+        "knitr (>= 1.4)",
+        "rmarkdown (>= 2.10)",
+        "mix (>= 1.0)",
+        "geometry (>= 0.4)",
+        "MASS"
+      ],
+      "License": "GPL (>= 2)",
+      "URL": "https://mclust-org.github.io/mclust/",
+      "VignetteBuilder": "knitr",
+      "Repository": "CRAN",
+      "ByteCompile": "true",
+      "NeedsCompilation": "yes",
+      "LazyData": "yes",
+      "Encoding": "UTF-8",
+      "Author": "Chris Fraley [aut], Adrian E. Raftery [aut] (ORCID: <https://orcid.org/0000-0002-6589-301X>), Luca Scrucca [aut, cre] (ORCID: <https://orcid.org/0000-0003-3826-0484>), Thomas Brendan Murphy [ctb] (ORCID: <https://orcid.org/0000-0002-5668-7046>), Michael Fop [ctb] (ORCID: <https://orcid.org/0000-0003-3936-2757>)",
+      "Maintainer": "Luca Scrucca <luca.scrucca@unibo.it>"
+    },
     "memoise": {
       "Package": "memoise",
       "Version": "2.0.1",
@@ -3880,6 +4212,50 @@
       "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Jeffrey Horner [ctb], Beilei Bian [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "minqa": {
+      "Package": "minqa",
+      "Version": "1.2.8",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Derivative-Free Optimization Algorithms by Quadratic Approximation",
+      "Authors@R": "c(person(given = \"Douglas\", family = \"Bates\", role = \"aut\"), person(given = c(\"Katharine\", \"M.\"), family = \"Mullen\", role = c(\"aut\", \"cre\"), email = \"katharine.mullen@stat.ucla.edu\"), person(given = c(\"John\", \"C.\"), family = \"Nash\", role = \"aut\"), person(given = \"Ravi\", family = \"Varadhan\", role = \"aut\"))",
+      "Maintainer": "Katharine M. Mullen <katharine.mullen@stat.ucla.edu>",
+      "Description": "Derivative-free optimization by quadratic approximation based on an interface to Fortran implementations by M. J. D. Powell.",
+      "License": "GPL-2",
+      "URL": "http://optimizer.r-forge.r-project.org",
+      "Imports": [
+        "Rcpp (>= 0.9.10)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
+      ],
+      "SystemRequirements": "GNU make",
+      "NeedsCompilation": "yes",
+      "Repository": "CRAN",
+      "Author": "Douglas Bates [aut], Katharine M. Mullen [aut, cre], John C. Nash [aut], Ravi Varadhan [aut]"
+    },
+    "mitools": {
+      "Package": "mitools",
+      "Version": "2.7",
+      "Source": "Repository",
+      "Title": "Tools for Multiple Imputation of Missing Data",
+      "Authors@R": "person(given = \"Thomas\", family = \"Lumley\", role = c(\"aut\", \"cre\"), email = \"t.lumley@auckland.ac.nz\")",
+      "Description": "Tools to perform analyses and combine results from multiple-imputation datasets.",
+      "Maintainer": "Thomas Lumley <t.lumley@auckland.ac.nz>",
+      "Suggests": [
+        "RODBC",
+        "foreign"
+      ],
+      "Imports": [
+        "DBI",
+        "methods",
+        "stats"
+      ],
+      "License": "GPL-2",
+      "NeedsCompilation": "no",
+      "Author": "Thomas Lumley [aut, cre]",
+      "Repository": "CRAN"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -4265,6 +4641,102 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Repository": "https://packagemanager.posit.co/cran/latest"
+    },
+    "plotly": {
+      "Package": "plotly",
+      "Version": "4.12.1",
+      "Source": "Repository",
+      "Title": "Create Interactive Web Graphics via 'plotly.js'",
+      "Authors@R": "c(person(\"Carson\", \"Sievert\", role = c(\"aut\", \"cre\"), email = \"cpsievert1@gmail.com\", comment = c(ORCID = \"0000-0002-4958-2844\")), person(\"Chris\", \"Parmer\", role = \"aut\", email = \"chris@plot.ly\"), person(\"Toby\", \"Hocking\", role = \"aut\", email = \"tdhock5@gmail.com\"), person(\"Scott\", \"Chamberlain\", role = \"aut\", email = \"myrmecocystus@gmail.com\"), person(\"Karthik\", \"Ram\", role = \"aut\", email = \"karthik.ram@gmail.com\"), person(\"Marianne\", \"Corvellec\", role = \"aut\", email = \"marianne.corvellec@igdore.org\", comment = c(ORCID = \"0000-0002-1994-3581\")), person(\"Pedro\", \"Despouy\", role = \"aut\", email = \"pedro@plot.ly\"), person(\"Salim\", \"Brüggemann\", role = \"ctb\", email = \"salim-b@pm.me\", comment = c(ORCID = \"0000-0002-5329-5987\")), person(\"Plotly Technologies Inc.\", role = \"cph\"))",
+      "License": "MIT + file LICENSE",
+      "Description": "Create interactive web graphics from 'ggplot2' graphs and/or a custom interface to the (MIT-licensed) JavaScript library 'plotly.js' inspired by the grammar of graphics.",
+      "URL": "https://plotly-r.com, https://github.com/plotly/plotly.R, https://plotly.com/r/",
+      "BugReports": "https://github.com/plotly/plotly.R/issues",
+      "Depends": [
+        "R (>= 3.5.0)",
+        "ggplot2 (>= 3.0.0)"
+      ],
+      "Imports": [
+        "tools",
+        "scales",
+        "httr (>= 1.3.0)",
+        "jsonlite (>= 1.6)",
+        "magrittr",
+        "digest",
+        "viridisLite",
+        "base64enc",
+        "htmltools (>= 0.3.6)",
+        "htmlwidgets (>= 1.5.2.9001)",
+        "tidyr (>= 1.0.0)",
+        "RColorBrewer",
+        "dplyr",
+        "vctrs",
+        "tibble",
+        "rlang (>= 1.0.0)",
+        "crosstalk",
+        "purrr",
+        "data.table",
+        "promises"
+      ],
+      "Suggests": [
+        "MASS",
+        "maps",
+        "hexbin",
+        "ggthemes",
+        "GGally",
+        "ggalluvial",
+        "testthat",
+        "knitr",
+        "shiny (>= 1.1.0)",
+        "shinytest2",
+        "curl",
+        "rmarkdown",
+        "Cairo",
+        "broom",
+        "webshot",
+        "listviewer",
+        "dendextend",
+        "sf",
+        "png",
+        "IRdisplay",
+        "processx",
+        "plotlyGeoAssets",
+        "forcats",
+        "withr",
+        "palmerpenguins",
+        "rversions",
+        "reticulate",
+        "rsvg",
+        "ggridges"
+      ],
+      "LazyData": "true",
+      "RoxygenNote": "7.3.3",
+      "Encoding": "UTF-8",
+      "Config/Needs/check": "tidyverse/ggplot2, ggobi/GGally, rcmdcheck, devtools, reshape2, s2",
+      "NeedsCompilation": "no",
+      "Author": "Carson Sievert [aut, cre] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Chris Parmer [aut], Toby Hocking [aut], Scott Chamberlain [aut], Karthik Ram [aut], Marianne Corvellec [aut] (ORCID: <https://orcid.org/0000-0002-1994-3581>), Pedro Despouy [aut], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Plotly Technologies Inc. [cph]",
+      "Maintainer": "Carson Sievert <cpsievert1@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "png": {
+      "Package": "png",
+      "Version": "0.1-9",
+      "Source": "Repository",
+      "Title": "Read and write PNG images",
+      "Author": "Simon Urbanek [aut, cre, cph] (https://urbanek.nz, ORCID: <https://orcid.org/0000-0003-2297-1732>)",
+      "Authors@R": "person(\"Simon\", \"Urbanek\", role=c(\"aut\",\"cre\",\"cph\"), email=\"Simon.Urbanek@r-project.org\", comment=c(\"https://urbanek.nz\", ORCID=\"0000-0003-2297-1732\"))",
+      "Maintainer": "Simon Urbanek <Simon.Urbanek@r-project.org>",
+      "Depends": [
+        "R (>= 2.9.0)"
+      ],
+      "Description": "This package provides an easy and simple way to read, write and display bitmap images stored in the PNG format. It can read and write both files and in-memory raw vectors.",
+      "License": "GPL-2 | GPL-3",
+      "SystemRequirements": "libpng",
+      "URL": "https://www.rforge.net/png/",
+      "BugReports": "https://github.com/s-u/png/issues/",
+      "NeedsCompilation": "yes",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
     },
     "pracma": {
       "Package": "pracma",
@@ -5322,6 +5794,79 @@
       "Maintainer": "Edzer Pebesma <edzer.pebesma@uni-muenster.de>",
       "Repository": "CRAN"
     },
+    "shiny": {
+      "Package": "shiny",
+      "Version": "1.14.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Web Application Framework for R",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0002-1576-2126\")), person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"JJ\", \"Allaire\", , \"jj@posit.co\", role = \"aut\"), person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-4958-2844\")), person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0001-9986-114X\")), person(\"Garrick\", \"Aden-Buie\", , \"garrick@adenbuie.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-7111-0077\")), person(\"Yihui\", \"Xie\", , \"yihui@posit.co\", role = \"aut\"), person(\"Jeff\", \"Allen\", role = \"aut\"), person(\"Jonathan\", \"McPherson\", , \"jonathan@posit.co\", role = \"aut\"), person(\"Alan\", \"Dipert\", role = \"aut\"), person(\"Barbara\", \"Borges\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")), person(, \"jQuery Foundation\", role = \"cph\", comment = \"jQuery library and jQuery UI library\"), person(, \"jQuery contributors\", role = c(\"ctb\", \"cph\"), comment = \"jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt\"), person(, \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"), comment = \"jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt\"), person(\"Mark\", \"Otto\", role = \"ctb\", comment = \"Bootstrap library\"), person(\"Jacob\", \"Thornton\", role = \"ctb\", comment = \"Bootstrap library\"), person(, \"Bootstrap contributors\", role = \"ctb\", comment = \"Bootstrap library\"), person(, \"Twitter, Inc\", role = \"cph\", comment = \"Bootstrap library\"), person(\"Prem Nawaz\", \"Khan\", role = \"ctb\", comment = \"Bootstrap accessibility plugin\"), person(\"Victor\", \"Tsaran\", role = \"ctb\", comment = \"Bootstrap accessibility plugin\"), person(\"Dennis\", \"Lembree\", role = \"ctb\", comment = \"Bootstrap accessibility plugin\"), person(\"Srinivasu\", \"Chakravarthula\", role = \"ctb\", comment = \"Bootstrap accessibility plugin\"), person(\"Cathy\", \"O'Connor\", role = \"ctb\", comment = \"Bootstrap accessibility plugin\"), person(, \"PayPal, Inc\", role = \"cph\", comment = \"Bootstrap accessibility plugin\"), person(\"Stefan\", \"Petre\", role = c(\"ctb\", \"cph\"), comment = \"Bootstrap-datepicker library\"), person(\"Andrew\", \"Rowls\", role = c(\"ctb\", \"cph\"), comment = \"Bootstrap-datepicker library\"), person(\"Brian\", \"Reavis\", role = c(\"ctb\", \"cph\"), comment = \"selectize.js library\"), person(\"Salmen\", \"Bejaoui\", role = c(\"ctb\", \"cph\"), comment = \"selectize-plugin-a11y library\"), person(\"Denis\", \"Ineshin\", role = c(\"ctb\", \"cph\"), comment = \"ion.rangeSlider library\"), person(\"Sami\", \"Samhuri\", role = c(\"ctb\", \"cph\"), comment = \"Javascript strftime library\"), person(, \"SpryMedia Limited\", role = c(\"ctb\", \"cph\"), comment = \"DataTables library\"), person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"), comment = \"highlight.js library\"), person(\"R Core Team\", role = c(\"ctb\", \"cph\"), comment = \"tar implementation from R\") )",
+      "Description": "Makes it incredibly easy to build interactive web applications with R. Automatic \"reactive\" binding between inputs and outputs and extensive prebuilt widgets make it possible to build beautiful, responsive, and powerful applications with minimal effort.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://shiny.posit.co/, https://github.com/rstudio/shiny",
+      "BugReports": "https://github.com/rstudio/shiny/issues",
+      "Depends": [
+        "methods",
+        "R (>= 3.1.2)"
+      ],
+      "Imports": [
+        "bslib (>= 0.6.0)",
+        "cachem (>= 1.1.0)",
+        "cli",
+        "commonmark (>= 2.0.0)",
+        "fastmap (>= 1.1.1)",
+        "fontawesome (>= 0.4.0)",
+        "glue (>= 1.3.2)",
+        "grDevices",
+        "htmltools (>= 0.5.4)",
+        "httpuv (>= 1.5.2)",
+        "jsonlite (>= 0.9.16)",
+        "later (>= 1.0.0)",
+        "lifecycle (>= 0.2.0)",
+        "mime (>= 0.3)",
+        "otel",
+        "promises (>= 1.5.0)",
+        "R6 (>= 2.0)",
+        "rlang (>= 0.4.10)",
+        "sourcetools",
+        "tools",
+        "utils",
+        "withr",
+        "xtable"
+      ],
+      "Suggests": [
+        "Cairo (>= 1.5-5)",
+        "coro (>= 1.1.0)",
+        "datasets",
+        "DT",
+        "dygraphs",
+        "future",
+        "ggplot2",
+        "knitr (>= 1.6)",
+        "magrittr",
+        "markdown",
+        "mirai",
+        "otelsdk (>= 0.2.0)",
+        "ragg",
+        "reactlog (>= 1.0.0)",
+        "rmarkdown",
+        "sass",
+        "shinytest2",
+        "showtext",
+        "testthat (>= 3.2.1)",
+        "watcher",
+        "yaml"
+      ],
+      "Config/Needs/check": "shinyjs",
+      "Config/roxygen2/version": "8.0.0",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "Collate": "'app-handle.R' 'globals.R' 'app-state.R' 'app_template.R' 'bind-cache.R' 'bind-event.R' 'bookmark-state-local.R' 'bookmark-state.R' 'bootstrap-deprecated.R' 'bootstrap-layout.R' 'conditions.R' 'map.R' 'utils.R' 'bootstrap.R' 'busy-indicators-spinners.R' 'busy-indicators.R' 'cache-utils.R' 'deprecated.R' 'devmode.R' 'diagnose.R' 'extended-task.R' 'fileupload.R' 'graph.R' 'reactives.R' 'reactive-domains.R' 'history.R' 'hooks.R' 'html-deps.R' 'image-interact-opts.R' 'image-interact.R' 'imageutils.R' 'input-action.R' 'input-checkbox.R' 'input-checkboxgroup.R' 'input-date.R' 'input-daterange.R' 'input-file.R' 'input-numeric.R' 'input-password.R' 'input-radiobuttons.R' 'input-select.R' 'input-slider.R' 'input-submit.R' 'input-text.R' 'input-textarea.R' 'input-utils.R' 'insert-tab.R' 'insert-ui.R' 'jqueryui.R' 'knitr.R' 'middleware-shiny.R' 'middleware.R' 'timer.R' 'shiny.R' 'mock-session.R' 'modal.R' 'modules.R' 'notifications.R' 'otel-attr-srcref.R' 'otel-collect.R' 'otel-enable.R' 'otel-error.R' 'otel-label.R' 'otel-reactive-update.R' 'otel-session.R' 'otel-shiny.R' 'otel-with.R' 'priorityqueue.R' 'progress.R' 'react.R' 'reexports.R' 'render-cached-plot.R' 'render-plot.R' 'render-table.R' 'run-url.R' 'runapp.R' 'serializers.R' 'server-input-handlers.R' 'server-resource-paths.R' 'server.R' 'shiny-options.R' 'shiny-package.R' 'shinyapp.R' 'shinyui.R' 'shinywrappers.R' 'showcase.R' 'snapshot.R' 'staticimports.R' 'tar.R' 'test-export.R' 'test-server.R' 'test.R' 'update-input.R' 'utils-lang.R' 'utils-tags.R' 'version_bs_date_picker.R' 'version_ion_range_slider.R' 'version_jquery.R' 'version_jqueryui.R' 'version_selectize.R' 'version_strftime.R' 'viewer.R'",
+      "NeedsCompilation": "no",
+      "Author": "Winston Chang [aut] (ORCID: <https://orcid.org/0000-0002-1576-2126>), Joe Cheng [aut], JJ Allaire [aut], Carson Sievert [aut, cre] (ORCID: <https://orcid.org/0000-0002-4958-2844>), Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>), Garrick Aden-Buie [aut] (ORCID: <https://orcid.org/0000-0002-7111-0077>), Yihui Xie [aut], Jeff Allen [aut], Jonathan McPherson [aut], Alan Dipert [aut], Barbara Borges [aut], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>), jQuery Foundation [cph] (jQuery library and jQuery UI library), jQuery contributors [ctb, cph] (jQuery library; authors listed in inst/www/shared/jquery-AUTHORS.txt), jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in inst/www/shared/jqueryui/AUTHORS.txt), Mark Otto [ctb] (Bootstrap library), Jacob Thornton [ctb] (Bootstrap library), Bootstrap contributors [ctb] (Bootstrap library), Twitter, Inc [cph] (Bootstrap library), Prem Nawaz Khan [ctb] (Bootstrap accessibility plugin), Victor Tsaran [ctb] (Bootstrap accessibility plugin), Dennis Lembree [ctb] (Bootstrap accessibility plugin), Srinivasu Chakravarthula [ctb] (Bootstrap accessibility plugin), Cathy O'Connor [ctb] (Bootstrap accessibility plugin), PayPal, Inc [cph] (Bootstrap accessibility plugin), Stefan Petre [ctb, cph] (Bootstrap-datepicker library), Andrew Rowls [ctb, cph] (Bootstrap-datepicker library), Brian Reavis [ctb, cph] (selectize.js library), Salmen Bejaoui [ctb, cph] (selectize-plugin-a11y library), Denis Ineshin [ctb, cph] (ion.rangeSlider library), Sami Samhuri [ctb, cph] (Javascript strftime library), SpryMedia Limited [ctb, cph] (DataTables library), Ivan Sagalaev [ctb, cph] (highlight.js library), R Core Team [ctb, cph] (tar implementation from R)",
+      "Maintainer": "Carson Sievert <carson@posit.co>",
+      "Repository": "CRAN"
+    },
     "sitmo": {
       "Package": "sitmo",
       "Version": "2.0.2",
@@ -5377,6 +5922,29 @@
       "Author": "Kurt Hornik [aut, cre] (ORCID: <https://orcid.org/0000-0003-4198-9911>), David Meyer [aut] (ORCID: <https://orcid.org/0000-0002-5196-3048>), Christian Buchta [aut]",
       "Maintainer": "Kurt Hornik <Kurt.Hornik@R-project.org>",
       "Repository": "CRAN"
+    },
+    "sourcetools": {
+      "Package": "sourcetools",
+      "Version": "0.1.7-2",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Tools for Reading, Tokenizing and Parsing R Code",
+      "Authors@R": "person(\"Kevin\", \"Ushey\", role = c(\"aut\", \"cre\"), email = \"kevinushey@gmail.com\")",
+      "Maintainer": "Kevin Ushey <kevinushey@gmail.com>",
+      "Description": "Tools for the reading and tokenization of R code. The 'sourcetools' package provides both an R and C++ interface for the tokenization of R code, and helpers for interacting with the tokenized representation of R code.",
+      "License": "MIT + file LICENSE",
+      "Depends": [
+        "R (>= 3.0.2)"
+      ],
+      "Suggests": [
+        "testthat"
+      ],
+      "RoxygenNote": "5.0.1",
+      "BugReports": "https://github.com/kevinushey/sourcetools/issues",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Kevin Ushey [aut, cre]",
+      "Repository": "https://packagemanager.posit.co/cran/latest"
     },
     "sp": {
       "Package": "sp",
@@ -5658,6 +6226,59 @@
       "RemoteUrl": "https://github.com/s3alfisc/summclust",
       "RemoteRef": "HEAD",
       "RemoteSha": "2d25c68eb046028b680fdc8c9827820f7e791827"
+    },
+    "survey": {
+      "Package": "survey",
+      "Version": "4.5",
+      "Source": "Repository",
+      "Title": "Analysis of Complex Survey Samples",
+      "Description": "Summary statistics, two-sample tests, rank tests, generalised linear models, cumulative link models, Cox models, loglinear models, and general maximum pseudolikelihood estimation for multistage stratified, cluster-sampled, unequally weighted survey samples. Variances by Taylor series linearisation or replicate weights. Post-stratification, calibration, and raking. Two-phase and multiphase subsampling designs. Graphics. PPS sampling without replacement. Small-area estimation. Dual-frame designs.",
+      "Authors@R": "c(person(given = \"\\\"Thomas\", family = \"Lumley\\\"\", role = \"cre\", email = \"t.lumley@auckland.ac.nz\"), person(given = \"Peter\", family = \"Gao\", role =\"aut\"), person(given = \"Ben\", family = \"Schneider\", role= \"aut\"), person(given = \"Stas\", family= \"Kolenkikov\", role=\"aut\"))",
+      "Maintainer": "\"Thomas Lumley\" <t.lumley@auckland.ac.nz>",
+      "License": "GPL-2 | GPL-3",
+      "Depends": [
+        "R (>= 4.1.0)",
+        "grid",
+        "methods",
+        "Matrix",
+        "survival"
+      ],
+      "Imports": [
+        "stats",
+        "graphics",
+        "splines",
+        "lattice",
+        "minqa",
+        "numDeriv",
+        "mitools (>= 2.4)",
+        "Rcpp (>= 0.12.8)"
+      ],
+      "LinkingTo": [
+        "Rcpp",
+        "RcppArmadillo"
+      ],
+      "VignetteBuilder": "R.rsp, knitr",
+      "Suggests": [
+        "foreign",
+        "MASS",
+        "KernSmooth",
+        "hexbin",
+        "RSQLite",
+        "quantreg",
+        "parallel",
+        "CompQuadForm",
+        "DBI",
+        "AER",
+        "SUMMER (>= 1.4.0)",
+        "R.rsp",
+        "knitr",
+        "testthat (>= 3.0.0)"
+      ],
+      "URL": "http://r-survey.r-forge.r-project.org/survey/",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "yes",
+      "Author": "\"Thomas Lumley\" [cre], Peter Gao [aut], Ben Schneider [aut], Stas Kolenkikov [aut]",
+      "Repository": "CRAN"
     },
     "survival": {
       "Package": "survival",
@@ -6306,6 +6927,39 @@
       "Maintainer": "Davis Vaughan <davis@posit.co>",
       "Repository": "https://packagemanager.posit.co/cran/latest"
     },
+    "vipor": {
+      "Package": "vipor",
+      "Version": "0.4.7",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Plot Categorical Data Using Quasirandom Noise and Density Estimates",
+      "Date": "2023-12-15",
+      "Author": "Scott Sherrill-Mix, Erik Clarke",
+      "Maintainer": "Scott Sherrill-Mix <ssm@msu.edu>",
+      "Description": "Generate a violin point plot, a combination of a violin/histogram plot and a scatter plot by offsetting points within a category based on their density using quasirandom noise.",
+      "License": "GPL (>= 2)",
+      "LazyData": "True",
+      "Depends": [
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "stats",
+        "graphics"
+      ],
+      "Suggests": [
+        "testthat",
+        "beeswarm",
+        "lattice",
+        "ggplot2",
+        "beanplot",
+        "vioplot",
+        "ggbeeswarm"
+      ],
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "Encoding": "UTF-8"
+    },
     "viridisLite": {
       "Package": "viridisLite",
       "Version": "0.4.3",
@@ -6628,6 +7282,38 @@
       "Author": "Hadley Wickham [aut], Jim Hester [aut], Jeroen Ooms [aut, cre], Posit Software, PBC [cph, fnd], R Foundation [ctb] (Copy of R-project homepage cached as example)",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
+    },
+    "xtable": {
+      "Package": "xtable",
+      "Version": "1.8-8",
+      "Source": "Repository",
+      "Date": "2026-02-20",
+      "Title": "Export Tables to LaTeX or HTML",
+      "Authors@R": "c(person(\"David B.\", \"Dahl\", role=\"aut\"), person(\"David\", \"Scott\", role=c(\"aut\",\"cre\"), email=\"d.scott@auckland.ac.nz\"), person(\"Charles\", \"Roosen\", role=\"aut\"), person(\"Arni\", \"Magnusson\", role=\"aut\"), person(\"Jonathan\", \"Swinton\", role=\"aut\"), person(\"Ajay\", \"Shah\", role=\"ctb\"), person(\"Arne\", \"Henningsen\", role=\"ctb\"), person(\"Benno\", \"Puetz\", role=\"ctb\"), person(\"Bernhard\", \"Pfaff\", role=\"ctb\"), person(\"Claudio\", \"Agostinelli\", role=\"ctb\"), person(\"Claudius\", \"Loehnert\", role=\"ctb\"), person(\"David\", \"Mitchell\", role=\"ctb\"), person(\"David\", \"Whiting\", role=\"ctb\"), person(\"Fernando da\", \"Rosa\", role=\"ctb\"), person(\"Guido\", \"Gay\", role=\"ctb\"), person(\"Guido\", \"Schulz\", role=\"ctb\"), person(\"Ian\", \"Fellows\", role=\"ctb\"), person(\"Jeff\", \"Laake\", role=\"ctb\"), person(\"John\", \"Walker\", role=\"ctb\"), person(\"Jun\", \"Yan\", role=\"ctb\"), person(\"Liviu\", \"Andronic\", role=\"ctb\"), person(\"Markus\", \"Loecher\", role=\"ctb\"), person(\"Martin\", \"Gubri\", role=\"ctb\"), person(\"Matthieu\", \"Stigler\", role=\"ctb\"), person(\"Robert\", \"Castelo\", role=\"ctb\"), person(\"Seth\", \"Falcon\", role=\"ctb\"), person(\"Stefan\", \"Edwards\", role=\"ctb\"), person(\"Sven\", \"Garbade\", role=\"ctb\"), person(\"Uwe\", \"Ligges\", role=\"ctb\"))",
+      "Maintainer": "David Scott <d.scott@auckland.ac.nz>",
+      "Imports": [
+        "stats",
+        "utils",
+        "methods"
+      ],
+      "Suggests": [
+        "knitr",
+        "zoo",
+        "survival",
+        "glue",
+        "tinytex"
+      ],
+      "VignetteBuilder": "knitr",
+      "Description": "Coerce data to LaTeX and HTML tables.",
+      "URL": "http://xtable.r-forge.r-project.org/",
+      "Depends": [
+        "R (>= 2.10.0)"
+      ],
+      "License": "GPL (>= 2)",
+      "Repository": "https://packagemanager.posit.co/cran/latest",
+      "NeedsCompilation": "no",
+      "Author": "David B. Dahl [aut], David Scott [aut, cre], Charles Roosen [aut], Arni Magnusson [aut], Jonathan Swinton [aut], Ajay Shah [ctb], Arne Henningsen [ctb], Benno Puetz [ctb], Bernhard Pfaff [ctb], Claudio Agostinelli [ctb], Claudius Loehnert [ctb], David Mitchell [ctb], David Whiting [ctb], Fernando da Rosa [ctb], Guido Gay [ctb], Guido Schulz [ctb], Ian Fellows [ctb], Jeff Laake [ctb], John Walker [ctb], Jun Yan [ctb], Liviu Andronic [ctb], Markus Loecher [ctb], Martin Gubri [ctb], Matthieu Stigler [ctb], Robert Castelo [ctb], Seth Falcon [ctb], Stefan Edwards [ctb], Sven Garbade [ctb], Uwe Ligges [ctb]",
+      "Encoding": "UTF-8"
     },
     "yaml": {
       "Package": "yaml",

@@ -1,0 +1,290 @@
+1 
+ 
+DEPARTMENT OF HEALTH & HUMAN 
+SERVICES 
+Centers for Medicare & Medicaid Services 
+7500 Security Boulevard 
+Baltimore, Maryland 21244-1850
+ 
+ 
+ 
+CENTER FOR MEDICARE 
+ 
+ 
+DATE: June 10, 2026 
+TO: Part D Plan Sponsors 
+FROM: Chris Klomp, Chief Counselor, HHS, and Director of Medicare & Deputy 
+Administrator, CMS 
+SUBJECT: Medicare GLP-1 Bridge: Expectations and Frequently Asked Questions for Part D 
+Sponsors 
+ 
+On March 3, 2026, the Centers for Medicare & Medicaid Services (CMS) released a HPMS 
+memorandum to provide responses to frequently asked questions (FAQs) related to the Medicare 
+GLP-1 Bridge (Frequently Asked Questions Related to the Medicare GLP-1 Bridge). The 
+Medicare GLP-1 Bridge is a short-term demonstration run by CMS that will provide eligible 
+Medicare Part D beneficiaries with access to certain GLP-1 drugs for weight management 
+between July 1, 2026, and December 31, 2027. 
+ 
+Section 402(a)(1)(A) of the Social Security Amendments of 1967, as amended and expressly 
+made applicable to Part D by section 1860D-42(b) of the Social Security Act (“the Act”), 
+authorizes the Secretary to carry out demonstration projects to determine whether “changes in 
+methods of payment or reimbursement” under Medicare “would have the effect of increasing the 
+efficiency and economy of health services” covered under Medicare through the “creation of 
+additional incentives to these ends.” In order to determine whether newly providing access to 
+certain GLP-1 drugs for weight management increases the efficiency and economy of services 
+covered under Medicare and accurately assess the impacts of increased access to GLP-1 drugs 
+for weight management for the purpose of future policy development, the Medicare GLP-1 
+Bridge is designed to only include Medicare Part D beneficiaries prescribed GLP-1 drugs for 
+weight management who would not otherwise have access through Part D.  
+ 
+Part D beneficiaries who are currently eligible for GLP-1 coverage through the Medicare Part D 
+benefit, regardless of whether it is on the beneficiary’s Part D plan’s formulary, are not eligible 
+to receive GLP-1 drugs through the Medicare GLP-1 Bridge. Eligibility for the Medicare GLP-1 
+Bridge is irrespective of any cost sharing differential between Part D plan coverage and 
+Medicare GLP-1 Bridge coverage. 
+ 
+
+2 
+ 
+The Medicare GLP-1 Bridge operates outside of the Part D coverage and payment flow and 
+therefore does not waive or modify any existing contractual, statutory, or regulatory 
+requirements for Part D plan sponsors. Part D plan sponsors remain responsible for complying 
+with all applicable program requirements and obligations under the Medicare Part D program. 
+Specifically, Part D plan sponsors must continue to provide coverage of GLP-1 drugs for 
+indications that are currently coverable under Medicare Part D, consistent with Contract Year 
+(CY) 2026 bids, and must not deny or limit access to GLP-1 drugs in a manner that improperly 
+encourages use of the Medicare GLP-1 Bridge. Part D enrollees who are prescribed an eligible 
+GLP-1 drug for a use that is coverable under the plan’s Medicare Part D benefit, regardless of 
+whether the eligible GLP-1 drug is on the Part D plan’s formulary, do not qualify for coverage 
+under the Medicare GLP-1 Bridge. Additionally, beneficiaries diagnosed with a condition that is 
+currently eligible for coverage under Part D, such as moderate to severe obstructive sleep apnea 
+(OSA), noncirrhotic metabolic dysfunction-associated steatohepatitis with moderate to advanced 
+liver scarring (fibrosis), or type 2 diabetes, are not eligible for the Medicare GLP-1 Bridge. Part 
+D plan sponsors must continue to follow their existing formulary exception processes for these 
+requests.  
+ 
+CMS will be conducting rigorous monitoring of Medicare Part D and Medicare GLP-1 Bridge 
+data to ensure that Part D plan sponsors are not inappropriately shifting or attempting to shift 
+beneficiaries to the Medicare GLP-1 Bridge or making changes to access decisions or formulary 
+exception processes following the implementation of the demonstration. CMS will take 
+appropriate action under 42 CFR 423.752 in the event that it determines a Part D Plan sponsor 
+has failed to comply with its obligations under the Medicare Part D program.    
+ 
+For additional information on the Medicare GLP-1 Bridge, please visit 
+https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-
+bridge/information-part-d-plans. CMS will continue to update this document with additional 
+FAQs to reflect additional or updated guidance, as needed. Please direct any questions regarding 
+the information included in this memorandum to GLP1Demo@cms.hhs.gov. 
+ 
+Part D Sponsor Interactions with the Medicare GLP-1 Bridge  
+ 
+1. What is the Medicare GLP-1 Bridge? 
+ 
+The Medicare GLP-1 Bridge is a short-term CMS demonstration project that will provide 
+eligible Medicare Part D beneficiaries with access to certain GLP-1 drugs starting July 1, 
+2026. The Medicare GLP-1 Bridge will operate outside of the Medicare Part D benefit’s 
+coverage and payment flow. As a result, Part D plan sponsors will not bear financial risk 
+for eligible GLP-1 drugs furnished under the Medicare GLP-1 Bridge, and Part D plan 
+sponsors do not have to opt in to the Medicare GLP-1 Bridge for eligible beneficiaries to 
+access these drugs beginning July 1, 2026.  
+ 
+2. Can Part D plan sponsors participate in the Medicare GLP-1 Bridge?  
+  
+Part D plan sponsors are not participants in the Medicare GLP-1 Bridge. In 2026, CMS 
+will use a single central processor to manage prior authorization, claims adjudications, 
+3 
+ 
+and payments to pharmacies for GLP-1 drugs furnished under the Medicare GLP-1 
+Bridge. As a result, Part D plan sponsors do not have a financial or administrative role in 
+furnishing GLP-1s under the Medicare GLP-1 Bridge.  
+ 
+3. How does the Medicare GLP-1 Bridge interact with drug coverage from a 
+Medicare Part D plan? 
+ 
+Under the Medicare GLP-1 Bridge, participating manufacturers will provide eligible 
+GLP-1 drugs at a net price of $245 per monthly supply. Coverage of eligible GLP-1 
+drugs furnished under the Medicare GLP-1 Bridge is provided outside of the Part D 
+benefit payment flow and coverage. As such, no part of the $245 net price for eligible 
+GLP-1 drugs prescribed for uses covered under the Medicare GLP-1 Bridge counts 
+toward an eligible beneficiary’s gross covered prescription drug costs (GCPDC), and no 
+part of the $50 copay counts toward the beneficiary’s true out-of-pocket costs (TrOOP) 
+under their Part D plan. In addition, the $50 copay for eligible beneficiaries remains the 
+same, regardless of the phase of the Part D benefit an eligible beneficiary is in when they 
+fill a prescription for an eligible GLP-1 drugs covered under the Medicare GLP-1 Bridge. 
+Similarly, low-income cost-sharing subsidies also do not apply to any portion of the 
+copay. GLP-1s dispensed under the Medicare GLP-1 Bridge are not eligible for the 
+Medicare Prescription Payment Program.  
+ 
+4. Will CMS be waiving any existing Part D plan sponsor requirements as part of 
+the Medicare GLP-1 Bridge in 2026? 
+ 
+The Medicare GLP-1 Bridge does not waive or modify any existing contractual, 
+statutory, or regulatory requirements for Part D plan sponsors. Part D plan sponsors 
+remain responsible for complying with all applicable program requirements and 
+obligations under their Part D contracts and consistent with CY 2026 bids.  
+ 
+5. What are Part D plan sponsors’ responsibilities for coverage of GLP-1 drugs for 
+Part D eligible indications? 
+ 
+Part D plan sponsors must continue to provide coverage of GLP-1s for indications that 
+are currently coverable under Medicare Part D, consistent with CY 2026 bids, and must 
+not deny or limit access to GLP-1s in a manner that improperly encourages use of the 
+Medicare GLP-1 Bridge. Beneficiaries who are prescribed an eligible GLP-1 drug for a 
+use that is coverable under the plan’s Medicare Part D benefit, regardless of whether the 
+eligible GLP-1 drug is on the Part D plan’s formulary, do not qualify for coverage under 
+the Medicare GLP-1 Bridge. For example, beneficiaries prescribed Zepbound® for the 
+treatment of moderate to severe obstructive sleep apnea in adults with obesity or 
+Wegovy® to reduce the risk of major adverse cardiovascular events in adults with 
+established cardiovascular disease and either obesity or overweight should continue to 
+receive coverage through Medicare Part D. Part D plan sponsors must continue to follow 
+their existing formulary exception processes for these requests. Part D plan sponsors are 
+4 
+ 
+not required to change existing cost-sharing for GLP-1 drugs to align with the Medicare 
+GLP-1 Bridge $50 co-pay.  
+ 
+CMS will conduct ongoing monitoring and oversight to ensure that Part D plan sponsors 
+are not inappropriately shifting beneficiaries to the Medicare GLP-1 Bridge, including 
+review of utilization management practices and formulary exception processes. CMS will 
+also analyze Medicare GLP-1 Bridge and Part D program data to identify potential 
+changes in coverage patterns that could suggest inappropriate shifting or changes in 
+access decisions following the implementation of the demonstration.  
+ 
+Beneficiary Eligibility for the Medicare GLP-1 Bridge 
+ 
+6. Is a beneficiary who is currently receiving a GLP-1 drug through Part D for a 
+non-weight management indication (e.g., treatment of type 2 diabetes) eligible to 
+receive a different GLP-1 drug (e.g., Wegovy® or Zepbound®) under the 
+Medicare GLP-1 Bridge if prescribed for weight management? 
+ 
+No, a beneficiary diagnosed with a condition that is currently eligible for coverage under 
+Part D is not eligible for the Medicare GLP-1 Bridge, even if the beneficiary otherwise 
+meets the Medicare GLP-1 Bridge clinical criteria.  If a provider submits a prior 
+authorization request to the Medicare GLP-1 Bridge attesting a beneficiary has a Part D 
+coverable diagnosis of moderate to severe obstructive sleep apnea, noncirrhotic metabolic 
+dysfunction-associated steatohepatitis with moderate to advanced liver scarring (fibrosis), 
+or type 2 diabetes, it will be denied.  
+ 
+7. Can a beneficiary who is currently receiving a GLP-1 drug through Part D for a 
+non-weight management indication (e.g., moderate to severe obstructive sleep 
+apnea or cardiovascular risk reduction) receive that same or another eligible 
+GLP-1 drug under the Medicare GLP-1 Bridge for weight management? 
+ 
+No, a beneficiary who is currently receiving Part D coverage of a GLP-1 drug is not 
+eligible for the Medicare GLP-1 Bridge and should continue to receive coverage from 
+their Part D plan, even if the GLP-1 is an eligible drug under the Medicare GLP-1 Bridge 
+and the beneficiary otherwise meets the Medicare GLP-1 Bridge clinical criteria.  
+ 
+8. Can a beneficiary who has previously received a GLP-1 drug through Part D for 
+a non-weight management indication (e.g., type 2 diabetes or moderate to severe 
+obstructive sleep apnea) receive the same GLP-1 drug or another eligible GLP-1 
+drug under the Medicare GLP-1 Bridge for weight management?  
+ 
+No, a beneficiary who has received a GLP-1 through Part D in CY 2026 is not eligible for 
+the Medicare GLP-1 Bridge and should continue to receive coverage from their Part D 
+plan, even if they are prescribed an eligible GLP-1 drug for a weight management 
+indication and otherwise meet the Medicare GLP-1 Bridge clinical criteria.  
+ 
+5 
+ 
+9. How will Part D plan sponsors know if their enrolled beneficiaries are receiving 
+GLP-1s for weight management through the Medicare GLP-1 Bridge?  
+ 
+CMS is establishing a mechanism to share data with Part D plan sponsors about Medicare 
+GLP-1 Bridge utilization and will provide more information in the coming weeks.  
+ 
+Prior Authorization and Coverage Determination Requests  
+ 
+10. What should Part D plan sponsors do if they receive a prior authorization 
+request for a Medicare GLP-1 Bridge-covered drug for weight management? 
+ 
+If a provider submits a prior authorization request to a Part D plan sponsor for a GLP-1 
+product that is excluded from coverage under Medicare Part D (agents when used for 
+weight loss) but may be eligible for coverage under the Medicare GLP-1 Bridge, CMS 
+strongly encourages the Part D plan sponsor to assist with directing the claim to the 
+Medicare GLP-1 Bridge for review. Specifically, CMS strongly encourages Part D plan 
+sponsors to return the following message to the pharmacy as free text in the Additional 
+Message Information (526-FQ) field with the appropriate qualifier “FOR OBESITY: BIN 
+028918 PCN MEDDGLP1BR” (without quotation marks) as recommended by the 
+NCPDP WG9 Medicare FAQ Task Group.  
+ 
+11. How should Part D plan sponsors handle prior authorization requests for GLP-1 
+drugs prescribed for Part D coverable uses? 
+ 
+When a provider prescribes a GLP-1 drug for a beneficiary for a use covered under the 
+basic Part D benefit (e.g. Zepbound® for the treatment of moderate to severe obstructive 
+sleep apnea in adults with obesity; Wegovy® to reduce the risk of major adverse 
+cardiovascular events in adults with established cardiovascular disease and either obesity 
+or overweight) the provider will need to complete the applicable utilization management 
+requirements through the beneficiary’s Part D plan. The Medicare GLP-1 Bridge is 
+outside of the Part D coverage and payment flow and as a result, does not modify any 
+process or requirements for the individual’s Part D coverage.  
+ 
+12. Does the Medicare GLP-1 Bridge affect beneficiary appeal rights or coverage 
+determination requirements under Part D? 
+ 
+No. CMS reminds plan sponsors of their obligations related to coverage determinations 
+under 42 CFR Part 423 Subpart M. The Medicare GLP-1 Bridge does not modify 
+beneficiary appeal rights, including exception requests, in relation to their Part D 
+coverage.  
+ 
+Marketing and Communications  
+ 
+13. What can Part D plan sponsors communicate to beneficiaries about the 
+Medicare GLP-1 Bridge? 
+ 
+6 
+ 
+CMS encourages Part D plan sponsors to direct eligible beneficiaries to 1-800-
+MEDICARE and CMS-provided resources, for more information about the Medicare 
+GLP-1 Bridge. Part D plan sponsors may also provide information publicly available on 
+the Medicare GLP-1 Bridge webpage in a neutral manner.  
+ 
+However, Part D plan sponsors should not represent the Medicare GLP-1 Bridge as part 
+of their benefit offering. Specifically, Part D plan sponsors must not advertise 
+participation in the Medicare GLP-1 Bridge, include the Medicare GLP-1 Bridge in plan 
+benefit materials, or suggest that access to the Medicare GLP-1 Bridge is associated with 
+enrollment in a particular plan. All communications must comply with existing Medicare 
+Advantage and Part D marketing regulations and guidance, including prohibitions on 
+misleading or confusing information. Additionally, Part D plan sponsors should not 
+provide information that improperly directs beneficiaries eligible for a GLP-1 for an 
+indication currently coverable by Part D to utilize the Medicare GLP-1 Bridge.  
+ 
+14. Will CMS conduct outreach to beneficiaries, providers and pharmacies with 
+additional information about the Medicare GLP-1 Bridge and specific 
+instructions related to the program?  
+ 
+Yes, CMS expects to provide additional information for beneficiaries, providers, and 
+pharmacies in advance of the launch of the Medicare GLP-1 Bridge on July 1, 2026. 
+Outreach and educational materials will be posted on the Medicare GLP-1 Bridge 
+webpage.  
+ 
+CMS will be hosting educational webinars for pharmacies. For additional information, 
+please reference the May 28, 2026, HPMS memorandum Medicare GLP-1 Bridge - 
+Informational Pharmacy Webinar. 
+ 
+Beneficiary Inquiries and Complaints  
+ 
+15. How should Part D sponsors direct inquiries from beneficiaries related to the 
+Medicare GLP-1 Bridge?  
+ 
+Beneficiary inquiries related to the Medicare GLP-1 Bridge should be directed to 1-800-
+MEDICARE. CMS reminds Part D plan sponsors that inquiries related to GLP-1 
+coverage under Part D or GLP-1 coverage for an indication other than weight 
+management should be addressed by the Part D plan sponsor.  
+ 
+16. Will Part D plan sponsors be responsible for resolving complaints about the 
+Medicare GLP-1 Bridge in the Complaint Tracking Module (CTM) in the 
+Health Plan Management System (HPMS)?  
+ 
+No, Part D plan sponsors are not responsible for resolving complaints about the Medicare 
+GLP-1 Bridge. Part D plan sponsors continue to be responsible for resolving complaints 
+related to GLP-1 coverage under Part D, GLP-1 coverage for an indication other than 
+7 
+ 
+weight management, or cost-sharing for a Part D-covered drug. If a Part D plan sponsor 
+believes they have been assigned a complaint related to the Medicare GLP-1 Bridge, they 
+may use the Plan Request process to request a contract change. For additional 
+information about the Plan Request process, please see the January 6, 2025, HPMS 
+memorandum Updated Complaints Tracking Module Standard Operating Procedures. 
+ 

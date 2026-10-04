@@ -297,6 +297,18 @@ models:
         - year
         - quarter
         - utilization_type
+- name: mart_sdud_state_quarter_brand
+  description: SDUD obesity-labelled products by state, quarter, brand and dosage form for the panel states (FFSU + MCOU), for the payer-specific brand split.
+  columns: []
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+        - brand_label
+        - dosage_form
 - name: mart_prescriber_year
   description: Medicare Part D prescriber-drug rows (at least 11 claims) with product group, Medicare specialty and NPPES/NUCC taxonomy.
   columns:
@@ -459,7 +471,8 @@ models:
         - year
         - quarter
 - name: mart_nhanes_adults
-  description: NHANES adults aged 20 and over, two cycles stacked, all kept including missing BMI, with design variables and cycle-specific weights.
+  description: NHANES adults aged 18 and over (the adult label population), two cycles stacked, all kept including missing BMI, with design variables, cycle-specific weights, insurance and the condition
+    variables used for eligibility.
   columns:
   - name: cycle
     description: 'NHANES cycle: 2021_2023 or 2017_2020 (pre-pandemic).'

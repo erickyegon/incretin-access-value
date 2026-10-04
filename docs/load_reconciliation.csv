@@ -185,6 +185,7 @@ nhanes,raw.nhanes_bpxo_l,rows,row_count,all,7801,7801,7801,True,True,0,BPXO_L.pa
 nhanes,raw.nhanes_demo_l,rows,row_count,all,11933,11933,11933,True,True,0,DEMO_L.parquet
 nhanes,raw.nhanes_diq_l,rows,row_count,all,11744,11744,11744,True,True,0,DIQ_L.parquet
 nhanes,raw.nhanes_ghb_l,rows,row_count,all,7199,7199,7199,True,True,0,GHB_L.parquet
+nhanes,raw.nhanes_hiq_l,rows,row_count,all,11933,11933,11933,True,True,0,HIQ_L.parquet
 nhanes,raw.nhanes_mcq_l,rows,row_count,all,11744,11744,11744,True,True,0,MCQ_L.parquet
 nhanes,raw.nhanes_p_bmx,rows,row_count,all,14300,14300,14300,True,True,0,P_BMX.parquet
 nhanes,raw.nhanes_p_bpq,rows,row_count,all,10195,10195,10195,True,True,0,P_BPQ.parquet
@@ -192,6 +193,7 @@ nhanes,raw.nhanes_p_bpxo,rows,row_count,all,11656,11656,11656,True,True,0,P_BPXO
 nhanes,raw.nhanes_p_demo,rows,row_count,all,15560,15560,15560,True,True,0,P_DEMO.parquet
 nhanes,raw.nhanes_p_diq,rows,row_count,all,14986,14986,14986,True,True,0,P_DIQ.parquet
 nhanes,raw.nhanes_p_ghb,rows,row_count,all,10409,10409,10409,True,True,0,P_GHB.parquet
+nhanes,raw.nhanes_p_hiq,rows,row_count,all,15560,15560,15560,True,True,0,P_HIQ.parquet
 nhanes,raw.nhanes_p_mcq,rows,row_count,all,14986,14986,14986,True,True,0,P_MCQ.parquet
 nhanes,raw.nhanes_p_rxq_rx,rows,row_count,all,32962,32962,32962,True,True,0,P_RXQ_RX.parquet
 nhanes,raw.nhanes_rxq_drug,rows,row_count,all,1551,1551,1551,True,True,0,RXQ_DRUG.parquet

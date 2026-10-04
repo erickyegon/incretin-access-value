@@ -514,6 +514,8 @@ models:
     description: "NHANES diabetes questionnaire (DIQ), two cycles stacked. Grain: cycle x seqn."
   - name: stg_nhanes__mcq
     description: "NHANES medical conditions questionnaire (MCQ), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__hiq
+    description: "NHANES health insurance questionnaire (HIQ), two cycles stacked (HIQ_L 2021-2023, P_HIQ 2017-2020). Grain: cycle x seqn. HIQ011 = covered by health insurance; HIQ032D = covered by Medicaid; HIQ032E = covered by CHIP; HIQ032B = Medicare. Variables verified against the NCHS codebook pages. Official codebook: https://wwwn.cdc.gov/nchs/nhanes/"
   - name: stg_nhanes__rxq_rx
     description: "NHANES prescription medications (RXQ_RX), two cycles stacked. Grain: cycle x seqn x medication line. The 2021-2023 file has no drug names, only codes."
   - name: stg_nhanes__rxq_drug

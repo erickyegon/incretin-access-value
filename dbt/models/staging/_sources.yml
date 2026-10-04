@@ -69,6 +69,8 @@ sources:
         description: "Raw load of nhanes_diq_l (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_ghb_l
         description: "Raw load of nhanes_ghb_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_hiq_l
+        description: "Raw load of nhanes_hiq_l (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_mcq_l
         description: "Raw load of nhanes_mcq_l (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_p_bmx
@@ -83,6 +85,8 @@ sources:
         description: "Raw load of nhanes_p_diq (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_p_ghb
         description: "Raw load of nhanes_p_ghb (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_hiq
+        description: "Raw load of nhanes_p_hiq (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_p_mcq
         description: "Raw load of nhanes_p_mcq (see docs/load_reconciliation.csv for source file and checks)."
       - name: nhanes_p_rxq_rx

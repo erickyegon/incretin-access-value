@@ -1,0 +1,534 @@
+NCHS reports can be downloaded from:  
+https://www.cdc.gov/nchs/products/index.htm.
+NCHS Data Brief ■ No. 511 ■ October 2024
+Hypertension Prevalence, Awareness, Treatment, and 
+Control Among Adults Age 18 and Older: United States, 
+August 2021–August 2023
+Cheryl D. Fryar, M.S.P.H., Brian Kit, M.D., Margaret D. Carroll, M.S.P.H., and Joseph Afful, M.S.
+Key findings 
+Data from the National 
+Health and Nutrition 
+Examination Survey 
+ ● During August 2021–August 
+2023, the prevalence of adult 
+hypertension was 47.7%. 
+Hypertension was higher in 
+men (50.8%) than women 
+(44.6%) and increased with 
+age: 23.4% for ages 18–39, 
+52.5% for 40–59, and 71.6% 
+for 60 and older.
+ ● Among adults with 
+hypertension, 59.2% were 
+aware of their hypertension 
+status.
+ ● More than one-half of 
+adults with hypertension 
+were currently taking 
+medication (51.2%) to lower 
+blood pressure.
+ ● About one-fifth of adults 
+with hypertension had their 
+blood pressure controlled 
+(20.7%) to less than 
+130/80 mm Hg.
+ ● No significant change was 
+seen in awareness, treatment, 
+or control of hypertension 
+among adults with hypertension 
+between 2017–March 2020 and 
+August 2021–August 2023.
+Hypertension affects almost one-half the U.S. adult population (1) and is an 
+important risk factor for cardiovascular disease (2). During 2017–March 2020, 
+48.1% of adults had hypertension. Among adults with hypertension, more than 
+one-half reported taking medication to lower their blood pressure and about 
+one-fifth had their blood pressure under control (3). This report presents the 
+latest findings from the National Health and Nutrition Examination Survey 
+on the prevalence, awareness, treatment, and control of hypertension among 
+adults in the United States during August 2021–August 2023. 
+Were there differences in the prevalence of hypertension in 
+adults by sex and age during August 2021–August 2023?
+Hypertension prevalence in adults age 18 and older was 47.7% and was higher 
+in men (50.8%) than women (44.6%) (Figure 1, Table 1). The prevalence of 
+Figure 1. Prevalence of hypertension in adults age 18 and older, by sex and 
+age: United States, August 2021–August 2023
+1Significantly different from women in the same age group.
+2Significant increasing trend by age.
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater 
+than or equal to 80 mm Hg, or currently taking medication to lower blood pressure. Estimates for age group 18 and older, when 
+age adjusted by the direct method to the U.S. Census 2000 population using age groups 18–39, 40–59, and 60 and older, are 
+44.5% for total population, 48.8% for men, and 40.1% for women. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023.
+Total2 Men2 Women2
+100
+80
+60
+40
+20
+0
+Percent
+47.7
+23.4
+52.5
+71.6
+150.8
+130.0
+155.9
+72.7
+44.6
+16.4
+49.0
+70.6
+60 and older40–5918–3918 and older
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  2  ■
+hypertension increased with age. The prevalence was 23.4% in adults ages 18–39 and increased 
+to 52.5% for ages 40–59 and 71.6% for 60 and older.
+For both men and women, a similar pattern of increasing prevalence of hypertension by age was 
+observed. Hypertension prevalence was higher in men than women ages 18–39 (30.0% compared 
+with 16.4%) and 40–59 (55.9% compared with 49.0%), but the prevalence was not significantly 
+different between men and women age 60 and older.
+Did awareness of hypertension differ among adults with hypertension by 
+sex and age during August 2021–August 2023?
+During August 2021–August 2023, 59.2% of adults with hypertension were aware of their 
+hypertension status (Figure 2, Table 2). The prevalence of hypertension awareness increased 
+with age overall and among both men and women. The prevalence was 27.2% among adults ages 
+18–39 and increased to 56.7% for ages 40–59 and 73.7% for 60 and older. 
+Hypertension awareness was lower among men (55.2%) than women (63.6%) overall and among 
+young adults 18–39 (23.3% compared with 34.6%), but the prevalence was not significantly 
+different between men and women ages 40–59 and 60 and older. 
+Figure 2. Prevalence of hypertension awareness among adults age 18 and older with 
+hypertension, by sex and age: United States, August 2021–August 2023
+1Significantly different from women in the same age group.
+2Significant increasing trend by age.
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, awareness is defined as a yes response to the survey question, “Have you 
+ever been told by a doctor or health professional that you had hypertension, also called high blood pressure?”
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023.
+Total2 Men2 Women2
+100
+80
+60
+40
+20
+0
+Percent
+60 and older40–5918–3918 and older 60 and older40–5918–3918 and older
+59.2
+27.2
+56.7
+73.7
+155.2
+123.3
+55.1
+72.8
+63.6
+34.6
+58.5
+74.5
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  3  ■
+Did treatment of hypertension differ among adults with hypertension by sex 
+and age during August 2021–August 2023? 
+Among adults with hypertension during August 2021–August 2023, 51.2% reported taking 
+medications for treatment of their hypertension (Figure 3, Table 3). The prevalence of 
+hypertension treatment increased with age overall and among men and women. The prevalence 
+was 13.9% among adults ages 18–39 and increased to 47.1% for ages 40–59 and 69.1% for 
+60 and older. 
+Hypertension treatment was lower among men (46.7%) than women (56.1%) overall and among 
+young adults 18–39 (10.1% compared with 21.4%), but the prevalence was not significantly 
+different between men and women ages 40–59 and 60 and older.
+Figure 3. Prevalence of hypertension treatment among adults age 18 and older with 
+hypertension, by sex and age: United States, August 2021–August 2023
+1Significantly different from women in the same age group.
+2Significant increasing trend by age.
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, treatment is defined as currently taking medication to lower blood pressure, 
+based on a yes response to the survey question, “Are you now taking any medication prescribed by a doctor for your high blood pressure?” 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023.
+Total2 Men2 Women2
+100
+80
+60
+40
+20
+0
+Percent
+60 and older40–5918–3918 and older 60 and older40–5918–3918 and older
+51.2
+13.9
+47.1
+69.1
+146.7
+110.1
+46.3
+67.4
+56.1
+21.4
+48.0
+70.5
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  4  ■
+Did control of hypertension differ among adults with hypertension by sex 
+and age during August 2021–August 2023?
+Among adults with hypertension, 20.7% had controlled hypertension during August 2021– 
+August 2023 (Figure 4, Table 4). The prevalence of hypertension control increased with age 
+overall and among men and women. The prevalence was 4.5% among adults ages 18–39 and 
+increased to 18.1% for ages 40–59 and 29.2% for 60 and older. 
+The prevalence of controlled hypertension was lower among men (18.9%) than women (22.8%) 
+overall and for those ages 40–59 (13.6% compared with 23.2%). The observed difference 
+between men and women age 60 and older was not significant.
+Figure 4. Prevalence of hypertension control among adults age 18 and older with hypertension, 
+by sex and age: United States, August 2021–August 2023
+† Estimate does not meet National Center for Health Statistics presentation standards for proportions; for more information, see "National Center for Health 
+Statistics Data Presentation Standards for Proportions," available from: https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf.
+1Significantly different from women in the same age group.
+2Significant increasing trend by age.
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, control is defined as having systolic blood pressure below 130 mm Hg and 
+diastolic blood pressure below 80 mm Hg. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023.
+Total2 Men2 Women2
+100
+80
+60
+40
+20
+0
+Percent
+60 and older40–5918–3918 and older 60 and older40–5918–3918 and older
+20.7
+4.5
+18.1
+29.2
+118.9
+†3.1
+113.6
+32.4
+22.8
+†7.2
+23.2 26.4
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  5  ■
+Were there differences in the prevalence of awareness, treatment, 
+or control of hypertension among adults with hypertension between 
+2017–March 2020 and August 2021–August 2023? 
+No significant change was seen between 2017–March 2020 and August 2021–August 2023 in 
+the prevalence of hypertension awareness (60.2% compared with 59.2%), treatment (50.3% and 
+51.2%), or control (22.2% and 20.7%) among adults with hypertension (Figure 5, Table 5).
+Summary
+Nearly 48% of U.S. adults had hypertension during August 2021–August 2023 (47.7%), 
+consistent with 48.1% reported during 2017–March 2020 (3,4). The prevalence of hypertension 
+increased with increasing age, with more than 70% of adults age 60 and older having 
+hypertension. 
+Hypertension is a treatable chronic condition. Men were more likely than women to have 
+hypertension, but among those with hypertension, a higher percentage of women were aware of 
+their hypertension, reported treatment for hypertension, and had controlled hypertension. The 
+reason for this sex difference may be multifaceted, and research shows that women generally seek 
+health care more than men (5).
+Based on recent national data from August 2021 through August 2023, the prevalence of 
+hypertension remains above the Healthy People 2030 target goal to lower blood pressure to 
+Figure 5. Prevalence of hypertension awareness, treatment, and control among adults age 18 
+and older with hypertension: United States, 2017–March 2020 and August 2021–August 2023
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, awareness is defined as a yes response to the survey question, “Have you 
+ever been told by a doctor or health professional that you had hypertension, also called high blood pressure?”; treatment is defined as currently taking medication 
+to lower blood pressure, based on a yes response to the question, “Are you now taking any medication prescribed by a doctor for your high blood pressure?”; and 
+control is defined as having systolic blood pressure below 130 mm Hg and diastolic blood pressure below 80 mm Hg. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, 2017–March 2020 and August 2021–August 2023.
+Awareness Treatment Control
+100
+80
+60
+40
+20
+0
+Percent
+August 2021–August 20232017–March 2020
+60.2 59.2
+50.3 51.2
+22.2 20.7
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  6  ■
+41.9% of the population or below (6). However, the prevalence of controlled hypertension at 
+20.7% is higher than the Healthy People 2030 target goal of 18.9% or above (7).
+Definitions
+Hypertension: Systolic blood pressure of 130 mm Hg or above or diastolic blood pressure of 80 
+mm Hg or above, or currently taking medication to lower blood pressure. This definition is based 
+on criteria from the American College of Cardiology and American Heart Association’s 2017 
+Hypertension Guideline (8). Previously published National Center for Health Statistics reports 
+have used a higher threshold of 140/90 mm Hg (9,10).
+Awareness of hypertension: Among those with hypertension, indicated by a yes response to 
+the survey question, “Have you ever been told by a doctor or health professional that you had 
+hypertension, also called high blood pressure?” 
+Treatment for hypertension: Among those with hypertension, defined as currently taking 
+medication to lower blood pressure, based on a yes response to the survey question, “Are you 
+now taking any medication prescribed by a doctor for your high blood pressure?” This definition 
+does not include lifestyle modifications for treatment of hypertension.
+Controlled hypertension: Among those with hypertension, defined as having systolic blood 
+pressure below 130 mm Hg and diastolic blood pressure below 80 mm Hg.
+Data source and methods
+Data for this report are from the August 2021–August 2023 National Health and Nutrition 
+Examination Survey, a cross-sectional survey designed to monitor the health and nutritional 
+status of the U.S. civilian noninstitutionalized population (11). The survey is conducted by the 
+Centers for Disease Control and Prevention’s National Center for Health Statistics. The survey 
+sample is selected through a complex, multistage design and consists of interviews conducted 
+in the participant’s home or by phone; a standardized health examination that includes blood 
+pressure measurement in a mobile examination center; and laboratory tests using blood and urine 
+specimens provided during the health examination (12). Unlike previous years, no oversampling 
+was done by race and Hispanic origin or income.
+An average of up to three brachial systolic and diastolic blood pressure readings were taken using 
+an oscillometric device. All blood pressure readings were obtained during a participant’s health 
+examination in the mobile examination center by trained staff following a standard protocol 
+(13). Examination sample weights, which account for the differential probabilities of selection, 
+nonresponse, and noncoverage, were incorporated into the estimation process. All variance 
+estimates accounted for the complex survey design using Taylor series linearization. Analyses 
+excluded pregnant women.
+Differences between groups were tested using a t statistic at the p < 0.05 significance level. All 
+differences reported are statistically significant unless otherwise indicated. Adjustments were 
+not made for multiple comparisons. Statistical analyses were conducted using the SAS System 
+for Windows (Release 9.4, SAS Institute Inc., Cary, N.C.) and SUDAAN (Release 11.1, RTI 
+International, Research Triangle Park, N.C.).
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  7  ■
+About the authors
+Cheryl D. Fryar, Brian Kit, and Margaret D. Carroll are with the National Center for Health 
+Statistics, Division of Health and Nutrition Examination Surveys. Joseph Afful is a contractor 
+with the Peraton Corporation.
+References
+1. Ostchega Y , Fryar CD, Nwankwo T, Nguyen DT. Hypertension prevalence among adults aged 
+18 and over: United States, 2017–2018. NCHS Data Brief, no 364. Hyattsville, MD: National 
+Center for Health Statistics. 2020.
+2. Fuchs FD, Whelton PK. High blood pressure and cardiovascular disease. Hypertension 
+75(2):285–92. 2020.
+3. Centers for Disease Control and Prevention. Estimated hypertension prevalence, treatment, 
+and control among U.S. adults. Figure: Hypertension prevalence, treatment and control (blood 
+pressure <130/80 mm Hg) among US adults—Applying the criteria from the American College 
+of Cardiology and American Heart Association’s (ACC/AHA) 2017 hypertension clinical practice 
+guideline—NHANES 2017–March 2020. 2023. Available from: https://millionhearts.hhs.gov/
+data-reports/hypertension-prevalence.html.
+4. Stierman B, Afful J, Carroll MD, Chen TC, Davy O, Fink S, et al. National Health and 
+Nutrition Examination Survey 2017–March 2020 prepandemic data files—Development of files 
+and prevalence estimates for selected health outcomes. National Health Statistics Reports; no 158. 
+Hyattsville, MD: National Center for Health Statistics. 2021. DOI: https://dx.doi.org/10.15620/
+cdc:106273.
+5. Ashman JJ, Santo L, Okeyode T. Characteristics of office-based physician visits by age, 2019. 
+National Health Statistics Reports; no 184. Hyattsville, MD: National Center for Health Statistics. 
+2023. DOI: https://dx.doi.org/10.15620/cdc:125462.
+6. U.S. Department of Health and Human Services. Healthy people 2030: Reduce the proportion 
+of adults with high blood pressure—HDS 04. Available from: https://health.gov/healthypeople/
+objectives-and-data/browse-objectives/heart-disease-and-stroke/reduce-proportion-adults-high-
+blood-pressure-hds-04.
+7. U.S. Department of Health and Human Services. Healthy people 2030: Increase control 
+of high blood pressure in adults—HDS 05. Available from: https://health.gov/healthypeople/
+objectives-and-data/browse-objectives/heart-disease-and-stroke/increase-control-high-blood-
+pressure-adults-hds-05. 
+8. Whelton PK, Carey RM, Aronow WS, Casey DE Jr, Collins KJ, Dennison Himmelfarb C, et 
+al. 2017 ACC/AHA/AAPA/ABC/ACPM/AGS/APhA/ASH/ASPC/NMA/PCNA guideline for the 
+prevention, detection, evaluation, and management of high blood pressure in adults: A report of 
+the American College of Cardiology/American Heart Association Task Force on Clinical Practice 
+Guidelines. J Am Coll Cardiol 71(19):e127–248. 2018.
+9. Yoon SS, Fryar CD, Carroll MD. Hypertension prevalence and control among adults: 
+United States, 2011–2014. NCHS Data Brief, no 220. Hyattsville, MD: National Center for 
+Health Statistics. 2015.
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  8  ■
+10. Nwankwo T, Yoon SS, Burt V , Gu Q. Hypertension among adults in the United States: 
+National Health and Nutrition Examination Survey, 2011–2012. NCHS Data Brief, no 133. 
+Hyattsville, MD: National Center for Health Statistics. 2013.
+11. National Center for Health Statistics. National Health and Nutrition Examination Survey: 
+NHANES questionnaires, datasets, and related documentation. Available from: 
+https://wwwn.cdc.gov/nchs/nhanes/Default.aspx.
+12. Terry AL, Chiappa MM, McAllister J, Woodwell DA, Graber JE. Plan and operations of the 
+National Health and Nutrition Examination Survey, August 2021–August 2023. National Center 
+for Health Statistics. Vital Health Stat 1(66). 2024. DOI: https://dx.doi.org/10.15620/cdc/151927.
+13. National Center for Health Statistics. National Health and Nutrition Examination Survey. 
+2021 blood pressure-oscillometric measurement procedures manual. 2021. Available from: 
+https://wwwn.cdc.gov/nchs/data/nhanes/2021-2023/manuals/2021-BloodPressureProcedures- 
+508.pdf.
+Figure Tables
+Data table for Figure 1. Prevalence of hypertension in adults age 18 and older, by sex and age: 
+United States, August 2021–August 2023
+Sex and age group Sample size
+Percent  
+(95% confidence 
+interval) Standard error
+Total
+18 and older (age adjusted). . . . . . . . . . . . . . . . . 6,084 44.5 (42.1–46.9) 1.1
+18 and older (crude)  . . . . . . . . . . . . . . . . . . . . . . 6,084 47.7 (45.4–49.9) 1.1
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,712 23.4 (20.2–26.9) 1.6
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,681 52.5 (49.5–55.4) 1.4
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 2,691 71.6 (68.7–74.3) 1.3
+Men
+18 and older (age adjusted). . . . . . . . . . . . . . . . . 2,776 48.8 (46.2–51.4) 1.2
+18 and older (crude)  . . . . . . . . . . . . . . . . . . . . . . 2,776 50.8 (48.4–53.2) 1.1
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 787 30.0 (26.2–34.1) 1.8
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 752 55.9 (50.6–61.1) 2.4
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,237 72.7 (68.8–76.4) 1.7
+Women
+18 and older (age adjusted). . . . . . . . . . . . . . . . . 3,308 40.1 (37.2–43.1) 1.3
+18 and older (crude)  . . . . . . . . . . . . . . . . . . . . . . 3,308 44.6 (41.4–47.8) 1.5
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 925 16.4 (12.6–21.0) 1.9
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 929 49.0 (45.8–52.3) 1.5
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,454 70.6 (67.2–73.8) 1.5
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, 
+or currently taking medication to lower blood pressure. Age-adjusted estimates for adults age 18 and older were age adjusted by the direct method to the U.S. 
+Census 2000 population using age groups 18–39, 40–59, and 60 and older. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023. 
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  9  ■
+Data table for Figure 2. Prevalence of hypertension awareness among adults age 18 and older 
+with hypertension, by sex and age: United States, August 2021–August 2023
+Sex and age group Sample size
+Percent  
+(95% confidence 
+interval) Standard error
+Total   
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,240 59.2 (56.4–61.9) 1.3
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399 27.2 (21.4–33.6) 2.8
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 897 56.7 (51.3–62.0) 2.4
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,944 73.7 (70.8–76.4) 1.3
+Men
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,575 55.2 (52.4–57.9) 1.3
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225 23.3 (16.2–31.8) 3.5
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431 55.1 (49.7–60.4) 2.5
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 919 72.8 (68.6–76.8) 1.9
+Women
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,665 63.6 (60.1–67.0) 1.6
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174 34.6 (26.5–43.5) 3.9
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 466 58.5 (51.9–64.9) 3.0
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,025 74.5 (69.8–78.7) 2.0
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, awareness is defined as a yes response to the survey question, “Have you 
+ever been told by a doctor or health professional that you had hypertension, also called high blood pressure?”
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023. 
+Data table for Figure 3. Prevalence of hypertension treatment among adults age 18 and older 
+with hypertension, by sex and age: United States, August 2021–August 2023
+Sex and age group Sample size
+Percent  
+(95% confidence 
+interval) Standard error
+Total   
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,238 51.2 (48.6–53.7) 1.2
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399 13.9 (10.0–18.7) 1.9
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 896 47.1 (42.8–51.5) 2.0
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,943 69.1 (66.3–71.7) 1.3
+Men
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,574 46.7 (43.6–49.9) 1.5
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225 10.1 (5.1–17.4) 2.7
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 430 46.3 (40.9–51.8) 2.5
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 919 67.4 (61.9–72.6) 2.5
+Women
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,664 56.1 (53.0–59.2) 1.4
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174 21.4 (15.2–28.7) 3.1
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 466 48.0 (41.7–54.4) 2.9
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,024 70.5 (66.7–74.1) 1.7
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, treatment is defined as currently taking medication to lower blood pressure, 
+based on a yes response to the survey question, “Are you now taking any medication prescribed by a doctor for your high blood pressure?”
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023. 
+NCHS Data Brief ■ No. 511 ■ October 2024
+■  10  ■
+Data table for Figure 4. Prevalence of hypertension control among adults age 18 and older with 
+hypertension, by sex and age: United States, August 2021–August 2023
+Sex and age group Sample size
+Percent  
+(95% confidence 
+interval) Standard error
+Total
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,242 20.7 (18.8–22.8) 0.9
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 399 4.5 (2.7–7.0) 0.9
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 897 18.1 (14.9–21.6) 1.5
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,946 29.2 (25.5–33.1) 1.7
+Men
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,577 18.9 (16.5–21.5) 1.2
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225 †3.1 (0.9–7.4) 1.3
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 431 13.6 (9.7–18.3) 1.9
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 921 32.4 (26.6–38.6) 2.7
+Women
+18 and older. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,665 22.8 (19.8–26.0) 1.4
+18–39 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 174 †7.2 (2.7–15.1) 2.6
+40–59 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 466 23.2 (18.8–28.0) 2.1
+60 and older . . . . . . . . . . . . . . . . . . . . . . . . . . . 1,025 26.4 (22.6–30.5) 1.8
+† Estimate does not meet National Center for Health Statistics presentation standards for proportions; for more information, see “National Center for Health 
+Statistics Data Presentation Standards for Proportions,” available from: https://www.cdc.gov/nchs/data/series/sr_02/sr02_175.pdf.
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, control is defined as having systolic blood pressure below 130 mm Hg and 
+diastolic blood pressure below 80 mm Hg. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, August 2021–August 2023. 
+Data table for Figure 5. Prevalence of hypertension awareness, treatment, and control 
+among adults age 18 and older with hypertension: United States, 2017–March 2020 and 
+August 2021–August 2023
+Survey year and 
+hypertension characteristic Sample size
+Percent 
+(95% confidence 
+interval) Standard error
+2017–March 2020
+Awareness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,297 60.2 (57.4–63.0) 1.3
+Treatment  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,295 50.3 (47.5–53.1) 1.4
+Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4,305 22.2 (20.6–23.9) 0.8
+August 2021–August 2023
+Awareness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,240 59.2 (56.4–61.9) 1.3
+Treatment  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,328 51.2 (48.6–53.7) 1.2
+Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3,242 20.7 (18.8–22.8) 0.9
+NOTES: Hypertension is defined as systolic blood pressure greater than or equal to 130 mm Hg or diastolic blood pressure greater than or equal to 80 mm Hg, or 
+currently taking medication to lower blood pressure. Among those with hypertension, awareness is defined as a yes response to the survey question, “Have you 
+ever been told by a doctor or health professional that you had hypertension, also called high blood pressure?”;  treatment is defined as currently taking medication 
+to lower blood pressure, based on a yes response to the question, “Are you now taking any medication prescribed by a doctor for your high blood pressure?”; and 
+control is defined as having systolic blood pressure below 130 mm Hg and diastolic blood pressure below 80 mm Hg. 
+SOURCE: National Center for Health Statistics, National Health and Nutrition Examination Survey, 2017–March 2020 and August 2021–August 2023. 
+NCHS Data Brief  ■ No. 511 ■ October 2024
+Keywords: high blood pressure • National Health and Nutrition Examination 
+Survey (NHANES) 
+Suggested citation
+Fryar CD, Kit B, Carroll MD, Afful J. 
+Hypertension prevalence, awareness, treatment, 
+and control among adults age 18 and older: United 
+States, August 2021–August 2023. NCHS Data 
+Brief, no 511. Hyattsville, MD: National Center 
+for Health Statistics. 2024. DOI:  
+https://dx.doi.org/10.15620/cdc/164016.
+Copyright information
+All material appearing in this report is in the 
+public domain and may be reproduced or copied 
+without permission; citation as to source, 
+however, is appreciated.
+National Center for Health 
+Statistics
+Brian C. Moyer, Ph.D., Director
+Amy M. Branum, Ph.D., Associate Director for 
+Science
+Division of Health and Nutrition Examination 
+Surveys
+Alan E. Simon, M.D., Director
+Lara J. Akinbami, M.D., Associate Director for 
+Science
+For e-mail updates on NCHS publication 
+releases, subscribe online at:  
+https://www.cdc.gov/nchs/updates/. 
+ 
+For questions or general information 
+about NCHS: 
+T el: 1–800–CDC–INFO (1–800–232–4636) 
+TTY: 1–888–232–6348 
+Internet: https://www.cdc.gov/nchs 
+Online request form: https://www.cdc.gov/info
+ISSN 1941–4927 Print ed. 
+ISSN 1941–4935 Online ed. 
+ 
+CS354233
+U.S. DEPARTMENT OF  
+HEALTH & HUMAN SERVICES
+Centers for Disease Control and Prevention 
+National Center for Health Statistics 
+3311 T oledo Road, Room 4551, MS P08 
+Hyattsville, MD 20782–2064
+OFFICIAL  BUSINESS   
+PENALTY  FOR PRIVATE USE, $300
+For more NCHS Data Briefs, visit: 
+https://www.cdc.gov/nchs/products/databriefs.htm.
+FIRST  CLASS  MAIL 
+POSTAGE  & FEES  PAID 
+CDC/NCHS  
+PERMIT  NO. G-284
