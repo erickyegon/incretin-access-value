@@ -1,0 +1,327 @@
+version: 2
+models:
+- name: quarters
+  description: Calendar quarters 2018Q1 to 2026Q1, one row per quarter (33).
+  columns:
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_id
+    description: Year x 10 + quarter, a sortable integer.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+    data_tests:
+    - unique
+    - not_null
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: quarter_end
+    description: Last day of the quarter.
+  - name: days_in_quarter
+    description: Number of days in the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  data_tests: []
+- name: int_enrollment__state_month
+  description: 'Enrollment by panel state and month, 2018-01 to 2026-03 (51 x 99): the Updated report, falling back to Preliminary, with the footnote flags.'
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: month_start
+    description: First day of the month.
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: report_status_used
+    description: updated, preliminary, or missing when the dataset has no row for the state-month.
+  - name: has_enrollment_row
+    description: True when the dataset has a row for the state-month.
+  - name: total_medicaid_enrollment
+    description: Medicaid-only enrollees at month end (item 8a).
+  - name: total_medicaid_and_chip_enrollment
+    description: Medicaid + CHIP enrollees at month end (8a + 8h).
+  - name: total_adult_medicaid_enrollment
+    description: Adult Medicaid enrollees (8d + 8g); NULL before 2024-07.
+  - name: total_medicaid_enrollment_footnote
+    description: Source footnote on the Medicaid count.
+  - name: total_medicaid_and_chip_enrollment_footnote
+    description: Source footnote on the Medicaid + CHIP count.
+  - name: total_adult_medicaid_enrollment_footnote
+    description: Source footnote on the adult Medicaid count.
+  - name: definition_caveat
+    description: True when the footnote on total Medicaid enrollment changes the count definition (values are kept).
+  - name: definition_caveat_medicaid_chip
+    description: Same flag for the Medicaid + CHIP count.
+  - name: definition_caveat_adult
+    description: Same flag for the adult count.
+  - name: data_unavailable_note
+    description: True when a footnote says the state could not provide data (Rhode Island, 2024-12).
+  - name: enrollment_zero_set_null
+    description: 'True when a reported zero was set to NULL (Rhode Island): the value stays missing.'
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - month_start
+- name: int_enrollment__state_quarter
+  description: 'Enrollment by panel state and quarter (51 x 33): average of the months present, months-present counts, definition-caveat roll-ups and the quarter-on-quarter change.'
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: enrollment_medicaid_avg
+    description: Quarter average of total Medicaid enrollment (item 8a), the primary denominator; months with no value are skipped.
+  - name: n_months_present_medicaid
+    description: Months (0 to 3) with a value behind enrollment_medicaid_avg.
+  - name: enrollment_medicaid_chip_avg
+    description: Quarter average of Medicaid + CHIP enrollment (8a + 8h), sensitivity denominator.
+  - name: n_months_present_medicaid_chip
+    description: Months (0 to 3) with a value behind enrollment_medicaid_chip_avg.
+  - name: enrollment_adult_medicaid_avg
+    description: Quarter average of adult Medicaid enrollment (8d + 8g), second sensitivity denominator; reported only from 2024-07.
+  - name: n_months_present_adult_medicaid
+    description: Months (0 to 3) with a value behind enrollment_adult_medicaid_avg.
+  - name: n_months_updated
+    description: Months of the quarter taken from the Updated report.
+  - name: n_months_preliminary
+    description: Months of the quarter taken from the Preliminary report (only where no Updated row exists).
+  - name: n_months_no_row
+    description: Months with no enrollment row in either report.
+  - name: definition_caveat
+    description: True when any month of the quarter has a footnote on total Medicaid enrollment that changes the count definition (for example 'not a point-in-time count').
+  - name: n_months_definition_caveat
+    description: Months of the quarter carrying that footnote.
+  - name: definition_caveat_medicaid_chip
+    description: Same flag for the Medicaid + CHIP count.
+  - name: definition_caveat_adult
+    description: Same flag for the adult Medicaid count.
+  - name: data_unavailable_note
+    description: True when a footnote says the state could not provide data (Rhode Island, 2024-12).
+  - name: enrollment_zero_set_null
+    description: 'True when a reported zero was set to NULL (Rhode Island): the value stays missing.'
+  - name: qoq_change_medicaid
+    description: Quarter-on-quarter relative change of enrollment_medicaid_avg (a warn test flags more than 25%).
+  - name: qoq_change_medicaid_chip
+    description: Quarter-on-quarter relative change of enrollment_medicaid_chip_avg.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+- name: int_enrollment__managed_care_share
+  description: Share of Medicaid enrollees in comprehensive managed care by panel state and year (2018 to 2026); 2025 and 2026 carry the 2024 share forward.
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: share_comprehensive_managed_care
+    description: Comprehensive managed care enrollment / total Medicaid enrollees.
+  - name: is_carried_forward
+    description: True for 2025 and 2026, which use the 2024 share (assumption).
+  - name: report_total_medicaid_enrollees
+    description: Total Medicaid enrollees in the managed care report.
+  - name: report_enrollment_comprehensive_managed_care
+    description: Comprehensive managed care enrollment in the managed care report.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+- name: int_coverage__state_quarter
+  description: State Medicaid obesity-drug coverage by panel state and quarter (51 x 33).
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: analysis_group
+    description: primary, sensitivity or never_treated, from the coverage table (primary requires a documented start inside one calendar quarter).
+  - name: covered_days_share
+    description: Share of the quarter's days inside a coverage spell, using the latest possible start date (conservative).
+  - name: covered_days_share_max
+    description: Same share using the earliest possible start date (equal for dated starts).
+  - name: coverage_active
+    description: True when covered_days_share > 0 (any covered day in the quarter).
+  - name: coverage_full_quarter
+    description: True when every day of the quarter is covered.
+  - name: first_treated_quarter
+    description: Quarter containing the first coverage start; NULL when a sensitivity state's start range straddles quarters.
+  - name: first_full_quarter
+    description: 'First fully covered quarter: the same quarter if coverage starts on its first day, else the next (month-only starts take the next quarter).'
+  - name: start_quarter_earliest
+    description: Quarter of the earliest possible start date.
+  - name: start_quarter_latest
+    description: Quarter of the latest possible start date.
+  - name: start_precision
+    description: 'Precision of the documented start: day, month or range.'
+  - name: post_withdrawal
+    description: True when the quarter has no covered day after a coverage spell has ended.
+  - name: kansas_flag
+    description: True for Kansas (primary by decision; the analysis also runs without it).
+  - name: category_level_spa
+    description: True when the state plan amendment covers the drug category, not Wegovy by name (Mississippi, Tennessee).
+  - name: has_coverage_spell
+    description: True when the state has any documented coverage spell.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+- name: int_sdud__ndc_group
+  description: Product group and dosage form group of every product_map NDC.
+  columns:
+  - name: ndc11
+    description: 11-digit NDC as text.
+    data_tests:
+    - unique
+    - not_null
+  - name: brand
+    description: Brand name, empty for brand-less generics.
+  - name: ingredient
+    description: Active ingredient.
+  - name: label_group
+    description: 'Labelled indication group of the product: diabetes or obesity.'
+  - name: dosage_form
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: dosage_form_group
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: is_combination
+    description: True for insulin/GLP-1 combination products (Soliqua, Xultophy).
+  - name: labeler_verified
+    description: False when the labeler of the NDC could not be confirmed from an official FDA file.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: brand_label
+    description: Brand name, or 'GENERIC <ingredient>' for brand-less generics.
+  data_tests: []
+- name: int_sdud__state_quarter_group
+  description: SDUD aggregated to state x quarter x utilization type (FFSU, MCOU, ALL) x product group x dosage form group, with observed and upper-bound measures.
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  - name: utilization_type
+    description: 'SDUD utilization type: FFSU (fee-for-service), MCOU (managed care) or ALL (FFSU + MCOU; never add ALL to the other two).'
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: dosage_form_group
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: n_rows
+    description: Number of SDUD state-NDC rows behind the cell (suppressed rows included).
+  - name: n_suppressed_rows
+    description: Number of those rows that CMS suppressed (1 to 10 prescriptions each).
+  - name: rx_observed
+    description: Prescriptions in the unsuppressed rows only (suppressed rows contribute nothing).
+  - name: rx_upper_bound
+    description: 'rx_observed + 10 x n_suppressed_rows: the most the cell could hold.'
+  - name: units_observed
+    description: Units reimbursed in unsuppressed rows.
+  - name: units_upper_bound
+    description: 'Units upper bound: observed plus, per suppressed row, 10 prescriptions at the highest units-per-prescription seen for that NDC; NULL when units_bound_complete is false.'
+  - name: amount_total_observed
+    description: Total amount reimbursed (Medicaid + non-Medicaid, USD, gross of rebates) in unsuppressed rows.
+  - name: amount_total_upper_bound
+    description: Upper bound of total amount reimbursed, built like units_upper_bound; NULL when it cannot be bounded.
+  - name: amount_medicaid_observed
+    description: Medicaid amount reimbursed (USD, gross of rebates) in unsuppressed rows.
+  - name: amount_medicaid_upper_bound
+    description: Upper bound of the Medicaid amount reimbursed, built like units_upper_bound; NULL when it cannot be bounded.
+  - name: units_bound_complete
+    description: True when every suppressed row's NDC has an unsuppressed row to take the per-prescription ratio from.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+        - utilization_type
+        - product_group
+        - dosage_form_group
+- name: int_sdud__national_residual
+  description: National (XX) prescriptions minus the sum of state prescriptions, per NDC, quarter and utilization type (FFSU, MCOU).
+  columns:
+  - name: ndc11
+    description: 11-digit NDC as text.
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: utilization_type
+    description: 'SDUD utilization type: FFSU (fee-for-service), MCOU (managed care) or ALL (FFSU + MCOU; never add ALL to the other two).'
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: dosage_form_group
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: has_national_row
+    description: True when SDUD has a national row for the NDC-quarter-type.
+  - name: national_suppressed
+    description: True when the national row is suppressed.
+  - name: national_rx
+    description: National prescriptions (NULL when suppressed).
+  - name: n_state_rows
+    description: State rows (all jurisdictions) for the NDC-quarter-type.
+  - name: n_state_suppressed
+    description: Suppressed state rows for the NDC-quarter-type.
+  - name: state_rx_observed
+    description: Sum of unsuppressed state prescriptions (territories included).
+  - name: residual_rx
+    description: 'national_rx - state_rx_observed: the volume held in suppressed state rows.'
+  - name: residual_usable
+    description: True when the national row is unsuppressed and residual_rx is positive.
+  - name: residual_within_bounds
+    description: True when residual_rx lies between 0 and 10 x n_state_suppressed.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - ndc11
+        - year
+        - quarter
+        - utilization_type
+- name: int_drug_name__product_group
+  description: Product group for each brand/generic name pair in Part D and Medicaid spending and Part D prescriber files.
+  columns:
+  - name: brand_name
+    description: Brand name as published by the source.
+  - name: generic_name
+    description: Generic name as published by the source.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: group_basis
+    description: 'How the product group was assigned: brand, or generic_name_diabetes when only a generic name was available.'
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - brand_name
+        - generic_name

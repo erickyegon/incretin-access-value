@@ -1,0 +1,667 @@
+version: 2
+models:
+- name: mart_did_panel
+  description: 'Difference-in-differences panel: 51 states (50 + DC) x 33 quarters = 1,683 rows, with coverage timing, three enrollment denominators and prescription rates per 1,000 in levels.'
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: state_name
+    description: State name.
+  - name: census_region
+    description: Census region of the state.
+  - name: census_division
+    description: Census division of the state.
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  - name: analysis_group
+    description: primary, sensitivity or never_treated, from the coverage table (primary requires a documented start inside one calendar quarter).
+  - name: has_coverage_spell
+    description: True when the state has any documented coverage spell.
+  - name: covered_days_share
+    description: Share of the quarter's days inside a coverage spell, using the latest possible start date (conservative).
+  - name: covered_days_share_max
+    description: Same share using the earliest possible start date (equal for dated starts).
+  - name: coverage_active
+    description: True when covered_days_share > 0 (any covered day in the quarter).
+  - name: coverage_full_quarter
+    description: True when every day of the quarter is covered.
+  - name: first_treated_quarter
+    description: Quarter containing the first coverage start; NULL when a sensitivity state's start range straddles quarters.
+  - name: first_full_quarter
+    description: 'First fully covered quarter: the same quarter if coverage starts on its first day, else the next (month-only starts take the next quarter).'
+  - name: start_quarter_earliest
+    description: Quarter of the earliest possible start date.
+  - name: start_quarter_latest
+    description: Quarter of the latest possible start date.
+  - name: start_precision
+    description: 'Precision of the documented start: day, month or range.'
+  - name: post_withdrawal
+    description: True when the quarter has no covered day after a coverage spell has ended.
+  - name: kansas_flag
+    description: True for Kansas (primary by decision; the analysis also runs without it).
+  - name: category_level_spa
+    description: True when the state plan amendment covers the drug category, not Wegovy by name (Mississippi, Tennessee).
+  - name: enrollment_medicaid_avg
+    description: Quarter average of total Medicaid enrollment (item 8a), the primary denominator; months with no value are skipped.
+  - name: n_months_present_medicaid
+    description: Months (0 to 3) with a value behind enrollment_medicaid_avg.
+  - name: enrollment_medicaid_chip_avg
+    description: Quarter average of Medicaid + CHIP enrollment (8a + 8h), sensitivity denominator.
+  - name: n_months_present_medicaid_chip
+    description: Months (0 to 3) with a value behind enrollment_medicaid_chip_avg.
+  - name: enrollment_adult_medicaid_avg
+    description: Quarter average of adult Medicaid enrollment (8d + 8g), second sensitivity denominator; reported only from 2024-07.
+  - name: n_months_present_adult_medicaid
+    description: Months (0 to 3) with a value behind enrollment_adult_medicaid_avg.
+  - name: n_months_updated
+    description: Months of the quarter taken from the Updated report.
+  - name: n_months_preliminary
+    description: Months of the quarter taken from the Preliminary report (only where no Updated row exists).
+  - name: report_status_used
+    description: 'Which enrollment report supplied the months: updated, preliminary or missing.'
+  - name: definition_caveat
+    description: True when any month of the quarter has a footnote on total Medicaid enrollment that changes the count definition (for example 'not a point-in-time count').
+  - name: n_months_definition_caveat
+    description: Months of the quarter carrying that footnote.
+  - name: definition_caveat_medicaid_chip
+    description: Same flag for the Medicaid + CHIP count.
+  - name: definition_caveat_adult
+    description: Same flag for the adult Medicaid count.
+  - name: data_unavailable_note
+    description: True when a footnote says the state could not provide data (Rhode Island, 2024-12).
+  - name: enrollment_zero_set_null
+    description: 'True when a reported zero was set to NULL (Rhode Island): the value stays missing.'
+  - name: mc_share
+    description: Share of Medicaid enrollees in comprehensive managed care (CMS Managed Care Enrollment Report).
+  - name: mc_share_carried_forward
+    description: True when mc_share is the 2024 share carried forward to 2025 and 2026 (an assumption).
+  - name: enrollment_ffs_medicaid_assumed
+    description: 'Medicaid enrollment x (1 - mc_share): the fee-for-service enrollment used by the FFS-only rates (assumption for 2025-2026, see mc_share_carried_forward).'
+  - name: rx_obesity_wz_tablet_observed
+    description: Observed prescriptions (all utilization types) for Wegovy tablets within obesity_wz.
+  - name: rx_obesity_wz_observed
+    description: Observed prescriptions (FFSU + MCOU, suppressed rows excluded) for Wegovy (injection and tablets) and Zepbound, the exposure group.
+  - name: rx_obesity_wz_upper_bound
+    description: Observed prescriptions plus 10 per suppressed row for Wegovy (injection and tablets) and Zepbound, the exposure group.
+  - name: n_suppressed_rows_obesity_wz
+    description: Suppressed SDUD state-NDC rows behind the obesity_wz prescriptions.
+  - name: n_rows_obesity_wz
+    description: SDUD state-NDC rows behind the obesity_wz prescriptions (0 means no SDUD row for the state-quarter).
+  - name: rate_obesity_wz_per_1000_medicaid
+    description: 'obesity_wz: observed prescriptions per 1,000 total Medicaid enrollees (primary denominator, level).'
+  - name: rate_obesity_wz_upper_bound_per_1000_medicaid
+    description: 'obesity_wz: upper-bound prescriptions per 1,000 total Medicaid enrollees (level).'
+  - name: rate_obesity_wz_per_1000_medicaid_chip
+    description: 'obesity_wz: observed prescriptions per 1,000 Medicaid + CHIP enrollees (sensitivity denominator, level).'
+  - name: rate_obesity_wz_per_1000_adult_medicaid
+    description: 'obesity_wz: observed prescriptions per 1,000 adult Medicaid enrollees (second sensitivity denominator; NULL before 2024Q3).'
+  - name: rate_obesity_wz_ffs_per_1000_ffs_medicaid
+    description: 'obesity_wz: FFSU prescriptions per 1,000 assumed fee-for-service Medicaid enrollees (secondary outcome).'
+  - name: rx_obesity_saxenda_observed
+    description: Observed prescriptions (FFSU + MCOU, suppressed rows excluded) for Saxenda and Saxenda-type generic liraglutide.
+  - name: rx_obesity_saxenda_upper_bound
+    description: Observed prescriptions plus 10 per suppressed row for Saxenda and Saxenda-type generic liraglutide.
+  - name: n_suppressed_rows_obesity_saxenda
+    description: Suppressed SDUD state-NDC rows behind the obesity_saxenda prescriptions.
+  - name: n_rows_obesity_saxenda
+    description: SDUD state-NDC rows behind the obesity_saxenda prescriptions (0 means no SDUD row for the state-quarter).
+  - name: rate_obesity_saxenda_per_1000_medicaid
+    description: 'obesity_saxenda: observed prescriptions per 1,000 total Medicaid enrollees (primary denominator, level).'
+  - name: rate_obesity_saxenda_upper_bound_per_1000_medicaid
+    description: 'obesity_saxenda: upper-bound prescriptions per 1,000 total Medicaid enrollees (level).'
+  - name: rate_obesity_saxenda_per_1000_medicaid_chip
+    description: 'obesity_saxenda: observed prescriptions per 1,000 Medicaid + CHIP enrollees (sensitivity denominator, level).'
+  - name: rate_obesity_saxenda_per_1000_adult_medicaid
+    description: 'obesity_saxenda: observed prescriptions per 1,000 adult Medicaid enrollees (second sensitivity denominator; NULL before 2024Q3).'
+  - name: rate_obesity_saxenda_ffs_per_1000_ffs_medicaid
+    description: 'obesity_saxenda: FFSU prescriptions per 1,000 assumed fee-for-service Medicaid enrollees (secondary outcome).'
+  - name: rx_obesity_other_observed
+    description: Observed prescriptions (FFSU + MCOU, suppressed rows excluded) for other obesity-labelled products (Foundayo).
+  - name: rx_obesity_other_upper_bound
+    description: Observed prescriptions plus 10 per suppressed row for other obesity-labelled products (Foundayo).
+  - name: n_suppressed_rows_obesity_other
+    description: Suppressed SDUD state-NDC rows behind the obesity_other prescriptions.
+  - name: n_rows_obesity_other
+    description: SDUD state-NDC rows behind the obesity_other prescriptions (0 means no SDUD row for the state-quarter).
+  - name: rate_obesity_other_per_1000_medicaid
+    description: 'obesity_other: observed prescriptions per 1,000 total Medicaid enrollees (primary denominator, level).'
+  - name: rate_obesity_other_upper_bound_per_1000_medicaid
+    description: 'obesity_other: upper-bound prescriptions per 1,000 total Medicaid enrollees (level).'
+  - name: rate_obesity_other_per_1000_medicaid_chip
+    description: 'obesity_other: observed prescriptions per 1,000 Medicaid + CHIP enrollees (sensitivity denominator, level).'
+  - name: rate_obesity_other_per_1000_adult_medicaid
+    description: 'obesity_other: observed prescriptions per 1,000 adult Medicaid enrollees (second sensitivity denominator; NULL before 2024Q3).'
+  - name: rate_obesity_other_ffs_per_1000_ffs_medicaid
+    description: 'obesity_other: FFSU prescriptions per 1,000 assumed fee-for-service Medicaid enrollees (secondary outcome).'
+  - name: rx_diabetes_glp1_observed
+    description: Observed prescriptions (FFSU + MCOU, suppressed rows excluded) for diabetes-labelled incretins (not combinations).
+  - name: rx_diabetes_glp1_upper_bound
+    description: Observed prescriptions plus 10 per suppressed row for diabetes-labelled incretins (not combinations).
+  - name: n_suppressed_rows_diabetes_glp1
+    description: Suppressed SDUD state-NDC rows behind the diabetes_glp1 prescriptions.
+  - name: n_rows_diabetes_glp1
+    description: SDUD state-NDC rows behind the diabetes_glp1 prescriptions (0 means no SDUD row for the state-quarter).
+  - name: rate_diabetes_glp1_per_1000_medicaid
+    description: 'diabetes_glp1: observed prescriptions per 1,000 total Medicaid enrollees (primary denominator, level).'
+  - name: rate_diabetes_glp1_upper_bound_per_1000_medicaid
+    description: 'diabetes_glp1: upper-bound prescriptions per 1,000 total Medicaid enrollees (level).'
+  - name: rate_diabetes_glp1_per_1000_medicaid_chip
+    description: 'diabetes_glp1: observed prescriptions per 1,000 Medicaid + CHIP enrollees (sensitivity denominator, level).'
+  - name: rate_diabetes_glp1_per_1000_adult_medicaid
+    description: 'diabetes_glp1: observed prescriptions per 1,000 adult Medicaid enrollees (second sensitivity denominator; NULL before 2024Q3).'
+  - name: rate_diabetes_glp1_ffs_per_1000_ffs_medicaid
+    description: 'diabetes_glp1: FFSU prescriptions per 1,000 assumed fee-for-service Medicaid enrollees (secondary outcome).'
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+- name: mart_sdud_state_quarter_long
+  description: 'SDUD for the panel states, long form: state x quarter x utilization type x product group x dosage form, observed and upper-bound measures.'
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: state_name
+    description: State name.
+  - name: census_region
+    description: Census region of the state.
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  - name: utilization_type
+    description: 'SDUD utilization type: FFSU (fee-for-service), MCOU (managed care) or ALL (FFSU + MCOU; never add ALL to the other two).'
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: dosage_form
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: n_rows
+    description: Number of SDUD state-NDC rows behind the cell (suppressed rows included).
+  - name: n_suppressed_rows
+    description: Number of those rows that CMS suppressed (1 to 10 prescriptions each).
+  - name: rx_observed
+    description: Prescriptions in the unsuppressed rows only (suppressed rows contribute nothing).
+  - name: rx_upper_bound
+    description: 'rx_observed + 10 x n_suppressed_rows: the most the cell could hold.'
+  - name: units_observed
+    description: Units reimbursed in unsuppressed rows.
+  - name: units_upper_bound
+    description: 'Units upper bound: observed plus, per suppressed row, 10 prescriptions at the highest units-per-prescription seen for that NDC; NULL when units_bound_complete is false.'
+  - name: units_bound_complete
+    description: True when every suppressed row's NDC has an unsuppressed row to take the per-prescription ratio from.
+  - name: amount_total_observed
+    description: Total amount reimbursed (Medicaid + non-Medicaid, USD, gross of rebates) in unsuppressed rows.
+  - name: amount_total_upper_bound
+    description: Upper bound of total amount reimbursed, built like units_upper_bound; NULL when it cannot be bounded.
+  - name: amount_medicaid_observed
+    description: Medicaid amount reimbursed (USD, gross of rebates) in unsuppressed rows.
+  - name: amount_medicaid_upper_bound
+    description: Upper bound of the Medicaid amount reimbursed, built like units_upper_bound; NULL when it cannot be bounded.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - year
+        - quarter
+        - utilization_type
+        - product_group
+        - dosage_form
+- name: mart_sdud_cells_for_imputation
+  description: Suppressed SDUD state-NDC cells awaiting imputation, with bounds, national residuals, enrollment and coverage context. Nothing is imputed.
+  columns:
+  - name: state_code
+    description: USPS two-letter code of the state (50 states and DC in the panel).
+  - name: ndc11
+    description: 11-digit NDC as text.
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: is_preliminary
+    description: True for SDUD quarters CMS still revises (2026 Q1 at the time of the download).
+  - name: utilization_type
+    description: 'SDUD utilization type: FFSU (fee-for-service), MCOU (managed care) or ALL (FFSU + MCOU; never add ALL to the other two).'
+  - name: brand_label
+    description: Brand name, or 'GENERIC <ingredient>' for brand-less generics.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: dosage_form
+    description: 'Dosage form group of the NDC: tablet, injection or unknown (no dosage form on record).'
+  - name: rx_observed
+    description: 'Always NULL: the count is suppressed.'
+  - name: rx_lower_bound
+    description: 0 (0 to 10 prescriptions treated as possible).
+  - name: rx_upper_bound
+    description: 10 (the suppression threshold).
+  - name: has_national_row
+    description: True when the XX national row exists.
+  - name: national_suppressed
+    description: True when the national row is suppressed.
+  - name: national_rx
+    description: National prescriptions for the NDC-quarter-type.
+  - name: national_state_rx_observed
+    description: Observed state prescriptions summed for the NDC-quarter-type (territories included).
+  - name: n_suppressed_rows_same_ndc_quarter
+    description: Suppressed state rows sharing this NDC, quarter and utilization type (all jurisdictions).
+  - name: residual_rx
+    description: national_rx minus observed state prescriptions.
+  - name: residual_usable
+    description: True when the national row is unsuppressed and the residual is positive.
+  - name: residual_within_bounds
+    description: True when the residual lies between 0 and 10 x the suppressed rows.
+  - name: enrollment_medicaid_avg
+    description: Quarter average Medicaid enrollment of the state.
+  - name: n_months_present_medicaid
+    description: Months behind that average.
+  - name: analysis_group
+    description: primary, sensitivity or never_treated, from the coverage table (primary requires a documented start inside one calendar quarter).
+  - name: coverage_active
+    description: True when the state covered the obesity drugs on any day of the quarter.
+  - name: covered_days_share
+    description: Covered share of the quarter (conservative).
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - state_code
+        - ndc11
+        - year
+        - quarter
+        - utilization_type
+- name: mart_prescriber_year
+  description: Medicare Part D prescriber-drug rows (at least 11 claims) with product group, Medicare specialty and NPPES/NUCC taxonomy.
+  columns:
+  - name: prescriber_npi
+    description: Prescriber NPI.
+  - name: data_year
+    description: Part D data year.
+  - name: brand_name
+    description: Brand name as published by the source.
+  - name: generic_name
+    description: Generic name as published by the source.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: group_basis
+    description: 'How the product group was assigned: brand, or generic_name_diabetes when only a generic name was available.'
+  - name: prescriber_type
+    description: CMS Medicare specialty of the prescriber.
+  - name: entity_type_code
+    description: 'NPPES entity type: 1 individual, 2 organisation.'
+  - name: practice_state
+    description: NPPES practice state.
+  - name: primary_taxonomy_code
+    description: NPPES primary taxonomy code.
+  - name: taxonomy_classification
+    description: NUCC classification of the primary taxonomy.
+  - name: taxonomy_specialization
+    description: NUCC specialization of the primary taxonomy.
+  - name: in_nppes
+    description: True when the NPI is in the NPPES extract.
+  - name: prescriber_state
+    description: Prescriber state in the Part D file.
+  - name: total_claims
+    description: Part D claims (at least 11).
+  - name: total_30day_fills
+    description: 30-day standardized fills.
+  - name: total_day_supply
+    description: Total days supply.
+  - name: total_drug_cost
+    description: Total drug cost, USD.
+  - name: total_beneficiaries
+    description: Beneficiaries with a claim.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - prescriber_npi
+        - data_year
+        - brand_name
+        - generic_name
+- name: mart_open_payments_year_product
+  description: 'Open Payments by program year, product and physician flag: equal-split and overlapping dollars.'
+  columns:
+  - name: program_year
+    description: Open Payments program year.
+  - name: product
+    description: In-scope product key from the Open Payments name fields (brand, or ingredient for generic-only names).
+  - name: is_physician
+    description: True for physician recipients; false for teaching hospitals and non-physician practitioners (NPs and PAs enter in 2021).
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: is_combination
+    description: True for insulin/GLP-1 combination products (Soliqua, Xultophy).
+  - name: n_records
+    description: Records naming the product.
+  - name: n_distinct_recipients_npi
+    description: Distinct recipient NPIs.
+  - name: amount_equal_split
+    description: Dollars with each record divided over its in-scope products (sums to the headline total).
+  - name: amount_overlapping
+    description: Dollars counting the full record for every product named (overlapping; exceeds the headline).
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - program_year
+        - product
+        - is_physician
+- name: mart_drug_spending_year
+  description: Annual Part D and Medicaid spending by drug (Overall rows).
+  columns:
+  - name: brand_name
+    description: Brand name as published by the source.
+  - name: generic_name
+    description: Generic name as published by the source.
+  - name: year
+    description: Calendar year.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: partd_spending
+    description: Part D total spending, USD.
+  - name: partd_claims
+    description: Part D claims.
+  - name: partd_beneficiaries
+    description: Part D beneficiaries.
+  - name: partd_dosage_units
+    description: Part D dosage units.
+  - name: partd_avg_spend_per_claim
+    description: Part D average spending per claim.
+  - name: partd_outlier_flag
+    description: Part D outlier flag.
+  - name: medicaid_spending
+    description: Medicaid total spending, USD, gross of rebates.
+  - name: medicaid_claims
+    description: Medicaid claims.
+  - name: medicaid_dosage_units
+    description: Medicaid dosage units.
+  - name: medicaid_avg_spend_per_claim
+    description: Medicaid average spending per claim.
+  - name: medicaid_outlier_flag
+    description: Medicaid outlier flag.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - brand_name
+        - generic_name
+        - year
+- name: mart_nadac_brand_quarter
+  description: NADAC acquisition cost per pricing unit by product label and quarter.
+  columns:
+  - name: brand_label
+    description: Brand name, or 'GENERIC <ingredient>' for brand-less generics.
+  - name: brand
+    description: Brand name, empty for brand-less generics.
+  - name: ingredient
+    description: Active ingredient.
+  - name: product_group
+    description: 'Analysis product group: obesity_wz, obesity_saxenda, obesity_other or diabetes_glp1 (combination products are excluded from outcome models).'
+  - name: is_combination
+    description: True for insulin/GLP-1 combination products (Soliqua, Xultophy).
+  - name: pricing_unit
+    description: Pricing unit (EA, ML, GM).
+  - name: year
+    description: Calendar year.
+  - name: quarter
+    description: Calendar quarter, 1 to 4.
+  - name: quarter_label
+    description: Quarter as text, for example 2023Q1.
+  - name: quarter_start
+    description: First day of the quarter.
+  - name: n_weekly_ndc_rows
+    description: Weekly NDC rows in the quarter.
+  - name: n_ndcs
+    description: Distinct NDCs.
+  - name: n_weeks
+    description: Distinct survey weeks.
+  - name: nadac_per_unit_mean
+    description: Mean NADAC per unit over the rows.
+  - name: nadac_per_unit_min
+    description: Minimum NADAC per unit.
+  - name: nadac_per_unit_max
+    description: Maximum NADAC per unit.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - brand_label
+        - product_group
+        - pricing_unit
+        - year
+        - quarter
+- name: mart_nhanes_adults
+  description: NHANES adults aged 20 and over, two cycles stacked, all kept including missing BMI, with design variables and cycle-specific weights.
+  columns:
+  - name: cycle
+    description: 'NHANES cycle: 2021_2023 or 2017_2020 (pre-pandemic).'
+  - name: seqn
+    description: NHANES respondent sequence number.
+  - name: ridstatr
+    description: Interview/examination status.
+  - name: riagendr
+    description: Sex.
+  - name: ridageyr
+    description: Age in years at screening.
+  - name: ridreth1
+    description: Race/Hispanic origin (older coding).
+  - name: ridreth3
+    description: Race/Hispanic origin with Non-Hispanic Asian.
+  - name: dmdborn4
+    description: Country of birth.
+  - name: dmdeduc2
+    description: Education, adults 20+.
+  - name: dmdmartz
+    description: Marital status.
+  - name: ridexprg
+    description: Pregnancy status at exam.
+  - name: indfmpir
+    description: Ratio of family income to poverty.
+  - name: sdmvstra
+    description: Masked variance pseudo-stratum.
+  - name: sdmvpsu
+    description: Masked variance pseudo-PSU.
+  - name: wtint2yr
+    description: Interview weight (2021-2023).
+  - name: wtmec2yr
+    description: MEC exam weight (2021-2023).
+  - name: wtintprp
+    description: Interview weight (2017-2020 pre-pandemic).
+  - name: wtmecprp
+    description: MEC exam weight (2017-2020 pre-pandemic).
+  - name: weight_interview
+    description: Interview weight of whichever cycle applies; not rescaled for combining cycles.
+  - name: weight_mec
+    description: MEC exam weight of whichever cycle applies; not rescaled for combining cycles.
+  - name: wtph2yr
+    description: Fasting subsample weight from the glycohemoglobin file.
+  - name: bmdstats
+    description: Body measures status.
+  - name: bmxwt
+    description: Weight, kg.
+  - name: bmxht
+    description: Standing height, cm.
+  - name: bmxbmi
+    description: Body mass index, kg/m2.
+  - name: bmxwaist
+    description: Waist circumference, cm.
+  - name: bmxhip
+    description: Hip circumference, cm.
+  - name: bmi_missing
+    description: True when BMI is missing.
+  - name: bpxosy1
+    description: Systolic blood pressure, reading 1.
+  - name: bpxodi1
+    description: Diastolic blood pressure, reading 1.
+  - name: bpxosy2
+    description: Systolic blood pressure, reading 2.
+  - name: bpxodi2
+    description: Diastolic blood pressure, reading 2.
+  - name: bpxosy3
+    description: Systolic blood pressure, reading 3.
+  - name: bpxodi3
+    description: Diastolic blood pressure, reading 3.
+  - name: lbxgh
+    description: Glycohemoglobin, %.
+  - name: bpq020
+    description: Ever told high blood pressure.
+  - name: bpq040a
+    description: Taking prescription for hypertension.
+  - name: bpq050a
+    description: Now taking prescribed medicine for hypertension.
+  - name: diq010
+    description: Doctor told you have diabetes.
+  - name: diq050
+    description: Taking insulin now.
+  - name: diq070
+    description: Taking diabetic pills to lower blood sugar.
+  - name: mcq010
+    description: Ever been told you have asthma.
+  - name: mcq160a
+    description: Ever told you had arthritis.
+  - name: mcq160b
+    description: Ever told you had congestive heart failure.
+  - name: mcq160c
+    description: Ever told you had coronary heart disease.
+  - name: mcq160d
+    description: Ever told you had angina.
+  - name: mcq160e
+    description: Ever told you had heart attack.
+  - name: mcq160f
+    description: Ever told you had a stroke.
+  - name: mcq220
+    description: Ever told you had cancer or malignancy.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - cycle
+        - seqn
+- name: mart_meps_persons
+  description: MEPS persons for 2023 and 2024 with survey design, expenditures, T2D/obesity condition flags and incretin prescription counts by product group.
+  columns:
+  - name: data_year
+    description: MEPS data year.
+  - name: dupersid
+    description: MEPS person identifier.
+  - name: panel
+    description: MEPS panel number.
+  - name: age_last
+    description: Age at last interview.
+  - name: sex
+    description: Sex.
+  - name: racethx
+    description: Race/ethnicity.
+  - name: poverty_category
+    description: Family income as percent of poverty line category.
+  - name: insurance_coverage
+    description: Insurance coverage indicator.
+  - name: hibpdx
+    description: High blood pressure diagnosis (after age 17).
+  - name: chddx
+    description: Coronary heart disease diagnosis.
+  - name: diabdx_m18
+    description: Diabetes diagnosis (after age 17).
+  - name: total_expenditure
+    description: Total health care expenditure, USD.
+  - name: rx_purchases
+    description: Number of prescribed medicine purchases.
+  - name: rx_expenditure
+    description: Prescribed medicine expenditure, USD.
+  - name: person_weight
+    description: Person-level analysis weight (perwt23f / perwt24f).
+  - name: varstr
+    description: Variance estimation stratum.
+  - name: varpsu
+    description: Variance estimation PSU.
+  - name: has_t2d_condition
+    description: True when the person has an E11 condition record.
+  - name: has_obesity_condition
+    description: True when the person has an E66 condition record.
+  - name: n_rx_obesity_wz
+    description: Purchase records of Wegovy/Zepbound NDCs.
+  - name: n_rx_obesity_saxenda
+    description: Purchase records of Saxenda-type NDCs.
+  - name: n_rx_obesity_other
+    description: Purchase records of other obesity-labelled NDCs.
+  - name: n_rx_diabetes_glp1
+    description: Purchase records of diabetes incretin NDCs.
+  data_tests:
+  - dbt_utils.unique_combination_of_columns:
+      arguments:
+        combination_of_columns:
+        - data_year
+        - dupersid
+- name: mart_pipeline_trials
+  description: ClinicalTrials.gov incretin studies with keyword condition flags.
+  columns:
+  - name: nct_id
+    description: ClinicalTrials.gov identifier.
+    data_tests:
+    - unique
+    - not_null
+  - name: title
+    description: Brief title.
+  - name: official_title
+    description: Official title.
+  - name: phase
+    description: Trial phase.
+  - name: status
+    description: Overall status.
+  - name: study_type
+    description: Study type.
+  - name: start_date
+    description: Registered start date text.
+  - name: start_date_parsed
+    description: Start date as a date (missing day = 01).
+  - name: start_year
+    description: Start year, NULL if no start date.
+  - name: primary_completion_date
+    description: Primary completion date text.
+  - name: completion_date
+    description: Completion date text.
+  - name: sponsor
+    description: Lead sponsor.
+  - name: sponsor_class
+    description: Sponsor class.
+  - name: enrollment
+    description: Enrollment.
+  - name: enrollment_type
+    description: Actual or estimated.
+  - name: results_posted
+    description: True when results are posted.
+  - name: conditions
+    description: Conditions.
+  - name: interventions
+    description: Interventions.
+  - name: matched_ingredients
+    description: Incretin ingredients matched.
+  - name: is_phase3
+    description: True when the phase text contains PHASE3.
+  - name: condition_mentions_obesity
+    description: True when conditions mention obes, overweight or weight (keyword match).
+  - name: condition_mentions_diabetes
+    description: True when conditions mention diabet (keyword match).
+  - name: last_update
+    description: Last update text.
+  data_tests: []

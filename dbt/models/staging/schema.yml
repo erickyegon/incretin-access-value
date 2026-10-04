@@ -119,6 +119,8 @@ models:
         description: "Source footnote on the Medicaid count, NULL if none."
       - name: total_chip_enrollment_footnote
         description: "Source footnote on the CHIP count, NULL if none."
+      - name: total_adult_medicaid_enrollment_footnote
+        description: "Source footnote on the adult Medicaid count, NULL if none."
       - name: enrollment_zero_set_null
         description: "True when the loader set a reported zero to NULL (states that did not report, e.g. Rhode Island)."
 
