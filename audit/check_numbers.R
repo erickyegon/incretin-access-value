@@ -63,7 +63,7 @@ ext_ok <- ifelse(grepl("^https?://", ext_src), ext_src %in% si$url, file.exists(
 chk("external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index", all(ext_ok), paste(ext_src[!ext_ok], collapse = ", "))
 app_src <- paste(c(rd("app", "app.R"), rd("app", "bia.R")), collapse = "
 "); mf_app <- file.path(root, "app", "manifest.json")
-chk("budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest", file.exists(mf_app) && !grepl("here::|RPostgres|dbConnect|readRDS|\.\./", app_src) && all(file.exists(file.path(root, "app", "data", c("moduleC_effects.csv", "model_settings.csv")))), "")
+chk("budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest", file.exists(mf_app) && !grepl("here::|RPostgres|dbConnect|readRDS|[.][.]/", app_src) && all(file.exists(file.path(root, "app", "data", c("moduleC_effects.csv", "model_settings.csv")))), "")
 bc <- read.csv(file.path(root, "analysis", "outputs", "build_counts.csv"), stringsAsFactors = FALSE)
 mf <- jsonlite::fromJSON(file.path(root, "dbt", "target", "manifest.json")); rt <- table(vapply(mf$nodes, function(x) x$resource_type, ""))
 chk("build counts match the dbt manifest (models, seeds, tests)", bc$count[bc$item == "models"] == rt[["model"]] && bc$count[bc$item == "seeds"] == rt[["seed"]] && bc$count[bc$item == "tests"] == rt[["test"]], sprintf("manifest: %d models, %d seeds, %d tests", rt[["model"]], rt[["seed"]], rt[["test"]]))
