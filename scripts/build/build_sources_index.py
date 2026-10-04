@@ -67,6 +67,12 @@ for r in csv.DictReader(open(root / "data" / "manifest.csv", encoding="utf-8")):
         seen_urls.add(r["source_url"])
         rows.append(dict(title=r["file_name"], publisher=domain_pub(r["source_url"]), url=r["source_url"], date_accessed=r["date_accessed"], sha256_of_saved_copy=r["sha256"], in_repo="no",
                          saved_copy="data/raw/" + r["dataset"] + "/" + r["file_name"] + " (gitignored)", reason="saved locally only (third-party or raw data folder)"))
+for t, p_, u, f_ in [("Once-Weekly Semaglutide in Adults with Overweight or Obesity (STEP 1; abstract)", "N Engl J Med via PubMed", "https://pubmed.ncbi.nlm.nih.gov/33567185/", "pubmed_step1_wilding_2021.xml"),
+                     ("Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1; abstract)", "N Engl J Med via PubMed", "https://pubmed.ncbi.nlm.nih.gov/35658024/", "pubmed_surmount1_jastreboff_2022.xml"),
+                     ("Tirzepatide as Compared with Semaglutide for the Treatment of Obesity (SURMOUNT-5; abstract)", "N Engl J Med via PubMed", "https://pubmed.ncbi.nlm.nih.gov/40353578/", "pubmed_surmount5_aronne_2025.xml"),
+                     ("Orforglipron, an Oral Small-Molecule GLP-1 Receptor Agonist for Obesity Treatment (ATTAIN-1; abstract)", "N Engl J Med via PubMed", "https://pubmed.ncbi.nlm.nih.gov/40960239/", "pubmed_attain1_orforglipron_2025.xml")]:
+    if (loc / f_).exists():
+        rows.append(dict(title=t, publisher=p_, url=u, date_accessed="2026-10-04", sha256_of_saved_copy=sha(loc / f_), in_repo="no", saved_copy="docs/sources_local/" + f_ + " (gitignored)", reason="copyrighted journal article (abstract record retrieved from PubMed by scripts/build/build_trial_inputs.py)"))
 out = root / "docs" / "sources_index.csv"
 with open(out, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)

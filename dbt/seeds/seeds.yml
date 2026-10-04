@@ -83,9 +83,9 @@ seeds:
       column_types: {value_set: text, code: text, description: text, source_version: text, code_nodot: text, billable: text}
 
   - name: trial_inputs
-    description: "Empty template for published trial results used in the budget-impact model. Filled by hand with citation, never from memory."
+    description: "Published pivotal-trial weight-loss results (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1): primary outcome by arm, dose, duration, 95% CI, citation, DOI, PMID and NCT number, read from the PubMed abstracts by scripts/build/build_trial_inputs.py (each number checked against the abstract text). Context for the value table; no cost-effectiveness claim."
     config:
-      column_types: {trial: text, drug: text, dose: text, population: text, duration_weeks: integer, outcome: text, value: numeric, uncertainty: text, source_citation: text, doi: text, page_or_table: text}
+      column_types: {trial: text, arm: text, drug: text, dose: text, population: text, duration_weeks: integer, outcome: text, value: numeric, uncertainty: text, ci_low: numeric, ci_high: numeric, n_randomised: integer, source_citation: text, doi: text, pmid: text, nct_id: text, page_or_table: text}
 
   - name: label_events
     description: "FDA label events for in-scope obesity products from Drugs@FDA: original approval and later indication additions, with application and supplement numbers."
