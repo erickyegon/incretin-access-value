@@ -26,3 +26,10 @@ Changes requested at Checkpoint B approval (made after seeing results, so logged
 Not deviations, recorded for completeness: the South Carolina coverage-source fields were corrected (the start date comes from the Milliman SFY 2026 capitation report, not from a
 news report; delivery-system field changed; see `data/reference/medicaid_obesity_coverage.csv`); secondary-outcome ATTs with CIs were added to `tables/overall_att.*`; the withdrawal figure
 now plots the normalised change; `tables/moduleC_for_budget_model.csv` was saved after approval.
+
+Module B (set before results of that step; recorded because they differ from the plan text):
+7. **HIQ032 coding.** Plan: "HIQ032D (Medicaid)" read as a yes/no item. The codebook codes the check-all-that-apply items HIQ032A-I with the item number when ticked (Medicaid = 4,
+   Medicare = 2, CHIP = 5) and blank otherwise; the analysis uses `hiq032d == 4` for Medicaid and `hiq032b == 2` for Medicare, among adults with HIQ011 answered.
+8. **Weights.** Plan: WTMEC2YR for the primary design. Estimates that use HbA1c use the phlebotomy weight WTPH2YR, as the GHB_L documentation instructs (the plan already says so); the NCHS
+   SAS-missing code (about 5e-79) in weights is treated as weight 0.
+9. **NHANES mart.** The mart `mart_nhanes_adults` now keeps adults 18 and over (it was 20 and over) and carries the insurance and condition variables Module B needs; its test was updated.

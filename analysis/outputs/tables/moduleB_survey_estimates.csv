@@ -1,0 +1,391 @@
+cycle,measure,stratum,unit,estimate,ci_low,ci_high,n_unweighted,weight
+2021_2023,Adults 18+: count,All,millions,253.82,227.12,280.51,6337,WTMEC2YR
+2021_2023,BMI 30 or more: count,All,millions,99.597,89.526,109.67,2524,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,All,percent of adults with the measure available,39.775,36.228,43.322,6235,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,All,millions,29.171,26.209,32.132,822,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,All,percent of adults with the measure available,11.65,10.458,12.841,6235,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",All,millions,128.77,117.24,140.29,3346,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",All,percent of adults with the measure available,55.041,50.895,59.187,5912,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",All,millions,129.24,117.02,141.46,3351,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",All,percent of adults with the measure available,55.277,51.144,59.409,5917,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,All,millions,28.752,25.85,31.654,870,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,All,percent of adults with the measure available,11.328,10.029,12.627,6337,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",All,millions,5.5151,4.2215,6.8086,152,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",All,percent of adults with the measure available,2.1831,1.7288,2.6374,6002,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",All,millions,124.75,115.09,134.41,3482,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",All,percent of adults with the measure available,100,100,100,3482,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",All,millions,10.786,8.622,12.95,400,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",All,percent of adults with the measure available,20.007,17.392,22.621,1969,WTMEC2YR
+2021_2023,Adults 18+: count,age 18-39,millions,95.455,83.421,107.49,2428,WTMEC2YR
+2021_2023,BMI 30 or more: count,age 18-39,millions,32.635,28.384,36.886,646,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,age 18-39,percent of adults with the measure available,34.702,29.365,40.039,1803,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,age 18-39,millions,4.408,3.5579,5.2582,93,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,age 18-39,percent of adults with the measure available,4.6872,3.6192,5.7551,1803,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",age 18-39,millions,37.043,32.925,41.161,739,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",age 18-39,percent of adults with the measure available,44.525,38.848,50.203,1613,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",age 18-39,millions,37.146,32.692,41.599,740,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 18-39,percent of adults with the measure available,44.776,39.071,50.481,1614,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,age 18-39,millions,2.3348,1.683,2.9866,43,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,age 18-39,percent of adults with the measure available,2.446,1.5478,3.3441,1832,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 18-39,millions,0.68622,0.36814,1.0043,14,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 18-39,percent of adults with the measure available,0.7229,0.40398,1.0418,1686,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",age 18-39,millions,24.206,20.821,27.592,469,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",age 18-39,percent of adults with the measure available,100,100,100,469,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 18-39,millions,0,0,0,0,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 18-39,percent of adults with the measure available,0,0,0,0,WTMEC2YR
+2021_2023,Adults 18+: count,age 40-59,millions,82.139,71.645,92.632,2221,WTMEC2YR
+2021_2023,BMI 30 or more: count,age 40-59,millions,37.845,33.407,42.284,791,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,age 40-59,percent of adults with the measure available,46.437,42.952,49.922,1710,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,age 40-59,millions,10.118,8.8004,11.436,209,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,age 40-59,percent of adults with the measure available,12.415,10.336,14.495,1710,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",age 40-59,millions,47.963,43.039,52.888,1000,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",age 40-59,percent of adults with the measure available,61.834,56.973,66.695,1635,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",age 40-59,millions,48.076,43.085,53.068,1003,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 40-59,percent of adults with the measure available,61.968,57.175,66.762,1638,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,age 40-59,millions,10.26,9.1649,11.355,241,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,age 40-59,percent of adults with the measure available,12.491,11.22,13.762,1733,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 40-59,millions,2.2205,1.441,3.0001,45,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 40-59,percent of adults with the measure available,2.715,1.8551,3.5749,1671,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",age 40-59,millions,44.909,40.834,48.983,970,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",age 40-59,percent of adults with the measure available,100,100,100,970,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 40-59,millions,0,0,0,0,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 40-59,percent of adults with the measure available,0,0,0,0,WTMEC2YR
+2021_2023,Adults 18+: count,age 60-64,millions,21.226,18.454,23.997,918,WTMEC2YR
+2021_2023,BMI 30 or more: count,age 60-64,millions,8.497,6.9103,10.084,321,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,age 60-64,percent of adults with the measure available,40.563,35.798,45.328,753,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,age 60-64,millions,3.9868,3.2326,4.741,135,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,age 60-64,percent of adults with the measure available,19.032,16.466,21.598,753,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",age 60-64,millions,12.484,10.381,14.587,456,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",age 60-64,percent of adults with the measure available,61.328,56.514,66.142,732,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",age 60-64,millions,12.672,10.534,14.81,456,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 60-64,percent of adults with the measure available,61.54,57.115,65.965,732,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,age 60-64,millions,3.9995,3.1588,4.8402,142,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,age 60-64,percent of adults with the measure available,18.842,14.766,22.919,766,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 60-64,millions,0.68079,0.42591,0.93567,25,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 60-64,percent of adults with the measure available,3.1767,1.9499,4.4035,737,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",age 60-64,millions,14.479,12.317,16.641,523,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",age 60-64,percent of adults with the measure available,100,100,100,523,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 60-64,millions,0,0,0,0,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 60-64,percent of adults with the measure available,0,0,0,0,WTMEC2YR
+2021_2023,Adults 18+: count,age 65+,millions,54.998,47.583,62.413,2586,WTMEC2YR
+2021_2023,BMI 30 or more: count,age 65+,millions,20.62,18.11,23.13,766,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,age 65+,percent of adults with the measure available,38.249,35.564,40.933,1969,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,age 65+,millions,10.658,8.8981,12.417,385,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,age 65+,percent of adults with the measure available,19.769,17.988,21.55,1969,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",age 65+,millions,31.278,27.235,35.321,1151,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",age 65+,percent of adults with the measure available,59.204,55.69,62.717,1932,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",age 65+,millions,31.347,27.253,35.441,1152,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 65+,percent of adults with the measure available,59.51,55.953,63.068,1933,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,age 65+,millions,12.158,9.9238,14.392,444,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,age 65+,percent of adults with the measure available,22.107,18.161,26.052,2006,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 65+,millions,1.9275,1.4193,2.4357,68,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 65+,percent of adults with the measure available,3.5379,2.7361,4.3397,1908,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",age 65+,millions,41.157,36.618,45.697,1520,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",age 65+,percent of adults with the measure available,100,100,100,1520,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 65+,millions,10.786,8.622,12.95,400,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 65+,percent of adults with the measure available,20.007,17.392,22.621,1969,WTMEC2YR
+2021_2023,Adults 18+: count,sex Male,millions,123.11,110.9,135.32,3657,WTMEC2YR
+2021_2023,BMI 30 or more: count,sex Male,millions,47.114,41.229,52.998,1060,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,sex Male,percent of adults with the measure available,38.657,35.025,42.289,2817,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,sex Male,millions,16.255,13.903,18.607,429,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,sex Male,percent of adults with the measure available,13.337,11.12,15.554,2817,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",sex Male,millions,63.369,57.213,69.524,1489,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",sex Male,percent of adults with the measure available,55.799,51.441,60.156,2683,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",sex Male,millions,63.673,57.078,70.267,1492,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",sex Male,percent of adults with the measure available,56.052,51.489,60.614,2686,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,sex Male,millions,14.722,13.276,16.167,426,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,sex Male,percent of adults with the measure available,11.958,10.689,13.228,2858,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",sex Male,millions,3.0949,1.774,4.4158,76,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",sex Male,percent of adults with the measure available,2.5237,1.566,3.4815,2706,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",sex Male,millions,64.981,59.635,70.327,1680,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",sex Male,percent of adults with the measure available,100,100,100,1680,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",sex Male,millions,4.9501,3.677,6.2231,174,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",sex Male,percent of adults with the measure available,20.503,16.377,24.63,900,WTMEC2YR
+2021_2023,Adults 18+: count,sex Female,millions,130.71,115.56,145.86,4496,WTMEC2YR
+2021_2023,BMI 30 or more: count,sex Female,millions,52.484,47.226,57.741,1464,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,sex Female,percent of adults with the measure available,40.836,36.685,44.986,3418,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,sex Female,millions,12.916,11.176,14.656,393,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,sex Female,percent of adults with the measure available,10.049,8.8943,11.204,3418,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",sex Female,millions,65.399,59.282,71.517,1857,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",sex Female,percent of adults with the measure available,54.326,49.848,58.804,3229,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",sex Female,millions,65.568,59.113,72.023,1859,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",sex Female,percent of adults with the measure available,54.545,50.127,58.962,3231,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,sex Female,millions,14.031,11.819,16.242,444,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,sex Female,percent of adults with the measure available,10.734,8.9046,12.564,3479,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",sex Female,millions,2.4201,2.0072,2.833,76,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",sex Female,percent of adults with the measure available,1.8617,1.4913,2.2322,3296,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",sex Female,millions,59.771,54.88,64.662,1802,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",sex Female,percent of adults with the measure available,100,100,100,1802,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",sex Female,millions,5.8358,4.7558,6.9157,226,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",sex Female,percent of adults with the measure available,19.604,17.249,21.959,1069,WTMEC2YR
+2021_2023,Adults 18+: count,Medicaid (HIQ032D),millions,34.307,29.267,39.347,1207,WTMEC2YR
+2021_2023,BMI 30 or more: count,Medicaid (HIQ032D),millions,14.846,12.245,17.447,414,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,44.746,40.808,48.683,910,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,Medicaid (HIQ032D),millions,2.9915,2.19,3.793,93,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,9.0162,6.9302,11.102,910,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",Medicaid (HIQ032D),millions,17.838,14.741,20.934,507,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",Medicaid (HIQ032D),percent of adults with the measure available,58.637,54.08,63.195,849,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",Medicaid (HIQ032D),millions,17.918,14.678,21.157,508,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",Medicaid (HIQ032D),percent of adults with the measure available,59.189,54.158,64.22,850,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,Medicaid (HIQ032D),millions,5.9762,4.7106,7.2418,187,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,17.42,14.058,20.782,945,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",Medicaid (HIQ032D),millions,0.70408,0.33737,1.0708,26,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,2.0835,1.0992,3.0678,848,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",Medicaid (HIQ032D),millions,15.807,13.408,18.206,492,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,100,100,100,492,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",Medicaid (HIQ032D),millions,0.62791,0.30029,0.95552,31,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,17.221,9.1912,25.251,164,WTMEC2YR
+2021_2023,Adults 18+: count,Medicare (HIQ032B),millions,61.576,55.009,68.143,2776,WTMEC2YR
+2021_2023,BMI 30 or more: count,Medicare (HIQ032B),millions,24.321,21.878,26.764,878,WTMEC2YR
+2021_2023,BMI 30 or more: prevalence,Medicare (HIQ032B),percent of adults with the measure available,40.44,37.536,43.345,2129,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: count,Medicare (HIQ032B),millions,11.417,9.8752,12.958,399,WTMEC2YR
+2021_2023,BMI 27-29.9 with a measurable condition: prevalence,Medicare (HIQ032B),percent of adults with the measure available,18.983,17.585,20.382,2129,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count",Medicare (HIQ032B),millions,35.738,32.015,39.462,1277,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: prevalence",Medicare (HIQ032B),percent of adults with the measure available,60.673,57.191,64.155,2092,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: count",Medicare (HIQ032B),millions,35.771,32.011,39.531,1278,WTPH2YR (HbA1c)
+2021_2023,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",Medicare (HIQ032B),percent of adults with the measure available,60.916,57.306,64.526,2093,WTPH2YR (HbA1c)
+2021_2023,Diagnosed diabetes: count,Medicare (HIQ032B),millions,14.443,12.289,16.598,509,WTMEC2YR
+2021_2023,Diagnosed diabetes: prevalence,Medicare (HIQ032B),percent of adults with the measure available,23.456,19.8,27.113,2177,WTMEC2YR
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",Medicare (HIQ032B),millions,1.9805,1.6337,2.3274,70,WTPH2YR (HbA1c)
+2021_2023,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",Medicare (HIQ032B),percent of adults with the measure available,3.241,2.6867,3.7952,2068,WTPH2YR (HbA1c)
+2021_2023,"Hypertension (told, medication or measured): count",Medicare (HIQ032B),millions,45.53,41.988,49.072,1639,WTMEC2YR
+2021_2023,"Hypertension (told, medication or measured): prevalence",Medicare (HIQ032B),percent of adults with the measure available,100,100,100,1639,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",Medicare (HIQ032B),millions,10.281,8.2294,12.334,383,WTMEC2YR
+2021_2023,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",Medicare (HIQ032B),percent of adults with the measure available,20.114,17.505,22.724,1864,WTMEC2YR
+2021_2023,BMI class under 18.5: count,All,millions,4.5628,3.6191,5.5066,108,WTMEC2YR
+2021_2023,BMI class under 18.5: prevalence,All,percent of adults with the measure available,1.8222,1.4693,2.1751,6235,WTMEC2YR
+2021_2023,BMI class 18.5-24.9: count,All,millions,67.102,55.317,78.888,1642,WTMEC2YR
+2021_2023,BMI class 18.5-24.9: prevalence,All,percent of adults with the measure available,26.798,23.973,29.623,6235,WTMEC2YR
+2021_2023,BMI class 25-26.9: count,All,millions,33.517,27.46,39.573,816,WTMEC2YR
+2021_2023,BMI class 25-26.9: prevalence,All,percent of adults with the measure available,13.385,12.17,14.601,6235,WTMEC2YR
+2021_2023,BMI class 27-29.9: count,All,millions,45.621,40.445,50.798,1145,WTMEC2YR
+2021_2023,BMI class 27-29.9: prevalence,All,percent of adults with the measure available,18.219,17.131,19.308,6235,WTMEC2YR
+2021_2023,BMI class 30-34.9 (class 1): count,All,millions,51.373,44.673,58.074,1290,WTMEC2YR
+2021_2023,BMI class 30-34.9 (class 1): prevalence,All,percent of adults with the measure available,20.516,18.553,22.479,6235,WTMEC2YR
+2021_2023,BMI class 35-39.9 (class 2): count,All,millions,24.901,22.131,27.671,649,WTMEC2YR
+2021_2023,BMI class 35-39.9 (class 2): prevalence,All,percent of adults with the measure available,9.9446,8.6751,11.214,6235,WTMEC2YR
+2021_2023,BMI class 40+ (class 3): count,All,millions,23.323,20.274,26.371,585,WTMEC2YR
+2021_2023,BMI class 40+ (class 3): prevalence,All,percent of adults with the measure available,9.3142,7.9807,10.648,6235,WTMEC2YR
+2021_2023,Diabetes medication (insulin or pills) among diagnosed diabetes: count,All,millions,24.189,21.78,26.598,735,WTMEC2YR
+2021_2023,Diabetes medication (insulin or pills) among diagnosed diabetes: prevalence,All,percent of adults with the measure available,84.13,81.115,87.145,870,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 18-39",millions,8.4085,6.4838,10.333,186,WTMEC2YR
+2021_2023,Adults 18+: count,"Medicaid, age 18-39",millions,18.34,15.319,21.361,515,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 40-59",millions,5.8395,4.1998,7.4792,161,WTMEC2YR
+2021_2023,Adults 18+: count,"Medicaid, age 40-59",millions,9.3635,7.2302,11.497,323,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 60-64",millions,1.5327,1.0078,2.0577,65,WTMEC2YR
+2021_2023,Adults 18+: count,"Medicaid, age 60-64",millions,2.7221,2.0046,3.4397,137,WTMEC2YR
+2021_2023,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 65+",millions,2.0571,1.3905,2.7236,95,WTMEC2YR
+2021_2023,Adults 18+: count,"Medicaid, age 65+",millions,3.8813,3.0536,4.7089,232,WTMEC2YR
+2017_2020,Adults 18+: count,All,millions,247.84,227.48,268.19,8965,WTMECPRP
+2017_2020,BMI 30 or more: count,All,millions,101.34,93.186,109.5,3688,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,All,percent of adults with the measure available,41.436,39.17,43.701,8790,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,All,millions,29.054,26.087,32.021,1120,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,All,percent of adults with the measure available,11.879,10.71,13.048,8790,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",All,millions,130.4,121.37,139.42,4808,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",All,percent of adults with the measure available,57.041,54.791,59.292,8269,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",All,millions,130.62,121.58,139.66,4817,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",All,percent of adults with the measure available,57.083,54.838,59.328,8278,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,All,millions,28.014,25.436,30.591,1327,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,All,percent of adults with the measure available,11.303,10.594,12.013,8965,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",All,millions,5.4602,4.6109,6.3096,285,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",All,percent of adults with the measure available,2.3046,1.9491,2.6601,8464,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",All,millions,122.03,113.89,130.17,4893,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",All,percent of adults with the measure available,100,100,100,4893,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",All,millions,9.8624,8.5276,11.197,398,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",All,percent of adults with the measure available,19.957,17.62,22.295,2101,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,All,millions,101.01,92.393,109.63,3486,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,All,percent of adults with the measure available,40.758,39.216,42.301,8965,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,All,millions,85.467,78.871,92.063,3007,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,All,percent of adults with the measure available,37.387,35.785,38.989,8269,WTMECPRP
+2017_2020,Adults 18+: count,age 18-39,millions,94.014,84.55,103.48,3260,WTMECPRP
+2017_2020,BMI 30 or more: count,age 18-39,millions,36.141,32.685,39.597,1143,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,age 18-39,percent of adults with the measure available,38.803,34.869,42.736,2979,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,age 18-39,millions,4.2957,3.1744,5.417,144,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,age 18-39,percent of adults with the measure available,4.6121,3.4028,5.8214,2979,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",age 18-39,millions,40.437,36.794,44.079,1287,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",age 18-39,percent of adults with the measure available,47.965,43.628,52.303,2675,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",age 18-39,millions,40.488,36.848,44.128,1289,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 18-39,percent of adults with the measure available,47.997,43.664,52.33,2677,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,age 18-39,millions,2.0968,1.449,2.7446,65,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,age 18-39,percent of adults with the measure available,2.2303,1.5604,2.9002,3016,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 18-39,millions,0.66229,0.36311,0.96146,31,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 18-39,percent of adults with the measure available,0.74611,0.419,1.0732,2810,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",age 18-39,millions,24.356,21.515,27.197,767,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",age 18-39,percent of adults with the measure available,100,100,100,767,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 18-39,millions,0,0,0,0,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 18-39,percent of adults with the measure available,0,0,0,0,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,age 18-39,millions,33.935,30.646,37.224,1008,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,age 18-39,percent of adults with the measure available,36.095,33.507,38.684,3016,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,age 18-39,millions,27.435,24.576,30.294,817,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,age 18-39,percent of adults with the measure available,32.543,29.02,36.067,2675,WTMECPRP
+2017_2020,Adults 18+: count,age 40-59,millions,82.164,73.525,90.804,3011,WTMECPRP
+2017_2020,BMI 30 or more: count,age 40-59,millions,36.133,31.746,40.52,1291,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,age 40-59,percent of adults with the measure available,44.353,41.501,47.205,2770,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,age 40-59,millions,11.837,9.9913,13.682,383,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,age 40-59,percent of adults with the measure available,14.529,12.393,16.665,2770,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",age 40-59,millions,47.97,42.875,53.064,1674,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",age 40-59,percent of adults with the measure available,63.605,60.33,66.879,2601,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",age 40-59,millions,48.105,43.013,53.197,1680,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 40-59,percent of adults with the measure available,63.67,60.411,66.928,2607,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,age 40-59,millions,9.684,7.9009,11.467,399,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,age 40-59,percent of adults with the measure available,11.786,9.8926,13.68,2808,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 40-59,millions,2.4217,1.5795,3.2639,118,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 40-59,percent of adults with the measure available,3.0512,2.0234,4.079,2677,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",age 40-59,millions,44.041,39.446,48.636,1638,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",age 40-59,percent of adults with the measure available,100,100,100,1638,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 40-59,millions,0,0,0,0,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 40-59,percent of adults with the measure available,0,0,0,0,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,age 40-59,millions,36.799,32.129,41.468,1218,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,age 40-59,percent of adults with the measure available,44.786,42.149,47.424,2808,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,age 40-59,millions,31.747,28.077,35.417,1086,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,age 40-59,percent of adults with the measure available,42.095,39.22,44.969,2601,WTMECPRP
+2017_2020,Adults 18+: count,age 60-64,millions,20.806,17.367,24.245,1011,WTMECPRP
+2017_2020,BMI 30 or more: count,age 60-64,millions,8.8017,6.3914,11.212,410,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,age 60-64,percent of adults with the measure available,42.825,35.436,50.213,940,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,age 60-64,millions,3.4016,2.6822,4.121,170,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,age 60-64,percent of adults with the measure available,16.551,12.877,20.224,940,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",age 60-64,millions,12.203,9.6267,14.78,580,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",age 60-64,percent of adults with the measure available,60.575,53.65,67.499,917,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",age 60-64,millions,12.203,9.6267,14.78,580,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 60-64,percent of adults with the measure available,60.575,53.65,67.499,917,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,age 60-64,millions,3.8522,2.7708,4.9337,230,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,age 60-64,percent of adults with the measure available,18.515,14.15,22.881,955,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 60-64,millions,0.64293,0.39055,0.89531,43,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 60-64,percent of adults with the measure available,3.1975,1.9264,4.4685,912,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",age 60-64,millions,14.286,12.253,16.319,700,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",age 60-64,percent of adults with the measure available,100,100,100,700,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 60-64,millions,0,0,0,0,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 60-64,percent of adults with the measure available,0,0,0,0,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,age 60-64,millions,9.4406,6.8649,12.016,410,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,age 60-64,percent of adults with the measure available,45.375,38.19,52.561,955,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,age 60-64,millions,8.2111,6.0541,10.368,362,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,age 60-64,percent of adults with the measure available,40.758,34.595,46.921,917,WTMECPRP
+2017_2020,Adults 18+: count,age 65+,millions,50.851,44.403,57.299,2411,WTMECPRP
+2017_2020,BMI 30 or more: count,age 65+,millions,20.266,16.968,23.564,844,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,age 65+,percent of adults with the measure available,41.01,37.591,44.43,2101,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,age 65+,millions,9.5203,7.5878,11.453,423,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,age 65+,percent of adults with the measure available,19.265,16.085,22.445,2101,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",age 65+,millions,29.786,25.687,33.886,1267,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",age 65+,percent of adults with the measure available,61.125,58.882,63.367,2076,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",age 65+,millions,29.821,25.737,33.904,1268,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",age 65+,percent of adults with the measure available,61.152,58.908,63.395,2077,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,age 65+,millions,12.381,10.451,14.311,633,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,age 65+,percent of adults with the measure available,24.347,22.146,26.549,2186,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",age 65+,millions,1.7333,1.2397,2.227,93,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",age 65+,percent of adults with the measure available,3.5602,2.6523,4.4682,2065,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",age 65+,millions,39.344,34.489,44.199,1788,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",age 65+,percent of adults with the measure available,100,100,100,1788,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",age 65+,millions,9.8624,8.5276,11.197,398,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",age 65+,percent of adults with the measure available,19.957,17.62,22.295,2101,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,age 65+,millions,20.84,17.741,23.938,850,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,age 65+,percent of adults with the measure available,40.981,37.752,44.211,2186,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,age 65+,millions,18.073,15.197,20.95,742,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,age 65+,percent of adults with the measure available,37.088,34.223,39.954,2076,WTMECPRP
+2017_2020,Adults 18+: count,sex Male,millions,119.6,109.33,129.86,4718,WTMECPRP
+2017_2020,BMI 30 or more: count,sex Male,millions,48.289,43.101,53.478,1644,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,sex Male,percent of adults with the measure available,40.948,37.1,44.796,4271,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,sex Male,millions,16.565,14.085,19.045,651,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,sex Male,percent of adults with the measure available,14.046,11.911,16.182,4271,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",sex Male,millions,64.854,59.427,70.282,2295,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",sex Male,percent of adults with the measure available,58.539,54.637,62.441,4020,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",sex Male,millions,64.972,59.555,70.39,2300,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",sex Male,percent of adults with the measure available,58.583,54.682,62.484,4025,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,sex Male,millions,15.31,13.446,17.175,715,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,sex Male,percent of adults with the measure available,12.802,11.458,14.145,4357,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",sex Male,millions,2.2971,1.6465,2.9477,131,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",sex Male,percent of adults with the measure available,2.0102,1.4086,2.6117,4106,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",sex Male,millions,62.637,57.912,67.361,2533,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",sex Male,percent of adults with the measure available,100,100,100,2533,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",sex Male,millions,3.5823,2.689,4.4757,176,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",sex Male,percent of adults with the measure available,16.302,13.004,19.6,1068,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,sex Male,millions,45.486,40.938,50.034,1497,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,sex Male,percent of adults with the measure available,38.033,35.447,40.618,4357,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,sex Male,millions,39.313,35.399,43.226,1304,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,sex Male,percent of adults with the measure available,35.484,32.715,38.254,4020,WTMECPRP
+2017_2020,Adults 18+: count,sex Female,millions,128.24,116.77,139.71,4975,WTMECPRP
+2017_2020,BMI 30 or more: count,sex Female,millions,53.053,48.149,57.957,2044,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,sex Female,percent of adults with the measure available,41.89,39.54,44.24,4519,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,sex Female,millions,12.489,10.628,14.35,469,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,sex Female,percent of adults with the measure available,9.8615,8.6358,11.087,4519,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",sex Female,millions,65.542,59.841,71.243,2513,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",sex Female,percent of adults with the measure available,55.633,53.252,58.014,4249,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",sex Female,millions,65.645,59.922,71.368,2517,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",sex Female,percent of adults with the measure available,55.672,53.286,58.058,4253,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,sex Female,millions,12.704,10.857,14.55,612,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,sex Female,percent of adults with the measure available,9.9062,8.7824,11.03,4608,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",sex Female,millions,3.1631,2.3857,3.9406,154,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",sex Female,percent of adults with the measure available,2.579,1.9536,3.2044,4358,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",sex Female,millions,59.39,53.672,65.108,2360,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",sex Female,percent of adults with the measure available,100,100,100,2360,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",sex Female,millions,6.2801,5.299,7.2611,222,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",sex Female,percent of adults with the measure available,22.885,19.799,25.971,1033,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,sex Female,millions,55.528,49.949,61.107,1989,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,sex Female,percent of adults with the measure available,43.3,41.453,45.147,4608,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,sex Female,millions,46.154,41.489,50.82,1703,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,sex Female,percent of adults with the measure available,39.177,37.067,41.286,4249,WTMECPRP
+2017_2020,Adults 18+: count,Medicaid (HIQ032D),millions,28.197,25.006,31.389,1583,WTMECPRP
+2017_2020,BMI 30 or more: count,Medicaid (HIQ032D),millions,12.751,11.147,14.356,650,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,46.337,43.613,49.061,1430,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,Medicaid (HIQ032D),millions,3.1474,2.2902,4.0045,166,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,11.437,8.7022,14.172,1430,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",Medicaid (HIQ032D),millions,15.899,13.802,17.995,816,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",Medicaid (HIQ032D),percent of adults with the measure available,60.49,56.699,64.28,1363,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",Medicaid (HIQ032D),millions,15.923,13.826,18.021,817,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",Medicaid (HIQ032D),percent of adults with the measure available,60.527,56.731,64.322,1364,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,Medicaid (HIQ032D),millions,3.5409,2.8141,4.2676,252,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,12.557,9.8263,15.289,1477,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",Medicaid (HIQ032D),millions,0.44998,0.19261,0.70735,31,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,1.7213,0.69135,2.7513,1358,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",Medicaid (HIQ032D),millions,14.601,12.919,16.282,836,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,100,100,100,836,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",Medicaid (HIQ032D),millions,0.70311,0.47538,0.93084,46,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",Medicaid (HIQ032D),percent of adults with the measure available,20.215,14.885,25.545,266,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,Medicaid (HIQ032D),millions,11.965,10.51,13.42,575,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,Medicaid (HIQ032D),percent of adults with the measure available,42.434,39.173,45.694,1477,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,Medicaid (HIQ032D),millions,10.578,9.3202,11.836,507,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,Medicaid (HIQ032D),percent of adults with the measure available,40.247,37.518,42.975,1363,WTMECPRP
+2017_2020,Adults 18+: count,Medicare (HIQ032B),millions,55.011,47.864,62.158,2580,WTMECPRP
+2017_2020,BMI 30 or more: count,Medicare (HIQ032B),millions,22.814,18.919,26.709,986,WTMECPRP
+2017_2020,BMI 30 or more: prevalence,Medicare (HIQ032B),percent of adults with the measure available,42.772,39.377,46.166,2270,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: count,Medicare (HIQ032B),millions,9.5665,7.6734,11.46,416,WTMECPRP
+2017_2020,BMI 27-29.9 with a measurable condition: prevalence,Medicare (HIQ032B),percent of adults with the measure available,17.935,15.115,20.755,2270,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count",Medicare (HIQ032B),millions,32.381,27.589,37.173,1402,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: prevalence",Medicare (HIQ032B),percent of adults with the measure available,61.57,58.973,64.167,2242,WTMECPRP
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: count",Medicare (HIQ032B),millions,32.415,27.638,37.192,1403,WTMECPRP (HbA1c)
+2017_2020,"Label-eligible (lower bound), including HbA1c diabetes: prevalence",Medicare (HIQ032B),percent of adults with the measure available,61.595,58.999,64.192,2243,WTMECPRP (HbA1c)
+2017_2020,Diagnosed diabetes: count,Medicare (HIQ032B),millions,13.445,11.225,15.666,686,WTMECPRP
+2017_2020,Diagnosed diabetes: prevalence,Medicare (HIQ032B),percent of adults with the measure available,24.441,22.456,26.426,2358,WTMECPRP
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): count",Medicare (HIQ032B),millions,1.6918,1.2588,2.1249,91,WTMECPRP (HbA1c)
+2017_2020,"Undiagnosed diabetes (HbA1c >= 6.5%, no diagnosis): prevalence",Medicare (HIQ032B),percent of adults with the measure available,3.2299,2.5169,3.9428,2223,WTMECPRP (HbA1c)
+2017_2020,"Hypertension (told, medication or measured): count",Medicare (HIQ032B),millions,42.123,36.54,47.706,1893,WTMECPRP
+2017_2020,"Hypertension (told, medication or measured): prevalence",Medicare (HIQ032B),percent of adults with the measure available,100,100,100,1893,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): count",Medicare (HIQ032B),millions,8.8644,7.5064,10.222,348,WTMECPRP
+2017_2020,"Medicare GLP-1 Bridge criteria met (measurable part, 65+): prevalence",Medicare (HIQ032B),percent of adults with the measure available,19.522,17.067,21.977,1865,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): count,Medicare (HIQ032B),millions,24.013,20.586,27.44,994,WTMECPRP
+2017_2020,Told by a doctor overweight (MCQ080): prevalence,Medicare (HIQ032B),percent of adults with the measure available,43.652,40.435,46.869,2358,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: count,Medicare (HIQ032B),millions,20.731,17.518,23.943,875,WTMECPRP
+2017_2020,Label-eligible (lower bound) and told by a doctor overweight: prevalence,Medicare (HIQ032B),percent of adults with the measure available,39.418,36.668,42.169,2242,WTMECPRP
+2017_2020,BMI class under 18.5: count,All,millions,3.7979,2.7294,4.8664,150,WTMECPRP
+2017_2020,BMI class under 18.5: prevalence,All,percent of adults with the measure available,1.5528,1.1268,1.9788,8790,WTMECPRP
+2017_2020,BMI class 18.5-24.9: count,All,millions,62.453,54.903,70.002,2185,WTMECPRP
+2017_2020,BMI class 18.5-24.9: prevalence,All,percent of adults with the measure available,25.535,23.874,27.196,8790,WTMECPRP
+2017_2020,BMI class 25-26.9: count,All,millions,31.952,27.775,36.13,1126,WTMECPRP
+2017_2020,BMI class 25-26.9: prevalence,All,percent of adults with the measure available,13.064,11.953,14.175,8790,WTMECPRP
+2017_2020,BMI class 27-29.9: count,All,millions,45.032,40.569,49.496,1641,WTMECPRP
+2017_2020,BMI class 27-29.9: prevalence,All,percent of adults with the measure available,18.412,17.362,19.463,8790,WTMECPRP
+2017_2020,BMI class 30-34.9 (class 1): count,All,millions,52.747,48.083,57.411,1873,WTMECPRP
+2017_2020,BMI class 30-34.9 (class 1): prevalence,All,percent of adults with the measure available,21.566,19.947,23.186,8790,WTMECPRP
+2017_2020,BMI class 35-39.9 (class 2): count,All,millions,26.867,23.648,30.086,988,WTMECPRP
+2017_2020,BMI class 35-39.9 (class 2): prevalence,All,percent of adults with the measure available,10.985,10.097,11.873,8790,WTMECPRP
+2017_2020,BMI class 40+ (class 3): count,All,millions,21.728,18.837,24.62,827,WTMECPRP
+2017_2020,BMI class 40+ (class 3): prevalence,All,percent of adults with the measure available,8.884,7.7464,10.022,8790,WTMECPRP
+2017_2020,Diabetes medication (insulin or pills) among diagnosed diabetes: count,All,millions,23.478,21.056,25.9,1123,WTMECPRP
+2017_2020,Diabetes medication (insulin or pills) among diagnosed diabetes: prevalence,All,percent of adults with the measure available,83.808,81.802,85.814,1327,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 18-39",millions,6.8243,5.611,8.0376,278,WTMECPRP
+2017_2020,Adults 18+: count,"Medicaid, age 18-39",millions,13.923,11.615,16.231,643,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 40-59",millions,5.6528,4.6204,6.6852,282,WTMECPRP
+2017_2020,Adults 18+: count,"Medicaid, age 40-59",millions,8.5457,7.3523,9.7391,454,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 60-64",millions,1.4032,0.77799,2.0284,102,WTMECPRP
+2017_2020,Adults 18+: count,"Medicaid, age 60-64",millions,1.9799,1.4009,2.5589,168,WTMECPRP
+2017_2020,"Label-eligible (lower bound), without HbA1c: count","Medicaid, age 65+",millions,2.0183,1.5647,2.4719,154,WTMECPRP
+2017_2020,Adults 18+: count,"Medicaid, age 65+",millions,3.7486,3.0868,4.4105,318,WTMECPRP

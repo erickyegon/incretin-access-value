@@ -1,0 +1,12 @@
+payer,period,wegovy_share_pct,zepbound_share_pct,detail
+"Medicaid (SDUD), states with coverage_active",2023Q4,99.59,0.41,11 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2024Q1,84.35,15.65,12 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2024Q2,82.6,17.4,12 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2024Q3,82.78,17.22,13 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2024Q4,74.56,25.44,14 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2025Q1,64.48,35.52,15 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2025Q2,58.03,41.97,15 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2025Q3,53.27,46.73,16 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2025Q4,45.17,54.83,17 covering states in the data
+"Medicaid (SDUD), states with coverage_active",2026Q1,36.34,63.66,13 covering states in the data
+Medicare Part D 2024 (claims; Wegovy only for its cardiovascular indication),2024,99.98,0.02,"Wegovy 76176 claims, Zepbound 14 claims"

@@ -33,6 +33,8 @@ approval_wegovy     <- as.Date("2021-06-04")
 approval_zepbound   <- as.Date("2023-11-08")
 label_wegovy_cv     <- as.Date("2024-03-08")
 label_zepbound_osa  <- as.Date("2024-12-20")
+preliminary_from    <- as.Date("2026-01-01")   # SDUD 2026 Q1 is preliminary (used by the Module C figures)
+sdud_window         <- c(as.Date("2018-01-01"), as.Date("2026-03-31"))
 
 # Dynamically derive temporal limits instead of hardcoding cutoff dates
 get_sdud_window <- function(data_df, date_col = "quarter_date") {
@@ -107,10 +109,17 @@ out_dir <- function(kind) {
   d
 }
 
-save_fig <- function(p, name, width = 9, height = 6) {
+save_fig <- function(p, name, width = 9, height = 6, alt = NA_character_) {
   d <- out_dir("figures")
   ggplot2::ggsave(file.path(d, paste0(name, ".png")), p, width = width, height = height, dpi = 300, bg = "white")
   ggplot2::ggsave(file.path(d, paste0(name, ".svg")), p, width = width, height = height, bg = "white")
+  # alt text for every figure is kept in outputs/figures/alt_text.csv
+  if (!is.na(alt)) {
+    f <- file.path(d, "alt_text.csv")
+    cur <- if (file.exists(f)) readr::read_csv(f, show_col_types = FALSE) else data.frame(figure = character(), alt_text = character())
+    cur <- rbind(cur[cur$figure != name, c("figure", "alt_text")], data.frame(figure = name, alt_text = alt))
+    readr::write_csv(cur[order(cur$figure), ], f)
+  }
   invisible(file.path(d, name))
 }
 

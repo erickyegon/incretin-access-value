@@ -1,0 +1,10 @@
+pathway,step,label,status,est,lo,hi,source,unit
+Obesity,1,U.S. adults 18+,measured,253.82,227.12,280.51,NHANES 2021-2023 (sum of exam weights; civilian non-institutionalised),millions of adults
+Obesity,2,Label-eligible (lower bound),measured,128.77,117.24,140.29,"NHANES 2021-2023, BMI >= 30 or BMI 27-29.9 with a measurable condition",millions of adults
+Obesity,3,Eligible and told by a doctor they were overweight,measured,85.47,78.87,92.06,NHANES 2017-March 2020 (question not asked in 2021-2023),millions of adults
+Obesity,4,"Currently using a GLP-1 drug, no diagnosed diabetes",modelled,17.43,9.9,25.16,"KFF poll Feb 24-Mar 2, 2026 (12% of adults, +/- 3 points) minus diabetes users; all indications, all GLP-1 drugs",millions of adults
+Type 2 diabetes,1,U.S. adults 18+,measured,253.82,227.12,280.51,NHANES 2021-2023,millions of adults
+Type 2 diabetes,2,Diagnosed diabetes (type not separable),measured,28.75,25.85,31.65,NHANES 2021-2023 DIQ010,millions of adults
+Type 2 diabetes,3,Taking insulin or diabetes pills,measured,24.19,21.78,26.6,NHANES 2021-2023 DIQ050 / DIQ070,millions of adults
+Type 2 diabetes,4,"Currently using a GLP-1 drug, diagnosed diabetes",modelled,12.91,10.16,15.86,KFF Nov 2025 poll: 45% of adults with diagnosed diabetes (range 35-55% assumed),millions of adults
+All indications,5,Currently using any GLP-1 drug,modelled,30.36,23.48,37.49,"KFF poll Feb 24-Mar 2, 2026: 12% of adults (+/- 3 points)",millions of adults
