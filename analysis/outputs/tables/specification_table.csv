@@ -15,3 +15,4 @@ spec,specification,att_simple,se_simple,ci_low,ci_high,fmi,att_group,se_group,gr
 11,"Window to 2025 Q4, without North Carolina",13.335,2.259,8.907,17.763,0,12.562,2.54,7.584,17.539,43,9,34,1376,20,NA
 12,Fee-for-service only (FFSU per FFS enrollee),NA,67.076,NA,NA,0,NA,52.662,-55.518,150.915,35,9,26,1085,20,"Not estimable reliably: FFS denominators too small; coverage operates mainly through MCOs in SC and RI; dropped (no managed-care share or no FFS enrollees): AK, CT, HI, ME, MI, MT, SD, VT, WY"
 13,Without Rhode Island,12.988,2.004,9.061,16.915,0,12.169,2.435,7.397,16.942,43,9,34,1333,20,NA
+14,Managed care only (MCOU per managed-care enrollee),12.51,3.324,5.996,19.024,0,12.176,4.14,4.062,20.29,38,10,28,1178,20,"dropped (no managed-care share or no FFS enrollees): AK, CT, ME, MT, SD, WY"

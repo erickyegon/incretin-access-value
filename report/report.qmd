@@ -53,6 +53,30 @@ cat("![dbt lineage: raw sources through staging and intermediate models to the m
 
 Pre-specified analysis plans were committed before any results of each module: Module C `d46bd57` (2026-10-04 06:16 -0400; amendment `f74da18`, 2026-10-04 07:09 -0400, before any model run), Module B `7909c7a` (2026-10-04 09:11 -0400), Module D `6d4234f` (2026-10-04 09:28 -0400) and Module E `993e8c8` (2026-10-04 09:39 -0400). Commit hashes changed when history was rewritten to remove personal metadata and third-party copies; dates and order are unchanged. Departures from the plans are logged in [`deviations.md`](https://github.com/erickyegon/incretin-access-value/blob/main/analysis/outputs/deviations.md) (items 1 to 17).
 
+## Market context: spending, timeline and pipeline
+
+```{r a-spend, results='asis'}
+fig("50_spending_trend", "Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug; gross of rebates.")
+```
+
+Gross spending on GLP-1 and GIP products rose from $`r kn("m_spend_partd_2020")` billion in 2020 to $`r kn("m_spend_partd_2024")` billion in 2024 in Medicare Part D and from $`r kn("m_spend_medicaid_2020")` billion to $`r kn("m_spend_medicaid_2024")` billion in Medicaid. These are CMS spending figures **before manufacturer rebates**, so they overstate what programmes pay. Ozempic ($`r kn("m_spend_partd_ozempic_2024")` billion) and Mounjaro ($`r kn("m_spend_partd_mounjaro_2024")` billion) lead in Part D in 2024, mostly diabetes use; in Medicaid, Wegovy ($`r kn("m_spend_medicaid_wegovy_2024")` billion) is the largest obesity-labelled brand.
+
+```{r a-timeline, results='asis'}
+fig("51_timeline", "Sources: Drugs@FDA labels; state Medicaid documents; White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.")
+```
+
+The pipeline of registered studies (ClinicalTrials.gov, in-scope ingredients only: semaglutide, tirzepatide, liraglutide, dulaglutide, exenatide and orforglipron) has `r kn("p_obesity_studies")` studies listing obesity, of which `r kn("p_obesity_studies_ongoing")` are ongoing and `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3. Oral programmes account for `r kn("p_oral_obesity_studies")` obesity studies (`r kn("p_oral_obesity_phase3_ongoing")` ongoing Phase 3; "oral" is matched on orforglipron or oral or tablet text and is approximate), and orforglipron alone has `r kn("p_orforglipron_obesity_studies")` obesity studies, `r kn("p_orforglipron_phase3_obesity_studies")` of them Phase 3. Programmes of other ingredients are not counted.
+
+```{r a-pipeline}
+knitr::kable(tbl("moduleA_pipeline_by_phase.csv"), col.names = c("Registered phase", "Obesity studies", "Ongoing"))
+```
+
+```{r a-report, results='asis'}
+fig("52_sdud_reporting_suppression", "Source: CMS State Drug Utilization Data via the warehouse panel; counts under 11 are suppressed by CMS.")
+```
+
+The reporting heatmap shows that `r kn("m_rep_both")`% of state-quarters have both fee-for-service and managed-care rows and `r kn("m_rep_ffsu_only")`% have fee-for-service rows only; `r kn("m_wz_suppressed_share")`% of Wegovy and Zepbound rows are suppressed (counts under 11), which is why Module C imputes suppressed cells.
+
 # B. Funnel and forecast: about half of U.S. adults meet the label criteria, and use is rising
 
 ```{r b-fig, results='asis'}
@@ -88,6 +112,19 @@ print(htmltools::div(role = "img", `aria-label` = paste0("Interactive event-stud
 ```
 
 *Source: CMS State Drug Utilization Data and Medicaid enrollment; Callaway and Sant'Anna estimator, state clusters, 999 bootstrap draws, Rubin's rules over 20 imputations of suppressed cells (`analysis/outputs/tables/event_study_primary.csv`). Event times with fewer than three contributing states are not shown. Part of the later growth reflects national market growth.*
+
+
+```{r c-um}
+um <- read.csv("../analysis/outputs/tables/coverage_um_criteria.csv", check.names = FALSE, stringsAsFactors = FALSE)
+gt::gt(um[, c("State", "Delivery system", "Prior authorization", "BMI threshold", "Comorbidity requirement", "Step therapy", "Criteria version (document)")]) |> gt::tab_header(title = "Utilization-management criteria in the 17 covering states", subtitle = "From state documents; 'not found in sourced documents' means no document states it; criteria differ by period") |>
+  gt::tab_source_note("Sources: state Medicaid agency documents (URLs per state in coverage_um_criteria.csv); South Carolina's criteria are as reported by a news outlet quoting the state agency.") |> gt::tab_options(table.font.size = gt::px(11), data_row.padding = gt::px(3))
+```
+
+The full table is [coverage_um_criteria.csv](../analysis/outputs/tables/coverage_um_criteria.csv): prior authorization is documented for `r kn("um_pa")` of 17 states, BMI thresholds for `r kn("um_bmi")`, comorbidity rules for `r kn("um_comorb")` and step therapy for `r kn("um_step")`. Tennessee requires prior authorization (TennCare notice, August 2025: BMI 30, or 27 with a weight-related condition). In 2025 Q3, states with active coverage filled `r kn("m_rate_cov_2025q3")` Wegovy and Zepbound prescriptions per 1,000 enrollees against `r kn("m_rate_non_2025q3")` elsewhere:
+
+```{r c-rate, results='asis'}
+fig("53_rate_map_2025Q3", "Source: CMS State Drug Utilization Data and Medicaid enrollment; observed counts only.")
+```
 
 The overall effect is `r kn("c_att_overall")` per 1,000 enrollees per quarter (`r kn_ci("c_att_overall")`). A different estimator (Sun and Abraham) gives `r kn("c_sa")` (`r kn_ci("c_sa")`), a wild cluster bootstrap by state gives an interval of `r sub("wild bootstrap 95% interval ", "", kn_ci("c_wild"))`, and the sensitivity analyses range from `r kn("c_spec_range")`. A placebo with coverage moved four quarters earlier gives `r kn("c_placebo")` (`r kn_ci("c_placebo")`). The result tolerates a violation of parallel trends up to `r kn("c_honest_mbar")` times the largest pre-period violation (HonestDiD). Saxenda (`r kn("c_saxenda")`, `r kn_ci("c_saxenda")`) and diabetes GLP-1 products (`r kn("c_diab_glp1")`, `r kn_ci("c_diab_glp1")`) show no effect.
 
@@ -159,11 +196,25 @@ fig("41_waterfall_pmpm", "Source: Module E; rebate step is an assumption; $245 i
 fig("43_psa_distribution", "Source: Module E probabilistic sensitivity analysis, 10,000 draws.")
 ```
 
+## Value context: trial efficacy next to net cost (context only)
+
+```{r e-value}
+vc <- read.csv("../analysis/outputs/tables/moduleE_value_context.csv", check.names = FALSE, stringsAsFactors = FALSE)
+gt::gt(vc[, 1:8]) |> gt::tab_header(title = "Trial weight loss and Medicaid net cost per user per year", subtitle = "Context only: different populations, durations and fills; no cost-effectiveness claim") |>
+  gt::tab_source_note("Trials: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1; citations and DOIs in data/reference/trial_inputs.csv). Costs: Module E, net of an assumed rebate of 51.2%; one blended Wegovy and Zepbound net cost is shown for every row.") |> gt::tab_options(table.font.size = gt::px(10), data_row.padding = gt::px(3))
+```
+
+Published primary results range from `r kn("t_attain_1_orforglipron_6_mg")`% (orforglipron 6 mg, 72 weeks) to `r kn("t_surmount_1_tirzepatide_15_mg")`% (tirzepatide 15 mg, 72 weeks) mean body-weight change; semaglutide 2.4 mg gave `r kn("t_step_1_semaglutide")`% at 68 weeks (STEP 1) and head-to-head tirzepatide gave `r kn("t_surmount_5_tirzepatide")`% against `r kn("t_surmount_5_semaglutide")`% for semaglutide (SURMOUNT-5). Against these, the Module E central net cost is $`r kn("e_per_user_year")` per user per year (4.3 fills, MEPS) and $`r kn("e_per_member_year_cont")` per member-year of continuous treatment (12 fills, assumption). The trials, populations, durations and Medicaid fills differ, so this table supports no cost-effectiveness, cost-per-kilogram or QALY statement.
+
 The interactive model runs locally (`shiny::runApp("app")`; deployment steps are in `PUBLISH.md`); a static PDF of the scenarios is in `analysis/outputs/budget_impact_scenarios.pdf`.
 
 # F. Research pack: a design for primary research, with no fieldwork done
 
 Module F is a design pack, rendered as `research_pack/research_pack.pdf`: a one-page brief from a fictional access team, prescriber and payer screeners with quotas, a 60-minute discussion guide with probes tied to the findings above, fictional stimulus boards, a discrete choice experiment (five attributes, three levels, 24 tasks in two blocks of 12, an efficient design from `idefix` with a zero prior), sample size by the Johnson and Orme rule of thumb and by simulation, and an analysis framework. No respondents exist and no interviews have been fielded; the recommendation slides are marked illustrative and carry only secondary-data numbers.
+
+# Exploration notebooks
+
+One short notebook per module, built only from the existing outputs (no new analysis): [A, data layer](../notebooks/A_data_layer.html), [B, eligible population](../notebooks/B_eligible_population.html), [C, coverage study](../notebooks/C_coverage_study.html), [D, prescribers](../notebooks/D_prescribers.html) and [E, budget impact](../notebooks/E_budget_impact.html). The data dictionary (marts, units, suppression, NDC rather than HCPCS) is [docs/data_dictionary.md](https://github.com/erickyegon/incretin-access-value/blob/main/docs/data_dictionary.md).
 
 # Limitations
 

@@ -26,101 +26,106 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1MDQuMDA=)'>
-<rect x='0.00' y='0.00' width='792.00' height='504.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='0.000000000000064' y='0.00' width='792.00' height='504.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMTk4LjU1fDc4Ni41Mnw1NS43Mnw0NDAuNzc='>
-    <rect x='198.55' y='55.72' width='587.97' height='385.05' />
+  <clipPath id='cpMjQzLjA0fDc4Ni41Mnw1NS43Mnw0NDAuNzc='>
+    <rect x='243.04' y='55.72' width='543.48' height='385.05' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTk4LjU1fDc4Ni41Mnw1NS43Mnw0NDAuNzc=)'>
-<line x1='225.28' y1='440.77' x2='225.28' y2='55.72' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
-<line x1='592.06' y1='440.77' x2='592.06' y2='55.72' style='stroke-width: 1.07; stroke: #D55E00; stroke-opacity: 0.60; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
-<polyline points='706.86,74.08 706.86,67.75 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='706.86,70.92 477.25,70.92 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='477.25,74.08 477.25,67.75 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='744.89,99.42 744.89,93.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='744.89,96.25 504.13,96.25 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='504.13,99.42 504.13,93.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='736.19,124.75 736.19,118.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='736.19,121.58 488.93,121.58 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='488.93,124.75 488.93,118.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='705.75,150.08 705.75,143.75 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='705.75,146.91 480.16,146.91 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='480.16,150.08 480.16,143.75 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='722.20,175.41 722.20,169.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='722.20,172.25 615.32,172.25 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='615.32,175.41 615.32,169.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='709.73,200.74 709.73,194.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='709.73,197.58 475.21,197.58 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='475.21,200.74 475.21,194.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='706.17,226.08 706.17,219.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='706.17,222.91 476.69,222.91 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='476.69,226.08 476.69,219.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='659.34,251.41 659.34,245.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='659.34,248.24 446.18,248.24 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='446.18,251.41 446.18,245.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='706.47,276.74 706.47,270.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='706.47,273.57 477.64,273.57 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='477.64,276.74 477.64,270.41 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='732.71,302.07 732.71,295.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='732.71,298.91 467.80,298.91 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='467.80,302.07 467.80,295.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='603.88,327.40 603.88,321.07 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='603.88,324.24 452.99,324.24 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='452.99,327.40 452.99,321.07 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='661.41,352.74 661.41,346.40 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='661.41,349.57 491.46,349.57 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='491.46,352.74 491.46,346.40 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='714.76,378.07 714.76,371.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='714.76,374.90 492.65,374.90 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='492.65,378.07 492.65,371.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='759.79,403.40 759.79,397.07 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='759.79,400.23 493.30,400.23 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='493.30,403.40 493.30,397.07 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='734.28,428.73 734.28,422.40 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='734.28,425.57 497.93,425.57 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='497.93,428.73 497.93,422.40 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
-<circle cx='592.06' cy='70.92' r='3.13' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='624.51' cy='96.25' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='612.56' cy='121.58' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='592.95' cy='146.91' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='668.76' cy='172.25' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='592.47' cy='197.58' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='591.43' cy='222.91' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='552.76' cy='248.24' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='592.06' cy='273.57' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='600.25' cy='298.91' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='528.43' cy='324.24' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='576.44' cy='349.57' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='603.71' cy='374.90' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='626.55' cy='400.23' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='616.11' cy='425.57' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<g clip-path='url(#cpMjQzLjA0fDc4Ni41Mnw1NS43Mnw0NDAuNzc=)'>
+<line x1='267.74' y1='440.77' x2='267.74' y2='55.72' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
+<line x1='584.30' y1='440.77' x2='584.30' y2='55.72' style='stroke-width: 1.07; stroke: #D55E00; stroke-opacity: 0.60; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<polyline points='683.38,72.95 683.38,67.01 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='683.38,69.98 485.21,69.98 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='485.21,72.95 485.21,67.01 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='716.20,96.72 716.20,90.78 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='716.20,93.75 508.41,93.75 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='508.41,96.72 508.41,90.78 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='708.70,120.49 708.70,114.54 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='708.70,117.52 495.29,117.52 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='495.29,120.49 495.29,114.54 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='682.43,144.25 682.43,138.31 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='682.43,141.28 487.72,141.28 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='487.72,144.25 487.72,138.31 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='696.62,168.02 696.62,162.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='696.62,165.05 604.38,165.05 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='604.38,168.02 604.38,162.08 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='685.86,191.79 685.86,185.85 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='685.86,188.82 483.45,188.82 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='483.45,191.79 483.45,185.85 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='682.79,215.56 682.79,209.62 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='682.79,212.59 484.73,212.59 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='484.73,215.56 484.73,209.62 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='642.37,239.33 642.37,233.39 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='642.37,236.36 458.39,236.36 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='458.39,239.33 458.39,233.39 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='683.04,263.10 683.04,257.15 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='683.04,260.13 485.55,260.13 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='485.55,263.10 485.55,257.15 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='705.70,286.87 705.70,280.92 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='705.70,283.89 477.05,283.89 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='477.05,286.87 477.05,280.92 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='594.50,310.63 594.50,304.69 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='594.50,307.66 464.27,307.66 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='464.27,310.63 464.27,304.69 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='644.16,334.40 644.16,328.46 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='644.16,331.43 497.48,331.43 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='497.48,334.40 497.48,328.46 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='690.20,358.17 690.20,352.23 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='690.20,355.20 498.50,355.20 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='498.50,358.17 498.50,352.23 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='729.07,381.94 729.07,376.00 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='729.07,378.97 499.06,378.97 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='499.06,381.94 499.06,376.00 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='707.05,405.71 707.05,399.77 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='707.05,402.74 503.06,402.74 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='503.06,405.71 503.06,399.77 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='761.82,429.48 761.82,423.53 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='761.82,426.51 423.46,426.51 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='423.46,429.48 423.46,423.53 ' style='stroke-width: 1.07; stroke: #595959; stroke-linecap: butt;' />
+<circle cx='584.30' cy='69.98' r='3.13' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='612.31' cy='93.75' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='602.00' cy='117.52' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='585.07' cy='141.28' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='650.50' cy='165.05' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='584.65' cy='188.82' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='583.76' cy='212.59' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='550.38' cy='236.36' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='584.30' cy='260.13' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='591.37' cy='283.89' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='529.39' cy='307.66' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='570.82' cy='331.43' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='594.35' cy='355.20' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='614.07' cy='378.97' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='605.05' cy='402.74' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='592.64' cy='426.51' r='3.13' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1MDQuMDA=)'>
-<text x='193.62' y='428.72' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='98.72px' lengthAdjust='spacingAndGlyphs'>13. Without Rhode Island</text>
-<text x='193.62' y='403.38' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='183.08px' lengthAdjust='spacingAndGlyphs'>11. Window to 2025 Q4, without North Carolina</text>
-<text x='193.62' y='378.05' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='102.56px' lengthAdjust='spacingAndGlyphs'>10. First-full-quarter timing</text>
-<text x='193.62' y='352.72' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='179.59px' lengthAdjust='spacingAndGlyphs'>9b. Add sensitivity states, start = latest quarter</text>
-<text x='193.62' y='327.39' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='186.92px' lengthAdjust='spacingAndGlyphs'>9a. Add sensitivity states, start = earliest quarter</text>
-<text x='193.62' y='302.06' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='188.14px' lengthAdjust='spacingAndGlyphs'>8. Definition-caveat state-quarters set to missing</text>
-<text x='193.62' y='276.72' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='178.36px' lengthAdjust='spacingAndGlyphs'>7. Reporting-gap state-quarters set to missing</text>
-<text x='193.62' y='251.39' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>6. Denominator: Medicaid + CHIP</text>
-<text x='193.62' y='226.06' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='159.11px' lengthAdjust='spacingAndGlyphs'>5b. Suppressed cells = 10 (upper bound)</text>
-<text x='193.62' y='200.73' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='152.75px' lengthAdjust='spacingAndGlyphs'>5a. Suppressed cells = 0 (lower bound)</text>
-<text x='193.62' y='175.40' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='89.92px' lengthAdjust='spacingAndGlyphs'>4. Enrollment-weighted</text>
-<text x='193.62' y='150.06' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='115.33px' lengthAdjust='spacingAndGlyphs'>3. Never-treated controls only</text>
-<text x='193.62' y='124.73' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='146.50px' lengthAdjust='spacingAndGlyphs'>2. Without Mississippi and Tennessee</text>
-<text x='193.62' y='99.40' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='71.36px' lengthAdjust='spacingAndGlyphs'>1. Without Kansas</text>
-<text x='193.62' y='74.07' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='40.06px' lengthAdjust='spacingAndGlyphs'>0. Primary</text>
-<text x='225.28' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='375.73' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>5</text>
-<text x='526.19' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='676.65' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>15</text>
-<text x='492.54' y='463.75' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='206.41px' lengthAdjust='spacingAndGlyphs'>Overall ATT (prescriptions per 1,000 enrollees)</text>
+<text x='238.10' y='429.66' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='232.62px' lengthAdjust='spacingAndGlyphs'>14. Managed care only (MCOU per managed-care enrollee)</text>
+<text x='238.10' y='405.89' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='98.72px' lengthAdjust='spacingAndGlyphs'>13. Without Rhode Island</text>
+<text x='238.10' y='382.12' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='183.08px' lengthAdjust='spacingAndGlyphs'>11. Window to 2025 Q4, without North Carolina</text>
+<text x='238.10' y='358.35' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='102.56px' lengthAdjust='spacingAndGlyphs'>10. First-full-quarter timing</text>
+<text x='238.10' y='334.58' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='179.59px' lengthAdjust='spacingAndGlyphs'>9b. Add sensitivity states, start = latest quarter</text>
+<text x='238.10' y='310.81' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='186.92px' lengthAdjust='spacingAndGlyphs'>9a. Add sensitivity states, start = earliest quarter</text>
+<text x='238.10' y='287.04' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='188.14px' lengthAdjust='spacingAndGlyphs'>8. Definition-caveat state-quarters set to missing</text>
+<text x='238.10' y='263.28' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='178.36px' lengthAdjust='spacingAndGlyphs'>7. Reporting-gap state-quarters set to missing</text>
+<text x='238.10' y='239.51' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='131.23px' lengthAdjust='spacingAndGlyphs'>6. Denominator: Medicaid + CHIP</text>
+<text x='238.10' y='215.74' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='159.11px' lengthAdjust='spacingAndGlyphs'>5b. Suppressed cells = 10 (upper bound)</text>
+<text x='238.10' y='191.97' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='152.75px' lengthAdjust='spacingAndGlyphs'>5a. Suppressed cells = 0 (lower bound)</text>
+<text x='238.10' y='168.20' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='89.92px' lengthAdjust='spacingAndGlyphs'>4. Enrollment-weighted</text>
+<text x='238.10' y='144.43' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='115.33px' lengthAdjust='spacingAndGlyphs'>3. Never-treated controls only</text>
+<text x='238.10' y='120.67' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='146.50px' lengthAdjust='spacingAndGlyphs'>2. Without Mississippi and Tennessee</text>
+<text x='238.10' y='96.90' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='71.36px' lengthAdjust='spacingAndGlyphs'>1. Without Kansas</text>
+<text x='238.10' y='73.13' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='40.06px' lengthAdjust='spacingAndGlyphs'>0. Primary</text>
+<text x='267.74' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='397.60' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='527.45' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='657.31' y='452.00' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>15</text>
+<text x='514.78' y='463.75' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='206.41px' lengthAdjust='spacingAndGlyphs'>Overall ATT (prescriptions per 1,000 enrollees)</text>
 <text x='5.48' y='46.59' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='486.89px' lengthAdjust='spacingAndGlyphs'>Overall ATT (simple aggregation) with 95% CI; orange = primary; each other row changes one thing.</text>
 <text x='5.48' y='16.97' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='619.12px' lengthAdjust='spacingAndGlyphs'>Estimated average effect on obesity_wz prescriptions per 1,000 enrollees: 12.2 in the primary</text>
-<text x='5.48' y='32.09' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='370.20px' lengthAdjust='spacingAndGlyphs'>run, from 10.1 to 14.7 across the 14 other specifications</text>
+<text x='5.48' y='32.09' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='370.20px' lengthAdjust='spacingAndGlyphs'>run, from 10.1 to 14.7 across the 15 other specifications</text>
 <text x='5.48' y='480.40' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='535.67px' lengthAdjust='spacingAndGlyphs'>Specification 12 (fee-for-service only) is not shown: not estimable reliably (FFS denominators too small; coverage operates mainly through MCOs in SC</text>
 <text x='5.48' y='489.04' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='524.48px' lengthAdjust='spacingAndGlyphs'>and RI). It is listed in the specification table. Source: CMS State Drug Utilization Data and Medicaid enrollment (warehouse marts). Gross of rebates;</text>
 <text x='5.48' y='497.68' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='133.33px' lengthAdjust='spacingAndGlyphs'>counts under 11 suppressed by CMS.</text>

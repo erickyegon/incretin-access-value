@@ -22,11 +22,15 @@ specs <- list(
   list(id = "10", name = "First-full-quarter timing", args = list(cohort_col = "first_full_quarter")),
   list(id = "11", name = "Window to 2025 Q4, without North Carolina", args = list(window_end = "2025Q4", drop_states = "NC")),
   list(id = "12", name = "Fee-for-service only (FFSU per FFS enrollee)", args = list(util = "FFSU", denominator = "ffs"), ffs = TRUE),
-  list(id = "13", name = "Without Rhode Island", args = list(drop_states = "RI"))
+  list(id = "13", name = "Without Rhode Island", args = list(drop_states = "RI")),
+  list(id = "14", name = "Managed care only (MCOU per managed-care enrollee)", args = list(util = "MCOU", denominator = "mc"), ffs = TRUE)   # added after Checkpoint B (plan reconciliation item 8)
 )
+only <- Sys.getenv("SPEC_ONLY", "")   # e.g. SPEC_ONLY=14 runs one specification and merges it into the saved table and fits
+specs_all_ids <- vapply(specs, `[[`, "", "id")
+if (nzchar(only)) specs_run <- specs[specs_all_ids %in% strsplit(only, ",")[[1]]] else specs_run <- specs
 
 rows <- list(); notes <- list(); fits_store <- list()
-for (s in specs) {
+for (s in specs_run) {
   if (s$id == "0") { fits <- prim; dat1 <- build_data(panel, imp = imps[[1]]) }
   else {
     ms <- if (isTRUE(s$single)) 1L else seq_len(M_IMP)
@@ -56,6 +60,10 @@ for (s in specs) {
 }
 tab <- bind_rows(rows)
 tab$note <- vapply(tab$spec, function(i) if (is.null(notes[[i]])) NA_character_ else notes[[i]], "")
+if (nzchar(only)) {   # merge into the saved results
+  old <- readr::read_csv(here::here("outputs", "tables", "specification_table_raw.csv"), show_col_types = FALSE, progress = FALSE); tab <- bind_rows(old |> filter(!spec %in% tab$spec), tab)
+  of <- readRDS(here::here("outputs", "cache", "sensitivity_fits.rds")); of[names(fits_store)] <- fits_store; fits_store <- of
+}
 readr::write_csv(tab, here::here("outputs", "tables", "specification_table_raw.csv"))
 saveRDS(fits_store, here::here("outputs", "cache", "sensitivity_fits.rds"))
 # which gap state-quarters does sensitivity 7 set to missing, inside the primary window?

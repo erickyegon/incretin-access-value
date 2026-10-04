@@ -73,9 +73,11 @@ build_data <- function(panel, imp = NULL, outcome = "obesity_wz", denominator = 
     mutate(gap = (!sdud_reported_ffsu & lag(sdud_reported_ffsu, default = FALSE)) | (!sdud_reported_mcou & lag(sdud_reported_mcou, default = FALSE)) | sdud_anomalous) |> ungroup()
   if (is.null(include_sensitivity)) d <- d |> filter(analysis_group != "sensitivity")
   d <- d |> filter(t <= label_to_idx(window_end), !state_code %in% drop_states)
-  obs <- if (util == "ALL") d[[paste0("rx_", outcome, "_observed")]] else d[[paste0("rate_", outcome, "_ffs_per_1000_ffs_medicaid")]] * d$enrollment_ffs_medicaid_assumed / 1000  # FFSU count rebuilt from the panel rate
+  ffsu_rate <- d[[paste0("rate_", outcome, "_ffs_per_1000_ffs_medicaid")]]
+  ffsu_obs <- ifelse(is.na(ffsu_rate) & !is.na(d$enrollment_ffs_medicaid_assumed) & d$enrollment_ffs_medicaid_assumed == 0, 0, ffsu_rate * d$enrollment_ffs_medicaid_assumed / 1000)   # FFSU count rebuilt from the panel rate (0 where the state has no FFS enrollees)
+  obs <- if (util == "ALL") d[[paste0("rx_", outcome, "_observed")]] else if (util == "FFSU") ffsu_obs else d[[paste0("rx_", outcome, "_observed")]] - ffsu_obs   # MCOU = all observed minus FFSU (sensitivity 14)
   ub <- d[[paste0("rx_", outcome, "_upper_bound")]]
-  if (util != "ALL") ub <- NA_real_
+  if (util != "ALL") ub <- NA_real_   # the upper-bound run is defined for all utilization types only
   extra <- switch(bound, lower = 0,
     upper = if (util == "ALL") ub - obs else NA_real_,
     mi = {
@@ -86,7 +88,7 @@ build_data <- function(panel, imp = NULL, outcome = "obesity_wz", denominator = 
     })
   d$rx <- obs + extra
   denom <- switch(denominator, medicaid = d$enrollment_medicaid_avg, medicaid_chip = d$enrollment_medicaid_chip_avg,
-                  ffs = d$enrollment_ffs_medicaid_assumed)
+                  ffs = d$enrollment_ffs_medicaid_assumed, mc = d$enrollment_medicaid_avg - d$enrollment_ffs_medicaid_assumed)   # mc: managed-care enrollment = total minus the assumed FFS enrollment
   d$y <- 1000 * d$rx / ifelse(denom > 0, denom, NA_real_)
   d$cohort_label <- d[[cohort_col]]
   if (!is.null(include_sensitivity)) {
