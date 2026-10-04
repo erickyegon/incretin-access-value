@@ -1,0 +1,7 @@
+parameter,low,central,high,unit,source
+gross_cost_per_prescription,1164.45,1186.2097,1251.96,"USD per prescription, gross of rebates","CMS State Drug Utilization Data, covering states, 2025 (range: quarterly values 2024 Q2 to 2025 Q4)"
+rebate_share,0.231,0.51223,0.79346,share of gross cost,low = statutory minimum (42 U.S.C. 1396r-8); high = implied by the announced $245 price; central = midpoint (assumption)
+announced_net_price,NA,245,NA,USD per monthly prescription,"White House fact sheet, November 2025"
+purchases_per_user_year,2.9,4.34,12,purchases per treated user per year,"MEPS weighted purchases per adult user, 2023 (low) and 2024 (central); 12 = monthly all year (assumption)"
+adult_share_of_enrollment,NA,0.5788,NA,share of Medicaid enrollees,"Medicaid enrollment, 2024 Q3 to 2026 Q1"
+eligible_share_of_medicaid_adults,NA,0.519952,NA,share of Medicaid adults (lower bound),"NHANES 2021-2023, label-eligible"

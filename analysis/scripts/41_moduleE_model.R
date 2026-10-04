@@ -129,10 +129,18 @@ pp <- ggplot(psa |> filter(correlation == "independent event times"), aes(mil(ne
                                        fmt1(mil(psa_sum$net_p05[grepl("common", psa_sum$correlation)])), fmt1(mil(psa_sum$net_p95[grepl("common", psa_sum$correlation)]))), 140), caption = stringr::str_wrap(cap, 150)) + theme_incretin()
 save_fig(pp, "43_psa_distribution", width = 10, height = 5.8, alt = sprintf("Histogram of five-year net budget impact across 10,000 draws; median %s million dollars, 90 percent interval %s to %s million.", fmt1(mil(pn$net_median)), fmt1(mil(pn$net_p05)), fmt1(mil(pn$net_p95))))
 
-# ---- files for the app ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---- files for the app: small CSVs (aggregate numbers already public in the report; each value is checked against key_numbers.csv by scripts/45_check_app_data.R) ------------------------------------
 dir.create(here::here("..", "app", "data"), recursive = TRUE, showWarnings = FALSE)
-saveRDS(inp, here::here("..", "app", "data", "moduleE_inputs.rds")); file.copy(here::here("R", "bia.R"), here::here("..", "app", "bia.R"), overwrite = TRUE)
-saveRDS(list(tor = tor, psa_sum = psa_sum, base_net = b0), here::here("..", "app", "data", "moduleE_precomputed.rds"))
+readr::write_csv(inp$att |> transmute(event_quarter = e, estimate = round(estimate, 4), ci_low = round(ci_low, 4), ci_high = round(ci_high, 4)), here::here("..", "app", "data", "moduleC_effects.csv"))
+readr::write_csv(tibble::tribble(~parameter, ~low, ~central, ~high, ~unit, ~source,
+  "gross_cost_per_prescription", round(inp$gross$low, 2), round(inp$gross$central, 4), round(inp$gross$high, 2), "USD per prescription, gross of rebates", "CMS State Drug Utilization Data, covering states, 2025 (range: quarterly values 2024 Q2 to 2025 Q4)",
+  "rebate_share", round(inp$rebate$low, 4), round(inp$rebate$central, 6), round(inp$rebate$high, 6), "share of gross cost", "low = statutory minimum (42 U.S.C. 1396r-8); high = implied by the announced $245 price; central = midpoint (assumption)",
+  "announced_net_price", NA, inp$announced, NA, "USD per monthly prescription", "White House fact sheet, November 2025",
+  "purchases_per_user_year", inp$fills$low, inp$fills$central, inp$fills$high, "purchases per treated user per year", "MEPS weighted purchases per adult user, 2023 (low) and 2024 (central); 12 = monthly all year (assumption)",
+  "adult_share_of_enrollment", NA, round(inp$adult_share, 4), NA, "share of Medicaid enrollees", "Medicaid enrollment, 2024 Q3 to 2026 Q1",
+  "eligible_share_of_medicaid_adults", NA, round(inp$eligible_share, 6), NA, "share of Medicaid adults (lower bound)", "NHANES 2021-2023, label-eligible"),
+  here::here("..", "app", "data", "model_settings.csv"))
+file.copy(here::here("R", "bia.R"), here::here("..", "app", "bia.R"), overwrite = TRUE)
 print(inp$att); cat("gross central", round(gross_central), "range", round(gross_lo), round(gross_hi), "rebate", round(rebate_lo, 3), round(rebate_mid, 3), round(rebate_hi, 3), "adult share", round(adult_share, 3), "elig share", round(elig_share, 3), "fills", round(fills_obs, 2), "\n")
 print(res |> mutate(across(where(is.numeric), ~ round(.x, 2))) |> select(y35, price, five_year_gross, five_year_net, pmpm_net, net_cost_per_user_year, net_cost_per_member_year_continuous, n_years_exceed_pool), width = 200); print(ann_c |> mutate(across(where(is.numeric), ~ round(.x, 1))), width = 200)
 print(tor |> mutate(across(where(is.numeric), ~ round(.x, 0))), width = 200); print(psa_sum |> mutate(across(where(is.numeric), ~ round(.x, 2))), width = 250)
