@@ -39,7 +39,7 @@ Raw and interim data are not committed; the scripts download them and record the
 2. **Build.** `cd dbt && dbt deps && dbt seed && dbt build` (staging, intermediate and marts; the tests run with the build). Then `python scripts/build/build_counts.py`.
 3. **Analyse.** `cd analysis` and `Rscript run_all.R` (packages pinned in `analysis/renv.lock`; R 4.6), then `Rscript scripts/50_key_numbers.R`.
 4. **Render.** `quarto render report`, `quarto render deck` (then `node deck/make_pdf.js deck/deck.html deck/deck.pdf`), `quarto render research_pack` and `python site/build_site.py`. Run the Shiny app with `shiny::runApp("app")`.
-5. **Audit.** `Rscript audit/check_numbers.R` checks that every public number matches `key_numbers.csv`.
+5. **Audit.** `Rscript audit/check_numbers.R` checks that every public number matches `key_numbers.csv`. `python audit/check_links.py <site-url>` checks the links.
 
 ## Repository map
 
