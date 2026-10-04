@@ -39,7 +39,7 @@ note <- function(...) cat("\n::: {.small}\n", paste0(...), "\n:::\n\n")
 
 # The answer
 
-When Medicaid programmes began covering Wegovy and Zepbound for obesity, prescriptions rose by about `r kn("c_att_overall")` per 1,000 enrollees per quarter on average (`r kn_ci("c_att_overall")`), comparing `r kn("c_states_primary")` covering states with `r kn("c_states_never")` never-covering jurisdictions. The effect grew from `r kn("c_es_e0")` in the first quarter to `r kn("c_es_e4")` after four quarters and `r kn("c_es_e8")` after eight, partly because the national market grew at the same time. About `r kn("b_eligible")` million U.S. adults meet the FDA label criteria (lower bound; `r kn_ci("b_eligible")` million), including `r kn("b_medicaid_elig")` million with Medicaid. For a state programme of 1,000,000 enrollees, the five-year net budget impact in the central case is **$`r kn("e_net5")` million**, or **$`r kn("e_pmpm")` per enrollee per month**, with a scenario range of $`r kn("e_scen_min")` to $`r kn("e_scen_max")` million that is driven mainly by two things the data cannot give: the rebate and the later years. At the announced $245 per monthly prescription, the central case would be $`r kn("e_announced5")` million ($`r kn("e_announced_pmpm")` per enrollee per month).
+When Medicaid programs began covering Wegovy and Zepbound for obesity, prescriptions rose by an estimated `r kn("c_att_overall")` per 1,000 enrollees per quarter on average (`r kn_ci("c_att_overall")`), comparing `r kn("c_states_primary")` covering states with `r kn("c_states_never")` never-covering jurisdictions. The effect grew from `r kn("c_es_e0")` in the first quarter to `r kn("c_es_e4")` after four quarters and `r kn("c_es_e8")` after eight, partly because the national market grew at the same time. About `r kn("b_eligible")` million U.S. adults meet the FDA label criteria (lower bound; `r kn_ci("b_eligible")` million), including `r kn("b_medicaid_elig")` million with Medicaid. For a state program of 1 million enrollees, the five-year net budget impact in the central case is **$`r kn("e_net5")` million**, or **$`r kn("e_pmpm")` per enrollee per month**, with a scenario range of $`r kn("e_scen_min")` to $`r kn("e_scen_max")` million that is driven mainly by two things the data cannot give: the rebate and the later years. At the announced $245 per monthly prescription, the central case would be $`r kn("e_announced5")` million ($`r kn("e_announced_pmpm")` per enrollee per month).
 
 Every number in this report is read from `analysis/outputs/key_numbers.csv`, which links each one to the output file and row it came from.
 
@@ -59,13 +59,13 @@ Pre-specified analysis plans were committed before any results of each module: M
 fig("50_spending_trend", "Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug; gross of rebates.")
 ```
 
-Gross spending on GLP-1 and GIP products rose from $`r kn("m_spend_partd_2020")` billion in 2020 to $`r kn("m_spend_partd_2024")` billion in 2024 in Medicare Part D and from $`r kn("m_spend_medicaid_2020")` billion to $`r kn("m_spend_medicaid_2024")` billion in Medicaid. These are CMS spending figures **before manufacturer rebates**, so they overstate what programmes pay. Ozempic ($`r kn("m_spend_partd_ozempic_2024")` billion) and Mounjaro ($`r kn("m_spend_partd_mounjaro_2024")` billion) lead in Part D in 2024, mostly diabetes use; in Medicaid, Wegovy ($`r kn("m_spend_medicaid_wegovy_2024")` billion) is the largest obesity-labelled brand.
+Gross spending on GLP-1 and GIP products rose from $`r kn("m_spend_partd_2020")` billion in 2020 to $`r kn("m_spend_partd_2024")` billion in 2024 in Medicare Part D and from $`r kn("m_spend_medicaid_2020")` billion to $`r kn("m_spend_medicaid_2024")` billion in Medicaid. These are CMS spending figures **before manufacturer rebates**, so they overstate what programs pay. Ozempic ($`r kn("m_spend_partd_ozempic_2024")` billion) and Mounjaro ($`r kn("m_spend_partd_mounjaro_2024")` billion) lead in Part D in 2024, mostly diabetes use; in Medicaid, Wegovy ($`r kn("m_spend_medicaid_wegovy_2024")` billion) is the largest obesity-labeled brand.
 
 ```{r a-timeline, results='asis'}
 fig("51_timeline", "Sources: Drugs@FDA labels; state Medicaid documents; White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.")
 ```
 
-The pipeline of registered studies (ClinicalTrials.gov, in-scope ingredients only: semaglutide, tirzepatide, liraglutide, dulaglutide, exenatide and orforglipron) has `r kn("p_obesity_studies")` studies listing obesity, of which `r kn("p_obesity_studies_ongoing")` are ongoing and `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3. Oral programmes account for `r kn("p_oral_obesity_studies")` obesity studies (`r kn("p_oral_obesity_phase3_ongoing")` ongoing Phase 3; "oral" is matched on orforglipron or oral or tablet text and is approximate), and orforglipron alone has `r kn("p_orforglipron_obesity_studies")` obesity studies, `r kn("p_orforglipron_phase3_obesity_studies")` of them Phase 3. Programmes of other ingredients are not counted.
+The pipeline of registered studies (ClinicalTrials.gov, in-scope ingredients only: semaglutide, tirzepatide, liraglutide, dulaglutide, exenatide and orforglipron) has `r kn("p_obesity_studies")` studies listing obesity, of which `r kn("p_obesity_studies_ongoing")` are ongoing and `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3. Oral programs account for `r kn("p_oral_obesity_studies")` obesity studies (`r kn("p_oral_obesity_phase3_ongoing")` ongoing Phase 3; "oral" is matched on orforglipron or oral or tablet text and is approximate), and orforglipron alone has `r kn("p_orforglipron_obesity_studies")` obesity studies, `r kn("p_orforglipron_phase3_obesity_studies")` of them Phase 3. Programs of other ingredients are not counted.
 
 ```{r a-pipeline}
 knitr::kable(tbl("moduleA_pipeline_by_phase.csv"), col.names = c("Registered phase", "Obesity studies", "Ongoing"))
@@ -80,10 +80,10 @@ The reporting heatmap shows that `r kn("m_rep_both")`% of state-quarters have bo
 # B. Funnel and forecast: about half of U.S. adults meet the label criteria, and use is rising
 
 ```{r b-fig, results='asis'}
-fig("20_funnel", "Source: NHANES 2021-2023 (measured steps); KFF poll February 24 to March 2, 2026 (modelled steps).")
+fig("20_funnel", "Source: NHANES 2021-2023 (measured steps); KFF poll February 24 to March 2, 2026 (modeled steps).")
 ```
 
-Of `r kn("b_adults")` million adults, `r kn("b_eligible")` million (`r kn("b_elig_pct")`% of adults with the measure) are label-eligible by BMI of 30 or more, or BMI 27 to 29.9 with a measurable weight-related condition. This is a lower bound, because some qualifying conditions are not measured in NHANES. Among adults with Medicaid (`r kn("b_medicaid_adults")` million), `r kn("b_medicaid_elig")` million (`r kn("b_medicaid_elig_share")`%) are eligible. The measurable part of the Medicare GLP-1 Bridge criteria covers `r kn("b_bridge")` million adults aged 65 and over. KFF's poll puts current GLP-1 use at `r kn("b_glp1_all")` million adults (`r kn_ci("b_glp1_all")`), of whom about `r kn("b_glp1_nodiab")` million do not have diagnosed diabetes (a weight-management proxy, modelled).
+Of `r kn("b_adults")` million adults, `r kn("b_eligible")` million (`r kn("b_elig_pct")`% of adults with the measure) are label-eligible by BMI of 30 or more, or BMI 27 to 29.9 with a measurable weight-related condition. This is a lower bound, because some qualifying conditions are not measured in NHANES. Among adults with Medicaid (`r kn("b_medicaid_adults")` million), `r kn("b_medicaid_elig")` million (`r kn("b_medicaid_elig_share")`%) are eligible. The measurable part of the Medicare GLP-1 Bridge criteria covers `r kn("b_bridge")` million adults aged 65 and over. KFF's poll puts current GLP-1 use at `r kn("b_glp1_all")` million adults (`r kn_ci("b_glp1_all")`), of whom about `r kn("b_glp1_nodiab")` million do not have diagnosed diabetes (a weight-management proxy, modeled).
 
 ```{r b-fig2, results='asis'}
 fig("21_forecast_fan", "Source: scenario simulation (10,000 draws) over assumed ranges; scenarios, not a prediction.")
@@ -91,7 +91,7 @@ fig("21_forecast_fan", "Source: scenario simulation (10,000 draws) over assumed 
 
 The forecast of GLP-1 users without diagnosed diabetes reaches a median of `r kn("b_fc_2030")` million by end-2030 (90% interval `r sub("90% interval ", "", kn_ci("b_fc_2030"))`) from `r kn("b_fc_2026")` million in 2026; the downside, base and upside parameter sets give `r kn("b_scen_downside")`, `r kn("b_scen_base")` and `r kn("b_scen_upside")` million. The ranges are assumptions about uptake, retention and the Medicare Bridge, listed in the [assumptions table](../analysis/outputs/tables/moduleB_assumptions.csv).
 
-# C. Coverage study: coverage added prescriptions, quickly at first and more over time
+# C. Coverage study: coverage was associated with more prescriptions, quickly at first and more over time
 
 ```{r c-map, results='asis'}
 fig("01_coverage_timing_map", "Source: state Medicaid documents and CMS approvals saved in docs/sources; coverage_start dates in data/reference/medicaid_obesity_coverage.csv.")
@@ -104,7 +104,7 @@ es <- tbl("event_study_primary.csv"); es <- es[es$fewer_than_3_states == "FALSE"
 p <- plot_ly(es, x = ~event_time) |> add_ribbons(ymin = ~ci_low, ymax = ~ci_high, name = "95% CI (pointwise)", line = list(width = 0), fillcolor = "rgba(213,94,0,0.2)") |>
   add_lines(y = ~att, name = "Estimated effect", line = list(color = "#D55E00")) |> add_markers(y = ~att, marker = list(color = "#D55E00"), showlegend = FALSE,
     text = ~sprintf("Quarter %d: %.1f (%.1f to %.1f)", event_time, att, ci_low, ci_high), hoverinfo = "text") |>
-  layout(title = list(text = paste0("Coverage raised prescriptions steadily, from ", kn("c_es_e0"), " in the first quarter to ", kn("c_es_e8"), " after eight"), x = 0), xaxis = list(title = "Quarters since coverage began"), yaxis = list(title = "Prescriptions per 1,000 enrollees per quarter"), legend = list(orientation = "h"))
+  layout(title = list(text = paste0("Coverage was associated with steadily higher prescriptions, from ", kn("c_es_e0"), " in the first quarter to ", kn("c_es_e8"), " after eight"), x = 0), xaxis = list(title = "Quarters since coverage began"), yaxis = list(title = "Prescriptions per 1,000 enrollees per quarter"), legend = list(orientation = "h"))
 ```
 
 ```{r c-es-plot, results='asis'}
@@ -166,9 +166,9 @@ fig("35_partd_segments_k5", "Source: CMS Medicare Part D Prescribers 2023-2024, 
 fig("36_payments_binned", "Source: CMS Medicare Part D Prescribers and Open Payments general payments (aggregate bins); association only.")
 ```
 
-# E. Budget impact: about $161 million over five years for 1,000,000 enrollees, with the rebate the biggest unknown
+# E. Budget impact: about $161 million over five years for 1 million enrollees, with the rebate the biggest unknown
 
-The model scales Module C's extra prescriptions per 1,000 enrollees to a programme of 1,000,000 and prices them. Module C measures filled prescriptions in states that already applied their own prior authorization rules, so the central case uses the effect as observed (multiplier 1.0, "PA as observed in the 10 covering states"); tight and loose prior authorization are assumption scenarios. The central rebate is `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%), where `r kn("e_rebate_low")`% is the statutory minimum (42 U.S.C. 1396r-8) and `r kn("e_rebate_high")`% is the rebate implied by the announced $`r kn("x_price_245")` price; actual net prices are confidential. No medical cost offsets are included because no published source supporting a five-year offset was retrieved.
+The model scales Module C's extra prescriptions per 1,000 enrollees to a program of 1 million enrollees and prices them. Module C measures filled prescriptions in states that already applied their own prior authorization rules, so the central case uses the effect as observed (multiplier 1.0, "PA as observed in the 10 covering states"); tight and loose prior authorization are assumption scenarios. The central rebate is `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%), where `r kn("e_rebate_low")`% is the statutory minimum (42 U.S.C. 1396r-8) and `r kn("e_rebate_high")`% is the rebate implied by the announced $`r kn("x_price_245")` price; actual net prices are confidential. No medical cost offsets are included because no published source supporting a five-year offset was retrieved.
 
 ```{r e-fig, results='asis'}
 fig("42_cost_by_scenario", "Source: Module C effects; SDUD gross reimbursement; statutory rebate floor; White House fact sheet, November 2025. Rebates, prior authorization and years 3-5 are assumptions.")
@@ -186,13 +186,13 @@ pt <- plot_ly(tor) |> add_segments(x = ~net_low / 1e6, xend = ~net_high / 1e6, y
 ```
 
 ```{r e-tornado-plot, results='asis'}
-print(htmltools::div(role = "img", `aria-label` = paste0("Interactive tornado chart of the five-year net budget impact for a 1,000,000-enrollee Medicaid programme: one bar per parameter, with a dashed line at the central case of ", kn("e_net5"), " million dollars. Module C's effect uncertainty and the rebate are the widest bars. Hover for the ends of each bar."), pt))
+print(htmltools::div(role = "img", `aria-label` = paste0("Interactive tornado chart of the five-year net budget impact for a 1-million-enrollee Medicaid program: one bar per parameter, with a dashed line at the central case of ", kn("e_net5"), " million dollars. Module C's effect uncertainty and the rebate are the widest bars. Hover for the ends of each bar."), pt))
 ```
 
 *Source: Module E one-way sensitivity (`analysis/outputs/tables/moduleE_tornado.csv`); central case dashed. SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions.*
 
 ```{r e-fig2, results='asis'}
-fig("41_waterfall_pmpm", "Source: Module E; rebate step is an assumption; $245 is an announced programme price.")
+fig("41_waterfall_pmpm", "Source: Module E; rebate step is an assumption; $245 is an announced program price.")
 fig("43_psa_distribution", "Source: Module E probabilistic sensitivity analysis, 10,000 draws.")
 ```
 
@@ -220,7 +220,7 @@ One short notebook per module, built only from the existing outputs (no new anal
 
 - **Gross, not net.** SDUD amounts are gross of rebates; the rebate range is an assumption between a statutory floor and a price-implied ceiling.
 - **Ten treated states.** The effect comes from `r kn("c_states_primary")` states and may not carry over to other states or later years; later event times fall in later calendar quarters, so part of the growth is market growth.
-- **Eligibility is a lower bound.** NHANES does not measure every qualifying condition; modelled use steps rely on KFF poll estimates.
+- **Eligibility is a lower bound.** NHANES does not measure every qualifying condition; modeled use steps rely on KFF poll estimates.
 - **Part D is not obesity use.** Part D claims reflect diabetes and other covered uses; prescriber findings are not about obesity-brand adoption.
 - **Suppressed cells.** SDUD hides counts under 11; the analysis imputes them and combines 20 imputations.
 - **No offsets, no outcomes.** The budget model has no medical cost offsets and does not estimate health outcomes.
@@ -229,7 +229,7 @@ One short notebook per module, built only from the existing outputs (no new anal
 
 # Reproducibility
 
-The code, the dbt project and the scripts are in the repository; raw and interim data are not committed and are re-downloaded by the scripts in `scripts/fetch`. In order: load (`scripts/load`), build (`dbt build` in `dbt/`), analyse (`analysis/run_all.R`, then `scripts/build/build_counts.py` and `analysis/scripts/50_key_numbers.R`), render (`quarto render report`, `deck`, `research_pack`). Every source is listed with its URL, access date and checksum in `docs/sources_index.csv`; U.S. government documents and open-licence manuals are kept in `docs/sources/`, and copies of copyrighted third-party pages stay local only, and the R packages are pinned in `analysis/renv.lock`.
+The code, the dbt project and the scripts are in the repository; raw and interim data are not committed and are re-downloaded by the scripts in `scripts/fetch`. In order: load (`scripts/load`), build (`dbt build` in `dbt/`), analyze (`analysis/run_all.R`, then `scripts/build/build_counts.py` and `analysis/scripts/50_key_numbers.R`), render (`quarto render report`, `deck`, `research_pack`). Every source is listed with its URL, access date and checksum in `docs/sources_index.csv`; U.S. government documents and open-license manuals are kept in `docs/sources/`, and copies of copyrighted third-party pages stay local only, and the R packages are pinned in `analysis/renv.lock`.
 
 # AI-use statement
 

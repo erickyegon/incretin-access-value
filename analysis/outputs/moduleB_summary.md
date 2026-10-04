@@ -1,9 +1,9 @@
 # Module B in plain language: who is eligible, how many are treated, and how the number might grow
 
-**Question.** How many U.S. adults are eligible for obesity-labelled incretins, how many are diagnosed and treated, and how might treatment grow over five years?
+**Question.** How many U.S. adults are eligible for obesity-labeled incretins, how many are diagnosed and treated, and how might treatment grow over five years?
 (Plan: [plan_moduleB.md](../plan_moduleB.md), committed before any result; departures are in [deviations.md](deviations.md).)
 
-**Data.** NHANES adults aged 18 and over, August 2021 to August 2023 (primary) and 2017 to March 2020 (comparison), analysed with the survey design and the weights NCHS prescribes
+**Data.** NHANES adults aged 18 and over, August 2021 to August 2023 (primary) and 2017 to March 2020 (comparison), analyzed with the survey design and the weights NCHS prescribes
 ([variables and codebook descriptions](tables/nhanes_variables_used.csv)); KFF Health Tracking Polls for the share of adults using a GLP-1 drug (see `docs/sources_index.csv`); Medicaid and Medicare data for the brand split.
 
 ## Who is eligible (measured)
@@ -16,10 +16,10 @@
 - **Medicaid.** 34.3 million adults report Medicaid coverage; 17.8 million of them (14.7 to 20.9) are label-eligible, the input for the budget model.
 - **Medicare.** The measurable part of the Medicare GLP-1 Bridge criteria covers 10.8 million adults aged 65 and over (8.6 to 13.0), a lower bound.
 
-## How many are diagnosed and treated (funnel; measured solid, modelled hatched)
+## How many are diagnosed and treated (funnel; measured solid, modeled hatched)
 [Funnel figure](figures/20_funnel.png), [table](tables/moduleB_funnel.csv).
 - **Aware.** 85.5 million label-eligible adults were told by a doctor they were overweight (2017–2020; the question was not asked in 2021–2023). 28.8 million adults have diagnosed diabetes and 24.2 million of them take insulin or pills.
-- **Treated (modelled).** KFF's February–March 2026 poll puts current GLP-1 use at 12% of adults (±3 points), about 30.4 million (23.5 to 37.5) across all drugs and indications. Taking KFF's 45% use among adults with diabetes (range assumed 35–55%),
+- **Treated (modeled).** KFF's February–March 2026 poll puts current GLP-1 use at 12% of adults (±3 points), about 30.4 million (23.5 to 37.5) across all drugs and indications. Taking KFF's 45% use among adults with diabetes (range assumed 35–55%),
   about 12.9 million have diabetes and 17.4 million (9.9 to 25.2) do not, a proxy for weight-management use that also includes use for heart disease.
 - **Brand split, by payer** ([table](tables/moduleB_brand_split_by_payer.csv)). In Medicaid states with coverage the Wegovy share of Wegovy plus Zepbound prescriptions fell from 84.3% (2024 Q1) to 53.3% (2025 Q3) and 36.3% (2026 Q1, preliminary); in Medicare Part D 2024,
   Wegovy is essentially all of it (Wegovy is covered there only for its cardiovascular indication). These are payer shares, not national shares.

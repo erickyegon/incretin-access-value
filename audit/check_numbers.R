@@ -39,6 +39,10 @@ cnt <- as.data.frame.matrix(table(res$doc, factor(res$class, levels = c("exact",
 checks <- list()
 chk <- function(name, ok, detail = "") checks[[length(checks) + 1]] <<- data.frame(check = name, result = ifelse(ok, "PASS", "FAIL"), detail = detail)
 all_text <- paste(unlist(texts[!is.na(texts)]), collapse = "\n")
+brit <- "\\b(programmes?|modell(ed|ing)|labell(ed|ing)|organis\\w+|colour\\w*|greys?|behaviour\\w*|normalis\\w+|utilis\\w+|centres?|licences?|judgement|analysed|analyse|enrolment|per cent)\\b"
+hits <- unique(unlist(regmatches(all_text, gregexpr(brit, all_text, ignore.case = TRUE, perl = TRUE))))
+chk("American spelling in public text (no programme, modelled, labelled, organisation, grey and similar)", length(hits) == 0, paste(hits, collapse = ", "))
+chk("'1 million enrollees' is used instead of '1,000,000 enrollees' in public text", !grepl("1,000,000 enrollee", all_text), "")
 chk("no 'PhD' or 'Ph.D' in titles, bylines or any deliverable text", !grepl("\\bPh\\.?D\\b", all_text), "")
 rep_only <- kn[kn$audience == "report_only", ]
 pub_docs <- c("deck_pdf", "website", "one_pager")

@@ -13,11 +13,11 @@ execute: { echo: false, warning: false, message: false }
 source("../analysis/R/kn.R")
 ```
 
-**Question.** What did Medicaid coverage of Wegovy and Zepbound do to prescriptions, how many adults are eligible, and what could coverage cost a programme of 1,000,000 enrollees over five years?
+**Question.** What did Medicaid coverage of Wegovy and Zepbound do to prescriptions, how many adults are eligible, and what could coverage cost a program of 1 million enrollees over five years?
 
 **Three findings**
 
-1. **Coverage raised prescriptions.** About `r kn("c_att_overall")` extra prescriptions per 1,000 enrollees per quarter (`r kn_ci("c_att_overall")`), rising from `r kn("c_es_e0")` in the first quarter to `r kn("c_es_e8")` after eight; ten covering states against `r kn("c_states_never")` never-covering jurisdictions. A placebo shows `r kn("c_placebo")` (`r kn_ci("c_placebo")`).
+1. **Coverage was associated with more prescriptions.** An estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter (`r kn_ci("c_att_overall")`), rising from `r kn("c_es_e0")` in the first quarter to `r kn("c_es_e8")` after eight; ten covering states against `r kn("c_states_never")` never-covering jurisdictions. A placebo shows `r kn("c_placebo")` (`r kn_ci("c_placebo")`).
 2. **Many adults are eligible.** `r kn("b_eligible")` million U.S. adults meet the FDA label criteria (lower bound; `r kn_ci("b_eligible")` million), including `r kn("b_medicaid_elig")` million with Medicaid (`r kn_ci("b_medicaid_elig")` million).
 3. **The budget depends on the rebate.** Central five-year net cost $`r kn("e_net5")` million ($`r kn("e_pmpm")` per enrollee per month; rebate `r kn("e_rebate_central")`% assumed); scenario range $`r kn("e_scen_min")` to $`r kn("e_scen_max")` million; $`r kn("e_announced5")` million at the announced $`r kn("x_price_245")` price.
 

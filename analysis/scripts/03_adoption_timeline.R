@@ -42,7 +42,7 @@ p <- ggplot() +
   scale_fill_manual(values = c(primary = col_treated, sensitivity = "#E7A57A"), labels = c(primary = "Primary: covered", sensitivity = "Sensitivity: covered after the start range"), name = NULL) +
   scale_alpha_continuous(range = c(0.35, 1), limits = c(0, 1), name = "Share of quarter covered") +
   labs(title = stringr::str_wrap(sprintf("%d states had Medicaid coverage of Wegovy/Zepbound in 2026 Q1; %d states' coverage had ended or lapsed at some point", n_active_2026q1, n_withdrew), 95),
-       subtitle = stringr::str_wrap("Solid segments: quarters with any covered day (opacity = share of the quarter covered). Light dashed segments: the sensitivity states' possible start range (earliest to latest quarter), coverage solid after it. Grey band = preliminary SDUD quarter (2026 Q1).", 130),
+       subtitle = stringr::str_wrap("Solid segments: quarters with any covered day (opacity = share of the quarter covered). Light dashed segments: the sensitivity states' possible start range (earliest to latest quarter), coverage solid after it. Gray band = preliminary SDUD quarter (2026 Q1).", 130),
        caption = stringr::str_wrap("Source: warehouse coverage table (state Medicaid documents). Coverage end dates after 2026 Q1 (RI, MA, UT) are future-dated and not shown as ended.", 150),
        x = NULL, y = NULL) +
   theme_incretin() + theme(panel.grid.major.y = element_blank(), panel.grid.major.x = element_line(colour = "#E6E6E6", linewidth = 0.3))

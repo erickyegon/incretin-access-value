@@ -30,22 +30,23 @@ page = f"""<!doctype html>
 <body>
 <header class="wrap">
   <p class="eyebrow">Access &amp; Value · incretin drugs in Medicaid</p>
-  <h1>Medicaid coverage of Wegovy and Zepbound added about {d("c_att_overall")} prescriptions per 1,000 enrollees per quarter; covering 1,000,000 enrollees would net about ${d("e_net5")} million over five years</h1>
-  <p class="lede">Public aggregate data, a tested warehouse and scenario analysis: what coverage did, who is eligible, who prescribes, and what it could cost.</p>
-  <p class="byline">Erick Kiprotich Yegon · Epidemiologist and data scientist</p>
+  <h1>When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by an estimated {d("c_att_overall")} per 1,000 enrollees per quarter</h1>
+  <p class="lede">Public aggregate data, a tested warehouse and scenario analysis: what coverage was associated with, who is eligible, who prescribes, and what it could cost a program of 1 million enrollees.</p>
+  <p class="byline">Erick Kiprotich Yegon · Epidemiologist and data scientist · <a href="https://linkedin.com/in/erickyegon">LinkedIn</a> · <a href="mailto:keyegon@gmail.com">keyegon@gmail.com</a></p>
   <nav class="buttons" aria-label="Project links">
     <a class="btn primary" href="report.html">Read the report</a>
     <a class="btn" href="deck.pdf">Insight deck (PDF)</a>
     <a class="btn" href="one_page_summary.pdf">One-page summary</a>
+    <a class="btn" href="research_pack.pdf">Research design pack (PDF)</a>
     <a class="btn" href="budget_impact_scenarios.pdf">Budget model (PDF)</a>
     <a class="btn" href="https://github.com/erickyegon/incretin-access-value">Code</a>
   </nav>
 </header>
 <main class="wrap">
   <section class="cards" aria-label="Key numbers">
-    <div class="card"><span class="num">{d("c_att_overall")}</span><span class="unit">extra prescriptions per 1,000 enrollees per quarter</span><span class="ci">{ci("c_att_overall")}; coverage effect, 10 covering vs 34 never-covering jurisdictions</span></div>
+    <div class="card"><span class="num">{d("c_att_overall")}</span><span class="unit">estimated additional prescriptions per 1,000 enrollees per quarter</span><span class="ci">{ci("c_att_overall")}; {d("c_states_primary")} covering vs {d("c_states_never")} never-covering jurisdictions</span></div>
     <div class="card"><span class="num">{d("b_eligible")} million</span><span class="unit">U.S. adults meet the FDA label criteria (lower bound)</span><span class="ci">{ci("b_eligible")} million; NHANES 2021-2023</span></div>
-    <div class="card"><span class="num">${d("e_net5")} million</span><span class="unit">five-year net cost, 1,000,000 enrollees, central case (${d("e_pmpm")} per enrollee per month)</span><span class="ci">scenario range ${d("e_scen_min")} to ${d("e_scen_max")} million; rebate assumed</span></div>
+    <div class="card"><span class="num">${d("e_net5")} million</span><span class="unit">a net cost of about ${d("e_net5")} million over five years for a program of 1 million enrollees (central case, ${d("e_pmpm")} per enrollee per month)</span><span class="ci">scenario range ${d("e_scen_min")} to ${d("e_scen_max")} million; rebate assumed</span></div>
   </section>
   <figure>
     <img src="assets/event_study.png" alt="{html.escape(alt['10_event_study_primary'])}" loading="lazy">
@@ -58,11 +59,16 @@ page = f"""<!doctype html>
     </ol>
   </section>
   <section>
+    <h2>Methods shown</h2>
+    <p>Causal inference (staggered difference-in-differences) · survey epidemiology · budget impact modeling with probabilistic sensitivity analysis · claims-derived data engineering (NDC, ICD-10, dbt) · market access insight.</p>
+  </section>
+  <section>
     <h2>What this shows</h2>
     <ul>
-      <li>Coverage raised prescriptions from {d("c_es_e0")} in the first quarter to {d("c_es_e8")} per 1,000 enrollees after eight quarters, and the result holds across estimators.</li>
+      <li>Coverage was associated with an estimated rise from {d("c_es_e0")} prescriptions per 1,000 enrollees per quarter in the first quarter to {d("c_es_e8")} after eight quarters, and the result holds in {d("c_spec_holds")} alternative analyses (fee-for-service only is not estimable).</li>
       <li>About {d("b_medicaid_elig")} million adults with Medicaid meet the label criteria; {d("b_glp1_all")} million U.S. adults currently use a GLP-1 drug.</li>
-      <li>Primary care physicians wrote {d("d_share_pcp")}% of Part D incretin claims in 2024, which reflect diabetes and other covered uses, not obesity use.</li>
+      <li>In 2024, cardiology wrote {d("d_wegovy_cardio")}% of Wegovy's Part D claims against {d("d_ozempic_cardio")}% of Ozempic's, after Wegovy's cardiovascular indication (Part D reflects diabetes and other covered uses, not obesity use).</li>
+      <li>Coverage works through managed care: in South Carolina and Rhode Island, uptake runs almost entirely through managed-care organizations ({d("m_sc_mcou_share")}% of South Carolina's observed prescriptions in 2025 Q3; {d("m_ri_mcou_share")}% in every Rhode Island quarter).</li>
       <li>The biggest unknown in the budget is the rebate: the central case uses {d("e_rebate_central")}%, the midpoint of {d("e_rebate_low")}% (statutory minimum) and {d("e_rebate_high")}% (implied by the announced ${d("x_price_245")} price).</li>
     </ul>
   </section>

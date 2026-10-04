@@ -26,13 +26,13 @@ fig <- function(name, h = 540) { a <- al$alt_text[al$figure == name]; stopifnot(
 src <- function(x) cat(sprintf("\n::: {.src}\n%s\n:::\n\n", x))
 ```
 
-## The answer: coverage lifts prescriptions steadily, and a 1,000,000-enrollee programme would net about $`r kn("e_net5")` million over five years
+## The answer: coverage was associated with a steady rise in prescriptions, and a program of 1 million enrollees would have a net cost of about $`r kn("e_net5")` million over five years
 
 ::::: {.columns}
 ::: {.column width="25%"}
 ::: {.stat}
 **`r kn("c_att_overall")`**\
-extra prescriptions per 1,000 enrollees per quarter\
+estimated additional prescriptions per 1,000 enrollees per quarter\
 `r kn_ci("c_att_overall")`
 :::
 :::
@@ -45,7 +45,7 @@ per 1,000 enrollees per quarter, first quarter to eighth (market growth included
 ::: {.column width="25%"}
 ::: {.stat}
 **$`r kn("e_scen_min")` to `r kn("e_scen_max")` million**\
-five-year net cost across scenarios, 1,000,000 enrollees
+five-year net cost across scenarios, 1 million enrollees
 :::
 :::
 ::: {.column width="25%"}
@@ -64,7 +64,7 @@ src("Sources: CMS State Drug Utilization Data and Medicaid enrollment (Module C)
 
 ```{r a2, results='asis'}
 fig("20_funnel", 520)
-src(paste0("Source: NHANES 2021-2023 (measured) and KFF poll, February 24 to March 2, 2026 (modelled). Eligible is a lower bound: ", kn("b_eligible"), " million adults (", kn_ci("b_eligible"), " million)."))
+src(paste0("Source: NHANES 2021-2023 (measured) and KFF poll, February 24 to March 2, 2026 (modeled). Eligible is a lower bound: ", kn("b_eligible"), " million adults (", kn_ci("b_eligible"), " million)."))
 ```
 
 ## Market today: gross spending on GLP-1 and GIP products reached $`r kn("m_spend_partd_2024")` billion in Part D and $`r kn("m_spend_medicaid_2024")` billion in Medicaid in 2024, before rebates
@@ -78,7 +78,7 @@ src("Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug 
 
 - **Products.** Wegovy (injection and tablets), Zepbound (KwikPen) and Foundayo (tablets) are covered under the Medicare GLP-1 Bridge (CMS prescriber page, June 2026).
 - **Medicare GLP-1 Bridge.** A short-term demonstration, `r kn("x_bridge_window")`, with a $`r kn("x_bridge_copay")` copay (CMS).
-- **Price.** The White House (November 2025) announced a Medicare price of $`r kn("x_price_245")` a month for these drugs and said state Medicaid programmes will have access at those prices.
+- **Price.** The White House (November 2025) announced a Medicare price of $`r kn("x_price_245")` a month for these drugs and said state Medicaid programs will have access at those prices.
 - **State coverage is changing:** several states ended or paused coverage in late 2025 and early 2026 (timeline on the next slide).
 - **Pipeline.** `r kn("p_obesity_studies")` registered studies of the in-scope ingredients list obesity; `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3, and oral orforglipron has `r kn("p_orforglipron_phase3_obesity_studies")` Phase 3 studies (ClinicalTrials.gov; other ingredients not counted).
 
@@ -93,18 +93,30 @@ fig("51_timeline", 560)
 src("Sources: FDA Drugs@FDA labels; state Medicaid documents (primary-analysis states); White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.")
 ```
 
-## Access: coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter, rising from `r kn("c_es_e0")` to `r kn("c_es_e8")` over eight quarters
+## Access: coverage was associated with an estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter, rising from `r kn("c_es_e0")` to `r kn("c_es_e8")` over eight quarters
 
 ```{r a5, results='asis'}
-fig("10_event_study_primary", 540)
+fig("10_event_study_primary", 450)
 src(paste0("Source: CMS SDUD and Medicaid enrollment; ", kn("c_states_primary"), " covering and ", kn("c_states_never"), " never-covering jurisdictions. Placebo ", kn("c_placebo"), " (", kn_ci("c_placebo"), "); other estimators and sensitivity analyses range ", kn("c_spec_range"), ". Part of the growth is national market growth."))
 ```
 
-## Access: ten states drive the estimate, and coverage dates differ by state
+## Access: `r kn("c_states_primary")` states form the primary analysis, and their prior authorization and BMI rules differ
 
+::::: {.columns}
+::: {.column width="60%"}
 ```{r a6, results='asis'}
-fig("01_coverage_timing_map", 540)
-src(paste0("Source: state Medicaid documents and CMS approvals (docs/sources). ", kn("c_pa_states"), " primary covering states have prior authorization documented (see the criteria table in the report). Seven states with uncertain start quarters are used only in a sensitivity analysis."))
+fig("01_coverage_timing_map", 500)
+```
+:::
+::: {.column width="40%"}
+- **Prior authorization** is documented in `r kn("c_pa_states")` of the primary states; California's is not found in sourced documents.
+- **BMI thresholds** are documented for `r kn("um_bmi")` of the 17 covering states and step therapy for `r kn("um_step")`; the rules differ by state (criteria table in the report).
+- **Timing.** `r kn("c_states_sens")` more states with uncertain start quarters appear only in a sensitivity analysis.
+:::
+:::::
+
+```{r a6b, results='asis'}
+src("Source: state Medicaid documents and CMS approvals (docs/sources); criteria table: coverage_um_criteria.csv in the repository.")
 ```
 
 ## Access, detail: coverage operates through managed care (South Carolina, Rhode Island), and the first withdrawals show how fast it can reverse
@@ -135,7 +147,7 @@ fig("34_partd_wegovy_vs_ozempic_specialty", 500)
 src(paste0("Source: CMS Medicare Part D Prescribers, 2024 (", kn("d_wegovy_claims"), " Wegovy claims from ", kn("d_wegovy_prescribers"), " prescribers). Part D reflects diabetes and other covered uses, not obesity-brand adoption."))
 ```
 
-## Value: five-year net cost ranges from $`r kn("e_scen_min")` million to $`r kn("e_scen_max")` million for 1,000,000 enrollees; the central case is $`r kn("e_net5")` million
+## Value: five-year net cost ranges from $`r kn("e_scen_min")` million to $`r kn("e_scen_max")` million for 1 million enrollees; the central case is $`r kn("e_net5")` million
 
 ```{r a11, results='asis'}
 fig("42_cost_by_scenario", 520)
@@ -153,7 +165,7 @@ src(paste0("Source: Module E one-way sensitivity. Central rebate ", kn("e_rebate
 
 ```{r a13, results='asis'}
 fig("41_waterfall_pmpm", 520)
-src("Source: Module E. The rebate step is an assumption; the announced price is a programme price, not a confirmed Medicaid net price.")
+src("Source: Module E. The rebate step is an assumption; the announced price is a program price, not a confirmed Medicaid net price.")
 ```
 
 ## Value context: trial weight loss of `r kn("t_attain_1_orforglipron_6_mg")`% to `r kn("t_surmount_1_tirzepatide_15_mg")`% sits beside a Medicaid net cost of $`r kn("e_per_user_year")` per user per year (context only)
@@ -169,8 +181,8 @@ src(paste0("Trials: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT
 
 | Finding | So what | What a brand or access lead might consider |
 |---|---|---|
-| Coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter and grew over eight quarters | Uptake builds over about two years rather than at launch | Planning access support over a multi-year ramp instead of a launch spike |
-| Coverage runs through managed care in South Carolina and Rhode Island | Decisions sit with managed-care organisations as well as state programmes | Evidence and criteria materials aimed at managed-care medical and pharmacy directors (to be tested in the research pack) |
+| Coverage was associated with an estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter, growing over eight quarters | Uptake builds over about two years rather than at launch | Planning access support over a multi-year ramp instead of a launch spike |
+| Coverage runs through managed care in South Carolina and Rhode Island | Decisions sit with managed-care organizations as well as state programs | Evidence and criteria materials aimed at managed-care medical and pharmacy directors (to be tested in the research pack) |
 | Coverage ended in California and Pennsylvania (`r kn("c_withdraw_ca")`% and `r kn("c_withdraw_pa")`%, preliminary) | Budget predictability decides whether coverage lasts | Showing a clear range of cost scenarios: $`r kn("e_pmpm")` per enrollee per month at the central rebate, $`r kn("e_announced_pmpm")` at the announced price |
 | Primary care and nurse practitioners and physician assistants wrote `r kn("d_share_pcp")`% and `r kn("d_share_nppa")`% of Part D incretin claims | The prescriber base is broad, not specialist | Weighing primary-care reach (Part D shows diabetes and other covered uses; confirm for obesity with other data) |
 | The rebate is unknown and drives the range ($`r kn("e_scen_min")` to $`r kn("e_scen_max")` million) | Public data cannot settle net cost | Treating the budget range as a conversation starter and checking it against a payer's own net price |

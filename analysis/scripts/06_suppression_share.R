@@ -25,7 +25,7 @@ p <- ggplot(q, aes(qd, pmin(max_hidden_share, cap))) +
   annotate("text", x = approval_zepbound, y = cap, label = "Zepbound approved", hjust = 1.05, vjust = 1.5, size = 3) +
   labs(title = stringr::str_wrap(sprintf("From 2023 Q1 at most %s%% of Wegovy/Zepbound prescriptions sit in suppressed cells in any quarter (peak %s); by 2025 Q3 at most %s%%",
                                          fmt1(100 * mx$max_hidden_share), mx$quarter_label, fmt1(100 * q$max_hidden_share[q$quarter_label == "2025Q3"])), 90),
-       subtitle = stringr::str_wrap("Upper bound on the hidden share: each suppressed state-NDC cell holds at most 10 prescriptions; the lower bound is 0. 50 states and DC, FFSU + MCOU, 2021 Q2 to 2026 Q1. Y-axis capped at 10%; the three earlier quarters are above the cap and labelled. Before 2023 Q1 volumes are small (under 10,000 prescriptions a quarter), so the bound is wide.", 100),
+       subtitle = stringr::str_wrap("Upper bound on the hidden share: each suppressed state-NDC cell holds at most 10 prescriptions; the lower bound is 0. 50 states and DC, FFSU + MCOU, 2021 Q2 to 2026 Q1. Y-axis capped at 10%; the three earlier quarters are above the cap and labeled. Before 2023 Q1 volumes are small (under 10,000 prescriptions a quarter), so the bound is wide.", 100),
        x = NULL, y = "Maximum share of obesity_wz prescriptions hidden", caption = caption_sdud) +
   theme_incretin()
 save_fig(p, "04_suppression_share", width = 9, height = 5.5)

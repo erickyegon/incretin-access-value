@@ -33,11 +33,11 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 
 | Business question | Why the secondary data raise it |
 |---|---|
-| Where does coverage actually operate: fee-for-service or managed care? | Coverage is delivered through managed-care programmes in South Carolina and Rhode Island, so a fee-for-service-only estimate is not reliable (Module C, sensitivity 12, `deviations.md` item 6). |
+| Where does coverage actually operate: fee-for-service or managed care? | Coverage is delivered through managed-care programs in South Carolina and Rhode Island, so a fee-for-service-only estimate is not reliable (Module C, sensitivity 12, `deviations.md` item 6). |
 | How much do prior authorization (PA) criteria matter? | Prior authorization is documented in `r kn("c_pa_states")` of the covering states and BMI criteria differ (BMI 30 or more; BMI 27 to 29 only with a weight-related condition), but Module C cannot separate PA strictness from coverage itself. |
 | What happens when coverage ends? | After coverage ended in California and Pennsylvania, prescriptions per enrollee fell by `r kn("c_withdraw_ca")`% and `r kn("c_withdraw_pa")`% in one quarter (descriptive, preliminary data, Module C). |
 | Is the effect fast or slow? | The effect rose from `r kn("c_es_e0")` prescriptions per 1,000 enrollees per quarter in the first quarter to `r kn("c_es_e8")` after eight (Module C, secondary data), partly reflecting market growth. |
-| What would a payer need to see to keep coverage? | Five-year net cost of `r kn("e_net5")` million dollars for 1,000,000 enrollees in the central case, with a range of `r kn("e_scen_min")` to `r kn("e_scen_max")` million across scenarios, mostly because rebates are unknown (Module E, secondary data). |
+| What would a payer need to see to keep coverage? | Five-year net cost of `r kn("e_net5")` million dollars for 1 million enrollees in the central case, with a range of `r kn("e_scen_min")` to `r kn("e_scen_max")` million across scenarios, mostly because rebates are unknown (Module E, secondary data). |
 
 **Deliverable:** a ranked view of the coverage criteria that prescribers and payers will accept, the trade-offs between them, and the messages a field team could use. **Timing and budget:** not set (design only).
 
@@ -48,23 +48,23 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 | # | Question | Qualify if | Terminate if |
 |---|---|---|---|
 | S1 | Which best describes your role? | Physician (primary care, endocrinology, cardiology), nurse practitioner, physician assistant | Any other role |
-| S2 | Do you currently treat patients enrolled in a state Medicaid programme? | Yes, 10% or more of patients | No, or under 10% |
+| S2 | Do you currently treat patients enrolled in a state Medicaid program? | Yes, 10% or more of patients | No, or under 10% |
 | S3 | In the past 3 months, how many adult patients with obesity or overweight did you see for weight management? | 20 or more | Fewer than 20 |
 | S4 | Have you prescribed an injectable GLP-1 or GIP/GLP-1 drug for weight management in the past 12 months? | Yes | No |
 | S5 | Do you or an immediate family member work for a pharmaceutical company, market-research firm or advertising agency? | No | Yes |
 | S6 | Have you taken part in paid market research on obesity or diabetes drugs in the past 3 months? | No | Yes |
 | S7 | Which state do you practise in? | Mix of states that covered obesity drugs and states that did not (Module C list) | Quota full |
 
-**Quotas (n = 30 interviews):** primary care physicians 12, nurse practitioners and physician assistants 8, endocrinologists 6, cardiologists 4; at least 10 practising in states that covered obesity drugs under Medicaid and at least 10 in states that did not; at least 8 in a managed-care-dominant programme.
+**Quotas (n = 30 interviews):** primary care physicians 12, nurse practitioners and physician assistants 8, endocrinologists 6, cardiologists 4; at least 10 practising in states that covered obesity drugs under Medicaid and at least 10 in states that did not; at least 8 in a managed-care-dominant program.
 
-## 2.2 Payer screener (Medicaid pharmacy director, managed-care organisation medical director)
+## 2.2 Payer screener (Medicaid pharmacy director, managed-care organization medical director)
 
 | # | Question | Qualify if | Terminate if |
 |---|---|---|---|
 | P1 | Your role? | State Medicaid pharmacy director or deputy, MCO medical director, MCO pharmacy director | Any other |
 | P2 | Do you influence or decide drug coverage criteria or prior authorization policy? | Yes, decision or formal input | No |
-| P3 | Programme type? | State fee-for-service programme, MCO serving Medicaid, or both | Commercial-only or Medicare-only role |
-| P4 | Has your programme covered, considered or declined coverage of obesity drugs since 2021? | Covered, considering or declined (any) | Never discussed |
+| P3 | Program type? | State fee-for-service program, MCO serving Medicaid, or both | Commercial-only or Medicare-only role |
+| P4 | Has your program covered, considered or declined coverage of obesity drugs since 2021? | Covered, considering or declined (any) | Never discussed |
 | P5 | Conflicts: employed by or consulting for a manufacturer, pharmacy benefit manager or research firm in the past 12 months? | No | Yes |
 | P6 | Willing to discuss criteria and process in general terms, not confidential contract terms? | Yes | No |
 
@@ -76,12 +76,12 @@ Probes are tied to secondary findings; the line shown is the evidence the modera
 
 | Time | Prescriber version | Payer version | Secondary evidence behind the probe |
 |---|---|---|---|
-| 0 to 5 | Consent, role, practice mix | Consent, role, programme structure | none |
-| 5 to 15 | Current approach to weight management for Medicaid patients; what limits prescribing | How obesity drugs are handled in your programme today; who decides | Part D prescribing is mostly primary care (`r kn("d_share_pcp")`% of 2024 claims; `r kn("d_share_nppa")`% nurse practitioners and physician assistants), diabetes and other covered uses, not obesity use (Module D) |
+| 0 to 5 | Consent, role, practice mix | Consent, role, program structure | none |
+| 5 to 15 | Current approach to weight management for Medicaid patients; what limits prescribing | How obesity drugs are handled in your program today; who decides | Part D prescribing is mostly primary care (`r kn("d_share_pcp")`% of 2024 claims; `r kn("d_share_nppa")`% nurse practitioners and physician assistants), diabetes and other covered uses, not obesity use (Module D) |
 | 15 to 25 | How coverage criteria change your decision: BMI, comorbidity, renewal, step therapy | Which criteria you use and why; what you changed over time | Covering states record BMI 30 or more, with 27 to 29 allowed if a condition is present (`coverage.csv`); `r kn("c_pa_states")` covering states recorded PA |
 | 25 to 35 | How fast patients start and persist after coverage begins | What uptake you saw or expected; how you monitored it | Effect `r kn("c_es_e0")` in the first quarter, `r kn("c_es_e4")` at four and `r kn("c_es_e8")` at eight quarters per 1,000 enrollees (Module C) |
 | 35 to 45 | What happens to your patients if coverage stops | Why coverage was ended or paused; what would bring it back | Prescriptions fell `r kn("c_withdraw_ca")`% (California) and `r kn("c_withdraw_pa")`% (Pennsylvania) in one quarter after coverage ended (preliminary, descriptive) |
-| 45 to 55 | Stimulus: policy board and oral-option concept board (reactions, not forced choice) | Stimulus: policy board; which criteria you would tighten or loosen | Budget impact: `r kn("e_net5")` million dollars over five years per 1,000,000 enrollees in the central case; range `r kn("e_scen_min")` to `r kn("e_scen_max")` million (Module E, assumptions on rebates) |
+| 45 to 55 | Stimulus: policy board and oral-option concept board (reactions, not forced choice) | Stimulus: policy board; which criteria you would tighten or loosen | Budget impact: `r kn("e_net5")` million dollars over five years per 1 million enrollees in the central case; range `r kn("e_scen_min")` to `r kn("e_scen_max")` million (Module E, assumptions on rebates) |
 | 55 to 60 | Wrap-up: one change to make access work | Wrap-up: one condition for sustained coverage | none |
 
 **Moderator rules:** no brand claims beyond label facts saved in `docs/sources/`; no leading on price; confirm that rebate or net-price terms are out of scope; record verbatims only, no individual identifiers.
@@ -89,7 +89,7 @@ Probes are tied to secondary findings; the line shown is the evidence the modera
 # 4. Stimulus (fictional)
 
 ::: {.callout-note}
-**Fictional stimulus.** Wording is illustrative; no real programme's policy and no manufacturer claim is shown.
+**Fictional stimulus.** Wording is illustrative; no real program's policy and no manufacturer claim is shown.
 :::
 
 ## 4.1 Coverage-policy board (one page)
@@ -99,17 +99,17 @@ Probes are tied to secondary findings; the line shown is the evidence the modera
 | Who qualifies | BMI 30 or more | BMI 27 or more with at least 1 weight-related condition |
 | Comorbidity | None required | At least 1 weight-related condition |
 | Prior authorization renewal | Every 6 months | Every 12 months |
-| Step therapy | 3-month supervised lifestyle programme first | None |
+| Step therapy | 3-month supervised lifestyle program first | None |
 | Patient out-of-pocket cost per month | $25 | $0 |
 | Product class | Injectable GLP-1 or GIP/GLP-1 | Injectable GLP-1 or GIP/GLP-1 |
 
-*Questions for the moderator:* Which policy would you prefer for your patients (prescriber) or your programme (payer)? What would you change first? Which single criterion would you not accept?
+*Questions for the moderator:* Which policy would you prefer for your patients (prescriber) or your program (payer)? What would you change first? Which single criterion would you not accept?
 
 ## 4.2 Concept board: a once-daily oral option (fictional)
 
-> **Concept (fictional): "a once-daily oral tablet for chronic weight management."** Taken by mouth, without injections. A prescriber and patient would decide together, as with any chronic weight-management drug. Coverage criteria would follow the programme's existing policy.
+> **Concept (fictional): "a once-daily oral tablet for chronic weight management."** Taken by mouth, without injections. A prescriber and patient would decide together, as with any chronic weight-management drug. Coverage criteria would follow the program's existing policy.
 
-No efficacy, safety or price claims are shown. The moderator may note only label facts already saved in `docs/sources/` (the CMS Medicare GLP-1 Bridge pages list oral tablets among covered products: *CMS Medicare GLP-1 Bridge prescriber page, June 2026*). *Questions:* What would an oral option change in who you would treat? What would it change in coverage criteria or cost to the programme?
+No efficacy, safety or price claims are shown. The moderator may note only label facts already saved in `docs/sources/` (the CMS Medicare GLP-1 Bridge pages list oral tablets among covered products: *CMS Medicare GLP-1 Bridge prescriber page, June 2026*). *Questions:* What would an oral option change in who you would treat? What would it change in coverage criteria or cost to the program?
 
 # 5. Discrete choice experiment design
 
@@ -156,7 +156,7 @@ illustrative true preference weights (assumption), 200 replications per sample s
 | Data cleaning | Remove speeders (under one third of median completion time), straight-liners (same position in all 12 tasks), failed attention checks |
 | Main model | Conditional logit with effects-coded attributes; mixed logit as a robustness check for preference heterogeneity |
 | Outputs | Part-worth utilities with 95% CIs; relative attribute importance; willingness to trade off (here in out-of-pocket dollars) |
-| Segments | Latent-class or covariate interactions by prescriber type and by state coverage history; payers analysed separately |
+| Segments | Latent-class or covariate interactions by prescriber type and by state coverage history; payers analyzed separately |
 | Simulation | Predicted preference share for candidate coverage policies (for example BMI 30 or more, 12-month renewal, no step therapy, $0) |
 | Reporting | Methods in one page; part-worth chart; trade-off table; limits (stated preference, hypothetical policies, small samples) |
 
@@ -165,13 +165,13 @@ illustrative true preference weights (assumption), 200 replications per sample s
 # 7. Illustrative recommendation slides
 
 ::: {.callout-important}
-**Illustrative.** No fieldwork has been done. These slides show the format the final report would use; where a number appears it is labelled *secondary data* and linked to its output, and every other statement is an assumption to be tested in the research.
+**Illustrative.** No fieldwork has been done. These slides show the format the final report would use; where a number appears it is labeled *secondary data* and linked to its output, and every other statement is an assumption to be tested in the research.
 :::
 
-## Illustrative slide 1. Coverage works through managed care, so test the criteria that managed-care organisations apply
+## Illustrative slide 1. Coverage works through managed care, so test the criteria that managed-care organizations apply
 
-- *Secondary data* (Module C): coverage added `r kn("c_att_overall")` Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter on average (95% CI `r sub("95% CI ", "", kn_ci("c_att_overall"))`), from `r kn("c_states_primary")` covering states versus `r kn("c_states_never")` never-covering jurisdictions (`analysis/outputs/tables/overall_att.csv`, row 1).
-- Coverage operates mainly through managed-care programmes in South Carolina and Rhode Island (`deviations.md` item 6).
+- *Secondary data* (Module C): coverage was associated with an estimated `r kn("c_att_overall")` additional Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter on average (95% CI `r sub("95% CI ", "", kn_ci("c_att_overall"))`), from `r kn("c_states_primary")` covering states versus `r kn("c_states_never")` never-covering jurisdictions (`analysis/outputs/tables/overall_att.csv`, row 1).
+- Coverage operates mainly through managed-care programs in South Carolina and Rhode Island (`deviations.md` item 6).
 - *Hypothesis for the research:* managed-care medical directors weigh the renewal interval and step therapy more than the BMI threshold.
 
 ## Illustrative slide 2. Coverage can end quickly; ask what would sustain it
@@ -181,9 +181,9 @@ illustrative true preference weights (assumption), 200 replications per sample s
 
 ## Illustrative slide 3. The budget is the lever payers describe; test which assumptions they accept
 
-- *Secondary data* (Module E): five-year net cost of `r kn("e_net5")` million dollars (`r kn("e_pmpm")` dollars per enrollee per month) for a programme of 1,000,000 enrollees in the central case, a range of `r kn("e_scen_min")` to `r kn("e_scen_max")` million across scenarios, with the rebate assumed at `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%) because actual net prices are confidential (`analysis/outputs/tables/moduleE_scenario_results.csv`).
+- *Secondary data* (Module E): five-year net cost of `r kn("e_net5")` million dollars (`r kn("e_pmpm")` dollars per enrollee per month) for a program of 1 million enrollees in the central case, a range of `r kn("e_scen_min")` to `r kn("e_scen_max")` million across scenarios, with the rebate assumed at `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%) because actual net prices are confidential (`analysis/outputs/tables/moduleE_scenario_results.csv`).
 - *Hypothesis for the research:* payers would accept tighter criteria in exchange for a predictable price; test through the cost and renewal attributes in the choice experiment.
 
 # 8. Ethics, data and limits
 
-No personal data are collected in this pack. A real study would need informed consent, screener data minimisation, ethics or institutional review as applicable, and compensation set at fair-market rates without inducement. The design uses zero priors and assumed effect sizes that a pilot should replace.
+No personal data are collected in this pack. A real study would need informed consent, screener data minimization, ethics or institutional review as applicable, and compensation set at fair-market rates without inducement. The design uses zero priors and assumed effect sizes that a pilot should replace.

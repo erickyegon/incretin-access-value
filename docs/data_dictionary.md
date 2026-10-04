@@ -54,7 +54,7 @@ discrepancy flags computed from SDUD volume; they never set or adjust a date.
    preliminary; `months_avail` records how many of 3). A PI value of 0 is a reporting failure, not enrollment: it is set to
    NULL (`enrollment_zero_set_null`; 3 rows, all Rhode Island Dec 2024 - Jan 2025, footnote "Unable to Provide Data due to
    System Limitations").
-4. **Outcomes are modelled as rates in levels, not logs.**
+4. **Outcomes are modeled as rates in levels, not logs.**
 
 ## Exposure definition for module C (decided 2026-10-03)
 - **Primary exposure** = the first covered quarter for **Wegovy or Zepbound for weight management** (`start_wegovy_zepbound`

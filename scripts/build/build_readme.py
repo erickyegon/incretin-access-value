@@ -7,7 +7,7 @@ d = lambda i: kn[i]["display"]
 ci = lambda i: kn[i]["ci_or_range"]
 text = f"""# Access and value of obesity drugs in Medicaid
 
-A public-data study of Medicaid coverage of Wegovy and Zepbound for obesity: what coverage did to prescriptions, how many adults are eligible, who prescribes, and what coverage could cost a state programme. It is built as a tested warehouse (PostgreSQL and dbt), an R analysis (renv), a Quarto report, deck and website, and a Shiny budget model.
+A public-data study of Medicaid coverage of Wegovy and Zepbound for obesity: what coverage did to prescriptions, how many adults are eligible, who prescribes, and what coverage could cost a state program. It is built as a tested warehouse (PostgreSQL and dbt), an R analysis (renv), a Quarto report, deck and website, and a Shiny budget model.
 
 **Author:** Erick Kiprotich Yegon, epidemiologist and data scientist.
 
@@ -17,10 +17,10 @@ A public-data study of Medicaid coverage of Wegovy and Zepbound for obesity: wha
 
 All numbers come from [`analysis/outputs/key_numbers.csv`](analysis/outputs/key_numbers.csv), which links each one to its output file and row.
 
-- **Coverage raised prescriptions.** About {d("c_att_overall")} extra Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter ({ci("c_att_overall")}), comparing {d("c_states_primary")} covering states with {d("c_states_never")} never-covering jurisdictions. The effect rose from {d("c_es_e0")} in the first quarter to {d("c_es_e8")} after eight (part of the growth is national market growth). A placebo gives {d("c_placebo")} ({ci("c_placebo")}).
+- **Coverage was associated with more prescriptions.** An estimated {d("c_att_overall")} additional Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter ({ci("c_att_overall")}), comparing {d("c_states_primary")} covering states with {d("c_states_never")} never-covering jurisdictions. The effect rose from {d("c_es_e0")} in the first quarter to {d("c_es_e8")} after eight (part of the growth is national market growth). A placebo gives {d("c_placebo")} ({ci("c_placebo")}).
 - **Eligible adults.** {d("b_eligible")} million U.S. adults meet the FDA label criteria (lower bound; {ci("b_eligible")} million), including {d("b_medicaid_elig")} million with Medicaid ({ci("b_medicaid_elig")} million).
 - **Prescribers.** Primary care physicians wrote {d("d_share_pcp")}% and nurse practitioners and physician assistants {d("d_share_nppa")}% of Part D incretin claims in 2024; Part D reflects diabetes and other covered uses, not obesity-brand adoption.
-- **Budget impact** for a programme of 1,000,000 enrollees: ${d("e_net5")} million net over five years in the central case (${d("e_pmpm")} per enrollee per month), with a scenario range of ${d("e_scen_min")} to ${d("e_scen_max")} million. The rebate is assumed ({d("e_rebate_central")}% is the midpoint of {d("e_rebate_low")}% and {d("e_rebate_high")}%); at the announced ${d("x_price_245")} price the central case is ${d("e_announced5")} million.
+- **Budget impact** for a program of 1 million enrollees: a net cost of about ${d("e_net5")} million over five years in the central case (${d("e_pmpm")} per enrollee per month), with a scenario range of ${d("e_scen_min")} to ${d("e_scen_max")} million. The rebate is assumed ({d("e_rebate_central")}% is the midpoint of {d("e_rebate_low")}% and {d("e_rebate_high")}%); at the announced ${d("x_price_245")} price the central case is ${d("e_announced5")} million.
 
 ## Related project
 
@@ -48,7 +48,7 @@ Raw and interim data are not committed; the scripts download them and record the
 
 1. **Load.** `pip install -r requirements.txt`; run the scripts in `scripts/fetch` (in numeric order), then `scripts/load` to load the interim files into PostgreSQL (database `incretin`).
 2. **Build.** `cd dbt && dbt deps && dbt seed && dbt build` (staging, intermediate and marts; the tests run with the build). Then `python scripts/build/build_counts.py`.
-3. **Analyse.** `cd analysis` and `Rscript run_all.R` (packages pinned in `analysis/renv.lock`; R 4.6), then `Rscript scripts/50_key_numbers.R`.
+3. **Analyze.** `cd analysis` and `Rscript run_all.R` (packages pinned in `analysis/renv.lock`; R 4.6), then `Rscript scripts/50_key_numbers.R`.
 4. **Render.** `quarto render report`, `quarto render deck` (then `node deck/make_pdf.js deck/deck.html deck/deck.pdf`), `quarto render research_pack` and `python site/build_site.py`. Run the Shiny app with `shiny::runApp("app")`.
 5. **Audit.** `Rscript audit/check_numbers.R` checks that every public number matches `key_numbers.csv`.
 
@@ -58,7 +58,7 @@ Raw and interim data are not committed; the scripts download them and record the
 - `dbt/`: staging, intermediate and marts models, seeds and tests ({d("build_models")} models, {d("build_seeds")} seeds, {d("build_tests")} tests, counted from the dbt manifest). Lineage: `docs/figures/dbt_lineage.png`.
 - `analysis/`: R project (renv), scripts by module (B, C, D, E), outputs (`tables`, `figures`, summaries), `key_numbers.csv`.
 - `app/`: Shiny budget impact model. `report/`, `deck/`, `site/`, `research_pack/`: the deliverables above.
-- `docs/`: data dictionary, warehouse notes and every source (`docs/sources_index.csv` lists URL, access date and checksum for all of them; U.S. government documents and open-licence manuals are kept in `docs/sources`, copyrighted third-party copies are kept locally only).
+- `docs/`: data dictionary, warehouse notes and every source (`docs/sources_index.csv` lists URL, access date and checksum for all of them; U.S. government documents and open-license manuals are kept in `docs/sources`, copyrighted third-party copies are kept locally only).
 - `audit/`: the number audit and its allow-list.
 
 ## Data sources

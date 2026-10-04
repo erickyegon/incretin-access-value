@@ -41,7 +41,7 @@ p <- ggplot() +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   coord_cartesian(xlim = window) +
   labs(title = stringr::str_wrap(sprintf("Observed Wegovy/Zepbound prescriptions per 1,000 Medicaid enrollees in 2025 Q3: %s in the 10 covering states (mean), %s in the %d never-treated states (mean)", fmt1(t_2025q3), fmt1(n_2025q3), max(never$n_never)), 90),
-       subtitle = stringr::str_wrap("Orange = covering states (thin: each state; thick: cohort mean); grey = mean of never-treated states. Solid vertical line = cohort's first treated quarter; dashed = coverage end; shaded = North Carolina's coverage gap. Dotted lines, left to right: Wegovy approval (2021-06-04), Zepbound approval (2023-11-08), Wegovy cardiovascular indication (2024-03-08), Zepbound sleep apnea indication (2024-12-20). Grey band = preliminary 2026 Q1. Observed counts only (suppressed cells excluded); the outcome is mechanically zero before 2021 Q2.", 150),
+       subtitle = stringr::str_wrap("Orange = covering states (thin: each state; thick: cohort mean); gray = mean of never-treated states. Solid vertical line = cohort's first treated quarter; dashed = coverage end; shaded = North Carolina's coverage gap. Dotted lines, left to right: Wegovy approval (2021-06-04), Zepbound approval (2023-11-08), Wegovy cardiovascular indication (2024-03-08), Zepbound sleep apnea indication (2024-12-20). Gray band = preliminary 2026 Q1. Observed counts only (suppressed cells excluded); the outcome is mechanically zero before 2021 Q2.", 150),
        x = NULL, y = "Prescriptions per 1,000 Medicaid enrollees (obesity_wz, FFSU + MCOU)", caption = caption_sdud) +
   theme_incretin(base_size = 10)
 

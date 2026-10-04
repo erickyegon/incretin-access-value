@@ -17,7 +17,7 @@ fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(leng
   cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
 ```
 
-Central five-year net cost $`r kn("e_net5")` million ($`r kn("e_pmpm")` per enrollee per month) for 1,000,000 enrollees, rebate `r kn("e_rebate_central")`% assumed.
+Central five-year net cost $`r kn("e_net5")` million ($`r kn("e_pmpm")` per enrollee per month) for 1 million enrollees, rebate `r kn("e_rebate_central")`% assumed.
 
 ## Scenarios
 

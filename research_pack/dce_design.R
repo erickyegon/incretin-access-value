@@ -11,7 +11,7 @@ attrs <- list(
   `BMI threshold` = c("27 or more (with a comorbidity)", "30 or more", "35 or more"),
   `Comorbidity requirement` = c("None", "At least 1 weight-related condition", "At least 2 weight-related conditions"),
   `Prior authorization renewal` = c("Every 6 months", "Every 12 months", "No renewal after initial approval"),
-  `Step therapy` = c("None", "3-month supervised lifestyle programme first", "Trial of a lower-cost agent first"),
+  `Step therapy` = c("None", "3-month supervised lifestyle program first", "Trial of a lower-cost agent first"),
   `Patient out-of-pocket cost per month` = c("$0", "$25", "$75"))
 # "best-to-worst" order for the coverage-access view, used only to flag dominated tasks (one alternative at least as good on every attribute)
 better_is_lower <- c(TRUE, TRUE, FALSE, TRUE, TRUE)   # BMI (lower = broader access), comorbidity (none = broader), renewal (longer = easier), step (none = easier), cost (lower = easier)

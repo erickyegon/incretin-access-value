@@ -33,8 +33,8 @@ plot_es <- function(d, ylab, title = NULL, subtitle = NULL, caption = NULL, show
     geom_ribbon(data = filter(d, !few), aes(ymin = ci_low, ymax = ci_high, group = 1), fill = col_treated, alpha = 0.2) +
     geom_ribbon(data = filter(d, few), aes(ymin = ci_low, ymax = ci_high, group = 1), fill = col_comparison, alpha = 0.15) +
     geom_point(aes(colour = few, shape = few), size = 2.6) +
-    scale_colour_manual(values = c(`FALSE` = col_treated, `TRUE` = "#B5B5B5"), labels = c(`FALSE` = "3 or more contributing states", `TRUE` = "fewer than 3 contributing states (greyed)"), name = NULL) +
-    scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), labels = c(`FALSE` = "3 or more contributing states", `TRUE` = "fewer than 3 contributing states (greyed)"), name = NULL) +
+    scale_colour_manual(values = c(`FALSE` = col_treated, `TRUE` = "#B5B5B5"), labels = c(`FALSE` = "3 or more contributing states", `TRUE` = "fewer than 3 contributing states (grayed)"), name = NULL) +
+    scale_shape_manual(values = c(`FALSE` = 16, `TRUE` = 1), labels = c(`FALSE` = "3 or more contributing states", `TRUE` = "fewer than 3 contributing states (grayed)"), name = NULL) +
     scale_x_continuous(breaks = seq(-8, 12, 2)) + labs(x = "Quarters since coverage began (0 = first treated quarter)", y = ylab, title = title, subtitle = subtitle, caption = caption) +
     theme_incretin()
   if (show_counts) p <- p + geom_text(aes(y = -Inf, label = n_states), vjust = -0.6, size = 2.8, colour = "#555555")
@@ -42,7 +42,7 @@ plot_es <- function(d, ylab, title = NULL, subtitle = NULL, caption = NULL, show
 }
 crit_mean <- mean(es$crit_simultaneous, na.rm = TRUE)
 p1 <- plot_es(es, "ATT per 1,000 enrollees", title = stringr::str_wrap(ttl, 95),
-              subtitle = stringr::str_wrap("Callaway-Sant'Anna dynamic ATT, 10 primary states vs never- and not-yet-treated states, 2018 Q1 to 2025 Q3; 20 imputations of suppressed cells combined with Rubin's rules. Shaded band and points: pointwise 95% CI; numbers along the bottom: contributing treated states; event times with fewer than 3 contributing states are greyed.", 130),
+              subtitle = stringr::str_wrap("Callaway-Sant'Anna dynamic ATT, 10 primary states vs never- and not-yet-treated states, 2018 Q1 to 2025 Q3; 20 imputations of suppressed cells combined with Rubin's rules. Shaded band and points: pointwise 95% CI; numbers along the bottom: contributing treated states; event times with fewer than 3 contributing states are grayed.", 130),
               caption = stringr::str_wrap(paste(sprintf("Simultaneous confidence bands are not shown: with single-state cohorts the bootstrap critical value is unreliable (did warns of this) and very large (%s on average over the imputations, versus 1.96 pointwise). Leads before 2021 Q2 (before Wegovy existed) are omitted: the outcome is mechanically zero there and they are not evidence of parallel trends.", fmt1(crit_mean)), caption_sdud), 150))
 save_fig(p1, "10_event_study_primary", width = 11, height = 6.8)
 save_table(es |> transmute(event_time = e, att = estimate, se, ci_low, ci_high, band_low, band_high, fmi, treated_states = n_states, cohorts = n_cohorts, fewer_than_3_states = few), "event_study_primary")
@@ -121,7 +121,7 @@ p5 <- ggplot(es3 |> filter(e >= -8, e <= 12), aes(e, estimate)) +
   scale_colour_manual(values = c(`FALSE` = col_treated, `TRUE` = col_comparison), guide = "none") + scale_x_continuous(breaks = seq(-8, 12, 2)) +
   labs(title = stringr::str_wrap(sprintf("Overall ATT per 1,000 enrollees: %s for Wegovy/Zepbound, %s for Saxenda, %s for diabetes GLP-1 products",
                                          fmtci(ov3$estimate[1], ov3$ci_low[1], ov3$ci_high[1]), fmtci(ov3$estimate[2], ov3$ci_low[2], ov3$ci_high[2]), fmtci(ov3$estimate[3], ov3$ci_low[3], ov3$ci_high[3])), 95),
-       subtitle = stringr::str_wrap("Dynamic ATT by quarters since coverage began, same design as the primary; each panel on its own y-scale; bars are pointwise 95% CIs (simultaneous bands omitted: they are very wide with single-state cohorts); grey = fewer than 3 contributing states; leads before 2021 Q2 omitted.", 120),
+       subtitle = stringr::str_wrap("Dynamic ATT by quarters since coverage began, same design as the primary; each panel on its own y-scale; bars are pointwise 95% CIs (simultaneous bands omitted: they are very wide with single-state cohorts); gray = fewer than 3 contributing states; leads before 2021 Q2 omitted.", 120),
        x = "Quarters since coverage began", y = "ATT: prescriptions per 1,000 enrollees",
        caption = stringr::str_wrap(paste("The diabetes GLP-1 outcome is a pre-specified spillover outcome, not a clean negative control: a negative estimate is consistent with substitution from off-label diabetes products to covered obesity products, a positive one with spillover in prescribing, and neither can be told apart from a design problem with this data alone.", caption_sdud), 150)) +
   theme_incretin()

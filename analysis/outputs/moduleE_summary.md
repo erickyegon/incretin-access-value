@@ -1,9 +1,9 @@
-# Module E in plain language: what covering Wegovy and Zepbound could cost a Medicaid programme
+# Module E in plain language: what covering Wegovy and Zepbound could cost a Medicaid program
 
-**Question.** What would covering Wegovy and Zepbound for obesity cost a Medicaid programme of 1 million enrollees over five years, and how much do access policy, price and uptake change that?
+**Question.** What would covering Wegovy and Zepbound for obesity cost a Medicaid program of 1 million enrollees over five years, and how much do access policy, price and uptake change that?
 (Plan: [plan_moduleE.md](../plan_moduleE.md), committed before any result; departures in [deviations.md](deviations.md), item 12 is the prior authorization change; method follows the ISPOR budget impact guideline, [original page](https://www.ispor.org/heor-resources/good-practices/article/principles-of-good-practice-for-budget-impact-analysis-ii).)
 
-**How it works.** The extra prescriptions per 1,000 enrollees per quarter that Module C attributes to coverage (quarters 1 to 9; [inputs](tables/moduleC_for_budget_model.csv)) are scaled to 1 million enrollees and priced.
+**How it works.** The extra prescriptions per 1,000 enrollees per quarter that Module C estimates for coverage (quarters 1 to 9; [inputs](tables/moduleC_for_budget_model.csv)) are scaled to 1 million enrollees and priced.
 Module C measures prescriptions actually filled in the ten covering states, under the prior authorization (PA) rules those states actually used (PA is documented in 9 of the 10 states; California's is not found in sourced documents; BMI thresholds, comorbidity rules and step therapy differ by state and are in the [coverage criteria table](tables/coverage_um_criteria.csv)).
 So the central case uses the effect as observed (PA multiplier 1.0, "PA as observed in the 10 covering states"), discontinuation is already in the uptake, and no persistence is added. Tight PA (multiplier 0.5 to 0.75) and loose PA (up to 1.25) are assumptions ([PA scenarios](tables/moduleE_pa_scenarios.csv)). Years 3 to 5 are scenarios (plateau, continued growth, decline).
 
@@ -13,7 +13,7 @@ So the central case uses the effect as observed (PA multiplier 1.0, "PA as obser
 - **Net cost per user per year** (4.3 fills a year, MEPS, sourced): $2,511. **Net cost per member-year of continuous treatment** (12 fills a year, assumption): $6,943. They answer different questions: the first is what an observed user costs, the second what a member on treatment all year would cost.
 - **Probabilistic range** (10,000 draws): median $145.4 million, 90% interval $58.1 million to $319.9 million; if the event-time effects move together, $50.3 million to $347.3 million ([summary](tables/moduleE_psa_summary.csv), [figure](figures/43_psa_distribution.png)).
 - **Scenarios** ([table](tables/moduleE_scenario_results.csv), [figure](figures/42_cost_by_scenario.png)): net five-year cost runs from $55.6 million (decline after year 2, rebate of 79.3% implied by $245) to $369.4 million (continued growth, rebate of 23.1%, the statutory minimum).
-- **Announced price.** At $245 per monthly prescription (White House fact sheet, November 2025, which says state Medicaid programmes can access the drugs at these prices), the plateau case costs $68.3 million over five years, or $1.14 per enrollee per month.
+- **Announced price.** At $245 per monthly prescription (White House fact sheet, November 2025, which says state Medicaid programs can access the drugs at these prices), the plateau case costs $68.3 million over five years, or $1.14 per enrollee per month.
 - **Prior authorization scenarios** (five-year net, central rebate): tight PA 0.5 gives $80.7 million, 0.75 gives $121.0 million, loose PA 1.25 gives $201.6 million.
 
 ## What moves the answer ([tornado](figures/40_tornado.png), [waterfall](figures/41_waterfall_pmpm.png))

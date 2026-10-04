@@ -60,13 +60,13 @@ pb <- ggplot(state_chg, aes(pmin(normalised, cap), unit, colour = group)) +
   geom_text(data = filter(state_chg, normalised > cap), aes(x = cap, label = paste0("+", round(100 * normalised), "% (axis capped)")), hjust = 1.05, vjust = -0.9, size = 3, show.legend = FALSE) +
   scale_x_continuous(labels = scales::percent_format(accuracy = 1), limits = c(-1, cap)) +
   scale_colour_manual(values = c("Withdrawing / lapsed" = col_treated, "Continuously covered" = "#4D4D4D", "Never treated" = col_comparison), name = NULL, guide = "none") +
-  labs(x = "Normalised change, 2025 Q4 to 2026 Q1: change in obesity_wz prescriptions relative to the state's all-drug change (preliminary)", y = NULL) + theme_incretin(base_size = 10)
+  labs(x = "Normalized change, 2025 Q4 to 2026 Q1: change in obesity_wz prescriptions relative to the state's all-drug change (preliminary)", y = NULL) + theme_incretin(base_size = 10)
 
 cont_med <- median(state_chg$normalised[state_chg$group == "Continuously covered"])
 g <- function(u, v) state_chg[[v]][state_chg$unit == u]
 title <- sprintf("Preliminary: relative to their all-drug change, Wegovy/Zepbound prescriptions changed %s in CA and %s in PA after coverage ended, versus a median of %s in the 6 continuously covered states",
                  fmt_pct1(g("CA", "normalised")), fmt_pct1(g("PA", "normalised")), fmt_pct1(cont_med))
-sub <- sprintf("Descriptive only: no model, no p-values; 2026 Q1 is preliminary SDUD data. Normalised change = (1 + obesity_wz change) / (1 + all-drug SDUD change) - 1 for 2025 Q4 to 2026 Q1; raw changes are in the table (obesity_wz: CA %s, PA %s, continuously covered median %s; all drugs: CA %s, PA %s, median %s).",
+sub <- sprintf("Descriptive only: no model, no p-values; 2026 Q1 is preliminary SDUD data. Normalized change = (1 + obesity_wz change) / (1 + all-drug SDUD change) - 1 for 2025 Q4 to 2026 Q1; raw changes are in the table (obesity_wz: CA %s, PA %s, continuously covered median %s; all drugs: CA %s, PA %s, median %s).",
                fmt_pct1(g("CA", "obesity_wz")), fmt_pct1(g("PA", "obesity_wz")), fmt_pct1(median(state_chg$obesity_wz[state_chg$group == "Continuously covered"])),
                fmt_pct1(g("CA", "all_drugs")), fmt_pct1(g("PA", "all_drugs")), fmt_pct1(median(state_chg$all_drugs[state_chg$group == "Continuously covered"])))
 p <- (pa / pb) + plot_layout(heights = c(1, 1.15), guides = "collect") +

@@ -7,25 +7,26 @@
 <body>
 <header class="wrap">
   <p class="eyebrow">Access &amp; Value · incretin drugs in Medicaid</p>
-  <h1>Medicaid coverage of Wegovy and Zepbound added about 12.2 prescriptions per 1,000 enrollees per quarter; covering 1,000,000 enrollees would net about $161.3 million over five years</h1>
-  <p class="lede">Public aggregate data, a tested warehouse and scenario analysis: what coverage did, who is eligible, who prescribes, and what it could cost.</p>
-  <p class="byline">Erick Kiprotich Yegon · Epidemiologist and data scientist</p>
+  <h1>When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by an estimated 12.2 per 1,000 enrollees per quarter</h1>
+  <p class="lede">Public aggregate data, a tested warehouse and scenario analysis: what coverage was associated with, who is eligible, who prescribes, and what it could cost a program of 1 million enrollees.</p>
+  <p class="byline">Erick Kiprotich Yegon · Epidemiologist and data scientist · <a href="https://linkedin.com/in/erickyegon">LinkedIn</a> · <a href="mailto:keyegon@gmail.com">keyegon@gmail.com</a></p>
   <nav class="buttons" aria-label="Project links">
     <a class="btn primary" href="report.html">Read the report</a>
     <a class="btn" href="deck.pdf">Insight deck (PDF)</a>
     <a class="btn" href="one_page_summary.pdf">One-page summary</a>
+    <a class="btn" href="research_pack.pdf">Research design pack (PDF)</a>
     <a class="btn" href="budget_impact_scenarios.pdf">Budget model (PDF)</a>
     <a class="btn" href="https://github.com/erickyegon/incretin-access-value">Code</a>
   </nav>
 </header>
 <main class="wrap">
   <section class="cards" aria-label="Key numbers">
-    <div class="card"><span class="num">12.2</span><span class="unit">extra prescriptions per 1,000 enrollees per quarter</span><span class="ci">95% CI 8.4 to 16.0; coverage effect, 10 covering vs 34 never-covering jurisdictions</span></div>
+    <div class="card"><span class="num">12.2</span><span class="unit">estimated additional prescriptions per 1,000 enrollees per quarter</span><span class="ci">95% CI 8.4 to 16.0; 10 covering vs 34 never-covering jurisdictions</span></div>
     <div class="card"><span class="num">128.8 million</span><span class="unit">U.S. adults meet the FDA label criteria (lower bound)</span><span class="ci">95% CI 117.2 to 140.3 million; NHANES 2021-2023</span></div>
-    <div class="card"><span class="num">$161.3 million</span><span class="unit">five-year net cost, 1,000,000 enrollees, central case ($2.69 per enrollee per month)</span><span class="ci">scenario range $55.6 to $369.4 million; rebate assumed</span></div>
+    <div class="card"><span class="num">$161.3 million</span><span class="unit">a net cost of about $161.3 million over five years for a program of 1 million enrollees (central case, $2.69 per enrollee per month)</span><span class="ci">scenario range $55.6 to $369.4 million; rebate assumed</span></div>
   </section>
   <figure>
-    <img src="assets/event_study.png" alt="Event-study plot of the estimated effect of coverage on Wegovy and Zepbound prescriptions per 1,000 enrollees by quarter since coverage began. Pre-coverage estimates are near zero; the effect is 1.3 at the start, 11.7 after four quarters and 17.2 after eight, with pointwise 95 percent bands widening later; event times 11 and 12 have fewer than three states and are greyed." loading="lazy">
+    <img src="assets/event_study.png" alt="Event-study plot of the estimated effect of coverage on Wegovy and Zepbound prescriptions per 1,000 enrollees by quarter since coverage began. Pre-coverage estimates are near zero; the effect is 1.3 at the start, 11.7 after four quarters and 17.2 after eight, with pointwise 95 percent bands widening later; event times 11 and 12 have fewer than three states and are grayed." loading="lazy">
     <figcaption>Coverage effect by quarter since coverage began. Source: CMS State Drug Utilization Data and Medicaid enrollment. Part of the growth is national market growth.</figcaption>
   </figure>
   <section>
@@ -35,11 +36,16 @@
     </ol>
   </section>
   <section>
+    <h2>Methods shown</h2>
+    <p>Causal inference (staggered difference-in-differences) · survey epidemiology · budget impact modeling with probabilistic sensitivity analysis · claims-derived data engineering (NDC, ICD-10, dbt) · market access insight.</p>
+  </section>
+  <section>
     <h2>What this shows</h2>
     <ul>
-      <li>Coverage raised prescriptions from 1.3 in the first quarter to 17.2 per 1,000 enrollees after eight quarters, and the result holds across estimators.</li>
+      <li>Coverage was associated with an estimated rise from 1.3 prescriptions per 1,000 enrollees per quarter in the first quarter to 17.2 after eight quarters, and the result holds in 15 of 15 alternative analyses (fee-for-service only is not estimable).</li>
       <li>About 17.8 million adults with Medicaid meet the label criteria; 30.4 million U.S. adults currently use a GLP-1 drug.</li>
-      <li>Primary care physicians wrote 55.8% of Part D incretin claims in 2024, which reflect diabetes and other covered uses, not obesity use.</li>
+      <li>In 2024, cardiology wrote 14.5% of Wegovy's Part D claims against 1.2% of Ozempic's, after Wegovy's cardiovascular indication (Part D reflects diabetes and other covered uses, not obesity use).</li>
+      <li>Coverage works through managed care: in South Carolina and Rhode Island, uptake runs almost entirely through managed-care organizations (97.5% of South Carolina's observed prescriptions in 2025 Q3; 100.0% in every Rhode Island quarter).</li>
       <li>The biggest unknown in the budget is the rebate: the central case uses 51.2%, the midpoint of 23.1% (statutory minimum) and 79.3% (implied by the announced $245 price).</li>
     </ul>
   </section>
