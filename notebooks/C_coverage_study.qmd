@@ -1,0 +1,73 @@
+---
+title: "Module C: the coverage study"
+subtitle: "Exploration notebook, module C: existing outputs only, no new analysis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+```
+
+Coverage added `r kn("c_att_overall")` prescriptions per 1,000 enrollees per quarter (`r kn_ci("c_att_overall")`).
+
+## Coverage and timing
+
+```{r}
+tb("coverage_um_criteria.csv", 17)
+```
+
+```{r}
+#| results: asis
+fig("01_coverage_timing_map", "Coverage timing map")
+```
+
+## Estimates
+
+```{r}
+tb("overall_att.csv", 8)
+```
+
+```{r}
+tb("event_study_primary.csv", 12)
+```
+
+```{r}
+tb("estimator_reconciliation.csv", 8)
+```
+
+```{r}
+#| results: asis
+fig("10_event_study_primary", "Event study")
+```
+
+```{r}
+#| results: asis
+fig("11_specification_chart", "Specification chart")
+```
+
+```{r}
+#| results: asis
+fig("12_honestdid", "HonestDiD")
+```
+
+## Withdrawals (preliminary)
+
+```{r}
+tb("withdrawal_change_2025Q4_to_2026Q1.csv", 8)
+```
+
+```{r}
+#| results: asis
+fig("05_withdrawal_descriptive", "Coverage withdrawals")
+```
+
+*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*

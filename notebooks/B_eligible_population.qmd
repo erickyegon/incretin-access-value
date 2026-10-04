@@ -1,0 +1,54 @@
+---
+title: "Module B: eligible population, funnel and forecast"
+subtitle: "Exploration notebook, module B: existing outputs only, no new analysis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+```
+
+About `r kn("b_eligible")` million adults meet the label criteria (lower bound), including `r kn("b_medicaid_elig")` million with Medicaid; about `r kn("b_glp1_all")` million currently use a GLP-1 drug.
+
+## Funnel
+
+```{r}
+tb("moduleB_funnel.csv", 12)
+```
+
+```{r}
+#| results: asis
+fig("20_funnel", "Eligible-population funnel")
+```
+
+## Survey estimates (excerpt)
+
+NHANES 2021-2023 design-based estimates.
+
+```{r}
+tb("moduleB_survey_estimates.csv", 12)
+```
+
+## Forecast
+
+Median `r kn("b_fc_2030")` million GLP-1 users without diagnosed diabetes by 2030.
+
+```{r}
+tb("moduleB_forecast_year_end.csv", 12)
+```
+
+```{r}
+#| results: asis
+fig("21_forecast_fan", "Forecast fan chart")
+```
+
+*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*

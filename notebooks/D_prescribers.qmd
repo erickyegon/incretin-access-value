@@ -1,0 +1,71 @@
+---
+title: "Module D: prescribers"
+subtitle: "Exploration notebook, module D: existing outputs only, no new analysis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+```
+
+Part D reflects diabetes and other covered uses, not obesity-brand adoption. Primary care wrote `r kn("d_share_pcp")`% of 2024 claims.
+
+## Volume, specialty, concentration
+
+```{r}
+tb("moduleD_specialty_mix_by_year.csv", 10)
+```
+
+```{r}
+tb("moduleD_concentration_by_year.csv", 8)
+```
+
+```{r}
+#| results: asis
+fig("31_partd_specialty_mix", "Specialty mix")
+```
+
+```{r}
+#| results: asis
+fig("32_partd_concentration", "Concentration")
+```
+
+## Adoption
+
+```{r}
+tb("moduleD_tirzepatide_adoption_by_specialty.csv", 15)
+```
+
+```{r}
+#| results: asis
+fig("33_partd_tirzepatide_adoption", "Tirzepatide adoption")
+```
+
+```{r}
+#| results: asis
+fig("34_partd_wegovy_vs_ozempic_specialty", "Wegovy and Ozempic by specialty")
+```
+
+## Segments (exploratory)
+
+The pre-specified rule gave a two-segment split of new versus continuing prescribers; the five-segment solution is exploratory, with stability beside each segment.
+
+```{r}
+tb("moduleD_segment_profiles_k5.csv", 6)
+```
+
+```{r}
+#| results: asis
+fig("35_partd_segments_k5", "Exploratory segments")
+```
+
+*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*

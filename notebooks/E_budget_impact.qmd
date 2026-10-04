@@ -1,0 +1,74 @@
+---
+title: "Module E: budget impact"
+subtitle: "Exploration notebook, module E: existing outputs only, no new analysis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+```
+
+Central five-year net cost $`r kn("e_net5")` million ($`r kn("e_pmpm")` per enrollee per month) for 1,000,000 enrollees, rebate `r kn("e_rebate_central")`% assumed.
+
+## Scenarios
+
+```{r}
+tb("moduleE_scenario_results.csv", 12)
+```
+
+```{r}
+tb("moduleE_pa_scenarios.csv", 4)
+```
+
+```{r}
+tb("moduleE_central_annual.csv", 5)
+```
+
+```{r}
+#| results: asis
+fig("42_cost_by_scenario", "Cost by scenario")
+```
+
+## Sensitivity
+
+```{r}
+tb("moduleE_tornado.csv", 8)
+```
+
+```{r}
+tb("moduleE_psa_summary.csv", 3)
+```
+
+```{r}
+#| results: asis
+fig("40_tornado", "Tornado")
+```
+
+```{r}
+#| results: asis
+fig("41_waterfall_pmpm", "Waterfall")
+```
+
+```{r}
+#| results: asis
+fig("43_psa_distribution", "PSA distribution")
+```
+
+## Value context
+
+Trial weight loss next to net cost per user per year; context only, no cost-effectiveness claim.
+
+```{r}
+tb("moduleE_value_context.csv", 9)
+```
+
+*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*

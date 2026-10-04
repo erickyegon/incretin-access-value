@@ -1,0 +1,82 @@
+---
+title: "Module A: the data and coding layer"
+subtitle: "Exploration notebook, module A: existing outputs only, no new analysis"
+format:
+  html:
+    toc: true
+    embed-resources: true
+    theme: cosmo
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../analysis/R/kn.R")
+tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
+fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
+  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+```
+
+A tested warehouse (`r kn("build_models")` dbt models, `r kn("build_seeds")` seeds, `r kn("build_tests")` tests) sits behind every number. This notebook looks at what the data layer shows before any model: reporting completeness, spending, the timeline of events and the pipeline.
+
+## Reporting completeness and suppression
+
+`r kn("m_rep_both")`% of state-quarters have both fee-for-service and managed-care rows and `r kn("m_wz_suppressed_share")`% of Wegovy and Zepbound rows are suppressed (counts under 11).
+
+```{r}
+tb("moduleA_sdud_reporting_status_counts.csv", 6)
+```
+
+```{r}
+tb("moduleA_sdud_reporting_summary.csv", 8)
+```
+
+```{r}
+#| results: asis
+fig("52_sdud_reporting_suppression", "SDUD reporting and suppression by state and quarter")
+```
+
+## Spending by brand
+
+Gross of rebates: Part D `r kn("m_spend_partd_2020")` to `r kn("m_spend_partd_2024")` billion dollars (2020 to 2024); Medicaid `r kn("m_spend_medicaid_2020")` to `r kn("m_spend_medicaid_2024")` billion.
+
+```{r}
+tb("moduleA_spending_totals.csv", 12)
+```
+
+```{r}
+#| results: asis
+fig("50_spending_trend", "Gross spending by brand")
+```
+
+## Timeline and pipeline
+
+Registered studies of the in-scope ingredients: `r kn("p_obesity_studies")` list obesity, `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3.
+
+```{r}
+tb("moduleA_pipeline_by_phase.csv", 8)
+```
+
+```{r}
+tb("moduleA_pipeline_summary.csv", 10)
+```
+
+```{r}
+#| results: asis
+fig("51_timeline", "Timeline of approvals, coverage and federal events")
+```
+
+## Coverage criteria completeness
+
+Prior authorization is documented for `r kn("um_pa")` of 17 states, BMI thresholds for `r kn("um_bmi")`, comorbidity rules for `r kn("um_comorb")` and step therapy for `r kn("um_step")`.
+
+```{r}
+tb("coverage_um_completeness.csv", 6)
+```
+
+```{r}
+#| results: asis
+fig("53_rate_map_2025Q3", "Prescriptions per 1,000 Medicaid enrollees, 2025 Q3")
+```
+
+*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*

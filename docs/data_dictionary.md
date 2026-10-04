@@ -97,3 +97,22 @@ discrepancy flags computed from SDUD volume; they never set or adjust a date.
 - **(e)** Mississippi: CMS-approved SPA 23-0013 (effective 2023-07-01) covers the weight-loss **category** only ("select obesity
   drugs ... as listed on the state's website"). Wegovy is named by the state's criteria (v1.3, dated 7/1/2023) and the 2023-05-09
   P&T minutes, but no document confirms a Wegovy go-live, so the date is kept and confidence is **medium**.
+
+## Drug coding: these are self-administered pharmacy-benefit drugs, so NDC is the right code
+Wegovy, Zepbound, Saxenda, Ozempic, Mounjaro and the other products in scope are self-administered injectables or oral tablets dispensed by pharmacies under the **pharmacy benefit**. They are identified by **National Drug Code (NDC, 11 digits, 5-4-2)**,
+which is the key of State Drug Utilization Data (SDUD), NADAC and the product map. They are **not** billed under medical-benefit **HCPCS J-codes**, so there are no HCPCS codes in this project and no J-code data are used. Physician-administered drugs would need HCPCS and are out of scope.
+
+## Marts: key columns, units and suppression
+Every column of every mart, with type, unit and description, is in [data_dictionary_marts.md](data_dictionary_marts.md) (generated from the warehouse and dbt). The conventions that apply across marts:
+- **Grain.** `mart_did_panel`: state x quarter (51 states and DC x 33 quarters); `mart_sdud_state_quarter_*`: state x quarter x product (x dosage form, x utilization type); `mart_prescriber_year`: prescriber x drug x year (Part D rows with at least 11 claims);
+  `mart_drug_spending_year`: brand x year; `mart_nhanes_adults`, `mart_meps_persons`: one row per person; `mart_pipeline_trials`: one row per registered study.
+- **Units.** Rates are prescriptions per 1,000 enrollees per quarter; amounts are US dollars **gross of rebates**; enrollment is the quarterly average of monthly persons; Part D spending and claims are annual.
+- **Suppression.** SDUD cells with fewer than 11 prescriptions are suppressed by CMS: counts and amounts are NULL (never 0). `rx_*_observed` uses unsuppressed rows only; `*_upper_bound` adds up to 10 prescriptions per suppressed cell; the suppressed cells are imputed only
+  in the Module C analysis (20 imputations, Rubin's rules), never inside the marts. Part D Prescribers rows below 11 claims are absent; Open Payments are aggregate-only in outputs.
+- **Preliminary data.** SDUD 2026 Q1 is preliminary (`is_preliminary`).
+
+## Added during plan reconciliation
+- `data/reference/medicaid_obesity_um_criteria.csv`: utilization-management criteria (prior authorization, BMI threshold, comorbidity requirement, step therapy) for the 17 states, with document version and source URL; "not found in sourced documents" means no document states it.
+- `data/reference/trial_inputs.csv`: primary weight-loss outcome by arm for STEP 1, SURMOUNT-1, SURMOUNT-5 and ATTAIN-1 (percent change in body weight; 95% CI where stated), from PubMed abstracts, with DOI, PMID and NCT number.
+- `docs/sources_index.csv`: every source document, kept or removed from the repository, with URL, access date and checksum.
+
