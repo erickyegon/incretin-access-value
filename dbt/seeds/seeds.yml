@@ -1,0 +1,98 @@
+version: 2
+
+seeds:
+  - name: states
+    description: "Census Bureau 2020 state FIPS/ANSI codes with region and division. 50 states, DC and territories; territories flagged and excluded from the DiD panel (in_panel = false). One row per state or territory."
+    config:
+      column_types: {state_code: text, fips: text, state_name: text, census_region: text, census_division: text, is_territory: boolean, is_dc: boolean, in_panel: boolean}
+    columns:
+      - name: state_code
+        description: "USPS two-letter code."
+        tests: [unique, not_null]
+      - name: fips
+        description: "Two-digit state FIPS code (text, zero padded)."
+        tests: [unique, not_null]
+      - name: in_panel
+        description: "True for the 50 states and DC (51 units); false for territories."
+
+  - name: product_map
+    description: "NDC-level map of incretin products (FDA NDC Directory, RxNav, openFDA, SDUD-only NDCs, Drugs@FDA). One row per 11-digit NDC. is_combination marks insulin/GLP-1 combinations (excluded from the main outcome). labeler_verified is false when the labeler could not be resolved from an official file."
+    config:
+      column_types: {ndc11: text, ingredient: text, brand: text, dosage_form: text, route: text, strength: text, labeler_name: text, rxcui: text, first_seen: text, last_seen: text, ndc_status: text, label_group: text, label_verified: text, label_note: text, source: text, is_combination: boolean, ingredient_all: text, product_ndc: text, marketing_category: text, application_number: text, rx_name: text, package_description: text, labeler_verified: boolean, labeler_source: text}
+    columns:
+      - name: ndc11
+        description: "11-digit NDC, text, zero padded (5-4-2 without hyphens)."
+        tests: [unique, not_null]
+      - name: ingredient
+        description: "Active ingredient (for combinations, the first ingredient; ingredient_all lists all)."
+        tests: [not_null]
+      - name: label_group
+        description: "Labelled indication group: diabetes or obesity."
+        tests: [not_null]
+      - name: is_combination
+        description: "True for insulin/GLP-1 combination products (Soliqua, Xultophy)."
+        tests: [not_null]
+      - name: labeler_verified
+        description: "Whether the labeler code was confirmed against an official FDA file."
+        tests: [not_null]
+
+  - name: product_groups
+    description: "Analysis product group for every brand x ingredient x label group combination in product_map. Groups: obesity_wz (Wegovy, Zepbound), obesity_saxenda, obesity_other, diabetes_glp1, combination_excluded."
+    config:
+      column_types: {brand: text, ingredient: text, label_group: text, is_combination: boolean, product_group: text, rationale: text, product_group_key: text}
+    columns:
+      - name: product_group_key
+        description: "brand (or GENERIC)|ingredient|label_group; unique key."
+        tests: [unique, not_null]
+      - name: product_group
+        description: "Analysis group."
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [obesity_wz, obesity_saxenda, obesity_other, diabetes_glp1, combination_excluded]
+
+  - name: medicaid_obesity_coverage
+    description: "State Medicaid fee-for-service coverage of obesity drugs (Wegovy/Zepbound), one row per coverage spell, with documented sources. start_date_low/high bound the start; start_precision is day, month, quarter or range. analysis_group is primary, sensitivity or never_treated (never_treated states have no row)."
+    config:
+      column_types: {state_code: text, state_name: text, spell_id: text, spell_no: integer, products_covered: text, coverage_end: date, start_date_low: date, start_date_high: date, start_precision: text, analysis_group: text, category_level_spa: boolean, kansas_flag: boolean, confidence: text, end_confidence: text, first_treated_quarter_documented: text, first_full_quarter_documented: text, source_url: text, notes: text}
+    columns:
+      - name: spell_id
+        description: "State code and spell number."
+        tests: [unique, not_null]
+      - name: state_code
+        tests:
+          - not_null
+          - relationships:
+              arguments: {to: ref('states'), field: state_code}
+      - name: start_precision
+        description: "day, month, quarter or range."
+        tests:
+          - accepted_values:
+              arguments: {values: [day, month, quarter, range]}
+      - name: analysis_group
+        tests:
+          - accepted_values:
+              arguments: {values: [primary, sensitivity]}
+      - name: category_level_spa
+        description: "True when the state plan amendment covers the drug category (anti-obesity agents) rather than Wegovy specifically (MS, TN)."
+
+  - name: icd10_value_sets
+    description: "ICD-10-CM value sets (E11 type 2 diabetes, E66 obesity, Z68 BMI) from the CMS ICD-10-CM FY2027 files."
+    config:
+      column_types: {value_set: text, code: text, description: text, source_version: text, code_nodot: text, billable: text}
+
+  - name: trial_inputs
+    description: "Empty template for published trial results used in the budget-impact model. Filled by hand with citation, never from memory."
+    config:
+      column_types: {trial: text, drug: text, dose: text, population: text, duration_weeks: integer, outcome: text, value: numeric, uncertainty: text, source_citation: text, doi: text, page_or_table: text}
+
+  - name: label_events
+    description: "FDA label events for in-scope obesity products from Drugs@FDA: original approval and later indication additions, with application and supplement numbers."
+    config:
+      column_types: {brand: text, event: text, event_date: date, application_number: text, submission_type: text, submission_no: integer, evidence: text, label_url: text}
+    columns:
+      - name: application_number
+        tests: [not_null]
+      - name: event_date
+        tests: [not_null]

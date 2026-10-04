@@ -1,0 +1,58 @@
+state_code,fips,state_name,census_region,census_division,is_territory,is_dc,in_panel
+AL,01,Alabama,South,East South Central,False,False,True
+AK,02,Alaska,West,Pacific,False,False,True
+AZ,04,Arizona,West,Mountain,False,False,True
+AR,05,Arkansas,South,West South Central,False,False,True
+CA,06,California,West,Pacific,False,False,True
+CO,08,Colorado,West,Mountain,False,False,True
+CT,09,Connecticut,Northeast,New England,False,False,True
+DE,10,Delaware,South,South Atlantic,False,False,True
+DC,11,District of Columbia,South,South Atlantic,False,True,True
+FL,12,Florida,South,South Atlantic,False,False,True
+GA,13,Georgia,South,South Atlantic,False,False,True
+HI,15,Hawaii,West,Pacific,False,False,True
+ID,16,Idaho,West,Mountain,False,False,True
+IL,17,Illinois,Midwest,East North Central,False,False,True
+IN,18,Indiana,Midwest,East North Central,False,False,True
+IA,19,Iowa,Midwest,West North Central,False,False,True
+KS,20,Kansas,Midwest,West North Central,False,False,True
+KY,21,Kentucky,South,East South Central,False,False,True
+LA,22,Louisiana,South,West South Central,False,False,True
+ME,23,Maine,Northeast,New England,False,False,True
+MD,24,Maryland,South,South Atlantic,False,False,True
+MA,25,Massachusetts,Northeast,New England,False,False,True
+MI,26,Michigan,Midwest,East North Central,False,False,True
+MN,27,Minnesota,Midwest,West North Central,False,False,True
+MS,28,Mississippi,South,East South Central,False,False,True
+MO,29,Missouri,Midwest,West North Central,False,False,True
+MT,30,Montana,West,Mountain,False,False,True
+NE,31,Nebraska,Midwest,West North Central,False,False,True
+NV,32,Nevada,West,Mountain,False,False,True
+NH,33,New Hampshire,Northeast,New England,False,False,True
+NJ,34,New Jersey,Northeast,Middle Atlantic,False,False,True
+NM,35,New Mexico,West,Mountain,False,False,True
+NY,36,New York,Northeast,Middle Atlantic,False,False,True
+NC,37,North Carolina,South,South Atlantic,False,False,True
+ND,38,North Dakota,Midwest,West North Central,False,False,True
+OH,39,Ohio,Midwest,East North Central,False,False,True
+OK,40,Oklahoma,South,West South Central,False,False,True
+OR,41,Oregon,West,Pacific,False,False,True
+PA,42,Pennsylvania,Northeast,Middle Atlantic,False,False,True
+RI,44,Rhode Island,Northeast,New England,False,False,True
+SC,45,South Carolina,South,South Atlantic,False,False,True
+SD,46,South Dakota,Midwest,West North Central,False,False,True
+TN,47,Tennessee,South,East South Central,False,False,True
+TX,48,Texas,South,West South Central,False,False,True
+UT,49,Utah,West,Mountain,False,False,True
+VT,50,Vermont,Northeast,New England,False,False,True
+VA,51,Virginia,South,South Atlantic,False,False,True
+WA,53,Washington,West,Pacific,False,False,True
+WV,54,West Virginia,South,South Atlantic,False,False,True
+WI,55,Wisconsin,Midwest,East North Central,False,False,True
+WY,56,Wyoming,West,Mountain,False,False,True
+AS,60,American Samoa,,,True,False,False
+GU,66,Guam,,,True,False,False
+MP,69,Commonwealth of the Northern Mariana Islands,,,True,False,False
+PR,72,Puerto Rico,,,True,False,False
+UM,74,U.S. Minor Outlying Islands,,,True,False,False
+VI,78,United States Virgin Islands,,,True,False,False

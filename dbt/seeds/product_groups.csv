@@ -1,0 +1,21 @@
+brand,ingredient,label_group,is_combination,product_group,rationale,product_group_key
+Soliqua,lixisenatide,diabetes,TRUE,combination_excluded,"insulin/GLP-1 combination product (Soliqua, Xultophy)",Soliqua|lixisenatide|diabetes
+Xultophy,liraglutide,diabetes,TRUE,combination_excluded,"insulin/GLP-1 combination product (Soliqua, Xultophy)",Xultophy|liraglutide|diabetes
+,exenatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",GENERIC|exenatide|diabetes
+,liraglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",GENERIC|liraglutide|diabetes
+Adlyxin,lixisenatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Adlyxin|lixisenatide|diabetes
+Bydureon,exenatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Bydureon|exenatide|diabetes
+Byetta,exenatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Byetta|exenatide|diabetes
+Mounjaro,tirzepatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Mounjaro|tirzepatide|diabetes
+Ozempic,semaglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Ozempic|semaglutide|diabetes
+Rybelsus,semaglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Rybelsus|semaglutide|diabetes
+Soliqua,lixisenatide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Soliqua|lixisenatide|diabetes
+Tanzeum,albiglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Tanzeum|albiglutide|diabetes
+Trulicity,dulaglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Trulicity|dulaglutide|diabetes
+Victoza,liraglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Victoza|liraglutide|diabetes
+Xultophy,liraglutide,diabetes,FALSE,diabetes_glp1,"diabetes-labelled incretin, not a combination: negative control and leakage outcome",Xultophy|liraglutide|diabetes
+Foundayo,orforglipron,obesity,FALSE,obesity_other,other obesity-labelled brand (e.g. Foundayo),Foundayo|orforglipron|obesity
+,liraglutide,obesity,FALSE,obesity_saxenda,Saxenda and Saxenda-type generic liraglutide (obesity-labelled): analysed separately,GENERIC|liraglutide|obesity
+Saxenda,liraglutide,obesity,FALSE,obesity_saxenda,Saxenda and Saxenda-type generic liraglutide (obesity-labelled): analysed separately,Saxenda|liraglutide|obesity
+Wegovy,semaglutide,obesity,FALSE,obesity_wz,Wegovy (every formulation) and Zepbound: the exposure product group,Wegovy|semaglutide|obesity
+Zepbound,tirzepatide,obesity,FALSE,obesity_wz,Wegovy (every formulation) and Zepbound: the exposure product group,Zepbound|tirzepatide|obesity
