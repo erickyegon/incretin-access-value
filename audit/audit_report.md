@@ -27,7 +27,7 @@ Run: 2026-10-04. Key numbers: 117 rows.
 | no copyrighted third-party copy is tracked (index in_repo = no for KFF, ISPOR, Sawtooth, journal articles, Cornell LII) | PASS |  |
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M .gitignore;  M PUBLISH.md;  M README.md;  M analysis/outputs/deviations.md;  M analysis/outputs/key_numbers.csv |
+| git status is clean | PASS |  |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 
