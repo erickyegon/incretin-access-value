@@ -19,3 +19,4 @@ value,reason
 5.2,"section number in the research pack"
 0.35,"illustrative true preference weight for step therapy (research_pack/dce_design.R)"
 "3,3,3,3,3","levels per attribute in the DCE design summary table"
+0400,"time-zone offset in commit timestamps (UTC-04:00)"

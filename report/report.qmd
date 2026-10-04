@@ -51,7 +51,7 @@ Public sources were loaded into PostgreSQL and transformed with dbt: Medicaid St
 cat("![dbt lineage: raw sources through staging and intermediate models to the marts used in the analyses](../docs/figures/dbt_lineage.png){fig-alt=\"Directed graph of the dbt lineage from raw source tables through staging and intermediate models to the mart tables used by the analyses.\" width=100%}\n\n")
 ```
 
-Pre-specified analysis plans were committed before any results of each module: Module C `d46bd57` (amendment `f74da18`), Module B `7909c7a`, Module D `6d4234f`, Module E `993e8c8`. Departures from the plans are logged in [`deviations.md`](https://github.com/erickyegon/incretin-access-value/blob/main/analysis/outputs/deviations.md) (items 1 to 15; to be published with the repository).
+Pre-specified analysis plans were committed before any results of each module: Module C `d46bd57` (2026-10-04 06:16 -0400; amendment `f74da18`, 2026-10-04 07:09 -0400, before any model run), Module B `7909c7a` (2026-10-04 09:11 -0400), Module D `6d4234f` (2026-10-04 09:28 -0400) and Module E `993e8c8` (2026-10-04 09:39 -0400). Commit hashes changed when history was rewritten to remove personal metadata and third-party copies; dates and order are unchanged. Departures from the plans are logged in [`deviations.md`](https://github.com/erickyegon/incretin-access-value/blob/main/analysis/outputs/deviations.md) (items 1 to 17).
 
 # B. Funnel and forecast: about half of U.S. adults meet the label criteria, and use is rising
 

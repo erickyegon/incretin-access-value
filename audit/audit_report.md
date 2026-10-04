@@ -9,7 +9,7 @@ Run: 2026-10-04. Key numbers: 117 rows.
 | deck_pdf |  73 | 0 |  4 | 0 | 0 |
 | one_pager |  24 | 0 |  0 | 0 | 0 |
 | readme |  33 | 0 |  6 | 0 | 0 |
-| report | 276 | 2 | 42 | 0 | 0 |
+| report | 281 | 2 | 47 | 0 | 0 |
 | research_pack |  69 | 0 | 63 | 0 | 0 |
 | website |  32 | 0 |  2 | 0 | 0 |
 
@@ -27,7 +27,7 @@ Run: 2026-10-04. Key numbers: 117 rows.
 | no copyrighted third-party copy is tracked (index in_repo = no for KFF, ISPOR, Sawtooth, journal articles, Cornell LII) | PASS |  |
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | PASS |  |
+| git status is clean | FAIL |  M analysis/outputs/deviations.md;  M audit/allowed_numbers.csv;  M report/report.html;  M report/report.qmd;  M site/report.html |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 

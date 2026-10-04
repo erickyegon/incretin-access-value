@@ -47,4 +47,14 @@ Final-brief fixes (identified at review, before any public use):
 
 16. **Saved third-party sources moved out of the repository (before publication).** Full copies of copyrighted third-party pages and documents (KFF, ISPOR, Sawtooth, the de Bekker-Grob article, the Cornell LII statute page) are kept only locally (`docs/sources_local/`, gitignored); `docs/sources_index.csv` lists every source with URL, access date and checksum. Links in the plans, summaries and tables that pointed to those copies now point to the original URLs (link edits only; no change to any plan content, number or result).
 
-17. **History rewritten once, before publication.** To remove local paths, a personal email address and copyrighted third-party copies from the history, all commits were rewritten (author and committer set to the GitHub noreply address). Every commit hash therefore changed; the plan commits are now Module C `d46bd57` (amendment `f74da18`), Module B `7909c7a`, Module D `6d4234f`, Module E `993e8c8`. Older text inside historical commits may still quote the previous hashes.
+17. **History rewritten (twice) before publication.** Commit hashes changed when history was rewritten to remove personal metadata and third-party copies (and a third-party public token embedded in two saved CMS pages); dates and order are unchanged. Author and committer are now the GitHub noreply address. Pre-specified plans, cited by hash and commit date (author and committer dates are identical and equal to the pre-rewrite dates):
+
+    | Module | Plan commit | Date | First results commit after it |
+    |---|---|---|---|
+    | C | `d46bd57` | 2026-10-04 06:16 -0400 | `c257c8b`, descriptive steps, 06:25 (models: 08:42) |
+    | C amendment 2 | `f74da18` | 2026-10-04 07:09 -0400 | before any model run (models: 08:42) |
+    | B | `7909c7a` | 2026-10-04 09:11 -0400 | 09:23 |
+    | D | `6d4234f` | 2026-10-04 09:28 -0400 | 11:02 |
+    | E | `993e8c8` | 2026-10-04 09:39 -0400 | 11:02 |
+
+    Older text inside historical commits may still quote previous hashes.
