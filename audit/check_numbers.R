@@ -65,7 +65,7 @@ big <- tracked[file.exists(file.path(root, tracked)) & file.size(file.path(root,
 cx <- do.call(rbind, checks)
 
 un <- res[res$class %in% c("UNMATCHED", "STALE"), ]
-out <- c("# Number and content audit", "", sprintf("Run: %s. Key numbers: %d rows.", format(Sys.time(), "%Y-%m-%d %H:%M"), nrow(kn)), "", "## Numbers by document and class", "",
+out <- c("# Number and content audit", "", sprintf("Run: %s. Key numbers: %d rows.", format(Sys.Date()), nrow(kn)), "", "## Numbers by document and class", "",
          "| document | exact | rounded | allowed | UNMATCHED | STALE |", "|---|---|---|---|---|---|",
          apply(cnt, 1, function(r) sprintf("| %s | %s | %s | %s | %s | %s |", r[["doc"]], r[["exact"]] %||% 0, r[["rounded"]] %||% 0, r[["allowed"]] %||% 0, r[["UNMATCHED"]] %||% 0, r[["STALE"]] %||% 0)), "",
          "## Other checks", "", "| check | result | detail |", "|---|---|---|", apply(cx, 1, function(r) sprintf("| %s | %s | %s |", r[["check"]], r[["result"]], r[["detail"]])), "",
