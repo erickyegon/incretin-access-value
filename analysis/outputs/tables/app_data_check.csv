@@ -1,40 +1,66 @@
-item,app_value,key_numbers_display,key_id,match
-effect e=0 estimate,1.3,1.3,c_es_e0,TRUE
-effect e=0 ci_low,0.5,0.5,c_es_e0,TRUE
-effect e=0 ci_high,2.1,2.1,c_es_e0,TRUE
-effect e=1 estimate,3.7,3.7,c_es_e1,TRUE
-effect e=1 ci_low,0.9,0.9,c_es_e1,TRUE
-effect e=1 ci_high,6.5,6.5,c_es_e1,TRUE
-effect e=2 estimate,6.3,6.3,c_es_e2,TRUE
-effect e=2 ci_low,1.5,1.5,c_es_e2,TRUE
-effect e=2 ci_high,11.1,11.1,c_es_e2,TRUE
-effect e=3 estimate,8.5,8.5,c_es_e3,TRUE
-effect e=3 ci_low,1.3,1.3,c_es_e3,TRUE
-effect e=3 ci_high,15.7,15.7,c_es_e3,TRUE
-effect e=4 estimate,11.7,11.7,c_es_e4,TRUE
-effect e=4 ci_low,2.8,2.8,c_es_e4,TRUE
-effect e=4 ci_high,20.7,20.7,c_es_e4,TRUE
-effect e=5 estimate,11.8,11.8,c_es_e5,TRUE
-effect e=5 ci_low,1.2,1.2,c_es_e5,TRUE
-effect e=5 ci_high,22.4,22.4,c_es_e5,TRUE
-effect e=6 estimate,15.4,15.4,c_es_e6,TRUE
-effect e=6 ci_low,5.3,5.3,c_es_e6,TRUE
-effect e=6 ci_high,25.5,25.5,c_es_e6,TRUE
-effect e=7 estimate,13.5,13.5,c_es_e7,TRUE
-effect e=7 ci_low,7.5,7.5,c_es_e7,TRUE
-effect e=7 ci_high,19.5,19.5,c_es_e7,TRUE
-effect e=8 estimate,17.2,17.2,c_es_e8,TRUE
-effect e=8 ci_low,7.4,7.4,c_es_e8,TRUE
-effect e=8 ci_high,27.0,27.0,c_es_e8,TRUE
-gross cost central,"1,186","1,186",e_gross_rx,TRUE
-gross cost low,"1,164","1,164",e_gross_rx_low,TRUE
-gross cost high,"1,252","1,252",e_gross_rx_high,TRUE
-rebate central %,51.2,51.2,e_rebate_central,TRUE
-rebate low %,23.1,23.1,e_rebate_low,TRUE
-rebate high %,79.3,79.3,e_rebate_high,TRUE
-announced price,245,245,x_price_245,TRUE
-purchases per user-year central,4.34,4.34,e_fills_2024,TRUE
-purchases per user-year low,2.90,2.90,e_fills_2023,TRUE
-purchases per user-year high,12,12,e_fills_continuous,TRUE
-adult share %,57.9,57.9,e_adult_share,TRUE
-eligible share %,52.0,52.0,b_medicaid_elig_share,TRUE
+check,passed,detail
+columns of moduleC_effects.csv,TRUE,"event_quarter, estimate, se, ci_low, ci_high"
+columns of model_settings.csv,TRUE,"parameter, low, central, high, unit, source"
+columns of event_study.csv,TRUE,"event_time, att, ci_low, ci_high, treated_states, fewer_than_3_states"
+columns of overall_effects.csv,TRUE,"estimate, att, ci_low, ci_high"
+columns of specifications.csv,TRUE,"spec, specification, att, ci_low, ci_high, states, estimable"
+columns of state_quarter_rates.csv,TRUE,"state_code, quarter_label, rate, coverage_active, is_preliminary"
+columns of never_covered_mean.csv,TRUE,"quarter_label, never_covered_mean_imputed, never_covered_mean_observed"
+columns of state_enrollment.csv,TRUE,"state_code, state_name, quarter_label, enrollment"
+columns of key_facts.csv,TRUE,"id, display, unit, ci_or_range, statement"
+columns of assumptions.csv,TRUE,"parameter, value_or_range, basis_type, basis, source_label, source_url"
+columns of states.csv,TRUE,"state_code, col, row, state_name, group, cohort_quarter, start_earliest, start_latest, cohort_year, coverage_start, coverage_end, prior_authorization, bmi_threshold, step_therapy, document, source_url"
+no files other than the expected CSVs in app/data,TRUE,
+app/data is small (under 200 KB),TRUE,69 KB
+"state-quarter rates: 51 states x 33 quarters, one numeric rate column",TRUE,1683 rows
+2025 Q3 state rates equal moduleA_rate_by_state_2025Q3.csv,TRUE,
+key_facts.csv rows are identical to key_numbers.csv,TRUE,62 rows
+"effects (estimate, se, CI) equal the Module C hand-off table to 4 decimals",TRUE,
+effect e=0 estimate,TRUE,app 1.3 vs key_numbers 1.3 (c_es_e0)
+effect e=0 ci_low,TRUE,app 0.5 vs key_numbers 0.5 (c_es_e0)
+effect e=0 ci_high,TRUE,app 2.1 vs key_numbers 2.1 (c_es_e0)
+effect e=1 estimate,TRUE,app 3.7 vs key_numbers 3.7 (c_es_e1)
+effect e=1 ci_low,TRUE,app 0.9 vs key_numbers 0.9 (c_es_e1)
+effect e=1 ci_high,TRUE,app 6.5 vs key_numbers 6.5 (c_es_e1)
+effect e=2 estimate,TRUE,app 6.3 vs key_numbers 6.3 (c_es_e2)
+effect e=2 ci_low,TRUE,app 1.5 vs key_numbers 1.5 (c_es_e2)
+effect e=2 ci_high,TRUE,app 11.1 vs key_numbers 11.1 (c_es_e2)
+effect e=3 estimate,TRUE,app 8.5 vs key_numbers 8.5 (c_es_e3)
+effect e=3 ci_low,TRUE,app 1.3 vs key_numbers 1.3 (c_es_e3)
+effect e=3 ci_high,TRUE,app 15.7 vs key_numbers 15.7 (c_es_e3)
+effect e=4 estimate,TRUE,app 11.7 vs key_numbers 11.7 (c_es_e4)
+effect e=4 ci_low,TRUE,app 2.8 vs key_numbers 2.8 (c_es_e4)
+effect e=4 ci_high,TRUE,app 20.7 vs key_numbers 20.7 (c_es_e4)
+effect e=5 estimate,TRUE,app 11.8 vs key_numbers 11.8 (c_es_e5)
+effect e=5 ci_low,TRUE,app 1.2 vs key_numbers 1.2 (c_es_e5)
+effect e=5 ci_high,TRUE,app 22.4 vs key_numbers 22.4 (c_es_e5)
+effect e=6 estimate,TRUE,app 15.4 vs key_numbers 15.4 (c_es_e6)
+effect e=6 ci_low,TRUE,app 5.3 vs key_numbers 5.3 (c_es_e6)
+effect e=6 ci_high,TRUE,app 25.5 vs key_numbers 25.5 (c_es_e6)
+effect e=7 estimate,TRUE,app 13.5 vs key_numbers 13.5 (c_es_e7)
+effect e=7 ci_low,TRUE,app 7.5 vs key_numbers 7.5 (c_es_e7)
+effect e=7 ci_high,TRUE,app 19.5 vs key_numbers 19.5 (c_es_e7)
+effect e=8 estimate,TRUE,app 17.2 vs key_numbers 17.2 (c_es_e8)
+effect e=8 ci_low,TRUE,app 7.4 vs key_numbers 7.4 (c_es_e8)
+effect e=8 ci_high,TRUE,app 27.0 vs key_numbers 27.0 (c_es_e8)
+gross cost central,TRUE,"app 1,186 vs key_numbers 1,186 (e_gross_rx)"
+gross cost low,TRUE,"app 1,164 vs key_numbers 1,164 (e_gross_rx_low)"
+gross cost high,TRUE,"app 1,252 vs key_numbers 1,252 (e_gross_rx_high)"
+rebate central %,TRUE,app 51.2 vs key_numbers 51.2 (e_rebate_central)
+rebate low %,TRUE,app 23.1 vs key_numbers 23.1 (e_rebate_low)
+rebate high %,TRUE,app 79.3 vs key_numbers 79.3 (e_rebate_high)
+announced price,TRUE,app 245 vs key_numbers 245 (x_price_245)
+purchases per user-year central,TRUE,app 4.34 vs key_numbers 4.34 (e_fills_2024)
+purchases per user-year low,TRUE,app 2.90 vs key_numbers 2.90 (e_fills_2023)
+purchases per user-year high,TRUE,app 12 vs key_numbers 12 (e_fills_continuous)
+adult share %,TRUE,app 57.9 vs key_numbers 57.9 (e_adult_share)
+eligible share %,TRUE,app 52.0 vs key_numbers 52.0 (b_medicaid_elig_share)
+event study equals event_study_primary.csv (3 decimals),TRUE,
+specifications equal specification_table_raw.csv; specification 12 is flagged not estimable,TRUE,
+'15 of 15 alternative analyses' equals the table,TRUE,15 of 15
+overall effect (primary),TRUE,app 12.2 vs key_numbers 12.2 (c_att_overall)
+placebo,TRUE,app 0.4 vs key_numbers 0.4 (c_placebo)
+never-covered mean equals the hand-off table,TRUE,
+"51 jurisdictions: 10 primary, 7 sensitivity, 34 never covered (key numbers)",TRUE,
+"state enrollment: 51 jurisdictions, positive counts",TRUE,
+"assumptions text carries the key numbers (gross cost, rebates, price, fills, shares)",TRUE,

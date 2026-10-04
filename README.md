@@ -32,8 +32,18 @@ This is the second of two portfolio projects. The first, **Evidence**, is a real
 | Coverage criteria table for the 17 covering states (prior authorization, BMI, comorbidity, step therapy) | `analysis/outputs/tables/coverage_um_criteria.csv` |
 | Trial efficacy inputs (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1) and value-context table | `data/reference/trial_inputs.csv`, `analysis/outputs/tables/moduleE_value_context.csv` |
 | Data dictionary (NDC not HCPCS, units, suppression) and generated mart dictionary | `docs/data_dictionary.md`, `docs/data_dictionary_marts.md` |
-| Budget model (Shiny, runs locally) and static PDF | `app/`, `analysis/outputs/budget_impact_scenarios.pdf` |
+| Interactive budget model and decision tool (Shiny): [live app](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/), code in `app/`; static PDF | `app/`, `analysis/outputs/budget_impact_scenarios.pdf` |
 | Pre-specified plans, deviations, summaries | `analysis/plan_module*.md`, `analysis/analysis_plan_moduleC.md`, `analysis/outputs/deviations.md`, `analysis/outputs/module*_summary.md` |
+
+## Interactive decision tool
+
+[Open the app](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/): evidence, budget model, uncertainty, scenario comparison and sources, built around the unchanged budget impact engine. The defaults equal the numbers in this README. Tests: `app/tests/` (testthat) and `scripts/test/test_app.js` (browser).
+
+| Overview | Evidence | Budget model |
+|---|---|---|
+| ![Overview](docs/figures/app/overview.png) | ![Evidence](docs/figures/app/evidence.png) | ![Budget model](docs/figures/app/budget.png) |
+| **Uncertainty** | **Compare** | **Sources** |
+| ![Uncertainty](docs/figures/app/uncertainty.png) | ![Compare](docs/figures/app/compare.png) | ![Sources](docs/figures/app/sources.png) |
 
 ## Reproduce
 

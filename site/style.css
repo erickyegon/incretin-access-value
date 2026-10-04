@@ -2,10 +2,11 @@
 @media (prefers-color-scheme: dark) { :root { --bg: #151515; --fg: #ececec; --muted: #b0b0b0; --accent: #F2954A; --card: #222222; --line: #3a3a3a; } }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; line-height: 1.55; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; line-height: 1.55; }
 .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
 header.wrap { padding-top: 40px; }
 .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .8rem; margin: 0 0 8px; }
+h1, h2, h3, .num { font-family: "Source Serif 4", Georgia, serif; }
 h1 { font-size: clamp(1.5rem, 4.2vw, 2.4rem); line-height: 1.2; margin: 0 0 12px; }
 h2 { font-size: 1.3rem; margin: 32px 0 8px; }
 .lede { font-size: 1.1rem; color: var(--muted); margin: 0 0 8px; }

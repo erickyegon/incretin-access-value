@@ -1,0 +1,63 @@
+id,display,unit,ci_or_range,statement
+c_att_overall,12.2,"prescriptions per 1,000 enrollees per quarter",95% CI 8.4 to 16.0,"Average extra Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees per quarter after coverage began (Callaway-Sant'Anna, 10 covering and 34 never-covering jurisdictions)"
+c_es_e0,1.3,"prescriptions per 1,000 enrollees per quarter",95% CI 0.5 to 2.1,Effect of coverage in the first quarter
+c_es_e4,11.7,"prescriptions per 1,000 enrollees per quarter",95% CI 2.8 to 20.7,Effect of coverage after 4 quarters
+c_es_e8,17.2,"prescriptions per 1,000 enrollees per quarter",95% CI 7.4 to 27.0,Effect of coverage after 8 quarters
+c_placebo,0.4,"prescriptions per 1,000 enrollees per quarter",95% CI -0.1 to 0.8,Placebo: coverage moved four quarters earlier gives no effect
+c_sa,9.3,"prescriptions per 1,000 enrollees per quarter",95% CI 8.2 to 10.4,Sun-Abraham post-period average (a different estimator)
+c_wild,9.3,"prescriptions per 1,000 enrollees per quarter",wild bootstrap 95% interval 4.5 to 14.2,Same estimate with a wild cluster bootstrap by state
+c_spec_holds,15 of 15,alternative analyses with a 95% interval excluding zero,fee-for-service only (specification 12) is not estimable and is excluded,Alternative analyses (sensitivity specifications) whose 95% interval excludes zero
+c_spec_range,10.1 to 14.7,"prescriptions per 1,000 enrollees per quarter",range over 15 sensitivity analyses,Range of the overall effect across the sensitivity analyses (fee-for-service-only is not estimable)
+c_spec14,12.5,"prescriptions per 1,000 managed-care enrollees per quarter",95% CI 6.0 to 19.0,"Sensitivity 14: managed-care-only (MCOU) outcome per managed-care enrollee, 38 states (10 covering, 28 never covering)"
+c_saxenda,0.2,"prescriptions per 1,000 enrollees per quarter",95% CI -0.3 to 0.7,Secondary outcome: Saxenda shows no effect
+c_diab_glp1,-0.8,"prescriptions per 1,000 enrollees per quarter",95% CI -4.2 to 2.7,Secondary outcome: diabetes GLP-1 products show no displacement or spillover
+c_withdraw_ca,-67.2,"percent change, 2025 Q4 to 2026 Q1, normalized",preliminary SDUD quarter,"Change in Wegovy and Zepbound prescriptions per enrollee after coverage ended in CA (descriptive, preliminary)"
+c_withdraw_pa,-90.8,"percent change, 2025 Q4 to 2026 Q1, normalized",preliminary SDUD quarter,"Change in Wegovy and Zepbound prescriptions per enrollee after coverage ended in PA (descriptive, preliminary)"
+m_sc_mcou_share,97.5,percent of observed prescriptions through managed care,"South Carolina, 2025 Q3","Share of South Carolina's observed Wegovy and Zepbound prescriptions through managed-care organizations, 2025 Q3"
+m_ri_mcou_share,100.0,percent of observed prescriptions through managed care,"lowest quarterly share, Rhode Island",Share of Rhode Island's observed Wegovy and Zepbound prescriptions through managed-care organizations (every quarter with data)
+c_states_primary,10,states,,States with Medicaid coverage of Wegovy or Zepbound in the primary analysis
+c_states_sens,7,states,,"States with an uncertain start quarter, used only in a sensitivity analysis"
+c_states_never,34,jurisdictions,,Never-covering comparison jurisdictions in the primary analysis (44 jurisdictions in all)
+c_pa_states,9 of 10,covering states,,Primary covering states with prior authorization documented in sourced documents (California not found)
+um_pa,16,of 17 states,1 not found in sourced documents,States for which prior authorization is documented in sourced state documents
+um_bmi,12,of 17 states,5 not found in sourced documents,States for which BMI threshold is documented in sourced state documents
+um_comorb,13,of 17 states,4 not found in sourced documents,States for which comorbidity requirement is documented in sourced state documents
+um_step,13,of 17 states,4 not found in sourced documents,States for which step therapy is documented in sourced state documents
+x_price_245,245,USD per month,announced price,"Announced Medicare price of Ozempic, Wegovy, Mounjaro and Zepbound; state Medicaid programs to have access at these prices (White House fact sheet, November 2025)"
+e_net5,161.3,"USD million, five years, 1 million enrollees",central case,"Five-year net budget impact, central case (plateau, prior authorization as observed, rebate 51.2% = midpoint of 23.1% and 79.3%)"
+e_pmpm,2.69,USD per enrollee per month,central case,"Net cost per enrollee per month, central case"
+e_gross5,330.7,"USD million, five years, 1 million enrollees",central case,"Five-year gross cost before rebates, central case"
+e_per_user_year,"2,511",USD per user per year,"4.3 fills per year (MEPS, sourced)","Net cost per user per year, central case"
+e_per_member_year_cont,"6,943",USD per member-year of continuous treatment,12 fills per year (assumption),"Net cost per member-year of continuous treatment, central case"
+e_psa_median,145.4,"USD million, five years",90% interval 58.1 to 319.9,"Probabilistic sensitivity analysis: median five-year net cost (10,000 draws)"
+e_psa_common,50.3 to 347.3,"USD million, five years","90% interval, event-time effects perfectly correlated",Wider interval if the effects at different event times move together
+e_scen_min,55.6,"USD million, five years",lowest scenario,"Lowest five-year net cost across the scenarios (decline in years 3-5, rebate implied by $245)"
+e_scen_max,369.4,"USD million, five years",highest scenario,"Highest five-year net cost across the scenarios (continued growth, 23.1% statutory-minimum rebate)"
+e_rebate_central,51.2,percent of gross cost,assumption; midpoint of 23.1% and 79.3%,Central rebate assumption
+e_rebate_low,23.1,percent of gross cost,statutory minimum (42 U.S.C. 1396r-8),Statutory minimum Medicaid rebate
+e_rebate_high,79.3,percent of gross cost,implied by the $245 price,Rebate implied by the announced $245 price at the 2025 gross cost
+e_gross_rx,"1,186",USD per prescription,"range 1,164 to 1,252",Gross Medicaid reimbursement per Wegovy or Zepbound prescription in covering states (gross of rebates)
+e_gross_rx_low,"1,164",USD per prescription,"lowest quarterly value, 2024 Q2 to 2025 Q4",Lowest quarterly gross Medicaid reimbursement per Wegovy or Zepbound prescription in covering states (range used in the budget model and app)
+e_gross_rx_high,"1,252",USD per prescription,"highest quarterly value, 2024 Q2 to 2025 Q4",Highest quarterly gross Medicaid reimbursement per Wegovy or Zepbound prescription in covering states
+e_users,"15,873",users per year at the plateau,,Users per year at the plateau (prescriptions divided by 4.3 purchases per user-year)
+e_pool,"300,948",eligible Medicaid adults,,Eligible Medicaid adults in a 1-million-enrollee plan (lower bound)
+b_eligible,128.8,million adults,95% CI 117.2 to 140.3,Adults eligible by the FDA label criteria (lower bound)
+b_medicaid_elig,17.8,million adults,95% CI 14.7 to 20.9,Label-eligible adults with Medicaid coverage (lower bound)
+b_medicaid_elig_share,52.0,percent of Medicaid adults,,Eligible share of Medicaid adults
+e_adult_share,57.9,percent of Medicaid enrollment,,"Adult share of Medicaid enrollment, 2024 Q3 to 2026 Q1"
+e_fills_2024,4.34,purchases per user-year,"MEPS weighted, 2024","Purchases per adult user of obesity-labeled incretins per year, MEPS 2024 (central in the budget model)"
+e_fills_2023,2.90,purchases per user-year,"MEPS weighted, 2023","Purchases per adult user per year, MEPS 2023 (low value)"
+e_fills_continuous,12,purchases per year,assumption: monthly all year,Purchases per member-year of continuous treatment (assumption)
+e_year1_net,11.4,"USD million, in year",,Central net cost in year 1
+e_year2_net,30.3,"USD million, in year",,Central net cost in year 2
+e_year3_net,39.9,"USD million, in year",,Central net cost in year 3
+e_pa_05,80.7,"USD million, five years",PA multiplier 0.5 (assumption),Five-year net cost with the prior authorization multiplier at 0.5
+e_pa_075,121.0,"USD million, five years",PA multiplier 0.75 (assumption),Five-year net cost with the prior authorization multiplier at 0.75
+e_pa_125,201.6,"USD million, five years",PA multiplier 1.25 (assumption),Five-year net cost with the prior authorization multiplier at 1.25
+e_announced5,68.3,"USD million, five years",scenario,Five-year net cost at the announced $245 per monthly prescription (plateau)
+e_announced_pmpm,1.14,USD per enrollee per month,scenario,Net cost per enrollee per month at the announced $245 price
+e_tornado1_low,63.7,"USD million, five years",Module C effect (95% CI of every event time),Lower end of the tornado bar for Module C effect (95% CI of every event time)
+e_tornado1_high,258.9,"USD million, five years",Module C effect (95% CI of every event time),Upper end of the tornado bar for Module C effect (95% CI of every event time)
+e_tornado2_low,68.3,"USD million, five years",Rebate share,Lower end of the tornado bar for Rebate share
+e_tornado2_high,254.3,"USD million, five years",Rebate share,Upper end of the tornado bar for Rebate share
+e_gross_pmpm,5.51,USD per enrollee per month,central case,"Gross cost per enrollee per month, central case"

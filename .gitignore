@@ -1,4 +1,4 @@
-﻿data/raw/
+data/raw/
 data/interim/
 logs/
 __pycache__/
@@ -21,3 +21,6 @@ analysis/outputs/cache/
 *.rmarkdown
 deck/deck.html
 docs/sources_local/
+
+/.quarto/
+**/*.quarto_ipynb

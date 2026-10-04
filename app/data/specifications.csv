@@ -1,0 +1,18 @@
+spec,specification,att,ci_low,ci_high,states,estimable
+0,Primary,12.189,8.374,16.004,44,TRUE
+1,Without Kansas,13.267,9.267,17.268,43,TRUE
+2,Without Mississippi and Tennessee,12.87,8.762,16.979,42,TRUE
+3,Never-treated controls only,12.219,8.47,15.967,44,TRUE
+4,Enrollment-weighted,14.738,12.962,16.514,44,TRUE
+5a,Suppressed cells = 0 (lower bound),12.203,8.306,16.1,44,TRUE
+5b,Suppressed cells = 10 (upper bound),12.168,8.355,15.981,44,TRUE
+6,Denominator: Medicaid + CHIP,10.883,7.341,14.425,44,TRUE
+7,Reporting-gap state-quarters set to missing,12.189,8.387,15.991,44,TRUE
+8,Definition-caveat state-quarters set to missing,12.461,8.059,16.863,44,TRUE
+9a,"Add sensitivity states, start = earliest quarter",10.075,7.567,12.582,51,TRUE
+9b,"Add sensitivity states, start = latest quarter",11.67,8.846,14.494,51,TRUE
+10,First-full-quarter timing,12.576,8.885,16.267,44,TRUE
+11,"Window to 2025 Q4, without North Carolina",13.335,8.907,17.763,43,TRUE
+12,Fee-for-service only (FFSU per FFS enrollee),,,,35,FALSE
+13,Without Rhode Island,12.988,9.061,16.915,43,TRUE
+14,Managed care only (MCOU per managed-care enrollee),12.51,5.996,19.024,38,TRUE

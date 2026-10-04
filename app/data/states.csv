@@ -1,0 +1,52 @@
+state_code,col,row,state_name,group,cohort_quarter,start_earliest,start_latest,cohort_year,coverage_start,coverage_end,prior_authorization,bmi_threshold,step_therapy,document,source_url
+AL,7,6,Alabama,never,,,,,,,,,,,
+AK,1,1,Alaska,never,,,,,,,,,,,
+AZ,2,6,Arizona,never,,,,,,,,,,,
+AR,5,6,Arkansas,never,,,,,,,,,,,
+CA,1,6,California,primary,2023Q1,2023Q1,2023Q1,2023,2023-01-01 to 2023-01-01,2025-12-31,"not found in sourced documents for the covered period (Zepbound was added to the Contract Drugs List with diagnosis, quantity and labeler restrictions, 2024-10-01); from 2026-01-01 weight-loss use is no longer covered",not found in sourced documents (the 2026 FAQ says no BMI range qualifies for weight-loss coverage after 2026-01-01),not found in sourced documents,Medi-Cal Rx Monthly Bulletin 2024-10 and State Budget Policy Updates FAQ (2026),https://medi-calrx.dhcs.ca.gov/cms/medicalrx/static-assets/documents/provider/pharmacy-news/2024.10_B_Monthly_Bulletin.pdf
+CO,3,5,Colorado,never,,,,,,,,,,,
+CT,10,2,Connecticut,never,,,,,,,,,,,
+DE,11,4,Delaware,sensitivity,,2021Q2,2022Q3,,2021-06-04 to 2022-09-23,,Y (the 2026 PDL: all obesity treatment agents require prior authorization),not found in sourced documents,Y: two preferred products are required before a non-preferred product (2026 PDL),Delaware Medicaid PDL (live 10/05/2026); State Plan Amendment DE 19-0009 (effective 2019-10-01),https://medicaidpublications.dhss.delaware.gov/docs/search?Command=Core_Download&EntryId=940
+FL,9,7,Florida,never,,,,,,,,,,,
+GA,8,6,Georgia,never,,,,,,,,,,,
+HI,1,8,Hawaii,never,,,,,,,,,,,
+ID,2,4,Idaho,never,,,,,,,,,,,
+IL,6,4,Illinois,never,,,,,,,,,,,
+IN,7,4,Indiana,never,,,,,,,,,,,
+IA,5,4,Iowa,never,,,,,,,,,,,
+KS,4,5,Kansas,primary,2021Q3,2021Q3,2021Q3,2021,2021-06-04 to 2021-07-21,,Y,">=30 (adults); 'high-cost' agents (Table 4, includes Saxenda and Wegovy): severe obesity BMI >=40, or for Wegovy BMI >=27 with established cardiovascular disease",Y: the preferred PDL drug is required unless the patient meets non-preferred PDL criteria; 'high-cost' agents need >=3% weight loss after >=3 months of lifestyle modification,KDHE/KMAP Anti-Obesity Medications PA criteria (revised 2024-01-17),https://www.kdhe.ks.gov/DocumentCenter/View/34035/Anti-Obesity-Agents-PDF
+KY,7,5,Kentucky,never,,,,,,,,,,,
+LA,5,7,Louisiana,never,,,,,,,,,,,
+ME,12,1,Maine,never,,,,,,,,,,,
+MD,10,5,Maryland,never,,,,,,,,,,,
+MA,11,2,Massachusetts,primary,2024Q1,2024Q1,2024Q1,2024,2024-01,2026-06-30,Y,>=30; or >=27 with a listed weight-related comorbidity,"Y: inadequate response to, adverse reaction to, or contraindication to phentermine (and related agents) per the criteria; preferred-drug trial rules for non-preferred agents","MassHealth Anti-Obesity Agents PA criteria, effective 2025-01-01 (published by Mass General Brigham Health Plan for MassHealth)",https://resources.massgeneralbrighamhealthplan.org/pharmacy/PharmacyPolicies/Medicaid/AntiObesity_PA_MH_Rx_01.01.25.pdf
+MI,7,3,Michigan,primary,2022Q1,2022Q1,2022Q1,2022,2022-02-01,,Y,GLP-1 weight-loss agents: BMI classified as morbidly obese (e.g. >=40) in the 10/01/2026 criteria; earlier criteria not found in sourced documents,"Y (10/01/2026 criteria): GLP-1s are non-preferred; trial and failure (or allergy, contraindication, side effects) of all five preferred non-GLP-1 types, failure of other weight-loss interventions, and use only to avert bariatric surgery","MDHHS MHP Common Formulary Prior Authorization Criteria, anti-obesity section (effective 10/01/2026); MSA 21-49 (2021-12-01) for PA and start",https://www.michigan.gov/mdhhs/-/media/Project/Websites/mdhhs/Assistance-Programs/Medicaid-BPHASA/MHP-Common-Formulary-PDL-PA-Criteria.pdf
+MN,5,3,Minnesota,sensitivity,,2021Q3,2022Q1,,2021-07-01 to 2022-01-27,,Y,>=30 with no risk factors (age 18+),none stated; documentation of a reduced-calorie diet or dietitian care and increased physical activity is required,MN DHS Anti-Obesity Medications PA criteria (August 2026 page),https://mn.gov/dhs/partners-and-providers/policies-procedures/minnesota-health-care-programs/provider/types/rx/pa-criteria/anti-obesity-medications.jsp
+MS,6,6,Mississippi,primary,2023Q3,2023Q3,2023Q3,2023,2023-07-01,,Y,>=30; BMI 27-29.9 with >=1 weight-related comorbidity,none stated in the criteria; only one anti-obesity agent covered at a time,MS Division of Medicaid Select Covered Obesity Medications PA Criteria V4 (7/1/2024); later versions (V7 to V11) add Zepbound and Foundayo,https://medicaid.ms.gov/wp-content/uploads/2024/07/Anti-obesity-Select-Agents-PA-Criteria-7_1_2024.V4.pdf
+MO,5,5,Missouri,sensitivity,,2024Q4,2025Q1,,2024-10-02 to 2025-02-01,,Y (may be transparent: a billable ICD-10 obesity code on the claim can approve without PA),>=30 (adults),"Y: preferred agents (Zepbound, Foundayo) first; Wegovy is non-preferred and needs medical necessity for not using a preferred agent","MO HealthNet SmartPA Criteria, GLP-1 Receptor Agonists Indicated for Obesity PDL Edit (revised 2026-04-23)",https://dss.mo.gov/media/file/glucagon-peptide-1-glp-1-receptor-agonists-indicated-obesity-pdl-edit
+MT,2,3,Montana,never,,,,,,,,,,,
+NE,4,4,Nebraska,never,,,,,,,,,,,
+NV,1,5,Nevada,never,,,,,,,,,,,
+NH,11,1,New Hampshire,sensitivity,,2021Q2,2023Q3,,2021-06-04 to 2023-07-01,2025-12-31,Y (the PDL notes additional prior approval for the weight management class),not found in sourced documents,"Y: trial and failure of 2 preferred products (orlistat, phentermine/topiramate) required before non-preferred products (Saxenda, Wegovy, Zepbound)",NH DHHS Fee-for-Service Medicaid PDL effective 2025-10-01,https://nh.primetherapeutics.com/documents/51139/51630/Notification%2010.09.2025%20-%20GLP-1%20Coverage%20Change/218c7285-7968-9484-a244-859e0741eeba
+NJ,10,3,New Jersey,never,,,,,,,,,,,
+NM,3,6,New Mexico,never,,,,,,,,,,,
+NY,9,2,New York,never,,,,,,,,,,,
+NC,9,5,North Carolina,primary,2024Q3,2024Q3,2024Q3,2024,2024-08-01; 2025-12-12,2025-09-30,Y,>=30; BMI >=27 with >=1 weight-related comorbidity,Y for non-preferred agents: trial of a preferred agent (or documented contraindication),"NC Medicaid Outpatient Pharmacy Prior Approval Criteria, GLP-1s for Weight Management (effective 2024-08-01)",https://medicaid.ncdhhs.gov/media/15676/download?attachment=
+ND,3,3,North Dakota,never,,,,,,,,,,,
+OH,8,4,Ohio,never,,,,,,,,,,,
+OK,4,6,Oklahoma,never,,,,,,,,,,,
+OR,1,4,Oregon,never,,,,,,,,,,,
+PA,9,3,Pennsylvania,primary,2023Q1,2023Q1,2023Q1,2023,2023-01-09,2025-12-31,Y,>=30 (adults),"Y for non-preferred obesity agents: history of therapeutic failure of, contraindication or intolerance to the preferred Obesity Treatment Agents","PA Medical Assistance Bulletin MAB 2025-11-24 (criteria effective 2026-01-01, replacing 2024); earlier MAB 2022-12-09",https://www.pa.gov/content/dam/copapwp-pagov/en/dhs/documents/docs/publications/documents/forms-and-pubs-omap/mab2025112402.pdf
+RI,11,3,Rhode Island,primary,2023Q4,2023Q4,2023Q4,2023,2023-10-03,2026-09-30,Y for some products (EOHHS memo: 'some medications may require prior authorization'),not found in sourced documents,not found in sourced documents,RI EOHHS memo GLP-1 State Budget Guidance (2026-08-05); DUR Board minutes 2024-06-04,https://eohhs.ri.gov/sites/g/files/xkgbur226/files/2024-06/dur_jun_24.pdf
+SC,9,6,South Carolina,primary,2024Q4,2024Q4,2024Q4,2024,2024-11-01,2025-12-31,Y,>=30; BMI 30-34 needs >=1 very high-risk factor or >=2 other risk factors; BMI 35-39 needs >=1 risk factor; BMI >=40 needs none,not found in sourced documents,SC Daily Gazette reports 2025-01-07 and 2025-11-17 quoting SCDHHS; no SCDHHS criteria document was retrieved,https://scdailygazette.com/2025/01/07/as-demand-for-weight-loss-drugs-rises-states-grapple-with-medicaid-coverage/
+SD,4,3,South Dakota,never,,,,,,,,,,,
+TN,6,5,Tennessee,primary,2025Q3,2025Q3,2025Q3,2025,2025-08-01 to 2025-08-01,,Y (interim PA criteria from 2025-08-01; Wegovy and Zepbound preferred with PA and quantity limits),>=30 (adults),"none for the preferred agents (Wegovy, Zepbound); Y for non-preferred agents (Saxenda, liraglutide): trial and failure, contraindication or intolerance of two preferred agents","TennCare Provider Notice, Obesity Management Agents (2025-08-01) and Provider Notice 2025-12-01",https://contenthub-aem.optumrx.com/content/dam/contenthub/onboarding/assets/Tenncare/Provider-Notice-Obesity-Management-Agents-08-01-25.pdf
+TX,4,7,Texas,never,,,,,,,,,,,
+UT,2,5,Utah,sensitivity,,2024Q4,2025Q4,,2025-07-01,2026-06-30,Y,>=30 (adults),not found in sourced documents,Utah Medicaid Information Bulletins (January and July 2025),https://medicaid-documents.dhhs.utah.gov/Documents/manuals/pdfs/Medicaid+Information+Bulletins/Traditional+Medicaid+Program/2025/July2025-MIB.pdf
+VT,10,1,Vermont,never,,,,,,,,,,,
+VA,9,4,Virginia,sensitivity,,2021Q2,2022Q2,,2021-06-04 to 2022-06-10,,Y (service authorization),"2022 form: >=30 (>=27 with two or more risk factors); form effective 2026-07-01: GLP-1 weight-loss agents BMI >40, or >37 with dyslipidemia, hypertension or type 2 diabetes","Y (form effective 2026-07-01): tried and failed one non-GLP-1 weight-loss medication (or intolerant to all), and tried and failed the PDL-selected product; 2022 form: previous failure of a weight loss treatment plan in the past 6 months",DMAS Service Authorization forms: Anti-Obesity Drugs (effective 2022-01-20) and Weight-Loss Management (effective 2026-07-01),https://www.virginiamedicaidpharmacyservices.com/provider/external/medicaid/vamps/doc/en-us/VAMPS_SAform_Weight_Loss_Management.pdf
+WA,1,3,Washington,never,,,,,,,,,,,
+WV,8,5,West Virginia,never,,,,,,,,,,,
+WI,6,3,Wisconsin,sensitivity,,2021Q3,2023Q1,,2021-09-18 to 2023-03-31,,Y,>=30 (age 18+),none stated; the member must have participated in a weight loss treatment plan in the past six months and continue it,"ForwardHealth PA Drug Attachment for Anti-Obesity Drugs, F-00163 (11/2025); ForwardHealth Update 2025-16",https://www.dhs.wisconsin.gov/forms/f00163-1125.pdf
+WY,3,4,Wyoming,never,,,,,,,,,,,
+DC,10,4,District of Columbia,never,,,,,,,,,,,

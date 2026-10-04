@@ -1,0 +1,8 @@
+estimate,att,ci_low,ci_high
+"Overall ATT (simple aggregation), Callaway-Sant'Anna",12.189,8.374,16.004
+"Overall ATT (group aggregation: average of cohort ATTs), Callaway-Sant'Anna",11.376,6.738,16.013
+TWFE Sun-Abraham post-period average,9.331,8.233,10.43
+"TWFE Sun-Abraham post-period average, wild cluster bootstrap",9.331,4.507,14.155
+Placebo in time: coverage 4 quarters earlier (post-launch window),0.383,-0.081,0.847
+"Secondary outcome, overall ATT (simple): Saxenda",0.184,-0.334,0.701
+"Secondary outcome, overall ATT (simple): diabetes GLP-1 (spillover outcome, not a clean negative control)",-0.76,-4.238,2.718

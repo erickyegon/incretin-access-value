@@ -65,7 +65,7 @@ chk("no copyrighted third-party copy is tracked (index in_repo = no for KFF, ISP
 ext_ids <- kn$id[grepl("^x_", kn$id)]; ext_src <- kn$source_file[kn$id %in% ext_ids]
 ext_ok <- ifelse(grepl("^https?://", ext_src), ext_src %in% si$url, file.exists(file.path(root, "analysis", sub("^[.][.]/", "", ext_src))) | file.exists(file.path(root, sub("^[.][.]/", "", ext_src))))
 chk("external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index", all(ext_ok), paste(ext_src[!ext_ok], collapse = ", "))
-app_src <- paste(c(rd("app", "app.R"), rd("app", "bia.R")), collapse = "
+app_src <- paste(c(rd("app", "app.R"), unlist(lapply(list.files(file.path(root, "app", "R"), full.names = TRUE), function(f) readLines(f, warn = FALSE)))), collapse = "
 "); mf_app <- file.path(root, "app", "manifest.json")
 chk("budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest", file.exists(mf_app) && !grepl("here::|RPostgres|dbConnect|readRDS|[.][.]/", app_src) && all(file.exists(file.path(root, "app", "data", c("moduleC_effects.csv", "model_settings.csv")))), "")
 bc <- read.csv(file.path(root, "analysis", "outputs", "build_counts.csv"), stringsAsFactors = FALSE)
