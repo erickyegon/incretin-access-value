@@ -128,7 +128,7 @@ cell-level count under 11 is written to any committed file. Every number is repr
 
 ## Amendment 2 (before any model run), 2026-10-04
 
-No model had been run when this amendment was written; only descriptive steps 01-07 exist. Plan commit `a8b37a3` is unchanged above this line.
+No model had been run when this amendment was written; only descriptive steps 01-07 exist. Plan commit `d46bd57` is unchanged above this line.
 
 **1. Sensitivity 7 redefined.** A state-quarter is a *reporting gap* when (a) MCOU or FFSU is not reported but the same state reported that
 utilization type in the previous quarter, or (b) it is flagged `anomalous`. Runs that are not reported from the start of the window, or for
