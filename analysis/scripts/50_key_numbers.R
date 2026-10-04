@@ -27,8 +27,10 @@ add("c_honest_mbar", f1(brk), "ratio of post- to pre-period violation", "breakdo
 prim <- cov |> filter(analysis_group == "primary"); sens <- cov |> filter(analysis_group == "sensitivity")
 add("c_states_primary", as.character(nrow(prim)), "states", "", "States with Medicaid coverage of Wegovy or Zepbound in the primary analysis", "../data/reference/medicaid_obesity_coverage.csv", "rows with analysis_group = primary")
 add("c_states_sens", as.character(nrow(sens)), "states", "", "States with an uncertain start quarter, used only in a sensitivity analysis", "../data/reference/medicaid_obesity_coverage.csv", "rows with analysis_group = sensitivity")
+ums <- tb("coverage_um_completeness.csv")
+for (i in seq_len(nrow(ums))) add(paste0("um_", c("pa", "bmi", "comorb", "step")[i]), as.character(ums$documented[i]), "of 17 states", paste0(ums$not_found[i], " not found in sourced documents"), sprintf("States for which %s is documented in sourced state documents", sub("bmi", "BMI", tolower(ums$field[i]))), "tables/coverage_um_completeness.csv", sprintf("row %s, column documented", ums$field[i]))
 add("c_states_never", "34", "jurisdictions", "", "Never-covering comparison jurisdictions in the primary analysis (44 jurisdictions in all)", "tables/moduleC_for_budget_model.csv", "note column of the never_treated_baseline and overall_att rows ('34 never-treated states')")
-add("c_pa_states", sprintf("%d of %d", sum(prim$prior_authorization %in% "Y"), nrow(prim)), "covering states", "", "Covering states recorded as requiring prior authorization (Tennessee not recorded)", "../data/reference/medicaid_obesity_coverage.csv", "column prior_authorization, primary rows")
+add("c_pa_states", sprintf("%d of %d", sum(startsWith(prim$prior_authorization, "Y")), nrow(prim)), "covering states", "", "Primary covering states with prior authorization documented in sourced documents (California not found)", "../data/reference/medicaid_obesity_coverage.csv", "column prior_authorization, primary rows")
 
 # ---- Module B -------------------------------------------------------------------------------------------------------------------------------------------------
 fn <- tb("moduleB_funnel.csv"); sv <- tb("moduleB_survey_estimates.csv"); fy <- tb("moduleB_forecast_year_end.csv"); fs <- tb("moduleB_forecast_scenarios.csv")

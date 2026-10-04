@@ -97,7 +97,7 @@ src(paste0("Source: CMS SDUD and Medicaid enrollment; ", kn("c_states_primary"),
 
 ```{r a6, results='asis'}
 fig("01_coverage_timing_map", 540)
-src(paste0("Source: state Medicaid documents and CMS approvals (docs/sources). ", kn("c_pa_states"), " covering states recorded prior authorization. Seven states with uncertain start quarters are used only in a sensitivity analysis."))
+src(paste0("Source: state Medicaid documents and CMS approvals (docs/sources). ", kn("c_pa_states"), " primary covering states have prior authorization documented (see the criteria table in the report). Seven states with uncertain start quarters are used only in a sensitivity analysis."))
 ```
 
 ## Access, detail: coverage operates through managed care (South Carolina, Rhode Island), and the first withdrawals show how fast it can reverse

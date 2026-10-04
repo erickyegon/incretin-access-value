@@ -73,7 +73,7 @@ The forecast of GLP-1 users without diagnosed diabetes reaches a median of `r kn
 fig("01_coverage_timing_map", "Source: state Medicaid documents and CMS approvals saved in docs/sources; coverage_start dates in data/reference/medicaid_obesity_coverage.csv.")
 ```
 
-The map shows the `r kn("c_states_primary")` states in the primary analysis; `r kn("c_states_sens")` more with uncertain start quarters appear only in a sensitivity analysis. `r kn("c_pa_states")` of the covering states recorded prior authorization (Tennessee's is not recorded), and BMI thresholds recorded for four states are 30 or more, with 27 to 29 allowed with a weight-related condition or prescriber judgement.
+The map shows the `r kn("c_states_primary")` states in the primary analysis; `r kn("c_states_sens")` more with uncertain start quarters appear only in a sensitivity analysis. Prior authorization is documented in `r kn("c_pa_states")` of the covering states (California's is not found in sourced documents), and BMI thresholds, comorbidity rules and step therapy are in the criteria table below.
 
 ```{r c-es}
 es <- tbl("event_study_primary.csv"); es <- es[es$fewer_than_3_states == "FALSE" | es$fewer_than_3_states == FALSE, ]
