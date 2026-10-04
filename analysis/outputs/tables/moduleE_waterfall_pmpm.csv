@@ -1,0 +1,8 @@
+step,value,type,end,start
+"Gross PMPM, observed effect, loose PA",5.512,total,5.512,0
+Prior authorization (x0.75),-1.378,delta,4.134,5.512
+"Gross PMPM, PA 0.75",4.134,total,4.134,0
+Rebate (midpoint),-2.118,delta,2.016,4.134
+"Net PMPM, central rebate",2.016,total,2.016,0
+Announced $245 price instead,-1.163,delta,0.854,2.016
+"Net PMPM, announced price",0.854,total,0.854,0

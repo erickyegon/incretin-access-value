@@ -111,6 +111,16 @@ out_dir <- function(kind) {
 
 save_fig <- function(p, name, width = 9, height = 6, alt = NA_character_) {
   d <- out_dir("figures")
+  # long titles, subtitles and captions that were not wrapped by the script are wrapped to the figure width so nothing is clipped
+  wrap1 <- function(x, w) if (is.null(x) || length(x) == 0 || is.na(x) || grepl("\n", x)) x else stringr::str_wrap(x, w)
+  w <- round(width * 10.5)
+  if (inherits(p, "patchwork")) { a <- p$patches$annotation
+    if (!is.null(a$subtitle)) p$patches$annotation$subtitle <- wrap1(a$subtitle, w)
+    if (!is.null(a$title)) p$patches$annotation$title <- wrap1(a$title, round(w * 0.8))
+    if (!is.null(a$caption)) p$patches$annotation$caption <- wrap1(a$caption, round(w * 1.2))
+  } else { if (!is.null(p$labels$subtitle)) p$labels$subtitle <- wrap1(p$labels$subtitle, w)
+    if (!is.null(p$labels$title)) p$labels$title <- wrap1(p$labels$title, round(w * 0.8))
+    if (!is.null(p$labels$caption)) p$labels$caption <- wrap1(p$labels$caption, round(w * 1.2)) }
   ggplot2::ggsave(file.path(d, paste0(name, ".png")), p, width = width, height = height, dpi = 300, bg = "white")
   ggplot2::ggsave(file.path(d, paste0(name, ".svg")), p, width = width, height = height, bg = "white")
   # alt text for every figure is kept in outputs/figures/alt_text.csv

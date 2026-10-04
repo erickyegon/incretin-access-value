@@ -33,3 +33,7 @@ Module B (set before results of that step; recorded because they differ from the
 8. **Weights.** Plan: WTMEC2YR for the primary design. Estimates that use HbA1c use the phlebotomy weight WTPH2YR, as the GHB_L documentation instructs (the plan already says so); the NCHS
    SAS-missing code (about 5e-79) in weights is treated as weight 0.
 9. **NHANES mart.** The mart `mart_nhanes_adults` now keeps adults 18 and over (it was 20 and over) and carries the insurance and condition variables Module B needs; its test was updated.
+10. **Segmentation k selection (Module D).** Plan: silhouette on a stratified subsample of 10,000 prescribers. The first run at 10,000 had not finished after 53 minutes (the silhouette is quadratic in the sample), so the
+    subsample was reduced to 4,000 (stratified by specialty group); everything else (k-prototypes, k = 2 to 8, 50 bootstrap resamples of 10,000 for stability, the full-data fit) is as planned.
+11. **Supplementary five-segment solution (Module D).** The plan's rule (highest silhouette) chose k = 2 (silhouette 0.709): the two segments are simply prescribers new in 2024 (all of segment B) and continuing prescribers (all of segment A), which is
+    uninformative. A supplementary k = 5 run (the next local silhouette maximum, 0.507) with the same features, method and stability check is reported beside it (`moduleD_segment_profiles_k5`, figure `35_partd_segments_k5`). The k = 2 result stays the pre-specified result.

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='792.00pt' height='432.00pt' viewBox='0 0 792.00 432.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='792.00' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='0.000000000000057' width='792.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMTg1LjY4fDc4Ni41Mnw2Ny42MHwzNzcuNDE='>
+    <rect x='185.68' y='67.60' width='600.84' height='309.81' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTg1LjY4fDc4Ni41Mnw2Ny42MHwzNzcuNDE=)'>
+<line x1='486.10' y1='377.41' x2='486.10' y2='67.60' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<polyline points='479.40,351.59 506.33,351.59 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='394.83,308.56 577.37,308.56 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='275.61,265.53 486.10,265.53 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='418.44,222.50 651.31,222.50 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='364.41,179.47 607.79,179.47 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='275.61,136.44 696.59,136.44 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='265.20,93.41 707.00,93.41 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<circle cx='265.20' cy='93.41' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='707.00' cy='93.41' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='275.61' cy='136.44' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='696.59' cy='136.44' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='364.41' cy='179.47' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='607.79' cy='179.47' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='418.44' cy='222.50' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='651.31' cy='222.50' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='275.61' cy='265.53' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='486.10' cy='265.53' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='394.83' cy='308.56' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='577.37' cy='308.56' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='479.40' cy='351.59' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='506.33' cy='351.59' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<text x='265.20' y='87.15' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='29.17px' lengthAdjust='spacingAndGlyphs'>lower CI</text>
+<text x='707.00' y='87.15' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='30.50px' lengthAdjust='spacingAndGlyphs'>upper CI</text>
+<text x='275.61' y='130.18' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='85.75px' lengthAdjust='spacingAndGlyphs'>79.3% (implied by $245)</text>
+<text x='696.59' y='130.18' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='95.02px' lengthAdjust='spacingAndGlyphs'>23.1% (statutory minimum)</text>
+<text x='364.41' y='173.21' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='11.05px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='607.79' y='173.21' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='11.05px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='418.44' y='216.24' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='25.20px' lengthAdjust='spacingAndGlyphs'>decline</text>
+<text x='651.31' y='216.24' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='60.56px' lengthAdjust='spacingAndGlyphs'>continued growth</text>
+<text x='275.61' y='259.27' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='72.50px' lengthAdjust='spacingAndGlyphs'>announced $245 net</text>
+<text x='486.10' y='259.27' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='48.62px' lengthAdjust='spacingAndGlyphs'>central rebate</text>
+<text x='394.83' y='302.30' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='15.47px' lengthAdjust='spacingAndGlyphs'>0.75</text>
+<text x='577.37' y='302.30' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='15.47px' lengthAdjust='spacingAndGlyphs'>1.25</text>
+<text x='479.40' y='345.32' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='24.31px' lengthAdjust='spacingAndGlyphs'>$1,164</text>
+<text x='506.33' y='345.32' text-anchor='middle' style='font-size: 7.97px; font-family: "Arial";' textLength='24.31px' lengthAdjust='spacingAndGlyphs'>$1,252</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA=)'>
+<text x='180.75' y='354.74' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='105.08px' lengthAdjust='spacingAndGlyphs'>Gross cost per prescription</text>
+<text x='180.75' y='311.71' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='65.48px' lengthAdjust='spacingAndGlyphs'>Uptake multiplier</text>
+<text x='180.75' y='268.68' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='55.73px' lengthAdjust='spacingAndGlyphs'>Price scenario</text>
+<text x='180.75' y='225.65' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='73.00px' lengthAdjust='spacingAndGlyphs'>Years 3-5 scenario</text>
+<text x='180.75' y='182.62' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='108.95px' lengthAdjust='spacingAndGlyphs'>Prior authorization multiplier</text>
+<text x='180.75' y='139.59' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='52.80px' lengthAdjust='spacingAndGlyphs'>Rebate share</text>
+<text x='180.75' y='96.56' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='175.27px' lengthAdjust='spacingAndGlyphs'>Module C effect (95% CI of every event time)</text>
+<text x='271.89' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>$50M</text>
+<text x='422.77' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='26.89px' lengthAdjust='spacingAndGlyphs'>$100M</text>
+<text x='573.64' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='26.89px' lengthAdjust='spacingAndGlyphs'>$150M</text>
+<text x='724.52' y='388.64' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='26.89px' lengthAdjust='spacingAndGlyphs'>$200M</text>
+<text x='486.10' y='400.39' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='190.62px' lengthAdjust='spacingAndGlyphs'>Five-year net budget impact (USD millions)</text>
+<text x='5.48' y='46.59' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='543.88px' lengthAdjust='spacingAndGlyphs'>One-way sensitivity: each parameter moved across its range with the others at central values (incremental to no</text>
+<text x='5.48' y='58.47' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='265.72px' lengthAdjust='spacingAndGlyphs'>coverage; central = plateau, PA 0.75, midpoint rebate).</text>
+<text x='5.48' y='16.97' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='616.75px' lengthAdjust='spacingAndGlyphs'>Five-year net budget impact for 1,000,000 enrollees is $121.0M in the central case; the widest</text>
+<text x='5.48' y='32.09' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='626.05px' lengthAdjust='spacingAndGlyphs'>swings are Module C effect (95% CI of every event time) ($47.8M to $194.2M) and Rebate share</text>
+<text x='5.48' y='417.04' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='549.88px' lengthAdjust='spacingAndGlyphs'>Source: Module C estimates (CMS State Drug Utilization Data, Medicaid enrollment); SDUD gross reimbursement; statutory rebate floor 42 U.S.C. 1396r-8;</text>
+<text x='5.48' y='425.68' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='466.67px' lengthAdjust='spacingAndGlyphs'>White House fact sheet Nov 2025. SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions.</text>
+</g>
+</g>
+</svg>

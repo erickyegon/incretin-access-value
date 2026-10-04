@@ -1,0 +1,3 @@
+correlation,gross_median,gross_p05,gross_p95,net_median,net_p05,net_p95,pmpm_median,pmpm_p05,pmpm_p95,draws
+common draw (perfect correlation between event times),255238588.74,109750136.25,514660698.09,117193879.53,40690596.87,286690714.49,1.95,0.68,4.78,10000
+independent event times,253701157.39,136752597.61,479531870.98,118300077.3,46745042.61,265201735.7,1.97,0.78,4.42,10000

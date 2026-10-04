@@ -14,10 +14,13 @@ pg_connect <- function() {
   do.call(DBI::dbConnect, args)
 }
 
-#' Read one mart (schema `marts`) as a tibble. Staging and raw tables are deliberately unreachable from here.
-get_mart <- function(name) {
+#' Read one mart (schema `marts`) as a tibble, optionally only some columns and rows. Staging and raw tables are deliberately unreachable from here.
+#' `where` is a simple SQL condition on mart columns (written by the analysis scripts, never from user input).
+get_mart <- function(name, cols = NULL, where = NULL) {
   stopifnot(is.character(name), length(name) == 1, grepl("^mart_[a-z0-9_]+$", name))
   con <- pg_connect()
   on.exit(DBI::dbDisconnect(con), add = TRUE)
-  tibble::as_tibble(DBI::dbGetQuery(con, paste0('select * from marts."', name, '"')))
+  sel <- if (is.null(cols)) "*" else paste0('"', cols, '"', collapse = ", ")
+  q <- paste0('select ', sel, ' from marts."', name, '"', if (!is.null(where)) paste0(" where ", where) else "")
+  tibble::as_tibble(DBI::dbGetQuery(con, q))
 }
