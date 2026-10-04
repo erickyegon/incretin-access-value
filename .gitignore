@@ -13,3 +13,4 @@ dbt/target/
 dbt/logs/
 dbt/dbt_packages/
 analysis/outputs/cache/
+.Rhistory
