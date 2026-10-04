@@ -1,0 +1,6 @@
+cluster,prescribers,share_of_prescribers_pct,claims,share_of_claims_pct,median_claims,median_growth_log,share_new_2024_pct,mean_tirz_share_pct,dominant_specialty,dominant_pct,mean_jaccard,share_bootstraps_above_0.75,volume,tirz,spec_short,segment,segment_id
+5,60392,30.223,13055482,66.639,160,0.389,0,31.081,Primary care physicians,77.32,0.722,0.42,high-volume,some tirzepatide,primary care,"A: high-volume primary care, some tirzepatide",A
+4,40328,20.182,2677846,13.668,56,0.309,0,13.897,Nurse practitioners and physician assistants,96.201,0.558,0.32,mid-volume,some tirzepatide,NP and PA,"B: mid-volume NP and PA, some tirzepatide",B
+1,45773,22.907,2292330,11.701,44,0.219,0,2.758,Primary care physicians,92.504,0.691,0.34,mid-volume,little or no tirzepatide,primary care,"C: mid-volume primary care, little or no tirzepatide",C
+3,43345,21.692,1308779,6.68,20,3.045,100,5.975,Primary care physicians,45.791,0.865,0.86,lower-volume,little or no tirzepatide,primary care,"D: lower-volume primary care, little or no tirzepatide, new in 2024",D
+2,9984,4.996,257052,1.312,18,2.565,64.022,93.303,Nurse practitioners and physician assistants,52.624,0.552,0.34,lower-volume,mostly tirzepatide,NP and PA,"E: lower-volume NP and PA, mostly tirzepatide, new in 2024",E

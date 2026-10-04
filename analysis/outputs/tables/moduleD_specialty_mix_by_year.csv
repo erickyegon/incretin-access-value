@@ -1,0 +1,36 @@
+data_year,specialty_group,claims,prescribers,claims_share_pct,prescriber_share_pct
+2018,Primary care physicians,1406352,38145,54.09,67.75
+2018,Nurse practitioners and physician assistants,484077,11827,18.62,21
+2018,Endocrinology,640147,4523,24.62,8.03
+2018,Cardiology,11077,247,0.43,0.44
+2018,Other,58403,1564,2.25,2.78
+2019,Primary care physicians,1964544,47427,53.99,66.26
+2019,Nurse practitioners and physician assistants,745326,16899,20.48,23.61
+2019,Endocrinology,834365,4840,22.93,6.76
+2019,Cardiology,15421,321,0.42,0.45
+2019,Other,79048,2090,2.17,2.92
+2020,Primary care physicians,2562044,56600,53.91,64.88
+2020,Nurse practitioners and physician assistants,1048903,22483,22.07,25.77
+2020,Endocrinology,1016515,5070,21.39,5.81
+2020,Cardiology,20982,408,0.44,0.47
+2020,Other,103881,2683,2.19,3.08
+2021,Primary care physicians,3307461,65842,53.51,63.4
+2021,Nurse practitioners and physician assistants,1448646,28644,23.44,27.58
+2021,Endocrinology,1248744,5274,20.2,5.08
+2021,Cardiology,32904,577,0.53,0.56
+2021,Other,142822,3513,2.31,3.38
+2022,Primary care physicians,4549513,79099,54.27,61.2
+2022,Nurse practitioners and physician assistants,2076485,38718,24.77,29.96
+2022,Endocrinology,1476697,5462,17.62,4.23
+2022,Cardiology,58592,976,0.7,0.76
+2022,Other,221608,4989,2.64,3.86
+2023,Primary care physicians,7808742,99975,55.45,58.19
+2023,Nurse practitioners and physician assistants,3751626,56509,26.64,32.89
+2023,Endocrinology,1996833,5725,14.18,3.33
+2023,Cardiology,122967,1879,0.87,1.09
+2023,Other,402348,7717,2.86,4.49
+2024,Primary care physicians,10923215,112323,55.75,56.21
+2024,Nurse practitioners and physician assistants,5418073,69303,27.66,34.68
+2024,Endocrinology,2495258,5881,12.74,2.94
+2024,Cardiology,199337,2930,1.02,1.47
+2024,Other,555606,9385,2.84,4.7

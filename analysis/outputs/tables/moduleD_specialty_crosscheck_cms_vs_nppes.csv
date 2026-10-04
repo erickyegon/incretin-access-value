@@ -1,0 +1,23 @@
+cms,nppes,n,share_of_cms_group_pct
+Cardiology,Cardiology,2740,93.8
+Cardiology,Other,99,3.4
+Cardiology,Primary care physicians,81,2.8
+Endocrinology,Endocrinology,5476,93.5
+Endocrinology,Nurse practitioners and physician assistants,2,0
+Endocrinology,Other,152,2.6
+Endocrinology,Primary care physicians,224,3.8
+Nurse practitioners and physician assistants,Cardiology,4,0
+Nurse practitioners and physician assistants,Endocrinology,29,0
+Nurse practitioners and physician assistants,Nurse practitioners and physician assistants,68034,98.4
+Nurse practitioners and physician assistants,Other,265,0.4
+Nurse practitioners and physician assistants,Primary care physicians,843,1.2
+Other,Cardiology,31,0.3
+Other,Endocrinology,83,0.9
+Other,Nurse practitioners and physician assistants,66,0.7
+Other,Other,6816,72.9
+Other,Primary care physicians,2348,25.1
+Primary care physicians,Cardiology,300,0.3
+Primary care physicians,Endocrinology,1118,1
+Primary care physicians,Nurse practitioners and physician assistants,98,0.1
+Primary care physicians,Other,3391,3
+Primary care physicians,Primary care physicians,106984,95.6

@@ -1,0 +1,11 @@
+segment,specialty_group,n,pct
+"B: lower-volume NP and PA, some tirzepatide, new in 2024",Cardiology,1341,2.7
+"B: lower-volume NP and PA, some tirzepatide, new in 2024",Endocrinology,247,0.5
+"B: lower-volume NP and PA, some tirzepatide, new in 2024",Nurse practitioners and physician assistants,21981,44.19
+"B: lower-volume NP and PA, some tirzepatide, new in 2024",Other,4364,8.77
+"B: lower-volume NP and PA, some tirzepatide, new in 2024",Primary care physicians,21804,43.84
+"A: mid-volume primary care, some tirzepatide",Cardiology,1589,1.06
+"A: mid-volume primary care, some tirzepatide",Endocrinology,5634,3.75
+"A: mid-volume primary care, some tirzepatide",Nurse practitioners and physician assistants,47322,31.53
+"A: mid-volume primary care, some tirzepatide",Other,5021,3.35
+"A: mid-volume primary care, some tirzepatide",Primary care physicians,90519,60.31

@@ -1,0 +1,11 @@
+brand,specialty_group,claims,prescribers,claims_share_pct,prescriber_share_pct
+Ozempic,Primary care physicians,5614513,98717,56.54,57.66
+Ozempic,Nurse practitioners and physician assistants,2705500,57336,27.24,33.49
+Ozempic,Endocrinology,1198484,5737,12.07,3.35
+Ozempic,Cardiology,116529,2412,1.17,1.41
+Ozempic,Other,295458,6989,2.98,4.08
+Wegovy,Primary care physicians,34628,1929,45.46,48.76
+Wegovy,Nurse practitioners and physician assistants,23873,1178,31.34,29.78
+Wegovy,Endocrinology,3178,165,4.17,4.17
+Wegovy,Cardiology,11067,535,14.53,13.52
+Wegovy,Other,3430,149,4.5,3.77

@@ -1,0 +1,33 @@
+group,prescribers,share_with_payment_pct,median_payment_among_payees,by,claims_year,payments_year
+claims decile 1,19983,19.42,53.77,claim-volume decile (1 = lowest),2024,2023
+claims decile 10,19982,62.97,153.07,claim-volume decile (1 = lowest),2024,2023
+claims decile 2,19983,22.02,53.76,claim-volume decile (1 = lowest),2024,2023
+claims decile 3,19982,24.61,60.16,claim-volume decile (1 = lowest),2024,2023
+claims decile 4,19982,28.79,64.45,claim-volume decile (1 = lowest),2024,2023
+claims decile 5,19982,32.43,70.87,claim-volume decile (1 = lowest),2024,2023
+claims decile 6,19982,36.41,76.54,claim-volume decile (1 = lowest),2024,2023
+claims decile 7,19982,40.6,86.04,claim-volume decile (1 = lowest),2024,2023
+claims decile 8,19982,45.53,92.64,claim-volume decile (1 = lowest),2024,2023
+claims decile 9,19982,52.92,107.91,claim-volume decile (1 = lowest),2024,2023
+Cardiology,2930,39.62,48.41,specialty group,2024,2023
+Endocrinology,5881,47.81,164.79,specialty group,2024,2023
+Nurse practitioners and physician assistants,69303,41.33,83.06,specialty group,2024,2023
+Other,9385,16.12,51.04,specialty group,2024,2023
+Primary care physicians,112323,34.67,89.71,specialty group,2024,2023
+All prescribers,199822,36.57,86.94,all,2024,2023
+claims decile 1,17181,21.19,57.7,claim-volume decile (1 = lowest),2023,2022
+claims decile 10,17180,65.04,172.4,claim-volume decile (1 = lowest),2023,2022
+claims decile 2,17181,24.03,65.29,claim-volume decile (1 = lowest),2023,2022
+claims decile 3,17181,26.34,66.19,claim-volume decile (1 = lowest),2023,2022
+claims decile 4,17181,30.04,71.99,claim-volume decile (1 = lowest),2023,2022
+claims decile 5,17181,32.89,77.1,claim-volume decile (1 = lowest),2023,2022
+claims decile 6,17180,37.44,85.07,claim-volume decile (1 = lowest),2023,2022
+claims decile 7,17180,41.12,95.3,claim-volume decile (1 = lowest),2023,2022
+claims decile 8,17180,46.52,103.57,claim-volume decile (1 = lowest),2023,2022
+claims decile 9,17180,52.49,119.52,claim-volume decile (1 = lowest),2023,2022
+Cardiology,1879,42.47,70.2,specialty group,2023,2022
+Endocrinology,5725,51.42,192.48,specialty group,2023,2022
+Nurse practitioners and physician assistants,56509,42.55,94.1,specialty group,2023,2022
+Other,7717,16.6,62.64,specialty group,2023,2022
+Primary care physicians,99975,35.73,97.27,specialty group,2023,2022
+All prescribers,171805,37.71,97.71,all,2023,2022

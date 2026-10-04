@@ -1,0 +1,16 @@
+data_year,specialty_group,prescribers,with_mounjaro,share_pct
+2022,Primary care physicians,79099,902,1.14
+2022,Nurse practitioners and physician assistants,38718,546,1.41
+2022,Endocrinology,5462,481,8.81
+2022,Cardiology,976,23,2.36
+2022,Other,4989,82,1.64
+2023,Primary care physicians,99975,24662,24.67
+2023,Nurse practitioners and physician assistants,56509,13941,24.67
+2023,Endocrinology,5725,3926,68.58
+2023,Cardiology,1879,443,23.58
+2023,Other,7717,1410,18.27
+2024,Primary care physicians,112323,55453,49.37
+2024,Nurse practitioners and physician assistants,69303,32348,46.68
+2024,Endocrinology,5881,5230,88.93
+2024,Cardiology,2930,1101,37.58
+2024,Other,9385,3076,32.78
