@@ -29,8 +29,7 @@ dat <- bind_rows(lapply(seq_len(nrow(t0)), function(i) {
     mutate(rel = match(quarter_label, qlist) - k)
 })) |> mutate(state = factor(state, levels = wd_states),
               series2 = case_when(grepl("^Cont", series) ~ "Continuously covered", grepl("^Never", series) ~ "Never treated", TRUE ~ "Withdrawing / lapsed state"))
-facet_lab <- t0 |> mutate(lab = paste0(state_code, "
-first quarter after end: ", t0)) |> { \(x) setNames(x$lab, x$state_code) }()
+facet_lab <- setNames(paste0(t0$state_code, " (from ", t0$t0, ")"), t0$state_code)
 
 pa <- ggplot(dat, aes(rel, rate, colour = series2, linewidth = series2, group = series)) +
   geom_vline(xintercept = -0.5, linetype = "dashed", colour = col_treated) +
@@ -50,29 +49,29 @@ state_chg <- bind_rows(lapply(c(wd_states, cont_states), function(s) {
 }))
 nv <- panel |> filter(state_code %in% never_states)
 state_chg <- bind_rows(state_chg, tibble(unit = "Never-treated (pooled)", group = "Never treated", obesity_wz = chg(nv, "rx_obesity_wz_observed"), all_drugs = chg(nv, "rx_all_drugs_observed")))
-save_table(state_chg |> mutate(across(c(obesity_wz, all_drugs), ~ round(.x, 4))), "withdrawal_change_2025Q4_to_2026Q1")
-long <- state_chg |> pivot_longer(c(obesity_wz, all_drugs), names_to = "measure", values_to = "change") |>
-  mutate(measure = recode(measure, obesity_wz = "Wegovy/Zepbound (obesity_wz)", all_drugs = "All drugs (SDUD)"),
-         unit = factor(unit, levels = rev(state_chg$unit)))
-pb <- ggplot(long, aes(change, unit, colour = group, shape = measure)) +
+# normalised change: obesity_wz change relative to the state's all-drug change over the same two quarters = (1 + obesity change) / (1 + all-drug change) - 1
+state_chg <- state_chg |> mutate(normalised = (1 + obesity_wz) / (1 + all_drugs) - 1)
+save_table(state_chg |> mutate(across(c(obesity_wz, all_drugs, normalised), ~ round(.x, 4))), "withdrawal_change_2025Q4_to_2026Q1")
+state_chg <- state_chg |> mutate(unit = factor(unit, levels = rev(unit)))
+cap <- 1
+pb <- ggplot(state_chg, aes(pmin(normalised, cap), unit, colour = group)) +
   geom_vline(xintercept = 0, colour = "#999999") +
-  geom_line(aes(group = unit), colour = "#BBBBBB") + geom_point(size = 3) +
-  scale_x_continuous(labels = scales::percent_format(accuracy = 1), limits = c(-1, 1), oob = scales::squish) +
-  geom_text(data = filter(long, change > 1), aes(x = 1, label = paste0("+", round(100 * change), "% (axis capped)")), hjust = 1.05, vjust = -0.9, size = 3, show.legend = FALSE) +
+  geom_segment(aes(x = 0, xend = pmin(normalised, cap), yend = unit), linewidth = 0.8) + geom_point(size = 3.2) +
+  geom_text(data = filter(state_chg, normalised > cap), aes(x = cap, label = paste0("+", round(100 * normalised), "% (axis capped)")), hjust = 1.05, vjust = -0.9, size = 3, show.legend = FALSE) +
+  scale_x_continuous(labels = scales::percent_format(accuracy = 1), limits = c(-1, cap)) +
   scale_colour_manual(values = c("Withdrawing / lapsed" = col_treated, "Continuously covered" = "#4D4D4D", "Never treated" = col_comparison), name = NULL, guide = "none") +
-  scale_shape_manual(values = c(16, 17), name = NULL) +
-  labs(x = "Change in prescriptions, 2025 Q4 to 2026 Q1 (observed counts; axis capped at +100%)", y = NULL) + theme_incretin(base_size = 10)
+  labs(x = "Normalised change, 2025 Q4 to 2026 Q1: change in obesity_wz prescriptions relative to the state's all-drug change (preliminary)", y = NULL) + theme_incretin(base_size = 10)
 
-cont_med <- median(state_chg$obesity_wz[state_chg$group == "Continuously covered"])
-cont_med_all <- median(state_chg$all_drugs[state_chg$group == "Continuously covered"])
+cont_med <- median(state_chg$normalised[state_chg$group == "Continuously covered"])
 g <- function(u, v) state_chg[[v]][state_chg$unit == u]
-title <- sprintf("2025 Q4 to 2026 Q1: Wegovy/Zepbound prescriptions changed %s in CA and %s in PA after coverage ended, versus a median of %s in the 6 continuously covered states",
-                 fmt_pct1(g("CA", "obesity_wz")), fmt_pct1(g("PA", "obesity_wz")), fmt_pct1(cont_med))
-sub <- sprintf("Preliminary and descriptive: no model, no p-values. All-drug SDUD prescriptions changed %s in CA, %s in PA and a median of %s in the continuously covered states over the same quarters, so part of any drop may be incomplete preliminary data.",
-               fmt_pct1(g("CA", "all_drugs")), fmt_pct1(g("PA", "all_drugs")), fmt_pct1(cont_med_all))
+title <- sprintf("Preliminary: relative to their all-drug change, Wegovy/Zepbound prescriptions changed %s in CA and %s in PA after coverage ended, versus a median of %s in the 6 continuously covered states",
+                 fmt_pct1(g("CA", "normalised")), fmt_pct1(g("PA", "normalised")), fmt_pct1(cont_med))
+sub <- sprintf("Descriptive only: no model, no p-values; 2026 Q1 is preliminary SDUD data. Normalised change = (1 + obesity_wz change) / (1 + all-drug SDUD change) - 1 for 2025 Q4 to 2026 Q1; raw changes are in the table (obesity_wz: CA %s, PA %s, continuously covered median %s; all drugs: CA %s, PA %s, median %s).",
+               fmt_pct1(g("CA", "obesity_wz")), fmt_pct1(g("PA", "obesity_wz")), fmt_pct1(median(state_chg$obesity_wz[state_chg$group == "Continuously covered"])),
+               fmt_pct1(g("CA", "all_drugs")), fmt_pct1(g("PA", "all_drugs")), fmt_pct1(median(state_chg$all_drugs[state_chg$group == "Continuously covered"])))
 p <- (pa / pb) + plot_layout(heights = c(1, 1.15), guides = "collect") +
   plot_annotation(title = stringr::str_wrap(title, 100), subtitle = stringr::str_wrap(sub, 130),
-                  caption = stringr::str_wrap(paste(caption_sdud, "2026 Q1 is preliminary SDUD data; only one post-withdrawal quarter exists for most states (North Carolina lapsed 2025-10-01 to 2025-12-11 and resumed). New Hampshire is a sensitivity state."), 150),
+                  caption = stringr::str_wrap(paste(caption_sdud, "PRELIMINARY: 2026 Q1 is preliminary SDUD data; only one post-withdrawal quarter exists for most states (North Carolina lapsed 2025-10-01 to 2025-12-11 and resumed). New Hampshire is a sensitivity state."), 150),
                   theme = theme_incretin()) & theme(legend.position = "bottom")
 save_fig(p, "05_withdrawal_descriptive", width = 12, height = 9)
 print(state_chg |> mutate(across(c(obesity_wz, all_drugs), ~ round(.x, 3))))

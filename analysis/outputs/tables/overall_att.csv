@@ -4,3 +4,5 @@ estimate_type,att,se,ci_low,ci_high,method,fmi
 TWFE Sun-Abraham post-period average,9.331,0.561,8.233,10.43,"fixest, state-clustered; Rubin's rules over 20 imputations",0
 "TWFE Sun-Abraham post-period average, wild cluster bootstrap",9.331,NA,4.507,14.155,"fwildclusterboot, Webb weights, 9,999 draws, by state; mean of 20 imputed outcomes; p = 2e-04; interval = symmetric wild bootstrap-t (point +/- CRV1 se x 95th percentile of |t*|, 8.5)",NA
 Placebo in time: coverage 4 quarters earlier (post-launch window),0.383,0.237,-0.081,0.847,"att_gt, never-treated controls, 8 treated states with cohorts that allow it; Rubin's rules",0
+"Secondary outcome, overall ATT (simple): Saxenda",0.184,0.264,-0.334,0.701,same as the primary,0
+"Secondary outcome, overall ATT (simple): diabetes GLP-1 (spillover outcome, not a clean negative control)",-0.76,1.774,-4.238,2.718,same as the primary,0

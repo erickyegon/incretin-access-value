@@ -1,0 +1,6 @@
+estimator,estimate,se,ci_low,ci_high
+"(a) Callaway-Sant'Anna simple aggregation, all post cells",12.189,1.947,8.374,16.004
+"(b) CS dynamic, mean of e = 0..12, equal weights",13.715,2.865,8.099,19.331
+"(c) CS dynamic, mean of e = 0..12, Sun-Abraham cell weights (treated state-quarters per event time)",11.076,2.459,6.257,15.895
+"(c2) CS group-time estimates, e = 0..12, weighted like the Sun-Abraham cells (point estimate)",11.076,NA,NA,NA
+(d) TWFE Sun-Abraham post-period average,9.331,0.561,8.233,10.43
