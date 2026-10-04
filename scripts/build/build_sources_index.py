@@ -23,6 +23,7 @@ META = {  # stem: (title, publisher, keep in repo?, reason)
  "cran_AlgDesign": ("AlgDesign: Algorithmic Experimental Design (R package manual)", "CRAN (package author B. Wheeler)", True, "open-licence R package manual"),
 }
 URL_FIX = {"cms_medicare_glp1_bridge_prescribers": "https://www.cms.gov/files/document/glp-1-prescribers-c-1.pdf"}
+TOKEN = re.compile(rb"pk\.eyJ[A-Za-z0-9._-]+")
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 rows, seen_urls = [], set()
 log = {}
@@ -38,11 +39,19 @@ for stem, rs in stems.items():
     if keep:   # government documents and open-licence manuals are copied from the local archive into the repository folder
         src.mkdir(exist_ok=True)
         for r2 in rs:
-            if (loc / r2["file"]).exists(): (src / r2["file"]).write_bytes((loc / r2["file"]).read_bytes())
+            if (loc / r2["file"]).exists():
+                b = (loc / r2["file"]).read_bytes()
+                if r2["file"].endswith(".html"): b = TOKEN.sub(b"pk.REDACTED-third-party-public-token", b)   # the CMS pages embed a Mapbox public token that GitHub push protection flags
+                (src / r2["file"]).write_bytes(b)
+    if keep:   # keep an unredacted original in the local archive, then redact the embedded third-party token in the repository copy
+        for r2 in rs:
+            f2 = src / r2["file"]
+            if f2.exists() and not (loc / r2["file"]).exists(): (loc / r2["file"]).write_bytes(f2.read_bytes())
+            if f2.exists() and r2["file"].endswith(".html"): f2.write_bytes(TOKEN.sub(b"pk.REDACTED-third-party-public-token", f2.read_bytes()))
     here = (src if keep else loc) / fname
     url = URL_FIX.get(stem, r["url"])
     rows.append(dict(title=title, publisher=pub, url=url, date_accessed=r["access_date"], sha256_of_saved_copy=sha(here) if here.exists() else r["sha256"],
-                     in_repo="yes" if keep else "no", saved_copy=("docs/sources/" + fname) if keep else ("docs/sources_local/" + fname + " (gitignored)"), reason=why)); seen_urls.add(url)
+                     in_repo="yes" if keep else "no", saved_copy=("docs/sources/" + fname) if keep else ("docs/sources_local/" + fname + " (gitignored)"), reason=why + ("; an embedded third-party Mapbox public token is redacted in the repository copy, so its checksum differs from the original" if keep and fname.endswith(".html") and stem.startswith("cms_") else ""))); seen_urls.add(url)
 def domain_pub(u): return urllib.parse.urlparse(u).netloc
 cov = root / "data" / "raw" / "coverage_sources"
 if (cov / "_sources_log.csv").exists():
