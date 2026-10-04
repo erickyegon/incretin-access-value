@@ -14,3 +14,8 @@ dbt/logs/
 dbt/dbt_packages/
 analysis/outputs/cache/
 .Rhistory
+.quarto/
+*_files/
+*.typ
+*.knit.md
+*.rmarkdown

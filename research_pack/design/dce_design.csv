@@ -1,0 +1,49 @@
+"block","task","alternative","BMI threshold","Comorbidity requirement","Prior authorization renewal","Step therapy","Patient out-of-pocket cost per month","dominated_task","task_in_block"
+1,1,"Policy A","35 or more","At least 1 weight-related condition","No renewal after initial approval","None","$25",FALSE,1
+1,1,"Policy B","27 or more (with a comorbidity)","At least 2 weight-related conditions","Every 6 months","Trial of a lower-cost agent first","$0",FALSE,1
+1,2,"Policy A","30 or more","None","Every 12 months","3-month supervised lifestyle programme first","$25",FALSE,2
+1,2,"Policy B","35 or more","At least 1 weight-related condition","No renewal after initial approval","Trial of a lower-cost agent first","$75",FALSE,2
+1,4,"Policy A","30 or more","At least 2 weight-related conditions","Every 6 months","None","$0",FALSE,3
+1,4,"Policy B","27 or more (with a comorbidity)","None","Every 12 months","Trial of a lower-cost agent first","$75",FALSE,3
+1,5,"Policy A","35 or more","None","No renewal after initial approval","3-month supervised lifestyle programme first","$75",FALSE,4
+1,5,"Policy B","30 or more","At least 1 weight-related condition","Every 12 months","None","$25",FALSE,4
+1,10,"Policy A","35 or more","At least 1 weight-related condition","Every 6 months","3-month supervised lifestyle programme first","$0",FALSE,5
+1,10,"Policy B","30 or more","At least 2 weight-related conditions","No renewal after initial approval","Trial of a lower-cost agent first","$75",FALSE,5
+1,11,"Policy A","30 or more","At least 1 weight-related condition","Every 12 months","None","$75",FALSE,6
+1,11,"Policy B","35 or more","At least 2 weight-related conditions","Every 6 months","3-month supervised lifestyle programme first","$25",FALSE,6
+1,13,"Policy A","30 or more","At least 2 weight-related conditions","No renewal after initial approval","Trial of a lower-cost agent first","$25",FALSE,7
+1,13,"Policy B","27 or more (with a comorbidity)","None","Every 12 months","None","$0",FALSE,7
+1,17,"Policy A","27 or more (with a comorbidity)","At least 1 weight-related condition","Every 6 months","3-month supervised lifestyle programme first","$25",FALSE,8
+1,17,"Policy B","30 or more","None","No renewal after initial approval","None","$0",FALSE,8
+1,19,"Policy A","27 or more (with a comorbidity)","At least 1 weight-related condition","No renewal after initial approval","None","$25",FALSE,9
+1,19,"Policy B","35 or more","At least 2 weight-related conditions","Every 12 months","Trial of a lower-cost agent first","$0",FALSE,9
+1,20,"Policy A","27 or more (with a comorbidity)","At least 2 weight-related conditions","No renewal after initial approval","None","$0",FALSE,10
+1,20,"Policy B","30 or more","None","Every 6 months","3-month supervised lifestyle programme first","$75",FALSE,10
+1,21,"Policy A","35 or more","At least 1 weight-related condition","Every 6 months","Trial of a lower-cost agent first","$0",FALSE,11
+1,21,"Policy B","27 or more (with a comorbidity)","At least 2 weight-related conditions","Every 12 months","3-month supervised lifestyle programme first","$75",FALSE,11
+1,22,"Policy A","27 or more (with a comorbidity)","At least 1 weight-related condition","No renewal after initial approval","3-month supervised lifestyle programme first","$0",FALSE,12
+1,22,"Policy B","35 or more","At least 2 weight-related conditions","Every 12 months","None","$75",FALSE,12
+2,3,"Policy A","27 or more (with a comorbidity)","None","Every 6 months","Trial of a lower-cost agent first","$75",FALSE,1
+2,3,"Policy B","30 or more","At least 1 weight-related condition","No renewal after initial approval","3-month supervised lifestyle programme first","$25",FALSE,1
+2,6,"Policy A","35 or more","At least 1 weight-related condition","Every 6 months","None","$75",FALSE,2
+2,6,"Policy B","30 or more","At least 2 weight-related conditions","Every 12 months","3-month supervised lifestyle programme first","$25",FALSE,2
+2,7,"Policy A","35 or more","At least 2 weight-related conditions","Every 12 months","None","$25",FALSE,3
+2,7,"Policy B","30 or more","At least 1 weight-related condition","No renewal after initial approval","3-month supervised lifestyle programme first","$75",FALSE,3
+2,8,"Policy A","30 or more","None","Every 12 months","Trial of a lower-cost agent first","$0",FALSE,4
+2,8,"Policy B","27 or more (with a comorbidity)","At least 2 weight-related conditions","Every 6 months","3-month supervised lifestyle programme first","$75",FALSE,4
+2,9,"Policy A","35 or more","At least 2 weight-related conditions","Every 12 months","3-month supervised lifestyle programme first","$0",FALSE,5
+2,9,"Policy B","27 or more (with a comorbidity)","None","Every 6 months","Trial of a lower-cost agent first","$25",FALSE,5
+2,12,"Policy A","27 or more (with a comorbidity)","None","Every 12 months","3-month supervised lifestyle programme first","$0",FALSE,6
+2,12,"Policy B","30 or more","At least 2 weight-related conditions","Every 6 months","None","$75",FALSE,6
+2,14,"Policy A","35 or more","None","No renewal after initial approval","None","$25",FALSE,7
+2,14,"Policy B","30 or more","At least 1 weight-related condition","Every 6 months","Trial of a lower-cost agent first","$0",FALSE,7
+2,15,"Policy A","27 or more (with a comorbidity)","None","Every 6 months","None","$25",FALSE,8
+2,15,"Policy B","35 or more","At least 1 weight-related condition","Every 12 months","3-month supervised lifestyle programme first","$75",FALSE,8
+2,16,"Policy A","30 or more","None","Every 6 months","None","$75",FALSE,9
+2,16,"Policy B","27 or more (with a comorbidity)","At least 2 weight-related conditions","No renewal after initial approval","Trial of a lower-cost agent first","$0",FALSE,9
+2,18,"Policy A","27 or more (with a comorbidity)","At least 2 weight-related conditions","No renewal after initial approval","None","$0",FALSE,10
+2,18,"Policy B","35 or more","At least 1 weight-related condition","Every 12 months","Trial of a lower-cost agent first","$25",FALSE,10
+2,23,"Policy A","35 or more","None","No renewal after initial approval","Trial of a lower-cost agent first","$25",FALSE,11
+2,23,"Policy B","27 or more (with a comorbidity)","At least 1 weight-related condition","Every 12 months","None","$75",FALSE,11
+2,24,"Policy A","27 or more (with a comorbidity)","At least 1 weight-related condition","Every 12 months","Trial of a lower-cost agent first","$25",FALSE,12
+2,24,"Policy B","30 or more","None","Every 6 months","3-month supervised lifestyle programme first","$0",FALSE,12

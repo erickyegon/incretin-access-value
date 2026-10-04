@@ -1,0 +1,8 @@
+"N","power_BMIthreshold","power_Comorbidityrequirement","power_Priorauthorizationrenewal","power_Steptherapy","power_Patientoutofpocketcostpermonth","mean_se_smallest_contrast"
+30,0.915,0.98,0.5,0.96,1,0.170271678139879
+50,0.99,1,0.745,1,1,0.129490987620069
+75,1,1,0.92,1,1,0.105601477603418
+100,1,1,0.97,1,1,0.0911887819986449
+150,1,1,1,1,1,0.0744396912731999
+200,1,1,1,1,1,0.0643299349973338
+300,1,1,1,1,1,0.0523772592178886

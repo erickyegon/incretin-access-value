@@ -1,0 +1,16 @@
+"attribute","level","appearances","share_pct"
+"BMI threshold","27 or more (with a comorbidity)",17,35.4
+"BMI threshold","30 or more",16,33.3
+"BMI threshold","35 or more",15,31.2
+"Comorbidity requirement","None",15,31.2
+"Comorbidity requirement","At least 1 weight-related condition",17,35.4
+"Comorbidity requirement","At least 2 weight-related conditions",16,33.3
+"Prior authorization renewal","Every 6 months",16,33.3
+"Prior authorization renewal","Every 12 months",17,35.4
+"Prior authorization renewal","No renewal after initial approval",15,31.2
+"Step therapy","None",17,35.4
+"Step therapy","3-month supervised lifestyle programme first",16,33.3
+"Step therapy","Trial of a lower-cost agent first",15,31.2
+"Patient out-of-pocket cost per month","$0",16,33.3
+"Patient out-of-pocket cost per month","$25",16,33.3
+"Patient out-of-pocket cost per month","$75",16,33.3
