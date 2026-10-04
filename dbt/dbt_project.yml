@@ -8,11 +8,24 @@ test-paths: ["tests"]
 macro-paths: ["macros"]
 clean-targets: ["target", "dbt_packages"]
 
+vars:
+  # SDUD quarters from this date are preliminary (2026 Q1 at the time of the download; CMS revises recent quarters)
+  preliminary_from_quarter_start: "2026-01-01"
+
 models:
   incretin:
     staging:
       +schema: staging
       +materialized: view
+      # large unions are tables so that tests and marts do not re-scan the raw tables
+      stg_open_payments__general: {+materialized: table}
+      stg_open_payments__record_products: {+materialized: table}
+      stg_open_payments__product_split: {+materialized: table}
+      stg_sdud__state: {+materialized: table}
+      stg_sdud__national: {+materialized: table}
+      stg_partd__prescriber_drug: {+materialized: table}
+      stg_nppes__provider: {+materialized: table}
+      stg_nadac__weekly: {+materialized: table}
     intermediate:
       +schema: intermediate
       +materialized: view

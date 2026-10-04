@@ -1,0 +1,183 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Interim Parquet files loaded unchanged into PostgreSQL by scripts/load/load_raw.py (original column names; _source_file, _loaded_at, _sha256 metadata added)."
+    schema: raw
+    tables:
+      - name: ctgov_studies
+        description: "Raw load of ctgov_studies (see docs/load_reconciliation.csv for source file and checks)."
+      - name: enrollment_managed_care_monthly_by_type
+        description: "Raw load of enrollment_managed_care_monthly_by_type (see docs/load_reconciliation.csv for source file and checks)."
+      - name: enrollment_managed_care_summary_yearly
+        description: "Raw load of enrollment_managed_care_summary_yearly (see docs/load_reconciliation.csv for source file and checks)."
+      - name: enrollment_managed_care_yearly_by_type
+        description: "Raw load of enrollment_managed_care_yearly_by_type (see docs/load_reconciliation.csv for source file and checks)."
+      - name: enrollment_medicaid_chip_monthly
+        description: "Raw load of enrollment_medicaid_chip_monthly (see docs/load_reconciliation.csv for source file and checks)."
+      - name: fda_application_docs
+        description: "Raw load of fda_application_docs (see docs/load_reconciliation.csv for source file and checks)."
+      - name: fda_applications
+        description: "Raw load of fda_applications (see docs/load_reconciliation.csv for source file and checks)."
+      - name: fda_marketing_status
+        description: "Raw load of fda_marketing_status (see docs/load_reconciliation.csv for source file and checks)."
+      - name: fda_products
+        description: "Raw load of fda_products (see docs/load_reconciliation.csv for source file and checks)."
+      - name: fda_submissions
+        description: "Raw load of fda_submissions (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_cond_2023
+        description: "Raw load of meps_cond_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_cond_2024
+        description: "Raw load of meps_cond_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_fyc_2023
+        description: "Raw load of meps_fyc_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_fyc_2024_p1
+        description: "Raw load of meps_fyc_2024_p1 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_fyc_2024_p2
+        description: "Raw load of meps_fyc_2024_p2 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_rx_2023
+        description: "Raw load of meps_rx_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: meps_rx_2024
+        description: "Raw load of meps_rx_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2018
+        description: "Raw load of nadac_2018 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2019
+        description: "Raw load of nadac_2019 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2020
+        description: "Raw load of nadac_2020 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2021
+        description: "Raw load of nadac_2021 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2022
+        description: "Raw load of nadac_2022 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2023
+        description: "Raw load of nadac_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2024
+        description: "Raw load of nadac_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2025
+        description: "Raw load of nadac_2025 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nadac_2026
+        description: "Raw load of nadac_2026 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_bmx_l
+        description: "Raw load of nhanes_bmx_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_bpq_l
+        description: "Raw load of nhanes_bpq_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_bpxo_l
+        description: "Raw load of nhanes_bpxo_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_demo_l
+        description: "Raw load of nhanes_demo_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_diq_l
+        description: "Raw load of nhanes_diq_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_ghb_l
+        description: "Raw load of nhanes_ghb_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_mcq_l
+        description: "Raw load of nhanes_mcq_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_bmx
+        description: "Raw load of nhanes_p_bmx (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_bpq
+        description: "Raw load of nhanes_p_bpq (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_bpxo
+        description: "Raw load of nhanes_p_bpxo (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_demo
+        description: "Raw load of nhanes_p_demo (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_diq
+        description: "Raw load of nhanes_p_diq (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_ghb
+        description: "Raw load of nhanes_p_ghb (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_mcq
+        description: "Raw load of nhanes_p_mcq (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_p_rxq_rx
+        description: "Raw load of nhanes_p_rxq_rx (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_rxq_drug
+        description: "Raw load of nhanes_rxq_drug (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nhanes_rxq_rx_l
+        description: "Raw load of nhanes_rxq_rx_l (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nppes_provider
+        description: "Raw load of nppes_provider (see docs/load_reconciliation.csv for source file and checks)."
+      - name: nucc_taxonomy
+        description: "Raw load of nucc_taxonomy (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2019
+        description: "Raw load of open_payments_general_2019 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2020
+        description: "Raw load of open_payments_general_2020 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2021
+        description: "Raw load of open_payments_general_2021 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2022
+        description: "Raw load of open_payments_general_2022 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2023
+        description: "Raw load of open_payments_general_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2024
+        description: "Raw load of open_payments_general_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_general_2025
+        description: "Raw load of open_payments_general_2025 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_product_attribution
+        description: "Raw load of open_payments_product_attribution (see docs/load_reconciliation.csv for source file and checks)."
+      - name: open_payments_record_products
+        description: "Raw load of open_payments_record_products (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2013
+        description: "Raw load of partd_prescribers_2013 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2014
+        description: "Raw load of partd_prescribers_2014 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2015
+        description: "Raw load of partd_prescribers_2015 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2016
+        description: "Raw load of partd_prescribers_2016 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2017
+        description: "Raw load of partd_prescribers_2017 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2018
+        description: "Raw load of partd_prescribers_2018 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2019
+        description: "Raw load of partd_prescribers_2019 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2020
+        description: "Raw load of partd_prescribers_2020 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2021
+        description: "Raw load of partd_prescribers_2021 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2022
+        description: "Raw load of partd_prescribers_2022 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2023
+        description: "Raw load of partd_prescribers_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: partd_prescribers_2024
+        description: "Raw load of partd_prescribers_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2018
+        description: "Raw load of sdud_national_2018 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2019
+        description: "Raw load of sdud_national_2019 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2020
+        description: "Raw load of sdud_national_2020 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2021
+        description: "Raw load of sdud_national_2021 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2022
+        description: "Raw load of sdud_national_2022 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2023
+        description: "Raw load of sdud_national_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2024
+        description: "Raw load of sdud_national_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2025
+        description: "Raw load of sdud_national_2025 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_national_2026
+        description: "Raw load of sdud_national_2026 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2018
+        description: "Raw load of sdud_state_2018 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2019
+        description: "Raw load of sdud_state_2019 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2020
+        description: "Raw load of sdud_state_2020 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2021
+        description: "Raw load of sdud_state_2021 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2022
+        description: "Raw load of sdud_state_2022 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2023
+        description: "Raw load of sdud_state_2023 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2024
+        description: "Raw load of sdud_state_2024 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2025
+        description: "Raw load of sdud_state_2025 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: sdud_state_2026
+        description: "Raw load of sdud_state_2026 (see docs/load_reconciliation.csv for source file and checks)."
+      - name: spending_medicaid_long
+        description: "Raw load of spending_medicaid_long (see docs/load_reconciliation.csv for source file and checks)."
+      - name: spending_medicaid_wide
+        description: "Raw load of spending_medicaid_wide (see docs/load_reconciliation.csv for source file and checks)."
+      - name: spending_partd_long
+        description: "Raw load of spending_partd_long (see docs/load_reconciliation.csv for source file and checks)."
+      - name: spending_partd_wide
+        description: "Raw load of spending_partd_wide (see docs/load_reconciliation.csv for source file and checks)."

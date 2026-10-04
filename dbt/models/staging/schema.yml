@@ -1,0 +1,539 @@
+version: 2
+
+models:
+  - name: stg_sdud__state
+    description: "State Drug Utilization Data (Medicaid.gov), state rows only, incretin NDCs. Grain: state_code x utilization_type x ndc11 x year x quarter. Gross of rebates. Prescription counts under 11 are suppressed by CMS and are NULL here (suppressed = true); units and amounts of suppressed rows are NULL too. Only exact duplicate rows were removed. Materialised as a table (63k rows from nine yearly raw tables)."
+    columns:
+      - name: state_code
+        description: "USPS state code (50 states, DC and territories as published). National XX rows are excluded (see stg_sdud__national)."
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('states'), field: state_code}}
+      - name: utilization_type
+        description: "FFSU = fee-for-service; MCOU = managed care organisation."
+        tests:
+          - not_null
+          - accepted_values: {arguments: {values: [FFSU, MCOU]}}
+      - name: ndc11
+        description: "11-digit NDC as text. Every NDC is mapped in product_map."
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('product_map'), field: ndc11}}
+      - name: year
+        description: "Calendar year of the utilization quarter."
+        tests: [not_null]
+      - name: quarter
+        description: "Calendar quarter 1 to 4."
+        tests:
+          - not_null
+          - accepted_values: {arguments: {values: [1, 2, 3, 4], quote: false}}
+      - name: quarter_start
+        description: "First day of the quarter."
+      - name: suppressed
+        description: "True when CMS suppressed the row (fewer than 11 prescriptions). Counts, units and amounts are NULL."
+        tests: [not_null]
+      - name: product_name
+        description: "Product name as published in SDUD."
+      - name: units_reimbursed
+        description: "Units reimbursed (NULL when suppressed)."
+      - name: number_of_prescriptions
+        description: "Number of prescriptions (NULL when suppressed)."
+      - name: total_amount_reimbursed
+        description: "Total amount reimbursed in USD, Medicaid plus non-Medicaid, gross of rebates (NULL when suppressed)."
+      - name: medicaid_amount_reimbursed
+        description: "Medicaid amount reimbursed in USD, gross of rebates (NULL when suppressed)."
+      - name: non_medicaid_amount_reimbursed
+        description: "Non-Medicaid (third-party and patient) amount reimbursed in USD (NULL when suppressed)."
+      - name: is_preliminary
+        description: "True for quarters from the var preliminary_from_quarter_start (2026 Q1), which CMS revises."
+
+  - name: stg_sdud__national
+    description: "State Drug Utilization Data national rows (state = XX), kept apart from state rows so national totals are never added to states. Grain: utilization_type x ndc11 x year x quarter."
+    columns:
+      - name: state_code
+        description: "Always XX (national)."
+        tests: [{accepted_values: {arguments: {values: [XX]}}}]
+      - name: utilization_type
+        description: "FFSU or MCOU."
+        tests: [{accepted_values: {arguments: {values: [FFSU, MCOU]}}}]
+      - name: ndc11
+        description: "11-digit NDC."
+        tests: [{relationships: {arguments: {to: ref('product_map'), field: ndc11}}}]
+      - name: year
+        description: "Calendar year."
+      - name: quarter
+        description: "Calendar quarter."
+      - name: quarter_start
+        description: "First day of the quarter."
+      - name: suppressed
+        description: "True when CMS suppressed the national row (NULL counts)."
+      - name: product_name
+        description: "Product name as published."
+      - name: units_reimbursed
+        description: "Units reimbursed (NULL when suppressed)."
+      - name: number_of_prescriptions
+        description: "Prescriptions (NULL when suppressed)."
+      - name: total_amount_reimbursed
+        description: "Total amount reimbursed, USD."
+      - name: medicaid_amount_reimbursed
+        description: "Medicaid amount reimbursed, USD."
+      - name: non_medicaid_amount_reimbursed
+        description: "Non-Medicaid amount reimbursed, USD."
+      - name: is_preliminary
+        description: "True for preliminary quarters."
+
+  - name: stg_enrollment__monthly
+    description: "Medicaid and CHIP monthly enrollment from the CMS Performance Indicator dataset. Grain: state_code x month_start x report_status (each month has a preliminary and an updated report). Per the dataset data dictionary, total_medicaid_and_chip_enrollment (items 8a + 8h) counts people in Medicaid or CHIP; total_medicaid_enrollment (item 8a) is Medicaid only; both are point-in-time counts of people eligible for comprehensive benefits. Missing values stay NULL."
+    columns:
+      - name: state_code
+        description: "USPS code of the reporting state."
+        tests: [not_null]
+      - name: state_name
+        description: "State name."
+      - name: month_start
+        description: "First day of the reporting month."
+        tests: [not_null]
+      - name: reporting_period
+        description: "Reporting period as published (YYYYMM)."
+      - name: state_expanded_medicaid
+        description: "Whether the state had expanded Medicaid (as published)."
+      - name: report_status
+        description: "preliminary (P) or updated (U) report."
+        tests:
+          - accepted_values: {arguments: {values: [preliminary, updated]}}
+      - name: is_final_report
+        description: "Final report flag (Y = true)."
+      - name: total_medicaid_and_chip_enrollment
+        description: "Medicaid plus CHIP enrollees at month end (8a + 8h). Proposed outcome denominator."
+      - name: total_medicaid_enrollment
+        description: "Medicaid-only enrollees at month end (8a)."
+      - name: total_chip_enrollment
+        description: "CHIP enrollees at month end (8h)."
+      - name: total_adult_medicaid_enrollment
+        description: "Adult MAGI and non-MAGI Medicaid enrollees (8d + 8g)."
+      - name: medicaid_and_chip_child_enrollment
+        description: "Children in Medicaid plus CHIP enrollees (8c + 8f + 8h when 8c and 8f are positive)."
+      - name: total_medicaid_and_chip_enrollment_footnote
+        description: "Source footnote on the Medicaid + CHIP count (definition caveat), NULL if none."
+      - name: total_medicaid_enrollment_footnote
+        description: "Source footnote on the Medicaid count, NULL if none."
+      - name: total_chip_enrollment_footnote
+        description: "Source footnote on the CHIP count, NULL if none."
+      - name: enrollment_zero_set_null
+        description: "True when the loader set a reported zero to NULL (states that did not report, e.g. Rhode Island)."
+
+  - name: stg_enrollment__managed_care
+    description: "Medicaid managed care enrollment, yearly summary by state (CMS Managed Care Enrollment Report). Grain: state_name x year."
+    columns:
+      - name: state_name
+        description: "State name as published."
+      - name: year
+        description: "Report year."
+      - name: total_medicaid_enrollees
+        description: "Total Medicaid enrollees."
+      - name: enrollment_any_managed_care
+        description: "Enrollment in any type of managed care."
+      - name: enrollment_comprehensive_managed_care
+        description: "Enrollment in comprehensive managed care."
+      - name: newly_eligible_adults_in_comprehensive_mco
+        description: "Newly eligible adults in comprehensive MCOs."
+      - name: notes
+        description: "Source notes."
+
+  - name: stg_partd__prescriber_drug
+    description: "Medicare Part D Prescribers by Provider and Drug, incretin rows. Grain: prescriber_npi x brand_name x generic_name x data_year. CMS publishes a row only for prescribers with at least 11 claims for the drug (the row floor), so absent rows are not zero."
+    columns:
+      - name: prescriber_npi
+        description: "Prescriber National Provider Identifier."
+        tests: [not_null]
+      - name: prescriber_last_org_name
+        description: "Prescriber last name or organisation name."
+      - name: prescriber_first_name
+        description: "Prescriber first name."
+      - name: prescriber_city
+        description: "Prescriber city."
+      - name: prescriber_state
+        description: "Prescriber state abbreviation."
+      - name: prescriber_state_fips
+        description: "Prescriber state FIPS code."
+      - name: prescriber_type
+        description: "CMS prescriber specialty (Medicare specialty)."
+      - name: prescriber_type_source
+        description: "Source of the prescriber type."
+      - name: brand_name
+        description: "Brand name."
+      - name: generic_name
+        description: "Generic name."
+      - name: total_claims
+        description: "Total Part D claims (at least 11 by CMS rule)."
+        tests: [not_null]
+      - name: total_30day_fills
+        description: "Total 30-day standardized fills."
+      - name: total_day_supply
+        description: "Total days supply."
+      - name: total_drug_cost
+        description: "Total drug cost in USD (gross, includes plan and beneficiary payments)."
+      - name: total_beneficiaries
+        description: "Beneficiaries with a claim (suppressed under 11 in the source)."
+      - name: ge65_suppression_flag
+        description: "Source flag for suppressed age 65+ claim fields."
+      - name: ge65_total_claims
+        description: "Claims for beneficiaries aged 65 and over."
+      - name: ge65_total_30day_fills
+        description: "30-day fills, age 65+."
+      - name: ge65_total_drug_cost
+        description: "Drug cost, age 65+."
+      - name: ge65_total_day_supply
+        description: "Days supply, age 65+."
+      - name: ge65_beneficiary_suppression_flag
+        description: "Source flag for suppressed age 65+ beneficiary count."
+      - name: ge65_total_beneficiaries
+        description: "Beneficiaries aged 65 and over."
+      - name: data_year
+        description: "Calendar year of the data."
+        tests: [not_null]
+
+  - name: stg_spending__partd
+    description: "Medicare Part D Spending by Drug, Overall rows only (Mftr_Name = 'Overall'). Grain: brand_name x generic_name x year."
+    columns:
+      - name: brand_name
+        description: "Brand name."
+      - name: generic_name
+        description: "Generic name."
+      - name: total_manufacturers
+        description: "Number of manufacturers behind the Overall row."
+      - name: year
+        description: "Calendar year."
+      - name: total_spending
+        description: "Total spending in USD (gross of rebates)."
+      - name: total_dosage_units
+        description: "Total dosage units."
+      - name: total_claims
+        description: "Total claims."
+      - name: total_beneficiaries
+        description: "Total beneficiaries."
+      - name: avg_spend_per_dosage_unit_weighted
+        description: "Weighted average spending per dosage unit."
+      - name: avg_spend_per_claim
+        description: "Average spending per claim."
+      - name: avg_spend_per_beneficiary
+        description: "Average spending per beneficiary."
+      - name: outlier_flag
+        description: "Source outlier flag."
+
+  - name: stg_spending__medicaid
+    description: "Medicaid Spending by Drug, Overall rows only (Mftr_Name = 'Overall'). Grain: brand_name x generic_name x year. Gross of rebates."
+    columns:
+      - name: brand_name
+        description: "Brand name."
+      - name: generic_name
+        description: "Generic name."
+      - name: total_manufacturers
+        description: "Number of manufacturers behind the Overall row."
+      - name: year
+        description: "Calendar year."
+      - name: total_spending
+        description: "Total Medicaid spending in USD (gross of rebates)."
+      - name: total_dosage_units
+        description: "Total dosage units."
+      - name: total_claims
+        description: "Total claims."
+      - name: avg_spend_per_dosage_unit_weighted
+        description: "Weighted average spending per dosage unit."
+      - name: avg_spend_per_claim
+        description: "Average spending per claim."
+      - name: outlier_flag
+        description: "Source outlier flag."
+
+  - name: stg_nadac__weekly
+    description: "NADAC weekly acquisition cost per NDC (incretin NDCs). Grain: ndc11 x as_of_date x pharmacy_type_indicator (weekly survey rows; effective_date repeats across weeks until the price changes)."
+    columns:
+      - name: ndc11
+        description: "11-digit NDC."
+        tests:
+          - not_null
+          - relationships: {arguments: {to: ref('product_map'), field: ndc11}}
+      - name: ndc_description
+        description: "NDC description as published."
+      - name: nadac_per_unit
+        description: "National average acquisition cost per pricing unit, USD."
+        tests: [not_null]
+      - name: pricing_unit
+        description: "Pricing unit (EA, ML, GM)."
+      - name: effective_date
+        description: "Date the price takes effect."
+        tests: [not_null]
+      - name: classification_for_rate_setting
+        description: "Brand (B), generic (G) or other classification used by CMS for the rate."
+      - name: explanation_code
+        description: "CMS explanation code for the rate."
+      - name: pharmacy_type_indicator
+        description: "Pharmacy type (retail community pharmacy or other)."
+      - name: as_of_date
+        description: "Date of the survey data."
+
+  - name: stg_open_payments__general
+    description: "Open Payments general payments that name an incretin product. Grain: record_id (one payment record). Headline totals count each record once; use the product_split model for product-level dollars."
+    columns:
+      - name: record_id
+        description: "Open Payments record identifier."
+        tests: [not_null, unique]
+      - name: program_year
+        description: "Program year."
+        tests: [not_null]
+      - name: change_type
+        description: "NEW, CHANGED or UNCHANGED."
+      - name: dispute_status
+        description: "Dispute status for publication."
+      - name: covered_recipient_type
+        description: "Physician, non-physician practitioner or teaching hospital."
+      - name: is_physician
+        description: "True when the recipient type starts with 'Covered Recipient Physician'. NPs and PAs enter in 2021, so use physicians only across 2021."
+      - name: covered_recipient_npi
+        description: "Recipient NPI (NULL for teaching hospitals)."
+      - name: covered_recipient_primary_type
+        description: "Recipient primary type."
+      - name: covered_recipient_specialty
+        description: "Recipient specialty."
+      - name: recipient_state
+        description: "Recipient state."
+      - name: recipient_zip
+        description: "Recipient zip code."
+      - name: manufacturer_name
+        description: "Paying manufacturer or GPO."
+      - name: total_amount_usd
+        description: "Payment amount in USD (numeric 14,2)."
+        tests: [not_null]
+      - name: date_of_payment
+        description: "Date of payment."
+      - name: nature_of_payment
+        description: "Nature of payment."
+      - name: form_of_payment
+        description: "Form of payment."
+      - name: product_name_1
+        description: "Product name field 1 as reported."
+      - name: product_name_2
+        description: "Product name field 2 as reported."
+      - name: product_name_3
+        description: "Product name field 3 as reported."
+      - name: product_name_4
+        description: "Product name field 4 as reported."
+      - name: product_name_5
+        description: "Product name field 5 as reported."
+      - name: matched_product_name
+        description: "Product name that matched the incretin pattern during extraction."
+
+  - name: stg_open_payments__record_products
+    description: "One row per Open Payments record with the number and list of in-scope incretin products it names. Grain: record_id. Row count equals the distinct record count of stg_open_payments__general."
+    columns:
+      - name: record_id
+        description: "Open Payments record identifier."
+        tests: [not_null, unique]
+      - name: program_year
+        description: "Program year."
+      - name: covered_recipient_type
+        description: "Recipient type."
+      - name: is_physician
+        description: "Physician flag."
+      - name: covered_recipient_npi
+        description: "Recipient NPI."
+      - name: total_amount_usd
+        description: "Record total in USD."
+      - name: n_inscope_products
+        description: "Distinct in-scope products named in the record."
+      - name: products
+        description: "Semicolon-separated product keys."
+
+  - name: stg_open_payments__product_split
+    description: "Product-level attribution of Open Payments records. Grain: record_id x product. amount_equal_split divides the record over its products (sums to the record total); amount_overlapping counts the full amount for each product (sums exceed the headline total; label as overlapping)."
+    columns:
+      - name: record_id
+        description: "Open Payments record identifier."
+        tests: [not_null]
+      - name: program_year
+        description: "Program year."
+      - name: is_physician
+        description: "Physician flag."
+      - name: covered_recipient_npi
+        description: "Recipient NPI."
+      - name: product
+        description: "In-scope product key (brand, or ingredient for generic-only names)."
+        tests: [not_null]
+      - name: record_amount_usd
+        description: "Total amount of the record in USD."
+      - name: n_inscope_products
+        description: "Distinct in-scope products in the record."
+      - name: amount_equal_split
+        description: "record_amount_usd / n_inscope_products."
+      - name: amount_overlapping
+        description: "Full record amount, counted once per product named (overlapping)."
+
+  - name: stg_nppes__provider
+    description: "NPPES provider file restricted to NPIs in the project extracts. Grain: npi."
+    columns:
+      - name: npi
+        description: "National Provider Identifier."
+        tests: [not_null, unique]
+      - name: entity_type_code
+        description: "1 = individual, 2 = organisation."
+      - name: credential_text
+        description: "Provider credential text."
+      - name: practice_state
+        description: "Practice location state."
+      - name: practice_zip5
+        description: "Five-digit practice zip code."
+      - name: deactivation_date
+        description: "NPI deactivation date (text as published), NULL if active."
+      - name: taxonomy_code_1
+        description: "First listed taxonomy code."
+      - name: primary_taxonomy_code
+        description: "Taxonomy code flagged primary (first slot with switch Y); NULL if none."
+
+  - name: stg_nucc__taxonomy
+    description: "NUCC provider taxonomy code set. Grain: taxonomy_code."
+    columns:
+      - name: taxonomy_code
+        description: "Ten-character taxonomy code."
+        tests: [not_null, unique]
+      - name: grouping
+        description: "Taxonomy grouping."
+      - name: classification
+        description: "Taxonomy classification."
+      - name: specialization
+        description: "Taxonomy specialization."
+      - name: display_name
+        description: "Display name."
+      - name: section
+        description: "Individual or non-individual section."
+
+  - name: stg_ctgov__studies
+    description: "ClinicalTrials.gov studies matching an incretin ingredient. Grain: nct_id."
+    columns:
+      - name: nct_id
+        description: "ClinicalTrials.gov identifier."
+        tests: [not_null, unique]
+      - name: title
+        description: "Brief title."
+      - name: official_title
+        description: "Official title."
+      - name: phase
+        description: "Trial phase."
+      - name: status
+        description: "Overall recruitment status."
+      - name: start_date
+        description: "Start date text (YYYY-MM or YYYY-MM-DD)."
+      - name: start_date_parsed
+        description: "Start date as a date; missing day set to 01."
+      - name: primary_completion_date
+        description: "Primary completion date text."
+      - name: completion_date
+        description: "Completion date text."
+      - name: sponsor
+        description: "Lead sponsor."
+      - name: sponsor_class
+        description: "Sponsor class."
+      - name: enrollment
+        description: "Enrollment count."
+      - name: enrollment_type
+        description: "Actual or estimated."
+      - name: results_posted
+        description: "True when results are posted."
+      - name: conditions
+        description: "Conditions."
+      - name: interventions
+        description: "Interventions."
+      - name: study_type
+        description: "Study type."
+      - name: last_update
+        description: "Last update date text."
+      - name: matched_ingredients
+        description: "Incretin ingredients matched in the record."
+
+  - name: stg_fda__applications
+    description: "Drugs@FDA applications joined to products. Grain: application_number x product_no."
+    columns:
+      - name: application_number
+        description: "FDA application number (NDA/BLA/ANDA, six digits)."
+        tests: [not_null]
+      - name: application_type
+        description: "Application type (NDA, ANDA, BLA)."
+      - name: sponsor_name
+        description: "Sponsor name."
+      - name: product_no
+        description: "Product number within the application."
+      - name: form
+        description: "Dosage form and route."
+      - name: strength
+        description: "Strength."
+      - name: drug_name
+        description: "Drug name."
+      - name: active_ingredient
+        description: "Active ingredient."
+
+  - name: stg_fda__supplements
+    description: "Drugs@FDA submissions (original and supplements). Grain: application_number x submission_type x submission_no. SubmissionType padding and SubmissionNo dtype are normalised."
+    columns:
+      - name: application_number
+        description: "FDA application number."
+        tests: [not_null]
+      - name: submission_type
+        description: "ORIG or SUPPL."
+      - name: submission_no
+        description: "Submission (supplement) number."
+      - name: submission_status
+        description: "Status (AP = approved)."
+      - name: submission_status_date
+        description: "Date of the status."
+      - name: review_priority
+        description: "Review priority (priority or standard)."
+      - name: submission_class_code
+        description: "Submission class code."
+      - name: submission_class_description
+        description: "Submission class description."
+
+  - name: stg_nhanes__demo
+    description: "NHANES demographics, two cycles stacked (cycle = 2021_2023 or 2017_2020). Grain: cycle x seqn. Keeps SDMVSTRA, SDMVPSU and the interview and MEC exam weights. Generated from the raw tables, official variable names lower-cased; a variable absent in one cycle is NULL for it."
+    columns:
+      - name: cycle
+        description: "Survey cycle: 2021_2023 (August 2021 to August 2023) or 2017_2020 (pre-pandemic, to March 2020)."
+        tests: [not_null, {accepted_values: {arguments: {values: ['2021_2023', '2017_2020']}}}]
+      - name: seqn
+        description: "NHANES respondent sequence number."
+        tests: [not_null]
+  - name: stg_nhanes__bmx
+    description: "NHANES body measures (BMX), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__bpxo
+    description: "NHANES oscillometric blood pressure (BPXO), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__bpq
+    description: "NHANES blood pressure and cholesterol questionnaire (BPQ), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__ghb
+    description: "NHANES glycohemoglobin (GHB), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__diq
+    description: "NHANES diabetes questionnaire (DIQ), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__mcq
+    description: "NHANES medical conditions questionnaire (MCQ), two cycles stacked. Grain: cycle x seqn."
+  - name: stg_nhanes__rxq_rx
+    description: "NHANES prescription medications (RXQ_RX), two cycles stacked. Grain: cycle x seqn x medication line. The 2021-2023 file has no drug names, only codes."
+  - name: stg_nhanes__rxq_drug
+    description: "NHANES RXQ_DRUG drug-code lookup (1988-2020). Grain: drug code."
+
+  - name: stg_meps__fyc_2023
+    description: "MEPS 2023 Full Year Consolidated file (HC-248). Grain: dupersid. Official variable names lower-cased."
+    columns:
+      - name: dupersid
+        description: "MEPS person identifier."
+        tests: [not_null, unique]
+  - name: stg_meps__fyc_2024
+    description: "MEPS 2024 Full Year Consolidated file (two raw parts joined one-to-one on DUPERSID). Grain: dupersid. 23 columns identical to an earlier column are not exposed because of the PostgreSQL 1,600-column limit (listed in the SQL header)."
+    columns:
+      - name: dupersid
+        description: "MEPS person identifier."
+        tests: [not_null, unique]
+  - name: stg_meps__cond_2023
+    description: "MEPS 2023 medical conditions file. Grain: condition record. Conditions use 3-character ICD-10 codes."
+  - name: stg_meps__cond_2024
+    description: "MEPS 2024 medical conditions file. Grain: condition record. Conditions use 3-character ICD-10 codes."
+  - name: stg_meps__rx_2023
+    description: "MEPS 2023 prescribed medicines file. Grain: prescription purchase record."
+  - name: stg_meps__rx_2024
+    description: "MEPS 2024 prescribed medicines file. Grain: prescription purchase record."
