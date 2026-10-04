@@ -11,7 +11,7 @@ for (suffix in c("", "_k5")) {
   pp <- prof |> transmute(segment = factor(segment, levels = lv), `Median 2024 claims` = median_claims, `Median growth (log ratio 2024 to 2023)` = median_growth_log, `Tirzepatide share of claims (%)` = mean_tirz_share_pct,
                           `New in 2024 (% of segment)` = share_new_2024_pct, `Share of all prescribers (%)` = share_of_prescribers_pct, `Share of all claims (%)` = share_of_claims_pct, `Stability (mean Jaccard)` = mean_jaccard) |>
     pivot_longer(-segment, names_to = "feature", values_to = "value") |> mutate(feature = factor(feature, levels = unique(feature)))
-  ttl <- sprintf("Part D incretin prescribers fall into %d segments; the largest by claims, %s, wrote %s%% of 2024 claims", k, sub("^[A-Z]: ", "", prof$segment[which.max(prof$share_of_claims_pct)]), fmt1(max(prof$share_of_claims_pct)))
+  ttl <- sprintf("%sPart D incretin prescribers fall into %d segments; the largest by claims, %s, wrote %s%% of 2024 claims", ifelse(k == 2, "", "Exploratory: "), k, sub("^[A-Z]: ", "", prof$segment[which.max(prof$share_of_claims_pct)]), fmt1(max(prof$share_of_claims_pct)))
   p <- ggplot(pp, aes(value, segment)) + geom_segment(aes(x = 0, xend = value, yend = segment), colour = col_context) + geom_point(colour = col_treated, size = 3) +
     geom_text(aes(label = format(round(value, 2), nsmall = 1, trim = TRUE)), hjust = -0.3, size = 2.7) +
     facet_wrap(~feature, nrow = 1, scales = "free_x", labeller = label_wrap_gen(16)) + scale_x_continuous(expand = expansion(mult = c(0.05, 0.45))) +

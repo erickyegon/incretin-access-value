@@ -1,8 +1,8 @@
 parameter,low_label,high_label,net_low,net_high,span
-Module C effect (95% CI of every event time),lower CI,upper CI,47781431,194194431,146413000
-Rebate share,79.3% (implied by $245),23.1% (statutory minimum),51230823,190744951,139514128
-Prior authorization multiplier,0.5,1.0,80658591,161317183,80658591
-Years 3-5 scenario,decline,continued growth,98566998,175737940,77170942
-Price scenario,announced $245 net,central rebate,51230823,120987887,69757064
-Uptake multiplier,0.75,1.25,90740915,151234859,60493944
-Gross cost per prescription,"$1,164","$1,252",118768501,127694115,8925614
+Module C effect (95% CI of every event time),lower CI,upper CI,63708574,258925907,195217333
+Rebate share,79.3% (implied by $245),23.1% (statutory minimum),68307764,254326602,186018838
+Prior authorization multiplier,0.5 (tight),1.25 (loose),80658591,201646479,120987887
+Years 3-5 scenario,decline,continued growth,131422664,234317254,102894590
+Price scenario,announced $245 net,central rebate,68307764,161317183,93009419
+Uptake multiplier,0.75,1.25,120987887,201646479,80658591
+Gross cost per prescription,"$1,164","$1,252",158358001,170258820,11900819

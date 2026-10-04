@@ -19,16 +19,23 @@
 ## Wegovy and Ozempic by specialty, 2024 ([table](tables/moduleD_wegovy_vs_ozempic_specialty_2024.csv), [figure](figures/34_partd_wegovy_vs_ozempic_specialty.png))
 - Wegovy had 76,176 Part D claims from 3,956 prescribers in 2024. Cardiology wrote 14.5% of Wegovy claims against 1.2% of Ozempic claims, consistent with the cardiovascular indication added in March 2024. It does not show obesity use.
 
-## Segments ([k selection](tables/moduleD_segmentation_k_selection.csv), [profiles](tables/moduleD_segment_profiles.csv), [figure](figures/35_partd_segments.png))
-- The pre-specified rule (highest silhouette on a 4,000-prescriber subsample, deviation 10) chose two segments (silhouette 0.709): mid-volume primary care (150,085 prescribers, 92.5% of claims) and lower-volume nurse practitioners and physician assistants new in 2024 (49,737 prescribers, 7.5%). Stability is 1.0 because the split is simply new versus continuing prescribers, so it says little beyond that.
-- A supplementary five-segment solution (silhouette 0.507, deviation 11; [profiles](tables/moduleD_segment_profiles_k5.csv), [figure](figures/35_partd_segments_k5.png)) is more descriptive: high-volume primary care with some tirzepatide (60,392 prescribers, 66.6% of claims, stability 0.72); mid-volume nurse practitioners and physician assistants with some tirzepatide (40,328; 13.7%; 0.56); mid-volume primary care with little or no tirzepatide (45,773; 11.7%; 0.69); lower-volume primary care new in 2024 (43,345; 6.7%; 0.87); lower-volume nurse practitioners and physician assistants new in 2024, mostly tirzepatide (9,984; 1.3%; 0.55). Two segments have stability below 0.6, so treat their boundaries as soft.
+## Segments (exploratory; [profiles](tables/moduleD_segment_profiles_k5.csv), [figure](figures/35_partd_segments_k5.png))
+The pre-specified rule (highest silhouette, [k selection](tables/moduleD_segmentation_k_selection.csv)) gave a two-segment split of new versus continuing prescribers ([profiles](tables/moduleD_segment_profiles.csv)), so the five-segment solution below is supplementary and exploratory (silhouette 0.507, deviation 11); stability (mean bootstrap Jaccard, 1 = identical each time) is shown with each segment.
+- High-volume primary care with some tirzepatide: 60,392 prescribers, 66.6% of claims, stability 0.72.
+- Mid-volume nurse practitioners and physician assistants with some tirzepatide: 40,328; 13.7%; stability 0.56.
+- Mid-volume primary care with little or no tirzepatide: 45,773; 11.7%; stability 0.69.
+- Lower-volume primary care new in 2024: 43,345; 6.7%; stability 0.87.
+- Lower-volume nurse practitioners and physician assistants new in 2024, mostly tirzepatide: 9,984; 1.3%; stability 0.55.
+Two segments have stability near 0.55, so treat their boundaries as soft.
 - The share of claims for beneficiaries 65 and over is populated for only 58.5% of rows (below the 80% rule), so it was not used.
 - Segments are named by profile; no individual is named and no prescriber-level output is saved.
 
 ## Industry payments ([descriptives](tables/moduleD_payments_descriptives.csv), [binned](tables/moduleD_payments_binned.csv), [model](tables/moduleD_payments_model.csv), [figure](figures/36_payments_binned.png))
 - In 2023, 36.6% of the 199,822 prescribers with 2024 claims had in-scope payments (73,076 payees; 47.8% of endocrinologists, 41.3% of nurse practitioners and physician assistants, 34.7% of primary care physicians, 39.6% of cardiologists).
 - Prescribers with no payment averaged 74.6 claims in 2024 against 271 in the top payment decile; their 2022 baseline claims also differed (26.8 against 139), so raw gaps reflect who gets paid.
-- Negative binomial model with robust intervals: $1,000 of payments in the year before is associated with 1.50 times the claims (1.48 to 1.52) for 2023 payments and 2024 claims, and 1.45 (1.43 to 1.48) for 2022 payments and 2023 claims.
+- Model form (exact): negative binomial regression of 2024 claims on log(1 + prior-year payments in dollars, not thousands), adjusted for specialty group, state and log(1 + claims two years earlier); robust (HC0) intervals ([model](tables/moduleD_payments_model.csv)). Because the predictor is logged, the coefficient is not a per-$1,000 effect; a "per $1,000" statement would be wrong, so clear contrasts are reported instead ([contrasts](tables/moduleD_payments_contrasts.csv)).
+- Incidence rate ratios for 2023 payments and 2024 claims: any payment versus none, at the median payee amount ($87): 1.30 (95% CI 1.29 to 1.31); each doubling of the amount among payees: 1.05 (1.04 to 1.05); $1,000 versus none, a contrast and not a slope: 1.50 (1.48 to 1.52). The 2022 payments and 2023 claims check gives 1.28 (1.27 to 1.29) for any payment, 1.04 per doubling.
+- Dose-response by payee decile ([binned table](tables/moduleD_payments_binned.csv)): unadjusted mean claims rise from 74.6 with no payment to 99.3 in the lowest payee decile and 270.8 in the highest, but baseline (2022) claims rise in parallel (26.8, 36.8, 138.7), which is why the adjusted ratios above are much smaller than the raw gap.
 - This is an association among prescribers, not an effect of payments: payments go to prescribers who already write more, and the model cannot separate the two. It is reported in aggregate only.
 
 ## What this does not show

@@ -1,0 +1,5 @@
+pa_multiplier,five_year_net,five_year_gross,pmpm_net,label
+0.5,80658591.44,165361899.7,1.34,tight PA (assumption)
+0.75,120987887.15,248042849.56,2.02,tight PA (assumption)
+1,161317182.87,330723799.41,2.69,PA as observed in the 10 covering states (central)
+1.25,201646478.59,413404749.26,3.36,loose PA (assumption)

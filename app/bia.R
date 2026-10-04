@@ -24,17 +24,18 @@ bia_run <- function(p) {
   ann <- data.frame(year = 1:5, prescriptions = tapply(rx, yr, sum), gross = tapply(gross, yr, sum), net = tapply(net, yr, sum))
   ann$pmpm_net <- ann$net / (p$plan * 12); ann$pmpm_gross <- ann$gross / (p$plan * 12)
   ann$treated_member_years <- ann$prescriptions / 12
-  ann$cost_per_treated_member_year <- ifelse(ann$treated_member_years > 0, ann$net / ann$treated_member_years, NA_real_)
+  ann$net_cost_per_member_year_continuous <- ifelse(ann$treated_member_years > 0, ann$net / ann$treated_member_years, NA_real_)   # 12 fills a year (assumption)
   ann$treated_members <- ann$prescriptions / p$fills
+  ann$net_cost_per_user_year <- ifelse(ann$treated_members > 0, ann$net / ann$treated_members, NA_real_)   # observed purchases per user-year (MEPS)
   pool <- p$plan * p$adult_share * p$eligible_share
   ann$eligible_pool <- pool; ann$exceeds_pool <- ann$treated_members > pool
   tot <- list(five_year_gross = sum(gross), five_year_net = sum(net), five_year_prescriptions = sum(rx), pmpm_net = sum(net) / (p$plan * 60), pmpm_gross = sum(gross) / (p$plan * 60),
-              cost_per_treated_member_year = sum(net) / (sum(rx) / 12))
+              net_cost_per_member_year_continuous = sum(net) / (sum(rx) / 12), net_cost_per_user_year = sum(net) / (sum(rx) / p$fills))
   list(quarterly = data.frame(quarter = 1:20, year = yr, att = a, prescriptions = rx, gross = gross, net = net), annual = ann, total = tot)
 }
 
 #' Default parameters from the input file (central values).
 bia_defaults <- function(inp) {
-  list(plan = 1e6, att9 = inp$att$estimate, y35 = "plateau", uptake_mult = 1, pa_mult = 0.75, gross = inp$gross$central, rebate = inp$rebate$central, price = "rebate",
+  list(plan = 1e6, att9 = inp$att$estimate, y35 = "plateau", uptake_mult = 1, pa_mult = 1, gross = inp$gross$central, rebate = inp$rebate$central, price = "rebate",
        announced = inp$announced, fills = inp$fills$central, adult_share = inp$adult_share, eligible_share = inp$eligible_share)
 }

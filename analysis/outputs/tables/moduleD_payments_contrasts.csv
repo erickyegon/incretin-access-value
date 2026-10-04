@@ -1,0 +1,9 @@
+claims_year,payments_year,contrast,model,incidence_rate_ratio,ci_low,ci_high,median_payee_amount
+2024,2023,"Any payment versus none, at the median payee amount ($87)",two-part: any payment + log(amount / median) among payees,1.298,1.286,1.309,86.94
+2024,2023,Each doubling of the payment amount among payees,two-part: any payment + log(amount / median) among payees,1.047,1.043,1.051,86.94
+2024,2023,Median payee amount ($87) versus none,log(1 + dollars),1.301,1.29,1.313,86.94
+2024,2023,"$1,000 versus none (a contrast at $1,000, not a per-$1,000 slope)",log(1 + dollars),1.501,1.481,1.522,86.94
+2023,2022,"Any payment versus none, at the median payee amount ($98)",two-part: any payment + log(amount / median) among payees,1.278,1.266,1.291,97.71
+2023,2022,Each doubling of the payment amount among payees,two-part: any payment + log(amount / median) among payees,1.044,1.04,1.048,97.71
+2023,2022,Median payee amount ($98) versus none,log(1 + dollars),1.283,1.27,1.295,97.71
+2023,2022,"$1,000 versus none (a contrast at $1,000, not a per-$1,000 slope)",log(1 + dollars),1.455,1.434,1.476,97.71
