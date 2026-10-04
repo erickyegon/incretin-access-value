@@ -1,7 +1,7 @@
 # Module E in plain language: what covering Wegovy and Zepbound could cost a Medicaid programme
 
 **Question.** What would covering Wegovy and Zepbound for obesity cost a Medicaid programme of 1 million enrollees over five years, and how much do access policy, price and uptake change that?
-(Plan: [plan_moduleE.md](../plan_moduleE.md), committed before any result; departures in [deviations.md](deviations.md), item 12 is the prior authorization change; method follows the ISPOR budget impact guideline, [saved page](../../docs/sources/ispor_budget_impact_good_practice_II.html).)
+(Plan: [plan_moduleE.md](../plan_moduleE.md), committed before any result; departures in [deviations.md](deviations.md), item 12 is the prior authorization change; method follows the ISPOR budget impact guideline, [original page](https://www.ispor.org/heor-resources/good-practices/article/principles-of-good-practice-for-budget-impact-analysis-ii).)
 
 **How it works.** The extra prescriptions per 1,000 enrollees per quarter that Module C attributes to coverage (quarters 1 to 9; [inputs](tables/moduleC_for_budget_model.csv)) are scaled to 1 million enrollees and priced.
 Module C measures prescriptions actually filled in the ten covering states, under the prior authorization (PA) rules those states actually used (9 of the 10 recorded PA; Tennessee's is not recorded; BMI 30 or more, with BMI 27 to 29 allowed with a weight-related condition, is recorded for Mississippi, North Carolina and Kansas and for Pennsylvania with prescriber-determined candidacy; the other six states' thresholds are not recorded in [the coverage file](../../data/reference/medicaid_obesity_coverage.csv)).

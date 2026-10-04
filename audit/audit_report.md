@@ -22,10 +22,12 @@ Run: 2026-10-04. Key numbers: 117 rows.
 | no NPI-level or named-clinician columns in any output table | PASS |  |
 | no manufacturer named in the payments figure alt text or titles | PASS |  |
 | no manufacturer named in the payments script titles | PASS |  |
-| every row of docs/sources/sources_log.csv points to a saved file | PASS |  |
-| external-fact key numbers (x_*) point to saved source files | PASS | whitehouse_fact_sheet_mfn_2025-11.txt, cms_medicare_glp1_bridge_page.txt, cms_medicare_glp1_bridge_page.txt, uscode_42_1396r8_medicaid_drug_rebate.txt |
+| every source marked in_repo in docs/sources_index.csv has its saved copy in the repository | PASS |  |
+| every document under docs/sources is listed in the index | PASS |  |
+| no copyrighted third-party copy is tracked (index in_repo = no for KFF, ISPOR, Sawtooth, journal articles, Cornell LII) | PASS |  |
+| external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | PASS |  |
+| git status is clean | FAIL |  M .gitignore;  M PUBLISH.md;  M README.md;  M analysis/outputs/deviations.md;  M analysis/outputs/key_numbers.csv |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 

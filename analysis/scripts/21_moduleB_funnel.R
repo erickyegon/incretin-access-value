@@ -1,5 +1,5 @@
 # Module B step 3: patient funnel (measured vs modelled) and the payer-specific brand split. plan_moduleB.md.
-# Measured: NHANES survey estimates (script 20). Modelled: GLP-1 use from the KFF Health Tracking Poll (docs/sources), propagated with 10,000 draws
+# Measured: NHANES survey estimates (script 20). Modelled: GLP-1 use from the KFF Health Tracking Poll (original URLs in docs/sources_index.csv), propagated with 10,000 draws
 # (seed 20261004 + 2000): poll share ~ Normal(12%, margin of error 3 points / 1.96); diagnosed-diabetes users ~ Uniform(35%, 55%) around KFF's 45% (an ASSUMED
 # range: KFF says subgroup margins are larger than the full-sample 3 points and does not give the subgroup n in the text retrieved); NHANES counts ~ Normal(estimate, CI/3.92).
 source(here::here("R", "db.R"))
@@ -35,7 +35,7 @@ steps <- tibble::tribble(
 save_table(steps, "moduleB_funnel", gt(steps |> select(pathway, step, label, status, est, lo, hi, source)) |>
   tab_header(title = "Patient funnel: measured and modelled steps", subtitle = "Millions of U.S. adults; modelled ranges are 5th-95th percentile of 10,000 draws") |>
   cols_label(est = "Estimate", lo = "Low", hi = "High") |>
-  tab_source_note("Measured steps: NHANES survey estimates with 95% CIs. Modelled steps: KFF Health Tracking Poll (docs/sources) with the stated assumptions. Counts of people, not dollars."))
+  tab_source_note("Measured steps: NHANES survey estimates with 95% CIs. Modelled steps: KFF Health Tracking Poll (original URLs in docs/sources_index.csv) with the stated assumptions. Counts of people, not dollars."))
 
 # ---- figure: horizontal funnel, measured solid, modelled hatched -------------------------------------------------------------------------
 plot_path <- function(d, title_lab) {

@@ -4,7 +4,7 @@
 (Plan: [plan_moduleB.md](../plan_moduleB.md), committed before any result; departures are in [deviations.md](deviations.md).)
 
 **Data.** NHANES adults aged 18 and over, August 2021 to August 2023 (primary) and 2017 to March 2020 (comparison), analysed with the survey design and the weights NCHS prescribes
-([variables and codebook descriptions](tables/nhanes_variables_used.csv)); KFF Health Tracking Polls for the share of adults using a GLP-1 drug (saved in `docs/sources/`); Medicaid and Medicare data for the brand split.
+([variables and codebook descriptions](tables/nhanes_variables_used.csv)); KFF Health Tracking Polls for the share of adults using a GLP-1 drug (see `docs/sources_index.csv`); Medicaid and Medicare data for the brand split.
 
 ## Who is eligible (measured)
 - **Adults.** The weights represent 253.8 million U.S. adults in 2021–2023 (civilian, non-institutionalised) ([totals](tables/moduleB_adult_totals.csv)).

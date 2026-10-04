@@ -39,7 +39,7 @@ Raw and interim data are not committed; the scripts download them and record the
 2. **Build.** `cd dbt && dbt deps && dbt seed && dbt build` (staging, intermediate and marts; the tests run with the build). Then `python scripts/build/build_counts.py`.
 3. **Analyse.** `cd analysis` and `Rscript run_all.R` (packages pinned in `analysis/renv.lock`; R 4.6), then `Rscript scripts/50_key_numbers.R`.
 4. **Render.** `quarto render report`, `quarto render deck` (then `node deck/make_pdf.js deck/deck.html deck/deck.pdf`), `quarto render research_pack` and `python site/build_site.py`. Run the Shiny app with `shiny::runApp("app")`.
-5. **Audit.** `Rscript audit/check_numbers.R` checks that every public number matches `key_numbers.csv`. `python audit/check_links.py <site-url>` checks the links.
+5. **Audit.** `Rscript audit/check_numbers.R` checks that every public number matches `key_numbers.csv`.
 
 ## Repository map
 
@@ -47,12 +47,12 @@ Raw and interim data are not committed; the scripts download them and record the
 - `dbt/`: staging, intermediate and marts models, seeds and tests (54 models, 10 seeds, 126 tests, counted from the dbt manifest). Lineage: `docs/figures/dbt_lineage.png`.
 - `analysis/`: R project (renv), scripts by module (B, C, D, E), outputs (`tables`, `figures`, summaries), `key_numbers.csv`.
 - `app/`: Shiny budget impact model. `report/`, `deck/`, `site/`, `research_pack/`: the deliverables above.
-- `docs/`: data dictionary, warehouse notes and every saved source document (`docs/sources`, with `sources_log.csv`).
+- `docs/`: data dictionary, warehouse notes and every source (`docs/sources_index.csv` lists URL, access date and checksum for all of them; U.S. government documents and open-licence manuals are kept in `docs/sources`, copyrighted third-party copies are kept locally only).
 - `audit/`: the number audit and its allow-list.
 
 ## Data sources
 
-All were accessed between 2026-10-03 and 2026-10-04 (per-file dates, URLs and checksums in `data/manifest.csv`; saved policy and source documents in `docs/sources/sources_log.csv`). They are U.S. federal public data released for public use, and each agency's terms of use apply; the KFF poll results are cited from KFF's published pages.
+All were accessed between 2026-10-03 and 2026-10-04 (per-file dates, URLs and checksums in `data/manifest.csv`; all sources, kept or not, in `docs/sources_index.csv`). They are U.S. federal public data released for public use, and each agency's terms of use apply; the KFF poll results are cited from KFF's published pages.
 
 - CMS Medicaid State Drug Utilization Data, Medicaid enrollment, NADAC, spending by drug (data.medicaid.gov, data.cms.gov)
 - CMS Medicare Part D Prescribers by Provider and Drug; CMS Open Payments (general payments); NPPES; NUCC taxonomy

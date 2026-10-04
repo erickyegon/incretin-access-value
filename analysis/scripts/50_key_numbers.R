@@ -113,7 +113,7 @@ for (u in c("CA", "PA")) add(paste0("c_withdraw_", tolower(u)), f1(100 * wd$norm
 add("x_price_245", "245", "USD per month", "announced price", "Announced Medicare price of Ozempic, Wegovy, Mounjaro and Zepbound; state Medicaid programmes to have access at these prices (White House fact sheet, November 2025)", "../docs/sources/whitehouse_fact_sheet_mfn_2025-11.txt", "sentence 'The Medicare prices of Ozempic, Wegovy, Mounjaro, and Zepbound will be $245'")
 add("x_bridge_copay", "50", "USD copay", "demonstration", "Beneficiary copay under the Medicare GLP-1 Bridge", "../docs/sources/cms_medicare_glp1_bridge_page.txt", "FAQ 'What is the copay...': 'Eligible beneficiaries will have a $50 copay'")
 add("x_bridge_window", "July 1, 2026 to December 31, 2027", "dates", "demonstration period", "Medicare GLP-1 Bridge period (CMS)", "../docs/sources/cms_medicare_glp1_bridge_page.txt", "overview and FAQ on the extension")
-add("x_rebate_floor_statute", "23.1", "percent of average manufacturer price", "statutory minimum", "Basic Medicaid rebate for brand drugs is at least 23.1 percent (42 U.S.C. 1396r-8)", "../docs/sources/uscode_42_1396r8_medicaid_drug_rebate.txt", "section 1396r-8(c)(1)(B)")
+add("x_rebate_floor_statute", "23.1", "percent of average manufacturer price", "statutory minimum", "Basic Medicaid rebate for brand drugs is at least 23.1 percent (42 U.S.C. 1396r-8)", "https://www.law.cornell.edu/uscode/text/42/1396r-8", "section 1396r-8(c)(1)(B)")
 
 # ---- build counts (from the dbt manifest, via scripts/build/build_counts.py) ---------------------------------------------------------------------------------------
 bc <- readr::read_csv(here::here("outputs", "build_counts.csv"), show_col_types = FALSE, progress = FALSE)

@@ -20,3 +20,4 @@ analysis/outputs/cache/
 *.knit.md
 *.rmarkdown
 deck/deck.html
+docs/sources_local/

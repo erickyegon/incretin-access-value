@@ -54,12 +54,12 @@ Raw and interim data are not committed; the scripts download them and record the
 - `dbt/`: staging, intermediate and marts models, seeds and tests ({d("build_models")} models, {d("build_seeds")} seeds, {d("build_tests")} tests, counted from the dbt manifest). Lineage: `docs/figures/dbt_lineage.png`.
 - `analysis/`: R project (renv), scripts by module (B, C, D, E), outputs (`tables`, `figures`, summaries), `key_numbers.csv`.
 - `app/`: Shiny budget impact model. `report/`, `deck/`, `site/`, `research_pack/`: the deliverables above.
-- `docs/`: data dictionary, warehouse notes and every saved source document (`docs/sources`, with `sources_log.csv`).
+- `docs/`: data dictionary, warehouse notes and every source (`docs/sources_index.csv` lists URL, access date and checksum for all of them; U.S. government documents and open-licence manuals are kept in `docs/sources`, copyrighted third-party copies are kept locally only).
 - `audit/`: the number audit and its allow-list.
 
 ## Data sources
 
-All were accessed between 2026-10-03 and 2026-10-04 (per-file dates, URLs and checksums in `data/manifest.csv`; saved policy and source documents in `docs/sources/sources_log.csv`). They are U.S. federal public data released for public use, and each agency's terms of use apply; the KFF poll results are cited from KFF's published pages.
+All were accessed between 2026-10-03 and 2026-10-04 (per-file dates, URLs and checksums in `data/manifest.csv`; all sources, kept or not, in `docs/sources_index.csv`). They are U.S. federal public data released for public use, and each agency's terms of use apply; the KFF poll results are cited from KFF's published pages.
 
 - CMS Medicaid State Drug Utilization Data, Medicaid enrollment, NADAC, spending by drug (data.medicaid.gov, data.cms.gov)
 - CMS Medicare Part D Prescribers by Provider and Drug; CMS Open Payments (general payments); NPPES; NUCC taxonomy

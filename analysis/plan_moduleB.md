@@ -6,7 +6,7 @@ Written before any Module B result. Changes after results go in `analysis/output
 How many U.S. adults are eligible for obesity-labelled incretins, how many are diagnosed and treated, and how might treatment grow over five years (2026-2030)?
 
 ## Data
-`mart_nhanes_adults` (NHANES, adults 18 and over; 2021-2023 primary, 2017-March 2020 pre-pandemic for the trend comparison; the mart was extended for this module to include ages 18-19, the health insurance files HIQ_L and P_HIQ, and the condition variables below). Brand split: `mart_sdud_state_quarter_brand` (Medicaid, covered states) and `mart_prescriber_year` (Part D 2024). Published national GLP-1 use: KFF Health Tracking Polls (saved in `docs/sources/`).
+`mart_nhanes_adults` (NHANES, adults 18 and over; 2021-2023 primary, 2017-March 2020 pre-pandemic for the trend comparison; the mart was extended for this module to include ages 18-19, the health insurance files HIQ_L and P_HIQ, and the condition variables below). Brand split: `mart_sdud_state_quarter_brand` (Medicaid, covered states) and `mart_prescriber_year` (Part D 2024). Published national GLP-1 use: KFF Health Tracking Polls (see `docs/sources_index.csv`).
 
 ## Survey method
 R `survey` package: `svydesign(ids = ~sdmvpsu, strata = ~sdmvstra, weights = ~weight, nest = TRUE, data = <all adults 18+>)`, then `subset()` on the design object (never filtering rows first). Weights, as the NCHS documentation says:

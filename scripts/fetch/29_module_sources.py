@@ -1,5 +1,6 @@
 """Save the external source documents that Modules B, D and E cite (no figure is taken from memory): each document is downloaded, saved under
-docs/sources/ (original file plus a plain-text copy) and logged in docs/sources/sources_log.csv with URL, access date and sha256. Idempotent.
+docs/sources_local/ (a gitignored local archive: original file plus a plain-text copy) and logged in docs/sources_local/sources_log.csv with URL, access date and sha256. Idempotent.
+scripts/build/build_sources_index.py then copies U.S. government documents and open-licence manuals into docs/sources/ and writes docs/sources_index.csv; copyrighted third-party copies stay local.
 The CMS Medicare GLP-1 Bridge pages were retrieved earlier (data/raw/policy_documents) and are copied in with their original access date."""
 import csv
 import hashlib
@@ -12,7 +13,7 @@ from pathlib import Path
 from common import RAW, ROOT, get_logger, request
 
 log = get_logger("29_module_sources")
-OUT = ROOT / "docs" / "sources"
+OUT = ROOT / "docs" / "sources_local"
 OUT.mkdir(parents=True, exist_ok=True)
 
 SOURCES = [

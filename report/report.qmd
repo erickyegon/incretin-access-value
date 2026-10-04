@@ -178,7 +178,7 @@ Module F is a design pack, rendered as `research_pack/research_pack.pdf`: a one-
 
 # Reproducibility
 
-The code, the dbt project and the scripts are in the repository; raw and interim data are not committed and are re-downloaded by the scripts in `scripts/fetch`. In order: load (`scripts/load`), build (`dbt build` in `dbt/`), analyse (`analysis/run_all.R`, then `scripts/build/build_counts.py` and `analysis/scripts/50_key_numbers.R`), render (`quarto render report`, `deck`, `research_pack`). Every source is saved with its URL and access date under `docs/sources/` (log: `docs/sources/sources_log.csv`), and the R packages are pinned in `analysis/renv.lock`.
+The code, the dbt project and the scripts are in the repository; raw and interim data are not committed and are re-downloaded by the scripts in `scripts/fetch`. In order: load (`scripts/load`), build (`dbt build` in `dbt/`), analyse (`analysis/run_all.R`, then `scripts/build/build_counts.py` and `analysis/scripts/50_key_numbers.R`), render (`quarto render report`, `deck`, `research_pack`). Every source is listed with its URL, access date and checksum in `docs/sources_index.csv`; U.S. government documents and open-licence manuals are kept in `docs/sources/`, and copies of copyrighted third-party pages stay local only, and the R packages are pinned in `analysis/renv.lock`.
 
 # AI-use statement
 
