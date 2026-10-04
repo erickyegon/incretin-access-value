@@ -11,7 +11,7 @@ def fetch(url):
 rows = []
 site = (root / "site" / "index.html").read_text(encoding="utf-8")
 for href in sorted(set(re.findall(r'(?:href|src)="([^"]+)"', site))):
-    if href.startswith("#") or href.endswith(".css") and not base and False: continue
+    if href.startswith("#") or href.startswith("mailto:"): continue
     if href.startswith("http"):
         if "fonts.g" in href: continue
         rows.append(("site", href, fetch(href)))
