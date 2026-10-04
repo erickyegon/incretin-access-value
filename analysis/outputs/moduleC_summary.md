@@ -3,8 +3,8 @@
 **Question.** When a state Medicaid program starts covering Wegovy and Zepbound for obesity, how much does use rise, and how fast? What do the first withdrawals suggest?
 (Plan: [analysis_plan_moduleC.md](../analysis_plan_moduleC.md), written before any model was run; changes after results are in [deviations.md](deviations.md).)
 
-**Data.** Medicaid prescriptions per 1,000 Medicaid enrollees, 50 states and DC, 2018 Q1 to 2025 Q3 (CMS State Drug Utilization Data, gross of rebates). Ten states are treated
-(coverage start dates from state documents: [coverage_timing_by_state.csv](tables/coverage_timing_by_state.csv), [map](figures/01_coverage_timing_map.png)); 34 never covered. Counts under 11 are hidden by CMS; at most 1.0% of
+**Data.** Medicaid prescriptions per 1,000 Medicaid enrollees, 2018 Q1 to 2025 Q3 (CMS State Drug Utilization Data, gross of rebates). The primary analysis uses 44 jurisdictions: 10 treated states and 34 never-treated states; the 7 states with uncertain start dates are excluded from it and appear only in sensitivity 9. Coverage start dates come from state documents
+( [coverage_timing_by_state.csv](tables/coverage_timing_by_state.csv), [map](figures/01_coverage_timing_map.png)). Counts under 11 are hidden by CMS; at most 1.0% of
 Wegovy/Zepbound prescriptions sit in hidden cells from 2023 Q1 ([chart](figures/04_suppression_share.png)), and I filled them in 20 times at random within the possible range, which changes nothing
 ([imputation_log.csv](tables/imputation_log.csv)).
 
