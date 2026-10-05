@@ -25,8 +25,14 @@ st <- panel |> arrange(state_code, quarter_start) |> group_by(state_code) |> sum
   mutate(group = recode(group, never_treated = "never"), cohort_year = ifelse(group == "primary", substr(cohort_quarter, 1, 4), NA_character_))
 covd <- cov |> filter(!is.na(coverage_start) | !is.na(coverage_end) | analysis_group %in% c("primary", "sensitivity")) |> mutate(abbr = state.abb[match(state, state.name)]) |> group_by(abbr) |>
   summarise(coverage_start = paste(na.omit(unique(coalesce(as.character(coverage_start), paste0(start_earliest, " to ", start_latest)))), collapse = "; "), coverage_end = paste(na.omit(unique(as.character(coverage_end))), collapse = "; "), .groups = "drop")
-umd <- um |> mutate(abbr = state.abb[match(State, state.name)]) |> transmute(abbr, prior_authorization = `Prior authorization`, bmi_threshold = `BMI threshold`, step_therapy = `Step therapy`, document = `Criteria version (document)`, source_url = `Source URL`)
-states <- grid |> left_join(st, by = "state_code") |> left_join(covd, by = c("state_code" = "abbr")) |> left_join(umd, by = c("state_code" = "abbr")) |> mutate(across(c(coverage_start, coverage_end), ~ ifelse(.x == "", NA, .x)))
+umd <- um |> mutate(abbr = state.abb[match(State, state.name)]) |> transmute(abbr, prior_authorization = `Prior authorization`, bmi_threshold = `BMI threshold`, step_therapy = `Step therapy`, document = `Criteria version (document)`, source_url = `Source URL`, criteria_source_type = `Source type`)
+# start-date source (from the coverage table's start-date source field; South Carolina's start date is the Milliman report, with the SCDHHS managed-care bulletin) is kept apart from the criteria source
+srcd <- cov |> mutate(abbr = state.abb[match(state, state.name)]) |> group_by(abbr) |> slice(1) |> ungroup() |>
+  transmute(abbr, start_source = ifelse(start_latest_source %in% c("", "same document; month precision"), NA_character_, start_latest_source), start_source_url = sub(";.*$", "", source_url))
+sc_start <- "Milliman SFY 2026 Capitation Rate Methodology and Data Book for SCDHHS (2025-03-17): 'Effective November 1, 2024, SCDHHS implemented a policy to permit the use of GLP-1 pharmaceutical products Wegovy and Saxenda'; SCDHHS bulletin MB 24-066 (2024-11-22): managed care organizations are responsible for coverage under the state-directed preferred drug list"
+states <- grid |> left_join(st, by = "state_code") |> left_join(covd, by = c("state_code" = "abbr")) |> left_join(umd, by = c("state_code" = "abbr")) |> left_join(srcd, by = c("state_code" = "abbr")) |>
+  mutate(start_source = ifelse(is.na(start_source) & !is.na(document) & !is.na(coverage_start), document, start_source), start_source = ifelse(state_code == "SC", sc_start, start_source))
+states <- states |> mutate(across(c(coverage_start, coverage_end), ~ ifelse(.x == "", NA, .x)), start_source = ifelse(is.na(coverage_start), NA_character_, start_source))
 stopifnot(nrow(states) == 51, !anyNA(states$group))
 out(states, "states.csv")
 # 4. state-quarter observed rates and the observed-only never-covered mean (comparison line)

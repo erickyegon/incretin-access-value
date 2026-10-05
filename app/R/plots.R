@@ -21,21 +21,22 @@ plot_members <- function(run, p) {
   q <- run$quarterly; users <- q$prescriptions * 4 / p$fills; pool <- p$plan * p$adult_share * p$eligible_share
   plotly::plot_ly() |>
     plotly::add_lines(x = q$quarter, y = users, name = "Members treated (annualized)", line = list(color = ACCENT, width = 3), hovertemplate = "Quarter %{x}<br>%{y:,.0f} members<extra></extra>") |>
-    plotly::add_lines(x = q$quarter, y = rep(pool, nrow(q)), name = "Eligible pool (ceiling)", line = list(color = GREY, dash = "dash"), hovertemplate = "Eligible pool %{y:,.0f}<extra></extra>") |>
-    style_plot("Quarter since coverage began", "Members")
+    plotly::layout(yaxis = list(rangemode = "tozero")) |>
+    style_plot("Quarter since coverage began", "Members treated (annualized)", legend = FALSE)
 }
 
 plot_waterfall <- function(p) {
   r <- function(q) bia_run(q)$total
   g0 <- r(modifyList(p, list(pa_mult = 1, uptake_mult = 1)))$pmpm_gross; g1 <- r(modifyList(p, list(uptake_mult = 1)))$pmpm_gross; tot <- r(p)
-  lab <- c("Gross PMPM"); meas <- "absolute"; y <- g0
-  if (abs(g1 - g0) > 1e-9) { lab <- c(lab, sprintf("Prior auth. x%.2f", p$pa_mult)); meas <- c(meas, "relative"); y <- c(y, g1 - g0) }
+  lab <- c("Gross"); meas <- "absolute"; y <- g0
+  if (abs(g1 - g0) > 1e-9) { lab <- c(lab, sprintf("PA x%.2f", p$pa_mult)); meas <- c(meas, "relative"); y <- c(y, g1 - g0) }
   if (abs(tot$pmpm_gross - g1) > 1e-9) { lab <- c(lab, sprintf("Uptake x%.2f", p$uptake_mult)); meas <- c(meas, "relative"); y <- c(y, tot$pmpm_gross - g1) }
   step <- if (identical(p$price, "announced")) "$245 price" else sprintf("Rebate %.1f%%", 100 * p$rebate)
-  lab <- c(lab, step, "Net PMPM"); meas <- c(meas, "relative", "total"); y <- c(y, tot$pmpm_net - tot$pmpm_gross, tot$pmpm_net)
+  lab <- c(lab, step, "Net"); meas <- c(meas, "relative", "total"); y <- c(y, tot$pmpm_net - tot$pmpm_gross, tot$pmpm_net)
+  top <- max(g0, g1, tot$pmpm_gross)
   plotly::plot_ly(type = "waterfall", x = factor(lab, levels = lab), y = y, measure = meas, text = sprintf("$%.2f", abs(y)), textposition = "outside", hovertemplate = "%{x}<br>$%{y:.2f} per member per month<extra></extra>",
                   connector = list(line = list(color = LIGHT)), increasing = list(marker = list(color = GREY)), decreasing = list(marker = list(color = LIGHT)), totals = list(marker = list(color = ACCENT))) |>
-    plotly::layout(xaxis = list(tickangle = 0)) |> style_plot(NULL, "USD per member per month", legend = FALSE, margin = list(l = 60, r = 20, t = 40, b = 40))
+    plotly::layout(xaxis = list(tickangle = 0), yaxis = list(range = c(0, top * 1.22))) |> style_plot(NULL, "USD per member per month", legend = FALSE, margin = list(l = 60, r = 20, t = 40, b = 40))
 }
 
 plot_event_study <- function() {
@@ -66,12 +67,13 @@ plot_map <- function(selected = NULL, source = "map") {
 }
 
 plot_state_rates <- function(code) {
-  r <- RATES[RATES$state_code == code, ]; r <- r[order(r$quarter_label), ]; n <- NEVER[order(NEVER$quarter_label), ]
-  s <- STATES[STATES$state_code == code, ]
-  shp <- list(); if (!is.na(s$cohort_quarter) && s$group == "primary") shp <- list(list(type = "line", x0 = s$cohort_quarter, x1 = s$cohort_quarter, y0 = 0, y1 = 1, yref = "paper", line = list(color = ACCENT, dash = "dot", width = 1.5)))
+  n <- NEVER[order(NEVER$quarter_label), ]; avg <- identical(code, "AVG"); shp <- list()
+  if (avg) { r <- stats::aggregate(rate ~ quarter_label, RATES[RATES$state_code %in% STATES$state_code[STATES$group == "primary"], ], mean); r <- r[order(r$quarter_label), ]; nm <- AVG_LABEL }
+  else { r <- RATES[RATES$state_code == code, ]; r <- r[order(r$quarter_label), ]; s <- STATES[STATES$state_code == code, ]; nm <- s$state_name }
+  if (!avg && !is.na(s$cohort_quarter) && s$group == "primary") shp <- list(list(type = "line", x0 = s$cohort_quarter, x1 = s$cohort_quarter, y0 = 0, y1 = 1, yref = "paper", line = list(color = ACCENT, dash = "dot", width = 1.5)))
   plotly::plot_ly() |>
     plotly::add_lines(x = n$quarter_label, y = n$never_covered_mean_observed, name = "Never-covering states, mean", line = list(color = LIGHT, width = 3), hovertemplate = "%{x}<br>Never-covering mean %{y:.2f}<extra></extra>") |>
-    plotly::add_lines(x = r$quarter_label, y = r$rate, name = STATES$state_name[STATES$state_code == code], line = list(color = ACCENT, width = 3), hovertemplate = "%{x}<br>%{y:.2f} per 1,000<extra></extra>") |>
+    plotly::add_lines(x = r$quarter_label, y = r$rate, name = nm, line = list(color = ACCENT, width = 3), hovertemplate = "%{x}<br>%{y:.2f} per 1,000<extra></extra>") |>
     plotly::layout(shapes = shp, xaxis = list(categoryorder = "array", categoryarray = QLAB, tickmode = "array", tickvals = QLAB[grepl("Q1$", QLAB)], ticktext = substr(QLAB[grepl("Q1$", QLAB)], 1, 4))) |>
     style_plot(NULL, "Per 1,000 enrollees (observed)")
 }
@@ -88,12 +90,16 @@ plot_spec <- function() {
 
 plot_tornado <- function(tor, base_net) {
   d <- tor[nrow(tor):1, ]; d$parameter <- factor(d$parameter, levels = d$parameter)
+  lo_first <- d$net_low <= d$net_high; d$xl <- pmin(d$net_low, d$net_high) / 1e6; d$xr <- pmax(d$net_low, d$net_high) / 1e6
+  d$ll <- ifelse(lo_first, d$low_label, d$high_label); d$rl <- ifelse(lo_first, d$high_label, d$low_label); sp <- max(d$xr) - min(d$xl); rng <- c(min(d$xl) - 0.2 * sp, max(d$xr) + 0.2 * sp)
   plotly::plot_ly(d) |>
     plotly::add_segments(x = ~net_low / 1e6, xend = ~net_high / 1e6, y = ~parameter, yend = ~parameter, line = list(color = PALE, width = 14), hoverinfo = "none", showlegend = FALSE) |>
-    plotly::add_markers(x = ~net_low / 1e6, y = ~parameter, marker = list(color = GREY, size = 9), text = ~sprintf("%s: %s, $%.1fM", parameter, low_label, net_low / 1e6), hoverinfo = "text", name = "Low end") |>
-    plotly::add_markers(x = ~net_high / 1e6, y = ~parameter, marker = list(color = ACCENT, size = 9), text = ~sprintf("%s: %s, $%.1fM", parameter, high_label, net_high / 1e6), hoverinfo = "text", name = "High end") |>
-    plotly::layout(shapes = list(list(type = "line", x0 = base_net / 1e6, x1 = base_net / 1e6, y0 = 0, y1 = 1, yref = "paper", line = list(color = GREY, dash = "dash", width = 1)))) |>
-    style_plot("Five-year net cost (USD millions); dashed line = current scenario", NULL, margin = list(l = 250, r = 20, t = 10, b = 60))
+    plotly::add_markers(x = ~xl, y = ~parameter, marker = list(color = GREY, size = 9), text = ~sprintf("%s: %s, $%.1fM", parameter, ll, xl), hoverinfo = "text", showlegend = FALSE) |>
+    plotly::add_markers(x = ~xr, y = ~parameter, marker = list(color = ACCENT, size = 9), text = ~sprintf("%s: %s, $%.1fM", parameter, rl, xr), hoverinfo = "text", showlegend = FALSE) |>
+    plotly::add_text(x = ~xl, y = ~parameter, text = ~paste0(ll, "   "), textposition = "middle left", textfont = list(size = 11, color = GREY), hoverinfo = "none", showlegend = FALSE) |>
+    plotly::add_text(x = ~xr, y = ~parameter, text = ~paste0("   ", rl), textposition = "middle right", textfont = list(size = 11, color = INK), hoverinfo = "none", showlegend = FALSE) |>
+    plotly::layout(xaxis = list(range = rng), shapes = list(list(type = "line", x0 = base_net / 1e6, x1 = base_net / 1e6, y0 = 0, y1 = 1, yref = "paper", line = list(color = GREY, dash = "dash", width = 1)))) |>
+    style_plot("Five-year net cost (USD millions); left = lower cost, right = higher cost; dashed line = current scenario", NULL, legend = FALSE, margin = list(l = 250, r = 20, t = 10, b = 60))
 }
 
 plot_psa_hist <- function(d, s) {
@@ -112,6 +118,7 @@ plot_cdf <- function(d, budget, basis) {
 }
 
 plot_compare <- function(df) {
+  df$name <- factor(df$name, levels = unique(df$name))
   plotly::plot_ly(df, x = ~name, y = ~five_year_net / 1e6, type = "bar", marker = list(color = ACCENT), text = ~sprintf("$%.1fM<br>$%.2f PMPM", five_year_net / 1e6, pmpm_net), textposition = "outside", hovertemplate = "%{x}<br>$%{y:,.1f}M five-year net<extra></extra>") |>
-    style_plot(NULL, "Five-year net cost (USD millions)", legend = FALSE)
+    plotly::layout(yaxis = list(range = c(0, max(df$five_year_net) / 1e6 * 1.25))) |> style_plot(NULL, "Five-year net cost (USD millions)", legend = FALSE)
 }

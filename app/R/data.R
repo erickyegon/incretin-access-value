@@ -17,3 +17,10 @@ STATES <- read_app_csv("states.csv"); RATES <- read_app_csv("state_quarter_rates
 ENROLL <- read_app_csv("state_enrollment.csv"); ASSUMP <- read_app_csv("assumptions.csv")
 RATES$coverage_active <- as.logical(RATES$coverage_active); ES$fewer_than_3_states <- as.logical(ES$fewer_than_3_states); SPECS$estimable <- as.logical(SPECS$estimable)
 QLAB <- sort(unique(RATES$quarter_label))
+
+# "all 15 estimable" when every estimable alternative analysis holds, else "x of y estimable"
+spec_all <- function() { x <- strsplit(kf("c_spec_holds"), " of ")[[1]]; if (x[1] == x[2]) paste0("all ", x[2], " estimable") else paste(kf("c_spec_holds"), "estimable") }
+# the covering states (primary analysis) and the choices of the state selector: the average first, Michigan first among the states
+N_COVER <- sum(STATES$group == "primary")
+AVG_LABEL <- sprintf("Average of the %d covering states", N_COVER)
+state_selector <- function() { o <- STATES[order(STATES$state_name), ]; o <- o[c(which(o$state_code == "MI"), which(o$state_code != "MI")), ]; c(stats::setNames("AVG", AVG_LABEL), stats::setNames(o$state_code, o$state_name)) }

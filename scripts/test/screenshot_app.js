@@ -18,6 +18,9 @@ const tabs = [["overview", "Overview"], ["evidence", "Evidence"], ["budget", "Bu
       await page.evaluate((id) => { const a = document.querySelector(`a[data-value="${id}"]`); if (a) a.click(); }, id); await sleep(3500);
       const bad = await page.evaluate(() => Array.from(document.querySelectorAll(".shiny-output-error:not(.shiny-output-error-validation)")).map((e) => e.textContent.slice(0, 160)));
       if (bad.length) errors.push(`[${w}] ${label}: ${bad.join(" | ")}`);
+      const sw = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, inner: window.innerWidth, sidebarOpen: !!document.querySelector(".bslib-sidebar-layout:not(.sidebar-collapsed) > .sidebar:not([hidden])") && getComputedStyle(document.querySelector(".bslib-sidebar-layout > .sidebar") || document.body).display !== "none" && (document.querySelector(".bslib-sidebar-layout") || {}).offsetParent !== null && !!document.querySelector(".bslib-sidebar-layout > .sidebar") && document.querySelector(".bslib-sidebar-layout > .sidebar").getBoundingClientRect().width > 0 }));
+      if (sw.scroll > sw.inner + 2) errors.push(`[${w}] ${label}: horizontal scroll (${sw.scroll} > ${sw.inner})`);
+      if (suffix && sw.sidebarOpen) errors.push(`[${w}] ${label}: sidebar is not collapsed`);
       await page.screenshot({ path: path.join(out, `${id}${suffix}.png`), fullPage: true });
     }
     await page.close();

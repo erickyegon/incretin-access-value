@@ -9,9 +9,9 @@ columns of never_covered_mean.csv,TRUE,"quarter_label, never_covered_mean_impute
 columns of state_enrollment.csv,TRUE,"state_code, state_name, quarter_label, enrollment"
 columns of key_facts.csv,TRUE,"id, display, unit, ci_or_range, statement"
 columns of assumptions.csv,TRUE,"parameter, value_or_range, basis_type, basis, source_label, source_url"
-columns of states.csv,TRUE,"state_code, col, row, state_name, group, cohort_quarter, start_earliest, start_latest, cohort_year, coverage_start, coverage_end, prior_authorization, bmi_threshold, step_therapy, document, source_url"
+columns of states.csv,TRUE,"state_code, col, row, state_name, group, cohort_quarter, start_earliest, start_latest, cohort_year, coverage_start, coverage_end, prior_authorization, bmi_threshold, step_therapy, document, source_url, criteria_source_type, start_source, start_source_url"
 no files other than the expected CSVs in app/data,TRUE,
-app/data is small (under 200 KB),TRUE,69 KB
+app/data is small (under 200 KB),TRUE,74 KB
 "state-quarter rates: 51 states x 33 quarters, one numeric rate column",TRUE,1683 rows
 2025 Q3 state rates equal moduleA_rate_by_state_2025Q3.csv,TRUE,
 key_facts.csv rows are identical to key_numbers.csv,TRUE,62 rows

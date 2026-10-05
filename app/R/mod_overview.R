@@ -54,6 +54,6 @@ mod_overview_server <- function(id, scn, go) {
     })
     shiny::observeEvent(input$chip_coverageeffect, go("uncertainty")); shiny::observeEvent(input$chip_rebate, go("uncertainty")); shiny::observeEvent(input$chip_priorauthorization, go("uncertainty"))
     shiny::observeEvent(input$go_evidence, go("evidence"))
-    output$evidence_line <- shiny::renderText(sprintf("The uptake path is an estimated effect of %s prescriptions per 1,000 enrollees per quarter (95%% CI %s), from %s covering and %s never-covering jurisdictions, and it holds in %s alternative analyses.", kf("c_att_overall"), kf_ci("c_att_overall"), kf("c_states_primary"), kf("c_states_never"), kf("c_spec_holds")))
+    output$evidence_line <- shiny::renderText(sprintf("The uptake path is an estimated effect of %s prescriptions per 1,000 enrollees per quarter (95%% CI %s), from %s covering and %s never-covering jurisdictions, and it holds in %s alternative analyses.", kf("c_att_overall"), kf_ci("c_att_overall"), kf("c_states_primary"), kf("c_states_never"), spec_all()))
   })
 }

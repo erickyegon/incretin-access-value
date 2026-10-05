@@ -49,11 +49,11 @@ tornado_table <- function(inp, p) {
   mod <- function(...) { q <- p; a <- list(...); for (n in names(a)) q[[n]] <- a[[n]]; q }
   rows <- list(
     list("Module C effect (95% CI of every event time)", mod(att9 = inp$att$ci_low), mod(att9 = inp$att$ci_high), "lower CI", "upper CI"),
-    list("Prior authorization multiplier", mod(pa_mult = 0.5), mod(pa_mult = 1.25), "0.5 (tight)", "1.25 (loose)"),
-    list("Years 3-5 scenario", mod(y35 = "decline"), mod(y35 = "growth"), "decline", "continued growth"),
+    list("Prior authorization multiplier", mod(pa_mult = 0.5), mod(pa_mult = 1.25), "0.5", "1.25"),
+    list("Years 3-5 scenario", mod(y35 = "decline"), mod(y35 = "growth"), "decline", "growth"),
     list("Gross cost per prescription", mod(gross = inp$gross$low), mod(gross = inp$gross$high), usd(inp$gross$low), usd(inp$gross$high)),
-    list("Rebate share", mod(price = "rebate", rebate = inp$rebate$high), mod(price = "rebate", rebate = inp$rebate$low), paste0(formatC(100 * inp$rebate$high, format = "f", digits = 1), "% (implied by $245)"), "23.1% (statutory minimum)"),
-    list("Price scenario", mod(price = "announced"), p, "announced $245 net", "current price scenario"),
+    list("Rebate share", mod(price = "rebate", rebate = inp$rebate$high), mod(price = "rebate", rebate = inp$rebate$low), paste0(formatC(100 * inp$rebate$high, format = "f", digits = 1), "%"), paste0(formatC(100 * inp$rebate$low, format = "f", digits = 1), "%")),
+    list("Price scenario", mod(price = "announced"), p, "$245 net", "current"),
     list("Uptake multiplier", mod(uptake_mult = 0.75), mod(uptake_mult = 1.25), "0.75", "1.25"))
   d <- do.call(rbind, lapply(rows, function(r) data.frame(parameter = r[[1]], net_low = five(r[[2]]), net_high = five(r[[3]]), low_label = r[[4]], high_label = r[[5]], stringsAsFactors = FALSE)))
   d$span <- abs(d$net_high - d$net_low); d[order(-d$span), ]

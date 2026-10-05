@@ -3,7 +3,7 @@ mod_uncertainty_ui <- function(id) {
   ns <- shiny::NS(id)
   shiny::tagList(
     bslib::card(bslib::card_header(shiny::uiOutput(ns("title_tornado"))), bslib::card_body(plotly::plotlyOutput(ns("tornado"), height = "340px")),
-      bslib::card_footer(src_line("One-way ranges from the assumptions table: effect 95% CI, prior authorization 0.5 to 1.25, years 3 to 5, gross cost $1,164 to $1,252, rebate 23.1% to the rate implied by $245, announced price, uptake 0.75 to 1.25. Orange = high end, grey = low end."))),
+      bslib::card_footer(src_line("One-way ranges from the assumptions table: effect 95% CI, prior authorization 0.5 to 1.25, years 3 to 5, gross cost $1,164 to $1,252, rebate 23.1% to the rate implied by $245, announced price, uptake 0.75 to 1.25. Each bar end is labeled with the parameter value that produces it; left = lower cost, right = higher cost."))),
     bslib::layout_sidebar(class = "mt-3", fillable = FALSE,
       sidebar = bslib::sidebar(width = 330, open = "desktop",
         shiny::actionButton(ns("run"), "Run the probabilistic analysis", class = "btn-primary w-100"),

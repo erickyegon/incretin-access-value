@@ -14,14 +14,14 @@ mod_compare_ui <- function(id) {
       shiny::div(shiny::textInput(ns("name"), info("Scenario name", "A label for the scenario you built in the Budget model tab."), placeholder = "for example, loose PA with $245"), shiny::actionButton(ns("save"), "Save the current scenario", class = "btn-primary btn-sm"), shiny::actionButton(ns("clear"), "Clear", class = "btn-outline-secondary btn-sm ms-2")),
       shiny::div(shiny::p(class = "mb-1", shiny::strong("Preset comparisons")), shiny::actionButton(ns("preset_pa"), "Tight vs as observed vs loose prior authorization", class = "btn-outline-secondary btn-sm mb-2"), shiny::br(),
                  shiny::actionButton(ns("preset_price"), "Statutory-minimum rebate vs central vs $245 price", class = "btn-outline-secondary btn-sm"))))),
-    bslib::card(class = "mt-3", bslib::card_header(shiny::uiOutput(ns("title"))), bslib::card_body(plotly::plotlyOutput(ns("chart"), height = "300px"), shiny::tableOutput(ns("table"))),
+    bslib::card(class = "mt-3", bslib::card_header(shiny::uiOutput(ns("title"))), bslib::card_body(plotly::plotlyOutput(ns("chart"), height = "300px"), shiny::div(style = "overflow-x:auto", shiny::tableOutput(ns("table")))),
       bslib::card_footer(shiny::downloadButton(ns("download"), "Download comparison CSV", class = "btn-outline-secondary btn-sm"), shiny::span(class = "small-note ms-2", "Up to three scenarios. Presets start from the central case; saved scenarios use your inputs in the Budget model tab. Scenarios, not forecasts.")))
   )
 }
 
 mod_compare_server <- function(id, scn) {
   shiny::moduleServer(id, function(input, output, session) {
-    store <- shiny::reactiveVal(NULL)
+    store <- shiny::reactiveVal(preset_rows("pa"))
     shiny::observeEvent(input$save, {
       cur <- store(); nm <- trimws(input$name); if (!nzchar(nm)) nm <- paste("Scenario", (if (is.null(cur)) 0 else nrow(cur)) + 1)
       if (!is.null(cur) && nrow(cur) >= 3) { shiny::showNotification("Three scenarios are saved. Clear one or press Clear to start again.", type = "warning"); return() }

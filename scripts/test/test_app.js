@@ -37,8 +37,10 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   await tab("budget", 800); await num("budget-plan", -5); await sleep(1200); const msg = await page.evaluate(() => Array.from(document.querySelectorAll(".shiny-output-error-validation")).map((e) => e.textContent.trim()).join(" | "));
   rec("negative plan size gives a friendly message", msg.includes("plan size"), true); await reset();
   // evidence
-  await tab("evidence", 4000); await page.evaluate(() => Shiny.setInputValue("evidence-state", "CA")); await sleep(1500); rec("state chart title follows the selector", (await txt("evidence-title_state")).includes("California"), true);
-  rec("evidence specification title", await txt("evidence-title_spec"), "The estimate holds in 15 of 15 alternative analyses (fee-for-service only is not estimable)");
+  await tab("evidence", 4000); rec("evidence opens on the covering-state average", (await txt("evidence-title_state")).startsWith("Average of the 10 covering states"), true);
+  await page.evaluate(() => Shiny.setInputValue("evidence-state", "SC")); await sleep(1500); const scd = await page.evaluate(() => document.getElementById("evidence-state_detail").innerText); rec("South Carolina detail shows the start-date and criteria sources separately", scd.includes("Start date source") && scd.includes("Milliman") && scd.includes("Criteria source") && scd.includes("news report"), true);
+  await page.evaluate(() => Shiny.setInputValue("evidence-state", "CA")); await sleep(1500); rec("state chart title follows the selector", (await txt("evidence-title_state")).includes("California"), true);
+  rec("evidence specification title", await txt("evidence-title_spec"), "The estimate holds in all 15 estimable alternative analyses (fee-for-service only is not estimable)");
   rec("evidence charts drawn", await page.evaluate(() => ["evidence-es_chart", "evidence-map", "evidence-spec_chart"].every((i) => document.querySelectorAll(`#${i} .main-svg`).length > 0)), true);
   // uncertainty
   await tab("uncertainty", 3000); await page.click("#uncertainty-run"); await sleep(3000); rec("PSA title", await txt("uncertainty-title_psa"), "Five-year net cost: median $145.4M, 90% interval $58.1M to $319.9M (10,000 draws)");
@@ -46,7 +48,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   await page.click("#uncertainty-common"); await sleep(400); await page.click("#uncertainty-run"); await sleep(3000); rec("PSA interval changes with correlated effects", (await txt("uncertainty-title_psa")) !== "Five-year net cost: median $145.4M, 90% interval $58.1M to $319.9M (10,000 draws)", true);
   await page.click("#uncertainty-common"); await sleep(300);
   // compare
-  await tab("compare", 2000); await page.click("#compare-preset_pa"); await sleep(2000); const t1 = await page.evaluate(() => document.querySelector("#compare-table").innerText); rec("prior authorization preset", ["$80.7M", "$161.3M", "$201.6M"].every((x) => t1.includes(x)), true);
+  await tab("compare", 2000); const t0 = await page.evaluate(() => document.querySelector("#compare-table").innerText); rec("compare opens with the prior authorization preset", ["$80.7M", "$161.3M", "$201.6M"].every((x) => t0.includes(x)), true);
+  await page.click("#compare-preset_pa"); await sleep(2000); const t1 = await page.evaluate(() => document.querySelector("#compare-table").innerText); rec("prior authorization preset", ["$80.7M", "$161.3M", "$201.6M"].every((x) => t1.includes(x)), true);
   await page.click("#compare-preset_price"); await sleep(2000); const t2 = await page.evaluate(() => document.querySelector("#compare-table").innerText); rec("price preset", ["$254.3M", "$161.3M", "$68.3M"].every((x) => t2.includes(x)), true);
   await page.click("#compare-clear"); await sleep(500); await page.type("#compare-name", "my scenario"); await page.click("#compare-save"); await sleep(1500); const t3 = await page.evaluate(() => document.querySelector("#compare-table").innerText); rec("save a scenario", t3.includes("my scenario") && t3.includes("$161.3M"), true);
   // sources and every tab clean

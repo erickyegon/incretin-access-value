@@ -45,10 +45,23 @@ test_that("the app data files hold only aggregates and the expected columns", {
 })
 test_that("budget inputs are validated with friendly messages", {
   shiny::testServer(mod_budget_server, {
-    session$setInputs(plan_mode = "plan", plan = 1e6, state = "CA", adult_share = 57.88, elig_share = 51.9952, effect = "est", uptake = 1, y35 = "plateau", pa = 1, price = "rebate", rebate = 51.223, gross = 1186.2097)
+    session$setInputs(plan_mode = "plan", plan = "1,000,000", state = "CA", adult_share = 57.9, elig_share = 52.0, effect = "est", uptake = 1, y35 = "plateau", pa = 1, price = "rebate", rebate = 51.223, gross = 1186.2097)
     expect_equal(m1(run()$total$five_year_net), kf("e_net5"))
+    expect_equal(params()$plan, 1e6); expect_equal(round(params()$plan * params()$adult_share * params()$eligible_share), 300948)  # the boxes show 57.9 and 52.0, the exact defaults are used
+    session$setInputs(adult_share = 60); expect_equal(params()$adult_share, 0.6); session$setInputs(adult_share = 57.9)
+    session$setInputs(plan = "2,000,000"); expect_equal(params()$plan, 2e6); session$setInputs(plan = "1,000,000")
     session$setInputs(plan = -5); expect_error(params(), class = "shiny.silent.error")
     session$setInputs(plan = 1e6, rebate = 120); expect_error(params(), class = "shiny.silent.error")
     session$setInputs(rebate = 51.223, plan_mode = "state", state = "CA"); expect_equal(params()$plan, ENROLL$enrollment[ENROLL$state_code == "CA"])
   })
+})
+
+test_that("evidence selector, sources, wording, tornado labels and the compare preload", {
+  ch <- state_selector(); expect_equal(unname(ch[1]), "AVG"); expect_equal(unname(ch[2]), "MI"); expect_equal(length(ch), 52); expect_equal(sum(names(ch) == "Michigan"), 1)
+  expect_equal(spec_all(), "all 15 estimable")
+  sc <- STATES[STATES$state_code == "SC", ]; expect_match(sc$start_source, "Milliman SFY 2026"); expect_match(sc$start_source, "MB 24-066"); expect_match(sc$criteria_source_type, "news report"); expect_false(identical(sc$start_source, sc$document))
+  avg <- stats::aggregate(rate ~ quarter_label, RATES[RATES$state_code %in% STATES$state_code[STATES$group == "primary"], ], mean); expect_equal(nrow(avg), 33)
+  tt <- tornado_table(INP, BASE); expect_true(all(c("lower CI", "upper CI", "0.5", "1.25", "decline", "growth") %in% c(tt$low_label, tt$high_label)))
+  expect_true(any(grepl("^23.1%$", c(tt$low_label, tt$high_label))) && any(grepl("^79.3%$", c(tt$low_label, tt$high_label))))
+  shiny::testServer(mod_compare_server, args = list(scn = list(params = function() BASE)), { expect_equal(nrow(store()), 3); expect_equal(sprintf("%.1f", store()$five_year_net[2] / 1e6), "161.3") })
 })
