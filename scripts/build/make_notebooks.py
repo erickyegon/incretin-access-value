@@ -11,23 +11,31 @@ format:
     toc: true
     embed-resources: true
     theme: cosmo
+    css: ../report/report.css
 execute: {{ echo: false, warning: false, message: false }}
 ---
 
 ```{{r setup}}
 source("../analysis/R/kn.R")
-tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+# tables: long text is shortened (full text is in the CSV), wide tables scroll inside their container instead of overflowing
+tb <- function(f, n = 12) {{ d <- utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n)
+  if (f == "coverage_um_criteria.csv") d <- d[, c("State", "Delivery system", "Prior authorization", "BMI threshold", "Step therapy")]
+  d[] <- lapply(d, function(x) if (is.character(x)) ifelse(nchar(x) > 60, paste0(substr(x, 1, 59), "\u2026"), x) else x)
+  fence <- strrep(intToUtf8(96), 3)
+  cat("\\n\\n", fence, "{{=html}}\\n<div class='scroll' style='overflow-x:auto'>", knitr::kable(d, format = "html", table.attr = "class='table table-sm'"), "</div>\\n", fence, "\\n\\n", sep = "") }}
 al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
 fig <- function(name, cap) {{ a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
-  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){{fig-alt=\\"%s\\" width=100%%}}\\n\\n", cap, name, gsub("\\"", "'", a))) }}
+  cat(sprintf("![%s](../analysis/outputs/figures/%s_report.png){{fig-alt=\\"%s\\" width=100%%}}\\n\\n", cap, name, gsub("\\"", "'", a))) }}
 ```
+
+[Back to the report](https://erickyegon.github.io/incretin-access-value/report.html) · [Project site](https://erickyegon.github.io/incretin-access-value/) · [Interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/)
 
 {intro}
 '''
 NOTE = "\n*Part of the project report; every number comes from `analysis/outputs/key_numbers.csv`. Public aggregate data; no company affiliation or endorsement.*\n"
 def section(h, text="", tables=(), figs=()):
     out = f"\n## {h}\n\n{text}\n" if text else f"\n## {h}\n"
-    for t, n in tables: out += f"\n```{{r}}\ntb(\"{t}\", {n})\n```\n"
+    for t, n in tables: out += f"\n```{{r}}\n#| results: asis\ntb(\"{t}\", {n})\n```\n"
     for f, c in figs: out += f"\n```{{r}}\n#| results: asis\nfig(\"{f}\", \"{c}\")\n```\n"
     return out
 NB = {
@@ -39,7 +47,7 @@ NB = {
  "B_eligible_population": ("Module B: eligible population, funnel and forecast", "B", "About `r kn(\"b_eligible\")` million adults meet the label criteria (lower bound), including `r kn(\"b_medicaid_elig\")` million with Medicaid; about `r kn(\"b_glp1_all\")` million currently use a GLP-1 drug.",
    [section("Funnel", "", [("moduleB_funnel.csv", 12)], [("20_funnel", "Eligible-population funnel")]), section("Survey estimates (excerpt)", "NHANES 2021-2023 design-based estimates.", [("moduleB_survey_estimates.csv", 12)]),
     section("Forecast", "Median `r kn(\"b_fc_2030\")` million GLP-1 users without diagnosed diabetes by 2030.", [("moduleB_forecast_year_end.csv", 12)], [("21_forecast_fan", "Forecast fan chart")])]),
- "C_coverage_study": ("Module C: the coverage study", "C", "Coverage added `r kn(\"c_att_overall\")` prescriptions per 1,000 enrollees per quarter (`r kn_ci(\"c_att_overall\")`).",
+ "C_coverage_study": ("Module C: the coverage study", "C", "Coverage was associated with an estimated `r kn(\"c_att_overall\")` additional prescriptions per 1,000 enrollees per quarter (`r kn_ci(\"c_att_overall\")`), comparing covering with never-covering states.",
    [section("Coverage and timing", "", [("coverage_um_criteria.csv", 17)], [("01_coverage_timing_map", "Coverage timing map")]), section("Estimates", "", [("overall_att.csv", 8), ("event_study_primary.csv", 12), ("estimator_reconciliation.csv", 8)], [("10_event_study_primary", "Event study"), ("11_specification_chart", "Specification chart"), ("12_honestdid", "HonestDiD")]),
     section("Withdrawals (preliminary)", "", [("withdrawal_change_2025Q4_to_2026Q1.csv", 8)], [("05_withdrawal_descriptive", "Coverage withdrawals")])]),
  "D_prescribers": ("Module D: prescribers", "D", "Part D reflects diabetes and other covered uses, not obesity-brand adoption. Primary care wrote `r kn(\"d_share_pcp\")`% of 2024 claims.",

@@ -13,10 +13,10 @@ save_table(long |> mutate(spend_millions = round(spend / 1e6, 1)) |> select(prog
 save_table(tot |> mutate(spend_billions = round(spend / 1e9, 2)) |> select(program, year, spend_billions), "moduleA_spending_totals")
 tv <- function(p, y) tot$spend[tot$program == p & tot$year == y] / 1e9
 ttl <- sprintf("Gross spending on GLP-1 and GIP products rose from $%sB in 2020 to $%sB in 2024 in Medicare Part D and from $%sB to $%sB in Medicaid; Ozempic and Mounjaro lead the growth", fmt1(tv("Medicare Part D", 2020)), fmt1(tv("Medicare Part D", 2024)), fmt1(tv("Medicaid", 2020)), fmt1(tv("Medicaid", 2024)))
-lab <- long |> filter(year == 2024) |> group_by(program) |> mutate(rank = rank(-spend)) |> ungroup() |> filter(rank <= 6 | obesity)
+lab <- long |> filter(year == 2024) |> group_by(program) |> mutate(rank = rank(-spend)) |> ungroup() |> filter(rank <= 6 | obesity) |> filter(sprintf("%.1f", spend / 1e9) != "0.0")
 panel <- function(p) { x <- long |> filter(program == p); l <- lab |> filter(program == p)
   ggplot(x, aes(year, spend / 1e9, group = brand)) + geom_line(aes(colour = obesity), linewidth = 0.9) + geom_point(data = x |> filter(year == 2024), aes(colour = obesity), size = 1.8) +
-    ggrepel::geom_text_repel(data = l, aes(label = sprintf("%s $%sB", brand, fmt1(spend / 1e9)), colour = obesity), hjust = 0, direction = "y", nudge_x = 0.12, size = 2.9, segment.size = 0.2, box.padding = 0.12, min.segment.length = 0.5, show.legend = FALSE) +
+    ggrepel::geom_text_repel(data = l, aes(label = sprintf("%s $%sB", brand, fmt1(spend / 1e9)), colour = obesity), hjust = 0, direction = "y", nudge_x = 0.12, size = 3.6, segment.size = 0.2, box.padding = 0.35, force = 3, min.segment.length = 0.5, seed = 4, show.legend = FALSE) +
     scale_colour_manual(values = c(`FALSE` = col_comparison, `TRUE` = col_treated), guide = "none") + scale_x_continuous(breaks = 2020:2024, limits = c(2020, 2026.4)) +
     labs(subtitle = p, x = NULL, y = "Gross spending (USD billions)") + theme_incretin(base_size = 10) + theme(plot.subtitle = element_text(face = "bold")) }
 cap <- "Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug (warehouse mart mart_drug_spending_year). Spending is gross of rebates. Orange: brands labeled for obesity (Wegovy, Zepbound, Saxenda); gray: diabetes brands. Part D brands also include diabetes and other covered uses; Victoza packs are combined. CMS outlier flags are kept."

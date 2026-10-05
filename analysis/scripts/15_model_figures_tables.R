@@ -43,7 +43,7 @@ plot_es <- function(d, ylab, title = NULL, subtitle = NULL, caption = NULL, show
 crit_mean <- mean(es$crit_simultaneous, na.rm = TRUE)
 p1 <- plot_es(es, "ATT per 1,000 enrollees", title = stringr::str_wrap(ttl, 95),
               subtitle = stringr::str_wrap("Callaway-Sant'Anna dynamic ATT, 10 primary states vs never- and not-yet-treated states, 2018 Q1 to 2025 Q3; 20 imputations of suppressed cells combined with Rubin's rules. Shaded band and points: pointwise 95% CI; numbers along the bottom: contributing treated states; event times with fewer than 3 contributing states are grayed.", 130),
-              caption = stringr::str_wrap(paste(sprintf("Simultaneous confidence bands are not shown: with single-state cohorts the bootstrap critical value is unreliable (did warns of this) and very large (%s on average over the imputations, versus 1.96 pointwise). Leads before 2021 Q2 (before Wegovy existed) are omitted: the outcome is mechanically zero there and they are not evidence of parallel trends.", fmt1(crit_mean)), caption_sdud), 150))
+              caption = stringr::str_wrap(paste(caption_sdud, sprintf("Simultaneous confidence bands are not shown: with single-state cohorts the bootstrap critical value is unreliable (did warns of this) and very large (%s on average over the imputations, versus 1.96 pointwise). Leads before 2021 Q2 (before Wegovy existed) are omitted: the outcome is mechanically zero there and they are not evidence of parallel trends.", fmt1(crit_mean))), 150))
 save_fig(p1, "10_event_study_primary", width = 11, height = 6.8)
 save_table(es |> transmute(event_time = e, att = estimate, se, ci_low, ci_high, band_low, band_high, fmi, treated_states = n_states, cohorts = n_cohorts, fewer_than_3_states = few), "event_study_primary")
 
@@ -81,7 +81,7 @@ p3 <- ggplot(sp, aes(att_simple, label, colour = is_primary)) +
                                          fmt1(sp$att_simple[sp$spec == "0"]), fmt1(min(sp$att_simple[sp$spec != "0"])), fmt1(max(sp$att_simple[sp$spec != "0"])), nrow(sp) - 1), 95),
        subtitle = stringr::str_wrap("Overall ATT (simple aggregation) with 95% CI; orange = primary; each other row changes one thing.", 130),
        x = "Overall ATT (prescriptions per 1,000 enrollees)", y = NULL,
-       caption = stringr::str_wrap(paste("Specification 12 (fee-for-service only) is not shown: not estimable reliably (FFS denominators too small; coverage operates mainly through MCOs in SC and RI). It is listed in the specification table.", caption_sdud), 150)) +
+       caption = stringr::str_wrap(paste(caption_sdud, "Specification 12 (fee-for-service only) is not shown: not estimable reliably (FFS denominators too small; coverage operates mainly through MCOs in SC and RI). It is listed in the specification table."), 150)) +
   theme_incretin() + theme(panel.grid.major.y = element_blank())
 save_fig(p3, "11_specification_chart", width = 11, height = 7)
 nr <- "Not estimable reliably: FFS denominators too small; coverage operates mainly through MCOs in SC and RI"
@@ -123,7 +123,7 @@ p5 <- ggplot(es3 |> filter(e >= -8, e <= 12), aes(e, estimate)) +
                                          fmtci(ov3$estimate[1], ov3$ci_low[1], ov3$ci_high[1]), fmtci(ov3$estimate[2], ov3$ci_low[2], ov3$ci_high[2]), fmtci(ov3$estimate[3], ov3$ci_low[3], ov3$ci_high[3])), 95),
        subtitle = stringr::str_wrap("Dynamic ATT by quarters since coverage began, same design as the primary; each panel on its own y-scale; bars are pointwise 95% CIs (simultaneous bands omitted: they are very wide with single-state cohorts); gray = fewer than 3 contributing states; leads before 2021 Q2 omitted.", 120),
        x = "Quarters since coverage began", y = "ATT: prescriptions per 1,000 enrollees",
-       caption = stringr::str_wrap(paste("The diabetes GLP-1 outcome is a pre-specified spillover outcome, not a clean negative control: a negative estimate is consistent with substitution from off-label diabetes products to covered obesity products, a positive one with spillover in prescribing, and neither can be told apart from a design problem with this data alone.", caption_sdud), 150)) +
+       caption = stringr::str_wrap(paste(caption_sdud, "The diabetes GLP-1 outcome is a pre-specified spillover outcome, not a clean negative control: a negative estimate is consistent with substitution from off-label diabetes products to covered obesity products, a positive one with spillover in prescribing, and neither can be told apart from a design problem with this data alone."), 150)) +
   theme_incretin()
 save_fig(p5, "13_secondary_outcomes", width = 9, height = 10)
 save_table(es3 |> transmute(outcome, event_time = e, att = estimate, se, ci_low, ci_high, treated_states = n_states, fewer_than_3_states = few), "event_study_secondary_outcomes")

@@ -17,7 +17,7 @@ p <- ggplot(q, aes(qd, pmin(max_hidden_share, cap))) +
   geom_ribbon(aes(ymin = 0, ymax = pmin(max_hidden_share, cap)), fill = col_treated, alpha = 0.35) +
   geom_line(colour = col_treated, linewidth = 1) +
   geom_point(data = clipped, colour = col_treated, size = 2) +
-  geom_text(data = clipped, aes(label = paste0(fmt1(100 * max_hidden_share), "% (", quarter_label, ")")), hjust = -0.1, vjust = 1.2, size = 3) +
+  ggrepel::geom_text_repel(data = clipped, aes(label = paste0(fmt1(100 * max_hidden_share), "% (", quarter_label, ")")), direction = "y", hjust = 0, nudge_x = 45, nudge_y = -0.011, segment.size = 0.2, box.padding = 0.4, min.segment.length = 0, seed = 6, size = 3.6, max.overlaps = Inf) +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0, cap), expand = expansion(mult = c(0, 0.02))) +
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
   coord_cartesian(clip = "off") +

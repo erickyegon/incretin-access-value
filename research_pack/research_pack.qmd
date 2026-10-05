@@ -1,20 +1,26 @@
 ---
-title: "Primary research design pack: Medicaid coverage criteria for obesity drugs"
-subtitle: "Module F of the incretin access-and-value project: a design only, with no fieldwork and no respondents"
-author: "Erick Kiprotich Yegon"
-date: today
 format:
   typst:
-    toc: true
-    toc-depth: 2
+    toc: false
     papersize: us-letter
-    margin: { x: 2cm, y: 2cm }
+    margin: { x: 2cm, top: 2.4cm, bottom: 2.2cm }
     fontsize: 10pt
+    mainfont: "IBM Plex Sans"
+    font-paths: ["../analysis/assets/fonts"]
+    include-in-header: pack.typ
+    include-before-body: cover.typ
 execute:
   echo: false
   warning: false
   message: false
 ---
+
+```{=typst}
+#set par(justify: false)
+#set text(hyphenate: false)
+#outline(title: "Contents", depth: 2, indent: 1em)
+#pagebreak()
+```
 
 ```{r setup}
 source("../analysis/R/kn.R")
@@ -32,7 +38,7 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 **Commissioned by:** a fictional market-access team at an unnamed manufacturer (illustration only). **Question:** how do Medicaid prescribers and payers weigh the criteria of an obesity-drug coverage policy, and which criteria would they trade off?
 
 | Business question | Why the secondary data raise it |
-|---|---|
+|-----|----------|
 | Where does coverage actually operate: fee-for-service or managed care? | Coverage is delivered through managed-care programs in South Carolina and Rhode Island, so a fee-for-service-only estimate is not reliable (Module C, sensitivity 12, `deviations.md` item 6). |
 | How much do prior authorization (PA) criteria matter? | Prior authorization is documented in `r kn("c_pa_states")` of the covering states and BMI criteria differ (BMI 30 or more; BMI 27 to 29 only with a weight-related condition), but Module C cannot separate PA strictness from coverage itself. |
 | What happens when coverage ends? | After coverage ended in California and Pennsylvania, prescriptions per enrollee fell by `r kn("c_withdraw_ca")`% and `r kn("c_withdraw_pa")`% in one quarter (descriptive, preliminary data, Module C). |
@@ -46,7 +52,7 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 ## 2.1 Prescriber screener (physician, nurse practitioner, physician assistant)
 
 | # | Question | Qualify if | Terminate if |
-|---|---|---|---|
+|-|--------|-------|------|
 | S1 | Which best describes your role? | Physician (primary care, endocrinology, cardiology), nurse practitioner, physician assistant | Any other role |
 | S2 | Do you currently treat patients enrolled in a state Medicaid program? | Yes, 10% or more of patients | No, or under 10% |
 | S3 | In the past 3 months, how many adult patients with obesity or overweight did you see for weight management? | 20 or more | Fewer than 20 |
@@ -60,7 +66,7 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 ## 2.2 Payer screener (Medicaid pharmacy director, managed-care organization medical director)
 
 | # | Question | Qualify if | Terminate if |
-|---|---|---|---|
+|-|--------|-------|------|
 | P1 | Your role? | State Medicaid pharmacy director or deputy, MCO medical director, MCO pharmacy director | Any other |
 | P2 | Do you influence or decide drug coverage criteria or prior authorization policy? | Yes, decision or formal input | No |
 | P3 | Program type? | State fee-for-service program, MCO serving Medicaid, or both | Commercial-only or Medicare-only role |
@@ -75,7 +81,7 @@ tab <- function(df, ...) knitr::kable(df, format = "pipe", row.names = FALSE, ..
 Probes are tied to secondary findings; the line shown is the evidence the moderator holds, not a statement to read out.
 
 | Time | Prescriber version | Payer version | Secondary evidence behind the probe |
-|---|---|---|---|
+|-|--------|-------|------|
 | 0 to 5 | Consent, role, practice mix | Consent, role, program structure | none |
 | 5 to 15 | Current approach to weight management for Medicaid patients; what limits prescribing | How obesity drugs are handled in your program today; who decides | Part D prescribing is mostly primary care (`r kn("d_share_pcp")`% of 2024 claims; `r kn("d_share_nppa")`% nurse practitioners and physician assistants), diabetes and other covered uses, not obesity use (Module D) |
 | 15 to 25 | How coverage criteria change your decision: BMI, comorbidity, renewal, step therapy | Which criteria you use and why; what you changed over time | Covering states record BMI 30 or more, with 27 to 29 allowed if a condition is present (`coverage.csv`); `r kn("c_pa_states")` covering states recorded PA |
@@ -94,8 +100,13 @@ Probes are tied to secondary findings; the line shown is the evidence the modera
 
 ## 4.1 Coverage-policy board (one page)
 
+```{=typst}
+#block(width: 100%, stroke: 1pt + luma(150), radius: 5pt, inset: 12pt, fill: luma(251), breakable: false)[
+#text(size: 8pt, weight: "bold", fill: rgb("#D55E00"), tracking: 0.06em)[FICTIONAL STIMULUS BOARD  |  ILLUSTRATION ONLY]
+```
+
 | | **Policy A (fictional)** | **Policy B (fictional)** |
-|---|---|---|
+|------|----------|----------|
 | Who qualifies | BMI 30 or more | BMI 27 or more with at least 1 weight-related condition |
 | Comorbidity | None required | At least 1 weight-related condition |
 | Prior authorization renewal | Every 6 months | Every 12 months |
@@ -103,11 +114,24 @@ Probes are tied to secondary findings; the line shown is the evidence the modera
 | Patient out-of-pocket cost per month | $25 | $0 |
 | Product class | Injectable GLP-1 or GIP/GLP-1 | Injectable GLP-1 or GIP/GLP-1 |
 
+```{=typst}
+]
+```
+
 *Questions for the moderator:* Which policy would you prefer for your patients (prescriber) or your program (payer)? What would you change first? Which single criterion would you not accept?
 
 ## 4.2 Concept board: a once-daily oral option (fictional)
 
+```{=typst}
+#block(width: 100%, stroke: 1pt + luma(150), radius: 5pt, inset: 12pt, fill: luma(251), breakable: false)[
+#text(size: 8pt, weight: "bold", fill: rgb("#D55E00"), tracking: 0.06em)[FICTIONAL STIMULUS BOARD  |  ILLUSTRATION ONLY]
+```
+
 > **Concept (fictional): "a once-daily oral tablet for chronic weight management."** Taken by mouth, without injections. A prescriber and patient would decide together, as with any chronic weight-management drug. Coverage criteria would follow the program's existing policy.
+
+```{=typst}
+]
+```
 
 No efficacy, safety or price claims are shown. The moderator may note only label facts already saved in `docs/sources/` (the CMS Medicare GLP-1 Bridge pages list oral tablets among covered products: *CMS Medicare GLP-1 Bridge prescriber page, June 2026*). *Questions:* What would an oral option change in who you would treat? What would it change in coverage criteria or cost to the program?
 
@@ -139,13 +163,19 @@ b <- rd("dce_level_balance.csv"); tab(b, col.names = c("Attribute", "Level", "Ap
 
 **Method 2, simulation.** For each sample size, 200 simulated studies were run: respondents are randomly assigned to a block, choose between the two policies according to a multinomial logit model with **illustrative true preference weights** (an assumption: adjacent-level utility steps of 0.30 for BMI threshold, 0.40 for comorbidity, 0.20 for renewal interval, 0.35 for step therapy and 0.50 for cost, in logit units, chosen only to make the smallest effect small enough to be demanding), and the model is estimated by conditional logit. Power is the share of simulated studies in which a joint test of each attribute is significant at 5%. These are not estimated from data and would be replaced by pilot estimates.
 
-```{r power}
+```{r power, dev="ragg_png", fig.width=6.4, fig.height=3.3, fig.alt="Line chart of simulated power against the number of respondents for five attributes of the choice experiment; every line passes the 80 percent power line by about 75 respondents."}
 p <- rd("dce_power_simulation.csv"); colnames(p) <- c("N", "BMI threshold", "Comorbidity", "PA renewal", "Step therapy", "Out-of-pocket cost", "Mean SE, smallest contrast")
 tab(p, digits = 3)
 pl <- reshape(p[, 1:6], direction = "long", varying = list(2:6), v.names = "power", timevar = "attribute", times = colnames(p)[2:6], idvar = "N")
-ggplot(pl, aes(N, power, colour = attribute)) + geom_hline(yintercept = 0.8, linetype = "dashed", colour = "grey50") + geom_line() + geom_point() + labs(x = "Respondents", y = "Simulated power (joint test, 5% level)", colour = NULL, title = "Simulated power reaches 80% for every attribute by about 75 respondents", caption = "Source: simulation, research_pack/dce_design.R;
-illustrative true preference weights (assumption), 200 replications per sample size.") + theme_minimal(base_size = 9) + theme(legend.position = "bottom", plot.title = element_text(face = "bold"), plot.title.position = "plot")
+f <- function(x) file.path("../analysis/assets/fonts", x)
+systemfonts::register_font("IBM Plex Sans", plain = f("IBMPlexSans-Regular.ttf"), bold = f("IBMPlexSans-SemiBold.ttf")); systemfonts::register_font("Source Serif 4", plain = f("SourceSerif4-Regular.ttf"), bold = f("SourceSerif4-Semibold.ttf"))
+pal <- c("#D55E00", "#595959", "#0072B2", "#009E73", "#CC79A7")
+ggplot(pl, aes(N, power, colour = attribute)) + geom_hline(yintercept = 0.8, linetype = "dashed", colour = "grey50") + geom_line(linewidth = 0.9) + geom_point(size = 1.8) + scale_colour_manual(values = pal) + scale_y_continuous(labels = scales::percent) +
+  labs(x = "Respondents", y = "Simulated power (5% level)", colour = NULL, title = "Power passes 80% for every attribute by about 75 respondents") +
+  theme_minimal(base_size = 10, base_family = "IBM Plex Sans") + theme(legend.position = "bottom", plot.title = element_text(family = "Source Serif 4", face = "bold", size = 12), plot.title.position = "plot", panel.grid.minor = element_blank(), panel.grid.major.x = element_blank(), axis.text = element_text(colour = "#333333"))
 ```
+
+*Source: simulation (`research_pack/dce_design.R`) with illustrative true preference weights (an assumption), 200 replications per sample size.*
 
 **Recommendation:** at least **100 respondents** for pooled main effects (above the rule-of-thumb minimum of `r s$value[s$item == "Johnson-Orme minimum respondents"]` and above the 75 where simulated power passes 80% for every attribute), **300** for a study with three prescriber subgroups of 100, and **600** if the three subgroups are to be compared with 200 each (Sawtooth's subgroup rule). The weakest attribute in simulation is the PA renewal interval, which has the smallest assumed effect.
 

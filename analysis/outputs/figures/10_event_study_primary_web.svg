@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='792.00pt' height='489.60pt' viewBox='0 0 792.00 489.60'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw0ODkuNjA='>
+    <rect x='0.00' y='0.00' width='792.00' height='489.60' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0ODkuNjA=)'>
+<rect x='0.000000000000064' y='0.00' width='792.00' height='489.60' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDMuMTd8Nzc4LjA1fDkuOTZ8Mzk3Ljk1'>
+    <rect x='43.17' y='9.96' width='734.88' height='387.99' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDMuMTd8Nzc4LjA1fDkuOTZ8Mzk3Ljk1)'>
+<polyline points='43.17,369.79 778.05,369.79 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,297.23 778.05,297.23 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,224.68 778.05,224.68 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,152.12 778.05,152.12 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,79.57 778.05,79.57 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<line x1='43.17' y1='369.79' x2='778.05' y2='369.79' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
+<line x1='327.10' y1='397.95' x2='327.10' y2='9.96' style='stroke-width: 1.07; stroke: #999999; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<polygon points='76.58,369.12 109.98,369.12 143.38,369.26 176.79,369.16 210.19,368.49 243.59,369.50 277.00,368.71 277.00,370.26 243.59,370.46 210.19,376.64 176.79,377.19 143.38,377.82 109.98,378.09 76.58,380.31 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.20;' />
+<polyline points='76.58,369.12 109.98,369.12 143.38,369.26 176.79,369.16 210.19,368.49 243.59,369.50 277.00,368.71 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='277.00,370.26 243.59,370.46 210.19,376.64 176.79,377.19 143.38,377.82 109.98,378.09 76.58,380.31 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polygon points='343.81,354.85 377.21,322.44 410.61,289.45 444.02,255.98 477.42,219.63 510.82,207.53 544.23,184.75 577.63,228.29 611.03,173.83 644.44,117.77 677.84,27.60 677.84,293.11 644.44,312.88 611.03,315.83 577.63,315.63 544.23,331.58 510.82,360.87 477.42,349.53 444.02,360.39 410.61,359.24 377.21,363.13 343.81,366.50 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.20;' />
+<polyline points='343.81,354.85 377.21,322.44 410.61,289.45 444.02,255.98 477.42,219.63 510.82,207.53 544.23,184.75 577.63,228.29 611.03,173.83 644.44,117.77 677.84,27.60 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='677.84,293.11 644.44,312.88 611.03,315.83 577.63,315.63 544.23,331.58 510.82,360.87 477.42,349.53 444.02,360.39 410.61,359.24 377.21,363.13 343.81,366.50 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polygon points='711.25,122.50 744.65,96.96 744.65,333.68 711.25,363.27 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #595959; fill-opacity: 0.15;' />
+<polyline points='711.25,122.50 744.65,96.96 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='744.65,333.68 711.25,363.27 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<circle cx='76.58' cy='374.72' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='109.98' cy='373.60' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='143.38' cy='373.54' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='176.79' cy='373.17' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='210.19' cy='372.57' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='243.59' cy='369.98' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='277.00' cy='369.49' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='310.40' cy='369.79' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='343.81' cy='360.68' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='377.21' cy='342.79' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='410.61' cy='324.34' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='444.02' cy='308.19' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='477.42' cy='284.58' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='510.82' cy='284.20' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='544.23' cy='258.17' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='577.63' cy='271.96' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='611.03' cy='244.83' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='644.44' cy='215.32' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='677.84' cy='160.35' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='711.25' cy='242.89' r='3.13' style='stroke-width: 0.71; stroke: #B5B5B5;' />
+<circle cx='744.65' cy='215.32' r='3.13' style='stroke-width: 0.71; stroke: #B5B5B5;' />
+<text x='76.58' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>6</text>
+<text x='109.98' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='143.38' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='176.79' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='210.19' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='243.59' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='277.00' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='310.40' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='15.03px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='343.81' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='15.03px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='377.21' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='410.61' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='444.02' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='477.42' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='510.82' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>7</text>
+<text x='544.23' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>7</text>
+<text x='577.63' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>6</text>
+<text x='611.03' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='644.44' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='677.84' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='711.25' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='744.65' y='392.71' text-anchor='middle' style='font-size: 12.52px;fill: #555555; font-family: "IBM Plex Sans";' textLength='7.52px' lengthAdjust='spacingAndGlyphs'>2</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0ODkuNjA=)'>
+<text x='38.24' y='373.28' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='38.24' y='300.73' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='38.24' y='228.17' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='38.24' y='155.62' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='38.24' y='83.06' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='76.58' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>-8</text>
+<text x='143.38' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>-6</text>
+<text x='210.19' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>-4</text>
+<text x='277.00' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>-2</text>
+<text x='343.81' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='410.61' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='477.42' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='544.23' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>6</text>
+<text x='611.03' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='677.84' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='744.65' y='409.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>12</text>
+<text x='410.61' y='422.05' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='264.73px' lengthAdjust='spacingAndGlyphs'>Quarters since coverage began (0 = first treated quarter)</text>
+<text transform='translate(21.28,203.96) rotate(-90)' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='113.23px' lengthAdjust='spacingAndGlyphs'>ATT per 1,000 enrollees</text>
+<circle cx='237.45' cy='449.35' r='3.13' style='stroke-width: 0.71; stroke: none; fill: #D55E00;' />
+<circle cx='395.73' cy='449.35' r='3.13' style='stroke-width: 0.71; stroke: #B5B5B5;' />
+<text x='251.57' y='452.85' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='130.05px' lengthAdjust='spacingAndGlyphs'>3 or more contributing states</text>
+<text x='409.85' y='452.85' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='182.56px' lengthAdjust='spacingAndGlyphs'>fewer than 3 contributing states (grayed)</text>
+<text x='13.95' y='478.68' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='342.50px' lengthAdjust='spacingAndGlyphs'>Source: CMS State Drug Utilization Data and Medicaid enrollment (warehouse marts).</text>
+</g>
+</g>
+</svg>

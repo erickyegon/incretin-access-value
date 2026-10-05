@@ -12,7 +12,7 @@ h2 { font-size: 1.3rem; margin: 32px 0 8px; }
 .lede { font-size: 1.1rem; color: var(--muted); margin: 0 0 8px; }
 .byline { color: var(--muted); margin: 0 0 20px; }
 .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
-.btn { display: inline-block; padding: 10px 16px; border: 1.5px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px; border: 1.5px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
 .btn.primary { background: var(--accent); color: #fff; }
 @media (prefers-color-scheme: dark) { .btn.primary { color: #151515; } }
 .btn:focus-visible, a:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
@@ -24,11 +24,15 @@ h2 { font-size: 1.3rem; margin: 32px 0 8px; }
 figure { margin: 0 0 24px; }
 figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 figcaption, .small { color: var(--muted); font-size: .85rem; }
-.pipeline { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
-.pipeline li { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
-.pipeline li + li::before { content: "→ "; color: var(--accent); }
+.pipeline { list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 0; margin: 0 0 8px; }
+.pipeline li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 14px; font-size: .95rem; }
+@media (min-width: 820px) { .pipeline { flex-direction: row; align-items: stretch; gap: 0; }
+  .pipeline li { flex: 1 1 0; text-align: center; border-radius: 0; position: relative; padding: 12px 10px; margin-right: 22px; }
+  .pipeline li:first-child { border-radius: 10px 0 0 10px; } .pipeline li:last-child { border-radius: 0 10px 10px 0; margin-right: 0; }
+  .pipeline li + li::before { content: "\2192"; position: absolute; left: -20px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 700; } }
+.shows { padding-left: 1.2rem; } .shows li { margin-bottom: 6px; }
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-.proj { display: block; padding: 14px; border: 1.5px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--fg); }
+.proj { display: block; min-height: 44px; padding: 14px; border: 1.5px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--fg); }
 .proj strong { display: block; color: var(--accent); }
 .proj.current { border-color: var(--accent); }
 a { color: var(--accent); }

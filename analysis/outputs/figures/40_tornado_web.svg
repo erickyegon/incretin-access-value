@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='792.00pt' height='432.00pt' viewBox='0 0 792.00 432.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='792.00' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='0.00' width='792.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMjE5Ljg4fDc3OC4wNXw5Ljk2fDM2Ny42Nw=='>
+    <rect x='219.88' y='9.96' width='558.17' height='357.70' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjE5Ljg4fDc3OC4wNXw5Ljk2fDM2Ny42Nw==)'>
+<line x1='498.97' y1='367.67' x2='498.97' y2='9.96' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<polyline points='496.15,337.86 507.49,337.86 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='460.53,288.18 537.40,288.18 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='410.32,238.50 498.97,238.50 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='470.47,188.81 568.54,188.81 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='422.09,139.13 537.40,139.13 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='410.32,89.45 587.61,89.45 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='405.94,39.77 591.99,39.77 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<circle cx='405.94' cy='39.77' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='591.99' cy='39.77' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='410.32' cy='89.45' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='587.61' cy='89.45' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='422.09' cy='139.13' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='537.40' cy='139.13' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='470.47' cy='188.81' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='568.54' cy='188.81' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='410.32' cy='238.50' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='498.97' cy='238.50' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='460.53' cy='288.18' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='537.40' cy='288.18' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='496.15' cy='337.86' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='507.49' cy='337.86' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<text x='400.29' y='44.14' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='47.09px' lengthAdjust='spacingAndGlyphs'>lower CI</text>
+<text x='597.85' y='44.14' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='48.83px' lengthAdjust='spacingAndGlyphs'>upper CI</text>
+<text x='393.49' y='93.82' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='140.27px' lengthAdjust='spacingAndGlyphs'>79.3% (implied by $245)</text>
+<text x='606.33' y='93.82' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='155.98px' lengthAdjust='spacingAndGlyphs'>23.1% (statutory minimum)</text>
+<text x='415.44' y='143.50' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='55.39px' lengthAdjust='spacingAndGlyphs'>0.5 (tight)</text>
+<text x='545.53' y='143.50' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='67.69px' lengthAdjust='spacingAndGlyphs'>1.25 (loose)</text>
+<text x='465.56' y='193.18' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>decline</text>
+<text x='580.35' y='193.18' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='98.38px' lengthAdjust='spacingAndGlyphs'>continued growth</text>
+<text x='396.30' y='242.86' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='116.81px' lengthAdjust='spacingAndGlyphs'>announced $245 net</text>
+<text x='508.42' y='242.86' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='78.77px' lengthAdjust='spacingAndGlyphs'>central rebate</text>
+<text x='457.41' y='292.54' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>0.75</text>
+<text x='540.52' y='292.54' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>1.25</text>
+<text x='491.23' y='342.23' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>$1,164</text>
+<text x='512.40' y='342.23' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>$1,252</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA=)'>
+<text x='214.95' y='341.35' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='120.80px' lengthAdjust='spacingAndGlyphs'>Gross cost per prescription</text>
+<text x='214.95' y='291.67' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='77.59px' lengthAdjust='spacingAndGlyphs'>Uptake multiplier</text>
+<text x='214.95' y='241.99' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='63.08px' lengthAdjust='spacingAndGlyphs'>Price scenario</text>
+<text x='214.95' y='192.31' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='83.64px' lengthAdjust='spacingAndGlyphs'>Years 3-5 scenario</text>
+<text x='214.95' y='142.63' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='128.69px' lengthAdjust='spacingAndGlyphs'>Prior authorization multiplier</text>
+<text x='214.95' y='92.94' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='59.20px' lengthAdjust='spacingAndGlyphs'>Rebate share</text>
+<text x='214.95' y='43.26' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='201.00px' lengthAdjust='spacingAndGlyphs'>Module C effect (95% CI of every event time)</text>
+<text x='249.91' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='36.09px' lengthAdjust='spacingAndGlyphs'>-$100M</text>
+<text x='345.22' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='20.11px' lengthAdjust='spacingAndGlyphs'>$0M</text>
+<text x='440.53' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>$100M</text>
+<text x='535.83' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>$200M</text>
+<text x='631.14' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>$300M</text>
+<text x='726.45' y='379.58' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='32.11px' lengthAdjust='spacingAndGlyphs'>$400M</text>
+<text x='498.97' y='391.77' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='201.72px' lengthAdjust='spacingAndGlyphs'>Five-year net budget impact (USD millions)</text>
+<text x='13.95' y='409.20' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='645.06px' lengthAdjust='spacingAndGlyphs'>Source: Module C estimates (CMS State Drug Utilization Data, Medicaid enrollment); SDUD gross reimbursement; statutory rebate floor 42 U.S.C. 1396r-8; White</text>
+<text x='13.95' y='421.08' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='112.12px' lengthAdjust='spacingAndGlyphs'>House fact sheet Nov 2025.</text>
+</g>
+</g>
+</svg>

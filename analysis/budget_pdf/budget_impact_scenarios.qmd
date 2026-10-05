@@ -1,0 +1,94 @@
+---
+title: "Budget impact of Medicaid coverage of Wegovy and Zepbound"
+subtitle: "A program of 1 million enrollees, five years, incremental to no coverage"
+author: "Erick Kiprotich Yegon · Epidemiologist and data scientist"
+format:
+  html:
+    embed-resources: true
+    css: budget_pdf.css
+    toc: false
+execute: { echo: false, warning: false, message: false }
+---
+
+```{r setup}
+source("../R/kn.R")
+suppressPackageStartupMessages({ library(gt) })
+tb <- function(x) read.csv(file.path("../outputs/tables", x), check.names = FALSE, stringsAsFactors = FALSE)
+res <- tb("moduleE_scenario_results.csv"); ann <- tb("moduleE_central_annual.csv")
+al <- read.csv("../outputs/figures/alt_text.csv", stringsAsFactors = FALSE); nt <- read.csv("../outputs/figures/figure_notes.csv", stringsAsFactors = FALSE)
+fig <- function(name) { a <- al$alt_text[al$figure == name]; cap <- if (name %in% nt$figure) nt$notes[nt$figure == name] else ""
+  cat(sprintf("![%s](../outputs/figures/%s_report.png){fig-alt=\"%s\" width=100%%}\n\n", gsub("\n", " ", cap), name, gsub("\"", "'", a))) }
+raw_html <- function(x) cat("
+
+", strrep(intToUtf8(96), 3), "{=html}
+", x, "
+", strrep(intToUtf8(96), 3), "
+
+", sep = "")
+usd <- function(x) paste0("$", format(round(x), big.mark = ","))
+```
+
+::: {.tiles}
+::: {.tile}
+<span class="n">$`r kn("e_net5")` million</span><span class="l">five-year net cost, 1 million enrollees (central case)</span>
+:::
+::: {.tile}
+<span class="n">$`r kn("e_pmpm")`</span><span class="l">per enrollee per month, net of an assumed rebate (gross $`r kn("e_gross_pmpm")`)</span>
+:::
+::: {.tile}
+<span class="n">$`r kn("e_psa_median")` million</span><span class="l">median of the probabilistic analysis; `r kn_ci("e_psa_median")` million</span>
+:::
+:::
+
+The central case assumes the prior authorization rules of the covering states (multiplier 1.0), a rebate of `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%) and a plateau in years 3 to 5. These are scenarios, not forecasts, and no medical cost offsets are included. **Try your own scenario in the [interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/).**
+
+## What is measured, sourced or assumed
+
+```{r assumptions, results='asis'}
+as <- read.csv("../../app/data/assumptions.csv", stringsAsFactors = FALSE)
+as <- as[!grepl("^Medical cost offsets", as$parameter), ]   # stated in the text above the table
+t <- data.frame(Input = as$parameter, Value = as$value_or_range, Type = as$basis_type, check.names = FALSE)   # the basis and source of each input are in the app (Sources tab) and the report
+raw_html(gt::as_raw_html(gt::gt(t) |> gt::cols_width(Input ~ gt::px(280), Value ~ gt::px(300), Type ~ gt::px(80)) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(10.5), data_row.padding = gt::px(1.5), column_labels.font.size = gt::px(9.5)) |>
+  gt::tab_style(style = gt::cell_text(color = "#D55E00", weight = "bold"), locations = gt::cells_body(columns = Type, rows = Type == "Assumed")) |> gt::opt_css("th { font-variant: small-caps; letter-spacing: .03em; }")))
+```
+
+
+::: {.pb}
+:::
+
+## Central scenario by year (1 million enrollees)
+
+```{r annual, results='asis'}
+t1 <- data.frame(Year = ann$year, `Incremental prescriptions` = format(round(ann$prescriptions), big.mark = ","), `Members treated` = format(round(ann$treated_members), big.mark = ","), `Gross cost` = usd(ann$gross), `Net cost` = usd(ann$net), `Net PMPM` = sprintf("$%.2f", ann$pmpm_net), check.names = FALSE)
+raw_html(gt::as_raw_html(gt::gt(t1) |> gt::cols_align("right") |> gt::cols_align("left", columns = Year) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(12), data_row.padding = gt::px(5), table.width = gt::pct(100)) |> gt::opt_css("th { font-variant: small-caps; }")))
+t1b <- data.frame(Year = ann$year, `Eligible pool` = format(round(ann$eligible_pool), big.mark = ","), `Net cost per user per year` = usd(ann$net_cost_per_user_year), `Net cost per member-year, continuous` = usd(ann$net_cost_per_member_year_continuous), check.names = FALSE)
+cat("<p class='small'>Two per-member costs answer different questions: per user (4.3 fills a year, MEPS) and per member-year of continuous treatment (12 fills).</p>")
+raw_html(gt::as_raw_html(gt::gt(t1b) |> gt::cols_align("right") |> gt::cols_align("left", columns = Year) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(12), data_row.padding = gt::px(5), table.width = gt::pct(100)) |> gt::opt_css("th { font-variant: small-caps; }")))
+```
+
+## Five-year results by years 3 to 5 scenario and price or rebate
+
+```{r scen, results='asis'}
+t2 <- data.frame(`Years 3 to 5` = res$y35, `Price or rebate` = res$price, `Gross, $M` = sprintf("%.1f", res$five_year_gross / 1e6), `Net, $M` = sprintf("%.1f", res$five_year_net / 1e6), `Net PMPM` = sprintf("$%.2f", res$pmpm_net), check.names = FALSE)
+raw_html(gt::as_raw_html(gt::gt(t2) |> gt::cols_align("right", columns = 3:5) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(10), data_row.padding = gt::px(1), table.width = gt::pct(100)) |> gt::opt_css("th { font-variant: small-caps; }")))
+```
+
+::: {.pb}
+:::
+
+## Scenarios and sensitivity
+
+```{r figs1, results='asis'}
+fig("42_cost_by_scenario"); fig("40_tornado")
+```
+
+::: {.pb}
+:::
+
+```{r figs2, results='asis'}
+fig("41_waterfall_pmpm"); fig("43_psa_distribution")
+```
+
+::: {.small}
+Public aggregate data (CMS State Drug Utilization Data and Medicaid enrollment, NHANES, MEPS); no company affiliation or endorsement. SDUD amounts are gross of rebates. I used AI tools to help write code and documentation; the study design, methods and conclusions are my own, and I verified all results.
+:::

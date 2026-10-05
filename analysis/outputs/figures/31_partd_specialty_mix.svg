@@ -26,81 +26,81 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
-<rect x='0.00' y='0.000000000000057' width='720.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='0.00' y='0.00' width='720.00' height='432.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMzcuMDl8NzE0LjUyfDY3LjYwfDMyNy40Ng=='>
-    <rect x='37.09' y='67.60' width='677.43' height='259.86' />
+  <clipPath id='cpNDkuMTd8NzA2LjA1fDgzLjQ3fDMxOC4wMA=='>
+    <rect x='49.17' y='83.47' width='656.88' height='234.53' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMzcuMDl8NzE0LjUyfDY3LjYwfDMyNy40Ng==)'>
-<polyline points='37.09,315.64 714.52,315.64 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='37.09,256.58 714.52,256.58 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='37.09,197.53 714.52,197.53 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='37.09,138.47 714.52,138.47 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='37.09,79.41 714.52,79.41 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<rect x='67.88' y='79.41' width='80.33' height='127.78' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='67.88' y='207.19' width='80.33' height='43.98' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='67.88' y='251.17' width='80.33' height='58.16' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='67.88' y='309.33' width='80.33' height='1.01' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='67.88' y='310.34' width='80.33' height='5.31' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='157.13' y='79.41' width='80.33' height='127.54' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='157.13' y='206.95' width='80.33' height='48.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='157.13' y='255.34' width='80.33' height='54.17' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='157.13' y='309.51' width='80.33' height='1.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='157.13' y='310.51' width='80.33' height='5.13' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='246.39' y='79.41' width='80.33' height='127.36' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='246.39' y='206.77' width='80.33' height='52.14' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='246.39' y='258.91' width='80.33' height='50.53' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='246.39' y='309.44' width='80.33' height='1.04' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='246.39' y='310.48' width='80.33' height='5.16' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='335.64' y='79.41' width='80.33' height='126.42' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='335.64' y='205.83' width='80.33' height='55.37' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='335.64' y='261.20' width='80.33' height='47.73' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='335.64' y='308.93' width='80.33' height='1.26' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='335.64' y='310.18' width='80.33' height='5.46' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='424.89' y='79.41' width='80.33' height='128.21' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='424.89' y='207.62' width='80.33' height='58.52' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='424.89' y='266.13' width='80.33' height='41.61' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='424.89' y='307.75' width='80.33' height='1.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='424.89' y='309.40' width='80.33' height='6.25' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='514.15' y='79.41' width='80.33' height='130.99' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='514.15' y='210.40' width='80.33' height='62.93' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='514.15' y='273.33' width='80.33' height='33.50' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='514.15' y='306.83' width='80.33' height='2.06' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='514.15' y='308.89' width='80.33' height='6.75' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<rect x='603.40' y='79.41' width='80.33' height='131.71' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='603.40' y='211.12' width='80.33' height='65.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='603.40' y='276.45' width='80.33' height='30.09' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='603.40' y='306.54' width='80.33' height='2.40' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='603.40' y='308.94' width='80.33' height='6.70' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<g clip-path='url(#cpNDkuMTd8NzA2LjA1fDgzLjQ3fDMxOC4wMA==)'>
+<polyline points='49.17,307.34 706.05,307.34 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.17,254.04 706.05,254.04 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.17,200.74 706.05,200.74 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.17,147.43 706.05,147.43 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.17,94.13 706.05,94.13 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<rect x='79.03' y='94.13' width='77.89' height='115.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='79.03' y='209.46' width='77.89' height='39.70' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='79.03' y='249.15' width='77.89' height='52.49' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='79.03' y='301.65' width='77.89' height='0.91' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='79.03' y='302.55' width='77.89' height='4.79' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='165.58' y='94.13' width='77.89' height='115.11' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='165.58' y='209.24' width='77.89' height='43.67' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='165.58' y='252.92' width='77.89' height='48.89' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='165.58' y='301.81' width='77.89' height='0.90' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='165.58' y='302.71' width='77.89' height='4.63' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='252.12' y='94.13' width='77.89' height='114.95' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='252.12' y='209.08' width='77.89' height='47.06' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='252.12' y='256.14' width='77.89' height='45.61' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='252.12' y='301.74' width='77.89' height='0.94' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='252.12' y='302.68' width='77.89' height='4.66' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='338.67' y='94.13' width='77.89' height='114.10' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='338.67' y='208.23' width='77.89' height='49.97' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='338.67' y='258.20' width='77.89' height='43.08' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='338.67' y='301.28' width='77.89' height='1.14' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='338.67' y='302.42' width='77.89' height='4.93' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='425.21' y='94.13' width='77.89' height='115.71' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='425.21' y='209.84' width='77.89' height='52.81' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='425.21' y='262.66' width='77.89' height='37.56' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='425.21' y='300.22' width='77.89' height='1.49' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='425.21' y='301.71' width='77.89' height='5.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='511.76' y='94.13' width='77.89' height='118.23' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='511.76' y='212.36' width='77.89' height='56.80' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='511.76' y='269.16' width='77.89' height='30.23' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='511.76' y='299.39' width='77.89' height='1.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='511.76' y='301.25' width='77.89' height='6.09' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<rect x='598.30' y='94.13' width='77.89' height='118.88' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='598.30' y='213.01' width='77.89' height='58.96' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='598.30' y='271.97' width='77.89' height='27.16' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='598.30' y='299.13' width='77.89' height='2.17' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='598.30' y='301.30' width='77.89' height='6.05' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0MzIuMDA=)'>
-<text x='32.16' y='318.79' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.89px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='32.16' y='259.73' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='32.16' y='200.68' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='32.16' y='141.62' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='9.78px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='32.16' y='82.56' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='14.67px' lengthAdjust='spacingAndGlyphs'>100</text>
-<text x='197.30' y='338.69' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.56px' lengthAdjust='spacingAndGlyphs'>2019</text>
-<text x='375.80' y='338.69' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.56px' lengthAdjust='spacingAndGlyphs'>2021</text>
-<text x='554.31' y='338.69' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='19.56px' lengthAdjust='spacingAndGlyphs'>2023</text>
-<text transform='translate(12.64,197.53) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #222222; font-family: "Arial";' textLength='87.25px' lengthAdjust='spacingAndGlyphs'>Share of claims (%)</text>
-<rect x='212.23' y='357.68' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
-<rect x='212.23' y='380.44' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
-<rect x='412.06' y='357.68' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
-<rect x='412.06' y='380.44' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='496.05' y='357.68' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
-<text x='234.28' y='368.77' style='font-size: 8.80px;fill: #222222; font-family: "Arial";' textLength='93.38px' lengthAdjust='spacingAndGlyphs'>Primary care physicians</text>
-<text x='234.28' y='391.52' style='font-size: 8.80px;fill: #222222; font-family: "Arial";' textLength='171.59px' lengthAdjust='spacingAndGlyphs'>Nurse practitioners and physician assistants</text>
-<text x='434.11' y='368.77' style='font-size: 8.80px;fill: #222222; font-family: "Arial";' textLength='55.75px' lengthAdjust='spacingAndGlyphs'>Endocrinology</text>
-<text x='434.11' y='391.52' style='font-size: 8.80px;fill: #222222; font-family: "Arial";' textLength='42.05px' lengthAdjust='spacingAndGlyphs'>Cardiology</text>
-<text x='518.10' y='368.77' style='font-size: 8.80px;fill: #222222; font-family: "Arial";' textLength='21.98px' lengthAdjust='spacingAndGlyphs'>Other</text>
-<text x='5.48' y='46.59' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='516.31px' lengthAdjust='spacingAndGlyphs'>Share of Part D incretin claims by prescriber specialty group, 2018-2024 (CMS prescriber type grouped by</text>
-<text x='5.48' y='58.47' style='font-size: 11.00px;fill: #444444; font-family: "Arial";' textLength='143.12px' lengthAdjust='spacingAndGlyphs'>the committed specialty map)</text>
-<text x='5.48' y='16.97' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='627.73px' lengthAdjust='spacingAndGlyphs'>In 2024, primary care physicians wrote 55.8% of Part D incretin claims, nurse practitioners and</text>
-<text x='5.48' y='32.09' style='font-size: 14.00px; font-weight: bold;fill: #222222; font-family: "Arial";' textLength='500.09px' lengthAdjust='spacingAndGlyphs'>physician assistants 27.7%, endocrinologists 12.7% and cardiologists 1.0%</text>
-<text x='5.48' y='417.04' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='539.95px' lengthAdjust='spacingAndGlyphs'>Source: CMS Medicare Part D Prescribers by Provider and Drug (rows with at least 11 claims), NPPES. Part D reflects diabetes and other covered uses,</text>
-<text x='5.48' y='425.68' style='font-size: 8.00px;fill: #666666; font-family: "Arial";' textLength='385.17px' lengthAdjust='spacingAndGlyphs'>not obesity-brand adoption; counts are claims, and only prescribers with 11 or more claims for a drug appear.</text>
+<text x='44.24' y='310.84' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='44.24' y='257.53' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='44.24' y='204.23' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='44.24' y='150.93' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='44.24' y='97.62' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='204.52' y='329.92' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2019</text>
+<text x='377.61' y='329.92' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2021</text>
+<text x='550.70' y='329.92' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2023</text>
+<text transform='translate(21.28,200.74) rotate(-90)' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='91.34px' lengthAdjust='spacingAndGlyphs'>Share of claims (%)</text>
+<rect x='195.10' y='349.18' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #0072B2;' />
+<rect x='195.10' y='371.94' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E69F00;' />
+<rect x='421.09' y='349.18' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #009E73;' />
+<rect x='421.09' y='371.94' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='513.34' y='349.18' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #CC79A7;' />
+<text x='217.15' y='360.61' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='106.33px' lengthAdjust='spacingAndGlyphs'>Primary care physicians</text>
+<text x='217.15' y='383.37' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='197.75px' lengthAdjust='spacingAndGlyphs'>Nurse practitioners and physician assistants</text>
+<text x='443.14' y='360.61' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='64.02px' lengthAdjust='spacingAndGlyphs'>Endocrinology</text>
+<text x='443.14' y='383.37' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='47.67px' lengthAdjust='spacingAndGlyphs'>Cardiology</text>
+<text x='535.40' y='360.61' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='25.44px' lengthAdjust='spacingAndGlyphs'>Other</text>
+<text x='13.95' y='58.39' style='font-size: 12.00px;fill: #444444; font-family: "IBM Plex Sans";' textLength='547.19px' lengthAdjust='spacingAndGlyphs'>Endocrinologists 12.7% and cardiologists 1.0%. Share of Part D incretin claims by prescriber specialty</text>
+<text x='13.95' y='74.23' style='font-size: 12.00px;fill: #444444; font-family: "IBM Plex Sans";' textLength='441.69px' lengthAdjust='spacingAndGlyphs'>group, 2018-2024 (CMS prescriber type grouped by the committed specialty map)</text>
+<text x='13.95' y='22.59' style='font-size: 16.00px; font-weight: 600;fill: #222222; font-family: "Source Serif 4";' textLength='558.31px' lengthAdjust='spacingAndGlyphs'>In 2024, primary care physicians wrote 55.8% of Part D incretin claims, nurse</text>
+<text x='13.95' y='42.75' style='font-size: 16.00px; font-weight: 600;fill: #222222; font-family: "Source Serif 4";' textLength='320.12px' lengthAdjust='spacingAndGlyphs'>practitioners and physician assistants 27.7%</text>
+<text x='13.95' y='409.20' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='578.58px' lengthAdjust='spacingAndGlyphs'>Source: CMS Medicare Part D Prescribers by Provider and Drug (rows with at least 11 claims), NPPES. Part D reflects diabetes and other covered</text>
+<text x='13.95' y='421.08' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='463.12px' lengthAdjust='spacingAndGlyphs'>uses, not obesity-brand adoption; counts are claims, and only prescribers with 11 or more claims for a drug appear.</text>
 </g>
 </g>
 </svg>

@@ -14,7 +14,7 @@ for (suffix in c("", "_k5")) {
   ttl <- sprintf("%sPart D incretin prescribers fall into %d segments; the largest by claims, %s, wrote %s%% of 2024 claims", ifelse(k == 2, "", "Exploratory: "), k, sub("^[A-Z]: ", "", prof$segment[which.max(prof$share_of_claims_pct)]), fmt1(max(prof$share_of_claims_pct)))
   p <- ggplot(pp, aes(value, segment)) + geom_segment(aes(x = 0, xend = value, yend = segment), colour = col_context) + geom_point(colour = col_treated, size = 3) +
     geom_text(aes(label = format(round(value, 2), nsmall = 1, trim = TRUE)), hjust = -0.3, size = 2.7) +
-    facet_wrap(~feature, nrow = 1, scales = "free_x", labeller = label_wrap_gen(16)) + scale_x_continuous(expand = expansion(mult = c(0.05, 0.45))) +
+    facet_wrap(~feature, nrow = 1, scales = "free_x", labeller = label_wrap_gen(16)) + scale_x_continuous(breaks = scales::breaks_pretty(n = 3), expand = expansion(mult = c(0.05, 1.2))) +
     labs(title = ttl, subtitle = if (k == 2) "Pre-specified solution (highest silhouette): the two segments separate prescribers new in 2024 from continuing prescribers. Each dot is a segment." else
            "Supplementary five-segment solution (the next silhouette maximum). Each dot is a segment; segment sizes and stability are in the table.", x = NULL, y = NULL, caption = cap) + theme_incretin(base_size = 9) + theme(panel.grid.major.y = element_blank())
   save_fig(p, paste0("35_partd_segments", suffix), width = 15, height = ifelse(k == 2, 3.8, 5.5),

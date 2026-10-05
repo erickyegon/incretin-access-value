@@ -6,16 +6,24 @@ format:
     toc: true
     embed-resources: true
     theme: cosmo
+    css: ../report/report.css
 execute: { echo: false, warning: false, message: false }
 ---
 
 ```{r setup}
 source("../analysis/R/kn.R")
-tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+# tables: long text is shortened (full text is in the CSV), wide tables scroll inside their container instead of overflowing
+tb <- function(f, n = 12) { d <- utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n)
+  if (f == "coverage_um_criteria.csv") d <- d[, c("State", "Delivery system", "Prior authorization", "BMI threshold", "Step therapy")]
+  d[] <- lapply(d, function(x) if (is.character(x)) ifelse(nchar(x) > 60, paste0(substr(x, 1, 59), "…"), x) else x)
+  fence <- strrep(intToUtf8(96), 3)
+  cat("\n\n", fence, "{=html}\n<div class='scroll' style='overflow-x:auto'>", knitr::kable(d, format = "html", table.attr = "class='table table-sm'"), "</div>\n", fence, "\n\n", sep = "") }
 al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
 fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
-  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+  cat(sprintf("![%s](../analysis/outputs/figures/%s_report.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
 ```
+
+[Back to the report](https://erickyegon.github.io/incretin-access-value/report.html) · [Project site](https://erickyegon.github.io/incretin-access-value/) · [Interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/)
 
 A tested warehouse (`r kn("build_models")` dbt models, `r kn("build_seeds")` seeds, `r kn("build_tests")` tests) sits behind every number. This notebook looks at what the data layer shows before any model: reporting completeness, spending, the timeline of events and the pipeline.
 
@@ -24,10 +32,12 @@ A tested warehouse (`r kn("build_models")` dbt models, `r kn("build_seeds")` see
 `r kn("m_rep_both")`% of state-quarters have both fee-for-service and managed-care rows and `r kn("m_wz_suppressed_share")`% of Wegovy and Zepbound rows are suppressed (counts under 11).
 
 ```{r}
+#| results: asis
 tb("moduleA_sdud_reporting_status_counts.csv", 6)
 ```
 
 ```{r}
+#| results: asis
 tb("moduleA_sdud_reporting_summary.csv", 8)
 ```
 
@@ -41,6 +51,7 @@ fig("52_sdud_reporting_suppression", "SDUD reporting and suppression by state an
 Gross of rebates: Part D `r kn("m_spend_partd_2020")` to `r kn("m_spend_partd_2024")` billion dollars (2020 to 2024); Medicaid `r kn("m_spend_medicaid_2020")` to `r kn("m_spend_medicaid_2024")` billion.
 
 ```{r}
+#| results: asis
 tb("moduleA_spending_totals.csv", 12)
 ```
 
@@ -54,10 +65,12 @@ fig("50_spending_trend", "Gross spending by brand")
 Registered studies of the in-scope ingredients: `r kn("p_obesity_studies")` list obesity, `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3.
 
 ```{r}
+#| results: asis
 tb("moduleA_pipeline_by_phase.csv", 8)
 ```
 
 ```{r}
+#| results: asis
 tb("moduleA_pipeline_summary.csv", 10)
 ```
 
@@ -71,6 +84,7 @@ fig("51_timeline", "Timeline of approvals, coverage and federal events")
 Prior authorization is documented for `r kn("um_pa")` of 17 states, BMI thresholds for `r kn("um_bmi")`, comorbidity rules for `r kn("um_comorb")` and step therapy for `r kn("um_step")`.
 
 ```{r}
+#| results: asis
 tb("coverage_um_completeness.csv", 6)
 ```
 

@@ -6,22 +6,31 @@ format:
     toc: true
     embed-resources: true
     theme: cosmo
+    css: ../report/report.css
 execute: { echo: false, warning: false, message: false }
 ---
 
 ```{r setup}
 source("../analysis/R/kn.R")
-tb <- function(f, n = 12) knitr::kable(utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n))
+# tables: long text is shortened (full text is in the CSV), wide tables scroll inside their container instead of overflowing
+tb <- function(f, n = 12) { d <- utils::head(read.csv(file.path("../analysis/outputs/tables", f), check.names = FALSE, stringsAsFactors = FALSE), n)
+  if (f == "coverage_um_criteria.csv") d <- d[, c("State", "Delivery system", "Prior authorization", "BMI threshold", "Step therapy")]
+  d[] <- lapply(d, function(x) if (is.character(x)) ifelse(nchar(x) > 60, paste0(substr(x, 1, 59), "…"), x) else x)
+  fence <- strrep(intToUtf8(96), 3)
+  cat("\n\n", fence, "{=html}\n<div class='scroll' style='overflow-x:auto'>", knitr::kable(d, format = "html", table.attr = "class='table table-sm'"), "</div>\n", fence, "\n\n", sep = "") }
 al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
 fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
-  cat(sprintf("![%s](../analysis/outputs/figures/%s.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
+  cat(sprintf("![%s](../analysis/outputs/figures/%s_report.png){fig-alt=\"%s\" width=100%%}\n\n", cap, name, gsub("\"", "'", a))) }
 ```
+
+[Back to the report](https://erickyegon.github.io/incretin-access-value/report.html) · [Project site](https://erickyegon.github.io/incretin-access-value/) · [Interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/)
 
 About `r kn("b_eligible")` million adults meet the label criteria (lower bound), including `r kn("b_medicaid_elig")` million with Medicaid; about `r kn("b_glp1_all")` million currently use a GLP-1 drug.
 
 ## Funnel
 
 ```{r}
+#| results: asis
 tb("moduleB_funnel.csv", 12)
 ```
 
@@ -35,6 +44,7 @@ fig("20_funnel", "Eligible-population funnel")
 NHANES 2021-2023 design-based estimates.
 
 ```{r}
+#| results: asis
 tb("moduleB_survey_estimates.csv", 12)
 ```
 
@@ -43,6 +53,7 @@ tb("moduleB_survey_estimates.csv", 12)
 Median `r kn("b_fc_2030")` million GLP-1 users without diagnosed diabetes by 2030.
 
 ```{r}
+#| results: asis
 tb("moduleB_forecast_year_end.csv", 12)
 ```
 

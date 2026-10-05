@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap");
+body { font-family: "IBM Plex Sans", Arial, sans-serif; font-size: 10pt; line-height: 1.4; color: #222; margin: 0; max-width: 100%; }
+h1, h2, .title, .subtitle { font-family: "Source Serif 4", Georgia, serif; }
+.title { font-size: 24pt; line-height: 1.15; margin: 0 0 4px; } .subtitle { font-size: 13pt; color: #444; margin: 0 0 4px; } .author { color: #595959; font-size: 10pt; margin-bottom: 12px; }
+h2 { font-size: 13pt; margin: 12px 0 5px; border-bottom: 2px solid #D55E00; padding-bottom: 2px; }
+.tiles { display: flex; gap: 10px; margin: 8px 0; } .tile { flex: 1; background: #f6f6f6; border-left: 6px solid #D55E00; padding: 10px 12px; }
+.tile .n { display: block; font-family: "Source Serif 4", serif; font-weight: 600; font-size: 22pt; color: #D55E00; line-height: 1.05; } .tile .l { display: block; font-size: 9.5pt; color: #444; margin-top: 4px; }
+.small, .small p { font-size: 8.5pt; color: #595959; }
+.pb { break-after: page; }
+figure { margin: 6px 0 10px; break-inside: avoid; } figure img { width: 100%; max-height: 118mm; object-fit: contain; } figcaption { font-size: 8pt; color: #595959; }
+table, .gt_table { width: 100%; } .gt_table td, .gt_table th { padding-top: 1px !important; padding-bottom: 1px !important; }
+a { color: #D55E00; } h2 { break-after: avoid; } tr { break-inside: avoid; }
+@page { size: Letter; margin: 14mm 14mm 17mm 14mm;
+  @bottom-left { content: "Budget impact of Medicaid coverage of Wegovy and Zepbound  |  Erick Kiprotich Yegon  |  Scenarios, not forecasts"; font: 8pt "IBM Plex Sans", Arial, sans-serif; color: #595959; }
+  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 8pt "IBM Plex Sans", Arial, sans-serif; color: #595959; } }

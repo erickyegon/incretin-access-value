@@ -83,7 +83,7 @@ pf <- ggplot(fa, aes(quarter_start)) +
   geom_line(data = sc_run, aes(y = no_diabetes, colour = scenario), linetype = "dashed", linewidth = 0.8) +
   geom_vline(xintercept = as.Date("2026-04-01"), linetype = "dotted") +
   annotate("text", x = as.Date("2026-07-15"), y = max(fa$p95) * 0.97, label = "Medicare GLP-1 Bridge\nJul 2026 - Dec 2027", hjust = 0, size = 3, colour = "#444444") +
-  annotate("text", x = as.Date("2026-03-20"), y = max(fa$p95) * 0.80, label = "Foundayo approved\n2026-04-01", hjust = 1, size = 3, colour = "#444444") +
+  annotate("text", x = as.Date("2026-04-20"), y = max(fa$p95) * 0.58, label = "Foundayo approved\n2026-04-01", hjust = 0, size = 3.6, colour = "#444444") +
   scale_colour_manual(values = cols, name = "Scenario (parameter set)") + scale_x_date(date_breaks = "1 year", date_labels = "%Y") + scale_y_continuous(labels = scales::label_number(suffix = " M")) +
   labs(title = stringr::str_wrap(sprintf("Scenarios put adults using a GLP-1 drug without diagnosed diabetes at %s million by end-2030 (median; 90%% interval %s to %s), from %s million in early 2026",
                                          fmt1(l30$p50), fmt1(l30$p05), fmt1(l30$p95), fmt1(fa$p50[1])), 95),

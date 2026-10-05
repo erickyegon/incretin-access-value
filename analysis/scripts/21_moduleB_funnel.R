@@ -44,7 +44,7 @@ plot_path <- function(d, title_lab) {
     geom_rect_pattern(aes(xmin = -half, xmax = half, ymin = y - 0.38, ymax = y + 0.38, pattern = status, fill = status), colour = col_treated, pattern_colour = col_treated, pattern_fill = "white", pattern_density = 0.35, pattern_spacing = 0.02, pattern_angle = 45, linewidth = 0.4) +
     geom_text(aes(x = max(est) / 2 + 6, y = y, label = lab), hjust = 0, size = 3.1, lineheight = 0.95, colour = "#222222") +
     scale_pattern_manual(values = c(measured = "none", modeled = "stripe"), name = NULL) + scale_fill_manual(values = c(measured = col_treated, modeled = "#FFFFFF"), name = NULL) +
-    scale_x_continuous(limits = c(-max(d$est) / 2 - 3, max(d$est) / 2 + 150)) + labs(subtitle = title_lab, x = NULL, y = NULL) + theme_incretin() +
+    scale_x_continuous(limits = c(-max(d$est) / 2 - 3, max(d$est) / 2 + 330)) + labs(subtitle = title_lab, x = NULL, y = NULL) + theme_incretin() +
     theme(axis.text = element_blank(), panel.grid = element_blank(), legend.position = "none", plot.subtitle = element_text(face = "bold", size = 11))
 }
 ob <- steps |> filter(pathway == "Obesity"); dmp <- steps |> filter(pathway == "Type 2 diabetes")

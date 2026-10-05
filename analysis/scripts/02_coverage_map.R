@@ -18,10 +18,9 @@ st <- panel |>
   mutate(cohort_year = ifelse(analysis_group == "primary", substr(first_treated_quarter, 1, 4), NA_character_),
          fill_key = case_when(analysis_group == "primary" ~ cohort_year, analysis_group == "sensitivity" ~ "Sensitivity (start range, dashed outline)",
                               TRUE ~ "Never treated"),
-         label = case_when(analysis_group == "primary" ~ paste0(state_code, "\n", first_treated_quarter),
-                           analysis_group == "sensitivity" ~ paste0(state_code, "\n", start_quarter_earliest, "-", substr(start_quarter_latest, 3, 6)),
-                           TRUE ~ state_code),
-         label = ifelse(withdrew, paste0(label, " ↓"), label))
+         label = case_when(analysis_group == "primary" ~ paste0(state_code, ifelse(withdrew, " ↓", ""), "
+", substr(first_treated_quarter, 3, 6)),
+                           TRUE ~ paste0(state_code, ifelse(withdrew, " ↓", ""))))
 
 grid <- tibble::as_tibble(as.data.frame(geofacet::us_state_grid2)) |> filter(code %in% st$state_code) |> left_join(st, by = c("code" = "state_code"))
 
@@ -34,17 +33,18 @@ grid$is_sens <- grid$analysis_group == "sensitivity"
 
 n_prim <- sum(st$analysis_group == "primary"); n_sens <- sum(st$analysis_group == "sensitivity"); n_never <- sum(st$analysis_group == "never_treated")
 rng <- range(st$first_treated_quarter[st$analysis_group == "primary"])
+grid$lab_col <- text_on(unname(fills[grid$fill_key]))   # white on dark tiles, near-black on light ones
 
 p <- ggplot(grid, aes(col, -row)) +
   geom_tile(data = filter(grid, !is_sens), aes(fill = fill_key), colour = "white", linewidth = 0.9, width = 0.96, height = 0.96) +
   geom_tile(data = filter(grid, is_sens), aes(fill = fill_key), colour = col_treated, linetype = "dashed", linewidth = 0.9, width = 0.92, height = 0.92) +
-  geom_text(aes(label = label), size = 2.3, lineheight = 0.85, colour = "#1A1A1A") +
+  geom_text(aes(label = label, colour = I(lab_col)), size = 2.3, lineheight = 0.85) +
   scale_fill_manual(values = fills, name = "Primary cohort (year coverage began)", drop = FALSE) +
   guides(fill = guide_legend(override.aes = list(colour = c(rep("white", length(years)), col_treated, "white"),
                                                  linetype = c(rep("solid", length(years)), "dashed", "solid"), linewidth = 0.9))) +
   coord_equal() +
   labs(title = stringr::str_wrap(sprintf("%d states began Medicaid coverage of Wegovy/Zepbound between %s and %s; %d more are treated with an uncertain start", n_prim, rng[1], rng[2], n_sens), 85),
-       subtitle = stringr::str_wrap(sprintf("50 states and DC: %d primary (cohort = first quarter with coverage), %d sensitivity (earliest-latest possible start quarter shown), %d never treated. ↓ = coverage later ended or lapsed.", n_prim, n_sens, n_never), 120),
+       subtitle = stringr::str_wrap(sprintf("50 states and DC: %d primary (cohort = first quarter with coverage), %d sensitivity (dashed outline; the start quarter is uncertain, ranges are in the coverage table), %d never treated. Primary tiles show the cohort quarter (23Q1 = 2023 Q1); ↓ = coverage later ended or lapsed.", n_prim, n_sens, n_never), 120),
        caption = "Source: state Medicaid documents compiled in the warehouse coverage table (medicaid_obesity_coverage). Data through SDUD 2026 Q1 (preliminary).") +
   theme_incretin() + theme(axis.text = element_blank(), axis.title = element_blank(), panel.grid = element_blank(), legend.position = "bottom")
 

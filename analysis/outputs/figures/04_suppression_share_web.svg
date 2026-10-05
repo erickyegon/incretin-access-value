@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='396.00pt' viewBox='0 0 648.00 396.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='396.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
+<rect x='0.00' y='0.00' width='648.00' height='396.00' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<polyline points='52.44,355.84 634.05,355.84 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='52.44,271.07 634.05,271.07 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='52.44,186.29 634.05,186.29 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='52.44,101.52 634.05,101.52 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='52.44,16.74 634.05,16.74 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polygon points='78.88,16.74 106.59,16.74 134.61,16.74 162.63,51.62 190.05,188.20 217.76,161.10 245.78,172.50 273.80,320.87 301.21,336.55 328.93,333.48 356.95,322.14 384.97,323.12 412.69,335.28 440.40,342.76 468.43,343.62 496.45,343.54 523.86,344.71 551.57,347.59 579.59,347.38 607.62,335.98 607.62,355.84 579.59,355.84 551.57,355.84 523.86,355.84 496.45,355.84 468.43,355.84 440.40,355.84 412.69,355.84 384.97,355.84 356.95,355.84 328.93,355.84 301.21,355.84 273.80,355.84 245.78,355.84 217.76,355.84 190.05,355.84 162.63,355.84 134.61,355.84 106.59,355.84 78.88,355.84 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.35;' />
+<polyline points='78.88,16.74 106.59,16.74 134.61,16.74 162.63,51.62 190.05,188.20 217.76,161.10 245.78,172.50 273.80,320.87 301.21,336.55 328.93,333.48 356.95,322.14 384.97,323.12 412.69,335.28 440.40,342.76 468.43,343.62 496.45,343.54 523.86,344.71 551.57,347.59 579.59,347.38 607.62,335.98 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='607.62,355.84 579.59,355.84 551.57,355.84 523.86,355.84 496.45,355.84 468.43,355.84 440.40,355.84 412.69,355.84 384.97,355.84 356.95,355.84 328.93,355.84 301.21,355.84 273.80,355.84 245.78,355.84 217.76,355.84 190.05,355.84 162.63,355.84 134.61,355.84 106.59,355.84 78.88,355.84 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='78.88,16.74 106.59,16.74 134.61,16.74 162.63,51.62 190.05,188.20 217.76,161.10 245.78,172.50 273.80,320.87 301.21,336.55 328.93,333.48 356.95,322.14 384.97,323.12 412.69,335.28 440.40,342.76 468.43,343.62 496.45,343.54 523.86,344.71 551.57,347.59 579.59,347.38 607.62,335.98 ' style='stroke-width: 2.13; stroke: #D55E00; stroke-linecap: butt;' />
+<circle cx='78.88' cy='16.74' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='106.59' cy='16.74' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='134.61' cy='16.74' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<line x1='92.80' y1='25.83' x2='79.77' y2='17.33' style='stroke-width: 0.43;' />
+<line x1='120.24' y1='63.24' x2='106.89' y2='17.77' style='stroke-width: 0.43;' />
+<line x1='148.26' y1='42.47' x2='135.11' y2='17.69' style='stroke-width: 0.43;' />
+<text x='94.60' y='32.07' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='102.84px' lengthAdjust='spacingAndGlyphs'>100.0% (2021Q2)</text>
+<text x='122.04' y='68.39' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='95.33px' lengthAdjust='spacingAndGlyphs'>61.7% (2021Q3)</text>
+<text x='150.06' y='48.11' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='95.33px' lengthAdjust='spacingAndGlyphs'>23.5% (2021Q4)</text>
+<line x1='368.53' y1='355.84' x2='368.53' y2='9.96' style='stroke-width: 1.07; stroke: #444444; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' />
+<text x='362.88' y='29.84' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='112.94px' lengthAdjust='spacingAndGlyphs'>Zepbound approved</text>
+<text x='47.51' y='359.33' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='47.51' y='274.56' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>2%</text>
+<text x='47.51' y='189.78' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>5%</text>
+<text x='47.51' y='105.01' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>8%</text>
+<text x='47.51' y='20.24' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='21.27px' lengthAdjust='spacingAndGlyphs'>10%</text>
+<text x='162.63' y='367.76' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2022</text>
+<text x='273.80' y='367.76' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2023</text>
+<text x='384.97' y='367.76' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text x='496.45' y='367.76' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2025</text>
+<text x='607.62' y='367.76' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.00px' lengthAdjust='spacingAndGlyphs'>2026</text>
+<text transform='translate(21.28,182.90) rotate(-90)' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='240.67px' lengthAdjust='spacingAndGlyphs'>Maximum share of obesity_wz prescriptions hidden</text>
+<text x='13.95' y='385.08' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='342.50px' lengthAdjust='spacingAndGlyphs'>Source: CMS State Drug Utilization Data and Medicaid enrollment (warehouse marts).</text>
+</g>
+</g>
+</svg>

@@ -72,7 +72,7 @@ pp <- prof |> transmute(segment = factor(segment, levels = lv), `Median 2024 cla
                         `New in 2024 (% of segment)` = share_new_2024_pct, `Share of all prescribers (%)` = share_of_prescribers_pct, `Share of all claims (%)` = share_of_claims_pct) |>
   pivot_longer(-segment, names_to = "feature", values_to = "value") |> mutate(feature = factor(feature, levels = unique(feature)))
 pf <- ggplot(pp, aes(value, segment)) + geom_segment(aes(x = 0, xend = value, yend = segment), colour = col_context) + geom_point(colour = col_treated, size = 3) +
-  geom_text(aes(label = format(round(value, 1), nsmall = 1)), hjust = -0.35, size = 2.8) + facet_wrap(~feature, nrow = 1, scales = "free_x") + scale_x_continuous(expand = expansion(mult = c(0.05, 0.4))) +
+  geom_text(aes(label = format(round(value, 1), nsmall = 1)), hjust = -0.35, size = 2.8) + facet_wrap(~feature, nrow = 1, scales = "free_x") + scale_x_continuous(expand = expansion(mult = c(0.05, 1.2))) +
   labs(title = stringr::str_wrap(sprintf("Part D incretin prescribers fall into %d segments; the largest by claims, %s, wrote %s%% of 2024 claims", k, sub("^[A-Z]: ", "", prof$segment[1]), fmt1(prof$share_of_claims_pct[1])), 95),
        subtitle = stringr::str_wrap("Segments of 2024 Part D incretin prescribers (k-prototypes on claims, growth, tirzepatide share, new-in-2024 flag and specialty). Each dot is a segment; segment sizes and stability are in the table.", 140),
        x = NULL, y = NULL, caption = stringr::str_wrap(cap, 150)) + theme_incretin(base_size = 9) + theme(panel.grid.major.y = element_blank())

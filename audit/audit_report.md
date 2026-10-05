@@ -1,6 +1,6 @@
 # Number and content audit
 
-Run: 2026-10-04. Key numbers: 180 rows.
+Run: 2026-10-05. Key numbers: 180 rows.
 
 ## Numbers by document and class
 
@@ -8,10 +8,10 @@ Run: 2026-10-04. Key numbers: 180 rows.
 |---|---|---|---|---|---|
 | deck_pdf | 115 | 0 |  3 | 0 | 0 |
 | one_pager |  23 | 0 |  0 | 0 | 0 |
-| readme |  34 | 0 |  4 | 0 | 0 |
-| report | 462 | 2 | 62 | 0 | 0 |
-| research_pack |  66 | 0 | 63 | 0 | 0 |
-| website |  35 | 0 |  1 | 0 | 0 |
+| readme |  37 | 0 |  4 | 0 | 0 |
+| report | 476 | 1 | 66 | 8 | 0 |
+| research_pack |  66 | 0 | 64 | 0 | 0 |
+| website |  30 | 0 |  1 | 0 | 0 |
 
 ## Other checks
 
@@ -30,10 +30,16 @@ Run: 2026-10-04. Key numbers: 180 rows.
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M analysis/outputs/tables/app_data_check.csv;  M analysis/scripts/45_check_app_data.R;  M analysis/scripts/46_app_data.R;  M app/R/data.R;  M app/R/mod_budget.R |
+| git status is clean | FAIL |  M README.md;  M analysis/R/theme.R;  M analysis/outputs/budget_impact_scenarios.pdf;  M analysis/outputs/deviations.md;  M analysis/outputs/figures/01_coverage_timing_map.png |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 
 ## Needs review (unmatched or stale numbers)
 
-None.
+- report: `17.9` (UNMATCHED)
+- report: `1.96` (UNMATCHED)
+- report: `75.7` (UNMATCHED)
+- report: `95.5` (UNMATCHED)
+- report: `26.0` (UNMATCHED)
+- report: `51.0` (UNMATCHED)
+- report: `347` (UNMATCHED)
