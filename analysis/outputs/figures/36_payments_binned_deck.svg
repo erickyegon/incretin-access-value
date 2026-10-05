@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='331.20pt' viewBox='0 0 576.00 331.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA='>
+    <rect x='0.00' y='0.00' width='576.00' height='331.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<rect x='0.00' y='0.00' width='576.00' height='331.20' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNTcuMzB8NTYyLjA1fDkuOTZ8Mjg5LjQ0'>
+    <rect x='57.30' y='9.96' width='504.75' height='279.48' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTcuMzB8NTYyLjA1fDkuOTZ8Mjg5LjQ0)'>
+<polyline points='57.30,200.49 562.05,200.49 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='57.30,96.38 562.05,96.38 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='80.24,226.97 126.13,201.24 172.02,201.51 217.90,191.95 263.79,189.22 309.68,179.93 355.56,174.40 401.45,165.88 447.34,148.08 493.22,126.31 539.11,22.67 ' style='stroke-width: 2.13; stroke: #D55E00; stroke-linecap: butt;' />
+<circle cx='80.24' cy='226.97' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='126.13' cy='201.24' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='172.02' cy='201.51' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='217.90' cy='191.95' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='263.79' cy='189.22' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='309.68' cy='179.93' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='355.56' cy='174.40' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='401.45' cy='165.88' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='447.34' cy='148.08' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='493.22' cy='126.31' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='539.11' cy='22.67' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<polyline points='80.24,276.74 126.13,266.32 172.02,265.28 217.90,262.17 263.79,260.82 309.68,256.85 355.56,254.09 401.45,248.59 447.34,238.73 493.22,226.29 539.11,160.25 ' style='stroke-width: 1.92; stroke: #595959; stroke-dasharray: 10.24,10.24; stroke-linecap: butt;' />
+<circle cx='80.24' cy='276.74' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='126.13' cy='266.32' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='172.02' cy='265.28' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='217.90' cy='262.17' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='263.79' cy='260.82' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='309.68' cy='256.85' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='355.56' cy='254.09' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='401.45' cy='248.59' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='447.34' cy='238.73' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='493.22' cy='226.29' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='539.11' cy='160.25' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<text x='539.11' y='32.87' text-anchor='end' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='72.66px' lengthAdjust='spacingAndGlyphs'>2024 claims</text>
+<text x='539.11' y='193.68' text-anchor='end' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='134.06px' lengthAdjust='spacingAndGlyphs'>2022 claims (baseline)</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<text x='52.37' y='205.02' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='23.39px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='52.37' y='100.92' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='23.39px' lengthAdjust='spacingAndGlyphs'>200</text>
+<text x='80.24' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='29.20px' lengthAdjust='spacingAndGlyphs'>none</text>
+<text x='126.13' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D1</text>
+<text x='172.02' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D2</text>
+<text x='217.90' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D3</text>
+<text x='263.79' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D4</text>
+<text x='309.68' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D5</text>
+<text x='355.56' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D6</text>
+<text x='401.45' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D7</text>
+<text x='447.34' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D8</text>
+<text x='493.22' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>D9</text>
+<text x='539.11' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='24.31px' lengthAdjust='spacingAndGlyphs'>D10</text>
+<text x='309.68' y='318.37' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='216.34px' lengthAdjust='spacingAndGlyphs'>Prior-year (2023) payments, binned</text>
+<text transform='translate(23.37,149.70) rotate(-90)' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='164.42px' lengthAdjust='spacingAndGlyphs'>Mean claims per prescriber</text>
+</g>
+</g>
+</svg>

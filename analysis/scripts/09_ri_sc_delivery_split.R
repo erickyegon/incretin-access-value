@@ -28,4 +28,12 @@ g <- gt(out, groupname_col = "state_code") |>
              n_suppressed_cells_MCOU = "Suppressed cells, MCOU", rate_total = "Total", mcou_share_of_observed = "MCOU share") |>
   tab_source_note("Gross of rebates; counts under 11 suppressed by CMS. Rhode Island's coverage date is 2023 Q4; South Carolina's is 2024 Q4.")
 save_table(out, "ri_sc_ffsu_mcou_split", g)
+# figure: stacked FFSU and MCOU rates by quarter for the two states (the deck slide on managed care)
+mc <- out |> select(state_code, quarter_label, FFSU = rate_per_1000_FFSU, MCOU = rate_per_1000_MCOU) |> pivot_longer(c(FFSU, MCOU), names_to = "type", values_to = "rate") |>
+  mutate(type = factor(type, levels = c("FFSU", "MCOU")), state = recode(state_code, RI = "Rhode Island (coverage from 2023 Q4)", SC = "South Carolina (coverage from 2024 Q4)"))
+pmc <- ggplot(mc, aes(quarter_label, rate, fill = type)) + geom_col(width = 0.75) + facet_wrap(~state, nrow = 1, scales = "free_x") +
+  scale_fill_manual(values = c(FFSU = "#BFBFBF", MCOU = col_treated), labels = c(FFSU = "Fee-for-service (FFSU)", MCOU = "Managed care (MCOU)"), name = NULL) +
+  labs(x = NULL, y = "Observed prescriptions per 1,000 enrollees", title = "Uptake runs through managed-care organizations in South Carolina and Rhode Island", caption = caption_sdud) + theme_incretin() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+save_fig(pmc, "06_managed_care_split", width = 10, height = 5.5, alt = "Stacked bars of observed Wegovy and Zepbound prescriptions per 1,000 Medicaid enrollees by quarter, split into fee-for-service and managed-care utilization, for Rhode Island (2022 Q4 to 2024 Q1) and South Carolina (from 2024 Q4). Nearly all use after coverage began is managed care.")
 print(out, n = 40)

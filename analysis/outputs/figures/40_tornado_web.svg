@@ -56,20 +56,20 @@
 <circle cx='537.40' cy='288.18' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
 <circle cx='496.15' cy='337.86' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
 <circle cx='507.49' cy='337.86' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<text x='400.29' y='44.14' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='47.09px' lengthAdjust='spacingAndGlyphs'>lower CI</text>
-<text x='597.85' y='44.14' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='48.83px' lengthAdjust='spacingAndGlyphs'>upper CI</text>
-<text x='393.49' y='93.82' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='140.27px' lengthAdjust='spacingAndGlyphs'>79.3% (implied by $245)</text>
-<text x='606.33' y='93.82' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='155.98px' lengthAdjust='spacingAndGlyphs'>23.1% (statutory minimum)</text>
-<text x='415.44' y='143.50' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='55.39px' lengthAdjust='spacingAndGlyphs'>0.5 (tight)</text>
-<text x='545.53' y='143.50' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='67.69px' lengthAdjust='spacingAndGlyphs'>1.25 (loose)</text>
-<text x='465.56' y='193.18' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>decline</text>
-<text x='580.35' y='193.18' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='98.38px' lengthAdjust='spacingAndGlyphs'>continued growth</text>
-<text x='396.30' y='242.86' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='116.81px' lengthAdjust='spacingAndGlyphs'>announced $245 net</text>
-<text x='508.42' y='242.86' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='78.77px' lengthAdjust='spacingAndGlyphs'>central rebate</text>
-<text x='457.41' y='292.54' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>0.75</text>
-<text x='540.52' y='292.54' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>1.25</text>
-<text x='491.23' y='342.23' text-anchor='end' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>$1,164</text>
-<text x='512.40' y='342.23' style='font-size: 12.52px; font-family: "IBM Plex Sans";' textLength='40.95px' lengthAdjust='spacingAndGlyphs'>$1,252</text>
+<text x='400.03' y='44.34' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='49.25px' lengthAdjust='spacingAndGlyphs'>lower CI</text>
+<text x='598.12' y='44.34' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='51.02px' lengthAdjust='spacingAndGlyphs'>upper CI</text>
+<text x='392.74' y='94.02' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='146.52px' lengthAdjust='spacingAndGlyphs'>79.3% (implied by $245)</text>
+<text x='607.17' y='94.02' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='163.00px' lengthAdjust='spacingAndGlyphs'>23.1% (statutory minimum)</text>
+<text x='415.15' y='143.70' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='57.88px' lengthAdjust='spacingAndGlyphs'>0.5 (tight)</text>
+<text x='545.89' y='143.70' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='70.72px' lengthAdjust='spacingAndGlyphs'>1.25 (loose)</text>
+<text x='465.34' y='193.38' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.78px' lengthAdjust='spacingAndGlyphs'>decline</text>
+<text x='580.87' y='193.38' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='102.78px' lengthAdjust='spacingAndGlyphs'>continued growth</text>
+<text x='395.68' y='243.06' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='122.02px' lengthAdjust='spacingAndGlyphs'>announced $245 net</text>
+<text x='508.84' y='243.06' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='82.31px' lengthAdjust='spacingAndGlyphs'>central rebate</text>
+<text x='457.28' y='292.74' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>0.75</text>
+<text x='540.65' y='292.74' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>1.25</text>
+<text x='491.01' y='342.42' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.77px' lengthAdjust='spacingAndGlyphs'>$1,164</text>
+<text x='512.62' y='342.42' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.77px' lengthAdjust='spacingAndGlyphs'>$1,252</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0MzIuMDA=)'>
 <text x='214.95' y='341.35' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='120.80px' lengthAdjust='spacingAndGlyphs'>Gross cost per prescription</text>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='331.20pt' viewBox='0 0 576.00 331.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA='>
+    <rect x='0.00' y='0.00' width='576.00' height='331.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<rect x='0.00' y='0.00' width='576.00' height='331.20' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMTg2LjEwfDU2Mi4wNXw5Ljk2fDI4OS40NA=='>
+    <rect x='186.10' y='9.96' width='375.95' height='279.48' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTg2LjEwfDU2Mi4wNXw5Ljk2fDI4OS40NA==)'>
+<line x1='379.77' y1='289.44' x2='379.77' y2='9.96' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<polyline points='376.32,266.15 390.21,266.15 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='332.70,227.33 426.84,227.33 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='271.21,188.52 379.77,188.52 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='344.88,149.70 464.97,149.70 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='285.63,110.88 426.84,110.88 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='271.21,72.07 488.33,72.07 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<polyline points='265.85,33.25 493.70,33.25 ' style='stroke-width: 12.80; stroke: #D55E00; stroke-opacity: 0.55; stroke-linecap: butt;' />
+<circle cx='265.85' cy='33.25' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='493.70' cy='33.25' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='271.21' cy='72.07' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='488.33' cy='72.07' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='285.63' cy='110.88' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='426.84' cy='110.88' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='344.88' cy='149.70' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='464.97' cy='149.70' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='271.21' cy='188.52' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='379.77' cy='188.52' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='332.70' cy='227.33' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='426.84' cy='227.33' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='376.32' cy='266.15' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='390.21' cy='266.15' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<text x='259.94' y='37.82' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='49.25px' lengthAdjust='spacingAndGlyphs'>lower CI</text>
+<text x='499.82' y='37.82' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='51.02px' lengthAdjust='spacingAndGlyphs'>upper CI</text>
+<text x='266.51' y='76.63' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='39.22px' lengthAdjust='spacingAndGlyphs'>79.3%</text>
+<text x='493.04' y='76.63' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='39.22px' lengthAdjust='spacingAndGlyphs'>23.1%</text>
+<text x='283.32' y='115.45' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='430.09' y='115.45' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>1.25</text>
+<text x='339.75' y='154.27' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.78px' lengthAdjust='spacingAndGlyphs'>decline</text>
+<text x='469.89' y='154.27' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='40.97px' lengthAdjust='spacingAndGlyphs'>growth</text>
+<text x='264.78' y='193.08' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='53.66px' lengthAdjust='spacingAndGlyphs'>$245 net</text>
+<text x='384.69' y='193.08' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='41.00px' lengthAdjust='spacingAndGlyphs'>central</text>
+<text x='329.45' y='231.90' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>0.75</text>
+<text x='430.09' y='231.90' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>1.25</text>
+<text x='371.19' y='270.71' text-anchor='end' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.77px' lengthAdjust='spacingAndGlyphs'>$1,164</text>
+<text x='395.34' y='270.71' style='font-size: 13.09px; font-family: "IBM Plex Sans";' textLength='42.77px' lengthAdjust='spacingAndGlyphs'>$1,252</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<text x='181.17' y='270.69' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='156.98px' lengthAdjust='spacingAndGlyphs'>Gross cost per prescription</text>
+<text x='181.17' y='231.87' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='100.86px' lengthAdjust='spacingAndGlyphs'>Uptake multiplier</text>
+<text x='181.17' y='193.06' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='81.97px' lengthAdjust='spacingAndGlyphs'>Price scenario</text>
+<text x='181.17' y='154.24' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='108.67px' lengthAdjust='spacingAndGlyphs'>Years 3-5 scenario</text>
+<text x='181.17' y='115.42' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='167.22px' lengthAdjust='spacingAndGlyphs'>Prior authorization multiplier</text>
+<text x='181.17' y='76.61' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='76.97px' lengthAdjust='spacingAndGlyphs'>Rebate share</text>
+<text x='181.17' y='37.79' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='91.42px' lengthAdjust='spacingAndGlyphs'>Module C effect</text>
+<text x='191.49' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='26.14px' lengthAdjust='spacingAndGlyphs'>$0M</text>
+<text x='308.20' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='41.73px' lengthAdjust='spacingAndGlyphs'>$100M</text>
+<text x='424.92' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='41.73px' lengthAdjust='spacingAndGlyphs'>$200M</text>
+<text x='541.64' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='41.73px' lengthAdjust='spacingAndGlyphs'>$300M</text>
+<text x='374.08' y='318.37' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='259.19px' lengthAdjust='spacingAndGlyphs'>Five-year net budget impact (USD millions)</text>
+</g>
+</g>
+</svg>

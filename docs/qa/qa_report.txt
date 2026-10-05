@@ -1,4 +1,4 @@
 site 390px: scroll 390/390, buttons under 44 px: 0, images wider than the viewport: 0
 site 1366px: scroll 1366/1366, buttons under 44 px: 0, images wider than the viewport: 0
-report: interactive widgets that did not render: 0; page size 22092 px tall
+report: interactive widgets that did not render: 0; page size 22116 px tall
 notebook C: horizontal scroll 1366/1366

@@ -17,7 +17,7 @@ register_incretin_fonts()
 
 # ---- type scale (points at the saved size) --------------------------------------------------------------------------------------------------------------------------
 FIG_SCALE <- list(report = list(title = 16, subtitle = 12, axis_text = 10, axis_title = 10.5, legend = 10, strip = 10.5, caption = 9, direct_mm = 3.6),
-                  deck   = list(title = 16, subtitle = 12, axis_text = 12, axis_title = 12.5, legend = 10.5, strip = 12.5, caption = 9, direct_mm = 4.4),
+                  deck   = list(title = 16, subtitle = 12, axis_text = 13, axis_title = 13.5, legend = 13, strip = 13.5, caption = 11, direct_mm = 4.6),
                   web    = list(title = 16, subtitle = 12, axis_text = 10, axis_title = 10.5, legend = 10, strip = 10.5, caption = 9, direct_mm = 3.6))
 MIN_TEXT_PT <- 9.9; PT_PER_MM <- 72.27 / 25.4
 
@@ -124,6 +124,7 @@ write_png_under <- function(p, path, width, height, max_kb = 300, dpi = c(150, 1
 #' Save one figure in the three variants (report, deck, web) and log a QA row for each. `alt` goes to alt_text.csv.
 save_fig <- function(p, name, width = 9, height = 6, alt = NA_character_, notes = NULL) {
   d <- out_dir("figures"); warns <- character()
+  dir.create(file.path(d, "..", "cache", "figobj"), recursive = TRUE, showWarnings = FALSE); saveRDS(p, file.path(d, "..", "cache", "figobj", paste0(name, ".rds")))   # lets the deck variants be re-exported without re-running the analysis
   ft <- fit_title(unwrap(.get(p, "title")), width, 16); title0 <- ft$title; sub_all <- unwrap(.get(p, "subtitle")); if (!is.null(ft$moved)) sub_all <- paste(c(ft$moved, sub_all), collapse = " "); fs <- fit_sentences(sub_all, width, 12); sub0 <- fs$kept; sc <- split_caption(.get(p, "caption")); fsrc <- fit_sentences(sc$source, width, 9, 2); src <- fsrc$kept; if (!is.null(fsrc$overflow)) sc$notes <- paste(c(fsrc$overflow, sc$notes), collapse = " "); nts <- paste(c(fs$overflow, sc$notes, notes), collapse = " "); nts <- if (nzchar(trimws(nts))) trimws(nts) else NULL
   build <- function(variant) {
     q <- p; s <- FIG_SCALE[[variant]]
@@ -139,12 +140,35 @@ save_fig <- function(p, name, width = 9, height = 6, alt = NA_character_, notes 
   }
   qr <- save_variant("report", file.path(d, paste0(name, ".png")), 300); save_variant("report", file.path(d, paste0(name, ".svg")), svg = TRUE)
   { q <- build("report"); write_png_under(q, file.path(d, paste0(name, "_report.png")), width, height, max_kb = 350, dpi = c(160, 140, 120, 100, 90)) }   # compressed copy of the report variant for the HTML report
-  save_variant("deck", file.path(d, paste0(name, "_deck.png")), 200)
+  dk <- save_deck(p, name)
   save_variant("web", file.path(d, paste0(name, "_web.png"))); save_variant("web", file.path(d, paste0(name, "_web.svg")), svg = TRUE)
   log_qa(figure = name, width_in = width, height_in = height, title_lines = n_lines(wrap_to(title0, width, 16)), subtitle_lines = n_lines(wrap_to(sub0, width, 12)), source_lines = n_lines(wrap_to(src, width, 9)),
-         repel_warnings = sum(grepl("unlabeled data points|overlaps", warns)), other_warnings = sum(!grepl("unlabeled data points|overlaps", warns)), web_kb = round(file.size(file.path(d, paste0(name, "_web.png"))) / 1024), min_label_pt = round(min_layer_pt(qr), 1))
+         repel_warnings = sum(grepl("unlabeled data points|overlaps", warns)), other_warnings = sum(!grepl("unlabeled data points|overlaps", warns)), web_kb = round(file.size(file.path(d, paste0(name, "_web.png"))) / 1024), min_label_pt = round(min_layer_pt(qr), 1), deck_w = dk$w, deck_h = dk$h, deck_min_pt = dk$min_pt, deck_repel_warnings = dk$repel)
   write_csv_merge(do.call(rbind, .qa_rows$x[length(.qa_rows$x)]), file.path(d, "figure_qa_log.csv"), "figure")
   if (!is.null(nts)) write_csv_merge(data.frame(figure = name, notes = nts), file.path(d, "figure_notes.csv"), "figure")
   if (!is.na(alt)) write_csv_merge(data.frame(figure = name, alt_text = alt), file.path(d, "alt_text.csv"), "figure")
   invisible(file.path(d, name))
 }
+
+# ---- deck variant: sized to the slide area, no title or notes, 13 pt text, simplified by the figure's hook in deck_figs.R --------------------------------------------------------
+DECK_PANEL <- c(8.0, 4.6); DECK_FULL <- c(12.3, 4.5)
+save_deck <- function(p, name) {
+  d <- out_dir("figures"); dims <- if (!is.null(DECK_DIMS[[name]])) DECK_DIMS[[name]] else DECK_PANEL; hook <- DECK_HOOKS[[name]]
+  q <- if (is.function(hook)) hook(p) else p
+  q <- .set(q, "title", NULL); q <- .set(q, "subtitle", NULL); q <- .set(q, "caption", NULL); q <- apply_scale(q, "deck"); warns <- character()
+  withCallingHandlers({
+    ggplot2::ggsave(file.path(d, paste0(name, "_deck.png")), q, width = dims[1], height = dims[2], dpi = 200, bg = "white", device = ragg::agg_png)
+    ggplot2::ggsave(file.path(d, paste0(name, "_deck.svg")), q, width = dims[1], height = dims[2], bg = "white", device = svglite::svglite) },
+    warning = function(w) { warns <<- c(warns, conditionMessage(w)); invokeRestart("muffleWarning") })
+  list(w = dims[1], h = dims[2], min_pt = round(min_layer_pt(q), 1), repel = sum(grepl("unlabeled data points|overlaps", warns)))
+}
+#' Re-export only the deck variant of a figure from the saved plot object (analysis/outputs/cache/figobj) and update its QA log row.
+export_deck <- function(name) {
+  p <- readRDS(file.path(out_dir("figures"), "..", "cache", "figobj", paste0(name, ".rds"))); dk <- save_deck(p, name)
+  f <- file.path(out_dir("figures"), "figure_qa_log.csv"); qa <- readr::read_csv(f, show_col_types = FALSE)
+  for (col in c("deck_w", "deck_h", "deck_min_pt", "deck_repel_warnings")) if (!col %in% names(qa)) qa[[col]] <- NA_real_
+  i <- which(qa$figure == name); qa$deck_w[i] <- dk$w; qa$deck_h[i] <- dk$h; qa$deck_min_pt[i] <- dk$min_pt; qa$deck_repel_warnings[i] <- dk$repel; readr::write_csv(qa, f)
+  invisible(dk)
+}
+
+source(here::here("R", "deck_figs.R"))

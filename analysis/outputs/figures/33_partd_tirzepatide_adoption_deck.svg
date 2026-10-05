@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='331.20pt' viewBox='0 0 576.00 331.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA='>
+    <rect x='0.00' y='0.00' width='576.00' height='331.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<rect x='0.000000000000064' y='0.00' width='576.00' height='331.20' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDkuNTB8NTYyLjA1fDkuOTZ8MjQyLjUx'>
+    <rect x='49.50' y='9.96' width='512.55' height='232.55' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDkuNTB8NTYyLjA1fDkuOTZ8MjQyLjUx)'>
+<polyline points='49.50,234.69 562.05,234.69 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.50,174.48 562.05,174.48 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.50,114.28 562.05,114.28 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='49.50,54.08 562.05,54.08 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='72.80,231.94 305.78,175.28 538.75,115.80 ' style='stroke-width: 2.13; stroke: #0072B2; stroke-linecap: butt;' />
+<polyline points='72.80,231.29 305.78,175.28 538.75,122.29 ' style='stroke-width: 2.13; stroke: #E69F00; stroke-linecap: butt;' />
+<polyline points='72.80,213.48 305.78,69.55 538.75,20.53 ' style='stroke-width: 2.13; stroke: #009E73; stroke-linecap: butt;' />
+<polyline points='72.80,229.01 305.78,177.91 538.75,144.20 ' style='stroke-width: 2.13; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='72.80,230.73 305.78,190.69 538.75,155.76 ' style='stroke-width: 2.13; stroke: #CC79A7; stroke-linecap: butt;' />
+<circle cx='72.80' cy='231.94' r='2.49' style='stroke-width: 0.71; stroke: #0072B2; fill: #0072B2;' />
+<circle cx='72.80' cy='231.29' r='2.49' style='stroke-width: 0.71; stroke: #E69F00; fill: #E69F00;' />
+<circle cx='72.80' cy='213.48' r='2.49' style='stroke-width: 0.71; stroke: #009E73; fill: #009E73;' />
+<circle cx='72.80' cy='229.01' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='72.80' cy='230.73' r='2.49' style='stroke-width: 0.71; stroke: #CC79A7; fill: #CC79A7;' />
+<circle cx='305.78' cy='175.28' r='2.49' style='stroke-width: 0.71; stroke: #0072B2; fill: #0072B2;' />
+<circle cx='305.78' cy='175.28' r='2.49' style='stroke-width: 0.71; stroke: #E69F00; fill: #E69F00;' />
+<circle cx='305.78' cy='69.55' r='2.49' style='stroke-width: 0.71; stroke: #009E73; fill: #009E73;' />
+<circle cx='305.78' cy='177.91' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='305.78' cy='190.69' r='2.49' style='stroke-width: 0.71; stroke: #CC79A7; fill: #CC79A7;' />
+<circle cx='538.75' cy='115.80' r='2.49' style='stroke-width: 0.71; stroke: #0072B2; fill: #0072B2;' />
+<circle cx='538.75' cy='122.29' r='2.49' style='stroke-width: 0.71; stroke: #E69F00; fill: #E69F00;' />
+<circle cx='538.75' cy='20.53' r='2.49' style='stroke-width: 0.71; stroke: #009E73; fill: #009E73;' />
+<circle cx='538.75' cy='144.20' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='538.75' cy='155.76' r='2.49' style='stroke-width: 0.71; stroke: #CC79A7; fill: #CC79A7;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<text x='44.57' y='239.23' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='7.80px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='44.57' y='179.02' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.59px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='44.57' y='118.82' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.59px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='44.57' y='58.62' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.59px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='72.80' y='256.52' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2022</text>
+<text x='305.78' y='256.52' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2023</text>
+<text x='538.75' y='256.52' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2024</text>
+<text transform='translate(23.37,126.24) rotate(-90)' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='227.39px' lengthAdjust='spacingAndGlyphs'>Prescribers with a tirzepatide row (%)</text>
+<line x1='81.27' y1='284.36' x2='95.09' y2='284.36' style='stroke-width: 2.13; stroke: #0072B2; stroke-linecap: butt;' />
+<circle cx='88.18' cy='284.36' r='2.49' style='stroke-width: 0.71; stroke: #0072B2; fill: #0072B2;' />
+<line x1='81.27' y1='307.12' x2='95.09' y2='307.12' style='stroke-width: 2.13; stroke: #E69F00; stroke-linecap: butt;' />
+<circle cx='88.18' cy='307.12' r='2.49' style='stroke-width: 0.71; stroke: #E69F00; fill: #E69F00;' />
+<line x1='366.45' y1='284.36' x2='380.27' y2='284.36' style='stroke-width: 2.13; stroke: #009E73; stroke-linecap: butt;' />
+<circle cx='373.36' cy='284.36' r='2.49' style='stroke-width: 0.71; stroke: #009E73; fill: #009E73;' />
+<line x1='366.45' y1='307.12' x2='380.27' y2='307.12' style='stroke-width: 2.13; stroke: #D55E00; stroke-linecap: butt;' />
+<circle cx='373.36' cy='307.12' r='2.49' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<line x1='477.92' y1='284.36' x2='491.74' y2='284.36' style='stroke-width: 2.13; stroke: #CC79A7; stroke-linecap: butt;' />
+<circle cx='484.83' cy='284.36' r='2.49' style='stroke-width: 0.71; stroke: #CC79A7; fill: #CC79A7;' />
+<text x='102.30' y='288.90' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='138.14px' lengthAdjust='spacingAndGlyphs'>Primary care physicians</text>
+<text x='102.30' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='256.94px' lengthAdjust='spacingAndGlyphs'>Nurse practitioners and physician assistants</text>
+<text x='387.48' y='288.90' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='83.23px' lengthAdjust='spacingAndGlyphs'>Endocrinology</text>
+<text x='387.48' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='62.00px' lengthAdjust='spacingAndGlyphs'>Cardiology</text>
+<text x='498.95' y='288.90' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='33.06px' lengthAdjust='spacingAndGlyphs'>Other</text>
+</g>
+</g>
+</svg>

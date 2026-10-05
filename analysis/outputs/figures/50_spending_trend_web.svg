@@ -81,13 +81,13 @@
 <circle cx='276.71' cy='377.75' r='2.24' style='stroke-width: 0.64; stroke: #595959; fill: #595959;' />
 <circle cx='276.71' cy='377.22' r='2.24' style='stroke-width: 0.64; stroke: #D55E00; fill: #D55E00;' />
 <circle cx='276.71' cy='384.98' r='2.24' style='stroke-width: 0.64; stroke: #D55E00; fill: #D55E00;' />
-<line x1='281.73' y1='384.87' x2='277.32' y2='378.62' style='stroke-width: 0.43; stroke: #595959;' />
-<text x='283.79' y='225.96' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='89.80px' lengthAdjust='spacingAndGlyphs'>Mounjaro $6.3B</text>
-<text x='283.61' y='54.93' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='93.59px' lengthAdjust='spacingAndGlyphs'>Ozempic $13.0B</text>
-<text x='283.30' y='340.62' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='88.11px' lengthAdjust='spacingAndGlyphs'>Rybelsus $1.9B</text>
-<text x='284.62' y='248.73' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='81.94px' lengthAdjust='spacingAndGlyphs'>Trulicity $5.5B</text>
-<text x='283.53' y='391.95' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='77.89px' lengthAdjust='spacingAndGlyphs'>Victoza $0.3B</text>
-<text x='282.87' y='372.49' style='font-size: 12.52px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='80.75px' lengthAdjust='spacingAndGlyphs'>Wegovy $0.3B</text>
+<line x1='281.73' y1='384.72' x2='277.33' y2='378.61' style='stroke-width: 0.43; stroke: #595959;' />
+<text x='283.80' y='226.16' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='93.83px' lengthAdjust='spacingAndGlyphs'>Mounjaro $6.3B</text>
+<text x='283.61' y='55.12' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='97.80px' lengthAdjust='spacingAndGlyphs'>Ozempic $13.0B</text>
+<text x='283.29' y='340.82' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='92.08px' lengthAdjust='spacingAndGlyphs'>Rybelsus $1.9B</text>
+<text x='284.67' y='248.92' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='85.62px' lengthAdjust='spacingAndGlyphs'>Trulicity $5.5B</text>
+<text x='283.53' y='392.15' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='81.39px' lengthAdjust='spacingAndGlyphs'>Victoza $0.3B</text>
+<text x='282.84' y='372.69' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='84.38px' lengthAdjust='spacingAndGlyphs'>Wegovy $0.3B</text>
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0NDYuNDA=)'>
 <text x='42.97' y='388.48' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>
@@ -129,12 +129,13 @@
 <circle cx='700.73' cy='362.92' r='2.24' style='stroke-width: 0.64; stroke: #595959; fill: #595959;' />
 <circle cx='700.73' cy='263.17' r='2.24' style='stroke-width: 0.64; stroke: #D55E00; fill: #D55E00;' />
 <circle cx='700.73' cy='357.84' r='2.24' style='stroke-width: 0.64; stroke: #D55E00; fill: #D55E00;' />
-<text x='707.81' y='292.06' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='89.80px' lengthAdjust='spacingAndGlyphs'>Mounjaro $1.0B</text>
-<text x='707.35' y='54.93' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='86.08px' lengthAdjust='spacingAndGlyphs'>Ozempic $3.4B</text>
-<text x='707.32' y='350.04' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='88.11px' lengthAdjust='spacingAndGlyphs'>Rybelsus $0.3B</text>
-<text x='708.64' y='176.76' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='81.94px' lengthAdjust='spacingAndGlyphs'>Trulicity $2.2B</text>
-<text x='706.89' y='267.53' style='font-size: 12.52px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='80.75px' lengthAdjust='spacingAndGlyphs'>Wegovy $1.2B</text>
-<text x='707.90' y='368.89' style='font-size: 12.52px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='94.16px' lengthAdjust='spacingAndGlyphs'>Zepbound $0.3B</text>
+<line x1='705.51' y1='347.75' x2='701.34' y2='353.64' style='stroke-width: 0.43; stroke: #595959;' />
+<text x='707.82' y='292.26' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='93.83px' lengthAdjust='spacingAndGlyphs'>Mounjaro $1.0B</text>
+<text x='707.35' y='55.12' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='89.95px' lengthAdjust='spacingAndGlyphs'>Ozempic $3.4B</text>
+<text x='707.31' y='349.35' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='92.08px' lengthAdjust='spacingAndGlyphs'>Rybelsus $0.3B</text>
+<text x='708.69' y='176.96' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='85.62px' lengthAdjust='spacingAndGlyphs'>Trulicity $2.2B</text>
+<text x='706.86' y='267.73' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='84.38px' lengthAdjust='spacingAndGlyphs'>Wegovy $1.2B</text>
+<text x='707.89' y='369.03' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='98.33px' lengthAdjust='spacingAndGlyphs'>Zepbound $0.3B</text>
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0NDYuNDA=)'>
 <text x='466.99' y='388.53' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>

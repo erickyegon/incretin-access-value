@@ -19,8 +19,8 @@ for href in sorted(set(re.findall(r'(?:href|src)="([^"]+)"', site))):
         ok = (root / "site" / href).exists(); rows.append(("site (file)", href, "ok" if ok else "MISSING"))
         if base: rows.append(("site (live)", base + href, fetch(base + href)))
 readme = (root / "README.md").read_text(encoding="utf-8")
-for u in sorted(set(re.findall(r'<(https?://[^>]+)>', readme))): rows.append(("README", u, fetch(u)))
-for path in sorted(set(re.findall(r'\]\((?!http)([^)#]+)\)', readme))): rows.append(("README (file)", path, "ok" if (root / path).exists() else "MISSING"))
+for u in sorted(set(re.findall(r'<(https?://[^>]+)>', readme) + re.findall(r'\]\((https?://[^)\s]+)\)', readme))): rows.append(("README", u, fetch(u)))
+for path in sorted(set(re.findall(r'\]\((?!http|mailto)([^)#]+)\)', readme))): rows.append(("README (file)", path, "ok" if (root / path).exists() else "MISSING"))
 for p in re.findall(r'`((?:report|deck|site|research_pack|app|audit|analysis|docs|scripts|dbt)/[^`\s]+)`', readme):
     q = p.rstrip("/").split(" ")[0]
     if "*" in q or "{" in q: continue

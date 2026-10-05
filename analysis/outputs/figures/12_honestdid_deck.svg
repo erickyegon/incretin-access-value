@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='576.00pt' height='331.20pt' viewBox='0 0 576.00 331.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA='>
+    <rect x='0.00' y='0.00' width='576.00' height='331.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<rect x='0.000000000000064' y='0.00' width='576.00' height='331.20' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNjAuODN8NTYyLjA1fDkuOTZ8Mjg5LjQ0'>
+    <rect x='60.83' y='9.96' width='501.22' height='279.48' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNjAuODN8NTYyLjA1fDkuOTZ8Mjg5LjQ0)'>
+<polyline points='60.83,255.56 562.05,255.56 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='60.83,195.79 562.05,195.79 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='60.83,136.02 562.05,136.02 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='60.83,76.25 562.05,76.25 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='60.83,16.48 562.05,16.48 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<line x1='60.83' y1='255.56' x2='562.05' y2='255.56' style='stroke-width: 1.07; stroke: #666666; stroke-linecap: butt;' />
+<polygon points='83.61,56.54 140.57,53.15 197.53,49.77 254.48,46.38 311.44,42.99 368.40,37.91 425.36,32.83 482.31,27.75 539.27,22.67 539.27,276.74 482.31,268.27 425.36,259.80 368.40,251.33 311.44,244.55 254.48,237.78 197.53,231.00 140.57,224.23 83.61,219.15 ' style='stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #D55E00; fill-opacity: 0.25;' />
+<polyline points='83.61,56.54 140.57,53.15 197.53,49.77 254.48,46.38 311.44,42.99 368.40,37.91 425.36,32.83 482.31,27.75 539.27,22.67 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='539.27,276.74 482.31,268.27 425.36,259.80 368.40,251.33 311.44,244.55 254.48,237.78 197.53,231.00 140.57,224.23 83.61,219.15 ' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt;' />
+<polyline points='83.61,219.15 140.57,224.23 197.53,231.00 254.48,237.78 311.44,244.55 368.40,251.33 425.36,259.80 482.31,268.27 539.27,276.74 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='83.61,56.54 140.57,53.15 197.53,49.77 254.48,46.38 311.44,42.99 368.40,37.91 425.36,32.83 482.31,27.75 539.27,22.67 ' style='stroke-width: 1.07; stroke: #D55E00; stroke-linecap: butt;' />
+<line x1='60.83' y1='220.54' x2='562.05' y2='220.54' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<line x1='60.83' y1='54.72' x2='562.05' y2='54.72' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwzMzEuMjA=)'>
+<text x='55.90' y='260.10' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='55.90' y='200.33' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<text x='55.90' y='140.56' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>5.0</text>
+<text x='55.90' y='80.79' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>7.5</text>
+<text x='55.90' y='21.02' text-anchor='end' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>10.0</text>
+<text x='83.61' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='197.53' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='311.44' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='425.36' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>1.5</text>
+<text x='539.27' y='303.45' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>2.0</text>
+<text x='311.44' y='318.37' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='599.98px' lengthAdjust='spacingAndGlyphs'>Mbar: largest post-period violation of parallel trends as a multiple of the largest pre-period violation</text>
+<text transform='translate(23.37,149.70) rotate(-90)' text-anchor='middle' style='font-size: 13.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='263.31px' lengthAdjust='spacingAndGlyphs'>Robust 95% CI for the average ATT, e = 0..3</text>
+</g>
+</g>
+</svg>

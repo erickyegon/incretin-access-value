@@ -54,10 +54,10 @@ state_chg <- state_chg |> mutate(normalised = (1 + obesity_wz) / (1 + all_drugs)
 save_table(state_chg |> mutate(across(c(obesity_wz, all_drugs, normalised), ~ round(.x, 4))), "withdrawal_change_2025Q4_to_2026Q1")
 state_chg <- state_chg |> mutate(unit = factor(unit, levels = rev(unit)))
 cap <- 1
-pb <- ggplot(state_chg, aes(pmin(normalised, cap), unit, colour = group)) +
+pb <- ggplot(state_chg, aes(pmin(normalised, !!cap), unit, colour = group)) +
   geom_vline(xintercept = 0, colour = "#999999") +
-  geom_segment(aes(x = 0, xend = pmin(normalised, cap), yend = unit), linewidth = 0.8) + geom_point(size = 3.2) +
-  geom_text(data = filter(state_chg, normalised > cap), aes(x = cap, label = paste0("+", round(100 * normalised), "% (axis capped)")), hjust = 1.05, vjust = -0.9, size = 3, show.legend = FALSE) +
+  geom_segment(aes(x = 0, xend = pmin(normalised, !!cap), yend = unit), linewidth = 0.8) + geom_point(size = 3.2) +
+  geom_text(data = filter(state_chg, normalised > cap), aes(x = !!cap, label = paste0("+", round(100 * normalised), "% (axis capped)")), hjust = 1.05, vjust = -0.9, size = 3, show.legend = FALSE) +
   scale_x_continuous(labels = scales::percent_format(accuracy = 1), limits = c(-1, cap)) +
   scale_colour_manual(values = c("Withdrawing / lapsed" = col_treated, "Continuously covered" = "#4D4D4D", "Never treated" = col_comparison), name = NULL, guide = "none") +
   labs(x = "Normalized change, 2025 Q4 to 2026 Q1: change in obesity_wz prescriptions relative to the state's all-drug change (preliminary)", y = NULL) + theme_incretin(base_size = 10)
@@ -74,4 +74,7 @@ p <- (pa / pb) + plot_layout(heights = c(1, 1.15), guides = "collect") +
                   caption = stringr::str_wrap(paste(caption_sdud, "PRELIMINARY: 2026 Q1 is preliminary SDUD data; only one post-withdrawal quarter exists for most states (North Carolina lapsed 2025-10-01 to 2025-12-11 and resumed). New Hampshire is a sensitivity state."), 150),
                   theme = theme_incretin()) & theme(legend.position = "bottom")
 save_fig(p, "05_withdrawal_descriptive", width = 12, height = 9)
+# the normalized-change panel on its own (used on the deck slide on first withdrawals)
+pb_only <- pb + labs(title = stringr::str_wrap(title, 100), caption = caption_sdud)
+save_fig(pb_only, "05b_withdrawal_change", width = 9, height = 5.5, alt = sprintf("Dot plot of the normalized change in Wegovy and Zepbound prescriptions from 2025 Q4 to 2026 Q1 by state, relative to each state's all-drug change (preliminary, descriptive). California %s and Pennsylvania %s fell most; the continuously covered states have a median of %s.", fmt_pct1(g("CA", "normalised")), fmt_pct1(g("PA", "normalised")), fmt_pct1(cont_med)))
 print(state_chg |> mutate(across(c(obesity_wz, all_drugs), ~ round(.x, 3))))

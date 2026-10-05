@@ -49,10 +49,10 @@
 <polyline points='86.58,315.65 120.77,315.97 155.33,315.75 190.26,315.52 225.20,315.30 259.39,315.07 293.95,314.85 328.89,314.62 363.82,318.18 398.39,318.50 432.95,318.82 467.89,319.13 502.82,319.45 537.01,319.77 571.57,320.08 606.51,320.40 641.45,320.72 675.63,321.03 710.19,321.35 745.13,321.67 ' style='stroke-width: 1.71; stroke: #CC79A7; stroke-dasharray: 9.10,9.10; stroke-linecap: butt;' />
 <polyline points='86.58,315.65 120.77,303.83 155.33,286.87 190.26,269.14 225.20,250.70 259.39,231.64 293.95,212.06 328.89,192.09 363.82,176.21 398.39,160.24 432.95,144.35 467.89,128.69 502.82,113.42 537.01,98.69 571.57,84.61 606.51,71.28 641.45,58.79 675.63,47.16 710.19,36.45 745.13,26.64 ' style='stroke-width: 1.71; stroke: #009E73; stroke-dasharray: 9.10,9.10; stroke-linecap: butt;' />
 <line x1='120.77' y1='376.76' x2='120.77' y2='9.96' style='stroke-width: 1.07; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' />
-<text x='160.64' y='114.91' style='font-size: 12.52px;fill: #444444; font-family: "IBM Plex Sans";' textLength='129.34px' lengthAdjust='spacingAndGlyphs'>Medicare GLP-1 Bridge</text>
-<text x='160.64' y='132.94' style='font-size: 12.52px;fill: #444444; font-family: "IBM Plex Sans";' textLength='115.41px' lengthAdjust='spacingAndGlyphs'>Jul 2026 - Dec 2027</text>
-<text x='127.98' y='236.06' style='font-size: 12.52px;fill: #444444; font-family: "IBM Plex Sans";' textLength='110.84px' lengthAdjust='spacingAndGlyphs'>Foundayo approved</text>
-<text x='127.98' y='254.08' style='font-size: 12.52px;fill: #444444; font-family: "IBM Plex Sans";' textLength='70.12px' lengthAdjust='spacingAndGlyphs'>2026-04-01</text>
+<text x='160.64' y='114.70' style='font-size: 13.09px;fill: #444444; font-family: "IBM Plex Sans";' textLength='135.16px' lengthAdjust='spacingAndGlyphs'>Medicare GLP-1 Bridge</text>
+<text x='160.64' y='133.55' style='font-size: 13.09px;fill: #444444; font-family: "IBM Plex Sans";' textLength='120.55px' lengthAdjust='spacingAndGlyphs'>Jul 2026 - Dec 2027</text>
+<text x='127.98' y='235.85' style='font-size: 13.09px;fill: #444444; font-family: "IBM Plex Sans";' textLength='115.73px' lengthAdjust='spacingAndGlyphs'>Foundayo approved</text>
+<text x='127.98' y='254.69' style='font-size: 13.09px;fill: #444444; font-family: "IBM Plex Sans";' textLength='73.19px' lengthAdjust='spacingAndGlyphs'>2026-04-01</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw0NjguMDA=)'>
 <text x='48.73' y='304.10' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='22.48px' lengthAdjust='spacingAndGlyphs'>20 M</text>

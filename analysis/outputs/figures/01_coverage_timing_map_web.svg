@@ -98,67 +98,67 @@
 <rect x='145.65' y='232.96' width='46.44' height='46.44' style='stroke-width: 1.92; stroke: #D55E00; stroke-dasharray: 10.24,10.24; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
 <rect x='498.97' y='182.48' width='46.44' height='46.44' style='stroke-width: 1.92; stroke: #D55E00; stroke-dasharray: 10.24,10.24; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
 <rect x='347.54' y='132.01' width='46.44' height='46.44' style='stroke-width: 1.92; stroke: #D55E00; stroke-dasharray: 10.24,10.24; stroke-linecap: butt; stroke-linejoin: miter; fill: #FFFFFF;' />
-<text x='421.24' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.28px' lengthAdjust='spacingAndGlyphs'>AL</text>
-<text x='118.39' y='58.65' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.95px' lengthAdjust='spacingAndGlyphs'>AK</text>
-<text x='168.87' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.28px' lengthAdjust='spacingAndGlyphs'>AZ</text>
-<text x='320.29' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.03px' lengthAdjust='spacingAndGlyphs'>AR</text>
-<text x='118.39' y='304.63' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='29.00px' lengthAdjust='spacingAndGlyphs'>CA ↓</text>
-<text x='118.39' y='317.40' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>23Q1</text>
-<text x='219.34' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.47px' lengthAdjust='spacingAndGlyphs'>CO</text>
-<text x='572.66' y='109.12' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.92px' lengthAdjust='spacingAndGlyphs'>CT</text>
-<text x='623.13' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.69px' lengthAdjust='spacingAndGlyphs'>DE</text>
-<text x='522.19' y='361.49' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.27px' lengthAdjust='spacingAndGlyphs'>FL</text>
-<text x='471.71' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.72px' lengthAdjust='spacingAndGlyphs'>GA</text>
-<text x='118.39' y='411.97' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.84px' lengthAdjust='spacingAndGlyphs'>HI</text>
-<text x='168.87' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.39px' lengthAdjust='spacingAndGlyphs'>ID</text>
-<text x='370.76' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='11.27px' lengthAdjust='spacingAndGlyphs'>IL</text>
-<text x='421.24' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.84px' lengthAdjust='spacingAndGlyphs'>IN</text>
-<text x='320.29' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.02px' lengthAdjust='spacingAndGlyphs'>IA</text>
-<text x='269.81' y='254.16' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.14px' lengthAdjust='spacingAndGlyphs'>KS</text>
-<text x='269.81' y='266.93' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>21Q3</text>
-<text x='421.24' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.17px' lengthAdjust='spacingAndGlyphs'>KY</text>
-<text x='320.29' y='361.49' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.52px' lengthAdjust='spacingAndGlyphs'>LA</text>
-<text x='673.61' y='58.65' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.45px' lengthAdjust='spacingAndGlyphs'>ME</text>
-<text x='572.66' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.55px' lengthAdjust='spacingAndGlyphs'>MD</text>
-<text x='623.13' y='102.74' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='18.17px' lengthAdjust='spacingAndGlyphs'>MA</text>
-<text x='623.13' y='115.51' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>24Q1</text>
-<text x='421.24' y='153.21' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.16px' lengthAdjust='spacingAndGlyphs'>MI</text>
-<text x='421.24' y='165.98' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>22Q1</text>
-<text x='320.29' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.00px' lengthAdjust='spacingAndGlyphs'>MN</text>
-<text x='370.76' y='304.63' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.42px' lengthAdjust='spacingAndGlyphs'>MS</text>
-<text x='370.76' y='317.40' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>23Q3</text>
-<text x='320.29' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.02px' lengthAdjust='spacingAndGlyphs'>MO</text>
-<text x='168.87' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.31px' lengthAdjust='spacingAndGlyphs'>MT</text>
-<text x='269.81' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.14px' lengthAdjust='spacingAndGlyphs'>NE</text>
-<text x='118.39' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.47px' lengthAdjust='spacingAndGlyphs'>NV</text>
-<text x='623.13' y='58.65' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='30.91px' lengthAdjust='spacingAndGlyphs'>NH ↓</text>
-<text x='572.66' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.23px' lengthAdjust='spacingAndGlyphs'>NJ</text>
-<text x='219.34' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.00px' lengthAdjust='spacingAndGlyphs'>NM</text>
-<text x='522.19' y='109.12' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.27px' lengthAdjust='spacingAndGlyphs'>NY</text>
-<text x='522.19' y='254.16' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='29.83px' lengthAdjust='spacingAndGlyphs'>NC ↓</text>
-<text x='522.19' y='266.93' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>24Q3</text>
-<text x='219.34' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.23px' lengthAdjust='spacingAndGlyphs'>ND</text>
-<text x='471.71' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.70px' lengthAdjust='spacingAndGlyphs'>OH</text>
-<text x='269.81' y='311.02' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.80px' lengthAdjust='spacingAndGlyphs'>OK</text>
-<text x='118.39' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.88px' lengthAdjust='spacingAndGlyphs'>OR</text>
-<text x='522.19' y='153.21' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='28.25px' lengthAdjust='spacingAndGlyphs'>PA ↓</text>
-<text x='522.19' y='165.98' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>23Q1</text>
-<text x='623.13' y='153.21' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.02px' lengthAdjust='spacingAndGlyphs'>RI</text>
-<text x='623.13' y='165.98' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>23Q4</text>
-<text x='522.19' y='304.63' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='28.25px' lengthAdjust='spacingAndGlyphs'>SC ↓</text>
-<text x='522.19' y='317.40' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>24Q4</text>
-<text x='269.81' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>SD</text>
-<text x='370.76' y='254.16' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.00px' lengthAdjust='spacingAndGlyphs'>TN</text>
-<text x='370.76' y='266.93' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='31.41px' lengthAdjust='spacingAndGlyphs'>25Q3</text>
-<text x='269.81' y='361.49' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.83px' lengthAdjust='spacingAndGlyphs'>TX</text>
-<text x='168.87' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.64px' lengthAdjust='spacingAndGlyphs'>UT</text>
-<text x='572.66' y='58.65' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.84px' lengthAdjust='spacingAndGlyphs'>VT</text>
-<text x='522.19' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.12px' lengthAdjust='spacingAndGlyphs'>VA</text>
-<text x='118.39' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>WA</text>
-<text x='471.71' y='260.54' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.84px' lengthAdjust='spacingAndGlyphs'>WV</text>
-<text x='370.76' y='159.59' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.16px' lengthAdjust='spacingAndGlyphs'>WI</text>
-<text x='219.34' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.64px' lengthAdjust='spacingAndGlyphs'>WY</text>
-<text x='572.66' y='210.07' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.16px' lengthAdjust='spacingAndGlyphs'>DC</text>
+<text x='421.24' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.94px' lengthAdjust='spacingAndGlyphs'>AL</text>
+<text x='118.39' y='58.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.69px' lengthAdjust='spacingAndGlyphs'>AK</text>
+<text x='168.87' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>AZ</text>
+<text x='320.29' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.77px' lengthAdjust='spacingAndGlyphs'>AR</text>
+<text x='118.39' y='304.54' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='30.33px' lengthAdjust='spacingAndGlyphs'>CA ↓</text>
+<text x='118.39' y='317.89' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>23Q1</text>
+<text x='219.34' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.22px' lengthAdjust='spacingAndGlyphs'>CO</text>
+<text x='572.66' y='109.32' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.61px' lengthAdjust='spacingAndGlyphs'>CT</text>
+<text x='623.13' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.41px' lengthAdjust='spacingAndGlyphs'>DE</text>
+<text x='522.19' y='361.69' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.86px' lengthAdjust='spacingAndGlyphs'>FL</text>
+<text x='471.71' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.48px' lengthAdjust='spacingAndGlyphs'>GA</text>
+<text x='118.39' y='412.16' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.48px' lengthAdjust='spacingAndGlyphs'>HI</text>
+<text x='168.87' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.02px' lengthAdjust='spacingAndGlyphs'>ID</text>
+<text x='370.76' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='11.78px' lengthAdjust='spacingAndGlyphs'>IL</text>
+<text x='421.24' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.48px' lengthAdjust='spacingAndGlyphs'>IN</text>
+<text x='320.29' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.62px' lengthAdjust='spacingAndGlyphs'>IA</text>
+<text x='269.81' y='254.07' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.83px' lengthAdjust='spacingAndGlyphs'>KS</text>
+<text x='269.81' y='267.42' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>21Q3</text>
+<text x='421.24' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.84px' lengthAdjust='spacingAndGlyphs'>KY</text>
+<text x='320.29' y='361.69' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.19px' lengthAdjust='spacingAndGlyphs'>LA</text>
+<text x='673.61' y='58.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.25px' lengthAdjust='spacingAndGlyphs'>ME</text>
+<text x='572.66' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.41px' lengthAdjust='spacingAndGlyphs'>MD</text>
+<text x='623.13' y='102.64' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='19.02px' lengthAdjust='spacingAndGlyphs'>MA</text>
+<text x='623.13' y='115.99' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>24Q1</text>
+<text x='421.24' y='153.12' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.86px' lengthAdjust='spacingAndGlyphs'>MI</text>
+<text x='421.24' y='166.47' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>22Q1</text>
+<text x='320.29' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.88px' lengthAdjust='spacingAndGlyphs'>MN</text>
+<text x='370.76' y='304.54' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.22px' lengthAdjust='spacingAndGlyphs'>MS</text>
+<text x='370.76' y='317.89' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>23Q3</text>
+<text x='320.29' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.89px' lengthAdjust='spacingAndGlyphs'>MO</text>
+<text x='168.87' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.11px' lengthAdjust='spacingAndGlyphs'>MT</text>
+<text x='269.81' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.88px' lengthAdjust='spacingAndGlyphs'>NE</text>
+<text x='118.39' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.22px' lengthAdjust='spacingAndGlyphs'>NV</text>
+<text x='623.13' y='58.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.31px' lengthAdjust='spacingAndGlyphs'>NH ↓</text>
+<text x='572.66' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.92px' lengthAdjust='spacingAndGlyphs'>NJ</text>
+<text x='219.34' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.88px' lengthAdjust='spacingAndGlyphs'>NM</text>
+<text x='522.19' y='109.32' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.00px' lengthAdjust='spacingAndGlyphs'>NY</text>
+<text x='522.19' y='254.07' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>NC ↓</text>
+<text x='522.19' y='267.42' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>24Q3</text>
+<text x='219.34' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.03px' lengthAdjust='spacingAndGlyphs'>ND</text>
+<text x='471.71' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.52px' lengthAdjust='spacingAndGlyphs'>OH</text>
+<text x='269.81' y='311.22' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.56px' lengthAdjust='spacingAndGlyphs'>OK</text>
+<text x='118.39' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.64px' lengthAdjust='spacingAndGlyphs'>OR</text>
+<text x='522.19' y='153.12' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='29.53px' lengthAdjust='spacingAndGlyphs'>PA ↓</text>
+<text x='522.19' y='166.47' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>23Q1</text>
+<text x='623.13' y='153.12' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.61px' lengthAdjust='spacingAndGlyphs'>RI</text>
+<text x='623.13' y='166.47' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>23Q4</text>
+<text x='522.19' y='304.54' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='29.53px' lengthAdjust='spacingAndGlyphs'>SC ↓</text>
+<text x='522.19' y='317.89' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>24Q4</text>
+<text x='269.81' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.38px' lengthAdjust='spacingAndGlyphs'>SD</text>
+<text x='370.76' y='254.07' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.73px' lengthAdjust='spacingAndGlyphs'>TN</text>
+<text x='370.76' y='267.42' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='32.80px' lengthAdjust='spacingAndGlyphs'>25Q3</text>
+<text x='269.81' y='361.69' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.50px' lengthAdjust='spacingAndGlyphs'>TX</text>
+<text x='168.87' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.34px' lengthAdjust='spacingAndGlyphs'>UT</text>
+<text x='572.66' y='58.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.52px' lengthAdjust='spacingAndGlyphs'>VT</text>
+<text x='522.19' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.83px' lengthAdjust='spacingAndGlyphs'>VA</text>
+<text x='118.39' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.00px' lengthAdjust='spacingAndGlyphs'>WA</text>
+<text x='471.71' y='260.74' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.69px' lengthAdjust='spacingAndGlyphs'>WV</text>
+<text x='370.76' y='159.79' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.89px' lengthAdjust='spacingAndGlyphs'>WI</text>
+<text x='219.34' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.47px' lengthAdjust='spacingAndGlyphs'>WY</text>
+<text x='572.66' y='210.27' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.91px' lengthAdjust='spacingAndGlyphs'>DC</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1NDAuMDA=)'>
 <text x='113.19' y='491.87' style='font-size: 10.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='167.75px' lengthAdjust='spacingAndGlyphs'>Primary cohort (year coverage began)</text>

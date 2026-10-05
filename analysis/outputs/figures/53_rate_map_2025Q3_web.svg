@@ -94,108 +94,108 @@
 <rect x='342.61' y='138.11' width='53.39' height='53.39' style='stroke-width: 1.92; stroke: #222222; stroke-linecap: butt; stroke-linejoin: miter; fill: #8E3A00;' />
 <rect x='182.42' y='191.50' width='53.39' height='53.39' style='stroke-width: 0.43; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8DECA;' />
 <rect x='556.18' y='191.50' width='53.39' height='53.39' style='stroke-width: 0.43; stroke: #FFFFFF; stroke-linecap: butt; stroke-linejoin: miter; fill: #FAE1CE;' />
-<text x='422.70' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.92px' lengthAdjust='spacingAndGlyphs'>AL</text>
-<text x='102.33' y='54.38' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.89px' lengthAdjust='spacingAndGlyphs'>AK</text>
-<text x='155.73' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.91px' lengthAdjust='spacingAndGlyphs'>AZ</text>
-<text x='315.91' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.72px' lengthAdjust='spacingAndGlyphs'>AR</text>
-<text x='102.33' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.36px' lengthAdjust='spacingAndGlyphs'>CA</text>
-<text x='209.12' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.78px' lengthAdjust='spacingAndGlyphs'>CO</text>
-<text x='582.88' y='107.77' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.30px' lengthAdjust='spacingAndGlyphs'>CT</text>
-<text x='636.27' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.14px' lengthAdjust='spacingAndGlyphs'>DE</text>
-<text x='529.49' y='374.74' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.73px' lengthAdjust='spacingAndGlyphs'>FL</text>
-<text x='476.09' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.31px' lengthAdjust='spacingAndGlyphs'>GA</text>
-<text x='102.33' y='428.13' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.30px' lengthAdjust='spacingAndGlyphs'>HI</text>
-<text x='155.73' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.92px' lengthAdjust='spacingAndGlyphs'>ID</text>
-<text x='369.30' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='11.81px' lengthAdjust='spacingAndGlyphs'>IL</text>
-<text x='422.70' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.30px' lengthAdjust='spacingAndGlyphs'>IN</text>
-<text x='315.91' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.70px' lengthAdjust='spacingAndGlyphs'>IA</text>
-<text x='262.51' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.02px' lengthAdjust='spacingAndGlyphs'>KS</text>
-<text x='422.70' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.16px' lengthAdjust='spacingAndGlyphs'>KY</text>
-<text x='315.91' y='374.74' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.14px' lengthAdjust='spacingAndGlyphs'>LA</text>
-<text x='689.67' y='54.38' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.73px' lengthAdjust='spacingAndGlyphs'>ME</text>
-<text x='582.88' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.84px' lengthAdjust='spacingAndGlyphs'>MD</text>
-<text x='636.27' y='107.77' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='18.62px' lengthAdjust='spacingAndGlyphs'>MA</text>
-<text x='422.70' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='15.52px' lengthAdjust='spacingAndGlyphs'>MI</text>
-<text x='315.91' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.22px' lengthAdjust='spacingAndGlyphs'>MN</text>
-<text x='369.30' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.86px' lengthAdjust='spacingAndGlyphs'>MS</text>
-<text x='315.91' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='19.12px' lengthAdjust='spacingAndGlyphs'>MO</text>
-<text x='155.73' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.48px' lengthAdjust='spacingAndGlyphs'>MT</text>
-<text x='262.51' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.52px' lengthAdjust='spacingAndGlyphs'>NE</text>
-<text x='102.33' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.98px' lengthAdjust='spacingAndGlyphs'>NV</text>
-<text x='636.27' y='54.38' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>NH</text>
-<text x='582.88' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.83px' lengthAdjust='spacingAndGlyphs'>NJ</text>
-<text x='209.12' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.22px' lengthAdjust='spacingAndGlyphs'>NM</text>
-<text x='529.49' y='107.77' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.91px' lengthAdjust='spacingAndGlyphs'>NY</text>
-<text x='529.49' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='17.03px' lengthAdjust='spacingAndGlyphs'>NC</text>
-<text x='209.12' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.62px' lengthAdjust='spacingAndGlyphs'>ND</text>
-<text x='476.09' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.91px' lengthAdjust='spacingAndGlyphs'>OH</text>
-<text x='262.51' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.39px' lengthAdjust='spacingAndGlyphs'>OK</text>
-<text x='102.33' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.22px' lengthAdjust='spacingAndGlyphs'>OR</text>
-<text x='529.49' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='15.61px' lengthAdjust='spacingAndGlyphs'>PA</text>
-<text x='636.27' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='13.61px' lengthAdjust='spacingAndGlyphs'>RI</text>
-<text x='529.49' y='321.35' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.67px' lengthAdjust='spacingAndGlyphs'>SC</text>
-<text x='262.51' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.27px' lengthAdjust='spacingAndGlyphs'>SD</text>
-<text x='369.30' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.27px' lengthAdjust='spacingAndGlyphs'>TN</text>
-<text x='262.51' y='374.74' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.47px' lengthAdjust='spacingAndGlyphs'>TX</text>
-<text x='155.73' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.91px' lengthAdjust='spacingAndGlyphs'>UT</text>
-<text x='582.88' y='54.38' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.30px' lengthAdjust='spacingAndGlyphs'>VT</text>
-<text x='529.49' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.77px' lengthAdjust='spacingAndGlyphs'>VA</text>
-<text x='102.33' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>WA</text>
-<text x='476.09' y='267.95' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.91px' lengthAdjust='spacingAndGlyphs'>WV</text>
-<text x='369.30' y='161.16' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='17.17px' lengthAdjust='spacingAndGlyphs'>WI</text>
-<text x='209.12' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.80px' lengthAdjust='spacingAndGlyphs'>WY</text>
-<text x='582.88' y='214.56' text-anchor='middle' style='font-size: 12.52px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.66px' lengthAdjust='spacingAndGlyphs'>DC</text>
-<text x='422.70' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.6</text>
-<text x='102.33' y='73.06' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.8</text>
-<text x='155.73' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.1</text>
-<text x='315.91' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.1</text>
-<text x='102.33' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>45.1</text>
-<text x='209.12' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>4.0</text>
-<text x='582.88' y='126.46' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.7</text>
-<text x='636.27' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>36.3</text>
-<text x='529.49' y='393.43' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.1</text>
-<text x='476.09' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.3</text>
-<text x='102.33' y='446.82' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.1</text>
-<text x='155.73' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>2.9</text>
-<text x='369.30' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.3</text>
-<text x='422.70' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.9</text>
-<text x='315.91' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>3.2</text>
-<text x='262.51' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>26.5</text>
-<text x='422.70' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.8</text>
-<text x='315.91' y='393.43' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.3</text>
-<text x='689.67' y='73.06' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.7</text>
-<text x='582.88' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.7</text>
-<text x='636.27' y='126.46' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>40.9</text>
-<text x='422.70' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>44.4</text>
-<text x='315.91' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>27.7</text>
-<text x='369.30' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>16.8</text>
-<text x='315.91' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>38.2</text>
-<text x='155.73' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.4</text>
-<text x='262.51' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.5</text>
-<text x='102.33' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.5</text>
-<text x='636.27' y='73.06' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>32.0</text>
-<text x='582.88' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>2.1</text>
-<text x='209.12' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='529.49' y='126.46' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='529.49' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>35.8</text>
-<text x='209.12' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='476.09' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.2</text>
-<text x='262.51' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.2</text>
-<text x='102.33' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.2</text>
-<text x='529.49' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>44.7</text>
-<text x='636.27' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>12.6</text>
-<text x='529.49' y='340.03' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>4.0</text>
-<text x='262.51' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='369.30' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>6.4</text>
-<text x='262.51' y='393.43' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.3</text>
-<text x='155.73' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.0</text>
-<text x='582.88' y='73.06' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>2.8</text>
-<text x='529.49' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>6.3</text>
-<text x='102.33' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.6</text>
-<text x='476.09' y='286.64' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.1</text>
-<text x='369.30' y='179.85' text-anchor='middle' style='font-size: 12.52px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='25.95px' lengthAdjust='spacingAndGlyphs'>45.6</text>
-<text x='209.12' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>1.4</text>
-<text x='582.88' y='233.25' text-anchor='middle' style='font-size: 12.52px;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.44px' lengthAdjust='spacingAndGlyphs'>0.6</text>
+<text x='422.70' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.59px' lengthAdjust='spacingAndGlyphs'>AL</text>
+<text x='102.33' y='54.57' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.64px' lengthAdjust='spacingAndGlyphs'>AK</text>
+<text x='155.73' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.61px' lengthAdjust='spacingAndGlyphs'>AZ</text>
+<text x='315.91' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.47px' lengthAdjust='spacingAndGlyphs'>AR</text>
+<text x='102.33' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='17.09px' lengthAdjust='spacingAndGlyphs'>CA</text>
+<text x='209.12' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.53px' lengthAdjust='spacingAndGlyphs'>CO</text>
+<text x='582.88' y='107.97' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>CT</text>
+<text x='636.27' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>DE</text>
+<text x='529.49' y='374.94' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.36px' lengthAdjust='spacingAndGlyphs'>FL</text>
+<text x='476.09' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.09px' lengthAdjust='spacingAndGlyphs'>GA</text>
+<text x='102.33' y='428.33' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.94px' lengthAdjust='spacingAndGlyphs'>HI</text>
+<text x='155.73' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.55px' lengthAdjust='spacingAndGlyphs'>ID</text>
+<text x='369.30' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='12.34px' lengthAdjust='spacingAndGlyphs'>IL</text>
+<text x='422.70' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.94px' lengthAdjust='spacingAndGlyphs'>IN</text>
+<text x='315.91' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.31px' lengthAdjust='spacingAndGlyphs'>IA</text>
+<text x='262.51' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.72px' lengthAdjust='spacingAndGlyphs'>KS</text>
+<text x='422.70' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.88px' lengthAdjust='spacingAndGlyphs'>KY</text>
+<text x='315.91' y='374.94' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.83px' lengthAdjust='spacingAndGlyphs'>LA</text>
+<text x='689.67' y='54.57' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.52px' lengthAdjust='spacingAndGlyphs'>ME</text>
+<text x='582.88' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.69px' lengthAdjust='spacingAndGlyphs'>MD</text>
+<text x='636.27' y='107.97' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='19.45px' lengthAdjust='spacingAndGlyphs'>MA</text>
+<text x='422.70' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.20px' lengthAdjust='spacingAndGlyphs'>MI</text>
+<text x='315.91' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.08px' lengthAdjust='spacingAndGlyphs'>MN</text>
+<text x='369.30' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.66px' lengthAdjust='spacingAndGlyphs'>MS</text>
+<text x='315.91' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='19.98px' lengthAdjust='spacingAndGlyphs'>MO</text>
+<text x='155.73' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.25px' lengthAdjust='spacingAndGlyphs'>MT</text>
+<text x='262.51' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.25px' lengthAdjust='spacingAndGlyphs'>NE</text>
+<text x='102.33' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.75px' lengthAdjust='spacingAndGlyphs'>NV</text>
+<text x='636.27' y='54.57' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.81px' lengthAdjust='spacingAndGlyphs'>NH</text>
+<text x='582.88' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.53px' lengthAdjust='spacingAndGlyphs'>NJ</text>
+<text x='209.12' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.08px' lengthAdjust='spacingAndGlyphs'>NM</text>
+<text x='529.49' y='107.97' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.67px' lengthAdjust='spacingAndGlyphs'>NY</text>
+<text x='529.49' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='17.80px' lengthAdjust='spacingAndGlyphs'>NC</text>
+<text x='209.12' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.42px' lengthAdjust='spacingAndGlyphs'>ND</text>
+<text x='476.09' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.72px' lengthAdjust='spacingAndGlyphs'>OH</text>
+<text x='262.51' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.17px' lengthAdjust='spacingAndGlyphs'>OK</text>
+<text x='102.33' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>OR</text>
+<text x='529.49' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='16.33px' lengthAdjust='spacingAndGlyphs'>PA</text>
+<text x='636.27' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='14.22px' lengthAdjust='spacingAndGlyphs'>RI</text>
+<text x='529.49' y='321.54' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.38px' lengthAdjust='spacingAndGlyphs'>SC</text>
+<text x='262.51' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.00px' lengthAdjust='spacingAndGlyphs'>SD</text>
+<text x='369.30' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.98px' lengthAdjust='spacingAndGlyphs'>TN</text>
+<text x='262.51' y='374.94' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.14px' lengthAdjust='spacingAndGlyphs'>TX</text>
+<text x='155.73' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.61px' lengthAdjust='spacingAndGlyphs'>UT</text>
+<text x='582.88' y='54.57' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='15.97px' lengthAdjust='spacingAndGlyphs'>VT</text>
+<text x='529.49' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='16.47px' lengthAdjust='spacingAndGlyphs'>VA</text>
+<text x='102.33' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.91px' lengthAdjust='spacingAndGlyphs'>WA</text>
+<text x='476.09' y='268.15' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.80px' lengthAdjust='spacingAndGlyphs'>WV</text>
+<text x='369.30' y='161.36' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='17.94px' lengthAdjust='spacingAndGlyphs'>WI</text>
+<text x='209.12' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='20.69px' lengthAdjust='spacingAndGlyphs'>WY</text>
+<text x='582.88' y='214.76' text-anchor='middle' style='font-size: 13.09px; font-weight: 600;fill: #111111; font-family: "IBM Plex Sans";' textLength='17.41px' lengthAdjust='spacingAndGlyphs'>DC</text>
+<text x='422.70' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.6</text>
+<text x='102.33' y='73.26' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.8</text>
+<text x='155.73' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='315.91' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='102.33' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>45.1</text>
+<text x='209.12' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>4.0</text>
+<text x='582.88' y='126.66' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.7</text>
+<text x='636.27' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>36.3</text>
+<text x='529.49' y='393.63' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='476.09' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.3</text>
+<text x='102.33' y='447.02' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='155.73' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>2.9</text>
+<text x='369.30' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.3</text>
+<text x='422.70' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.9</text>
+<text x='315.91' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>3.2</text>
+<text x='262.51' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>26.5</text>
+<text x='422.70' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.8</text>
+<text x='315.91' y='393.63' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.3</text>
+<text x='689.67' y='73.26' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.7</text>
+<text x='582.88' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.7</text>
+<text x='636.27' y='126.66' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>40.9</text>
+<text x='422.70' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>44.4</text>
+<text x='315.91' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>27.7</text>
+<text x='369.30' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>16.8</text>
+<text x='315.91' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>38.2</text>
+<text x='155.73' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.4</text>
+<text x='262.51' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='102.33' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='636.27' y='73.26' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>32.0</text>
+<text x='582.88' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>2.1</text>
+<text x='209.12' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='529.49' y='126.66' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='529.49' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>35.8</text>
+<text x='209.12' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='476.09' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.2</text>
+<text x='262.51' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.2</text>
+<text x='102.33' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.2</text>
+<text x='529.49' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>44.7</text>
+<text x='636.27' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>12.6</text>
+<text x='529.49' y='340.23' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>4.0</text>
+<text x='262.51' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='369.30' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>6.4</text>
+<text x='262.51' y='393.63' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.3</text>
+<text x='155.73' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='582.88' y='73.26' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>2.8</text>
+<text x='529.49' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>6.3</text>
+<text x='102.33' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.6</text>
+<text x='476.09' y='286.84' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.1</text>
+<text x='369.30' y='180.05' text-anchor='middle' style='font-size: 13.09px;fill: #FFFFFF; font-family: "IBM Plex Sans";' textLength='27.09px' lengthAdjust='spacingAndGlyphs'>45.6</text>
+<text x='209.12' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>1.4</text>
+<text x='582.88' y='233.44' text-anchor='middle' style='font-size: 13.09px;fill: #111111; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>0.6</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1NDAuMDA=)'>
 <text x='205.40' y='504.67' style='font-size: 10.00px; font-family: "IBM Plex Sans";' textLength='149.44px' lengthAdjust='spacingAndGlyphs'>Prescriptions per 1,000 enrollees</text>

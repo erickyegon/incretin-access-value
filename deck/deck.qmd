@@ -1,17 +1,20 @@
 ---
-title: "Coverage of obesity drugs in Medicaid: what it did, who it reaches, what it could cost"
-subtitle: "Insight deck · public aggregate data, 2018 to early 2026"
+pagetitle: "Coverage of obesity drugs in Medicaid: what it did, who it reaches, what it could cost"
 author: "Erick Kiprotich Yegon · Epidemiologist and data scientist"
 format:
   revealjs:
     theme: [simple, deck.scss]
     width: 1280
     height: 720
-    margin: 0.04
+    margin: 0
+    center: false
     slide-number: true
+    show-slide-number: all
+    footer: "Incretin access & value · Erick Kiprotich Yegon · erickyegon.github.io/incretin-access-value"
     embed-resources: true
     transition: none
     controls: false
+    progress: false
 execute:
   echo: false
   warning: false
@@ -21,176 +24,257 @@ execute:
 ```{r setup}
 source("../analysis/R/kn.R")
 al <- read.csv("../analysis/outputs/figures/alt_text.csv", stringsAsFactors = FALSE)
-fig <- function(name, h = 540) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1)
-  cat(sprintf("![](../analysis/outputs/figures/%s_deck.png){fig-alt=\"%s\" height=%d}\n\n", name, gsub("\"", "'", a), h)) }
+# one slide body: figure on the left (about 65%), takeaway panel on the right (one big number and short bullets), source line at the bottom
+img <- function(name) { a <- al$alt_text[al$figure == name]; stopifnot(length(a) == 1); sprintf("![](../analysis/outputs/figures/%s_deck.png){fig-alt=\"%s\"}
+", name, gsub("\"", "'", a)) }
 src <- function(x) cat(sprintf("\n::: {.src}\n%s\n:::\n\n", x))
+body <- function(fig, big, cap, bullets, source, full = FALSE) {
+  cat("
+::::: {.body}
+:::: {.figarea", if (full) " .full", "}
+", img(fig), "
+::::
+", sep = "")
+  if (!is.null(big)) cat(":::: {.take}
+
+[", big, "]{.big}
+
+::: {.bigcap}
+", cap, "
+
+:::
+
+", paste0("- ", bullets, collapse = "
+"), "
+
+::::
+", sep = "")
+  cat(":::::
+"); src(source)
+}
+stats <- function(big, cap) { cat("
+:::::: {.stats}
+"); for (i in seq_along(big)) cat("::::: {.st}
+:::: {.big}
+", big[i], "
+
+::::
+:::: {.bigcap}
+", cap[i], "
+::::
+:::::
+", sep = ""); cat("::::::
+
+") }
+cards <- function(h, t, n = NULL, class = ".two") { cat("
+::::: {.cards ", class, "}
+", sep = ""); for (i in seq_along(h)) cat(":::: {.card}
+", if (!is.null(n)) sprintf("::: {.n}
+%s
+
+:::
+", n[i]), "::: {.h}
+", h[i], "
+
+:::
+::: {.t}
+", t[i], "
+
+:::
+::::
+", sep = ""); cat(":::::
+
+") }
+pct <- function(id) paste0(kn(id), "%")
 ```
 
-## The answer: coverage was associated with a steady rise in prescriptions, and a program of 1 million enrollees would have a net cost of about $`r kn("e_net5")` million over five years
+##  {.nostyle}
 
-::::: {.columns}
-::: {.column width="25%"}
-::: {.stat}
-**`r kn("c_att_overall")`**\
-estimated additional prescriptions per 1,000 enrollees per quarter\
-`r kn_ci("c_att_overall")`
-:::
-:::
-::: {.column width="25%"}
-::: {.stat}
-**`r kn("c_es_e0")` to `r kn("c_es_e8")`**\
-per 1,000 enrollees per quarter, first quarter to eighth (market growth included)
-:::
-:::
-::: {.column width="25%"}
-::: {.stat}
-**$`r kn("e_scen_min")` to `r kn("e_scen_max")` million**\
-five-year net cost across scenarios, 1 million enrollees
-:::
-:::
-::: {.column width="25%"}
-::: {.stat}
-**$`r kn("e_pmpm")`**\
-net per enrollee per month, central case (rebate `r kn("e_rebate_central")`% is assumed)
-:::
-:::
-:::::
+```{r title, results='asis'}
+cat(sprintf('
+<div class="tslide"><div class="bar"></div>
+<div class="ey">Insight deck · public aggregate data, 2018 to early 2026</div>
+<div class="tt">Coverage of obesity drugs in Medicaid: what it did, who it reaches, what it could cost</div>
+<div class="sub">Wegovy and Zepbound in state Medicaid programs · %s</div>
+<div class="nums">
+<div class="n"><b>%s</b><span>additional prescriptions per 1,000 enrollees per quarter (%s)</span></div>
+<div class="n"><b>%sM</b><span>U.S. adults meet the FDA label criteria (lower bound)</span></div>
+<div class="n"><b>$%sM</b><span>five-year net cost for 1 million enrollees; $%s per member per month</span></div></div>
+<div class="by">Erick Kiprotich Yegon · Epidemiologist and data scientist</div>
+<div class="url">erickyegon.github.io/incretin-access-value</div></div>
+', format(Sys.Date(), "%B %Y"), kn("c_att_overall"), kn_ci("c_att_overall"), kn("b_eligible"), kn("e_net5"), kn("e_pmpm")))
+```
 
-```{r a1, results='asis'}
-src("Sources: CMS State Drug Utilization Data and Medicaid enrollment (Module C); Module E budget model. Net of an assumed rebate; SDUD amounts are gross. Scenarios, not forecasts.")
+## The four questions and the answers: who is eligible, what coverage did, who prescribes, and what it could cost
+
+```{r agenda, results='asis'}
+cards(h = c("Who is eligible?", "What did coverage do?", "Who prescribes?", "What could it cost?"),
+      n = c(paste0(kn("b_eligible"), " million"), paste0(kn("c_att_overall"), " per 1,000"), pct("d_share_pcp"), paste0("$", kn("e_net5"), " million")),
+      t = c(paste0("U.S. adults meet the FDA label criteria (lower bound); ", kn("b_medicaid_elig"), " million have Medicaid."),
+            paste0("Prescriptions per 1,000 enrollees per quarter (", kn_ci("c_att_overall"), "), robust in all ", sub(" of .*$", "", kn("c_spec_holds")), " estimable alternative analyses."),
+            paste0("of 2024 Part D incretin claims came from primary care; nurse practitioners and physician assistants wrote ", pct("d_share_nppa"), "."),
+            paste0("net over five years for 1 million enrollees ($", kn("e_pmpm"), " per member per month); the rebate is the largest unknown.")))
+src("Sources: NHANES, CMS State Drug Utilization Data and Medicaid enrollment, Medicare Part D Prescribers, Module E budget model. Associations and scenarios, not forecasts.")
 ```
 
 ## Market today: about half of U.S. adults meet the label criteria, and about `r kn("b_glp1_all")` million already use a GLP-1 drug
 
 ```{r a2, results='asis'}
-fig("20_funnel", 520)
-src(paste0("Source: NHANES 2021-2023 (measured) and KFF poll, February 24 to March 2, 2026 (modeled). Eligible is a lower bound: ", kn("b_eligible"), " million adults (", kn_ci("b_eligible"), " million)."))
+body("20_funnel", paste0(kn("b_eligible"), "M"), paste0("U.S. adults meet the label criteria (", kn_ci("b_eligible"), " million), a lower bound"),
+     c(paste0(kn("b_medicaid_elig"), " million of them have Medicaid"), paste0(kn("b_glp1_all"), " million adults currently use any GLP-1 drug (modeled)"), "Solid bars are measured; hatched bars are modeled"),
+     "Source: NHANES 2021-2023 (measured) and KFF Health Tracking Poll, February 24 to March 2, 2026 (modeled).")
 ```
 
-## Market today: gross spending on GLP-1 and GIP products reached $`r kn("m_spend_partd_2024")` billion in Part D and $`r kn("m_spend_medicaid_2024")` billion in Medicaid in 2024, before rebates
+## Market today: gross spending reached $`r kn("m_spend_partd_2024")` billion in Part D and $`r kn("m_spend_medicaid_2024")` billion in Medicaid in 2024, before rebates
 
 ```{r a3, results='asis'}
-fig("50_spending_trend", 520)
-src("Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug (gross of rebates). Part D spending includes diabetes and other covered uses, not only obesity.")
+body("50_spending_trend", paste0("$", kn("m_spend_medicaid_2024"), "B"), "gross Medicaid spending on these drugs in 2024, before rebates",
+     c(paste0("Part D: $", kn("m_spend_partd_2024"), "B, which includes diabetes and other covered uses"), "Ozempic and Mounjaro lead the growth; obesity-labeled brands in orange"),
+     "Source: CMS Medicare Part D Spending by Drug and Medicaid Spending by Drug (gross of rebates).")
 ```
 
 ## Landscape: injectables, new oral options, a Medicare Bridge and a $`r kn("x_price_245")` price are arriving while some states end coverage
 
-- **Products.** Wegovy (injection and tablets), Zepbound (KwikPen) and Foundayo (tablets) are covered under the Medicare GLP-1 Bridge (CMS prescriber page, June 2026).
-- **Medicare GLP-1 Bridge.** A short-term demonstration, `r kn("x_bridge_window")`, with a $`r kn("x_bridge_copay")` copay (CMS).
-- **Price.** The White House (November 2025) announced a Medicare price of $`r kn("x_price_245")` a month for these drugs and said state Medicaid programs will have access at those prices.
-- **State coverage is changing:** several states ended or paused coverage in late 2025 and early 2026 (timeline on the next slide).
-- **Pipeline.** `r kn("p_obesity_studies")` registered studies of the in-scope ingredients list obesity; `r kn("p_obesity_phase3_ongoing")` are ongoing Phase 3, and oral orforglipron has `r kn("p_orforglipron_phase3_obesity_studies")` Phase 3 studies (ClinicalTrials.gov; other ingredients not counted).
-
 ```{r a4, results='asis'}
-src("Sources: CMS Medicare GLP-1 Bridge pages (saved under docs/sources); White House fact sheet, November 2025; state Medicaid documents; ClinicalTrials.gov (registry last updated 2026-10-02).")
+cards(h = c("Products and oral options", "Medicare GLP-1 Bridge", paste0("The $", kn("x_price_245"), " price"), "State coverage is changing"),
+      t = c("Wegovy (injection and tablets), Zepbound (KwikPen) and Foundayo (tablets) are covered under the Bridge.",
+            paste0("A short-term demonstration, ", kn("x_bridge_window"), ", with a $", kn("x_bridge_copay"), " copay (CMS)."),
+            paste0("The White House (November 2025) announced a Medicare price of $", kn("x_price_245"), " a month and said state Medicaid programs will have access at those prices."),
+            paste0("Several states ended or paused coverage in late 2025 and early 2026. Pipeline: ", kn("p_obesity_studies"), " registered obesity studies, ", kn("p_obesity_phase3_ongoing"), " ongoing Phase 3.")))
+src("Sources: CMS Medicare GLP-1 Bridge pages; White House fact sheet, November 2025; state Medicaid documents; ClinicalTrials.gov (registry last updated 2026-10-02).")
 ```
 
-## Timeline: label expansions, state coverage starts and ends, the $`r kn("x_price_245")` announcement and the Medicare Bridge cluster in 2024 to 2026
+## Timeline: label changes, state coverage starts and ends, the $`r kn("x_price_245")` price and the Medicare Bridge cluster in 2024 to 2026
 
 ```{r a4b, results='asis'}
-fig("51_timeline", 560)
-src("Sources: FDA Drugs@FDA labels; state Medicaid documents (primary-analysis states); White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.")
+body("51_timeline", NULL, NULL, NULL, "Sources: FDA Drugs@FDA labels; state Medicaid documents (primary-analysis states); White House fact sheet, November 2025; CMS Medicare GLP-1 Bridge pages.", full = TRUE)
 ```
 
-## Access: coverage was associated with an estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter, rising from `r kn("c_es_e0")` to `r kn("c_es_e8")` over eight quarters
+## Access: coverage was associated with an estimated `r kn("c_att_overall")` more prescriptions per 1,000 enrollees per quarter
 
 ```{r a5, results='asis'}
-fig("10_event_study_primary", 450)
-src(paste0("Source: CMS SDUD and Medicaid enrollment; ", kn("c_states_primary"), " covering and ", kn("c_states_never"), " never-covering jurisdictions. Placebo ", kn("c_placebo"), " (", kn_ci("c_placebo"), "); other estimators and sensitivity analyses range ", kn("c_spec_range"), ". Part of the growth is national market growth."))
+cat("\n::: {.body}\n::: {.figarea .full}\n", img("10_event_study_primary"), "\n:::\n:::\n", sep = "")
+stats(c(kn("c_att_overall"), paste0(kn("c_es_e0"), " to ", kn("c_es_e8")), kn("c_placebo")),
+      c(paste0("per 1,000 enrollees per quarter, ", kn_ci("c_att_overall")), "first quarter to eighth, per 1,000 (market growth included)", paste0("placebo effect (", kn_ci("c_placebo"), "): no effect before coverage")))
+src(paste0("Source: CMS SDUD and Medicaid enrollment; ", kn("c_states_primary"), " covering and ", kn("c_states_never"), " never-covering jurisdictions. Callaway and Sant'Anna estimator; part of the growth is national market growth."))
 ```
 
 ## Access: `r kn("c_states_primary")` states form the primary analysis, and their prior authorization and BMI rules differ
 
-::::: {.columns}
-::: {.column width="60%"}
 ```{r a6, results='asis'}
-fig("01_coverage_timing_map", 500)
-```
-:::
-::: {.column width="40%"}
-- **Prior authorization** is documented in `r kn("c_pa_states")` of the primary states; California's is not found in sourced documents.
-- **BMI thresholds** are documented for `r kn("um_bmi")` of the 17 covering states and step therapy for `r kn("um_step")`; the rules differ by state (criteria table in the report).
-- **Timing.** `r kn("c_states_sens")` more states with uncertain start quarters appear only in a sensitivity analysis.
-:::
-:::::
-
-```{r a6b, results='asis'}
-src("Source: state Medicaid documents and CMS approvals (docs/sources); criteria table: coverage_um_criteria.csv in the repository.")
+body("01_coverage_timing_map", kn("c_pa_states"), "primary states have prior authorization documented (California's is not found in sourced documents)",
+     c(paste0("BMI thresholds documented for ", kn("um_bmi"), " of 17 covering states; step therapy for ", kn("um_step")), paste0(kn("c_states_sens"), " more states with uncertain start quarters appear only in a sensitivity analysis")),
+     "Source: state Medicaid documents and CMS approvals (docs/sources); criteria table: coverage_um_criteria.csv in the repository.")
 ```
 
-## Access, detail: coverage operates through managed care (South Carolina, Rhode Island), and the first withdrawals show how fast it can reverse
+## Access, robustness: the estimate holds in all `r sub(" of .*$", "", kn("c_spec_holds"))` estimable alternative analyses, from `r kn("c_spec_range")` per 1,000
 
 ```{r a7, results='asis'}
-fig("05_withdrawal_descriptive", 500)
-src(paste0("Source: SDUD 2025 Q4 to 2026 Q1 (2026 Q1 is preliminary; descriptive only). Prescriptions per enrollee fell ", kn("c_withdraw_ca"), "% in California and ", kn("c_withdraw_pa"), "% in Pennsylvania. Managed-care delivery makes fee-for-service-only estimates unreliable."))
+body("11_specification_chart", paste0("All ", sub(" of .*$", "", kn("c_spec_holds"))), "estimable alternative analyses give an interval that excludes zero",
+     c(paste0("Overall effect ranges ", kn("c_spec_range"), " per 1,000 across them"), "Fee-for-service only is not estimable, so it is not shown"),
+     "Source: Module C specification table (95% CIs); orange = primary analysis.")
 ```
 
-## Prescribers: primary care and nurse practitioners and physician assistants wrote `r kn("d_share_pcp")`% and `r kn("d_share_nppa")`% of Part D incretin claims in 2024
+## Access, detail: coverage operates through managed care, so a fee-for-service-only estimate is not reliable
 
 ```{r a8, results='asis'}
-fig("31_partd_specialty_mix", 520)
-src("Source: CMS Medicare Part D Prescribers. Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+body("06_managed_care_split", pct("m_sc_mcou_share"), "of South Carolina's observed prescriptions came through managed care in 2025 Q3",
+     c(paste0(pct("m_ri_mcou_share"), " in every Rhode Island quarter"), paste0("A managed-care-only estimate is ", kn("c_spec14"), " per 1,000 managed-care enrollees (", kn_ci("c_spec14"), ")")),
+     "Source: CMS State Drug Utilization Data, observed (unsuppressed) prescriptions per 1,000 enrollees; gross of rebates.")
+```
+
+## Access, detail: the first withdrawals were steep, and preliminary data show how fast coverage can reverse
+
+```{r a9, results='asis'}
+body("05b_withdrawal_change", pct("c_withdraw_ca"), "California, normalized change in prescriptions after coverage ended (preliminary)",
+     c(paste0(pct("c_withdraw_pa"), " in Pennsylvania"), "2026 Q1 is a preliminary quarter; descriptive only, no model"),
+     "Source: SDUD 2025 Q4 to 2026 Q1. Normalized change = obesity-labeled change relative to the state's all-drug change.")
+```
+
+## Prescribers: primary care wrote `r kn("d_share_pcp")`% of 2024 Part D incretin claims, nurse practitioners and physician assistants `r kn("d_share_nppa")`%
+
+```{r a10, results='asis'}
+body("31_partd_specialty_mix", pct("d_share_pcp"), "of Part D incretin claims came from primary care physicians in 2024",
+     c(paste0(pct("d_share_nppa"), " from nurse practitioners and physician assistants"), "Part D reflects diabetes and other covered uses, not obesity-brand adoption"),
+     "Source: CMS Medicare Part D Prescribers (rows with at least 11 claims).")
 ```
 
 ## Prescribers: tirzepatide reached `r kn("d_tirz_2024")`% of Part D incretin prescribers by 2024, from `r kn("d_tirz_2022")`% in 2022
 
-```{r a9, results='asis'}
-fig("33_partd_tirzepatide_adoption", 520)
-src("Source: CMS Medicare Part D Prescribers. Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
-```
-
-## Prescribers: cardiology wrote `r kn("d_wegovy_cardio")`% of Wegovy's Part D claims against `r kn("d_ozempic_cardio")`% of Ozempic's, after the cardiovascular indication
-
-```{r a10, results='asis'}
-fig("34_partd_wegovy_vs_ozempic_specialty", 500)
-src(paste0("Source: CMS Medicare Part D Prescribers, 2024 (", kn("d_wegovy_claims"), " Wegovy claims from ", kn("d_wegovy_prescribers"), " prescribers). Part D reflects diabetes and other covered uses, not obesity-brand adoption."))
-```
-
-## Value: five-year net cost ranges from $`r kn("e_scen_min")` million to $`r kn("e_scen_max")` million for 1 million enrollees; the central case is $`r kn("e_net5")` million
-
 ```{r a11, results='asis'}
-fig("42_cost_by_scenario", 520)
-src("Source: Module C effects, SDUD gross reimbursement, statutory rebate floor (42 U.S.C. 1396r-8), White House fact sheet. Rebates, prior authorization and years 3-5 are assumptions; no medical cost offsets.")
+body("33_partd_tirzepatide_adoption", pct("d_tirz_2024"), paste0("of incretin prescribers had a tirzepatide row in 2024, from ", pct("d_tirz_2022"), " in 2022"),
+     c("Endocrinology leads adoption; primary care and nurse practitioners and physician assistants follow", "Part D reflects diabetes and other covered uses"),
+     "Source: CMS Medicare Part D Prescribers. Share of prescribers with at least one incretin row who also have a tirzepatide row.")
+```
+
+## Prescribers: cardiology wrote `r kn("d_wegovy_cardio")`% of Wegovy's Part D claims, against `r kn("d_ozempic_cardio")`% for Ozempic
+
+```{r a12, results='asis'}
+body("34_partd_wegovy_vs_ozempic_specialty", pct("d_wegovy_cardio"), paste0("of Wegovy's Part D claims came from cardiology in 2024, against ", pct("d_ozempic_cardio"), " for Ozempic"),
+     c(paste0("Wegovy gained a cardiovascular indication in 2024; ", kn("d_wegovy_claims"), " Wegovy claims from ", kn("d_wegovy_prescribers"), " prescribers"), "One year of data: descriptive only"),
+     "Source: CMS Medicare Part D Prescribers, 2024. Part D reflects diabetes and other covered uses, not obesity-brand adoption.")
+```
+
+## Value: the five-year net cost for 1 million enrollees is $`r kn("e_net5")` million centrally, within $`r kn("e_scen_min")` to $`r kn("e_scen_max")` million
+
+```{r a13, results='asis'}
+body("42_cost_by_scenario", paste0("$", kn("e_net5"), "M"), paste0("central five-year net cost ($", kn("e_pmpm"), " per member per month)"),
+     c(paste0("Range across scenarios: $", kn("e_scen_min"), "M to $", kn("e_scen_max"), "M"), "Rebates, prior authorization and years 3 to 5 are assumptions; no medical cost offsets"),
+     "Source: Module C effects, SDUD gross reimbursement, statutory rebate floor (42 U.S.C. 1396r-8), White House fact sheet.")
 ```
 
 ## Value: the rebate and the uncertainty in the coverage effect move the answer most
 
-```{r a12, results='asis'}
-fig("40_tornado", 520)
-src(paste0("Source: Module E one-way sensitivity. Central rebate ", kn("e_rebate_central"), "% is the midpoint of ", kn("e_rebate_low"), "% (statutory minimum) and ", kn("e_rebate_high"), "% (implied by the $", kn("x_price_245"), " price); actual net prices are confidential."))
+```{r a14, results='asis'}
+body("40_tornado", paste0(kn("e_rebate_central"), "%"), paste0("central rebate, the midpoint of ", kn("e_rebate_low"), "% (statutory minimum) and ", kn("e_rebate_high"), "% (implied by the $", kn("x_price_245"), " price)"),
+     c("Actual net prices are confidential, so the rebate is an assumption", "Each bar moves one input across its range with the others at central values"),
+     "Source: Module E one-way sensitivity.")
 ```
 
 ## Value: per enrollee per month, a gross $`r kn("e_gross_pmpm")` becomes $`r kn("e_pmpm")` net at the central rebate and $`r kn("e_announced_pmpm")` at the announced price
 
-```{r a13, results='asis'}
-fig("41_waterfall_pmpm", 520)
-src("Source: Module E. The rebate step is an assumption; the announced price is a program price, not a confirmed Medicaid net price.")
+```{r a15, results='asis'}
+body("41_waterfall_pmpm", paste0("$", kn("e_pmpm")), "net per enrollee per month at the central rebate",
+     c(paste0("Gross: $", kn("e_gross_pmpm"), " per enrollee per month"), paste0("$", kn("e_announced_pmpm"), " at the announced $", kn("x_price_245"), " price")),
+     "Source: Module E. The rebate step is an assumption; the announced price is a program price, not a confirmed Medicaid net price.")
 ```
 
-## Value context: trial weight loss of `r kn("t_attain_1_orforglipron_6_mg")`% to `r kn("t_surmount_1_tirzepatide_15_mg")`% sits beside a Medicaid net cost of $`r kn("e_per_user_year")` per user per year (context only)
+## Trials show average weight loss of `r sub("^-", "", kn("t_attain_1_orforglipron_6_mg"))`% to `r sub("^-", "", kn("t_surmount_1_tirzepatide_15_mg"))`%, set beside a Medicaid net cost of $`r kn("e_per_user_year")` per user per year (context only)
 
-```{r a14, results='asis'}
-vc <- read.csv("../analysis/outputs/tables/moduleE_value_context.csv", check.names = FALSE, stringsAsFactors = FALSE)
-cat(knitr::kable(data.frame(Trial = vc$Trial, Arm = vc$Arm, Weeks = vc$Weeks, `Weight change, % (95% CI)` = vc[["Weight change, % (95% CI)"]], `Gross per Rx, USD` = vc[[6]], check.names = FALSE), format = "pipe"), sep = "
-")
-src(paste0("Trials: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1). Net cost per user per year $", kn("e_per_user_year"), " (4.3 fills, MEPS; midpoint rebate, blended Wegovy and Zepbound) and $", kn("e_per_member_year_cont"), " per member-year of continuous treatment (12 fills, assumption). Different populations, durations and fills: no cost-effectiveness claim."))
+```{r a16, results='asis'}
+body("54_trial_weight_change", paste0("$", kn("e_per_user_year")), paste0("net cost per user per year (4.3 fills, MEPS); $", kn("e_per_member_year_cont"), " per member-year of continuous treatment"),
+     c("Different populations, durations and doses", "No cost-effectiveness claim is made"),
+     "Trials: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1). Costs: Module E, midpoint rebate, blended Wegovy and Zepbound.")
 ```
 
 ## Recommendations: considerations for a brand or access lead, from the evidence above
 
-| Finding | So what | What a brand or access lead might consider |
-|---|---|---|
-| Coverage was associated with an estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter, growing over eight quarters | Uptake builds over about two years rather than at launch | Planning access support over a multi-year ramp instead of a launch spike |
-| Coverage runs through managed care in South Carolina and Rhode Island | Decisions sit with managed-care organizations as well as state programs | Evidence and criteria materials aimed at managed-care medical and pharmacy directors (to be tested in the research pack) |
-| Coverage ended in California and Pennsylvania (`r kn("c_withdraw_ca")`% and `r kn("c_withdraw_pa")`%, preliminary) | Budget predictability decides whether coverage lasts | Showing a clear range of cost scenarios: $`r kn("e_pmpm")` per enrollee per month at the central rebate, $`r kn("e_announced_pmpm")` at the announced price |
-| Primary care and nurse practitioners and physician assistants wrote `r kn("d_share_pcp")`% and `r kn("d_share_nppa")`% of Part D incretin claims | The prescriber base is broad, not specialist | Weighing primary-care reach (Part D shows diabetes and other covered uses; confirm for obesity with other data) |
-| The rebate is unknown and drives the range ($`r kn("e_scen_min")` to $`r kn("e_scen_max")` million) | Public data cannot settle net cost | Treating the budget range as a conversation starter and checking it against a payer's own net price |
+```{r a17, results='asis'}
+card <- function(x) sprintf("<div class='card'>%s</div>", x); arr <- "<div class='arrow'>&#8594;</div>"
+row <- function(a, b, c) cat("<div class='r'>", card(a), arr, card(b), arr, card(c), "</div>\n", sep = "")
+cat("\n<div class='rows'><div class='head'><div>Finding</div><div></div><div>So what</div><div></div><div>What a brand or access lead might consider</div></div>\n")
+row(paste0("An estimated ", kn("c_att_overall"), " more prescriptions per 1,000 enrollees per quarter, growing over eight quarters"), "Uptake builds over about two years, not at launch", "Plan access support for a multi-year ramp, not a launch spike")
+row("Coverage runs through managed care in South Carolina and Rhode Island", "Managed-care organizations decide, as well as state programs", "Aim evidence at managed-care medical and pharmacy directors")
+row(paste0("Coverage ended in California and Pennsylvania (", pct("c_withdraw_ca"), " and ", pct("c_withdraw_pa"), ", preliminary)"), "Budget predictability decides whether coverage lasts", paste0("Show a cost range: $", kn("e_pmpm"), " per member per month centrally, $", kn("e_announced_pmpm"), " at the announced price"))
+row(paste0("The rebate is unknown and drives the range ($", kn("e_scen_min"), " to $", kn("e_scen_max"), " million)"), "Public data cannot settle net cost", "Check the range against a payer's own net price")
+cat("</div>\n")
+src("Considerations, not recommendations of a specific action; prescriber findings are in the report. Public aggregate data; no company affiliation or endorsement.")
+```
 
-## Appendix: data, methods and limits
+## Appendix: data, methods, limits and links
 
-- **Data.** CMS Medicaid State Drug Utilization Data and enrollment, Medicare Part D Prescribers, NADAC, NHANES, MEPS, KFF polls, FDA labels and state Medicaid documents; all public aggregate data. `r kn("build_models")` dbt models, `r kn("build_tests")` tests.
-- **Methods.** Callaway and Sant'Anna difference-in-differences (staggered adoption) with imputation of suppressed cells; survey-weighted NHANES estimates; ISPOR-style budget impact model with a probabilistic sensitivity analysis.
-- **Limits.** Gross, not net, of rebates; ten covering states; eligibility is a lower bound; Part D is not obesity use; scenarios, not forecasts.
-- **Links.** Interactive budget model (https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/), report (`report/report.html`), plans and deviations (`analysis/outputs/deviations.md`), key numbers (`analysis/outputs/key_numbers.csv`), repository github.com/erickyegon/incretin-access-value.
-- No company affiliation or endorsement. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.
+```{r a18, results='asis'}
+cat(sprintf("
+::: {.applist}
+**Data.** CMS Medicaid State Drug Utilization Data and enrollment, Medicare Part D Prescribers, NADAC, NHANES, MEPS, KFF polls, FDA labels and state Medicaid documents; all public aggregate data. %s dbt models, %s tests.
+
+**Methods.** Callaway and Sant'Anna difference-in-differences (staggered adoption) with imputation of suppressed cells; survey-weighted NHANES estimates; ISPOR-style budget impact model with a probabilistic sensitivity analysis.
+
+**Limits.** Gross, not net, of rebates; ten covering states; eligibility is a lower bound; Part D is not obesity use; scenarios, not forecasts.
+
+**Links.** Interactive budget model: <https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/> · Report: <https://erickyegon.github.io/incretin-access-value/report.html> · Site: <https://erickyegon.github.io/incretin-access-value/> · Key numbers: <https://erickyegon.github.io/incretin-access-value/data/key_numbers.csv> · Code: <https://github.com/erickyegon/incretin-access-value>
+
+No company affiliation or endorsement. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.
+:::
+", kn("build_models"), kn("build_tests")))
+```

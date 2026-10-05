@@ -17,4 +17,14 @@ g <- gt(vc |> select(-Citation, -DOI)) |> tab_header(title = "Value context: tri
   tab_source_note("Trials: published abstracts (PubMed), citations and DOIs in data/reference/trial_inputs.csv. Costs: Module E (SDUD gross reimbursement; net of an assumed rebate of 51.2%, the midpoint of 23.1% and 79.3%). One net cost is shown for every row because it is a blended Wegovy and Zepbound average, not a drug-specific cost.") |>
   tab_options(table.font.size = px(11))
 gt::gtsave(theme_gt_incretin(g), file.path(out_dir("tables"), "moduleE_value_context.html"))
+# figure: dot-and-interval chart of weight change by trial arm (context only)
+library(ggplot2)
+tp <- tr |> filter(!grepl("^difference", arm)) |> mutate(label = ifelse(grepl("^placebo", arm), paste0(trial, ": placebo"), paste0(trial, ": ", arm, ifelse(grepl("^semaglutide$|^tirzepatide$", arm), " (max. tolerated dose)", ""))),
+  kind = ifelse(grepl("^placebo", arm), "Placebo", "Drug")) |> mutate(label = factor(label, levels = rev(label)))
+ptr <- ggplot(tp, aes(value, label, colour = kind)) + geom_vline(xintercept = 0, colour = "#999999") + geom_errorbarh(aes(xmin = ci_low, xmax = ci_high), height = 0.25, linewidth = 0.8, na.rm = TRUE) + geom_point(size = 3) +
+  geom_text(aes(label = sprintf("%.1f", value)), nudge_y = 0.38, size = 3.6, show.legend = FALSE) +
+  scale_colour_manual(values = c(Drug = col_treated, Placebo = col_comparison), guide = "none") + scale_x_continuous(labels = function(x) paste0(x, "%")) + scale_y_discrete(expand = expansion(add = c(0.6, 0.8))) +
+  labs(x = "Mean change in body weight, % (95% CI where the abstract gives one)", y = NULL, title = sprintf("Trials show average weight loss of %.1f%% to %.1f%%, context only", min(abs(tp$value[tp$kind == "Drug"])), max(abs(tp$value[tp$kind == "Drug"]))),
+       caption = "Source: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1). Different populations, durations and doses; no cost-effectiveness claim.") + theme_incretin()
+save_fig(ptr, "54_trial_weight_change", width = 10, height = 6.2, alt = "Dot-and-interval chart of mean percent weight change by trial and arm: STEP 1 semaglutide, SURMOUNT-1 tirzepatide 5, 10 and 15 mg, SURMOUNT-5 tirzepatide and semaglutide, and ATTAIN-1 orforglipron 6, 12 and 36 mg, each beside its placebo where reported. Context only; the trials differ in population, duration and dose.")
 print(as.data.frame(vc |> select(1:5)))

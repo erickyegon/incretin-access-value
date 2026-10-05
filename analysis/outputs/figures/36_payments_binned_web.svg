@@ -60,8 +60,8 @@
 <circle cx='556.76' cy='314.55' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
 <circle cx='616.48' cy='297.99' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
 <circle cx='676.19' cy='210.06' r='2.49' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<text x='676.19' y='38.75' text-anchor='end' style='font-size: 12.52px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='69.55px' lengthAdjust='spacingAndGlyphs'>2024 claims</text>
-<text x='676.19' y='252.86' text-anchor='end' style='font-size: 12.52px;fill: #595959; font-family: "IBM Plex Sans";' textLength='128.31px' lengthAdjust='spacingAndGlyphs'>2022 claims (baseline)</text>
+<text x='676.19' y='38.95' text-anchor='end' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='72.66px' lengthAdjust='spacingAndGlyphs'>2024 claims</text>
+<text x='676.19' y='253.06' text-anchor='end' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='134.06px' lengthAdjust='spacingAndGlyphs'>2022 claims (baseline)</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0NDYuNDA=)'>
 <text x='44.24' y='267.12' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='18.00px' lengthAdjust='spacingAndGlyphs'>100</text>

@@ -355,7 +355,7 @@
 <circle cx='477.89' cy='497.62' r='3.74' style='stroke-width: 0.64; stroke: #4D4D4D; fill: #4D4D4D;' />
 <circle cx='737.19' cy='518.75' r='3.74' style='stroke-width: 0.64; stroke: #4D4D4D; fill: #4D4D4D;' />
 <circle cx='721.37' cy='539.88' r='3.74' style='stroke-width: 0.64; stroke: #595959; fill: #595959;' />
-<text x='806.51' y='362.96' text-anchor='end' style='font-size: 12.52px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='119.86px' lengthAdjust='spacingAndGlyphs'>+388% (axis capped)</text>
+<text x='806.24' y='362.60' text-anchor='end' style='font-size: 13.09px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='125.17px' lengthAdjust='spacingAndGlyphs'>+388% (axis capped)</text>
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw2NDguMDA=)'>
 <text x='134.47' y='543.38' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='103.00px' lengthAdjust='spacingAndGlyphs'>Never-treated (pooled)</text>

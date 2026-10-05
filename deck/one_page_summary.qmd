@@ -1,32 +1,72 @@
 ---
-title: "Medicaid coverage of obesity drugs: what it did and what it could cost"
-author: "Erick Kiprotich Yegon · Epidemiologist and data scientist"
 format:
   typst:
     papersize: us-letter
-    margin: { x: 1.6cm, y: 1.3cm }
-    fontsize: 9pt
+    margin: { x: 1.25cm, top: 1.1cm, bottom: 1.0cm }
+    fontsize: 9.5pt
+    mainfont: "IBM Plex Sans"
+    font-paths: ["../analysis/assets/fonts"]
 execute: { echo: false, warning: false, message: false }
 ---
 
-```{r setup}
+```{r page, results='asis'}
 source("../analysis/R/kn.R")
+esc <- function(x) gsub("\\$", "\\\\$", x)                  # a dollar sign starts math in Typst
+holds <- sub(" of .*$", "", kn("c_spec_holds"))
+SITE <- "https://erickyegon.github.io/incretin-access-value/"; APP <- "https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/"
+tile <- function(big, cap) sprintf('block(width: 100%%, fill: rgb("#F5F5F5"), stroke: (left: 4pt + rgb("#D55E00")), inset: (x: 8pt, y: 7pt))[#text(font: "Source Serif 4", size: 21pt, weight: "bold", fill: rgb("#D55E00"))[%s] \\ #text(size: 8.8pt, fill: luma(60))[%s]]', esc(big), esc(cap))
+tiles <- paste(c(tile(kn("c_att_overall"), paste0("estimated additional prescriptions per 1,000 enrollees per quarter (", kn_ci("c_att_overall"), ")")),
+                 tile(paste0(kn("b_eligible"), "M"), paste0("U.S. adults meet the FDA label criteria (lower bound); ", kn("b_medicaid_elig"), "M have Medicaid")),
+                 tile(paste0("$", kn("e_net5"), "M"), paste0("five-year net cost, 1 million enrollees (central case); $", kn("e_pmpm"), " per member per month")),
+                 tile(paste0("All ", holds), "estimable alternative analyses give the same answer (interval excludes zero)")), collapse = ",\n  ")
+li <- function(n, h, t) sprintf('grid(columns: (16pt, 1fr), gutter: 5pt, text(font: "Source Serif 4", size: 13pt, weight: "bold", fill: rgb("#D55E00"))[%d], [*%s* \\ #text(size: 9pt, fill: luma(60))[%s]])', n, h, esc(t))
+steps <- paste(c(li(1, "Public data", "CMS Medicaid and Medicare Part D data, NHANES, MEPS, KFF polls, FDA labels, state Medicaid documents."),
+                 li(2, "PostgreSQL and dbt", paste0(kn("build_models"), " models and ", kn("build_tests"), " tests; NDC and ICD-10 coding; every number traced to a key-numbers file.")),
+                 li(3, "R analysis", "Staggered difference-in-differences, survey-weighted eligibility, budget impact model with probabilistic sensitivity analysis."),
+                 li(4, "Quarto and Shiny", "Report, deck and an interactive budget model that reproduces the report's numbers.")), collapse = ",\n    ")
+skills <- c("Real-world evidence", "HEOR", "Market access", "Causal inference", "Budget impact analysis", "Claims data and NDC coding", "SQL and dbt", "R, Quarto and Shiny")
+chips <- paste(sprintf('#box(fill: rgb("#FFF1E6"), stroke: 0.6pt + rgb("#D55E00"), inset: (x: 6pt, y: 3pt), radius: 8pt)[#text(size: 8.8pt)[%s]]', skills), collapse = " ")
+lk <- function(label, url) sprintf('#text(weight: "semibold")[%s] #link("%s")[%s]', label, url, sub("^https://", "", url))
+fence <- strrep(intToUtf8(96), 3)
+out <- sprintf('@@F@@{=typst}
+#set text(hyphenate: false)
+#set par(justify: false)
+#set page(numbering: none)
+#block(width: 100%%, fill: rgb("#222222"), inset: (x: 14pt, y: 11pt), radius: 3pt)[
+  #text(size: 8.5pt, fill: rgb("#F2B999"), tracking: 0.08em)[MEDICAID COVERAGE OF OBESITY DRUGS: WHAT IT DID AND WHAT IT COULD COST] \\
+  #v(2pt)
+  #text(font: "Source Serif 4", size: 15pt, weight: "semibold", fill: white)[When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by an estimated %s per 1,000 enrollees per quarter] \\
+  #v(2pt)
+  #text(size: 9pt, fill: luma(225))[Erick Kiprotich Yegon · Epidemiologist and data scientist · #link("%s")[#text(fill: rgb("#F2B999"))[%s]]]
+]
+#v(4pt)
+#grid(columns: (1fr, 1fr, 1fr, 1fr), gutter: 7pt,
+  %s)
+#v(4pt)
+#text(font: "Source Serif 4", size: 11pt, weight: "semibold")[Estimated effect of coverage on prescriptions, by quarter since coverage began]
+#v(1pt)
+#image("assets/10_event_study_primary_page.png", width: 100%%)
+#text(size: 8.5pt, fill: luma(90))[Source: CMS State Drug Utilization Data and Medicaid enrollment; %s covering and %s never-covering jurisdictions. Part of the growth is market growth.]
+#v(4pt)
+#grid(columns: (1.35fr, 1fr), gutter: 16pt,
+  [#text(font: "Source Serif 4", size: 12pt, weight: "semibold")[What I did] #v(3pt)
+   #grid(columns: 1fr, row-gutter: 7pt,
+    %s)],
+  [#text(font: "Source Serif 4", size: 12pt, weight: "semibold")[Skills shown] #v(4pt)
+   #block(spacing: 5pt)[%s]
+   #v(5pt)
+   #text(size: 9pt, fill: luma(60))[Budget impact: \\$%s million net over five years (scenario range \\$%s to \\$%s million; rebate assumed). Rebate and years 3 to 5 are assumptions; scenarios, not forecasts.]])
+#v(4pt)
+#line(length: 100%%, stroke: 0.6pt + luma(190))
+#v(3pt)
+#grid(columns: (1fr, 1fr), gutter: 12pt,
+  [#text(size: 8.5pt)[%s \\ %s \\ %s]],
+  [#text(size: 8.5pt)[%s \\ %s \\ %s]])
+#v(3pt)
+#text(size: 8.5pt, fill: luma(80))[Public aggregate data; no company affiliation or endorsement; not patient-level claims; gross of rebates unless stated; scenarios, not forecasts. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.]
+@@F@@
+', esc(kn("c_att_overall")), SITE, sub("^https://", "", SITE), tiles, kn("c_states_primary"), kn("c_states_never"), steps, chips, esc(kn("e_net5")), esc(kn("e_scen_min")), esc(kn("e_scen_max")),
+   lk("Site:", SITE), lk("Report:", paste0(SITE, "report.html")), lk("Deck:", paste0(SITE, "deck.pdf")),
+   lk("Interactive budget model:", APP), lk("Code:", "https://github.com/erickyegon/incretin-access-value"), lk("Research design pack:", paste0(SITE, "research_pack.pdf")))
+cat(gsub("@@F@@", fence, out, fixed = TRUE))
 ```
-
-**Question.** What did Medicaid coverage of Wegovy and Zepbound do to prescriptions, how many adults are eligible, and what could coverage cost a program of 1 million enrollees over five years?
-
-**Three findings**
-
-1. **Coverage was associated with more prescriptions.** An estimated `r kn("c_att_overall")` additional prescriptions per 1,000 enrollees per quarter (`r kn_ci("c_att_overall")`), rising from `r kn("c_es_e0")` in the first quarter to `r kn("c_es_e8")` after eight; ten covering states against `r kn("c_states_never")` never-covering jurisdictions. A placebo shows `r kn("c_placebo")` (`r kn_ci("c_placebo")`).
-2. **Many adults are eligible.** `r kn("b_eligible")` million U.S. adults meet the FDA label criteria (lower bound; `r kn_ci("b_eligible")` million), including `r kn("b_medicaid_elig")` million with Medicaid (`r kn_ci("b_medicaid_elig")` million).
-3. **The budget depends on the rebate.** Central five-year net cost $`r kn("e_net5")` million ($`r kn("e_pmpm")` per enrollee per month; rebate `r kn("e_rebate_central")`% assumed); scenario range $`r kn("e_scen_min")` to $`r kn("e_scen_max")` million; $`r kn("e_announced5")` million at the announced $`r kn("x_price_245")` price.
-
-![Coverage effect by quarter since coverage began (source: CMS State Drug Utilization Data and Medicaid enrollment; part of the growth is national market growth)](assets/10_event_study_primary.png){fig-alt="Event-study chart: the effect of Medicaid coverage on Wegovy and Zepbound prescriptions per 1,000 enrollees rises from near zero before coverage to about 17 after eight quarters." width=62%}
-
-**Methods.** Public data (CMS Medicaid State Drug Utilization Data and enrollment, NHANES, MEPS, KFF polls); difference-in-differences for staggered adoption with imputed suppressed cells; survey-weighted eligibility; ISPOR-style budget impact model with probabilistic sensitivity analysis. Warehouse: PostgreSQL and dbt (`r kn("build_models")` models, `r kn("build_tests")` tests); analysis in R; Quarto and Shiny.
-
-**Skills.** Real-world evidence · HEOR · market access · claims data · NDC coding · causal inference · budget impact · SQL · dbt · R · Quarto · Shiny.
-
-**Links.** Interactive budget model: https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/ · Code: github.com/erickyegon/incretin-access-value · Report: `report/report.html` · Deck: `deck/deck.pdf`.
-
-*Public aggregate data; no company affiliation or endorsement; not patient-level claims; gross of rebates unless stated; scenarios, not forecasts. I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.*
