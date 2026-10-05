@@ -17,6 +17,9 @@ dce_files <- list.files(file.path(root, "research_pack", "design"), pattern = "[
 dce_vals <- unique(norm(unlist(lapply(dce_files, function(f) toks(gsub(",", " ", paste(readLines(f, warn = FALSE), collapse = " ")))))))   # design and simulation outputs of the research pack (Module F)
 dn <- suppressWarnings(as.numeric(dce_vals)); dce_vals <- unique(c(dce_vals, norm(as.character(round(dn[!is.na(dn)], 3))), norm(sprintf("%.3f", dn[!is.na(dn)]))))   # the research pack prints design outputs rounded
 allow_vals <- norm(allow$value)
+# cells of the output tables that the report prints as tables (deciles, prevalence by age and sex): each value is read from its CSV, shown rounded to one decimal or as an integer
+tab_files <- file.path(root, "analysis", "outputs", "tables", c("moduleD_volume_deciles_2024.csv", "moduleB_prevalence_age_sex.csv"))
+tab_vals <- unique(unlist(lapply(tab_files[file.exists(tab_files)], function(f) { d <- read.csv(f, stringsAsFactors = FALSE); v <- suppressWarnings(as.numeric(unlist(d[sapply(d, is.numeric)]))); v <- v[!is.na(v)]; c(norm(as.character(v)), norm(sprintf("%.1f", v)), norm(as.character(round(v)))) })))
 html_text <- function(f) { h <- paste(readLines(f, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
   at <- unlist(regmatches(h, gregexpr("(?:alt|aria-label|fig-alt)=\"[^\"]*\"", h, perl = TRUE)))
   h <- gsub("(?s)<script.*?</script>|(?s)<style.*?</style>", " ", h, perl = TRUE); h <- gsub("<[^>]+>", " ", h, perl = TRUE); h <- gsub("&[a-z#0-9]+;", " ", h)
@@ -28,7 +31,7 @@ docs <- list(report = file.path(root, "report", "report.html"), deck_pdf = file.
 texts <- lapply(docs, function(f) { if (!file.exists(f)) return(NA_character_); if (grepl("\\.pdf$", f)) pdf_text(f) else if (grepl("\\.html$", f)) html_text(f) else paste(readLines(f, warn = FALSE, encoding = "UTF-8"), collapse = "\n") })
 strip_urls <- function(s) gsub("https?://\\S+|[A-Za-z0-9_./-]+\\.(csv|html|pdf|png|R|qmd|md)\\b", " ", s)
 res <- do.call(rbind, lapply(names(texts), function(n) { s <- texts[[n]]; if (is.na(s)) return(data.frame(doc = n, token = "FILE MISSING", class = "UNMATCHED")); t <- toks(strip_urls(s)); if (!length(t)) return(NULL)
-  nt <- norm(t); cl <- ifelse(nt %in% key_vals, "exact", ifelse(nt %in% allow_vals | (n == "research_pack" & nt %in% dce_vals), "allowed", ifelse(nt %in% key_round, "rounded", ifelse(grepl("^(19|20)\\d\\d$", nt), "allowed", "UNMATCHED"))))
+  nt <- norm(t); cl <- ifelse(nt %in% key_vals, "exact", ifelse(nt %in% allow_vals | (n == "research_pack" & nt %in% dce_vals) | (n == "report" & nt %in% tab_vals), "allowed", ifelse(nt %in% key_round, "rounded", ifelse(grepl("^(19|20)\\d\\d$", nt), "allowed", "UNMATCHED"))))
   data.frame(doc = n, token = t, class = cl) }))
 st <- do.call(rbind, lapply(seq_len(nrow(stale)), function(i) { do.call(rbind, lapply(names(texts), function(n) { s <- texts[[n]]; if (is.na(s)) return(NULL)
   pat <- stale$pattern[i]; hit <- grepl(pat, s, perl = TRUE); if (hit) data.frame(doc = n, token = stale$label[i], class = "STALE") else NULL })) }))

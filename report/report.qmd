@@ -66,6 +66,14 @@ cat("![dbt lineage: raw sources through staging and intermediate models to the m
 
 Pre-specified analysis plans were committed before any results of each module: Module C `d46bd57` (2026-10-04 06:16 -0400; amendment `f74da18`, 2026-10-04 07:09 -0400, before any model run), Module B `7909c7a` (2026-10-04 09:11 -0400), Module D `6d4234f` (2026-10-04 09:28 -0400) and Module E `993e8c8` (2026-10-04 09:39 -0400). Commit hashes changed when history was rewritten to remove personal metadata and third-party copies; dates and order are unchanged. Departures from the plans are logged in [`deviations.md`](https://github.com/erickyegon/incretin-access-value/blob/main/analysis/outputs/deviations.md) (items 1 to 17).
 
+### From NDC to label group
+
+```{r a-flow, results='asis'}
+fig("08_ndc_product_flow", "Source: dbt seed product_map (FDA NDC directory, RxNorm, SDUD product names) and product_groups.")
+```
+
+The product map holds `r kn("a_ndc_total")` NDC codes. They resolve to `r kn("a_ndc_products")` products (brands and generics) and `r kn("a_ndc_ingredients")` ingredients; `r kn("a_ndc_obesity")` codes carry an obesity label and `r kn("a_ndc_diabetes")` a diabetes label. Counts are NDC codes, not prescriptions; the full count table is `analysis/outputs/tables/moduleA_ndc_product_ingredient_label_counts.csv`.
+
 ## Market context: spending, timeline and pipeline
 
 ```{r a-spend, results='asis'}
@@ -107,6 +115,19 @@ fig("21_forecast_fan", "Source: scenario simulation (10,000 draws) over assumed 
 ```
 
 The forecast of GLP-1 users without diagnosed diabetes reaches a median of `r kn("b_fc_2030")` million by end-2030 (90% interval `r sub("90% interval ", "", kn_ci("b_fc_2030"))`) from `r kn("b_fc_2026")` million in 2026; the downside, base and upside parameter sets give `r kn("b_scen_downside")`, `r kn("b_scen_base")` and `r kn("b_scen_upside")` million. The ranges are assumptions about uptake, retention and the Medicare Bridge, listed in the [assumptions table](../analysis/outputs/tables/moduleB_assumptions.csv).
+
+### BMI class and diabetes by age and sex
+
+```{r b-prev, results='asis'}
+fig("07_bmi_diabetes_age_sex", "Source: NCHS NHANES 2021-2023, exam weights; design-based 95% CIs.")
+pv <- tbl("moduleB_prevalence_age_sex.csv")
+ob <- pv[grepl("^Obesity", pv$measure), ]; ob$v <- ob$estimate
+dm <- pv[pv$measure == "Diagnosed diabetes", ]
+tb2 <- data.frame(Age = unique(pv$age_group)); for (sx in c("Men", "Women")) { tb2[[paste(sx, "BMI 30+, %")]] <- sprintf("%.1f", ob$v[match(paste(sx, tb2$Age), paste(ob$sex, ob$age_group))]); tb2[[paste(sx, "diagnosed diabetes, % (95% CI)")]] <- sprintf("%.1f (%.1f to %.1f)", dm$estimate[match(paste(sx, tb2$Age), paste(dm$sex, dm$age_group))], dm$ci_low[match(paste(sx, tb2$Age), paste(dm$sex, dm$age_group))], dm$ci_high[match(paste(sx, tb2$Age), paste(dm$sex, dm$age_group))]) }
+raw_html(gt::as_raw_html(gt::gt(tb2) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(12), data_row.padding = gt::px(4)) |> gt::tab_source_note("Survey-weighted prevalence among adults with the measure available; BMI 30+ is the sum of classes 1 to 3. Full table with every BMI class: moduleB_prevalence_age_sex.csv.")))
+```
+
+Obesity (BMI 30 or more) peaks at ages 40 to 59, reaching `r kn("b_prev_obesity_max")`% in the highest group (women aged 40 to 59). Diagnosed diabetes rises with age to `r kn("b_prev_dm65_men")`% of men and `r kn("b_prev_dm65_women")`% of women at 65 and older.
 
 # C. Coverage study
 
@@ -179,6 +200,14 @@ fig("34_partd_wegovy_vs_ozempic_specialty", "Source: CMS Medicare Part D Prescri
 The share of prescribers with tirzepatide claims rose from `r kn("d_tirz_2022")`% in 2022 to `r kn("d_tirz_2023")`% in 2023 and `r kn("d_tirz_2024")`% in 2024. Wegovy had `r kn("d_wegovy_claims")` Part D claims from `r kn("d_wegovy_prescribers")` prescribers in 2024; cardiology wrote `r kn("d_wegovy_cardio")`% of them against `r kn("d_ozempic_cardio")`% of Ozempic claims, consistent with the cardiovascular indication added in March 2024.
 
 **Segments (exploratory).** The pre-specified rule gave a two-segment split of new versus continuing prescribers. A supplementary five-segment solution, shown with its stability beside each segment, is exploratory:
+
+```{r d-dec, results='asis'}
+fig("37_partd_volume_deciles", "Source: CMS Medicare Part D Prescribers (rows with at least 11 claims), 2024.")
+dc <- tbl("moduleD_volume_deciles_2024.csv")
+raw_html(gt::as_raw_html(gt::gt(data.frame(Decile = dc$decile, Prescribers = format(dc$prescribers, big.mark = ","), Claims = format(dc$claims, big.mark = ","), `Median claims` = dc$median_claims, `Share of claims, %` = sprintf("%.1f", dc$share_of_claims_pct), `Cumulative from the top, %` = sprintf("%.1f", dc$cumulative_share_from_top_pct), check.names = FALSE)) |> gt::opt_row_striping() |> gt::tab_options(table.font.size = gt::px(12), data_row.padding = gt::px(3)) |> gt::tab_source_note(paste0("Decile 10 = highest-volume tenth of the ", kn("d_dec_prescribers"), " prescribers."))))
+```
+
+Volume is concentrated: the top decile of prescribers wrote `r kn("d_dec_top")`% of 2024 claims and the bottom five deciles together `r kn("d_dec_bottom5")`%.
 
 ```{r d-fig3, results='asis'}
 fig("35_partd_segments_k5", "Source: CMS Medicare Part D Prescribers 2023-2024, NPPES; exploratory five-segment solution (k-prototypes); stability = mean Jaccard over 50 bootstrap resamples.")

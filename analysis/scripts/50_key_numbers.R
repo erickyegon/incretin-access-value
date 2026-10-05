@@ -160,6 +160,23 @@ add("x_bridge_copay", "50", "USD copay", "demonstration", "Beneficiary copay und
 add("x_bridge_window", "July 1, 2026 to December 31, 2027", "dates", "demonstration period", "Medicare GLP-1 Bridge period (CMS)", "../docs/sources/cms_medicare_glp1_bridge_page.txt", "overview and FAQ on the extension")
 add("x_rebate_floor_statute", "23.1", "percent of average manufacturer price", "statutory minimum", "Basic Medicaid rebate for brand drugs is at least 23.1 percent (42 U.S.C. 1396r-8)", "https://www.law.cornell.edu/uscode/text/42/1396r-8", "section 1396r-8(c)(1)(B)")
 
+# ---- plan gaps: prescriber volume deciles, NDC flow counts, prevalence by age and sex ------------------------------------------------
+dc <- tb("moduleD_volume_deciles_2024.csv"); dtop <- dc$share_of_claims_pct[dc$decile == 10]
+add("d_dec_top", f1(dtop), "percent of claims", "", "Share of 2024 Part D incretin claims written by the top volume decile of prescribers", "tables/moduleD_volume_deciles_2024.csv", "decile 10, share_of_claims_pct")
+add("d_dec_bottom5", f1(sum(dc$share_of_claims_pct[dc$decile <= 5])), "percent of claims", "", "Share of 2024 Part D incretin claims written by the bottom five volume deciles of prescribers", "tables/moduleD_volume_deciles_2024.csv", "deciles 1 to 5, sum of share_of_claims_pct")
+add("d_dec_prescribers", f0(sum(dc$prescribers)), "prescribers", "", "Prescribers with at least one 11-claim incretin row in 2024 (ranked into deciles)", "tables/moduleD_volume_deciles_2024.csv", "sum of prescribers")
+nf <- tb("moduleA_ndc_flow_counts.csv")
+add("a_ndc_total", f0(nf$ndc), "NDC codes", "", "NDC (11-digit) codes in the product map", "tables/moduleA_ndc_flow_counts.csv", "ndc")
+add("a_ndc_products", f0(nf$products), "products (brands and generics)", "", "Products in the NDC product map", "tables/moduleA_ndc_flow_counts.csv", "products")
+add("a_ndc_ingredients", f0(nf$ingredients), "ingredients", "", "Ingredients in the NDC product map", "tables/moduleA_ndc_flow_counts.csv", "ingredients")
+add("a_ndc_obesity", f0(nf$obesity_label_ndc), "NDC codes", "", "NDC codes carrying an obesity label", "tables/moduleA_ndc_flow_counts.csv", "obesity_label_ndc")
+add("a_ndc_diabetes", f0(nf$diabetes_label_ndc), "NDC codes", "", "NDC codes carrying a diabetes label", "tables/moduleA_ndc_flow_counts.csv", "diabetes_label_ndc")
+pv <- tb("moduleB_prevalence_age_sex.csv"); ob <- pv |> filter(grepl("^Obesity", measure)) |> transmute(sex, age_group, o = estimate); dmv <- pv |> filter(measure == "Diagnosed diabetes")
+imx <- which.max(ob$o)
+add("b_prev_obesity_max", f1(ob$o[imx]), "percent of adults with BMI 30 or more", paste(tolower(ob$sex[imx]), ob$age_group[imx]), "Highest obesity prevalence across the age-by-sex groups, NHANES 2021-2023", "tables/moduleB_prevalence_age_sex.csv", "sum of BMI 30-34.9, 35-39.9 and 40+ rows for the group")
+add("b_prev_dm65_men", f1(dmv$estimate[dmv$sex == "Men" & dmv$age_group == "65+"]), "percent of men aged 65 and older", "", "Diagnosed diabetes, men 65 and older, NHANES 2021-2023", "tables/moduleB_prevalence_age_sex.csv", "Diagnosed diabetes, Men, 65+")
+add("b_prev_dm65_women", f1(dmv$estimate[dmv$sex == "Women" & dmv$age_group == "65+"]), "percent of women aged 65 and older", "", "Diagnosed diabetes, women 65 and older, NHANES 2021-2023", "tables/moduleB_prevalence_age_sex.csv", "Diagnosed diabetes, Women, 65+")
+
 # ---- build counts (from the dbt manifest, via scripts/build/build_counts.py) ---------------------------------------------------------------------------------------
 bc <- readr::read_csv(here::here("outputs", "build_counts.csv"), show_col_types = FALSE, progress = FALSE)
 for (i in seq_len(nrow(bc))) add(paste0("build_", bc$item[i]), as.character(bc$count[i]), bc$unit[i], "", bc$statement[i], "build_counts.csv", sprintf("row %s", bc$item[i]))

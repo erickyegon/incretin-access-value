@@ -24,3 +24,4 @@ docs/sources_local/
 
 /.quarto/
 **/*.quarto_ipynb
+.Rproj.user

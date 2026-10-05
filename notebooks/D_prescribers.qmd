@@ -29,6 +29,8 @@ Part D reflects diabetes and other covered uses, not obesity-brand adoption. Pri
 
 ## Volume, specialty, concentration
 
+The top volume decile of prescribers wrote `r kn("d_dec_top")`% of 2024 claims; the bottom five deciles together `r kn("d_dec_bottom5")`%.
+
 ```{r}
 #| results: asis
 tb("moduleD_specialty_mix_by_year.csv", 10)
@@ -41,12 +43,22 @@ tb("moduleD_concentration_by_year.csv", 8)
 
 ```{r}
 #| results: asis
+tb("moduleD_volume_deciles_2024.csv", 10)
+```
+
+```{r}
+#| results: asis
 fig("31_partd_specialty_mix", "Specialty mix")
 ```
 
 ```{r}
 #| results: asis
 fig("32_partd_concentration", "Concentration")
+```
+
+```{r}
+#| results: asis
+fig("37_partd_volume_deciles", "Share of claims by prescriber volume decile")
 ```
 
 ## Adoption

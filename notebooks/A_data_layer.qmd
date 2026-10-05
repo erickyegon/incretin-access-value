@@ -27,6 +27,20 @@ fig <- function(name, cap) { a <- al$alt_text[al$figure == name]; stopifnot(leng
 
 A tested warehouse (`r kn("build_models")` dbt models, `r kn("build_seeds")` seeds, `r kn("build_tests")` tests) sits behind every number. This notebook looks at what the data layer shows before any model: reporting completeness, spending, the timeline of events and the pipeline.
 
+## From NDC to label group
+
+`r kn("a_ndc_total")` NDC codes resolve to `r kn("a_ndc_products")` products and `r kn("a_ndc_ingredients")` ingredients; `r kn("a_ndc_obesity")` carry an obesity label and `r kn("a_ndc_diabetes")` a diabetes label (counts of NDC codes, not prescriptions).
+
+```{r}
+#| results: asis
+tb("moduleA_ndc_product_ingredient_label_counts.csv", 20)
+```
+
+```{r}
+#| results: asis
+fig("08_ndc_product_flow", "NDC to product to ingredient to label group")
+```
+
 ## Reporting completeness and suppression
 
 `r kn("m_rep_both")`% of state-quarters have both fee-for-service and managed-care rows and `r kn("m_wz_suppressed_share")`% of Wegovy and Zepbound rows are suppressed (counts under 11).

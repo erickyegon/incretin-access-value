@@ -6,6 +6,8 @@ figure,notes
 05_withdrawal_descriptive,"Normalized change = (1 + obesity_wz change) / (1 + all-drug SDUD change) - 1 for 2025 Q4 to 2026 Q1; raw changes are in the table (obesity_wz: CA -75.7%, PA -95.5%, continuously covered median -1.6%; all drugs: CA -26.0%, PA -51.0%, median -17.9%). Gross of rebates; counts under 11 suppressed by CMS. PRELIMINARY: 2026 Q1 is preliminary SDUD data; only one post-withdrawal quarter exists for most states (North Carolina lapsed 2025-10-01 to 2025-12-11 and resumed). New Hampshire is a sensitivity state."
 05b_withdrawal_change,Gross of rebates; counts under 11 suppressed by CMS.
 06_managed_care_split,Gross of rebates; counts under 11 suppressed by CMS.
+07_bmi_diabetes_age_sex,Prevalence among adults with the measure available. Cell labels are percent of adults.
+08_ndc_product_flow,"Counts are NDC codes, not prescriptions."
 10_event_study_primary,"Callaway-Sant'Anna dynamic ATT, 10 primary states vs never- and not-yet-treated states, 2018 Q1 to 2025 Q3; 20 imputations of suppressed cells combined with Rubin's rules. Shaded band and points: pointwise 95% CI; numbers along the bottom: contributing treated states; event times with fewer than 3 contributing states are grayed. Gross of rebates; counts under 11 suppressed by CMS. Simultaneous confidence bands are not shown: with single-state cohorts the bootstrap critical value is unreliable (did warns of this) and very large (17.9 on average over the imputations, versus 1.96 pointwise). Leads before 2021 Q2 (before Wegovy existed) are omitted: the outcome is mechanically zero there and they are not evidence of parallel trends."
 11_specification_chart,Gross of rebates; counts under 11 suppressed by CMS. Specification 12 (fee-for-service only) is not shown: not estimable reliably (FFS denominators too small; coverage operates mainly through MCOs in SC and RI). It is listed in the specification table.
 12_honestdid,Gross of rebates; counts under 11 suppressed by CMS.
@@ -16,6 +18,7 @@ figure,notes
 35_partd_segments,Stability: mean Jaccard over 50 bootstrap resamples.
 35_partd_segments_k5,Stability: mean Jaccard over 50 bootstrap resamples.
 36_payments_binned,"Mean 2024 Part D incretin claims (solid) and mean 2022 claims (dashed) by 2023 payment bin: no payment, then deciles of positive payment amounts (D1 lowest, D10 highest). Binned and aggregate; an association, not an effect of payments. Part D reflects diabetes and other covered uses, not obesity-brand adoption. Association only: payments are not randomly assigned."
+37_partd_volume_deciles,"Part D reflects diabetes and other covered uses, not obesity-brand adoption. Aggregates only."
 40_tornado,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
 41_waterfall_pmpm,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
 42_cost_by_scenario,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."

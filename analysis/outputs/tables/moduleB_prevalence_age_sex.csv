@@ -1,0 +1,57 @@
+measure,sex,age_group,estimate,ci_low,ci_high,n
+BMI Under 25,Men,18-39,33.32,29.26,37.38,809
+BMI 25-29.9 (overweight),Men,18-39,33.35,29.57,37.14,809
+BMI 30-34.9 (class 1),Men,18-39,18.55,14.46,22.64,809
+BMI 35-39.9 (class 2),Men,18-39,8.82,6,11.64,809
+BMI 40+ (class 3),Men,18-39,5.96,4.35,7.57,809
+Diagnosed diabetes,Men,18-39,3.28,1.88,4.68,817
+Obesity (BMI 30 or more),Men,18-39,33.33,NA,NA,NA
+BMI Under 25,Men,40-59,21.15,16.42,25.89,762
+BMI 25-29.9 (overweight),Men,40-59,33.46,29.6,37.32,762
+BMI 30-34.9 (class 1),Men,40-59,26.74,23.68,29.8,762
+BMI 35-39.9 (class 2),Men,40-59,9.45,7.08,11.83,762
+BMI 40+ (class 3),Men,40-59,9.2,6.68,11.72,762
+Diagnosed diabetes,Men,40-59,11.98,10.36,13.6,769
+Obesity (BMI 30 or more),Men,40-59,45.39,NA,NA,NA
+BMI Under 25,Men,60-64,24.13,18.85,29.41,346
+BMI 25-29.9 (overweight),Men,60-64,37.54,31.48,43.59,346
+BMI 30-34.9 (class 1),Men,60-64,26.37,21.17,31.57,346
+BMI 35-39.9 (class 2),Men,60-64,7.07,4.97,9.18,346
+BMI 40+ (class 3),Men,60-64,4.89,3.06,6.72,346
+Diagnosed diabetes,Men,60-64,22.34,17.44,27.24,351
+Obesity (BMI 30 or more),Men,60-64,38.33,NA,NA,NA
+BMI Under 25,Men,65+,22.66,18.66,26.67,900
+BMI 25-29.9 (overweight),Men,65+,39.42,36.14,42.71,900
+BMI 30-34.9 (class 1),Men,65+,25.73,22.33,29.12,900
+BMI 35-39.9 (class 2),Men,65+,8.1,5.76,10.44,900
+BMI 40+ (class 3),Men,65+,4.09,2.84,5.34,900
+Diagnosed diabetes,Men,65+,24.23,19.94,28.51,921
+Obesity (BMI 30 or more),Men,65+,37.92,NA,NA,NA
+BMI Under 25,Women,18-39,37.62,32.87,42.38,994
+BMI 25-29.9 (overweight),Women,18-39,26.3,23.58,29.02,994
+BMI 30-34.9 (class 1),Women,18-39,15.03,11.92,18.14,994
+BMI 35-39.9 (class 2),Women,18-39,8.54,5.74,11.33,994
+BMI 40+ (class 3),Women,18-39,12.51,9.7,15.31,994
+Diagnosed diabetes,Women,18-39,1.63,0.6,2.65,1015
+Obesity (BMI 30 or more),Women,18-39,36.08,NA,NA,NA
+BMI Under 25,Women,40-59,25.41,21.59,29.23,948
+BMI 25-29.9 (overweight),Women,40-59,27.12,24.46,29.79,948
+BMI 30-34.9 (class 1),Women,40-59,19.7,17.36,22.04,948
+BMI 35-39.9 (class 2),Women,40-59,13.12,11.03,15.22,948
+BMI 40+ (class 3),Women,40-59,14.64,11.93,17.35,948
+Diagnosed diabetes,Women,40-59,12.99,10.93,15.04,964
+Obesity (BMI 30 or more),Women,40-59,47.46,NA,NA,NA
+BMI Under 25,Women,60-64,25.81,21.29,30.34,407
+BMI 25-29.9 (overweight),Women,60-64,31.46,26.31,36.62,407
+BMI 30-34.9 (class 1),Women,60-64,17.96,14.92,21,407
+BMI 35-39.9 (class 2),Women,60-64,14.09,9.59,18.59,407
+BMI 40+ (class 3),Women,60-64,10.67,7.1,14.25,407
+Diagnosed diabetes,Women,60-64,15.49,10.75,20.23,415
+Obesity (BMI 30 or more),Women,60-64,42.72,NA,NA,NA
+BMI Under 25,Women,65+,28.94,25.26,32.62,1069
+BMI 25-29.9 (overweight),Women,65+,32.54,29.91,35.18,1069
+BMI 30-34.9 (class 1),Women,65+,19.64,16.89,22.38,1069
+BMI 35-39.9 (class 2),Women,65+,11.23,9.6,12.86,1069
+BMI 40+ (class 3),Women,65+,7.65,5.98,9.32,1069
+Diagnosed diabetes,Women,65+,20.37,15.58,25.17,1085
+Obesity (BMI 30 or more),Women,65+,38.52,NA,NA,NA

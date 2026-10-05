@@ -142,8 +142,13 @@ landing = head("Interactive budget model: Medicaid coverage of Wegovy and Zepbou
 <body><header class="wrap"><p class="eyebrow">Access &amp; Value · interactive budget model</p>
 <h1>Five-year budget impact of Medicaid coverage of Wegovy and Zepbound: ${d("e_net5")} million net for 1 million enrollees</h1>
 <p class="lede">Set the plan size, uptake, prior authorization and price, and see the cost, what drives it and how uncertain it is. Defaults equal the numbers in the report: ${d("e_pmpm")} per enrollee per month; scenario range ${d("e_scen_min")} to ${d("e_scen_max")} million.</p>
-<nav class="buttons"><a class="btn primary" href="{APP_URL}">Open the interactive budget model</a><a class="btn" href="index.html">Project site</a><a class="btn" href="report.html">Read the report</a></nav></header>
-<main class="wrap"><p class="small">Public aggregate data; scenarios, not forecasts; gross of rebates unless stated. Erick Kiprotich Yegon · Epidemiologist and data scientist.</p></main></body></html>
+<nav class="buttons"><a class="btn primary" href="{APP_URL}" target="_blank" rel="noopener">Open in a new tab</a><a class="btn" href="budget_impact_scenarios.pdf">Scenarios (PDF)</a><a class="btn" href="index.html">Project site</a><a class="btn" href="report.html">Read the report</a></nav></header>
+<main class="wrap">
+<figure class="preview"><img src="assets/social_preview.png" width="1200" height="630" alt="Preview of the interactive budget model: title, the three key numbers and the author"></figure>
+<section aria-label="Interactive budget model"><h2>Try it here</h2>
+<div class="frame"><iframe src="{APP_URL}" title="Interactive budget model: Medicaid coverage of Wegovy and Zepbound" loading="lazy" allow="clipboard-write" referrerpolicy="no-referrer"></iframe></div>
+<p class="small">The app loads in the frame above. If it does not appear, or you want more room, <a href="{APP_URL}" target="_blank" rel="noopener">open the interactive budget model in a new tab</a>. A static version of the scenarios is in <a href="budget_impact_scenarios.pdf">this PDF</a>.</p></section>
+<p class="small">Public aggregate data; scenarios, not forecasts; gross of rebates unless stated. Erick Kiprotich Yegon · Epidemiologist and data scientist.</p></main></body></html>
 """
 (site / "budget-model.html").write_text(landing, encoding="utf-8")
 print("site built:", site / "index.html")

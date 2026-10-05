@@ -6,6 +6,8 @@ figure,width_in,height_in,title_lines,subtitle_lines,source_lines,repel_warnings
 05_withdrawal_descriptive,12,9,2,2,1,0,0,137,13.1,8,4.6,13.1,0
 05b_withdrawal_change,9,5.5,2,1,1,0,0,40,13.1,8,4.6,13.1,0
 06_managed_care_split,10,5.5,2,0,1,0,0,57,NA,8,4.6,NA,0
+07_bmi_diabetes_age_sex,12,6,2,1,1,0,0,94,13.1,8,4.6,13.1,0
+08_ndc_product_flow,11,7.5,2,2,1,0,0,165,13.1,8,4.6,13.1,0
 10_event_study_primary,11,6.8,2,1,1,0,4,59,13.1,12.3,3.3,NA,0
 11_specification_chart,11,7,2,1,1,0,0,81,NA,8,4.6,NA,0
 12_honestdid,9,6,2,2,1,0,0,45,NA,8,4.6,NA,0
@@ -20,6 +22,7 @@ figure,width_in,height_in,title_lines,subtitle_lines,source_lines,repel_warnings
 35_partd_segments,15,3.8,2,1,2,0,0,62,13.1,8,4.6,13.1,0
 35_partd_segments_k5,15,5.5,2,1,2,0,0,98,13.1,8,4.6,13.1,0
 36_payments_binned,10,6.2,2,2,2,0,0,63,13.1,8,4.6,13.1,0
+37_partd_volume_deciles,9,5.6,2,1,1,0,0,48,13.1,8,4.6,13.1,0
 40_tornado,11,6,2,2,2,0,0,77,13.1,8,4.6,13.1,0
 41_waterfall_pmpm,11,6,2,2,2,0,0,46,13.1,8,4.6,13.1,0
 42_cost_by_scenario,11,6,2,2,2,0,0,66,13.1,8,4.6,13.1,0

@@ -1,0 +1,19 @@
+label_group,ingredient,product,ndc_codes
+Diabetes label,Albiglutide,Tanzeum,5
+Diabetes label,Dulaglutide,Trulicity,23
+Diabetes label,Exenatide,Byetta,19
+Diabetes label,Exenatide,Bydureon,7
+Diabetes label,Exenatide,Generic exenatide,2
+Diabetes label,Liraglutide,Generic liraglutide,27
+Diabetes label,Liraglutide,Victoza,9
+Diabetes label,Liraglutide,Xultophy,3
+Diabetes label,Lixisenatide,Soliqua,4
+Diabetes label,Lixisenatide,Adlyxin,2
+Diabetes label,Semaglutide,Ozempic,21
+Diabetes label,Semaglutide,Rybelsus,16
+Diabetes label,Tirzepatide,Mounjaro,49
+Obesity label,Liraglutide,Generic liraglutide,11
+Obesity label,Liraglutide,Saxenda,5
+Obesity label,Orforglipron,Foundayo,13
+Obesity label,Semaglutide,Wegovy,22
+Obesity label,Tirzepatide,Zepbound,51

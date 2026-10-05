@@ -172,6 +172,17 @@ x_price_245,245,USD per month,announced price,"Announced Medicare price of Ozemp
 x_bridge_copay,50,USD copay,demonstration,Beneficiary copay under the Medicare GLP-1 Bridge,../docs/sources/cms_medicare_glp1_bridge_page.txt,FAQ 'What is the copay...': 'Eligible beneficiaries will have a $50 copay',public
 x_bridge_window,"July 1, 2026 to December 31, 2027",dates,demonstration period,Medicare GLP-1 Bridge period (CMS),../docs/sources/cms_medicare_glp1_bridge_page.txt,overview and FAQ on the extension,public
 x_rebate_floor_statute,23.1,percent of average manufacturer price,statutory minimum,Basic Medicaid rebate for brand drugs is at least 23.1 percent (42 U.S.C. 1396r-8),https://www.law.cornell.edu/uscode/text/42/1396r-8,section 1396r-8(c)(1)(B),public
+d_dec_top,41.4,percent of claims,,Share of 2024 Part D incretin claims written by the top volume decile of prescribers,tables/moduleD_volume_deciles_2024.csv,"decile 10, share_of_claims_pct",public
+d_dec_bottom5,13.9,percent of claims,,Share of 2024 Part D incretin claims written by the bottom five volume deciles of prescribers,tables/moduleD_volume_deciles_2024.csv,"deciles 1 to 5, sum of share_of_claims_pct",public
+d_dec_prescribers,"199,822",prescribers,,Prescribers with at least one 11-claim incretin row in 2024 (ranked into deciles),tables/moduleD_volume_deciles_2024.csv,sum of prescribers,public
+a_ndc_total,289,NDC codes,,NDC (11-digit) codes in the product map,tables/moduleA_ndc_flow_counts.csv,ndc,public
+a_ndc_products,17,products (brands and generics),,Products in the NDC product map,tables/moduleA_ndc_flow_counts.csv,products,public
+a_ndc_ingredients,8,ingredients,,Ingredients in the NDC product map,tables/moduleA_ndc_flow_counts.csv,ingredients,public
+a_ndc_obesity,102,NDC codes,,NDC codes carrying an obesity label,tables/moduleA_ndc_flow_counts.csv,obesity_label_ndc,public
+a_ndc_diabetes,187,NDC codes,,NDC codes carrying a diabetes label,tables/moduleA_ndc_flow_counts.csv,diabetes_label_ndc,public
+b_prev_obesity_max,47.5,percent of adults with BMI 30 or more,women 40-59,"Highest obesity prevalence across the age-by-sex groups, NHANES 2021-2023",tables/moduleB_prevalence_age_sex.csv,"sum of BMI 30-34.9, 35-39.9 and 40+ rows for the group",public
+b_prev_dm65_men,24.2,percent of men aged 65 and older,,"Diagnosed diabetes, men 65 and older, NHANES 2021-2023",tables/moduleB_prevalence_age_sex.csv,"Diagnosed diabetes, Men, 65+",public
+b_prev_dm65_women,20.4,percent of women aged 65 and older,,"Diagnosed diabetes, women 65 and older, NHANES 2021-2023",tables/moduleB_prevalence_age_sex.csv,"Diagnosed diabetes, Women, 65+",public
 build_models,54,dbt models,,"dbt models in the warehouse (staging, intermediate and marts)",build_counts.csv,row models,public
 build_seeds,10,dbt seeds,,Reference tables committed as dbt seeds,build_counts.csv,row seeds,public
 build_tests,126,dbt tests,,dbt tests (generic and singular),build_counts.csv,row tests,public

@@ -48,6 +48,20 @@ NHANES 2021-2023 design-based estimates.
 tb("moduleB_survey_estimates.csv", 12)
 ```
 
+## BMI class and diabetes by age and sex
+
+Obesity peaks at ages 40 to 59 (`r kn("b_prev_obesity_max")`% in the highest group); diagnosed diabetes reaches `r kn("b_prev_dm65_men")`% of men and `r kn("b_prev_dm65_women")`% of women at 65 and older (NHANES 2021-2023, survey-weighted).
+
+```{r}
+#| results: asis
+tb("moduleB_prevalence_age_sex.csv", 20)
+```
+
+```{r}
+#| results: asis
+fig("07_bmi_diabetes_age_sex", "BMI class and diagnosed diabetes by age group and sex")
+```
+
 ## Forecast
 
 Median `r kn("b_fc_2030")` million GLP-1 users without diagnosed diabetes by 2030.

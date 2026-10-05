@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='403.20pt' viewBox='0 0 648.00 403.20'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw0MDMuMjA='>
+    <rect x='0.00' y='0.00' width='648.00' height='403.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MDMuMjA=)'>
+<rect x='0.000000000000064' y='0.00' width='648.00' height='403.20' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDMuMTd8NjM0LjA1fDkuOTZ8MzUwLjc1'>
+    <rect x='43.17' y='9.96' width='590.88' height='340.78' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDMuMTd8NjM0LjA1fDkuOTZ8MzUwLjc1)'>
+<polyline points='43.17,350.75 634.05,350.75 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,279.11 634.05,279.11 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,207.48 634.05,207.48 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,135.85 634.05,135.85 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='43.17,64.22 634.05,64.22 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<line x1='43.17' y1='279.11' x2='634.05' y2='279.11' style='stroke-width: 1.07; stroke: #595959; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<rect x='56.21' y='341.93' width='43.45' height='8.81' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='114.14' y='338.63' width='43.45' height='12.11' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='172.07' y='332.64' width='43.45' height='18.11' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='230.00' y='325.11' width='43.45' height='25.64' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='287.92' y='315.72' width='43.45' height='35.02' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='345.85' y='303.64' width='43.45' height='47.11' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='403.78' y='287.81' width='43.45' height='62.94' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='461.71' y='265.24' width='43.45' height='85.50' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='519.64' y='225.99' width='43.45' height='124.75' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #BFBFBF;' />
+<rect x='577.57' y='54.41' width='43.45' height='296.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<polygon points='62.71,339.73 93.15,339.73 93.05,339.73 93.43,339.72 93.80,339.64 94.16,339.51 94.49,339.32 94.78,339.08 95.03,338.79 95.23,338.47 95.38,338.12 95.47,337.76 95.50,337.38 95.50,337.38 95.50,327.42 95.50,327.42 95.47,327.04 95.38,326.67 95.23,326.32 95.03,326.00 94.78,325.72 94.49,325.48 94.16,325.29 93.80,325.15 93.43,325.08 93.15,325.06 62.71,325.06 63.00,325.08 62.62,325.06 62.24,325.11 61.88,325.21 61.54,325.38 61.22,325.59 60.95,325.85 60.72,326.16 60.55,326.49 60.43,326.85 60.37,327.23 60.36,327.42 60.36,337.38 60.37,337.19 60.37,337.57 60.43,337.94 60.55,338.30 60.72,338.64 60.95,338.94 61.22,339.20 61.54,339.42 61.88,339.58 62.24,339.69 62.62,339.73 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='77.93' y='336.96' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>1.2%</text>
+<polygon points='120.64,336.43 151.08,336.43 150.98,336.43 151.36,336.41 151.73,336.34 152.09,336.20 152.41,336.01 152.71,335.77 152.96,335.49 153.16,335.17 153.31,334.82 153.40,334.45 153.43,334.08 153.43,334.08 153.43,324.11 153.43,324.11 153.40,323.74 153.31,323.37 153.16,323.02 152.96,322.70 152.71,322.41 152.41,322.17 152.09,321.99 151.73,321.85 151.36,321.77 151.08,321.76 120.64,321.76 120.93,321.77 120.55,321.76 120.17,321.81 119.81,321.91 119.47,322.07 119.15,322.29 118.88,322.55 118.65,322.85 118.48,323.19 118.36,323.55 118.30,323.92 118.29,324.11 118.29,334.08 118.30,333.89 118.30,334.26 118.36,334.64 118.48,335.00 118.65,335.33 118.88,335.64 119.15,335.90 119.47,336.12 119.81,336.28 120.17,336.38 120.55,336.43 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='135.86' y='333.66' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>1.7%</text>
+<polygon points='178.57,330.44 209.01,330.44 208.91,330.44 209.29,330.42 209.66,330.35 210.02,330.21 210.34,330.02 210.64,329.78 210.89,329.50 211.09,329.18 211.24,328.83 211.33,328.46 211.36,328.08 211.36,328.08 211.36,318.12 211.36,318.12 211.33,317.74 211.24,317.38 211.09,317.03 210.89,316.71 210.64,316.42 210.34,316.18 210.02,315.99 209.66,315.86 209.29,315.78 209.01,315.77 178.57,315.77 178.86,315.78 178.48,315.77 178.10,315.81 177.74,315.92 177.40,316.08 177.08,316.30 176.81,316.56 176.58,316.86 176.41,317.20 176.29,317.56 176.22,317.93 176.22,318.12 176.22,328.08 176.22,327.90 176.22,328.27 176.29,328.65 176.41,329.01 176.58,329.34 176.81,329.65 177.08,329.91 177.40,330.12 177.74,330.29 178.10,330.39 178.48,330.44 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='193.79' y='327.67' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>2.5%</text>
+<polygon points='236.50,322.91 266.94,322.91 266.84,322.91 267.22,322.89 267.59,322.82 267.95,322.68 268.27,322.49 268.57,322.25 268.82,321.97 269.02,321.65 269.17,321.30 269.26,320.93 269.29,320.55 269.29,320.55 269.29,310.59 269.29,310.59 269.26,310.21 269.17,309.85 269.02,309.50 268.82,309.18 268.57,308.89 268.27,308.65 267.95,308.46 267.59,308.33 267.22,308.25 266.94,308.24 236.50,308.24 236.79,308.25 236.41,308.24 236.03,308.28 235.67,308.39 235.32,308.55 235.01,308.77 234.74,309.03 234.51,309.33 234.34,309.67 234.22,310.03 234.15,310.40 234.15,310.59 234.15,320.55 234.15,320.36 234.15,320.74 234.22,321.12 234.34,321.48 234.51,321.81 234.74,322.12 235.01,322.38 235.32,322.59 235.67,322.76 236.03,322.86 236.41,322.91 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='251.72' y='320.14' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>3.6%</text>
+<polygon points='294.43,313.52 324.86,313.52 324.77,313.52 325.15,313.50 325.52,313.43 325.87,313.29 326.20,313.10 326.50,312.86 326.75,312.58 326.95,312.26 327.10,311.91 327.19,311.54 327.22,311.17 327.22,311.17 327.22,301.20 327.22,301.20 327.19,300.83 327.10,300.46 326.95,300.11 326.75,299.79 326.50,299.50 326.20,299.27 325.87,299.08 325.52,298.94 325.15,298.87 324.86,298.85 294.43,298.85 294.72,298.87 294.34,298.85 293.96,298.90 293.60,299.00 293.25,299.16 292.94,299.38 292.67,299.64 292.44,299.94 292.26,300.28 292.14,300.64 292.08,301.01 292.08,301.20 292.08,311.17 292.08,310.98 292.08,311.36 292.14,311.73 292.26,312.09 292.44,312.42 292.67,312.73 292.94,312.99 293.25,313.21 293.60,313.37 293.96,313.47 294.34,313.52 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='309.65' y='310.75' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>4.9%</text>
+<polygon points='352.36,301.44 382.79,301.44 382.70,301.44 383.08,301.42 383.45,301.35 383.80,301.21 384.13,301.02 384.43,300.78 384.68,300.50 384.88,300.18 385.03,299.83 385.12,299.46 385.15,299.08 385.15,299.08 385.15,289.12 385.15,289.12 385.12,288.74 385.03,288.38 384.88,288.03 384.68,287.71 384.43,287.42 384.13,287.18 383.80,286.99 383.45,286.86 383.08,286.78 382.79,286.77 352.36,286.77 352.65,286.78 352.27,286.77 351.89,286.81 351.53,286.92 351.18,287.08 350.87,287.30 350.60,287.56 350.37,287.86 350.19,288.20 350.07,288.56 350.01,288.93 350.01,289.12 350.01,299.08 350.01,298.89 350.01,299.27 350.07,299.65 350.19,300.01 350.37,300.34 350.60,300.65 350.87,300.91 351.18,301.12 351.53,301.29 351.89,301.39 352.27,301.44 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='367.58' y='298.67' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>6.6%</text>
+<polygon points='410.29,285.61 440.72,285.61 440.63,285.61 441.01,285.59 441.38,285.52 441.73,285.38 442.06,285.19 442.36,284.95 442.61,284.67 442.81,284.35 442.96,284.00 443.05,283.63 443.08,283.25 443.08,283.25 443.08,273.29 443.08,273.29 443.05,272.91 442.96,272.54 442.81,272.20 442.61,271.88 442.36,271.59 442.06,271.35 441.73,271.16 441.38,271.03 441.01,270.95 440.72,270.94 410.29,270.94 410.57,270.95 410.20,270.94 409.82,270.98 409.46,271.09 409.11,271.25 408.80,271.47 408.53,271.73 408.30,272.03 408.12,272.37 408.00,272.73 407.94,273.10 407.93,273.29 407.93,283.25 407.94,283.06 407.94,283.44 408.00,283.82 408.12,284.18 408.30,284.51 408.53,284.82 408.80,285.08 409.11,285.29 409.46,285.46 409.82,285.56 410.20,285.61 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='425.51' y='282.84' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='31.38px' lengthAdjust='spacingAndGlyphs'>8.8%</text>
+<polygon points='464.30,263.04 502.57,263.04 502.48,263.04 502.86,263.03 503.23,262.95 503.58,262.82 503.91,262.63 504.21,262.39 504.46,262.10 504.66,261.78 504.81,261.43 504.90,261.07 504.93,260.69 504.93,260.69 504.93,250.73 504.93,250.73 504.90,250.35 504.81,249.98 504.66,249.63 504.46,249.31 504.21,249.03 503.91,248.79 503.58,248.60 503.23,248.46 502.86,248.39 502.57,248.37 464.30,248.37 464.58,248.39 464.20,248.37 463.83,248.42 463.46,248.52 463.12,248.69 462.81,248.90 462.53,249.16 462.31,249.47 462.13,249.80 462.01,250.16 461.95,250.54 461.94,250.73 461.94,260.69 461.95,260.50 461.95,260.88 462.01,261.25 462.13,261.61 462.31,261.95 462.53,262.25 462.81,262.51 463.12,262.73 463.46,262.89 463.83,263.00 464.20,263.04 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='483.44' y='260.27' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='39.22px' lengthAdjust='spacingAndGlyphs'>11.9%</text>
+<polygon points='522.23,223.79 560.50,223.79 560.41,223.79 560.79,223.78 561.16,223.70 561.51,223.57 561.84,223.38 562.14,223.14 562.39,222.85 562.59,222.53 562.74,222.18 562.83,221.82 562.86,221.44 562.86,221.44 562.86,211.48 562.86,211.48 562.83,211.10 562.74,210.73 562.59,210.38 562.39,210.06 562.14,209.78 561.84,209.54 561.51,209.35 561.16,209.21 560.79,209.14 560.50,209.12 522.23,209.12 522.51,209.14 522.13,209.12 521.76,209.17 521.39,209.27 521.05,209.44 520.74,209.65 520.46,209.91 520.24,210.22 520.06,210.55 519.94,210.91 519.88,211.29 519.87,211.48 519.87,221.44 519.88,221.25 519.88,221.63 519.94,222.00 520.06,222.36 520.24,222.70 520.46,223.00 520.74,223.26 521.05,223.48 521.39,223.64 521.76,223.75 522.13,223.79 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='541.37' y='221.02' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='39.22px' lengthAdjust='spacingAndGlyphs'>17.4%</text>
+<polygon points='580.16,52.21 618.43,52.21 618.34,52.21 618.72,52.19 619.09,52.12 619.44,51.98 619.77,51.79 620.06,51.55 620.32,51.27 620.52,50.95 620.67,50.60 620.76,50.23 620.79,49.86 620.79,49.86 620.79,39.89 620.79,39.89 620.76,39.52 620.67,39.15 620.52,38.80 620.32,38.48 620.06,38.19 619.77,37.96 619.44,37.77 619.09,37.63 618.72,37.56 618.43,37.54 580.16,37.54 580.44,37.56 580.06,37.54 579.69,37.59 579.32,37.69 578.98,37.85 578.67,38.07 578.39,38.33 578.17,38.63 577.99,38.97 577.87,39.33 577.81,39.70 577.80,39.89 577.80,49.86 577.81,49.67 577.81,50.05 577.87,50.42 577.99,50.78 578.17,51.12 578.39,51.42 578.67,51.68 578.98,51.90 579.32,52.06 579.69,52.16 580.06,52.21 ' style='stroke-width: 0.00; stroke: none; fill: #FFFFFF;' />
+<text x='599.29' y='49.44' text-anchor='middle' style='font-size: 13.09px;fill: #222222; font-family: "IBM Plex Sans";' textLength='39.22px' lengthAdjust='spacingAndGlyphs'>41.4%</text>
+<text x='77.93' y='275.08' style='font-size: 13.09px;fill: #595959; font-family: "IBM Plex Sans";' textLength='108.19px' lengthAdjust='spacingAndGlyphs'>equal share (10%)</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw0MDMuMjA=)'>
+<text x='38.24' y='354.24' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='38.24' y='282.61' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='38.24' y='210.97' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='38.24' y='139.34' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='38.24' y='67.71' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='77.93' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='135.86' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='193.79' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='251.72' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='309.65' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='367.58' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>6</text>
+<text x='425.51' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>7</text>
+<text x='483.44' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>8</text>
+<text x='541.37' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>9</text>
+<text x='599.29' y='362.66' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='338.61' y='374.85' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='221.70px' lengthAdjust='spacingAndGlyphs'>Prescriber volume decile (10 = highest volume)</text>
+<text transform='translate(21.28,180.35) rotate(-90)' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='188.70px' lengthAdjust='spacingAndGlyphs'>Share of 2024 Part D incretin claims (%)</text>
+<text x='13.95' y='392.28' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='288.20px' lengthAdjust='spacingAndGlyphs'>Source: CMS Medicare Part D Prescribers (rows with at least 11 claims).</text>
+</g>
+</g>
+</svg>
