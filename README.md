@@ -10,7 +10,7 @@ When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by 
 |---|---|---|
 | [![Project site](docs/figures/readme/site.png)](https://erickyegon.github.io/incretin-access-value/) | [![Report](docs/figures/readme/report.png)](https://erickyegon.github.io/incretin-access-value/report.html) | [![Budget model app](docs/figures/readme/app.png)](https://erickyegon.github.io/incretin-access-value/budget-model.html) |
 
-**Author:** Erick Kiprotich Yegon, epidemiologist and data scientist.
+Author: Erick Kiprotich Yegon, epidemiologist and data scientist (real-world evidence, HEOR, causal inference) · Portfolio: https://erickyegon.github.io · LinkedIn: https://linkedin.com/in/erickyegon
 
 > Public aggregate data; no company affiliation or endorsement; not patient-level claims; gross of rebates unless stated; associations and scenarios, not effects of any company's promotion.
 
@@ -90,7 +90,3 @@ SDUD amounts are gross of rebates and the rebate range is an assumption; the cov
 ## AI-use statement
 
 I used AI tools to help write code and documentation. The study design, methods and conclusions are my own, and I verified all results.
-
-## Contact
-
-Erick Kiprotich Yegon, epidemiologist and data scientist · [LinkedIn](https://linkedin.com/in/erickyegon) · [keyegon@gmail.com](mailto:keyegon@gmail.com)
