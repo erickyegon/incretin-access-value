@@ -71,3 +71,27 @@ DECK_HOOKS[["34_partd_wegovy_vs_ozempic_specialty"]] <- function(p) p + ggplot2:
 DECK_HOOKS[["10_event_study_primary"]] <- function(p) drop_layers(p, TEXT_GEOMS) + ggplot2::labs(y = "Effect per 1,000 enrollees")
 PAGE_HOOKS[["10_event_study_primary"]] <- DECK_HOOKS[["10_event_study_primary"]]
 PAGE_HOOKS[["10_event_study_primary"]] <- function(p) drop_layers(p, TEXT_GEOMS) + ggplot2::labs(y = "Per 1,000 enrollees")
+
+# ---- revisions after review ------------------------------------------------------------------------------------------------------------------------------------------
+# trial chart: value labels right of the interval (clear of the axis text), no zero line, arm labels as built in 61_value_context.R
+DECK_HOOKS[["54_trial_weight_change"]] <- function(p) {
+  p <- drop_layers(drop_layers(p, TEXT_GEOMS), "GeomVline")
+  p + ggplot2::geom_text(ggplot2::aes(x = pmax(value, ci_high, na.rm = TRUE), label = sprintf("%.1f", value)), hjust = -0.4, size = 4.6, show.legend = FALSE) +
+    ggplot2::scale_x_continuous(labels = function(x) paste0(x, "%"), expand = ggplot2::expansion(mult = c(0.03, 0.12))) + ggplot2::labs(x = "Mean change in body weight (95% CI where reported)")
+}
+# tornado: the first bar keeps its "(95% CI)" label, the others lose their parentheses
+DECK_HOOKS[["40_tornado"]] <- local({ old <- DECK_HOOKS[["40_tornado"]]; function(p) old(p) + ggplot2::scale_y_discrete(labels = function(x) ifelse(grepl("^Coverage effect", x), x, sub(" [(].*$", "", x))) })
+# withdrawal chart: North Carolina is labeled as reinstated, so its rebound is not read as a withdrawal
+DECK_HOOKS[["05b_withdrawal_change"]] <- function(p) p + ggplot2::scale_y_discrete(labels = function(x) ifelse(x == "NC", "NC (reinstated 2025-12-12)", as.character(x))) + ggplot2::labs(x = "Normalized change, 2025 Q4 to 2026 Q1 (preliminary)")
+# timeline: FDA event labels alternate above and below their lane so none overlap
+DECK_HOOKS[["51_timeline"]] <- local({ old <- DECK_HOOKS[["51_timeline"]]; function(p) {
+  p <- old(p); pl <- p$patches$plots; pl[[1]]$data$lane <- c(1, 2.7, 4.4)[pl[[1]]$data$lane]; d <- pl[[1]]$data; d <- d[order(d$lane, d$event_date), ]
+  d$k <- ave(seq_len(nrow(d)), d$lane, FUN = seq_along); d$sgn <- ifelse(d$k %% 2 == 1, 1, -1); d$ypos <- d$lane + 0.34 * d$sgn; d$vj <- ifelse(d$sgn > 0, 0, 1)
+  q <- drop_layers(drop_layers(pl[[1]], "GeomTextRepel"), "GeomHline") + ggplot2::geom_hline(yintercept = c(1, 2.7, 4.4), colour = col_context, linewidth = 0.3) + ggplot2::geom_text(data = d, ggplot2::aes(x = event_date, y = ypos, label = lab, vjust = vj), size = 4.6, colour = "#222222", inherit.aes = FALSE) + ggplot2::scale_y_continuous(limits = c(0.2, 5.0), breaks = NULL)
+  pl[[1]] <- q; p$patches$plots <- pl; p + patchwork::plot_layout(heights = c(2.1, 1.1, 0.8)) } })
+# spending: end labels pushed apart so none touch or clip
+DECK_HOOKS[["50_spending_trend"]] <- function(p) {
+  fix <- function(q) { k <- which(vapply(q$layers, function(l) inherits(l$geom, "GeomTextRepel"), logical(1))); l <- q$layers[[k[1]]]; q <- drop_layers(q, "GeomTextRepel")
+    q + ggrepel::geom_text_repel(data = l$data, mapping = l$mapping, hjust = 0, direction = "y", nudge_x = 0.8, size = 4.6, segment.size = 0.2, box.padding = 0.65, force = 6, force_pull = 0.3, max.iter = 20000, min.segment.length = 0.2, seed = 11, show.legend = FALSE) +
+      ggplot2::scale_x_continuous(breaks = c(2020, 2022, 2024), limits = c(2020, 2028.4)) + ggplot2::scale_y_continuous(expand = ggplot2::expansion(mult = c(0.08, 0.06))) }
+  p$patches$plots <- lapply(p$patches$plots, fix); fix(p) }

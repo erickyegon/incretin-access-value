@@ -67,6 +67,6 @@ out <- sprintf('@@F@@{=typst}
 @@F@@
 ', esc(kn("c_att_overall")), SITE, sub("^https://", "", SITE), tiles, kn("c_states_primary"), kn("c_states_never"), steps, chips, esc(kn("e_net5")), esc(kn("e_scen_min")), esc(kn("e_scen_max")),
    lk("Site:", SITE), lk("Report:", paste0(SITE, "report.html")), lk("Deck:", paste0(SITE, "deck.pdf")),
-   lk("Interactive budget model:", APP), lk("Code:", "https://github.com/erickyegon/incretin-access-value"), lk("Research design pack:", paste0(SITE, "research_pack.pdf")))
+   lk("Interactive budget model:", paste0(SITE, "budget-model.html")), lk("Code:", "https://github.com/erickyegon/incretin-access-value"), lk("Research design pack:", paste0(SITE, "research_pack.pdf")))
 cat(gsub("@@F@@", fence, out, fixed = TRUE))
 ```

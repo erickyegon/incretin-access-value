@@ -50,7 +50,7 @@ mod_overview_server <- function(id, scn, go) {
     output$chips <- shiny::renderUI({
       t <- tor(); pick <- function(pat) t[grepl(pat, t$parameter), ][1, ]
       mk <- function(lbl, r) shiny::actionButton(session$ns(paste0("chip_", gsub("[^a-z]", "", tolower(lbl)))), sprintf("%s: %s to %s", lbl, usdm(min(r$net_low, r$net_high)), usdm(max(r$net_low, r$net_high))), class = "chip d-block mb-2 text-start")
-      shiny::tagList(mk("Coverage effect", pick("^Module C")), mk("Rebate", pick("^Rebate")), mk("Prior authorization", pick("^Prior")))
+      shiny::tagList(mk("Coverage effect", pick("^Coverage effect")), mk("Rebate", pick("^Rebate")), mk("Prior authorization", pick("^Prior")))
     })
     shiny::observeEvent(input$chip_coverageeffect, go("uncertainty")); shiny::observeEvent(input$chip_rebate, go("uncertainty")); shiny::observeEvent(input$chip_priorauthorization, go("uncertainty"))
     shiny::observeEvent(input$go_evidence, go("evidence"))

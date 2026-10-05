@@ -20,7 +20,7 @@ figure,width_in,height_in,title_lines,subtitle_lines,source_lines,repel_warnings
 35_partd_segments,15,3.8,2,1,2,0,0,62,13.1,8,4.6,13.1,0
 35_partd_segments_k5,15,5.5,2,1,2,0,0,98,13.1,8,4.6,13.1,0
 36_payments_binned,10,6.2,2,2,2,0,0,63,13.1,8,4.6,13.1,0
-40_tornado,11,6,1,1,2,0,0,77,13.1,8,4.6,13.1,0
+40_tornado,11,6,2,2,2,0,0,77,13.1,8,4.6,13.1,0
 41_waterfall_pmpm,11,6,2,2,2,0,0,46,13.1,8,4.6,13.1,0
 42_cost_by_scenario,11,6,2,2,2,0,0,66,13.1,8,4.6,13.1,0
 43_psa_distribution,10,5.8,2,1,2,0,0,33,NA,8,4.6,NA,0
@@ -28,4 +28,4 @@ figure,width_in,height_in,title_lines,subtitle_lines,source_lines,repel_warnings
 51_timeline,12,8.4,2,1,2,0,0,125,10.2,12.3,4.9,13.1,0
 52_sdud_reporting_suppression,12,15,2,0,1,0,0,143,NA,8,4.6,NA,0
 53_rate_map_2025Q3,11,7.5,2,2,1,0,0,95,13.1,8,4.6,13.1,0
-54_trial_weight_change,10,6.2,1,0,1,0,0,79,10.2,8,4.6,13.1,0
+54_trial_weight_change,10,6.2,1,0,1,0,0,77,10.2,8,4.6,13.1,0

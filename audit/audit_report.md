@@ -6,10 +6,10 @@ Run: 2026-10-05. Key numbers: 180 rows.
 
 | document | exact | rounded | allowed | UNMATCHED | STALE |
 |---|---|---|---|---|---|
-| deck_pdf | 127 | 5 |  4 | 0 | 0 |
-| one_pager |  11 | 2 |  1 | 0 | 0 |
+| deck_pdf | 129 | 5 |  4 | 0 | 0 |
+| one_pager |  11 | 2 |  0 | 0 | 0 |
 | readme |  37 | 0 |  4 | 0 | 0 |
-| report | 476 | 1 | 74 | 0 | 0 |
+| report | 473 | 1 | 74 | 0 | 0 |
 | research_pack |  66 | 0 | 64 | 0 | 0 |
 | website |  30 | 0 |  1 | 0 | 0 |
 
@@ -30,7 +30,7 @@ Run: 2026-10-05. Key numbers: 180 rows.
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M analysis/R/fig_style.R;  M analysis/outputs/budget_impact_scenarios.pdf;  M analysis/outputs/figures/01_coverage_timing_map_deck.png;  M analysis/outputs/figures/01_coverage_timing_map_report.png;  M analysis/outputs/figures/01_coverage_timing_map_web.png |
+| git status is clean | FAIL |  M README.md;  M analysis/R/deck_figs.R;  M analysis/budget_pdf/budget_impact_scenarios.qmd;  M analysis/outputs/budget_impact_scenarios.pdf;  M analysis/outputs/figures/01_coverage_timing_map_report.png |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 

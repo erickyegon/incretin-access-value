@@ -19,7 +19,7 @@ g <- gt(vc |> select(-Citation, -DOI)) |> tab_header(title = "Value context: tri
 gt::gtsave(theme_gt_incretin(g), file.path(out_dir("tables"), "moduleE_value_context.html"))
 # figure: dot-and-interval chart of weight change by trial arm (context only)
 library(ggplot2)
-tp <- tr |> filter(!grepl("^difference", arm)) |> mutate(label = ifelse(grepl("^placebo", arm), paste0(trial, ": placebo"), paste0(trial, ": ", arm, ifelse(grepl("^semaglutide$|^tirzepatide$", arm), " (max. tolerated dose)", ""))),
+tp <- tr |> filter(!grepl("^difference", arm)) |> mutate(label = ifelse(grepl("^placebo", arm), paste0(trial, ": placebo"), paste0(trial, ": ", arm, ifelse(grepl("^maximum tolerated", dose), " (MTD)", ifelse(grepl("^semaglutide$|^tirzepatide$", arm), paste0(" ", sub(" once.*$", "", dose)), "")))),
   kind = ifelse(grepl("^placebo", arm), "Placebo", "Drug")) |> mutate(label = factor(label, levels = rev(label)))
 ptr <- ggplot(tp, aes(value, label, colour = kind)) + geom_vline(xintercept = 0, colour = "#999999") + geom_errorbarh(aes(xmin = ci_low, xmax = ci_high), height = 0.25, linewidth = 0.8, na.rm = TRUE) + geom_point(size = 3) +
   geom_text(aes(label = sprintf("%.1f", value)), nudge_y = 0.38, size = 3.6, show.legend = FALSE) +

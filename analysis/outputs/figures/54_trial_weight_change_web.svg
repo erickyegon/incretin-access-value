@@ -29,98 +29,98 @@
 <rect x='0.000000000000064' y='0.00' width='720.00' height='446.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMjQxLjE5fDcwNi4wNXw5Ljk2fDM5My45NQ=='>
-    <rect x='241.19' y='9.96' width='464.86' height='383.98' />
+  <clipPath id='cpMTcyLjQzfDcwNi4wNXw5Ljk2fDM5My45NQ=='>
+    <rect x='172.43' y='9.96' width='533.63' height='383.98' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMjQxLjE5fDcwNi4wNXw5Ljk2fDM5My45NQ==)'>
-<polyline points='241.19,375.37 706.05,375.37 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,344.40 706.05,344.40 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,313.43 706.05,313.43 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,282.47 706.05,282.47 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,251.50 706.05,251.50 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,220.53 706.05,220.53 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,189.57 706.05,189.57 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,158.60 706.05,158.60 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,127.64 706.05,127.64 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,96.67 706.05,96.67 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,65.70 706.05,65.70 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<polyline points='241.19,34.74 706.05,34.74 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
-<line x1='684.92' y1='393.95' x2='684.92' y2='9.96' style='stroke-width: 1.07; stroke: #999999; stroke-linecap: butt;' />
-<polyline points='409.65,100.54 409.65,92.80 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='409.65,96.67 376.70,96.67 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='376.70,100.54 376.70,92.80 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='326.29,131.51 326.29,123.76 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='326.29,127.64 289.46,127.64 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='289.46,131.51 289.46,123.76 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='299.15,162.47 299.15,154.73 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='299.15,158.60 262.32,158.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='262.32,162.47 262.32,154.73 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='648.09,193.44 648.09,185.70 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='648.09,189.57 601.57,189.57 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='601.57,193.44 601.57,185.70 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='314.66,224.41 314.66,216.66 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='314.66,220.53 270.08,220.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='270.08,224.41 270.08,216.66 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='440.67,255.37 440.67,247.63 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='440.67,251.50 396.08,251.50 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='396.08,255.37 396.08,247.63 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='553.10,286.34 553.10,278.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='553.10,282.47 525.96,282.47 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='525.96,286.34 525.96,278.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='535.66,317.31 535.66,309.56 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='535.66,313.43 508.52,313.43 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='508.52,317.31 508.52,309.56 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='483.31,348.27 483.31,340.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='483.31,344.40 452.30,344.40 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='452.30,348.27 452.30,340.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
-<polyline points='657.78,379.24 657.78,371.50 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='657.78,375.37 630.64,375.37 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<polyline points='630.64,379.24 630.64,371.50 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
-<circle cx='396.08' cy='34.74' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='638.40' cy='65.70' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='394.14' cy='96.67' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='306.91' cy='127.64' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='279.77' cy='158.60' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='624.83' cy='189.57' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<circle cx='293.34' cy='220.53' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='419.34' cy='251.50' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='539.53' cy='282.47' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='522.09' cy='313.43' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='467.81' cy='344.40' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
-<circle cx='644.21' cy='375.37' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
-<text x='396.08' y='26.54' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-14.9</text>
-<text x='638.40' y='57.51' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-2.4</text>
-<text x='394.14' y='88.47' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-15.0</text>
-<text x='306.91' y='119.44' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-19.5</text>
-<text x='279.77' y='150.41' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-20.9</text>
-<text x='624.83' y='181.37' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-3.1</text>
-<text x='293.34' y='212.34' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-20.2</text>
-<text x='419.34' y='243.31' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-13.7</text>
-<text x='539.53' y='274.27' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-7.5</text>
-<text x='522.09' y='305.24' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-8.4</text>
-<text x='467.81' y='336.20' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-11.2</text>
-<text x='644.21' y='367.17' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-2.1</text>
+<g clip-path='url(#cpMTcyLjQzfDcwNi4wNXw5Ljk2fDM5My45NQ==)'>
+<polyline points='172.43,375.37 706.05,375.37 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,344.40 706.05,344.40 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,313.43 706.05,313.43 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,282.47 706.05,282.47 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,251.50 706.05,251.50 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,220.53 706.05,220.53 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,189.57 706.05,189.57 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,158.60 706.05,158.60 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,127.64 706.05,127.64 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,96.67 706.05,96.67 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,65.70 706.05,65.70 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<polyline points='172.43,34.74 706.05,34.74 ' style='stroke-width: 0.64; stroke: #E6E6E6; stroke-linecap: butt;' />
+<line x1='681.80' y1='393.95' x2='681.80' y2='9.96' style='stroke-width: 1.07; stroke: #999999; stroke-linecap: butt;' />
+<polyline points='365.80,100.54 365.80,92.80 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='365.80,96.67 327.97,96.67 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='327.97,100.54 327.97,92.80 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='270.12,131.51 270.12,123.76 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='270.12,127.64 227.84,127.64 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='227.84,131.51 227.84,123.76 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='238.96,162.47 238.96,154.73 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='238.96,158.60 196.68,158.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='196.68,162.47 196.68,154.73 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='639.52,193.44 639.52,185.70 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='639.52,189.57 586.11,189.57 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='586.11,193.44 586.11,185.70 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='256.76,224.41 256.76,216.66 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='256.76,220.53 205.58,220.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='205.58,224.41 205.58,216.66 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='401.41,255.37 401.41,247.63 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='401.41,251.50 350.23,251.50 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='350.23,255.37 350.23,247.63 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='530.48,286.34 530.48,278.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='530.48,282.47 499.32,282.47 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='499.32,286.34 499.32,278.60 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='510.45,317.31 510.45,309.56 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='510.45,313.43 479.29,313.43 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='479.29,317.31 479.29,309.56 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='450.37,348.27 450.37,340.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='450.37,344.40 414.76,344.40 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='414.76,348.27 414.76,340.53 ' style='stroke-width: 1.71; stroke: #D55E00; stroke-linecap: butt;' />
+<polyline points='650.64,379.24 650.64,371.50 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='650.64,375.37 619.49,375.37 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<polyline points='619.49,379.24 619.49,371.50 ' style='stroke-width: 1.71; stroke: #595959; stroke-linecap: butt;' />
+<circle cx='350.23' cy='34.74' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='628.39' cy='65.70' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='348.00' cy='96.67' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='247.86' cy='127.64' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='216.71' cy='158.60' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='612.81' cy='189.57' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<circle cx='232.29' cy='220.53' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='376.93' cy='251.50' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='514.90' cy='282.47' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='494.87' cy='313.43' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='432.56' cy='344.40' r='3.56' style='stroke-width: 0.71; stroke: #D55E00; fill: #D55E00;' />
+<circle cx='635.07' cy='375.37' r='3.56' style='stroke-width: 0.71; stroke: #595959; fill: #595959;' />
+<text x='350.23' y='26.54' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-14.9</text>
+<text x='628.39' y='57.51' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-2.4</text>
+<text x='348.00' y='88.47' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-15.0</text>
+<text x='247.86' y='119.44' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-19.5</text>
+<text x='216.71' y='150.41' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-20.9</text>
+<text x='612.81' y='181.37' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-3.1</text>
+<text x='232.29' y='212.34' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-20.2</text>
+<text x='376.93' y='243.31' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-13.7</text>
+<text x='514.90' y='274.27' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-7.5</text>
+<text x='494.87' y='305.24' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-8.4</text>
+<text x='432.56' y='336.20' text-anchor='middle' style='font-size: 10.24px;fill: #D55E00; font-family: "IBM Plex Sans";' textLength='25.28px' lengthAdjust='spacingAndGlyphs'>-11.2</text>
+<text x='635.07' y='367.17' text-anchor='middle' style='font-size: 10.24px;fill: #595959; font-family: "IBM Plex Sans";' textLength='19.14px' lengthAdjust='spacingAndGlyphs'>-2.1</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0NDYuNDA=)'>
-<text x='236.26' y='378.86' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='85.20px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: placebo</text>
-<text x='236.26' y='347.89' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='132.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 36 mg</text>
-<text x='236.26' y='316.93' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='132.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 12 mg</text>
-<text x='236.26' y='285.96' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='126.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 6 mg</text>
-<text x='236.26' y='254.99' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='222.31px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-5: semaglutide (max. tolerated dose)</text>
-<text x='236.26' y='224.03' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='215.05px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-5: tirzepatide (max. tolerated dose)</text>
-<text x='236.26' y='193.06' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='104.23px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: placebo</text>
-<text x='236.26' y='162.09' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='147.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 15 mg</text>
-<text x='236.26' y='131.13' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='147.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 10 mg</text>
-<text x='236.26' y='100.16' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='141.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 5 mg</text>
-<text x='236.26' y='69.19' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='72.64px' lengthAdjust='spacingAndGlyphs'>STEP 1: placebo</text>
-<text x='236.26' y='38.23' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='190.72px' lengthAdjust='spacingAndGlyphs'>STEP 1: semaglutide (max. tolerated dose)</text>
-<text x='297.22' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-20%</text>
-<text x='394.14' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-15%</text>
-<text x='491.07' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-10%</text>
-<text x='588.00' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>-5%</text>
-<text x='684.92' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>0%</text>
-<text x='473.62' y='418.05' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='331.30px' lengthAdjust='spacingAndGlyphs'>Mean change in body weight, % (95% CI where the abstract gives one)</text>
+<text x='167.49' y='378.86' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='85.20px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: placebo</text>
+<text x='167.49' y='347.89' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='132.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 36 mg</text>
+<text x='167.49' y='316.93' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='132.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 12 mg</text>
+<text x='167.49' y='285.96' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='126.97px' lengthAdjust='spacingAndGlyphs'>ATTAIN-1: orforglipron 6 mg</text>
+<text x='167.49' y='254.99' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='153.55px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-5: semaglutide (MTD)</text>
+<text x='167.49' y='224.03' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='146.28px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-5: tirzepatide (MTD)</text>
+<text x='167.49' y='193.06' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='104.23px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: placebo</text>
+<text x='167.49' y='162.09' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='147.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 15 mg</text>
+<text x='167.49' y='131.13' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='147.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 10 mg</text>
+<text x='167.49' y='100.16' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='141.42px' lengthAdjust='spacingAndGlyphs'>SURMOUNT-1: tirzepatide 5 mg</text>
+<text x='167.49' y='69.19' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='72.64px' lengthAdjust='spacingAndGlyphs'>STEP 1: placebo</text>
+<text x='167.49' y='38.23' text-anchor='end' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='125.81px' lengthAdjust='spacingAndGlyphs'>STEP 1: semaglutide 2.4 mg</text>
+<text x='236.74' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-20%</text>
+<text x='348.00' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-15%</text>
+<text x='459.27' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>-10%</text>
+<text x='570.53' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='19.25px' lengthAdjust='spacingAndGlyphs'>-5%</text>
+<text x='681.80' y='405.86' text-anchor='middle' style='font-size: 10.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='15.27px' lengthAdjust='spacingAndGlyphs'>0%</text>
+<text x='439.24' y='418.05' text-anchor='middle' style='font-size: 10.50px;fill: #222222; font-family: "IBM Plex Sans";' textLength='331.30px' lengthAdjust='spacingAndGlyphs'>Mean change in body weight, % (95% CI where the abstract gives one)</text>
 <text x='13.95' y='435.48' style='font-size: 9.00px;fill: #595959; font-family: "IBM Plex Sans";' textLength='368.06px' lengthAdjust='spacingAndGlyphs'>Source: published abstracts via PubMed (STEP 1, SURMOUNT-1, SURMOUNT-5, ATTAIN-1).</text>
 </g>
 </g>

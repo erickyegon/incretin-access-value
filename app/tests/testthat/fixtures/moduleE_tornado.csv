@@ -1,5 +1,5 @@
 parameter,low_label,high_label,net_low,net_high,span
-Module C effect (95% CI of every event time),lower CI,upper CI,63708574,258925907,195217333
+Coverage effect (95% CI),lower CI,upper CI,63708574,258925907,195217333
 Rebate share,79.3% (implied by $245),23.1% (statutory minimum),68307764,254326602,186018838
 Prior authorization multiplier,0.5 (tight),1.25 (loose),80658591,201646479,120987887
 Years 3-5 scenario,decline,continued growth,131422664,234317254,102894590

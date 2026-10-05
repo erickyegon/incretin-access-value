@@ -56,8 +56,8 @@ e_pa_075,121.0,"USD million, five years",PA multiplier 0.75 (assumption),Five-ye
 e_pa_125,201.6,"USD million, five years",PA multiplier 1.25 (assumption),Five-year net cost with the prior authorization multiplier at 1.25
 e_announced5,68.3,"USD million, five years",scenario,Five-year net cost at the announced $245 per monthly prescription (plateau)
 e_announced_pmpm,1.14,USD per enrollee per month,scenario,Net cost per enrollee per month at the announced $245 price
-e_tornado1_low,63.7,"USD million, five years",Module C effect (95% CI of every event time),Lower end of the tornado bar for Module C effect (95% CI of every event time)
-e_tornado1_high,258.9,"USD million, five years",Module C effect (95% CI of every event time),Upper end of the tornado bar for Module C effect (95% CI of every event time)
+e_tornado1_low,63.7,"USD million, five years",Coverage effect (95% CI),Lower end of the tornado bar for Coverage effect (95% CI)
+e_tornado1_high,258.9,"USD million, five years",Coverage effect (95% CI),Upper end of the tornado bar for Coverage effect (95% CI)
 e_tornado2_low,68.3,"USD million, five years",Rebate share,Lower end of the tornado bar for Rebate share
 e_tornado2_high,254.3,"USD million, five years",Rebate share,Upper end of the tornado bar for Rebate share
 e_gross_pmpm,5.51,USD per enrollee per month,central case,"Gross cost per enrollee per month, central case"

@@ -16,7 +16,7 @@ figure,notes
 35_partd_segments,Stability: mean Jaccard over 50 bootstrap resamples.
 35_partd_segments_k5,Stability: mean Jaccard over 50 bootstrap resamples.
 36_payments_binned,"Mean 2024 Part D incretin claims (solid) and mean 2022 claims (dashed) by 2023 payment bin: no payment, then deciles of positive payment amounts (D1 lowest, D10 highest). Binned and aggregate; an association, not an effect of payments. Part D reflects diabetes and other covered uses, not obesity-brand adoption. Association only: payments are not randomly assigned."
-40_tornado,"One-way sensitivity: each parameter moved across its range with the others at central values (incremental to no coverage; central = plateau, PA as observed, rebate 51.2% = midpoint of 23.1% and 79.3%). SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
+40_tornado,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
 41_waterfall_pmpm,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
 42_cost_by_scenario,"SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."
 43_psa_distribution,"Perfect correlation gives $50.3M to $347.3M), gross cost, rebate, prior authorization multiplier and years 3-5 scenario drawn from their ranges. 1 million enrollees. SDUD amounts are gross of rebates; rebates, prior authorization and years 3-5 are assumptions."

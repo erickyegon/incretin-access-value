@@ -40,7 +40,7 @@ usd <- function(x) paste0("$", format(round(x), big.mark = ","))
 :::
 :::
 
-The central case assumes the prior authorization rules of the covering states (multiplier 1.0), a rebate of `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%) and a plateau in years 3 to 5. These are scenarios, not forecasts, and no medical cost offsets are included. **Try your own scenario in the [interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/).**
+The central case assumes the prior authorization rules of the covering states (multiplier 1.0), a rebate of `r kn("e_rebate_central")`% (midpoint of `r kn("e_rebate_low")`% and `r kn("e_rebate_high")`%) and a plateau in years 3 to 5. These are scenarios, not forecasts, and no medical cost offsets are included. **Try your own scenario in the [interactive budget model](https://erickyegon.github.io/incretin-access-value/budget-model.html).**
 
 ## What is measured, sourced or assumed
 

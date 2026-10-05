@@ -48,7 +48,7 @@ tornado_table <- function(inp, p) {
   five <- function(q) bia_run(q)$total$five_year_net
   mod <- function(...) { q <- p; a <- list(...); for (n in names(a)) q[[n]] <- a[[n]]; q }
   rows <- list(
-    list("Module C effect (95% CI of every event time)", mod(att9 = inp$att$ci_low), mod(att9 = inp$att$ci_high), "lower CI", "upper CI"),
+    list("Coverage effect (95% CI)", mod(att9 = inp$att$ci_low), mod(att9 = inp$att$ci_high), "lower CI", "upper CI"),
     list("Prior authorization multiplier", mod(pa_mult = 0.5), mod(pa_mult = 1.25), "0.5", "1.25"),
     list("Years 3-5 scenario", mod(y35 = "decline"), mod(y35 = "growth"), "decline", "growth"),
     list("Gross cost per prescription", mod(gross = inp$gross$low), mod(gross = inp$gross$high), usd(inp$gross$low), usd(inp$gross$high)),

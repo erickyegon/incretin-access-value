@@ -225,7 +225,7 @@ gt::gt(vc[, 1:8]) |> gt::tab_header(title = "Trial weight loss and Medicaid net 
 
 Published primary results range from `r kn("t_attain_1_orforglipron_6_mg")`% (orforglipron 6 mg, 72 weeks) to `r kn("t_surmount_1_tirzepatide_15_mg")`% (tirzepatide 15 mg, 72 weeks) mean body-weight change; semaglutide 2.4 mg gave `r kn("t_step_1_semaglutide")`% at 68 weeks (STEP 1) and head-to-head tirzepatide gave `r kn("t_surmount_5_tirzepatide")`% against `r kn("t_surmount_5_semaglutide")`% for semaglutide (SURMOUNT-5). Against these, the Module E central net cost is $`r kn("e_per_user_year")` per user per year (4.3 fills, MEPS) and $`r kn("e_per_member_year_cont")` per member-year of continuous treatment (12 fills, assumption). The trials, populations, durations and Medicaid fills differ, so this table supports no cost-effectiveness, cost-per-kilogram or QALY statement.
 
-The interactive model is a hosted decision tool at <https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/> (also runnable locally with `shiny::runApp("app")`); a static PDF of the scenarios is in `analysis/outputs/budget_impact_scenarios.pdf`.
+The interactive model is a hosted decision tool at <https://erickyegon.github.io/incretin-access-value/budget-model.html> (also runnable locally with `shiny::runApp("app")`); a static PDF of the scenarios is in `analysis/outputs/budget_impact_scenarios.pdf`.
 
 # F. Research pack
 

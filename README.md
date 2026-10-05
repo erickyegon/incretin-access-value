@@ -2,13 +2,13 @@
 
 When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by an estimated 12.2 per 1,000 enrollees per quarter; covering them for a 1-million-enrollee program would cost about $161.3 million net over five years. A public-data study with a tested warehouse (PostgreSQL, dbt), an R analysis, a Quarto report and an interactive budget model.
 
-**[Project site](https://erickyegon.github.io/incretin-access-value/)** · **[Report](https://erickyegon.github.io/incretin-access-value/report.html)** · **[Interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/)** · [Insight deck (PDF)](https://erickyegon.github.io/incretin-access-value/deck.pdf) · [One-page summary (PDF)](https://erickyegon.github.io/incretin-access-value/one_page_summary.pdf) · [Research design pack (PDF)](https://erickyegon.github.io/incretin-access-value/research_pack.pdf) · [Code](https://github.com/erickyegon/incretin-access-value)
+**[Project site](https://erickyegon.github.io/incretin-access-value/)** · **[Report](https://erickyegon.github.io/incretin-access-value/report.html)** · **[Interactive budget model](https://erickyegon.github.io/incretin-access-value/budget-model.html)** · [Insight deck (PDF)](https://erickyegon.github.io/incretin-access-value/deck.pdf) · [One-page summary (PDF)](https://erickyegon.github.io/incretin-access-value/one_page_summary.pdf) · [Research design pack (PDF)](https://erickyegon.github.io/incretin-access-value/research_pack.pdf) · [Code](https://github.com/erickyegon/incretin-access-value)
 
 ![Estimated effect of coverage on prescriptions by quarter since coverage began](docs/figures/readme/hero_event_study.png)
 
 | Project site | Report | Interactive budget model |
 |---|---|---|
-| [![Project site](docs/figures/readme/site.png)](https://erickyegon.github.io/incretin-access-value/) | [![Report](docs/figures/readme/report.png)](https://erickyegon.github.io/incretin-access-value/report.html) | [![Budget model app](docs/figures/readme/app.png)](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/) |
+| [![Project site](docs/figures/readme/site.png)](https://erickyegon.github.io/incretin-access-value/) | [![Report](docs/figures/readme/report.png)](https://erickyegon.github.io/incretin-access-value/report.html) | [![Budget model app](docs/figures/readme/app.png)](https://erickyegon.github.io/incretin-access-value/budget-model.html) |
 
 **Author:** Erick Kiprotich Yegon, epidemiologist and data scientist.
 
@@ -29,7 +29,7 @@ All numbers come from [`analysis/outputs/key_numbers.csv`](analysis/outputs/key_
 |---|---|---|
 | Project site | [https://erickyegon.github.io/incretin-access-value/](https://erickyegon.github.io/incretin-access-value/) | `site/` |
 | Study report (Quarto HTML) | [report](https://erickyegon.github.io/incretin-access-value/report.html) | `report/report.html` |
-| Interactive budget model (Shiny decision tool) | [app](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/) | `app/` |
+| Interactive budget model (Shiny decision tool) | [app](https://erickyegon.github.io/incretin-access-value/budget-model.html) | `app/` |
 | Insight deck (PDF) | [deck.pdf](https://erickyegon.github.io/incretin-access-value/deck.pdf) | `deck/deck.pdf` |
 | One-page summary (PDF) | [one_page_summary.pdf](https://erickyegon.github.io/incretin-access-value/one_page_summary.pdf) | `deck/one_page_summary.pdf` |
 | Research design pack (Module F, PDF) | [research_pack.pdf](https://erickyegon.github.io/incretin-access-value/research_pack.pdf) | `research_pack/research_pack.pdf` |
@@ -42,7 +42,7 @@ All numbers come from [`analysis/outputs/key_numbers.csv`](analysis/outputs/key_
 
 ## Interactive decision tool
 
-[Open the app](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/): evidence, budget model, uncertainty, scenario comparison and sources, built around the unchanged budget impact engine. The defaults equal the numbers in this README. Tests: `app/tests/` (testthat) and `scripts/test/test_app.js` (browser).
+[Open the app](https://erickyegon.github.io/incretin-access-value/budget-model.html): evidence, budget model, uncertainty, scenario comparison and sources, built around the unchanged budget impact engine. The defaults equal the numbers in this README. Tests: `app/tests/` (testthat) and `scripts/test/test_app.js` (browser).
 
 | Overview | Evidence | Budget model |
 |---|---|---|

@@ -59,7 +59,7 @@ b0 <- five_net(base)
 ow <- list()
 add <- function(name, lo_p, hi_p, lo_lab, hi_lab) ow[[length(ow) + 1]] <<- tibble(parameter = name, low_label = lo_lab, high_label = hi_lab, net_low = five_net(lo_p), net_high = five_net(hi_p))
 mod <- function(...) { p <- base; a <- list(...); for (n in names(a)) p[[n]] <- a[[n]]; p }
-add("Module C effect (95% CI of every event time)", mod(att9 = inp$att$ci_low), mod(att9 = inp$att$ci_high), "lower CI", "upper CI")
+add("Coverage effect (95% CI)", mod(att9 = inp$att$ci_low), mod(att9 = inp$att$ci_high), "lower CI", "upper CI")
 add("Prior authorization multiplier", mod(pa_mult = 0.5), mod(pa_mult = 1.25), "0.5 (tight)", "1.25 (loose)")
 add("Years 3-5 scenario", mod(y35 = "decline"), mod(y35 = "growth"), "decline", "continued growth")
 add("Gross cost per prescription", mod(gross = gross_lo), mod(gross = gross_hi), sprintf("$%s", format(round(gross_lo), big.mark = ",")), sprintf("$%s", format(round(gross_hi), big.mark = ",")))

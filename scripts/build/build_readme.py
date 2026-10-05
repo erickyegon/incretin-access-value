@@ -6,7 +6,7 @@ kn = {r["id"]: r for r in csv.DictReader(open(root / "analysis" / "outputs" / "k
 d = lambda i: kn[i]["display"]
 ci = lambda i: kn[i]["ci_or_range"]
 holds = d("c_spec_holds").split(" of "); HOLDS = f"all {holds[1]} estimable" if holds[0] == holds[1] else f"{d('c_spec_holds')} estimable"
-SITE = "https://erickyegon.github.io/incretin-access-value/"; APP = "https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/"
+SITE = "https://erickyegon.github.io/incretin-access-value/"; APP = "https://erickyegon.github.io/incretin-access-value/budget-model.html"
 text = f"""# Access and value of obesity drugs in Medicaid
 
 When state Medicaid programs covered Wegovy and Zepbound, prescriptions rose by an estimated {d("c_att_overall")} per 1,000 enrollees per quarter; covering them for a 1-million-enrollee program would cost about ${d("e_net5")} million net over five years. A public-data study with a tested warehouse (PostgreSQL, dbt), an R analysis, a Quarto report and an interactive budget model.

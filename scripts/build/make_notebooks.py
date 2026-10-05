@@ -28,7 +28,7 @@ fig <- function(name, cap) {{ a <- al$alt_text[al$figure == name]; stopifnot(len
   cat(sprintf("![%s](../analysis/outputs/figures/%s_report.png){{fig-alt=\\"%s\\" width=100%%}}\\n\\n", cap, name, gsub("\\"", "'", a))) }}
 ```
 
-[Back to the report](https://erickyegon.github.io/incretin-access-value/report.html) · [Project site](https://erickyegon.github.io/incretin-access-value/) · [Interactive budget model](https://01a108a8-ecde-397c-5353-39196812b10c.share.connect.posit.cloud/)
+[Back to the report](https://erickyegon.github.io/incretin-access-value/report.html) · [Project site](https://erickyegon.github.io/incretin-access-value/) · [Interactive budget model](https://erickyegon.github.io/incretin-access-value/budget-model.html)
 
 {intro}
 '''

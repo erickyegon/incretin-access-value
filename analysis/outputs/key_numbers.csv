@@ -119,8 +119,8 @@ e_rebate_high,79.3,percent of gross cost,implied by the $245 price,Rebate implie
 e_pa_05,80.7,"USD million, five years",PA multiplier 0.5 (assumption),Five-year net cost with the prior authorization multiplier at 0.5,tables/moduleE_pa_scenarios.csv,"pa_multiplier 0.5, five_year_net",public
 e_pa_075,121.0,"USD million, five years",PA multiplier 0.75 (assumption),Five-year net cost with the prior authorization multiplier at 0.75,tables/moduleE_pa_scenarios.csv,"pa_multiplier 0.75, five_year_net",public
 e_pa_125,201.6,"USD million, five years",PA multiplier 1.25 (assumption),Five-year net cost with the prior authorization multiplier at 1.25,tables/moduleE_pa_scenarios.csv,"pa_multiplier 1.25, five_year_net",public
-e_tornado1_low,63.7,"USD million, five years",Module C effect (95% CI of every event time),Lower end of the tornado bar for Module C effect (95% CI of every event time),tables/moduleE_tornado.csv,row 1,public
-e_tornado1_high,258.9,"USD million, five years",Module C effect (95% CI of every event time),Upper end of the tornado bar for Module C effect (95% CI of every event time),tables/moduleE_tornado.csv,row 1,public
+e_tornado1_low,63.7,"USD million, five years",Coverage effect (95% CI),Lower end of the tornado bar for Coverage effect (95% CI),tables/moduleE_tornado.csv,row 1,public
+e_tornado1_high,258.9,"USD million, five years",Coverage effect (95% CI),Upper end of the tornado bar for Coverage effect (95% CI),tables/moduleE_tornado.csv,row 1,public
 e_tornado2_low,68.3,"USD million, five years",Rebate share,Lower end of the tornado bar for Rebate share,tables/moduleE_tornado.csv,row 2,public
 e_tornado2_high,254.3,"USD million, five years",Rebate share,Upper end of the tornado bar for Rebate share,tables/moduleE_tornado.csv,row 2,public
 t_step_1_semaglutide,-14.9,percent change in body weight (or percentage-point difference),arm-level CI not stated in the abstract,"STEP 1, semaglutide (2.4 mg once weekly (subcutaneous), 68 weeks): primary weight-loss outcome",../data/reference/trial_inputs.csv,"trial STEP 1, arm semaglutide, columns value, ci_low, ci_high (DOI 10.1056/NEJMoa2032183)",public

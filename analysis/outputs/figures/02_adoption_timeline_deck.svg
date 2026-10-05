@@ -257,21 +257,21 @@
 <text x='334.37' y='279.28' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2024</text>
 <text x='425.27' y='279.28' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2025</text>
 <text x='515.91' y='279.28' text-anchor='middle' style='font-size: 13.00px;fill: #333333; font-family: "IBM Plex Sans";' textLength='31.19px' lengthAdjust='spacingAndGlyphs'>2026</text>
-<text x='-111.53' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='143.88px' lengthAdjust='spacingAndGlyphs'>Share of quarter covered</text>
-<rect x='38.53' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.35;' />
-<rect x='93.69' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.51;' />
-<rect x='148.85' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.67;' />
-<rect x='204.01' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.84;' />
-<rect x='259.17' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
-<text x='60.58' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.00</text>
-<text x='115.74' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.25</text>
-<text x='170.90' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.50</text>
-<text x='226.06' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.75</text>
-<text x='281.22' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>1.00</text>
-<rect x='330.77' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
-<rect x='457.73' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E7A57A;' />
-<text x='352.82' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='98.72px' lengthAdjust='spacingAndGlyphs'>Primary: covered</text>
-<text x='479.78' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='232.45px' lengthAdjust='spacingAndGlyphs'>Sensitivity: covered after the start range</text>
+<rect x='-110.83' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D55E00;' />
+<rect x='16.13' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E7A57A;' />
+<text x='-88.78' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='98.72px' lengthAdjust='spacingAndGlyphs'>Primary: covered</text>
+<text x='38.18' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='232.45px' lengthAdjust='spacingAndGlyphs'>Sensitivity: covered after the start range</text>
+<text x='292.55' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='143.88px' lengthAdjust='spacingAndGlyphs'>Share of quarter covered</text>
+<rect x='442.62' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.35;' />
+<rect x='497.78' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.51;' />
+<rect x='552.94' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.67;' />
+<rect x='608.10' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959; fill-opacity: 0.84;' />
+<rect x='663.26' y='299.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #595959;' />
+<text x='464.67' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.00</text>
+<text x='519.83' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.25</text>
+<text x='574.99' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.50</text>
+<text x='630.15' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>0.75</text>
+<text x='685.31' y='311.66' style='font-size: 13.00px;fill: #222222; font-family: "IBM Plex Sans";' textLength='26.92px' lengthAdjust='spacingAndGlyphs'>1.00</text>
 </g>
 </g>
 </svg>
