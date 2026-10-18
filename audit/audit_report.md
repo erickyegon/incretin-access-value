@@ -1,6 +1,6 @@
 # Number and content audit
 
-Run: 2026-10-05. Key numbers: 191 rows.
+Run: 2026-10-18. Key numbers: 191 rows.
 
 ## Numbers by document and class
 
@@ -8,7 +8,7 @@ Run: 2026-10-05. Key numbers: 191 rows.
 |---|---|---|---|---|---|
 | deck_pdf | 129 | 5 |   4 | 0 | 0 |
 | one_pager |  11 | 2 |   0 | 0 | 0 |
-| readme |  37 | 0 |   4 | 0 | 0 |
+| readme |  44 | 0 |   4 | 0 | 0 |
 | report | 520 | 1 | 135 | 0 | 0 |
 | research_pack |  66 | 0 |  64 | 0 | 0 |
 | website |  30 | 0 |   1 | 0 | 0 |
@@ -30,7 +30,7 @@ Run: 2026-10-05. Key numbers: 191 rows.
 | external-fact key numbers (x_*) point to a saved government source or to a URL listed in the sources index | PASS |  |
 | budget-model app is self-contained (no database, no paths outside app/) and has a Connect Cloud manifest | PASS |  |
 | build counts match the dbt manifest (models, seeds, tests) | PASS | manifest: 54 models, 10 seeds, 126 tests |
-| git status is clean | FAIL |  M .gitignore;  M analysis/outputs/figures/40_tornado_report.png;  M analysis/outputs/figures/40_tornado_web.png;  M analysis/outputs/figures/43_psa_distribution_report.png;  M analysis/outputs/figures/43_psa_distribution_web.png |
+| git status is clean | PASS |  |
 | git ls-files shows no raw/interim data, credentials or caches | PASS |  |
 | no tracked file over 50 MB | PASS |  |
 
