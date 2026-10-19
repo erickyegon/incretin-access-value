@@ -1,6 +1,6 @@
 # Number and content audit
 
-Run: 2026-10-18. Key numbers: 191 rows.
+Run: 2026-10-19. Key numbers: 191 rows.
 
 ## Numbers by document and class
 
